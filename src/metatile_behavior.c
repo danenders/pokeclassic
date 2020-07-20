@@ -245,10 +245,10 @@ static const u8 sTileBitAttributes[] =
     [MB_WIRELESS_BOX_RESULTS] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_TRAINER_HILL_TIMER] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_SKY_PILLAR_CLOSED_DOOR] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
-    [MB_UNUSED_EB] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
-    [MB_UNUSED_EC] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
-    [MB_UNUSED_ED] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
-    [MB_UNUSED_EE] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
+    [MB_UP_RIGHT_STAIR_WARP] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
+    [MB_UP_LEFT_STAIR_WARP] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
+    [MB_DOWN_RIGHT_STAIR_WARP] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
+    [MB_DOWN_LEFT_STAIR_WARP] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_UNUSED_EF] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
 };
 
@@ -1484,6 +1484,46 @@ bool8 MetatileBehavior_IsLongGrassSouthEdge(u8 metatileBehavior)
 bool8 MetatileBehavior_IsTrainerHillTimer(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_TRAINER_HILL_TIMER)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsDirectionalUpRightStairWarp(u8 metatileBehavior)
+{
+    if(metatileBehavior == MB_UP_RIGHT_STAIR_WARP)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsDirectionalUpLeftStairWarp(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_UP_LEFT_STAIR_WARP)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsDirectionalDownRightStairWarp(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_DOWN_RIGHT_STAIR_WARP)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsDirectionalDownLeftStairWarp(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_DOWN_LEFT_STAIR_WARP)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsDirectionalStairWarp(u8 metatileBehavior)
+{
+    if (metatileBehavior >= MB_UP_RIGHT_STAIR_WARP && metatileBehavior <= MB_DOWN_LEFT_STAIR_WARP)
         return TRUE;
     else
         return FALSE;

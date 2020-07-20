@@ -6,6 +6,7 @@
 #include "field_camera.h"
 #include "field_effect.h"
 #include "field_effect_helpers.h"
+#include "field_screen_effect.h"
 #include "field_player_avatar.h"
 #include "fieldmap.h"
 #include "menu.h"
@@ -625,6 +626,10 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
             PlayerNotOnBikeCollideWithFarawayIslandMew(direction);
             return;
         }
+        else if (collision == COLLISION_STAIR_WARP)
+        {
+            PlayerFaceDirection(direction);
+        }
         else
         {
             u8 adjustedCollision = collision - COLLISION_STOP_SURFING;
@@ -661,6 +666,9 @@ static u8 CheckForPlayerAvatarCollision(u8 direction)
 
     x = playerObjEvent->currentCoords.x;
     y = playerObjEvent->currentCoords.y;
+    if (IsDirectionalStairWarpMetatileBehavior(MapGridGetMetatileBehaviorAt(x, y), direction))
+        return COLLISION_STAIR_WARP;
+
     MoveCoords(direction, &x, &y);
     return CheckForObjectEventCollision(playerObjEvent, x, y, direction, MapGridGetMetatileBehaviorAt(x, y));
 }

@@ -689,13 +689,31 @@ static bool8 CheckStandardWildEncounter(u16 metatileBehavior)
 static bool8 TryArrowWarp(struct MapPosition *position, u16 metatileBehavior, u8 direction)
 {
     s8 warpEventId = GetWarpEventAtMapPosition(&gMapHeader, position);
+    u16 delay;
 
-    if (IsArrowWarpMetatileBehavior(metatileBehavior, direction) == TRUE && warpEventId != -1)
+    if (warpEventId != -1)
     {
-        StoreInitialPlayerAvatarState();
-        SetupWarp(&gMapHeader, warpEventId, position);
-        DoWarp();
-        return TRUE;
+        if (IsArrowWarpMetatileBehavior(metatileBehavior, direction) == TRUE)
+        {
+            StoreInitialPlayerAvatarState();
+            SetupWarp(&gMapHeader, warpEventId, position);
+            DoWarp();
+            return TRUE;
+        }
+        else if (IsDirectionalStairWarpMetatileBehavior(metatileBehavior, direction) == TRUE)
+        {
+            delay = 0;
+            if (gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
+            {
+                SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ON_FOOT);
+                delay = 12;
+            }
+            
+            StoreInitialPlayerAvatarState();
+            SetupWarp(&gMapHeader, warpEventId, position);
+            DoStairWarp(metatileBehavior, delay);
+            return TRUE;
+        }
     }
     return FALSE;
 }
