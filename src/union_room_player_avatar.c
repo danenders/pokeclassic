@@ -448,7 +448,7 @@ static bool32 IsUnionRoomPlayerInvisible(u32 playerIdx, u32 direction)
     return IsObjectEventSpriteInvisible(UR_PLAYER_SPRITE_ID(playerIdx, direction) - UR_SPRITE_START_ID);
 }
 
-static void SpawnGroupMember(u32 playerIdx, u32 direction, u8 graphicsId, struct GFtgtGname * gname)
+static void SpawnGroupMember(u32 playerIdx, u32 direction, u16 graphicsId, struct GFtgtGname * gname)
 {
     s32 x, y;
     s32 id = UR_PLAYER_SPRITE_ID(playerIdx, direction);
