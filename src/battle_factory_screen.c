@@ -24,6 +24,7 @@
 #include "pokedex.h"
 #include "util.h"
 #include "trainer_pokemon_sprites.h"
+#include "starter_choose.h"
 #include "constants/battle_frontier.h"
 #include "constants/songs.h"
 #include "constants/rgb.h"
@@ -131,8 +132,6 @@ struct FactorySwapMonsStruct
     struct UnkFactoryStruct unk2C;
     bool8 unk30;
 };
-
-extern const u32 gUnknown_085B18AC[];
 
 // This file's functions.
 static void sub_819A44C(struct Sprite *sprite);
@@ -263,7 +262,7 @@ static const struct SpriteSheet gUnknown_086103BC[] =
 
 static const struct CompressedSpriteSheet gUnknown_086103E4[] =
 {
-    {gUnknown_085B18AC, 0x800, TAG_TILE_64},
+    {gPokeballSelection_Gfx, 0x800, TAG_TILE_64},
     {},
 };
 
@@ -616,7 +615,7 @@ static const struct SpriteSheet gUnknown_08610650[] =
 
 static const struct CompressedSpriteSheet gUnknown_086106A0[] =
 {
-    {gUnknown_085B18AC, 0x800, TAG_TILE_64},
+    {gPokeballSelection_Gfx, 0x800, TAG_TILE_64},
     {},
 };
 
@@ -1479,7 +1478,7 @@ static void Task_HandleSelectionScreenYesNo(u8 taskId)
             gTasks[taskId].data[0] = 5;
             break;
         case 5:
-            if (gMain.newKeys & A_BUTTON)
+            if (JOY_NEW(A_BUTTON))
             {
                 PlaySE(SE_SELECT);
                 if (sFactorySelectScreen->yesNoCursorPos == 0)
@@ -1497,7 +1496,7 @@ static void Task_HandleSelectionScreenYesNo(u8 taskId)
                     gTasks[taskId].func = Task_HandleSelectionScreenChooseMons;
                 }
             }
-            else if (gMain.newKeys & B_BUTTON)
+            else if (JOY_NEW(B_BUTTON))
             {
                 PlaySE(SE_SELECT);
                 sub_819B958(4);
@@ -1506,12 +1505,12 @@ static void Task_HandleSelectionScreenYesNo(u8 taskId)
                 gTasks[taskId].data[0] = 1;
                 gTasks[taskId].func = Task_HandleSelectionScreenChooseMons;
             }
-            else if (gMain.newAndRepeatedKeys & DPAD_UP)
+            else if (JOY_REPEAT(DPAD_UP))
             {
                 PlaySE(SE_SELECT);
                 Select_UpdateYesNoCursorPosition(-1);
             }
-            else if (gMain.newAndRepeatedKeys & DPAD_DOWN)
+            else if (JOY_REPEAT(DPAD_DOWN))
             {
                 PlaySE(SE_SELECT);
                 Select_UpdateYesNoCursorPosition(1);
@@ -1539,7 +1538,7 @@ static void Task_HandleSelectionScreenMenu(u8 taskId)
         }
         break;
     case 3:
-        if (gMain.newKeys & A_BUTTON)
+        if (JOY_NEW(A_BUTTON))
         {
             u8 retVal;
             PlaySE(SE_SELECT);
@@ -1566,7 +1565,7 @@ static void Task_HandleSelectionScreenMenu(u8 taskId)
                 gTasks[taskId].func = Task_FromSelectScreenToSummaryScreen;
             }
         }
-        else if (gMain.newKeys & B_BUTTON)
+        else if (JOY_NEW(B_BUTTON))
         {
             PlaySE(SE_SELECT);
             sub_819F3F8(sFactorySelectScreen->unk294[1], &sFactorySelectScreen->unk2A0, FALSE);
@@ -1575,12 +1574,12 @@ static void Task_HandleSelectionScreenMenu(u8 taskId)
             gTasks[taskId].data[0] = 1;
             gTasks[taskId].func = Task_HandleSelectionScreenChooseMons;
         }
-        else if (gMain.newAndRepeatedKeys & DPAD_UP)
+        else if (JOY_REPEAT(DPAD_UP))
         {
             PlaySE(SE_SELECT);
             Select_UpdateMenuCursorPosition(-1);
         }
-        else if (gMain.newAndRepeatedKeys & DPAD_DOWN)
+        else if (JOY_REPEAT(DPAD_DOWN))
         {
             PlaySE(SE_SELECT);
             Select_UpdateMenuCursorPosition(1);
@@ -1619,21 +1618,21 @@ static void Task_HandleSelectionScreenChooseMons(u8 taskId)
             }
             break;
         case 1:
-            if (gMain.newKeys & A_BUTTON)
+            if (JOY_NEW(A_BUTTON))
             {
                 PlaySE(SE_SELECT);
                 sFactorySelectScreen->unk2A2 = FALSE;
                 gTasks[taskId].data[0] = 2;
                 gTasks[taskId].func = Task_HandleSelectionScreenMenu;
             }
-            else if (gMain.newAndRepeatedKeys & DPAD_LEFT)
+            else if (JOY_REPEAT(DPAD_LEFT))
             {
                 PlaySE(SE_SELECT);
                 Select_UpdateBallCursorPosition(-1);
                 Select_PrintMonCategory();
                 Select_PrintMonSpecies();
             }
-            else if (gMain.newAndRepeatedKeys & DPAD_RIGHT)
+            else if (JOY_REPEAT(DPAD_RIGHT))
             {
                 PlaySE(SE_SELECT);
                 Select_UpdateBallCursorPosition(1);
@@ -1642,7 +1641,7 @@ static void Task_HandleSelectionScreenChooseMons(u8 taskId)
             }
             break;
         case 11:
-            if (gMain.newKeys & A_BUTTON)
+            if (JOY_NEW(A_BUTTON))
             {
                 PlaySE(SE_SELECT);
                 sub_819F3F8(sFactorySelectScreen->unk294[1], &sFactorySelectScreen->unk2A0, FALSE);
@@ -2362,7 +2361,7 @@ static void Task_HandleSwapScreenYesNo(u8 taskId)
             gTasks[taskId].data[0] = 5;
             break;
         case 5:
-            if (gMain.newKeys & A_BUTTON)
+            if (JOY_NEW(A_BUTTON))
             {
                 PlaySE(SE_SELECT);
                 if (sFactorySwapScreen->yesNoCursorPos == 0)
@@ -2381,7 +2380,7 @@ static void Task_HandleSwapScreenYesNo(u8 taskId)
                     gTasks[taskId].func = (void*)((hiPtr << 16) | loPtr);
                 }
             }
-            else if (gMain.newKeys & B_BUTTON)
+            else if (JOY_NEW(B_BUTTON))
             {
                 PlaySE(SE_SELECT);
                 gTasks[taskId].data[1] = 0;
@@ -2390,12 +2389,12 @@ static void Task_HandleSwapScreenYesNo(u8 taskId)
                 loPtr = gTasks[taskId].data[7];
                 gTasks[taskId].func = (void*)((hiPtr << 16) | loPtr);
             }
-            else if (gMain.newAndRepeatedKeys & DPAD_UP)
+            else if (JOY_REPEAT(DPAD_UP))
             {
                 PlaySE(SE_SELECT);
                 Swap_UpdateYesNoCursorPosition(-1);
             }
-            else if (gMain.newAndRepeatedKeys & DPAD_DOWN)
+            else if (JOY_REPEAT(DPAD_DOWN))
             {
                 PlaySE(SE_SELECT);
                 Swap_UpdateYesNoCursorPosition(1);
@@ -2486,12 +2485,12 @@ static void Task_HandleSwapScreenMenu(u8 taskId)
     case 3:
         if (sFactorySwapScreen->unk30 != TRUE)
         {
-            if (gMain.newKeys & A_BUTTON)
+            if (JOY_NEW(A_BUTTON))
             {
                 PlaySE(SE_SELECT);
                 Swap_RunMenuOptionFunc(taskId);
             }
-            else if (gMain.newKeys & B_BUTTON)
+            else if (JOY_NEW(B_BUTTON))
             {
                 PlaySE(SE_SELECT);
                 sub_819F3F8(sFactorySwapScreen->unk2C, &sFactorySwapScreen->unk30, TRUE);
@@ -2502,11 +2501,11 @@ static void Task_HandleSwapScreenMenu(u8 taskId)
                 gTasks[taskId].data[5] = 1;
                 gTasks[taskId].func = sub_819D770;
             }
-            else if (gMain.newAndRepeatedKeys & DPAD_UP)
+            else if (JOY_REPEAT(DPAD_UP))
             {
                 Swap_UpdateMenuCursorPosition(-1);
             }
-            else if (gMain.newAndRepeatedKeys & DPAD_DOWN)
+            else if (JOY_REPEAT(DPAD_DOWN))
             {
                 Swap_UpdateMenuCursorPosition(1);
             }
@@ -2527,7 +2526,7 @@ static void Task_HandleSwapScreenChooseMons(u8 taskId)
         }
         break;
     case 1:
-        if (gMain.newKeys & A_BUTTON)
+        if (JOY_NEW(A_BUTTON))
         {
             PlaySE(SE_SELECT);
             sFactorySwapScreen->unk22 = FALSE;
@@ -2535,7 +2534,7 @@ static void Task_HandleSwapScreenChooseMons(u8 taskId)
             sub_819EAC0();
             Swap_RunActionFunc(taskId);
         }
-        else if (gMain.newKeys & B_BUTTON)
+        else if (JOY_NEW(B_BUTTON))
         {
             PlaySE(SE_SELECT);
             sFactorySwapScreen->unk22 = FALSE;
@@ -2547,25 +2546,25 @@ static void Task_HandleSwapScreenChooseMons(u8 taskId)
             gTasks[taskId].data[5] = 0;
             gTasks[taskId].func = sub_819D588;
         }
-        else if (gMain.newAndRepeatedKeys & DPAD_LEFT)
+        else if (JOY_REPEAT(DPAD_LEFT))
         {
             Swap_UpdateBallCursorPosition(-1);
             Swap_PrintMonCategory();
             Swap_PrintMonSpecies();
         }
-        else if (gMain.newAndRepeatedKeys & DPAD_RIGHT)
+        else if (JOY_REPEAT(DPAD_RIGHT))
         {
             Swap_UpdateBallCursorPosition(1);
             Swap_PrintMonCategory();
             Swap_PrintMonSpecies();
         }
-        else if (gMain.newAndRepeatedKeys & DPAD_DOWN)
+        else if (JOY_REPEAT(DPAD_DOWN))
         {
             Swap_UpdateActionCursorPosition(1);
             Swap_PrintMonCategory();
             Swap_PrintMonSpecies();
         }
-        else if (gMain.newAndRepeatedKeys & DPAD_UP)
+        else if (JOY_REPEAT(DPAD_UP))
         {
             Swap_UpdateActionCursorPosition(-1);
             Swap_PrintMonCategory();
@@ -3930,7 +3929,7 @@ static void Task_SwapCantHaveSameMons(u8 taskId)
         gTasks[taskId].data[0]++;
         break;
     case 1:
-        if (gMain.newKeys & A_BUTTON || gMain.newKeys & B_BUTTON)
+        if (JOY_NEW(A_BUTTON) || JOY_NEW(B_BUTTON))
         {
             PlaySE(SE_SELECT);
             sub_819F3F8(sFactorySwapScreen->unk2C, &sFactorySwapScreen->unk30, TRUE);
