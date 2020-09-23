@@ -1444,7 +1444,7 @@ static void Task_StairWarp(u8 taskId)
                 PlayRainStoppingSoundEffect();
                 playerSpr->oam.priority = 1;
                 ForceStairsMovement(data[1], &data[2], &data[3]);
-                PlaySE(SE_KAIDAN);
+                PlaySE(SE_EXIT);
                 data[0]++;
             }
         }
