@@ -2721,3 +2721,9 @@ void ResetDexNavSearch(void)
     if (FlagGet(FLAG_SYS_DEXNAV_SEARCH))
         EndDexNavSearch(FindTaskIdByFunc(Task_DexNavSearch));   //moving to new map ends dexnav search
 }
+
+void IncrementDexNavChain(void)
+{
+    if (gSaveBlock1Ptr->dexNavChain < DEXNAV_CHAIN_MAX)
+        gSaveBlock1Ptr->dexNavChain++;
+}
