@@ -1951,7 +1951,7 @@ static void DexNavLoadEncounterData(void)
     memset(sDexNavUiDataPtr->hiddenSpecies, 0, sizeof(sDexNavUiDataPtr->hiddenSpecies));
     
     // land mons
-    if (landMonsInfo != NULL)
+    if (landMonsInfo != NULL && landMonsInfo->encounterRate != 0)
     {
         for (i = 0; i < LAND_WILD_COUNT; i++)
         {
@@ -1962,7 +1962,7 @@ static void DexNavLoadEncounterData(void)
     }
 
     // water mons
-    if (waterMonsInfo != NULL)
+    if (waterMonsInfo != NULL && waterMonsInfo->encounterRate != 0)
     {
         for (i = 0; i < WATER_WILD_COUNT; i++)
         {
@@ -1973,7 +1973,7 @@ static void DexNavLoadEncounterData(void)
     }
     
     // hidden mons
-    if (hiddenMonsInfo != NULL)
+    if (hiddenMonsInfo != NULL) // no encounter rate check since 0 means land, 1 means water encounters
     {
         for (i = 0; i < HIDDEN_WILD_COUNT; i++)
         {
