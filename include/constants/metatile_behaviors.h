@@ -90,10 +90,10 @@
 #define MB_SPIN_UP 0x56 // TODO: implement this
 #define MB_SPIN_DOWN 0x57 // TODO: implement this
 #define MB_STOP_SPINNING 0x58 // TODO: implement this
-#define MB_UNUSED_59 0x59
-#define MB_UNUSED_5A 0x5A
-#define MB_UNUSED_5B 0x5B
-#define MB_UNUSED_5C 0x5C
+#define MB_CABINET 0x59 // TODO: implement this
+#define MB_KITCHEN 0x5A // TODO: implement this
+#define MB_DRESSER 0x5B // TODO: implement this
+#define MB_SNACKS 0x5C // TODO: implement this
 #define MB_UNUSED_5D 0x5D
 #define MB_UNUSED_5E 0x5E
 #define MB_UNUSED_5F 0x5F
