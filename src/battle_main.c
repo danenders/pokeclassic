@@ -16,6 +16,7 @@
 #include "bg.h"
 #include "data.h"
 #include "decompress.h"
+#include "dexnav.h"
 #include "dma3.h"
 #include "event_data.h"
 #include "evolution_scene.h"
