@@ -1271,7 +1271,7 @@ static void DexNavGenerateMoveset(u16 species, u8 searchLevel, u8 encounterLevel
     u16 i;
     u16 eggMoveBuffer[EGG_MOVES_ARRAY_COUNT];
 
-    //Evaluate if Pokemon should get an egg move in first slot
+    // see if first move slot should be an egg move
     if (searchLevel < 5)
     {
         #if (SEARCHLEVEL0_MOVECHANCE != 0)
@@ -1315,22 +1315,19 @@ static void DexNavGenerateMoveset(u16 species, u8 searchLevel, u8 encounterLevel
         #endif
     }
 
-    //Generate a wild mon just to get the initial moveset (later overwritten by CreateDexNavWildMon)
+    // Generate a wild mon just to get the initial moveset (later overwritten by CreateDexNavWildMon)
     CreateWildMon(species, encounterLevel);
 
-    //Store generated mon moves into Dex Nav Struct
+    // Store generated mon moves into Dex Nav Struct
     for (i = 0; i < MAX_MON_MOVES; i++)
         moveDst[i] = GetMonData(&gEnemyParty[0], MON_DATA_MOVE1 + i, NULL);
 
     // set first move slot to a random egg move if search level is good enough    
-    if (genMove == TRUE)
+    if (genMove)
     {
         u8 numEggMoves = GetEggMoves(&gEnemyParty[0], eggMoveBuffer);
         if (numEggMoves != 0)
-        {
-            u8 index = RandRange(0, numEggMoves);
-            moveDst[0] = eggMoveBuffer[index];
-        }
+            moveDst[0] = eggMoveBuffer[Random() % numEggMoves];
     }
 }
 
