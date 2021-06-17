@@ -1215,6 +1215,9 @@ static void CreateDexNavWildMon(u16 species, u8 potential, u8 level, u8 abilityN
     u8 i;
     u8 perfectIv = 31;
     
+    if (DexNavTryMakeShinyMon())
+        FlagSet(FLAG_SHINY_CREATION); // just easier this way
+    
     CreateWildMon(species, level);  // shiny rate bonus handled in CreateBoxMon
     
     //Pick potential unique ivs to set to 31
@@ -1239,6 +1242,7 @@ static void CreateDexNavWildMon(u16 species, u8 potential, u8 level, u8 abilityN
         SetMonMoveSlot(mon, moves[i], i);
 
     CalculateMonStats(mon);
+    FlagClear(FLAG_SHINY_CREATION);
 }
 
 // gets a random level of the species based on map data.
