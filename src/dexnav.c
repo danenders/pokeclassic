@@ -2161,18 +2161,6 @@ static void PrintCurrentSpeciesInfo(void)
         AddTextPrinterParameterized3(WINDOW_INFO, 0, 0, SEARCH_LEVEL_Y, sFontColor_Black, 0, gStringVar4);
     }
     
-    // search bonus
-    if ((gSaveBlock1Ptr->dexNavSearchLevels[dexNum] >> 2) > 20)
-        searchLevelBonus = 20;
-    else
-        searchLevelBonus = (gSaveBlock1Ptr->dexNavSearchLevels[dexNum] >> 2);
-    
-    ConvertIntToDecimalStringN(gStringVar4, searchLevelBonus, 0, 4);
-    if (species == SPECIES_NONE)
-        AddTextPrinterParameterized3(WINDOW_INFO, 0, 0, LEVEL_BONUS_Y, sFontColor_Black, 0, sText_DexNav_NoInfo);
-    else
-        AddTextPrinterParameterized3(WINDOW_INFO, 0, 0, LEVEL_BONUS_Y, sFontColor_Black, 0, gStringVar4);
-    
     //hidden ability
     if (species == SPECIES_NONE)
     {
@@ -2194,6 +2182,10 @@ static void PrintCurrentSpeciesInfo(void)
     {
         AddTextPrinterParameterized3(WINDOW_INFO, 0, 0, HA_INFO_Y, sFontColor_Black, 0, sText_DexNav_CaptureToSee);
     }
+    
+    //current chain
+    ConvertIntToDecimalStringN(gStringVar1, gSaveBlock1Ptr->dexNavChain, STR_CONV_MODE_LEFT_ALIGN, 3);
+    AddTextPrinterParameterized3(WINDOW_INFO, 0, 0, CHAIN_BONUS_Y, sFontColor_Black, 0, gStringVar1);
     
     CopyWindowToVram(WINDOW_INFO, 3);
     PutWindowTilemap(WINDOW_INFO);
