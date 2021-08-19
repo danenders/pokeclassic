@@ -837,7 +837,7 @@ static void Task_SetUpDexNavSearch(u8 taskId)
     
     FlagSet(FLAG_SYS_DEXNAV_SEARCH);
     gPlayerAvatar.creeping = TRUE;  //initialize as true in case mon appears beside you
-    gTasks[taskId].tProximity = gSprites[gPlayerAvatar.spriteId].pos1.x;
+    gTasks[taskId].tProximity = gSprites[gPlayerAvatar.spriteId].x;
     gTasks[taskId].tFrameCount = 0;
     gTasks[taskId].func = Task_DexNavSearch;
     IncrementGameStat(GAME_STAT_DEXNAV_SCANNED);
@@ -1704,8 +1704,8 @@ static void UpdateCursorPosition(void)
         return;
     }
     
-    gSprites[sDexNavUiDataPtr->cursorSpriteId].pos1.x = x;
-    gSprites[sDexNavUiDataPtr->cursorSpriteId].pos1.y = y;
+    gSprites[sDexNavUiDataPtr->cursorSpriteId].x = x;
+    gSprites[sDexNavUiDataPtr->cursorSpriteId].y = y;
     
     PrintCurrentSpeciesInfo();
 }
@@ -2108,8 +2108,8 @@ static void SetTypeIconPosAndPal(u8 typeId, u8 x, u8 y, u8 spriteArrayId)
     sprite = &gSprites[sDexNavUiDataPtr->typeIconSpriteIds[spriteArrayId]];
     StartSpriteAnim(sprite, typeId);
     sprite->oam.paletteNum = sMoveTypeToOamPaletteNum[typeId];
-    sprite->pos1.x = x + 16;
-    sprite->pos1.y = y + 8;
+    sprite->x = x + 16;
+    sprite->y = y + 8;
     SetSpriteInvisibility(spriteArrayId, FALSE);
 }
 
