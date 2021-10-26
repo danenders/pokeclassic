@@ -459,7 +459,7 @@ bool8 ScrCmd_compare_var_to_var(struct ScriptContext *ctx)
     return FALSE;
 }
 
-// Note: addvar doesn't support adding from a variable in vanilla. If you were to 
+// Note: addvar doesn't support adding from a variable in vanilla. If you were to
 // add a VarGet() to the above, make sure you change the `addvar VAR_*, -1`
 // in the contest scripts to `subvar VAR_*, 1`, else contests will break.
 bool8 ScrCmd_addvar(struct ScriptContext *ctx)
@@ -649,7 +649,7 @@ bool8 ScrCmd_fadescreenswapbuffers(struct ScriptContext *ctx)
     switch (mode)
     {
         case FADE_TO_BLACK:
-        case FADE_TO_WHITE:   
+        case FADE_TO_WHITE:
         default:
             CpuCopy32(gPlttBufferUnfaded, gPaletteDecompressionBuffer, PLTT_DECOMP_BUFFER_SIZE);
             FadeScreen(mode, 0);
@@ -791,9 +791,9 @@ bool8 ScrCmd_warphole(struct ScriptContext *ctx)
 
     PlayerGetDestCoords(&x, &y);
     if (mapGroup == 0xFF && mapNum == 0xFF)
-        SetWarpDestinationToFixedHoleWarp(x - 7, y - 7);
+        SetWarpDestinationToFixedHoleWarp(x - MAP_OFFSET, y - MAP_OFFSET);
     else
-        SetWarpDestination(mapGroup, mapNum, -1, x - 7, y - 7);
+        SetWarpDestination(mapGroup, mapNum, -1, x - MAP_OFFSET, y - MAP_OFFSET);
     DoFallWarp();
     ResetInitialPlayerAvatarState();
     return TRUE;
@@ -1203,6 +1203,8 @@ bool8 ScrCmd_turnvobject(struct ScriptContext *ctx)
     return FALSE;
 }
 
+// lockall freezes all object events except the player immediately.
+// The player is frozen after waiting for their current movement to finish.
 bool8 ScrCmd_lockall(struct ScriptContext *ctx)
 {
     if (IsUpdateLinkStateCBActive())
@@ -1211,12 +1213,14 @@ bool8 ScrCmd_lockall(struct ScriptContext *ctx)
     }
     else
     {
-        ScriptFreezeObjectEvents();
+        FreezeObjects_WaitForPlayer();
         SetupNativeScript(ctx, IsFreezePlayerFinished);
         return TRUE;
     }
 }
 
+// lock freezes all object events except the player and the selected object immediately.
+// The player and selected object are frozen after waiting for their current movement to finish.
 bool8 ScrCmd_lock(struct ScriptContext *ctx)
 {
     if (IsUpdateLinkStateCBActive())
@@ -1227,12 +1231,12 @@ bool8 ScrCmd_lock(struct ScriptContext *ctx)
     {
         if (gObjectEvents[gSelectedObjectEvent].active)
         {
-            LockSelectedObjectEvent();
+            FreezeObjects_WaitForPlayerAndSelected();
             SetupNativeScript(ctx, IsFreezeSelectedObjectAndPlayerFinished);
         }
         else
         {
-            ScriptFreezeObjectEvents();
+            FreezeObjects_WaitForPlayer();
             SetupNativeScript(ctx, IsFreezePlayerFinished);
         }
         return TRUE;
@@ -1466,15 +1470,15 @@ bool8 ScrCmd_hidemonpic(struct ScriptContext *ctx)
     return TRUE;
 }
 
-bool8 ScrCmd_showcontestwinner(struct ScriptContext *ctx)
+bool8 ScrCmd_showcontestpainting(struct ScriptContext *ctx)
 {
     u8 contestWinnerId = ScriptReadByte(ctx);
 
-    // Don't save artist's painting yet
+    // Artist's painting is temporary and already has its data loaded
     if (contestWinnerId != CONTEST_WINNER_ARTIST)
         SetContestWinnerForPainting(contestWinnerId);
 
-    ShowContestWinnerPainting();
+    ShowContestPainting();
     ScriptContext1_Stop();
     return TRUE;
 }
@@ -2039,8 +2043,8 @@ bool8 ScrCmd_setmetatile(struct ScriptContext *ctx)
     u16 tileId = VarGet(ScriptReadHalfword(ctx));
     u16 isImpassable = VarGet(ScriptReadHalfword(ctx));
 
-    x += 7;
-    y += 7;
+    x += MAP_OFFSET;
+    y += MAP_OFFSET;
     if (!isImpassable)
         MapGridSetMetatileIdAt(x, y, tileId);
     else
@@ -2053,8 +2057,8 @@ bool8 ScrCmd_opendoor(struct ScriptContext *ctx)
     u16 x = VarGet(ScriptReadHalfword(ctx));
     u16 y = VarGet(ScriptReadHalfword(ctx));
 
-    x += 7;
-    y += 7;
+    x += MAP_OFFSET;
+    y += MAP_OFFSET;
     PlaySE(GetDoorSoundEffect(x, y));
     FieldAnimateDoorOpen(x, y);
     return FALSE;
@@ -2065,8 +2069,8 @@ bool8 ScrCmd_closedoor(struct ScriptContext *ctx)
     u16 x = VarGet(ScriptReadHalfword(ctx));
     u16 y = VarGet(ScriptReadHalfword(ctx));
 
-    x += 7;
-    y += 7;
+    x += MAP_OFFSET;
+    y += MAP_OFFSET;
     FieldAnimateDoorClose(x, y);
     return FALSE;
 }
@@ -2090,8 +2094,8 @@ bool8 ScrCmd_setdooropen(struct ScriptContext *ctx)
     u16 x = VarGet(ScriptReadHalfword(ctx));
     u16 y = VarGet(ScriptReadHalfword(ctx));
 
-    x += 7;
-    y += 7;
+    x += MAP_OFFSET;
+    y += MAP_OFFSET;
     FieldSetDoorOpened(x, y);
     return FALSE;
 }
@@ -2101,8 +2105,8 @@ bool8 ScrCmd_setdoorclosed(struct ScriptContext *ctx)
     u16 x = VarGet(ScriptReadHalfword(ctx));
     u16 y = VarGet(ScriptReadHalfword(ctx));
 
-    x += 7;
-    y += 7;
+    x += MAP_OFFSET;
+    y += MAP_OFFSET;
     FieldSetDoorClosed(x, y);
     return FALSE;
 }
@@ -2226,7 +2230,7 @@ bool8 ScrCmd_checkmoneventlegal(struct ScriptContext *ctx)
 }
 
 // TODO: Should be renamed. Name implies general usage, but its specifically for Wonder Card
-// See GetSavedRamScriptIfValid, which is NULL if ValidateReceivedWonderCard returns FALSE
+// See GetSavedRamScriptIfValid, which is NULL if ValidateSavedWonderCard returns FALSE
 bool8 ScrCmd_gotoram(struct ScriptContext *ctx)
 {
     const u8* script = GetSavedRamScriptIfValid();

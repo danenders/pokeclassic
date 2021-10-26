@@ -4,7 +4,7 @@
 #include "ereader_helpers.h"
 #include "link.h"
 #include "main.h"
-#include "mystery_gift.h"
+#include "mystery_gift_menu.h"
 #include "save.h"
 #include "sound.h"
 #include "sprite.h"
@@ -13,7 +13,7 @@
 #include "util.h"
 #include "constants/songs.h"
 
-struct Unk81D5014
+struct EReaderTaskData
 {
     u16 unk0;
     u16 unk2;
@@ -36,7 +36,7 @@ struct Unk03006370
     u32 *unk8;
 };
 
-static void sub_81D5084(u8);
+static void Task_EReader(u8);
 
 struct Unk03006370 gUnknown_03006370;
 
@@ -47,10 +47,10 @@ static void sub_81D4D50(struct Unk03006370 *arg0, int arg1, u32 *arg2)
 {
     volatile u16 backupIME = REG_IME;
     REG_IME = 0;
-    gIntrTable[1] = sub_81D3FAC;
-    gIntrTable[2] = sub_81D3F9C;
+    gIntrTable[1] = EReaderHelper_SerialCallback;
+    gIntrTable[2] = EReaderHelper_Timer3Callback;
     EReaderHelper_SaveRegsState();
-    sub_81D4238();
+    EReaderHelper_ClearSendRecvMgr();
     REG_IE |= INTR_FLAG_VCOUNT;
     REG_IME = backupIME;
     arg0->unk0 = 0;
@@ -62,7 +62,7 @@ static void sub_81D4DB8(struct Unk03006370 *arg0)
 {
     volatile u16 backupIME = REG_IME;
     REG_IME = 0;
-    sub_81D4238();
+    EReaderHelper_ClearSendRecvMgr();
     EReaderHelper_RestoreRegsState();
     RestoreSerialTimer3IntrHandlers();
     REG_IME = backupIME;
@@ -209,11 +209,11 @@ static u32 sub_81D4EE4(u8 *arg0, u16 *arg1)
     return 0;
 }
 
-void task_add_00_ereader(void)
+void CreateEReaderTask(void)
 {
-    struct Unk81D5014 *data;
-    u8 taskId = CreateTask(sub_81D5084, 0);
-    data = (struct Unk81D5014 *)gTasks[taskId].data;
+    struct EReaderTaskData *data;
+    u8 taskId = CreateTask(Task_EReader, 0);
+    data = (struct EReaderTaskData *)gTasks[taskId].data;
     data->unk8 = 0;
     data->unk9 = 0;
     data->unkA = 0;
@@ -240,17 +240,17 @@ static bool32 sub_81D5064(u16 *arg0, u16 arg1)
         *arg0 = 0;
         return TRUE;
     }
-    
+
     return FALSE;
 }
 
-static void sub_81D5084(u8 taskId)
+static void Task_EReader(u8 taskId)
 {
-    struct Unk81D5014 *data = (struct Unk81D5014 *)gTasks[taskId].data;
+    struct EReaderTaskData *data = (struct EReaderTaskData *)gTasks[taskId].data;
     switch (data->unk8)
     {
     case 0:
-        if (MG_PrintTextOnWindow1AndWaitButton(&data->unk9, gJPText_ReceiveMysteryGiftWithEReader))
+        if (PrintMysteryGiftMenuMessage(&data->unk9, gJPText_ReceiveMysteryGiftWithEReader))
             data->unk8 = 1;
         break;
     case 1:
@@ -274,7 +274,7 @@ static void sub_81D5084(u8 taskId)
         }
         break;
     case 4:
-        if (MG_PrintTextOnWindow1AndWaitButton(&data->unk9, gJPText_SelectConnectFromEReaderMenu))
+        if (PrintMysteryGiftMenuMessage(&data->unk9, gJPText_SelectConnectFromEReaderMenu))
         {
             AddTextPrinterToWindow1(gJPText_SelectConnectWithGBA);
             sub_81D505C(&data->unk0);
@@ -323,7 +323,7 @@ static void sub_81D5084(u8 taskId)
         }
         break;
     case 7:
-        if (MG_PrintTextOnWindow1AndWaitButton(&data->unk9, gJPText_LinkIsIncorrect))
+        if (PrintMysteryGiftMenuMessage(&data->unk9, gJPText_LinkIsIncorrect))
             data->unk8 = 4;
         break;
     case 8:
@@ -401,7 +401,7 @@ static void sub_81D5084(u8 taskId)
         }
         break;
     case 15:
-        data->unkE = EReader_IsReceivedDataValid((struct EReaderTrainerHillSet *)gDecompressionBuffer);
+        data->unkE = ValidateTrainerHillData((struct EReaderTrainerHillSet *)gDecompressionBuffer);
         SetCloseLinkCallbackAndType(data->unkE);
         data->unk8 = 16;
         break;
@@ -439,19 +439,19 @@ static void sub_81D5084(u8 taskId)
             data->unk8 = 26;
         break;
     case 23:
-        if (MG_PrintTextOnWindow1AndWaitButton(&data->unk9, gJPText_CardReadingHasBeenHalted))
+        if (PrintMysteryGiftMenuMessage(&data->unk9, gJPText_CardReadingHasBeenHalted))
             data->unk8 = 26;
         break;
     case 20:
-        if (MG_PrintTextOnWindow1AndWaitButton(&data->unk9, gJPText_ConnectionErrorCheckLink))
+        if (PrintMysteryGiftMenuMessage(&data->unk9, gJPText_ConnectionErrorCheckLink))
             data->unk8 = 0;
         break;
     case 21:
-        if (MG_PrintTextOnWindow1AndWaitButton(&data->unk9, gJPText_ConnectionErrorTryAgain))
+        if (PrintMysteryGiftMenuMessage(&data->unk9, gJPText_ConnectionErrorTryAgain))
             data->unk8 = 0;
         break;
     case 22:
-        if (MG_PrintTextOnWindow1AndWaitButton(&data->unk9, gJPText_WriteErrorUnableToSaveData))
+        if (PrintMysteryGiftMenuMessage(&data->unk9, gJPText_WriteErrorUnableToSaveData))
             data->unk8 = 0;
         break;
     case 26:

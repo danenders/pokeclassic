@@ -318,7 +318,7 @@
 #define SOUND_PAN_TARGET    63
 
 // move background ids
-#define BG_DARK_ 0 // the same as BG_DARK but is unused
+#define BG_NONE 0 // the same as BG_DARK but is unused
 #define BG_DARK 1
 #define BG_GHOST 2
 #define BG_PSYCHIC 3
@@ -395,6 +395,9 @@
 // Tasks with return values often assign them to gBattleAnimArgs[7].
 #define ARG_RET_ID 7
 
+// For createsprite macro to use internally
+#define ANIMSPRITE_IS_TARGET (1 << 7)
+
 // Trapping Wrap-like moves end turn animation.
 #define TRAP_ANIM_BIND 0
 #define TRAP_ANIM_WRAP 0
@@ -409,34 +412,5 @@
 #define ANIM_WEATHER_RAIN 2
 #define ANIM_WEATHER_SANDSTORM 3
 #define ANIM_WEATHER_HAIL 4
-
-// Battle mon back animations.
-#define BACK_ANIM_NONE                         0x00
-#define BACK_ANIM_H_SLIDE_QUICK                0x01
-#define BACK_ANIM_H_SLIDE                      0x02
-#define BACK_ANIM_H_SLIDE_WITH_V_COMPRESS_1    0x03
-#define BACK_ANIM_H_SLIDE_WITH_V_COMPRESS_2    0x04
-#define BACK_ANIM_SHRINK_GROW_1                0x05
-#define BACK_ANIM_GROW_1                       0x06
-#define BACK_ANIM_CIRCLE_MOVE_COUNTERCLOCKWISE 0x07
-#define BACK_ANIM_HORIZONTAL_SHAKE             0x08
-#define BACK_ANIM_VERTICAL_SHAKE               0x09
-#define BACK_ANIM_V_SHAKE_WITH_H_SLIDE         0x0a
-#define BACK_ANIM_VERTICAL_STRETCH             0x0b
-#define BACK_ANIM_HORIZONTAL_STRETCH           0x0c
-#define BACK_ANIM_GROW_2                       0x0d
-#define BACK_ANIM_V_SHAKE_WITH_PAUSE           0x0e
-#define BACK_ANIM_CIRCLE_MOVE_CLOCKWISE        0x0f
-#define BACK_ANIM_CONCAVE_DOWN_ARC_SWAY_SMALL  0x10
-#define BACK_ANIM_CONCAVE_DOWN_ARC_SWAY_LARGE  0x11
-#define BACK_ANIM_CONCAVE_UP_ARC_SWAY_LARGE    0x12
-#define BACK_ANIM_DIP_RIGHT_SIDE               0x13
-#define BACK_ANIM_SHRINK_GROW_2                0x14
-#define BACK_ANIM_JOLT_RIGHT                   0x15
-#define BACK_ANIM_FLASH_YELLOW_WITH_SHAKE      0x16
-#define BACK_ANIM_FADE_RED_WITH_SHAKE          0x17
-#define BACK_ANIM_FADE_GREEN_WITH_SHAKE        0x18
-#define BACK_ANIM_FADE_BLUE_WITH_SHAKE         0x19
-
 
 #endif // GUARD_CONSTANTS_BATTLE_ANIM_H
