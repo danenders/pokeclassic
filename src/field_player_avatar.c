@@ -1160,22 +1160,22 @@ u8 player_get_pos_including_state_based_drift(s16 *x, s16 *y)
 
         switch (object->movementActionId)
         {
-            case MOVEMENT_ACTION_WALK_NORMAL_DOWN:
-            case MOVEMENT_ACTION_PLAYER_RUN_DOWN:
-                (*y)++;
-                return TRUE;
-            case MOVEMENT_ACTION_WALK_NORMAL_UP:
-            case MOVEMENT_ACTION_PLAYER_RUN_UP:
-                (*y)--;
-                return TRUE;
-            case MOVEMENT_ACTION_WALK_NORMAL_LEFT:
-            case MOVEMENT_ACTION_PLAYER_RUN_LEFT:
-                (*x)--;
-                return TRUE;
-            case MOVEMENT_ACTION_WALK_NORMAL_RIGHT:
-            case MOVEMENT_ACTION_PLAYER_RUN_RIGHT:
-                (*x)++;
-                return TRUE;
+        case MOVEMENT_ACTION_WALK_NORMAL_DOWN:
+        case MOVEMENT_ACTION_PLAYER_RUN_DOWN:
+            (*y)++;
+            return TRUE;
+        case MOVEMENT_ACTION_WALK_NORMAL_UP:
+        case MOVEMENT_ACTION_PLAYER_RUN_UP:
+            (*y)--;
+            return TRUE;
+        case MOVEMENT_ACTION_WALK_NORMAL_LEFT:
+        case MOVEMENT_ACTION_PLAYER_RUN_LEFT:
+            (*x)--;
+            return TRUE;
+        case MOVEMENT_ACTION_WALK_NORMAL_RIGHT:
+        case MOVEMENT_ACTION_PLAYER_RUN_RIGHT:
+            (*x)++;
+            return TRUE;
         }
     }
 
@@ -1390,8 +1390,8 @@ void InitPlayerAvatar(s16 x, s16 y, u8 direction, u8 gender)
 
     playerObjEventTemplate.localId = OBJ_EVENT_ID_PLAYER;
     playerObjEventTemplate.graphicsId = GetPlayerAvatarGraphicsIdByStateIdAndGender(PLAYER_AVATAR_STATE_NORMAL, gender);
-    playerObjEventTemplate.x = x - 7;
-    playerObjEventTemplate.y = y - 7;
+    playerObjEventTemplate.x = x - MAP_OFFSET;
+    playerObjEventTemplate.y = y - MAP_OFFSET;
     playerObjEventTemplate.elevation = 0;
     playerObjEventTemplate.movementType = MOVEMENT_TYPE_PLAYER;
     playerObjEventTemplate.movementRangeX = 0;
@@ -1709,7 +1709,7 @@ static bool8 (*const sFishingStateFuncs[])(struct Task *) =
 {
     Fishing_Init,
     Fishing_GetRodOut,
-    Fishing_WaitBeforeDots, 
+    Fishing_WaitBeforeDots,
     Fishing_InitDots,       // FISHING_START_ROUND
     Fishing_ShowDots,
     Fishing_CheckForBite,
@@ -1751,13 +1751,13 @@ static bool8 Fishing_GetRodOut(struct Task *task)
 {
     struct ObjectEvent *playerObjEvent;
     const s16 minRounds1[] = {
-        [OLD_ROD]   = 1, 
-        [GOOD_ROD]  = 1, 
+        [OLD_ROD]   = 1,
+        [GOOD_ROD]  = 1,
         [SUPER_ROD] = 1
     };
     const s16 minRounds2[] = {
-        [OLD_ROD]   = 1, 
-        [GOOD_ROD]  = 3, 
+        [OLD_ROD]   = 1,
+        [GOOD_ROD]  = 3,
         [SUPER_ROD] = 6
     };
 
@@ -1887,8 +1887,8 @@ static bool8 Fishing_GotBite(struct Task *task)
 static bool8 Fishing_WaitForA(struct Task *task)
 {
     const s16 reelTimeouts[3] = {
-        [OLD_ROD]   = 36, 
-        [GOOD_ROD]  = 33, 
+        [OLD_ROD]   = 36,
+        [GOOD_ROD]  = 33,
         [SUPER_ROD] = 30
     };
 
@@ -2122,7 +2122,7 @@ static void Task_DoPlayerSpinExit(u8 taskId)
             tState++;
         case 1: // Spin while rising
             TrySpinPlayerForWarp(object, &tSpinDelayTimer);
-            
+
             // Rise and accelerate
             tCurY -= tSpeed;
             tSpeed += 3;
