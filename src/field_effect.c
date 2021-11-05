@@ -3051,7 +3051,7 @@ static void SurfFieldEffect_End(struct Task *task)
     if (ObjectEventClearHeldMovementIfFinished(objectEvent))
     {
         gPlayerAvatar.preventStep = FALSE;
-        gPlayerAvatar.flags &= ~PLAYER_AVATAR_FLAG_5;
+        gPlayerAvatar.flags &= ~PLAYER_AVATAR_FLAG_CONTROLLABLE;
         ObjectEventSetHeldMovement(objectEvent, GetFaceDirectionMovementAction(objectEvent->movementDirection));
         SetSurfBlob_BobState(objectEvent->fieldEffectSpriteId, BOB_PLAYER_AND_MON);
         UnfreezeObjectEvents();
@@ -3240,7 +3240,7 @@ static void FlyOutFieldEffect_JumpOnBird(struct Task *task)
     {
         struct ObjectEvent *objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
         ObjectEventSetGraphicsId(objectEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_SURFING));
-        StartSpriteAnim(&gSprites[objectEvent->spriteId], 0x16);
+        StartSpriteAnim(&gSprites[objectEvent->spriteId], ANIM_GET_ON_OFF_POKEMON_WEST);
         objectEvent->inanimate = TRUE;
         ObjectEventSetHeldMovement(objectEvent, MOVEMENT_ACTION_JUMP_IN_PLACE_LEFT);
         if (task->tAvatarFlags & PLAYER_AVATAR_FLAG_SURFING)
@@ -3478,7 +3478,7 @@ static void FlyInFieldEffect_BirdSwoopDown(struct Task *task)
         ObjectEventSetGraphicsId(objectEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_SURFING));
         CameraObjectReset2();
         ObjectEventTurn(objectEvent, DIR_WEST);
-        StartSpriteAnim(&gSprites[objectEvent->spriteId], 0x16);
+        StartSpriteAnim(&gSprites[objectEvent->spriteId], ANIM_GET_ON_OFF_POKEMON_WEST);
         objectEvent->invisible = FALSE;
         task->tBirdSpriteId = CreateFlyBirdSprite();
         StartFlyBirdSwoopDown(task->tBirdSpriteId);

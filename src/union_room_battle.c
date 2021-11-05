@@ -78,7 +78,7 @@ static void AddTextPrinterForUnionRoomBattle(u8 windowId, const u8 * str, u8 x, 
     s32 letterSpacing = 0;
     s32 lineSpacing = 1;
     FillWindowPixelBuffer(windowId, (sTextColors[0] << 4) | sTextColors[0]);
-    AddTextPrinterParameterized4(windowId, 1, x, y, letterSpacing, lineSpacing, sTextColors, speed, str);
+    AddTextPrinterParameterized4(windowId, FONT_NORMAL, x, y, letterSpacing, lineSpacing, sTextColors, speed, str);
 }
 
 static bool32 PrintUnionRoomBattleMessage(s16 * state, const u8 * str, s32 speed)
@@ -132,7 +132,7 @@ void CB2_UnionRoomBattle(void)
         FillBgTilemapBufferRect(0, 0, 0, 0, 30, 20, 0xF);
         LoadUserWindowBorderGfx(0, 1, 0xD0);
         LoadUserWindowBorderGfx_(0, 1, 0xD0);
-        sub_819789C();
+        Menu_LoadStdPal();
         SetVBlankCallback(VBlankCB_UnionRoomBattle);
         gMain.state++;
         break;

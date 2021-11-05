@@ -101,7 +101,7 @@ static EWRAM_DATA u8 *sMenuTextAllocBuffer = NULL;
 // See the corresponding GFXTAGs in src/data/trade.h
 static EWRAM_DATA u8 *sMenuTextTileBuffers[GFXTAG_MENU_TEXT_COUNT] = {NULL};
 
-EWRAM_DATA struct MailStruct gTradeMail[PARTY_SIZE] = {0};
+EWRAM_DATA struct Mail gTradeMail[PARTY_SIZE] = {0};
 EWRAM_DATA u8 gSelectedTradeMonPositions[2] = {0};
 static EWRAM_DATA struct {
     /*0x0000*/ u8 bg2hofs;
@@ -144,7 +144,7 @@ static EWRAM_DATA struct {
 } *sTradeMenuData = {NULL};
 
 static EWRAM_DATA struct {
-    /*0x00*/ struct Pokemon mon;
+    /*0x00*/ struct Pokemon tempMon; // Used as a temp variable when swapping Pokémon
     /*0x64*/ u32 timer;
     /*0x68*/ u32 monPersonalities[2];
     /*0x70*/ u8 filler_70[2];
@@ -238,7 +238,7 @@ static void SpriteCB_BouncingPokeballDepart(struct Sprite *);
 static void SpriteCB_BouncingPokeballDepartEnd(struct Sprite *);
 static void SpriteCB_BouncingPokeballArrive(struct Sprite *);
 static void BufferInGameTradeMonName(void);
-static void SetInGameTradeMail(struct MailStruct *, const struct InGameTrade *);
+static void SetInGameTradeMail(struct Mail *, const struct InGameTrade *);
 static void CB2_UpdateLinkTrade(void);
 static void CB2_TryFinishTrade(void);
 static void CB2_SaveAndEndTrade(void);
@@ -334,8 +334,8 @@ static void InitTradeMenu(void)
     gPaletteFade.bufferTransferDisabled = TRUE;
 
     SetVBlankCallback(VBlankCB_TradeMenu);
-    LoadPalette(gUnknown_0860F074, 0xF0, 20);
-    LoadPalette(gUnknown_0860F074, 0xD0, 20);
+    LoadPalette(gStandardMenuPalette, 0xF0, 20);
+    LoadPalette(gStandardMenuPalette, 0xD0, 20);
     ResetBgsAndClearDma3BusyFlags(0);
     InitBgsFromTemplates(0, sTradeMenuBgTemplates, ARRAY_COUNT(sTradeMenuBgTemplates));
     SetBgTilemapBuffer(1, sTradeMenuData->tilemapBuffer);
@@ -542,7 +542,7 @@ static void CB2_CreateTradeMenu(void)
         break;
     case 12:
         // Create player's name text sprites
-        xPos = GetStringCenterAlignXOffset(1, gSaveBlock2Ptr->playerName, 120);
+        xPos = GetStringCenterAlignXOffset(FONT_NORMAL, gSaveBlock2Ptr->playerName, 120);
         for (i = 0; i < GFXTAG_PLAYER_NAME; i++)
         {
             temp = sSpriteTemplate_MenuText;
@@ -551,7 +551,7 @@ static void CB2_CreateTradeMenu(void)
         }
 
         // Create partner's name text sprites
-        xPos = GetStringCenterAlignXOffset(1, gLinkPlayers[GetMultiplayerId() ^ 1].name, 120);
+        xPos = GetStringCenterAlignXOffset(FONT_NORMAL, gLinkPlayers[GetMultiplayerId() ^ 1].name, 120);
         for (i = 0; i < GFXTAG_PARTNER_NAME; i++)
         {
             temp = sSpriteTemplate_MenuText;
@@ -733,7 +733,7 @@ static void CB2_ReturnToTradeMenu(void)
         break;
     case 12:
         // Create player's name text sprites
-        xPos = GetStringCenterAlignXOffset(1, gSaveBlock2Ptr->playerName, 120);
+        xPos = GetStringCenterAlignXOffset(FONT_NORMAL, gSaveBlock2Ptr->playerName, 120);
         for (i = 0; i < GFXTAG_PLAYER_NAME; i++)
         {
             temp = sSpriteTemplate_MenuText;
@@ -742,7 +742,7 @@ static void CB2_ReturnToTradeMenu(void)
         }
 
         // Create partner's name text sprites
-        xPos = GetStringCenterAlignXOffset(1, gLinkPlayers[GetMultiplayerId() ^ 1].name, 120);
+        xPos = GetStringCenterAlignXOffset(FONT_NORMAL, gLinkPlayers[GetMultiplayerId() ^ 1].name, 120);
         for (i = 0; i < GFXTAG_PARTNER_NAME; i++)
         {
             temp = sSpriteTemplate_MenuText;
@@ -913,7 +913,7 @@ static void LoadTradeBgGfx(u8 state)
     case 0:
         LoadPalette(gTradeMenu_Pal, 0, 0x60);
         LoadBgTiles(1, gTradeMenu_Gfx, 0x1280, 0);
-        CopyToBgTilemapBufferRect_ChangePalette(1, gUnknown_08DDCF04, 0, 0, 32, 20, 0);
+        CopyToBgTilemapBufferRect_ChangePalette(1, gTradeMenu_Tilemap, 0, 0, 32, 20, 0);
         LoadBgTilemap(2, sTradeStripesBG2Tilemap, 0x800, 0);
         break;
     case 1:
@@ -924,9 +924,7 @@ static void LoadTradeBgGfx(u8 state)
         break;
     case 2:
         for (i = 0; i < 4; i++)
-        {
             SetGpuReg(REG_OFFSET_BG0HOFS + (i * 2), 0);
-        }
         ShowBg(0);
         ShowBg(1);
         ShowBg(2);
@@ -1054,7 +1052,7 @@ static bool8 BufferTradeParties(void)
         }
         break;
     case 13:
-        Trade_Memcpy(gBlockSendBuffer, gSaveBlock1Ptr->mail, PARTY_SIZE * sizeof(struct MailStruct) + 4);
+        Trade_Memcpy(gBlockSendBuffer, gSaveBlock1Ptr->mail, PARTY_SIZE * sizeof(struct Mail) + 4);
         sTradeMenuData->bufferPartyState++;
         break;
     case 15:
@@ -1065,7 +1063,7 @@ static bool8 BufferTradeParties(void)
     case 16:
         if (_GetBlockReceivedStatus() == 3)
         {
-            Trade_Memcpy(gTradeMail, gBlockRecvBuffer[id ^ 1], PARTY_SIZE * sizeof(struct MailStruct));
+            Trade_Memcpy(gTradeMail, gBlockRecvBuffer[id ^ 1], PARTY_SIZE * sizeof(struct Mail));
             TradeResetReceivedFlags();
             sTradeMenuData->bufferPartyState++;
         }
@@ -1853,9 +1851,9 @@ static void DrawTradeMenuParty(u8 whichParty)
         gSprites[sTradeMenuData->partySpriteIds[0][partyIdx + (selectedMonParty * PARTY_SIZE)]].x2 = 0;
         gSprites[sTradeMenuData->partySpriteIds[0][partyIdx + (selectedMonParty * PARTY_SIZE)]].y2 = 0;
         nameStringWidth = GetMonNicknameWidth(nickname, selectedMonParty, partyIdx);
-        AddTextPrinterParameterized3((whichParty * 2) + 14, 0, (80 - nameStringWidth) / 2, 4, sTradeTextColors, 0, nickname);
+        AddTextPrinterParameterized3((whichParty * 2) + 14, FONT_SMALL, (80 - nameStringWidth) / 2, 4, sTradeTextColors, 0, nickname);
         BufferTradeMonMoves(movesString, selectedMonParty, partyIdx);
-        AddTextPrinterParameterized4((whichParty * 2) + 15, 1, 0, 0, 0, 0, sTradeTextColors, 0, movesString);
+        AddTextPrinterParameterized4((whichParty * 2) + 15, FONT_NORMAL, 0, 0, 0, 0, sTradeTextColors, 0, movesString);
         PutWindowTilemap((whichParty * 2) + 14);
         CopyWindowToVram((whichParty * 2) + 14, 3);
         PutWindowTilemap((whichParty * 2) + 15);
@@ -1883,7 +1881,7 @@ static u8 GetMonNicknameWidth(u8 *str, u8 whichParty, u8 monIdx)
         GetMonData(&gEnemyParty[monIdx], MON_DATA_NICKNAME, nickname);
 
     StringCopy10(str, nickname);
-    return GetStringWidth(0, str, GetFontAttribute(0, FONTATTR_LETTER_SPACING));
+    return GetStringWidth(FONT_SMALL, str, GetFontAttribute(FONT_SMALL, FONTATTR_LETTER_SPACING));
 }
 
 static void BufferTradeMonMoves(u8 *str, u8 whichParty, u8 partyIdx)
@@ -1928,8 +1926,8 @@ static void PrintMonNicknameForTradeMenu(u8 whichParty, u8 windowId, u8 *nicknam
 {
     u8 xPos;
     windowId += (whichParty * PARTY_SIZE) + 2;
-    xPos = GetStringCenterAlignXOffset(0, nickname, 64);
-    AddTextPrinterParameterized3(windowId, 0, xPos, 4, sTradeTextColors, 0, nickname);
+    xPos = GetStringCenterAlignXOffset(FONT_SMALL, nickname, 64);
+    AddTextPrinterParameterized3(windowId, FONT_SMALL, xPos, 4, sTradeTextColors, 0, nickname);
     PutWindowTilemap(windowId);
     CopyWindowToVram(windowId, 3);
 }
@@ -2155,7 +2153,7 @@ static void DoQueuedActions(void)
 static void PrintTradeMessage(u8 messageId)
 {
     FillWindowPixelBuffer(0, PIXEL_FILL(1));
-    AddTextPrinterParameterized(0, 1, sTradeMessages[messageId], 0, 1, TEXT_SPEED_FF, NULL);
+    AddTextPrinterParameterized(0, FONT_NORMAL, sTradeMessages[messageId], 0, 1, TEXT_SPEED_FF, NULL);
     DrawTextBorderOuter(0, 20, 12);
     PutWindowTilemap(0);
     CopyWindowToVram(0, 3);
@@ -3043,18 +3041,16 @@ static void TradeMons(u8 playerPartyIdx, u8 partnerPartyIdx)
     u16 partnerMail = GetMonData(partnerMon, MON_DATA_MAIL);
 
     if (playerMail != MAIL_NONE)
-        ClearMailStruct(&gSaveBlock1Ptr->mail[playerMail]);
+        ClearMail(&gSaveBlock1Ptr->mail[playerMail]);
 
-    sTradeData->mon = *playerMon;
-    *playerMon = *partnerMon;
-    *partnerMon = sTradeData->mon;
+    SWAP(*playerMon, *partnerMon, sTradeData->tempMon);
 
     friendship = 70;
     if (!GetMonData(playerMon, MON_DATA_IS_EGG))
         SetMonData(playerMon, MON_DATA_FRIENDSHIP, &friendship);
 
     if (partnerMail != MAIL_NONE)
-        GiveMailToMon2(playerMon, &gTradeMail[partnerMail]);
+        GiveMailToMon(playerMon, &gTradeMail[partnerMail]);
 
     UpdatePokedexForReceivedMon(playerPartyIdx);
     if (gReceivedRemoteLinkPlayers)
@@ -4492,7 +4488,7 @@ static void _CreateInGameTradePokemon(u8 whichPlayerMon, u8 whichInGameTrade)
     const struct InGameTrade *inGameTrade = &sIngameTrades[whichInGameTrade];
     u8 level = GetMonData(&gPlayerParty[whichPlayerMon], MON_DATA_LEVEL);
 
-    struct MailStruct mail;
+    struct Mail mail;
     u8 metLocation = METLOC_IN_GAME_TRADE;
     u8 isMail;
     struct Pokemon *pokemon = &gEnemyParty[0];
@@ -4535,7 +4531,7 @@ static void _CreateInGameTradePokemon(u8 whichPlayerMon, u8 whichInGameTrade)
     CalculateMonStats(&gEnemyParty[0]);
 }
 
-static void SetInGameTradeMail(struct MailStruct *mail, const struct InGameTrade *trade) {
+static void SetInGameTradeMail(struct Mail *mail, const struct InGameTrade *trade) {
     s32 i;
 
     for (i = 0; i < MAIL_WORDS_COUNT; i++)
@@ -4837,7 +4833,7 @@ void DrawTextOnTradeWindow(u8 windowId, const u8 *str, u8 speed)
     sTradeData->textColors[0] = TEXT_DYNAMIC_COLOR_6;
     sTradeData->textColors[1] = TEXT_COLOR_WHITE;
     sTradeData->textColors[2] = TEXT_COLOR_GREEN;
-    AddTextPrinterParameterized4(windowId, 1, 0, 2, 0, 0, sTradeData->textColors, speed, str);
+    AddTextPrinterParameterized4(windowId, FONT_NORMAL, 0, 2, 0, 0, sTradeData->textColors, speed, str);
     CopyWindowToVram(windowId, 3);
 }
 

@@ -396,10 +396,10 @@ static bool8 _CheckDaycareMonReceivedMail(struct DayCare *daycare, u8 daycareId)
     GetBoxMonNickname(&daycareMon->mon, nickname);
     if (daycareMon->mail.message.itemId != ITEM_NONE
         && (StringCompareWithoutExtCtrlCodes(nickname, daycareMon->mail.monName) != 0
-            || StringCompareWithoutExtCtrlCodes(gSaveBlock2Ptr->playerName, daycareMon->mail.OT_name) != 0))
+            || StringCompareWithoutExtCtrlCodes(gSaveBlock2Ptr->playerName, daycareMon->mail.otName) != 0))
     {
         StringCopy(gStringVar1, nickname);
-        TVShowConvertInternationalString(gStringVar2, daycareMon->mail.OT_name, daycareMon->mail.gameLanguage);
+        TVShowConvertInternationalString(gStringVar2, daycareMon->mail.otName, daycareMon->mail.gameLanguage);
         TVShowConvertInternationalString(gStringVar3, daycareMon->mail.monName, daycareMon->mail.monLanguage);
         return TRUE;
     }
@@ -866,7 +866,7 @@ static void EggHatchPrintMessage(u8 windowId, u8* string, u8 x, u8 y, u8 speed)
     sEggHatchData->textColor[0] = 0;
     sEggHatchData->textColor[1] = 5;
     sEggHatchData->textColor[2] = 6;
-    AddTextPrinterParameterized4(windowId, 1, x, y, 0, 0, sEggHatchData->textColor, speed, string);
+    AddTextPrinterParameterized4(windowId, FONT_NORMAL, x, y, 0, 0, sEggHatchData->textColor, speed, string);
 }
 
 u8 GetEggCyclesToSubtract(void)

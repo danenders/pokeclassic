@@ -476,7 +476,7 @@ static void CB2_InitPartyMenu(void)
 {
     while (TRUE)
     {
-        if (MenuHelpers_CallLinkSomething() == TRUE || ShowPartyMenu() == TRUE || MenuHelpers_LinkSomething() == TRUE)
+        if (MenuHelpers_ShouldWaitForLinkRecv() == TRUE || ShowPartyMenu() == TRUE || MenuHelpers_IsLinkActive() == TRUE)
             break;
     }
 }
@@ -509,7 +509,7 @@ static bool8 ShowPartyMenu(void)
         gMain.state++;
         break;
     case 5:
-        if (!MenuHelpers_LinkSomething())
+        if (!MenuHelpers_IsLinkActive())
             ResetTasks();
         gMain.state++;
         break;
@@ -1182,7 +1182,7 @@ u8 GetPartyMenuType(void)
 
 void Task_HandleChooseMonInput(u8 taskId)
 {
-    if (!gPaletteFade.active && MenuHelpers_CallLinkSomething() != TRUE)
+    if (!gPaletteFade.active && MenuHelpers_ShouldWaitForLinkRecv() != TRUE)
     {
         s8 *slotPtr = GetCurrentPartySlotPtr();
 
@@ -1319,7 +1319,7 @@ static void HandleChooseMonCancel(u8 taskId, s8 *slotPtr)
         PlaySE(SE_SELECT);
         if (DisplayCancelChooseMonYesNo(taskId) != TRUE)
         {
-            if (!MenuHelpers_LinkSomething())
+            if (!MenuHelpers_IsLinkActive())
                 gSpecialVar_0x8004 = PARTY_SIZE + 1;
             gPartyMenuUseExitCallback = FALSE;
             *slotPtr = PARTY_SIZE + 1;
@@ -1659,7 +1659,7 @@ bool8 IsPartyMenuTextPrinterActive(void)
 
 static void Task_WaitForLinkAndReturnToChooseMon(u8 taskId)
 {
-    if (MenuHelpers_CallLinkSomething() != TRUE)
+    if (MenuHelpers_ShouldWaitForLinkRecv() != TRUE)
     {
         DisplayPartyMenuStdMessage(PARTY_MSG_CHOOSE_MON);
         gTasks[taskId].func = Task_HandleChooseMonInput;
@@ -1672,7 +1672,7 @@ static void Task_ReturnToChooseMonAfterText(u8 taskId)
     {
         ClearStdWindowAndFrameToTransparent(6, 0);
         ClearWindowTilemap(6);
-        if (MenuHelpers_LinkSomething() == TRUE)
+        if (MenuHelpers_IsLinkActive() == TRUE)
         {
             gTasks[taskId].func = Task_WaitForLinkAndReturnToChooseMon;
         }
@@ -1726,7 +1726,7 @@ static void GiveItemToMon(struct Pokemon *mon, u16 item)
 
     if (ItemIsMail(item) == TRUE)
     {
-        if (GiveMailToMon(mon, item) == 0xFF)
+        if (GiveMailToMonByItemId(mon, item) == MAIL_NONE)
             return;
     }
     itemBytes[0] = item;
@@ -2019,7 +2019,7 @@ static void InitPartyMenuWindows(u8 layout)
         FillWindowPixelBuffer(i, PIXEL_FILL(0));
     LoadUserWindowBorderGfx(0, 0x4F, 0xD0);
     LoadPalette(GetOverworldTextboxPalettePtr(), 0xE0, 0x20);
-    LoadPalette(gUnknown_0860F074, 0xF0, 0x20);
+    LoadPalette(gStandardMenuPalette, 0xF0, 0x20);
 }
 
 static void CreateCancelConfirmWindows(bool8 chooseHalf)
@@ -2035,8 +2035,8 @@ static void CreateCancelConfirmWindows(bool8 chooseHalf)
         {
             confirmWindowId = AddWindow(&sConfirmButtonWindowTemplate);
             FillWindowPixelBuffer(confirmWindowId, PIXEL_FILL(0));
-            mainOffset = GetStringCenterAlignXOffset(0, gMenuText_Confirm, 48);
-            AddTextPrinterParameterized4(confirmWindowId, 0, mainOffset, 1, 0, 0, sFontColorTable[0], -1, gMenuText_Confirm);
+            mainOffset = GetStringCenterAlignXOffset(FONT_SMALL, gMenuText_Confirm, 48);
+            AddTextPrinterParameterized4(confirmWindowId, FONT_SMALL, mainOffset, 1, 0, 0, sFontColorTable[0], -1, gMenuText_Confirm);
             PutWindowTilemap(confirmWindowId);
             CopyWindowToVram(confirmWindowId, 2);
             cancelWindowId = AddWindow(&sMultiCancelButtonWindowTemplate);
@@ -2052,13 +2052,13 @@ static void CreateCancelConfirmWindows(bool8 chooseHalf)
         // Branches are functionally identical. Second branch is never reached, Spin Trade wasnt fully implemented
         if (gPartyMenu.menuType != PARTY_MENU_TYPE_SPIN_TRADE)
         {
-            mainOffset = GetStringCenterAlignXOffset(0, gText_Cancel, 48);
-            AddTextPrinterParameterized3(cancelWindowId, 0, mainOffset + offset, 1, sFontColorTable[0], -1, gText_Cancel);
+            mainOffset = GetStringCenterAlignXOffset(FONT_SMALL, gText_Cancel, 48);
+            AddTextPrinterParameterized3(cancelWindowId, FONT_SMALL, mainOffset + offset, 1, sFontColorTable[0], -1, gText_Cancel);
         }
         else
         {
-            mainOffset = GetStringCenterAlignXOffset(0, gText_Cancel2, 48);
-            AddTextPrinterParameterized3(cancelWindowId, 0, mainOffset + offset, 1, sFontColorTable[0], -1, gText_Cancel2);
+            mainOffset = GetStringCenterAlignXOffset(FONT_SMALL, gText_Cancel2, 48);
+            AddTextPrinterParameterized3(cancelWindowId, FONT_SMALL, mainOffset + offset, 1, sFontColorTable[0], -1, gText_Cancel2);
         }
         PutWindowTilemap(cancelWindowId);
         CopyWindowToVram(cancelWindowId, 2);
@@ -2205,7 +2205,7 @@ static void LoadPartyBoxPalette(struct PartyMenuBox *menuBox, u8 palFlags)
 
 static void DisplayPartyPokemonBarDetail(u8 windowId, const u8 *str, u8 color, const u8 *align)
 {
-    AddTextPrinterParameterized3(windowId, 0, align[0], align[1], sFontColorTable[color], 0, str);
+    AddTextPrinterParameterized3(windowId, FONT_SMALL, align[0], align[1], sFontColorTable[color], 0, str);
 }
 
 static void DisplayPartyPokemonNickname(struct Pokemon *mon, struct PartyMenuBox *menuBox, u8 c)
@@ -2366,7 +2366,7 @@ static void DisplayPartyPokemonDescriptionText(u8 stringID, struct PartyMenuBox 
         menuBox->infoRects->blitFunc(menuBox->windowId, menuBox->infoRects->descTextLeft >> 3, menuBox->infoRects->descTextTop >> 3, width, height, TRUE);
     }
     if (c != 2)
-        AddTextPrinterParameterized3(menuBox->windowId, 1, menuBox->infoRects->descTextLeft, menuBox->infoRects->descTextTop, sFontColorTable[0], 0, sDescriptionStringTable[stringID]);
+        AddTextPrinterParameterized3(menuBox->windowId, FONT_NORMAL, menuBox->infoRects->descTextLeft, menuBox->infoRects->descTextTop, sFontColorTable[0], 0, sDescriptionStringTable[stringID]);
 }
 
 static void PartyMenuRemoveWindow(u8 *ptr)
@@ -2421,7 +2421,7 @@ void DisplayPartyMenuStdMessage(u32 stringId)
         }
         DrawStdFrameWithCustomTileAndPalette(*windowPtr, FALSE, 0x4F, 0xD);
         StringExpandPlaceholders(gStringVar4, sActionStringTable[stringId]);
-        AddTextPrinterParameterized(*windowPtr, 1, gStringVar4, 0, 1, 0, 0);
+        AddTextPrinterParameterized(*windowPtr, FONT_NORMAL, gStringVar4, 0, 1, 0, 0);
         ScheduleBgCopyTilemapToVram(2);
     }
 }
@@ -2449,7 +2449,7 @@ static u8 DisplaySelectionWindow(u8 windowType)
 {
     struct WindowTemplate window;
     u8 cursorDimension;
-    u8 fontAttribute;
+    u8 letterSpacing;
     u8 i;
 
     switch (windowType)
@@ -2472,13 +2472,13 @@ static u8 DisplaySelectionWindow(u8 windowType)
     DrawStdFrameWithCustomTileAndPalette(sPartyMenuInternal->windowId[0], FALSE, 0x4F, 13);
     if (windowType == SELECTWINDOW_MOVES)
         return sPartyMenuInternal->windowId[0];
-    cursorDimension = GetMenuCursorDimensionByFont(1, 0);
-    fontAttribute = GetFontAttribute(1, 2);
+    cursorDimension = GetMenuCursorDimensionByFont(FONT_NORMAL, 0);
+    letterSpacing = GetFontAttribute(FONT_NORMAL, FONTATTR_LETTER_SPACING);
 
     for (i = 0; i < sPartyMenuInternal->numActions; i++)
     {
         u8 fontColorsId = (sPartyMenuInternal->actions[i] >= MENU_FIELD_MOVES) ? 4 : 3;
-        AddTextPrinterParameterized4(sPartyMenuInternal->windowId[0], 1, cursorDimension, (i * 16) + 1, fontAttribute, 0, sFontColorTable[fontColorsId], 0, sCursorOptions[sPartyMenuInternal->actions[i]].text);
+        AddTextPrinterParameterized4(sPartyMenuInternal->windowId[0], FONT_NORMAL, cursorDimension, (i * 16) + 1, letterSpacing, 0, sFontColorTable[fontColorsId], 0, sCursorOptions[sPartyMenuInternal->actions[i]].text);
     }
 
     InitMenuInUpperLeftCorner(sPartyMenuInternal->windowId[0], sPartyMenuInternal->numActions, 0, 1);
@@ -2491,7 +2491,7 @@ static void PartyMenuPrintText(const u8 *text)
 {
     DrawStdFrameWithCustomTileAndPalette(6, FALSE, 0x4F, 13);
     gTextFlags.canABSpeedUpPrint = TRUE;
-    AddTextPrinterParameterized2(6, 1, text, GetPlayerTextSpeedDelay(), 0, 2, 1, 3);
+    AddTextPrinterParameterized2(6, FONT_NORMAL, text, GetPlayerTextSpeedDelay(), 0, 2, 1, 3);
 }
 
 static void PartyMenuDisplayYesNoMenu(void)
@@ -2663,7 +2663,7 @@ static void Task_TryCreateSelectionWindow(u8 taskId)
 
 static void Task_HandleSelectionMenuInput(u8 taskId)
 {
-    if (!gPaletteFade.active && MenuHelpers_CallLinkSomething() != TRUE)
+    if (!gPaletteFade.active && MenuHelpers_ShouldWaitForLinkRecv() != TRUE)
     {
         s8 input;
         s16 *data = gTasks[taskId].data;
@@ -2792,7 +2792,7 @@ static void SwitchSelectedMons(u8 taskId)
 // returns FALSE if the slot has slid fully offscreen / back onscreen
 static bool8 TryMovePartySlot(s16 x, s16 width, u8 *leftMove, u8 *newX, u8 *newWidth)
 {
-    if ((x + width) < 0)
+    if (x + width < 0)
         return FALSE;
     if (x > 31)
         return FALSE;
@@ -2807,7 +2807,7 @@ static bool8 TryMovePartySlot(s16 x, s16 width, u8 *leftMove, u8 *newX, u8 *newW
     {
         *leftMove = 0;
         *newX = x;
-        if ((x + width) > 31)
+        if (x + width > 31)
             *newWidth = 32 - x;
         else
             *newWidth = width;
@@ -2818,14 +2818,13 @@ static bool8 TryMovePartySlot(s16 x, s16 width, u8 *leftMove, u8 *newX, u8 *newW
 
 static void MoveAndBufferPartySlot(const void *rectSrc, s16 x, s16 y, s16 width, s16 height, s16 dir)
 {
-    // The use of the dimension parameters here is a mess
-    u8 leftMove, newX, newWidth; // leftMove is used as a srcX, newX is used as both x and srcHeight, newWidth is used as both width and destY
+    u8 srcX, newX, newWidth;
 
-    if (TryMovePartySlot(x, width, &leftMove, &newX, &newWidth))
+    if (TryMovePartySlot(x, width, &srcX, &newX, &newWidth))
     {
         FillBgTilemapBufferRect_Palette0(0, 0, newX, y, newWidth, height);
-        if (TryMovePartySlot(x + dir, width, &leftMove, &newX, &newWidth))
-            CopyRectToBgTilemapBufferRect(0, rectSrc, leftMove, 0, width, height, newX, y, newWidth, height, 17, 0, 0);
+        if (TryMovePartySlot(x + dir, width, &srcX, &newX, &newWidth))
+            CopyRectToBgTilemapBufferRect(0, rectSrc, srcX, 0, width, height, newX, y, newWidth, height, 17, 0, 0);
     }
 }
 
@@ -3635,7 +3634,7 @@ static void CursorCb_FieldMove(u8 taskId)
 
     PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[0]);
     PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
-    if (MenuHelpers_LinkSomething() == TRUE || InUnionRoom() == TRUE)
+    if (MenuHelpers_IsLinkActive() == TRUE || InUnionRoom() == TRUE)
     {
         if (fieldMove == FIELD_MOVE_MILK_DRINK || fieldMove == FIELD_MOVE_SOFT_BOILED)
             DisplayPartyMenuStdMessage(PARTY_MSG_CANT_USE_HERE);
@@ -4498,7 +4497,7 @@ static void ShowMoveSelectWindow(u8 slot)
 {
     u8 i;
     u8 moveCount = 0;
-    u8 fontId = 1;
+    u8 fontId = FONT_NORMAL;
     u8 windowId = DisplaySelectionWindow(SELECTWINDOW_MOVES);
     u16 move;
 
@@ -5468,7 +5467,7 @@ void ChooseMonToGiveMailFromMailbox(void)
 static void TryGiveMailToSelectedMon(u8 taskId)
 {
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
-    struct MailStruct *mail;
+    struct Mail *mail;
 
     gPartyMenuUseExitCallback = FALSE;
     mail = &gSaveBlock1Ptr->mail[gPlayerPCItemPageInfo.itemsAbove + PARTY_SIZE + gPlayerPCItemPageInfo.cursorPos];
@@ -5478,8 +5477,8 @@ static void TryGiveMailToSelectedMon(u8 taskId)
     }
     else
     {
-        GiveMailToMon2(mon, mail);
-        ClearMailStruct(mail);
+        GiveMailToMon(mon, mail);
+        ClearMail(mail);
         DisplayPartyMenuMessage(gText_MailTransferredFromMailbox, TRUE);
     }
     ScheduleBgCopyTilemapToVram(2);
