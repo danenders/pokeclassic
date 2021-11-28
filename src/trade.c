@@ -1880,7 +1880,7 @@ static u8 GetMonNicknameWidth(u8 *str, u8 whichParty, u8 monIdx)
     else
         GetMonData(&gEnemyParty[monIdx], MON_DATA_NICKNAME, nickname);
 
-    StringCopy10(str, nickname);
+    StringCopy_Nickname(str, nickname);
     return GetStringWidth(FONT_SMALL, str, GetFontAttribute(FONT_SMALL, FONTATTR_LETTER_SPACING));
 }
 
@@ -1942,7 +1942,7 @@ static void PrintPartyNicknamesForTradeMenu(u8 whichParty)
     for (i = 0; i < sTradeMenuData->partyCounts[whichParty]; i++)
     {
         GetMonData(&party[i], MON_DATA_NICKNAME, nickname);
-        StringCopy10(str, nickname);
+        StringCopy_Nickname(str, nickname);
         PrintMonNicknameForTradeMenu(whichParty, i, str);
     }
 }
@@ -3266,17 +3266,17 @@ static void BufferTradeSceneStrings(void)
         mpId = GetMultiplayerId();
         StringCopy(gStringVar1, gLinkPlayers[mpId ^ 1].name);
         GetMonData(&gEnemyParty[gSelectedTradeMonPositions[TRADE_PARTNER] % PARTY_SIZE], MON_DATA_NICKNAME, name);
-        StringCopy10(gStringVar3, name);
+        StringCopy_Nickname(gStringVar3, name);
         GetMonData(&gPlayerParty[gSelectedTradeMonPositions[TRADE_PLAYER]], MON_DATA_NICKNAME, name);
-        StringCopy10(gStringVar2, name);
+        StringCopy_Nickname(gStringVar2, name);
     }
     else
     {
         ingameTrade = &sIngameTrades[gSpecialVar_0x8004];
         StringCopy(gStringVar1, ingameTrade->otName);
-        StringCopy10(gStringVar3, ingameTrade->nickname);
+        StringCopy_Nickname(gStringVar3, ingameTrade->nickname);
         GetMonData(&gPlayerParty[gSpecialVar_0x8005], MON_DATA_NICKNAME, name);
-        StringCopy10(gStringVar2, name);
+        StringCopy_Nickname(gStringVar2, name);
     }
 }
 
@@ -3398,7 +3398,7 @@ static bool8 AnimateTradeSequenceCable(void)
         DrawTextOnTradeWindow(0, gStringVar4, 0);
 
         if (sTradeData->monSpecies[TRADE_PLAYER] != SPECIES_EGG)
-            PlayCry1(sTradeData->monSpecies[TRADE_PLAYER], 0);
+            PlayCry_Normal(sTradeData->monSpecies[TRADE_PLAYER], 0);
 
         sTradeData->state = TS_STATE_BYE_BYE;
         sTradeData->timer = 0;
@@ -3869,7 +3869,7 @@ static bool8 AnimateTradeSequenceWireless(void)
         DrawTextOnTradeWindow(0, gStringVar4, 0);
 
         if (sTradeData->monSpecies[TRADE_PLAYER] != SPECIES_EGG)
-            PlayCry1(sTradeData->monSpecies[TRADE_PLAYER], 0);
+            PlayCry_Normal(sTradeData->monSpecies[TRADE_PLAYER], 0);
 
         sTradeData->state = TS_STATE_BYE_BYE;
         sTradeData->timer = 0;
@@ -4479,7 +4479,7 @@ static void BufferInGameTradeMonName(void)
     u8 nickname[32];
     const struct InGameTrade *inGameTrade = &sIngameTrades[gSpecialVar_0x8004];
     GetMonData(&gPlayerParty[gSpecialVar_0x8005], MON_DATA_NICKNAME, nickname);
-    StringCopy10(gStringVar1, nickname);
+    StringCopy_Nickname(gStringVar1, nickname);
     StringCopy(gStringVar2, gSpeciesNames[inGameTrade->species]);
 }
 
@@ -4654,30 +4654,29 @@ static void CB2_SaveAndEndTrade(void)
             MysteryGift_TryIncrementStat(CARD_STAT_NUM_TRADES, gLinkPlayers[GetMultiplayerId() ^ 1].trainerId);
 
         SetContinueGameWarpStatusToDynamicWarp();
-        sub_8153380();
+        LinkFullSave_Init();
         gMain.state++;
         sTradeData->timer = 0;
         break;
     case 51:
         if (++sTradeData->timer == 5)
-        {
             gMain.state++;
-        }
         break;
     case 52:
-        if (sub_81533AC())
+        if (LinkFullSave_WriteSector())
         {
             ClearContinueGameWarpStatus2();
             gMain.state = 4;
         }
         else
         {
+            // Save isn't finished, delay again
             sTradeData->timer = 0;
             gMain.state = 51;
         }
         break;
     case 4:
-        sub_81533E0();
+        LinkFullSave_ReplaceLastSector();
         gMain.state = 40;
         sTradeData->timer = 0;
         break;
@@ -4709,7 +4708,7 @@ static void CB2_SaveAndEndTrade(void)
     case 42:
         if (_IsLinkTaskFinished())
         {
-            sub_8153408();
+            LinkFullSave_SetLastSectorSecurity();
             gMain.state = 5;
         }
         break;
@@ -4965,7 +4964,7 @@ static void CB2_SaveAndEndWirelessTrade(void)
             StringExpandPlaceholders(gStringVar4, gText_SavingDontTurnOffPower);
             DrawTextOnTradeWindow(0, gStringVar4, 0);
             IncrementGameStat(GAME_STAT_POKEMON_TRADES);
-            sub_8153380();
+            LinkFullSave_Init();
             sTradeData->timer = 0;
         }
         break;
@@ -4974,7 +4973,7 @@ static void CB2_SaveAndEndWirelessTrade(void)
             gMain.state = 4;
         break;
     case 4:
-        if (sub_81533AC())
+        if (LinkFullSave_WriteSector())
         {
             gMain.state = 5;
         }
@@ -4985,7 +4984,7 @@ static void CB2_SaveAndEndWirelessTrade(void)
         }
         break;
     case 5:
-        sub_81533E0();
+        LinkFullSave_ReplaceLastSector();
         gMain.state = 6;
         sTradeData->timer = 0;
         break;
@@ -5013,7 +5012,7 @@ static void CB2_SaveAndEndWirelessTrade(void)
     case 8:
         if (_IsLinkTaskFinished())
         {
-            sub_8153408();
+            LinkFullSave_SetLastSectorSecurity();
             gMain.state = 9;
         }
         break;

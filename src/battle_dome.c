@@ -870,7 +870,7 @@ static const struct WindowTemplate sInfoCardWindowTemplates[] =
 
 static const struct ScanlineEffectParams sTourneyTreeScanlineEffectParams =
 {
-    .dmaDest = (void *)REG_ADDR_BG3CNT,
+    .dmaDest = &REG_BG3CNT,
     .dmaControl = SCANLINE_EFFECT_DMACNT_16BIT,
     .initState = 1,
 };
@@ -2099,7 +2099,7 @@ static void InitDomeChallenge(void)
     if (!(gSaveBlock2Ptr->frontier.winStreakActiveFlags & sWinStreakFlags[battleMode][lvlMode]))
         gSaveBlock2Ptr->frontier.domeWinStreaks[battleMode][lvlMode] = 0;
 
-    SetDynamicWarp(0, gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, -1);
+    SetDynamicWarp(0, gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, WARP_ID_NONE);
     gTrainerBattleOpponent_A = 0;
 }
 

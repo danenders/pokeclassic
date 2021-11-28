@@ -250,13 +250,13 @@ u8 gBattleControllerData[MAX_BATTLERS_COUNT]; // Used by the battle controllers 
 
 static const struct ScanlineEffectParams sIntroScanlineParams16Bit =
 {
-    (void *)REG_ADDR_BG3HOFS, SCANLINE_EFFECT_DMACNT_16BIT, 1
+    &REG_BG3HOFS, SCANLINE_EFFECT_DMACNT_16BIT, 1
 };
 
 // unused
 static const struct ScanlineEffectParams sIntroScanlineParams32Bit =
 {
-    (void *)REG_ADDR_BG3HOFS, SCANLINE_EFFECT_DMACNT_32BIT, 1
+    &REG_BG3HOFS, SCANLINE_EFFECT_DMACNT_32BIT, 1
 };
 
 const struct SpriteTemplate gUnusedBattleInitSprite =
@@ -308,7 +308,7 @@ static const u16 *const sUnused1Ptr = sUnused1;
 static const u16 sUnused2[] = {0xfff0, 0, 0x0400, 0, 0, 0, 0x3c00, 0, 0x7ffe, 1, 0, 0};
 static const u16 *const sUnused2Ptr = sUnused2;
 
-static const s8 gUnknown_0831ACE0[] ={-32, -16, -16, -32, -32, 0, 0, 0};
+static const s8 sCenterToCornerVecXs[8] ={-32, -16, -16, -32, -32};
 
 // format: attacking type, defending type, damage multiplier
 // the multiplier is a (decimal) fixed-point number:
@@ -2984,7 +2984,7 @@ void SpriteCB_PlayerMonFromBall(struct Sprite *sprite)
 
 static void SpriteCB_TrainerThrowObject_Main(struct Sprite *sprite)
 {
-    sub_8039E9C(sprite);
+    AnimSetCenterToCornerVecX(sprite);
     if (sprite->animEnded)
         sprite->callback = SpriteCB_Idle;
 }
@@ -2997,10 +2997,10 @@ void SpriteCB_TrainerThrowObject(struct Sprite *sprite)
     sprite->callback = SpriteCB_TrainerThrowObject_Main;
 }
 
-void sub_8039E9C(struct Sprite *sprite)
+void AnimSetCenterToCornerVecX(struct Sprite *sprite)
 {
     if (sprite->animDelayCounter == 0)
-        sprite->centerToCornerVecX = gUnknown_0831ACE0[sprite->animCmdIndex];
+        sprite->centerToCornerVecX = sCenterToCornerVecXs[sprite->animCmdIndex];
 }
 
 void BeginBattleIntroDummy(void)
@@ -3493,7 +3493,7 @@ static void BattleIntroDrawPartySummaryScreens(void)
             if (GetMonData(&gEnemyParty[i], MON_DATA_SPECIES2) == SPECIES_NONE
              || GetMonData(&gEnemyParty[i], MON_DATA_SPECIES2) == SPECIES_EGG)
             {
-                hpStatus[i].hp = 0xFFFF;
+                hpStatus[i].hp = HP_EMPTY_SLOT;
                 hpStatus[i].status = 0;
             }
             else
@@ -3511,7 +3511,7 @@ static void BattleIntroDrawPartySummaryScreens(void)
             if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2) == SPECIES_NONE
              || GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2) == SPECIES_EGG)
             {
-                hpStatus[i].hp = 0xFFFF;
+                hpStatus[i].hp = HP_EMPTY_SLOT;
                 hpStatus[i].status = 0;
             }
             else
@@ -3537,7 +3537,7 @@ static void BattleIntroDrawPartySummaryScreens(void)
             if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2) == SPECIES_NONE
              || GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2) == SPECIES_EGG)
             {
-                hpStatus[i].hp = 0xFFFF;
+                hpStatus[i].hp = HP_EMPTY_SLOT;
                 hpStatus[i].status = 0;
             }
             else

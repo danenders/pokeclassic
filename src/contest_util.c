@@ -1578,7 +1578,7 @@ static void SpriteCB_WinnerMonSlideIn(struct Sprite *sprite)
     {
         if (++sprite->data[0] == 10)
         {
-            PlayCry1(sprite->data[1], 0);
+            PlayCry_Normal(sprite->data[1], 0);
             sprite->data[1] = 0;
         }
     }
@@ -2253,10 +2253,10 @@ void Task_LinkContest_FinalizeConnection(u8 taskId)
     {
         // Succesfully connected
         for (i = 0; i < CONTESTANT_COUNT; i++)
-            StringGetEnd10(gContestMons[i].nickname);
+            StringGet_Nickname(gContestMons[i].nickname);
 
         DestroyTask(taskId);
-        SetDynamicWarp(0, gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, -1);
+        SetDynamicWarp(0, gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, WARP_ID_NONE);
         ScriptContext2_Disable();
         EnableBothScriptContexts();
     }
