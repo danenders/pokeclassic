@@ -858,7 +858,7 @@ static void Task_InitDexNavSearch(u8 taskId)
     sDexNavSearchDataPtr->isHiddenMon = (environment == ENCOUNTER_TYPE_HIDDEN) ? TRUE : FALSE;
     sDexNavSearchDataPtr->monLevel = DexNavTryGenerateMonLevel(species, environment);
     
-    if (Overworld_GetFlashLevel() > 0)
+    if (GetFlashLevel() > 0)
     {
         Free(sDexNavSearchDataPtr);
         FreeMonIconPalettes();
@@ -2475,7 +2475,7 @@ static void Task_DexNavMain(u8 taskId)
         {            
             PrintSearchableSpecies(species);
             //PlaySE(SE_DEX_SEARCH);
-            PlayCry5(species, 0);
+            PlayCry_Script(species, 0);
             
             // create value to store in a var
             VarSet(VAR_DEXNAV_SPECIES, ((sDexNavUiDataPtr->environment << 14) | species));
@@ -2513,7 +2513,7 @@ bool8 TryFindHiddenPokemon(void)
     u32 attempts = 0;
     u16 currSteps;
 
-    if (!FlagGet(FLAG_SYS_DETECTOR_MODE) || FlagGet(FLAG_SYS_DEXNAV_SEARCH) || Overworld_GetFlashLevel() > 0)
+    if (!FlagGet(FLAG_SYS_DETECTOR_MODE) || FlagGet(FLAG_SYS_DEXNAV_SEARCH) || GetFlashLevel() > 0)
     {
         (*stepPtr) = 0;
         return FALSE;
@@ -2620,7 +2620,7 @@ bool8 TryFindHiddenPokemon(void)
         ObjectEventGetLocalIdAndMap(&gObjectEvents[gPlayerAvatar.objectEventId], &gFieldEffectArguments[0], &gFieldEffectArguments[1], &gFieldEffectArguments[2]);
         FieldEffectStart(FLDEFF_EXCLAMATION_MARK_ICON);
         
-        PlayCry5(species, 0);
+        PlayCry_Script(species, 0);
         taskId = CreateTask(Task_SetUpDexNavSearch, 0);
         gTasks[taskId].tSpecies = sDexNavSearchDataPtr->species;
         gTasks[taskId].tEnvironment = sDexNavSearchDataPtr->environment;
