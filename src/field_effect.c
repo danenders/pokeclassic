@@ -66,7 +66,6 @@ static void PokeballGlowEffect_WaitForSound(struct Sprite *);
 static void PokeballGlowEffect_Idle(struct Sprite *);
 static void SpriteCB_PokeballGlow(struct Sprite *);
 
-static void FieldCallback_UseFly(void);
 static void Task_UseFly(u8);
 static void FieldCallback_FlyIntoMap(void);
 static void Task_FlyIntoMap(u8);
@@ -772,7 +771,7 @@ void FieldEffectScript_LoadFadedPalette(u8 **script)
 {
     struct SpritePalette *palette = (struct SpritePalette *)FieldEffectScript_ReadWord(script);
     LoadSpritePalette(palette);
-    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(palette->tag));
+    UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(palette->tag), FALSE);
     (*script) += 4;
 }
 
@@ -925,12 +924,14 @@ u8 CreateMonSprite_FieldMove(u16 species, u32 otId, u32 personality, s16 x, s16 
 
 void FreeResourcesAndDestroySprite(struct Sprite *sprite, u8 spriteId)
 {
+    u8 paletteNum = sprite->oam.paletteNum;
     ResetPreservedPalettesInWeather();
     if (sprite->oam.affineMode != ST_OAM_AFFINE_OFF)
     {
         FreeOamMatrix(sprite->oam.matrixNum);
     }
-    FreeAndDestroyMonPicSprite(spriteId);
+    FreeAndDestroyMonPicSpriteNoPalette(spriteId);
+    FieldEffectFreePaletteIfUnused(paletteNum); // Clear palette only if unused, in case follower is using it
 }
 
 // r, g, b are between 0 and 16
@@ -1330,10 +1331,10 @@ static void SpriteCB_HallOfFameMonitor(struct Sprite *sprite)
 void ReturnToFieldFromFlyMapSelect(void)
 {
     SetMainCallback2(CB2_ReturnToField);
-    gFieldCallback = FieldCallback_UseFly;
+    gFieldCallback = FieldCallback_Fly;
 }
 
-static void FieldCallback_UseFly(void)
+void FieldCallback_Fly(void)
 {
     FadeInFromBlack();
     CreateTask(Task_UseFly, 0);
@@ -1418,7 +1419,7 @@ void FieldCB_FallWarpExit(void)
     Overworld_PlaySpecialMapMusic();
     WarpFadeInScreen();
     ScriptContext2_Enable();
-    FreezeObjectEvents();
+    FreezeObjectEvents();  // TODO: How does this interact with follower pokemon?
     CreateTask(Task_FallWarpFieldEffect, 0);
     gFieldCallback = NULL;
 }
@@ -1570,7 +1571,7 @@ static void Task_EscalatorWarpOut(u8 taskId)
 
 static bool8 EscalatorWarpOut_Init(struct Task *task)
 {
-    FreezeObjectEvents();
+    FreezeObjectEvents(); // TODO: Follower pokemon interaction
     CameraObjectReset2();
     StartEscalator(task->tGoingUp);
     task->tState++;
@@ -1948,7 +1949,7 @@ static void Task_LavaridgeGymB1FWarp(u8 taskId)
 
 static bool8 LavaridgeGymB1FWarpEffect_Init(struct Task *task, struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    FreezeObjectEvents();
+    FreezeObjectEvents(); // TODO: Follower pokemon interaction
     CameraObjectReset2();
     SetCameraPanningCallback(NULL);
     gPlayerAvatar.preventStep = TRUE;
@@ -2065,7 +2066,7 @@ static void Task_LavaridgeGymB1FWarpExit(u8 taskId)
 static bool8 LavaridgeGymB1FWarpExitEffect_Init(struct Task *task, struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
     CameraObjectReset2();
-    FreezeObjectEvents();
+    FreezeObjectEvents(); // TODO: Follower pokemon interaction
     gPlayerAvatar.preventStep = TRUE;
     objectEvent->invisible = TRUE;
     task->data[0]++;
@@ -2141,7 +2142,7 @@ static void Task_LavaridgeGym1FWarp(u8 taskId)
 
 static bool8 LavaridgeGym1FWarpEffect_Init(struct Task *task, struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    FreezeObjectEvents();
+    FreezeObjectEvents(); // TODO: Follower pokemon interaction
     CameraObjectReset2();
     gPlayerAvatar.preventStep = TRUE;
     objectEvent->fixedPriority = 1;
@@ -2230,7 +2231,7 @@ void SpriteCB_AshPuff(struct Sprite *sprite)
 void StartEscapeRopeFieldEffect(void)
 {
     ScriptContext2_Enable();
-    FreezeObjectEvents();
+    FreezeObjectEvents();  // TODO: Follower pokemon interaction
     CreateTask(Task_EscapeRopeWarpOut, 80);
 }
 
@@ -2993,8 +2994,19 @@ static void Task_SurfFieldEffect(u8 taskId)
 
 static void SurfFieldEffect_Init(struct Task *task)
 {
+    struct ObjectEvent *followerObject = GetFollowerObject();
     ScriptContext2_Enable();
     FreezeObjectEvents();
+    // Put follower into pokeball before using Surf
+    if (followerObject && !followerObject->invisible) {
+      // TODO: ClearObjectEventMovement (
+      followerObject->singleMovementActive = 0;
+      ObjectEventClearHeldMovement(followerObject);
+      gSprites[followerObject->spriteId].data[1] = 0;
+      gSprites[followerObject->spriteId].animCmdIndex = 0; // Needed because of weird animCmdIndex stuff
+      // )
+      ObjectEventSetHeldMovement(followerObject, MOVEMENT_ACTION_ENTER_POKEBALL);
+    }
     gPlayerAvatar.preventStep = TRUE;
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_SURFING);
     PlayerGetDestCoords(&task->tDestX, &task->tDestY);
@@ -3045,13 +3057,15 @@ static void SurfFieldEffect_JumpOnSurfBlob(struct Task *task)
 
 static void SurfFieldEffect_End(struct Task *task)
 {
-    struct ObjectEvent *objectEvent;
-    objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
+    struct ObjectEvent *objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
+    struct ObjectEvent *followerObject = GetFollowerObject();
     if (ObjectEventClearHeldMovementIfFinished(objectEvent))
     {
         gPlayerAvatar.preventStep = FALSE;
         gPlayerAvatar.flags &= ~PLAYER_AVATAR_FLAG_CONTROLLABLE;
         ObjectEventSetHeldMovement(objectEvent, GetFaceDirectionMovementAction(objectEvent->movementDirection));
+        if (followerObject)
+          ObjectEventClearHeldMovementIfFinished(followerObject);
         SetSurfBlob_BobState(objectEvent->fieldEffectSpriteId, BOB_PLAYER_AND_MON);
         UnfreezeObjectEvents();
         ScriptContext2_Disable();
@@ -3072,7 +3086,7 @@ u8 FldEff_RayquazaSpotlight(void)
     struct Sprite *sprite = &gSprites[spriteId];
 
     sprite->oam.priority = 1;
-    sprite->oam.paletteNum = 4;
+    sprite->oam.paletteNum = 4; // TODO: What (dynamic) palette should this Raquaza use?
     sprite->data[0] = 0;
     sprite->data[1] = 0;
     sprite->data[2] = 0;
@@ -3107,7 +3121,6 @@ u8 FldEff_NPCFlyOut(void)
     u8 spriteId = CreateSprite(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_BIRD], 0x78, 0, 1);
     struct Sprite *sprite = &gSprites[spriteId];
 
-    sprite->oam.paletteNum = 0;
     sprite->oam.priority = 1;
     sprite->callback = SpriteCB_NPCFlyOut;
     sprite->data[1] = gFieldEffectArguments[0];
@@ -3258,7 +3271,7 @@ static void FlyOutFieldEffect_FlyOffWithBird(struct Task *task)
         struct ObjectEvent *objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
         ObjectEventClearHeldMovementIfActive(objectEvent);
         objectEvent->inanimate = FALSE;
-        objectEvent->hasShadow = FALSE;
+        objectEvent->noShadow = TRUE; // TODO: Make shadow smaller instead of disappearing completely ?
         SetFlyBirdPlayerSpriteId(task->tBirdSpriteId, objectEvent->spriteId);
         CameraObjectReset2();
         task->tState++;
@@ -3289,7 +3302,6 @@ static u8 CreateFlyBirdSprite(void)
     struct Sprite *sprite;
     spriteId = CreateSprite(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_BIRD], 0xff, 0xb4, 0x1);
     sprite = &gSprites[spriteId];
-    sprite->oam.paletteNum = 0;
     sprite->oam.priority = 1;
     sprite->callback = SpriteCB_FlyBirdLeaveBall;
     return spriteId;
@@ -3479,6 +3491,7 @@ static void FlyInFieldEffect_BirdSwoopDown(struct Task *task)
         ObjectEventTurn(objectEvent, DIR_WEST);
         StartSpriteAnim(&gSprites[objectEvent->spriteId], ANIM_GET_ON_OFF_POKEMON_WEST);
         objectEvent->invisible = FALSE;
+        objectEvent->noShadow = TRUE;
         task->tBirdSpriteId = CreateFlyBirdSprite();
         StartFlyBirdSwoopDown(task->tBirdSpriteId);
         SetFlyBirdPlayerSpriteId(task->tBirdSpriteId, objectEvent->spriteId);
@@ -3878,4 +3891,3 @@ static void Task_MoveDeoxysRock(u8 taskId)
             break;
     }
 }
-

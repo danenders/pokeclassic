@@ -503,6 +503,9 @@ struct SaveBlock2
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;
 
+extern u8 UpdateSpritePaletteWithTime(u8);
+extern bool8 IsAccurateGBA(void);
+
 struct SecretBaseParty
 {
     u32 personality[PARTY_SIZE];
