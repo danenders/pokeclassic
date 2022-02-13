@@ -44,7 +44,6 @@
 #include "util.h"
 #include "window.h"
 #include "constants/contest.h"
-#include "constants/easy_chat.h"
 #include "constants/items.h"
 #include "constants/moves.h"
 #include "constants/region_map_sections.h"
@@ -4531,7 +4530,8 @@ static void _CreateInGameTradePokemon(u8 whichPlayerMon, u8 whichInGameTrade)
     CalculateMonStats(&gEnemyParty[0]);
 }
 
-static void SetInGameTradeMail(struct Mail *mail, const struct InGameTrade *trade) {
+static void SetInGameTradeMail(struct Mail *mail, const struct InGameTrade *trade)
+{
     s32 i;
 
     for (i = 0; i < MAIL_WORDS_COUNT; i++)
