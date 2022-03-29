@@ -48,9 +48,9 @@
 
 #define ORRE_MAPSEC_START					MAPSEC_DISTANT_LAND
 #define ORRE_MAPSEC_END						MAPSEC_KAMINKOS_HOUSE
-#define ORRE_MAPSEC_COUNT					(ORRE_MAPSEC_END - ORRE_MAPSEC_START + 1)
+#define ORRE_MAPSEC_COUNT				    (ORRE_MAPSEC_END - ORRE_MAPSEC_START + 1)
 
-#if CONFIG_DECAPITALIZE_STRINGS
+#if CONFIG_DECAPITALIZE_MET_LOCATION_STRINGS
 static const u8 sRegionString_Unknown[] = _("");
 static const u8 sRegionString_Kanto[] = _(", Kanto");
 static const u8 sRegionString_Hoenn[] = _("");
@@ -76,7 +76,7 @@ const u8 gText_TrainerMemo_Trade[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1} nature
 const u8 gText_TrainerMemo_Fateful[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1} nature.\n\nObtained in a\n{DYNAMIC 0}fateful encounter{DYNAMIC 1} at {LV_2}{DYNAMIC 3}.\n{DYNAMIC 6}\n{DYNAMIC 7}");
 const u8 gText_TrainerMemo_Untrusted[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1} nature.\n\n{DYNAMIC 0}{DYNAMIC 4}{DYNAMIC 5}{DYNAMIC 1}\nApparently met at {LV_2}{DYNAMIC 3}.\n\n{DYNAMIC 6}\n{DYNAMIC 7}");
 const u8 gText_TrainerMemo_HatchedUntrusted[] = _("{DYNAMIC 0}{DYNAMIC 2}{DYNAMIC 1} nature.\n\n{DYNAMIC 0}{DYNAMIC 4}{DYNAMIC 5}{DYNAMIC 1}\nApparently hatched at {LV_2}{DYNAMIC 3}.\n\n{DYNAMIC 6}\n{DYNAMIC 7}");
-#if CONFIG_DECAPITALIZE_STRINGS
+#if CONFIG_DECAPITALIZE_MET_LOCATION_STRINGS
 const u8 gText_TrainerMemo_EggFromDayCare[] = _("An odd Pokémon Egg found\nby {DYNAMIC 0}the Day Care couple{DYNAMIC 1}.\n\n\n“The Egg Watch”\n{DYNAMIC 2}");
 const u8 gText_TrainerMemo_EggTraded[] = _("An peculiar Pokémon Egg\nobtained in a trade.\n\n\n“The Egg Watch”\n{DYNAMIC 2}");
 const u8 gText_TrainerMemo_EggFateful[] = _("A peculiar Pokémon Egg\nobtained at {DYNAMIC 0}a nice place{DYNAMIC 1}.\n\n\n“The Egg Watch”\n{DYNAMIC 2}");

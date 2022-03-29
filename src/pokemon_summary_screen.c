@@ -51,7 +51,7 @@
 #include "constants/flags.h"
 #include "battle_interface.h"
 
-// Config options - Note that some config options need external modifications to fully work, such as CONFIG_CAN_FORGET_HM_MOVES and CONFIG_PHYSICAL_SPECIAL_SPLIT
+// Config options - Note that some config options need external modifications to fully work, such as CONFIG_CAN_FORGET_HM_MOVES, CONFIG_PHYSICAL_SPECIAL_SPLIT, and CONFIG_DECAPITALIZE_MET_LOCATION_STRINGS
 #define CONFIG_CAN_FORGET_HM_MOVES                      TRUE
 #define CONFIG_CAN_SWITCH_PAGES_WHILE_DETAILS_ARE_UP    TRUE
 #define CONFIG_PHYSICAL_SPECIAL_SPLIT                   FALSE   // Takes precendence over CONFIG_SHOW_ICONS_FOR_OLD_SPLIT
@@ -60,7 +60,8 @@
 #define CONFIG_TRUST_OUTSIDERS                          TRUE
 #define CONFIG_SHOW_HIDDEN_POWER_STATS                  TRUE
 #define CONFIG_DECAPITALIZE_TITLE_STRINGS               FALSE
-#define CONFIG_DECAPITALIZE_STRINGS                     TRUE
+#define CONFIG_DECAPITALIZE_MENU_STRINGS                TRUE
+#define CONFIG_DECAPITALIZE_MET_LOCATION_STRINGS        FALSE
 #define CONFIG_FATEFUL_ENCOUNTER_MARK                   TRUE
 // Make sure gBallIconTable in src/data/item_icon_table.h is ordered correctly.  Default does not match RHH
 
@@ -1010,7 +1011,7 @@ const u8 sText_TitlePageIVs[] = _("{DPAD_LEFTRIGHT}PAGE {A_BUTTON}IVS");
 const u8 sText_TitlePageEVs[] = _("{DPAD_LEFTRIGHT}PAGE {A_BUTTON}EVS");
 const u8 sText_TitlePageStats[] = _("{DPAD_LEFTRIGHT}PAGE {A_BUTTON}STATS");
 #endif
-#if CONFIG_DECAPITALIZE_STRINGS
+#if CONFIG_DECAPITALIZE_MENU_STRINGS
 const u8 sText_None[] = _("None");
 const u8 sText_Cancel[] = _("Cancel");
 const u8 sText_Power[] = _("Power");
