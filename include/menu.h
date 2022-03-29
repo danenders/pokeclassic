@@ -81,6 +81,7 @@ s8 ProcessMenuInput_other(void);
 void DoScheduledBgTilemapCopiesToVram(void);
 void ClearScheduledBgCopiesToVram(void);
 void AddTextPrinterParameterized4(u8 windowId, u8 fontId, u8 x, u8 y, u8 letterSpacing, u8 lineSpacing, const u8 *color, s8 speed, const u8 *str);
+void AddTextPrinterParameterized4Signed(u8 windowId, u8 fontId, u8 x, s8 y, u8 letterSpacing, u8 lineSpacing, const u8 *color, s8 speed, const u8 *str);
 void DrawDialogFrameWithCustomTileAndPalette(u8 windowId, bool8 copyToVram, u16 a2, u8 a3);
 void PrintMenuActionTextsInUpperLeftCorner(u8 windowId, u8 optionsNo, const struct MenuAction *actions, const u8 *actionIds);
 void ClearDialogWindowAndFrameToTransparent(u8 windowId, bool8 copyToVram);
