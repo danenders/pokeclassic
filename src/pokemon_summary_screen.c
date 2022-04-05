@@ -3491,7 +3491,11 @@ static void PrintMoveDetails(u16 move)
         {
             PrintTextOnWindow(PSS_LABEL_PANE_LEFT_MOVE, sText_Power, 8, POWER_AND_ACCURACY_Y, 0, 1);
 
+        #ifdef BATTLE_ENGINE
+            if (move == MOVE_HIDDEN_POWER && CONFIG_SHOW_HIDDEN_POWER_STATS && B_HIDDEN_POWER_DMG < GEN_6)
+        #else
             if (move == MOVE_HIDDEN_POWER && CONFIG_SHOW_HIDDEN_POWER_STATS)
+        #endif
             {
                 u8 powerBits = ((GetMonData(mon, MON_DATA_HP_IV) & 2) >> 1)
                         | ((GetMonData(mon, MON_DATA_ATK_IV) & 2) << 0)
