@@ -1305,10 +1305,3 @@ void SetPartyHPBarSprite(struct Sprite *sprite, u8 animNum)
     sprite->animDelayCounter = 0;
     sprite->animCmdIndex = 0;
 }
-
-void LoadMonIconPalettesNoTrash(void)
-{
-    u8 i;
-    for (i = 0; i < 3; i++)
-        LoadSpritePalette(&gMonIconPaletteTable[i]);
-}

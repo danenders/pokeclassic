@@ -25,6 +25,5 @@ void LoadMonIconPalette(u16 species);
 void SpriteCB_MonIcon(struct Sprite *sprite);
 void SetPartyHPBarSprite(struct Sprite *sprite, u8 animNum);
 u8 GetMonIconPaletteIndexFromSpecies(u16 species);
-void LoadMonIconPalettesNoTrash(void);
 
 #endif // GUARD_POKEMON_ICON_H
