@@ -62,6 +62,7 @@
 #define CONFIG_DECAPITALIZE_TITLE_STRINGS               FALSE
 #define CONFIG_DECAPITALIZE_MENU_STRINGS                TRUE
 #define CONFIG_DECAPITALIZE_MET_LOCATION_STRINGS        FALSE
+#define CONFIG_DECAPITALIZE_MOVE_DESCRIPTION_STRINGS    FALSE
 #define CONFIG_FATEFUL_ENCOUNTER_MARK                   TRUE
 // Make sure gBallIconTable in src/data/item_icon_table.h is ordered correctly.  Default does not match RHH
 
