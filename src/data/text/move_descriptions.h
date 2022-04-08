@@ -1430,7 +1430,11 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_ICE_PUNCH - 1] = sIcePunchDescription,
     [MOVE_THUNDER_PUNCH - 1] = sThunderPunchDescription,
     [MOVE_SCRATCH - 1] = sScratchDescription,
+#ifdef BATTLE_ENGINE
+    [MOVE_VISE_GRIP - 1] = sViceGripDescription,
+#else
     [MOVE_VICE_GRIP - 1] = sViceGripDescription,
+#endif
     [MOVE_GUILLOTINE - 1] = sGuillotineDescription,
     [MOVE_RAZOR_WIND - 1] = sRazorWindDescription,
     [MOVE_SWORDS_DANCE - 1] = sSwordsDanceDescription,
@@ -1555,7 +1559,11 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_AMNESIA - 1] = sAmnesiaDescription,
     [MOVE_KINESIS - 1] = sKinesisDescription,
     [MOVE_SOFT_BOILED - 1] = sSoftBoiledDescription,
+#ifdef BATTLE_ENGINE
+    [MOVE_HIGH_JUMP_KICK - 1] = sHiJumpKickDescription,
+#else
     [MOVE_HI_JUMP_KICK - 1] = sHiJumpKickDescription,
+#endif
     [MOVE_GLARE - 1] = sGlareDescription,
     [MOVE_DREAM_EATER - 1] = sDreamEaterDescription,
     [MOVE_POISON_GAS - 1] = sPoisonGasDescription,
@@ -1604,7 +1612,11 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_PROTECT - 1] = sProtectDescription,
     [MOVE_MACH_PUNCH - 1] = sMachPunchDescription,
     [MOVE_SCARY_FACE - 1] = sScaryFaceDescription,
+#ifdef BATTLE_ENGINE
+    [MOVE_FEINT_ATTACK - 1] = sFaintAttackDescription,
+#else
     [MOVE_FAINT_ATTACK - 1] = sFaintAttackDescription,
+#endif
     [MOVE_SWEET_KISS - 1] = sSweetKissDescription,
     [MOVE_BELLY_DRUM - 1] = sBellyDrumDescription,
     [MOVE_SLUDGE_BOMB - 1] = sSludgeBombDescription,
@@ -1684,7 +1696,11 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MEMENTO - 1] = sMementoDescription,
     [MOVE_FACADE - 1] = sFacadeDescription,
     [MOVE_FOCUS_PUNCH - 1] = sFocusPunchDescription,
+#ifdef BATTLE_ENGINE
+    [MOVE_SMELLING_SALTS - 1] = sSmellingSaltDescription,
+#else
     [MOVE_SMELLING_SALT - 1] = sSmellingSaltDescription,
+#endif
     [MOVE_FOLLOW_ME - 1] = sFollowMeDescription,
     [MOVE_NATURE_POWER - 1] = sNaturePowerDescription,
     [MOVE_CHARGE - 1] = sChargeDescription,
