@@ -46,6 +46,9 @@
 #include "constants/region_map_sections.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#ifdef BATTLE_ENGINE
+#include "constants/battle_config.h"
+#endif
 #include "item_icon.h"
 #include "pokemon_icon.h"
 #include "constants/flags.h"
