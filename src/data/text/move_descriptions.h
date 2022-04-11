@@ -2528,14 +2528,6 @@ static const u8 sMoveFourLineDescription_PsychoBoost[] = _("An intense attack\nt
 
 #endif
 
-
-
-
-
-
-
-
-
 #ifdef BATTLE_ENGINE
 static const u8 sMoveFourLineDescription_Roost[] = _("The user lands and\nrests its body. It\nrestores up to half\nof its max HP.");
 static const u8 sMoveFourLineDescription_Gravity[] = _("Gravity is upped for\nfive turns, making\nflight unusuable and\nnegating Levitate.");
@@ -2958,9 +2950,9 @@ const u8 *const gMoveFourLineDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_THUNDER_PUNCH - 1] = sMoveFourLineDescription_ThunderPunch,
     [MOVE_SCRATCH       - 1] = sMoveFourLineDescription_Scratch,
 #if defined(BATTLE_ENGINE) || defined(POKEMON_EXPANSION)
-    [MOVE_VICE_GRIP     - 1] = sMoveFourLineDescription_ViceGrip,
-#else
     [MOVE_VISE_GRIP     - 1] = sMoveFourLineDescription_ViceGrip,
+#else
+    [MOVE_VICE_GRIP     - 1] = sMoveFourLineDescription_ViceGrip,
 #endif
     [MOVE_GUILLOTINE    - 1] = sMoveFourLineDescription_Guillotine,
     [MOVE_RAZOR_WIND    - 1] = sMoveFourLineDescription_RazorWind,
@@ -3139,7 +3131,7 @@ const u8 *const gMoveFourLineDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_PROTECT       - 1] = sMoveFourLineDescription_Protect,
     [MOVE_MACH_PUNCH    - 1] = sMoveFourLineDescription_MachPunch,
     [MOVE_SCARY_FACE    - 1] = sMoveFourLineDescription_ScaryFace,
-#ifdef BATTLE_ENGINE
+#if defined(BATTLE_ENGINE) || defined(POKEMON_EXPANSION)
     [MOVE_FEINT_ATTACK  - 1] = sMoveFourLineDescription_FaintAttack,
 #else
     [MOVE_FAINT_ATTACK  - 1] = sMoveFourLineDescription_FaintAttack,
