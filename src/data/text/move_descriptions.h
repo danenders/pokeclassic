@@ -2957,7 +2957,7 @@ const u8 *const gMoveFourLineDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_ICE_PUNCH     - 1] = sMoveFourLineDescription_IcePunch,
     [MOVE_THUNDER_PUNCH - 1] = sMoveFourLineDescription_ThunderPunch,
     [MOVE_SCRATCH       - 1] = sMoveFourLineDescription_Scratch,
-#ifdef BATTLE_ENGINE
+#if defined(BATTLE_ENGINE) || defined(POKEMON_EXPANSION)
     [MOVE_VICE_GRIP     - 1] = sMoveFourLineDescription_ViceGrip,
 #else
     [MOVE_VISE_GRIP     - 1] = sMoveFourLineDescription_ViceGrip,
@@ -3086,7 +3086,7 @@ const u8 *const gMoveFourLineDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_AMNESIA       - 1] = sMoveFourLineDescription_Amnesia,
     [MOVE_KINESIS       - 1] = sMoveFourLineDescription_Kinesis,
     [MOVE_SOFT_BOILED   - 1] = sMoveFourLineDescription_SoftBoiled,
-#ifdef BATTLE_ENGINE
+#if defined(BATTLE_ENGINE) || defined(POKEMON_EXPANSION)
     [MOVE_HIGH_JUMP_KICK  - 1] = sMoveFourLineDescription_HiJumpKick,
 #else
     [MOVE_HI_JUMP_KICK  - 1] = sMoveFourLineDescription_HiJumpKick,
@@ -3223,7 +3223,7 @@ const u8 *const gMoveFourLineDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_MEMENTO       - 1] = sMoveFourLineDescription_Memento,
     [MOVE_FACADE        - 1] = sMoveFourLineDescription_Facade,
     [MOVE_FOCUS_PUNCH   - 1] = sMoveFourLineDescription_FocusPunch,
-#ifdef BATTLE_ENGINE
+#if defined(BATTLE_ENGINE) || defined(POKEMON_EXPANSION)
     [MOVE_SMELLING_SALTS - 1] = sMoveFourLineDescription_SmellingSalt,
 #else
     [MOVE_SMELLING_SALT - 1] = sMoveFourLineDescription_SmellingSalt,
