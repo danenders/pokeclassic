@@ -46,9 +46,6 @@
 #include "constants/region_map_sections.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
-#ifdef BATTLE_ENGINE
-#include "constants/battle_config.h"
-#endif
 #include "item_icon.h"
 #include "pokemon_icon.h"
 #include "constants/flags.h"
@@ -1795,6 +1792,7 @@ static void Task_ChangeSummaryMon(u8 taskId)
         SetSpriteInvisibility(SPRITE_ARR_ID_MON_ICON, TRUE);
         break;
     case 11:
+        CreateSetStatusSprite();
         data[1] = 0;
         break;
     case 12:
