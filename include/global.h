@@ -1013,6 +1013,8 @@ struct SaveBlock1
     /*0x3D5A*/ u8 unused_3D5A[10];
     /*0x3D64*/ struct SaveTrainerHill trainerHill;
     /*0x3D70*/ struct WaldaPhrase waldaPhrase;
+               u8 dexNavSearchLevels[NUM_SPECIES];
+               u8 dexNavChain;
     // sizeof: 0x3D88
 };
 

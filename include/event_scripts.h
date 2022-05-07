@@ -612,4 +612,13 @@ extern const u8 EventScript_TradeCenter_Chair0[];
 extern const u8 EventScript_ConfirmLeaveCableClubRoom[];
 extern const u8 EventScript_TerminateLink[];
 
+// Dexnav
+extern const u8 EventScript_StartDexNavBattle[];
+extern const u8 EventScript_NotFoundNearby[];
+extern const u8 EventScript_PokemonGotAway[];
+extern const u8 EventScript_LostSignal[];
+extern const u8 EventScript_TooDark[];
+extern const u8 EventScript_MovedTooFast[];
+
+
 #endif // GUARD_EVENT_SCRIPTS_H

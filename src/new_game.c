@@ -44,6 +44,7 @@
 #include "berry_powder.h"
 #include "mystery_gift.h"
 #include "union_room_chat.h"
+#include "constants/map_groups.h"
 
 extern const u8 EventScript_ResetAllMapFlags[];
 
@@ -203,6 +204,8 @@ void NewGameInitData(void)
     WipeTrainerNameRecords();
     ResetTrainerHillResults();
     ResetContestLinkResults();
+    memset(gSaveBlock1Ptr->dexNavSearchLevels, 0, sizeof(gSaveBlock1Ptr->dexNavSearchLevels));
+    gSaveBlock1Ptr->dexNavChain = 0;
 }
 
 static void ResetMiniGamesRecords(void)

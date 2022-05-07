@@ -897,14 +897,14 @@ static const union AnimCmd *const sSpriteAnimTable_HeldItem[] =
     sSpriteAnim_HeldMail,
 };
 
-static const struct SpriteSheet sSpriteSheet_HeldItem =
+const struct SpriteSheet gSpriteSheet_HeldItem =
 {
     sHeldItemGfx, sizeof(sHeldItemGfx), 0xd750
 };
 
 static const struct SpritePalette sSpritePalette_HeldItem =
 {
-    sHeldItemPalette, 0xd750
+    gHeldItemPalette, 0xd750
 };
 
 static const struct SpriteTemplate sSpriteTemplate_HeldItem =
