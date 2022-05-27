@@ -2242,7 +2242,7 @@ static void Task_SwitchFromMoveDetails(u8 taskId)
                 SetSpriteInvisibility(SPRITE_ARR_ID_ITEM, FALSE);
 
             CreateSetStatusSprite();
-            sMonSummaryScreen->markingsSprite->x = 57;
+            sMonSummaryScreen->markingsSprite->x = 24;
             sMonSummaryScreen->markingsSprite->y = 132;
             PrintInfoBar(sMonSummaryScreen->currPageIndex, FALSE);
             data[0]++;
@@ -2666,7 +2666,7 @@ static void PrintNotEggInfo(void)
         CopyItemName(sMonSummaryScreen->summary.item, gStringVar1);
 
     x = GetStringCenterAlignXOffset(0, gStringVar1, 83);
-    AddTextPrinterParameterized4(PSS_LABEL_PANE_LEFT_BOTTOM, 0, 33, 7, 0, 0, sTextColors[PSS_COLOR_WHITE_BLACK_SHADOW], 0, sText_HeldItem);
+    AddTextPrinterParameterized4(PSS_LABEL_PANE_LEFT_BOTTOM, 0, 3, 7, 0, 0, sTextColors[PSS_COLOR_WHITE_BLACK_SHADOW], 0, sText_HeldItem);
     AddTextPrinterParameterized4(PSS_LABEL_PANE_LEFT_BOTTOM, 0, x, 19, 0, 0, sTextColors[PSS_COLOR_BLACK_GRAY_SHADOW], 0, gStringVar1);
 }
 
@@ -2681,7 +2681,7 @@ static void PrintEggInfo(void)
     else
         CopyItemName(sMonSummaryScreen->summary.item, gStringVar1);
     x = GetStringCenterAlignXOffset(0, gStringVar1, 83);
-    AddTextPrinterParameterized4(PSS_LABEL_PANE_LEFT_BOTTOM, 0, 33, 7, 0, 0, sTextColors[PSS_COLOR_WHITE_BLACK_SHADOW], 0, sText_HeldItem);
+    AddTextPrinterParameterized4(PSS_LABEL_PANE_LEFT_BOTTOM, 0, 3, 7, 0, 0, sTextColors[PSS_COLOR_WHITE_BLACK_SHADOW], 0, sText_HeldItem);
     AddTextPrinterParameterized4(PSS_LABEL_PANE_LEFT_BOTTOM, 0, x, 19, 0, 0, sTextColors[PSS_COLOR_BLACK_GRAY_SHADOW], 0, gStringVar1);
 }
 
@@ -3988,7 +3988,7 @@ static void CreateMonMarkingsSprite(struct Pokemon *mon)
     if (sprite != NULL)
     {
         StartSpriteAnim(sprite, GetMonData(mon, MON_DATA_MARKINGS));
-        sMonSummaryScreen->markingsSprite->x = 57;
+        sMonSummaryScreen->markingsSprite->x = 24;
         sMonSummaryScreen->markingsSprite->y = 132;
         sMonSummaryScreen->markingsSprite->oam.priority = 1;
     }
@@ -4025,8 +4025,8 @@ static void CreateHeldItemSprite(struct Pokemon *mon)
         sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_ITEM] = AddItemIconSprite(5501, 5501, item);
         gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_ITEM]].callback = SpriteCallbackDummy;
         gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_ITEM]].oam.priority = 0;
-        gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_ITEM]].x = 16;
-        gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_ITEM]].y = 141;
+        gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_ITEM]].x = 71;
+        gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_ITEM]].y = 139;
     }
 }
 
@@ -4036,7 +4036,7 @@ static void CreateSetStatusSprite(void)
     u8 statusAnim;
 
     if (*spriteId == SPRITE_NONE)
-        *spriteId = CreateSprite(&sSpriteTemplate_StatusCondition, 14, 117, 0);
+        *spriteId = CreateSprite(&sSpriteTemplate_StatusCondition, 14, 120, 0);
 
     statusAnim = GetMonAilment(&sMonSummaryScreen->currentMon);
     if (statusAnim != 0)
