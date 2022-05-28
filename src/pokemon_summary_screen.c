@@ -51,6 +51,10 @@
 #include "constants/flags.h"
 #include "battle_interface.h"
 
+#define TEXT_ALIGN_CENTER 0
+#define TEXT_ALIGN_LEFT   1
+#define TEXT_ALIGN_RIGHT  2
+
 // Config options - Note that some config options need external modifications to fully work, such as CONFIG_CAN_FORGET_HM_MOVES, CONFIG_PHYSICAL_SPECIAL_SPLIT, and CONFIG_DECAPITALIZE_MET_LOCATION_STRINGS
 #define CONFIG_CAN_FORGET_HM_MOVES                      TRUE
 #define CONFIG_CAN_SWITCH_PAGES_WHILE_DETAILS_ARE_UP    TRUE
@@ -64,6 +68,8 @@
 #define CONFIG_DECAPITALIZE_MET_LOCATION_STRINGS        FALSE
 #define CONFIG_DECAPITALIZE_MOVE_DESCRIPTION_STRINGS    FALSE
 #define CONFIG_FATEFUL_ENCOUNTER_MARK                   TRUE
+#define CONFIG_ITEM_NAME_TEXT_ALIGN                     TEXT_ALIGN_CENTER
+
 // Make sure gBallIconTable in src/data/item_icon_table.h is ordered correctly.  Default does not match RHH
 
 enum {
@@ -2665,7 +2671,13 @@ static void PrintNotEggInfo(void)
     else
         CopyItemName(sMonSummaryScreen->summary.item, gStringVar1);
 
+    #if CONFIG_ITEM_NAME_TEXT_ALIGN == TEXT_ALIGN_LEFT
+    x = 3;
+    #elif CONFIG_ITEM_NAME_TEXT_ALIGN == TEXT_ALIGN_RIGHT
+    x = GetStringRightAlignXOffset(0, gStringVar1, 83) - 1;
+    #else
     x = GetStringCenterAlignXOffset(0, gStringVar1, 83);
+    #endif
     AddTextPrinterParameterized4(PSS_LABEL_PANE_LEFT_BOTTOM, 0, 3, 7, 0, 0, sTextColors[PSS_COLOR_WHITE_BLACK_SHADOW], 0, sText_HeldItem);
     AddTextPrinterParameterized4(PSS_LABEL_PANE_LEFT_BOTTOM, 0, x, 19, 0, 0, sTextColors[PSS_COLOR_BLACK_GRAY_SHADOW], 0, gStringVar1);
 }
@@ -2680,7 +2692,14 @@ static void PrintEggInfo(void)
         StringCopy(gStringVar1, sText_None);
     else
         CopyItemName(sMonSummaryScreen->summary.item, gStringVar1);
+
+    #if CONFIG_ITEM_NAME_TEXT_ALIGN == TEXT_ALIGN_LEFT
+    x = 3;
+    #elif CONFIG_ITEM_NAME_TEXT_ALIGN == TEXT_ALIGN_RIGHT
+    x = GetStringRightAlignXOffset(0, gStringVar1, 83) - 1;
+    #else
     x = GetStringCenterAlignXOffset(0, gStringVar1, 83);
+    #endif
     AddTextPrinterParameterized4(PSS_LABEL_PANE_LEFT_BOTTOM, 0, 3, 7, 0, 0, sTextColors[PSS_COLOR_WHITE_BLACK_SHADOW], 0, sText_HeldItem);
     AddTextPrinterParameterized4(PSS_LABEL_PANE_LEFT_BOTTOM, 0, x, 19, 0, 0, sTextColors[PSS_COLOR_BLACK_GRAY_SHADOW], 0, gStringVar1);
 }
