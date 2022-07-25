@@ -12,7 +12,7 @@ MysteryGiftScript_AlteringCave_:
 	release
 	end
 
-sText_MysteryGiftAlteringCave::
+sText_MysteryGiftAlteringCave:
 	.string "Thank you for using the Mystery\n"
 	.string "Gift System.\p"
 	.string "There appears to be a rumor about\n"
