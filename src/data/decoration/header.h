@@ -1443,7 +1443,7 @@ const struct Decoration gDecorations[] =
     [DECOR_REGISTEEL_DOLL] =
     {
         .id = DECOR_REGISTEEL_DOLL,
-        .name = _("Registell Doll"),
+        .name = _("Registeel Doll"),
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x2,
         .category = DECORCAT_DOLL,
