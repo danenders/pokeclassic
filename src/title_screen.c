@@ -35,9 +35,6 @@
 #define BERRY_UPDATE_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON)
 #define A_B_START_SELECT (A_BUTTON | B_BUTTON | START_BUTTON | SELECT_BUTTON)
 
-extern struct MusicPlayerInfo gMPlayInfo_BGM;
-
-// this file's functions
 static void MainCB2(void);
 static void Task_TitleScreenPhase1(u8);
 static void Task_TitleScreenPhase2(u8);
@@ -55,7 +52,7 @@ static void SpriteCB_PressStartCopyrightBanner(struct Sprite *sprite);
 static void SpriteCB_PokemonLogoShine(struct Sprite *sprite);
 
 // const rom data
-static const u16 sUnusedUnknownPal[] = INCBIN_U16("graphics/title_screen/unk_853EF78.gbapal");
+static const u16 sUnusedUnknownPal[] = INCBIN_U16("graphics/title_screen/unused.gbapal");
 
 static const u32 sTitleScreenRayquazaGfx[] = INCBIN_U32("graphics/title_screen/rayquaza.4bpp.lz");
 static const u32 sTitleScreenRayquazaTilemap[] = INCBIN_U32("graphics/title_screen/rayquaza.bin.lz");
@@ -105,7 +102,7 @@ const u16 gTitleScreenAlphaBlend[64] =
 
 static const struct OamData sVersionBannerLeftOamData =
 {
-    .y = 160,
+    .y = DISPLAY_HEIGHT,
     .affineMode = ST_OAM_AFFINE_OFF,
     .objMode = ST_OAM_OBJ_NORMAL,
     .mosaic = 0,
@@ -122,7 +119,7 @@ static const struct OamData sVersionBannerLeftOamData =
 
 static const struct OamData sVersionBannerRightOamData =
 {
-    .y = 160,
+    .y = DISPLAY_HEIGHT,
     .affineMode = ST_OAM_AFFINE_OFF,
     .objMode = ST_OAM_OBJ_NORMAL,
     .mosaic = 0,
@@ -193,7 +190,7 @@ static const struct CompressedSpriteSheet sSpriteSheet_EmeraldVersion[] =
 
 static const struct OamData sOamData_CopyrightBanner =
 {
-    .y = 160,
+    .y = DISPLAY_HEIGHT,
     .affineMode = ST_OAM_AFFINE_OFF,
     .objMode = ST_OAM_OBJ_NORMAL,
     .mosaic = 0,
@@ -305,7 +302,7 @@ static const struct SpritePalette sSpritePalette_PressStart[] =
 
 static const struct OamData sPokemonLogoShineOamData =
 {
-    .y = 160,
+    .y = DISPLAY_HEIGHT,
     .affineMode = ST_OAM_AFFINE_OFF,
     .objMode = ST_OAM_OBJ_NORMAL,
     .mosaic = 0,
@@ -358,12 +355,12 @@ static void SpriteCB_VersionBannerLeft(struct Sprite *sprite)
     if (gTasks[sprite->data[1]].data[1] != 0)
     {
         sprite->oam.objMode = ST_OAM_OBJ_NORMAL;
-        sprite->pos1.y = VERSION_BANNER_Y_GOAL;
+        sprite->y = VERSION_BANNER_Y_GOAL;
     }
     else
     {
-        if (sprite->pos1.y != VERSION_BANNER_Y_GOAL)
-            sprite->pos1.y++;
+        if (sprite->y != VERSION_BANNER_Y_GOAL)
+            sprite->y++;
         if (sprite->data[0] != 0)
             sprite->data[0]--;
         SetGpuReg(REG_OFFSET_BLDALPHA, gTitleScreenAlphaBlend[sprite->data[0]]);
@@ -375,12 +372,12 @@ static void SpriteCB_VersionBannerRight(struct Sprite *sprite)
     if (gTasks[sprite->data[1]].data[1] != 0)
     {
         sprite->oam.objMode = ST_OAM_OBJ_NORMAL;
-        sprite->pos1.y = VERSION_BANNER_Y_GOAL;
+        sprite->y = VERSION_BANNER_Y_GOAL;
     }
     else
     {
-        if (sprite->pos1.y != VERSION_BANNER_Y_GOAL)
-            sprite->pos1.y++;
+        if (sprite->y != VERSION_BANNER_Y_GOAL)
+            sprite->y++;
     }
 }
 
@@ -430,13 +427,13 @@ static void CreateCopyrightBanner(s16 x, s16 y)
 
 static void SpriteCB_PokemonLogoShine(struct Sprite *sprite)
 {
-    if (sprite->pos1.x < 272)
+    if (sprite->x < DISPLAY_WIDTH + 32)
     {
         if (sprite->data[0]) // Flash background
         {
             u16 backgroundColor;
 
-            if (sprite->pos1.x < DISPLAY_WIDTH / 2)
+            if (sprite->x < DISPLAY_WIDTH / 2)
             {
                 // Brighten background color
                 if (sprite->data[1] < 31)
@@ -454,15 +451,15 @@ static void SpriteCB_PokemonLogoShine(struct Sprite *sprite)
             }
 
             backgroundColor = _RGB(sprite->data[1], sprite->data[1], sprite->data[1]);
-            if (sprite->pos1.x == DISPLAY_WIDTH / 2 + 12
-                || sprite->pos1.x == DISPLAY_WIDTH / 2 + 16
-                || sprite->pos1.x == DISPLAY_WIDTH / 2 + 20
-                || sprite->pos1.x == DISPLAY_WIDTH / 2 + 24)
+            if (sprite->x == DISPLAY_WIDTH / 2 + 12
+                || sprite->x == DISPLAY_WIDTH / 2 + 16
+                || sprite->x == DISPLAY_WIDTH / 2 + 20
+                || sprite->x == DISPLAY_WIDTH / 2 + 24)
                 gPlttBufferFaded[0] = RGB(24, 31, 12);
             else
                 gPlttBufferFaded[0] = backgroundColor;
         }
-        sprite->pos1.x += 4;
+        sprite->x += 4;
     }
     else
     {
@@ -473,8 +470,8 @@ static void SpriteCB_PokemonLogoShine(struct Sprite *sprite)
 
 static void SpriteCB_PokemonLogoShine2(struct Sprite *sprite)
 {
-    if (sprite->pos1.x < 272)
-        sprite->pos1.x += 8;
+    if (sprite->x < DISPLAY_WIDTH + 32)
+        sprite->x += 8;
     else
         DestroySprite(sprite);
 }
@@ -550,14 +547,14 @@ void CB2_InitTitleScreen(void)
     case 1:
         // bg2
         LZ77UnCompVram(gTitleScreenPokemonLogoGfx, (void *)(BG_CHAR_ADDR(0)));
-        LZ77UnCompVram(gUnknown_08DE0644, (void *)(BG_SCREEN_ADDR(9)));
+        LZ77UnCompVram(gTitleScreenPokemonLogoTilemap, (void *)(BG_SCREEN_ADDR(9)));
         LoadPalette(gTitleScreenBgPalettes, 0, 0x1E0);
         // bg3
         LZ77UnCompVram(sTitleScreenRayquazaGfx, (void *)(BG_CHAR_ADDR(2)));
         LZ77UnCompVram(sTitleScreenRayquazaTilemap, (void *)(BG_SCREEN_ADDR(26)));
         // bg1
         LZ77UnCompVram(sTitleScreenCloudsGfx, (void *)(BG_CHAR_ADDR(3)));
-        LZ77UnCompVram(gUnknown_08DDE458, (void *)(BG_SCREEN_ADDR(27)));
+        LZ77UnCompVram(gTitleScreenCloudsTilemap, (void *)(BG_SCREEN_ADDR(27)));
         ScanlineEffect_Stop();
         ResetTasks();
         ResetSpriteData();
@@ -596,11 +593,11 @@ void CB2_InitTitleScreen(void)
         SetGpuReg(REG_OFFSET_WIN0V, 0);
         SetGpuReg(REG_OFFSET_WIN1H, 0);
         SetGpuReg(REG_OFFSET_WIN1V, 0);
-        SetGpuReg(REG_OFFSET_WININ, 0x1F1F);
-        SetGpuReg(REG_OFFSET_WINOUT, 0x3F1F);
+        SetGpuReg(REG_OFFSET_WININ, WININ_WIN0_BG_ALL | WININ_WIN0_OBJ | WININ_WIN1_BG_ALL | WININ_WIN1_OBJ);
+        SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_BG_ALL | WINOUT_WIN01_OBJ | WINOUT_WINOBJ_ALL);
         SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG2 | BLDCNT_EFFECT_LIGHTEN);
         SetGpuReg(REG_OFFSET_BLDALPHA, 0);
-        SetGpuReg(REG_OFFSET_BLDY, 0xC);
+        SetGpuReg(REG_OFFSET_BLDY, 12);
         SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(3) | BGCNT_CHARBASE(2) | BGCNT_SCREENBASE(26) | BGCNT_16COLOR | BGCNT_TXT256x256);
         SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(2) | BGCNT_CHARBASE(3) | BGCNT_SCREENBASE(27) | BGCNT_16COLOR | BGCNT_TXT256x256);
         SetGpuReg(REG_OFFSET_BG2CNT, BGCNT_PRIORITY(1) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(9) | BGCNT_256COLOR | BGCNT_AFF256x256);
@@ -751,7 +748,7 @@ static void Task_TitleScreenPhase3(u8 taskId)
         FadeOutBGM(4);
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
         SetMainCallback2(CB2_GoToBerryFixScreen);
-    }   
+    }
     else
     {
         SetGpuReg(REG_OFFSET_BG2Y_L, 0);

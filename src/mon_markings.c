@@ -22,8 +22,8 @@ static void SpriteCB_Marking(struct Sprite *);
 static void SpriteCB_Cursor(struct Sprite *);
 static struct Sprite *CreateMarkingComboSprite(u16, u16, const u16 *, u16);
 
-static const u16 sMonMarkings_Pal[] = INCBIN_U16("graphics/misc/mon_markings.gbapal");
-static const u8 sMonMarkings_Gfx[] = INCBIN_U8("graphics/misc/mon_markings.4bpp");
+static const u16 sMonMarkings_Pal[] = INCBIN_U16("graphics/interface/mon_markings.gbapal");
+static const u8 sMonMarkings_Gfx[] = INCBIN_U8("graphics/interface/mon_markings.4bpp");
 
 static const struct OamData sOamData_MenuWindow =
 {
@@ -493,7 +493,7 @@ static void CreateMonMarkingsMenuSprites(s16 x, s16 y, u16 baseTileTag, u16 base
             return;
         }
     }
-    sMenu->windowSprites[1]->pos1.y = y + 96;
+    sMenu->windowSprites[1]->y = y + 96;
 
 
     // Create marking sprites
@@ -526,8 +526,8 @@ static void CreateMonMarkingsMenuSprites(s16 x, s16 y, u16 baseTileTag, u16 base
         sMenu->textSprite->oam.shape = SPRITE_SHAPE(32x32);
         sMenu->textSprite->oam.size = SPRITE_SIZE(32x32);
         StartSpriteAnim(sMenu->textSprite, ANIM_TEXT);
-        sMenu->textSprite->pos1.x = x + 32;
-        sMenu->textSprite->pos1.y = y + 80;
+        sMenu->textSprite->x = x + 32;
+        sMenu->textSprite->y = y + 80;
         CalcCenterToCornerVec(sMenu->textSprite, SPRITE_SHAPE(32x16), SPRITE_SIZE(32x16), ST_OAM_AFFINE_OFF);
     }
     else
@@ -567,7 +567,7 @@ static void SpriteCB_Marking(struct Sprite *sprite)
 
 static void SpriteCB_Cursor(struct Sprite *sprite)
 {
-    sprite->pos1.y = (16 * sMenu->cursorPos) + sprite->sCursorYOffset;
+    sprite->y = (16 * sMenu->cursorPos) + sprite->sCursorYOffset;
 }
 
 #undef sCursorYOffset

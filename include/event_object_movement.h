@@ -1,6 +1,8 @@
 #ifndef GUARD_EVENT_OBJECT_MOVEMENT_H
 #define GUARD_EVENT_OBJECT_MOVEMENT_H
 
+#include "constants/event_object_movement.h"
+
 enum SpinnerRunnerFollowPatterns
 {
     RUNFOLLOW_ANY,
@@ -47,7 +49,7 @@ enum ReflectionTypes
 #define GROUND_EFFECT_FLAG_HOT_SPRINGS           (1 << 18)
 #define GROUND_EFFECT_FLAG_SEAWEED               (1 << 19)
 
-struct UnkStruct_085094AC
+struct StepAnimTable
 {
     const union AnimCmd *const *anims;
     u8 animPos[4];
@@ -65,7 +67,6 @@ struct LockedAnimObjectEvents
     u8 count;
 };
 
-extern const struct SpriteFrameImage gObjectEventPicTable_PechaBerryTree[];
 extern const struct OamData gObjectEventBaseOam_32x8;
 extern const struct OamData gObjectEventBaseOam_32x32;
 extern const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[];
@@ -87,18 +88,17 @@ void LoadPlayerObjectReflectionPalette(u16, u8);
 void LoadSpecialObjectReflectionPalette(u16, u8);
 void TryMoveObjectEventToMapCoords(u8, u8, u8, s16, s16);
 void PatchObjectPalette(u16, u8);
-void sub_808E16C(s16, s16);
+void SpawnObjectEventsOnReturnToField(s16, s16);
 void OverrideSecretBaseDecorationSpriteScript(u8 localId, u8 mapNum, u8 mapGroup, u8 decorCat);
-void sub_8092FF0(s16, s16, s16 *, s16 *);
+void GetMapCoordsFromSpritePos(s16, s16, s16 *, s16 *);
 u8 GetFaceDirectionAnimNum(u8);
 void SetSpritePosToOffsetMapCoords(s16 *, s16 *, s16, s16);
 void ObjectEventClearHeldMovement(struct ObjectEvent *);
 void ObjectEventClearHeldMovementIfActive(struct ObjectEvent *);
 void TrySpawnObjectEvents(s16, s16);
-u8 CreateObjectSprite(u8 graphicsId, u8 a1, s16 x, s16 y, u8 z, u8 direction);
-u8 AddPseudoObjectEvent(u16, void (*)(struct Sprite *), s16 x, s16 y, u8 subpriority);
+u8 CreateObjectGraphicsSprite(u16, void (*)(struct Sprite *), s16 x, s16 y, u8 subpriority);
 u8 TrySpawnObjectEvent(u8, u8, u8);
-u8 SpawnSpecialObjectEventParameterized(u8 graphicsId, u8 movementBehavior, u8 localId, s16 x, s16 y, u8 z);
+u8 SpawnSpecialObjectEventParameterized(u8 graphicsId, u8 movementBehavior, u8 localId, s16 x, s16 y, u8 elevation);
 u8 SpawnSpecialObjectEvent(struct ObjectEventTemplate *);
 void SetSpritePosToMapCoords(s16, s16, s16 *, s16 *);
 void CameraObjectReset1(void);
@@ -109,9 +109,9 @@ const struct ObjectEventGraphicsInfo *GetObjectEventGraphicsInfo(u8 graphicsId);
 void SetObjectInvisibility(u8, u8, u8, bool8);
 void FreeAndReserveObjectSpritePalettes(void);
 void SetObjectEventSpritePosByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup, s16 x, s16 y);
-void ResetObjectPriority(u8, u8, u8);
-void SetObjectPriority(u8, u8, u8, u8);
-void sub_808E75C(s16, s16);
+void ResetObjectSubpriority(u8, u8, u8);
+void SetObjectSubpriority(u8, u8, u8, u8);
+void AllowObjectAtPosTriggerGroundEffects(s16, s16);
 void ObjectEventGetLocalIdAndMap(struct ObjectEvent *objectEvent, void *localId, void *mapNum, void *mapGroup);
 void ShiftObjectEventCoords(struct ObjectEvent *, s16, s16);
 void MoveObjectEventToMapCoords(struct ObjectEvent *, s16, s16);
@@ -120,7 +120,7 @@ void InitObjectEventPalettes(u8 palSlot);
 void UpdateObjectEventCurrentMovement(struct ObjectEvent *, struct Sprite *, bool8(struct ObjectEvent *, struct Sprite *));
 u8 ObjectEventFaceOppositeDirection(struct ObjectEvent *, u8);
 u8 GetOppositeDirection(u8);
-u8 GetWalkInPlaceFastestMovementAction(u32);
+u8 GetWalkInPlaceFasterMovementAction(u32);
 u8 GetWalkInPlaceFastMovementAction(u32);
 u8 GetWalkInPlaceNormalMovementAction(u32);
 u8 GetWalkInPlaceSlowMovementAction(u32);
@@ -128,7 +128,7 @@ u8 GetCollisionAtCoords(struct ObjectEvent *, s16, s16, u32);
 void MoveCoords(u8, s16 *, s16 *);
 bool8 ObjectEventIsHeldMovementActive(struct ObjectEvent *);
 u8 ObjectEventClearHeldMovementIfFinished(struct ObjectEvent *);
-u8 GetObjectEventIdByXYZ(u16 x, u16 y, u8 z);
+u8 GetObjectEventIdByPosition(u16 x, u16 y, u8 elevation);
 void SetTrainerMovementType(struct ObjectEvent *objectEvent, u8 movementType);
 u8 GetTrainerFacingDirectionMovementType(u8 direction);
 const u8 *GetObjectEventScriptPointerByObjectEventId(u8 objectEventId);
@@ -137,7 +137,7 @@ u8 GetFaceDirectionMovementAction(u32);
 u8 GetWalkNormalMovementAction(u32);
 u8 GetWalkFastMovementAction(u32);
 u8 GetRideWaterCurrentMovementAction(u32);
-u8 GetWalkFastestMovementAction(u32);
+u8 GetWalkFasterMovementAction(u32);
 u8 GetPlayerRunMovementAction(u32);
 u8 GetJumpInPlaceMovementAction(u32);
 u8 GetAcroWheelieFaceDirectionMovementAction(u32);
@@ -162,33 +162,21 @@ u8 ObjectEventCheckHeldMovementStatus(struct ObjectEvent *objectEvent);
 u8 ObjectEventGetHeldMovementActionId(struct ObjectEvent *objectEvent);
 void TryOverrideTemplateCoordsForObjectEvent(const struct ObjectEvent *objectEvent, u8 movementType);
 void OverrideTemplateCoordsForObjectEvent(const struct ObjectEvent *objectEvent);
-void ShiftStillObjectEventCoords(struct ObjectEvent *pObject);
-void ObjectEventMoveDestCoords(struct ObjectEvent *pObject, u32 unk_19, s16 *pInt, s16 *pInt1);
+void ShiftStillObjectEventCoords(struct ObjectEvent *objEvent);
+void ObjectEventMoveDestCoords(struct ObjectEvent *objEvent, u32 direction, s16 *x, s16 *y);
 u8 AddCameraObject(u8 linkedSpriteId);
 void UpdateObjectEventsForCameraUpdate(s16 x, s16 y);
 u8 GetWalkSlowMovementAction(u32);
 u8 GetJumpMovementAction(u32);
-bool8 AreZCoordsCompatible(u8, u8);
-u8 ZCoordToPriority(u8);
-void ObjectEventUpdateZCoord(struct ObjectEvent *pObject);
-void SetObjectSubpriorityByZCoord(u8, struct Sprite *, u8);
-bool8 IsZCoordMismatchAt(u8, s16, s16);
+u8 ElevationToPriority(u8);
+void ObjectEventUpdateElevation(struct ObjectEvent *objEvent);
+void SetObjectSubpriorityByElevation(u8, struct Sprite *, u8);
 void UnfreezeObjectEvent(struct ObjectEvent *);
 u8 FindLockedObjectEventIndex(struct ObjectEvent *);
-bool8 obj_npc_ministep(struct Sprite *sprite);
-bool8 sub_80976EC(struct Sprite *sprite);
-void sub_80976DC(struct Sprite *, u8);
-void sub_809783C(struct Sprite *, u8, u8, u8);
-void DoShadowFieldEffect(struct ObjectEvent *);
-u8 sub_809785C(struct Sprite *);
-u8 sub_80978E4(struct Sprite *);
 void SetAndStartSpriteAnim(struct Sprite *, u8, u8);
 bool8 SpriteAnimEnded(struct Sprite *);
-void CreateLevitateMovementTask(struct ObjectEvent *);
-void DestroyExtraMovementTask(u8);
 void UnfreezeObjectEvents(void);
 void FreezeObjectEventsExceptOne(u8 objectEventId);
-void TurnObjectEventSprite(u8, u8);
 void FreezeObjectEventsExceptTwo(u8 objectEventId1, u8 objectEventId2);
 void FreezeObjectEvents(void);
 bool8 FreezeObjectEvent(struct ObjectEvent *objectEvent);
@@ -196,9 +184,9 @@ u8 GetMoveDirectionFastAnimNum(u8);
 u8 GetMoveDirectionFasterAnimNum(u8);
 u8 GetMoveDirectionFastestAnimNum(u8);
 u8 GetLedgeJumpDirection(s16, s16, u8);
-void CameraObjectSetFollowedObjectId(u8 objectId);
+void CameraObjectSetFollowedSpriteId(u8 objectId);
 u16 GetObjectPaletteTag(u8 palSlot);
-void UpdateObjectEventSpriteVisibility(struct Sprite *sprite, bool8 invisible);
+void UpdateObjectEventSpriteInvisibility(struct Sprite *sprite, bool8 invisible);
 s16 GetFigure8XOffset(s16 idx);
 s16 GetFigure8YOffset(s16 idx);
 void CameraObjectReset2(void);
@@ -405,13 +393,13 @@ u8 MovementType_CopyPlayer_Step1(struct ObjectEvent *, struct Sprite *);
 u8 MovementType_CopyPlayer_Step2(struct ObjectEvent *, struct Sprite *);
 bool8 CopyablePlayerMovement_None(struct ObjectEvent *, struct Sprite *, u8, bool8(u8));
 bool8 CopyablePlayerMovement_FaceDirection(struct ObjectEvent *, struct Sprite *, u8, bool8(u8));
-bool8 CopyablePlayerMovement_GoSpeed0(struct ObjectEvent *, struct Sprite *, u8, bool8(u8));
-bool8 CopyablePlayerMovement_GoSpeed1(struct ObjectEvent *, struct Sprite *, u8, bool8(u8));
-bool8 CopyablePlayerMovement_GoSpeed2(struct ObjectEvent *, struct Sprite *, u8, bool8(u8));
+bool8 CopyablePlayerMovement_WalkNormal(struct ObjectEvent *, struct Sprite *, u8, bool8(u8));
+bool8 CopyablePlayerMovement_WalkFast(struct ObjectEvent *, struct Sprite *, u8, bool8(u8));
+bool8 CopyablePlayerMovement_WalkFaster(struct ObjectEvent *, struct Sprite *, u8, bool8(u8));
 bool8 CopyablePlayerMovement_Slide(struct ObjectEvent *, struct Sprite *, u8, bool8(u8));
-bool8 cph_IM_DIFFERENT(struct ObjectEvent *, struct Sprite *, u8, bool8(u8));
-bool8 CopyablePlayerMovement_GoSpeed4(struct ObjectEvent *, struct Sprite *, u8, bool8(u8));
+bool8 CopyablePlayerMovement_JumpInPlace(struct ObjectEvent *, struct Sprite *, u8, bool8(u8));
 bool8 CopyablePlayerMovement_Jump(struct ObjectEvent *, struct Sprite *, u8, bool8(u8));
+bool8 CopyablePlayerMovement_Jump2(struct ObjectEvent *, struct Sprite *, u8, bool8(u8));
 u8 MovementType_CopyPlayerInGrass_Step1(struct ObjectEvent *, struct Sprite *);
 u8 MovementType_Buried_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementType_WalkInPlace_Step0(struct ObjectEvent *, struct Sprite *);
@@ -422,10 +410,13 @@ u8 MovementType_RunInPlace_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementType_Invisible_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementType_Invisible_Step1(struct ObjectEvent *, struct Sprite *);
 u8 MovementType_Invisible_Step2(struct ObjectEvent *, struct Sprite *);
-void SetObjectEventSpriteInvisibility(u8 objectEventId, bool32 invisible);
-bool32 IsObjectEventSpriteInvisible(u8 objectEventId);
-void SetObjectEventSpriteGraphics(u8 objectEventId, u8 graphicsId);
-void SetObjectEventSpriteAnim(u8 objectEventId, u8 animNum);
-bool32 IsObjectEventSpriteAnimating(u8 objectEventId);
+
+u8 CreateVirtualObject(u8 graphicsId, u8 virtualObjId, s16 x, s16 y, u8 elevation, u8 direction);
+void TurnVirtualObject(u8 virtualObjId, u8 direction);
+void SetVirtualObjectGraphics(u8 virtualObjId, u8 graphicsId);
+void SetVirtualObjectInvisibility(u8 virtualObjId, bool32 invisible);
+bool32 IsVirtualObjectInvisible(u8 virtualObjId);
+void SetVirtualObjectSpriteAnim(u8 virtualObjId, u8 animNum);
+bool32 IsVirtualObjectAnimating(u8 virtualObjId);
 
 #endif //GUARD_EVENT_OBJECT_MOVEMENT_H
