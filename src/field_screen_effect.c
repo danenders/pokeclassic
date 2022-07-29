@@ -264,12 +264,14 @@ static void SetUpWarpExitTask(void)
     behavior = MapGridGetMetatileBehaviorAt(x, y);
     if (MetatileBehavior_IsDoor(behavior) == TRUE)
         func = Task_ExitDoor;
-    else if (MetatileBehavior_IsDirectionalStairWarp(behavior) == TRUE)
+    else if (MetatileBehavior_IsDirectionalStairWarp(behavior) == TRUE && !gExitStairsMovementDisabled)
         func = Task_ExitStairs;
     else if (MetatileBehavior_IsNonAnimDoor(behavior) == TRUE)
         func = Task_ExitNonAnimDoor;
     else
         func = Task_ExitNonDoor;
+    
+    gExitStairsMovementDisabled = FALSE;
     CreateTask(func, 10);
 }
 

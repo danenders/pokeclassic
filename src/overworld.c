@@ -202,6 +202,7 @@ EWRAM_DATA static struct InitialPlayerAvatarState sInitialPlayerAvatarState = {0
 EWRAM_DATA static u16 sAmbientCrySpecies = 0;
 EWRAM_DATA static bool8 sIsAmbientCryWaterMon = FALSE;
 EWRAM_DATA struct LinkPlayerObjectEvent gLinkPlayerObjectEvents[4] = {0};
+EWRAM_DATA bool8 gExitStairsMovementDisabled = FALSE;
 
 static const struct WarpData sDummyWarpData =
 {
@@ -1729,6 +1730,7 @@ void CB2_ContinueSavedGame(void)
     PlayTimeCounter_Start();
     ScriptContext1_Init();
     ScriptContext2_Disable();
+    gExitStairsMovementDisabled = TRUE;
     InitMatchCallCounters();
     if (UseContinueGameWarp() == TRUE)
     {
@@ -1814,6 +1816,7 @@ static bool32 LoadMapInStepsLink(u8 *state)
         (*state)++;
         break;
     case 1:
+        gExitStairsMovementDisabled = FALSE;
         LoadMapFromWarp(TRUE);
         (*state)++;
         break;
