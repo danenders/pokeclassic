@@ -233,8 +233,10 @@ static u32 Client_Run(struct MysteryGiftClient * client)
         InitRamScript_NoObjectEvent(client->recvBuffer, 1000);
         break;
     case CLI_RECV_EREADER_TRAINER:
+        #ifndef FREE_BATTLE_TOWER_E_READER
         memcpy(&gSaveBlock2Ptr->frontier.ereaderTrainer, client->recvBuffer, sizeof(gSaveBlock2Ptr->frontier.ereaderTrainer));
         ValidateEReaderTrainer();
+        #endif
         break;
     case CLI_RUN_BUFFER_SCRIPT:
         memcpy(gDecompressionBuffer, client->recvBuffer, MG_LINK_BUFFER_SIZE);
