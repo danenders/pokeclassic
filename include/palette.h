@@ -26,9 +26,19 @@ enum
     FAST_FADE_OUT_TO_BLACK,
 };
 
+struct BlendSettings {
+  u32 blendColor:24;
+  u32 isTint:1;
+  u32 coeff:5;
+};
+
 struct PaletteFadeControl
 {
-    u32 multipurpose1;
+    u32 multipurpose1; // This field needs to exist or errors will occur
+    // These three are only used for TOD blending
+    struct BlendSettings *bld0;
+    struct BlendSettings *bld1;
+    u16 weight:9; // [0, 256], so must be 9 bits
     u8 delayCounter:6;
     u16 y:5; // blend coefficient
     u16 targetY:5; // target blend coefficient
@@ -46,6 +56,8 @@ struct PaletteFadeControl
     u8 deltaY:4; // rate of change of blend coefficient
 };
 
+extern const struct BlendSettings gTimeOfDayBlend[];
+
 extern struct PaletteFadeControl gPaletteFade;
 extern u32 gPlttBufferTransferPending;
 extern u8 gPaletteDecompressionBuffer[];
@@ -54,11 +66,13 @@ extern u16 gPlttBufferFaded[PLTT_BUFFER_SIZE];
 
 void LoadCompressedPalette(const u32 *, u16, u16);
 void LoadPalette(const void *, u16, u16);
+void LoadPaletteFast(const void *src, u16 offset, u16 size);
 void FillPalette(u16, u16, u16);
 void TransferPlttBuffer(void);
 u8 UpdatePaletteFade(void);
 void ResetPaletteFade(void);
 bool8 BeginNormalPaletteFade(u32, s8, u8, u8, u16);
+bool8 BeginTimeOfDayPaletteFade(u32, s8, u8, u8, struct BlendSettings *, struct BlendSettings *, u16, u16);
 void PaletteStruct_ResetById(u16);
 void ResetPaletteFadeControl(void);
 void InvertPlttBuffer(u32);
@@ -67,8 +81,13 @@ void UnfadePlttBuffer(u32);
 void BeginFastPaletteFade(u8);
 void BeginHardwarePaletteFade(u8, u8, u8, u8, u8);
 void BlendPalettes(u32 selectedPalettes, u8 coeff, u16 color);
+void BlendPalettesFine(u32 palettes, u16 *src, u16 *dst, u32 coeff, u32 color);
 void BlendPalettesUnfaded(u32, u8, u16);
 void BlendPalettesGradually(u32 selectedPalettes, s8 delay, u8 coeff, u8 coeffTarget, u16 color, u8 priority, u8 id);
+void TimeBlendPalette(u16 palOffset, u32 coeff, u32 blendColor);
+void TintPalette_RGB_Copy(u16 palOffset, u32 blendColor);
+void TimeMixPalettes(u32, u16 *, u16 *, struct BlendSettings *, struct BlendSettings *, u16);
+void AvgPaletteWeighted(u16 *src0, u16 *src1, u16 *dst, u16 weight0);
 void TintPalette_GrayScale(u16 *palette, u16 count);
 void TintPalette_GrayScale2(u16 *palette, u16 count);
 void TintPalette_SepiaTone(u16 *palette, u16 count);

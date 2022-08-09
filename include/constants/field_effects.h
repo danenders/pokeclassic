@@ -35,6 +35,7 @@
 #define FLDEFF_USE_FLY                   31
 #define FLDEFF_FLY_IN                    32
 #define FLDEFF_QUESTION_MARK_ICON        33
+#define FLDEFF_EMOTE                     33 // shares a slot with FLDEFF_QUESTION_MARK_ICON
 #define FLDEFF_FEET_IN_FLOWING_WATER     34
 #define FLDEFF_BIKE_TIRE_TRACKS          35
 #define FLDEFF_SAND_DISGUISE             36
@@ -69,6 +70,9 @@
 #define FLDEFF_DESTROY_DEOXYS_ROCK       65
 #define FLDEFF_MOVE_DEOXYS_ROCK          66
 #define FLDEFF_CAVE_DUST                 67
+#define FLDEFF_TRACKS_SLITHER            68
+#define FLDEFF_TRACKS_SPOT               69
+#define FLDEFF_TRACKS_BUG                70
 
 #define FLDEFFOBJ_SHADOW_S              0
 #define FLDEFFOBJ_SHADOW_M              1
@@ -109,6 +113,10 @@
 #define FLDEFFOBJ_RAYQUAZA              36
 #define FLDEFFOBJ_CAVE_DUST             37
 
+#define FLDEFFOBJ_TRACKS_SLITHER        38
+#define FLDEFFOBJ_TRACKS_SPOT           39
+#define FLDEFFOBJ_TRACKS_BUG            40
+
 #define FLDEFF_PAL_TAG_CUT_GRASS          0x1000
 #define FLDEFF_PAL_TAG_SECRET_POWER_TREE  0x1003
 #define FLDEFF_PAL_TAG_GENERAL_0          0x1004
@@ -122,5 +130,17 @@
 #define FLDEFF_PAL_TAG_HOF_MONITOR        0x1010
 #define FLDEFF_PAL_TAG_UNKNOWN            0x1011
 #define FLDEFF_PAL_TAG_CAVE_DUST          0x1012
+
+// tile tags, for field effects that may have many copies on screen at once
+#define FLDEFF_TILE_TAG_SHADOW_SMALL        0x1300
+#define FLDEFF_TILE_TAG_SHADOW_MEDIUM       0x1301
+#define FLDEFF_TILE_TAG_SHADOW_LARGE        0x1302
+#define FLDEFF_TILE_TAG_SHADOW_EXTRA_LARGE  0x1303
+
+// Duplicates of event_object_movement tags
+#define FLDEFF_PAL_TAG_MAY 0x1110 // OBJ_EVENT_PAL_TAG_MAY
+#define FLDEFF_PAL_TAG_BRENDAN 0x1100 // OBJ_EVENT_PAL_TAG_BRENDAN
+#define FLDEFF_PAL_TAG_NPC_1 0x1103 // OBJ_EVENT_PAL_TAG_NPC_1
+#define FLDEFF_PAL_TAG_NPC_2 0x1104 // OBJ_EVENT_PAL_TAG_NPC_2
 
 #endif // GUARD_FIELD_EFFECT_CONSTANTS_H
