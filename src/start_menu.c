@@ -44,11 +44,8 @@
 #include "trainer_card.h"
 #include "window.h"
 #include "union_room.h"
-<<<<<<< HEAD
 #include "constants/battle_frontier.h"
-=======
 #include "dexnav.h"
->>>>>>> dexnav
 #include "constants/rgb.h"
 #include "constants/songs.h"
 
