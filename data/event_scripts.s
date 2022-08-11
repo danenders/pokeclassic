@@ -1137,3 +1137,15 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/PalletTown_RivalsHouse/scripts.inc"
 
 	.include "data/maps/PalletTown_ProfessorOaksLab/scripts.inc"
+
+	.include "data/maps/ViridianCity_House/scripts.inc"
+
+	.include "data/maps/ViridianCity_Gym/scripts.inc"
+
+	.include "data/maps/ViridianCity_School/scripts.inc"
+
+	.include "data/maps/ViridianCity_Mart/scripts.inc"
+
+	.include "data/maps/ViridianCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/ViridianCity_PokemonCenter_2F/scripts.inc"

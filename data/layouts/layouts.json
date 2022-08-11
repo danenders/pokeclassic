@@ -724,8 +724,8 @@
     {
       "id": "LAYOUT_POKEMON_CENTER_1F",
       "name": "PokemonCenter_1F_Layout",
-      "width": 14,
-      "height": 9,
+      "width": 15,
+      "height": 10,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
@@ -736,7 +736,7 @@
     {
       "id": "LAYOUT_POKEMON_CENTER_2F",
       "name": "PokemonCenter_2F_Layout",
-      "width": 14,
+      "width": 15,
       "height": 10,
       "border_width": 2,
       "border_height": 2,
@@ -753,7 +753,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Shop",
+      "secondary_tileset": "gTileset_Mart",
       "border_filepath": "data/layouts/Mart/border.bin",
       "blockdata_filepath": "data/layouts/Mart/map.bin"
     },
@@ -5784,6 +5784,78 @@
       "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/PalletTown_ProfessorOaksLab/border.bin",
       "blockdata_filepath": "data/layouts/PalletTown_ProfessorOaksLab/map.bin"
+    },
+    {
+      "id": "LAYOUT_VIRIDIAN_CITY_HOUSE",
+      "name": "ViridianCity_House_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/ViridianCity_House/border.bin",
+      "blockdata_filepath": "data/layouts/ViridianCity_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_VIRIDIAN_CITY_GYM",
+      "name": "ViridianCity_Gym_Layout",
+      "width": 20,
+      "height": 24,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_ViridianGym",
+      "border_filepath": "data/layouts/ViridianCity_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/ViridianCity_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_VIRIDIAN_CITY_SCHOOL",
+      "name": "ViridianCity_School_Layout",
+      "width": 10,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_School",
+      "border_filepath": "data/layouts/ViridianCity_School/border.bin",
+      "blockdata_filepath": "data/layouts/ViridianCity_School/map.bin"
+    },
+    {
+      "id": "LAYOUT_VIRIDIAN_CITY_MART",
+      "name": "ViridianCity_Mart_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Mart",
+      "border_filepath": "data/layouts/ViridianCity_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/ViridianCity_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_VIRIDIAN_CITY_POKEMON_CENTER_1F",
+      "name": "ViridianCity_PokemonCenter_1F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/ViridianCity_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/ViridianCity_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_VIRIDIAN_CITY_POKEMON_CENTER_2F",
+      "name": "ViridianCity_PokemonCenter_2F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/ViridianCity_PokemonCenter_2F/border.bin",
+      "blockdata_filepath": "data/layouts/ViridianCity_PokemonCenter_2F/map.bin"
     }
   ]
 }

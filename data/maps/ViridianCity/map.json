@@ -37,14 +37,7 @@
       "x": 26,
       "y": 26,
       "elevation": 0,
-      "dest_map": "MAP_PALLET_TOWN",
-      "dest_warp_id": 2
-    },
-    {
-      "x": 36,
-      "y": 10,
-      "elevation": 0,
-      "dest_map": "MAP_SAFFRON_CITY",
+      "dest_map": "MAP_VIRIDIAN_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": 0
     }
   ],
