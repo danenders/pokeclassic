@@ -55,15 +55,11 @@
 #define METATILE_General_SlidingSingleDoor 0x062
 #define METATILE_General_SlidingDoubleDoor 0x15B
 
-// gTileset_Building EMERALD
+// gTileset_Building
 #define METATILE_Building_TV_Off 0x002
 #define METATILE_Building_TV_On  0x003
-#define METATILE_Building_PC_Off 0x004
-#define METATILE_Building_PC_On  0x005
-
-// gTileset_Building
-#define METATILE_Building_PCOff 0x062
-#define METATILE_Building_PCOn  0x063
+#define METATILE_Building_PC_Off 0x062
+#define METATILE_Building_PC_On  0x063
 
 /*// gTileset_PokemonCenter
 #define METATILE_PokemonCenter_Door_CableClub  0x264
