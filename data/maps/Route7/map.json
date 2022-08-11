@@ -12,7 +12,18 @@
   "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "direction": "right",
+      "offset": -17,
+      "map": "MAP_SAFFRON_CITY"
+    },
+    {
+      "direction": "left",
+      "offset": -10,
+      "map": "MAP_CELADON_CITY"
+    }
+  ],
   "object_events": [
 
   ],

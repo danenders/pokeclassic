@@ -5724,6 +5724,18 @@
       "secondary_tileset": "gTileset_CeruleanCity",
       "border_filepath": "data/layouts/Route25/border.bin",
       "blockdata_filepath": "data/layouts/Route25/map.bin"
+    },
+    {
+      "id": "LAYOUT_INDIGO_PLATEAU_EXTERIOR",
+      "name": "IndigoPlateau_Exterior_Layout",
+      "width": 24,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_IndigoPlateau",
+      "border_filepath": "data/layouts/IndigoPlateau_Exterior/border.bin",
+      "blockdata_filepath": "data/layouts/IndigoPlateau_Exterior/map.bin"
     }
   ]
 }

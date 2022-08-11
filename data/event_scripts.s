@@ -1127,3 +1127,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route24/scripts.inc"
 
 	.include "data/maps/Route25/scripts.inc"
+
+	.include "data/maps/IndigoPlateau_Exterior/scripts.inc"

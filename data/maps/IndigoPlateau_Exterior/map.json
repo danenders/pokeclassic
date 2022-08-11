@@ -1,9 +1,9 @@
 {
-  "id": "MAP_ROUTE16",
-  "name": "Route16",
-  "layout": "LAYOUT_ROUTE16",
-  "music": "MUS_RG_ROUTE3",
-  "region_map_section": "MAPSEC_ROUTE_16",
+  "id": "MAP_INDIGO_PLATEAU_EXTERIOR",
+  "name": "IndigoPlateau_Exterior",
+  "layout": "LAYOUT_INDIGO_PLATEAU_EXTERIOR",
+  "music": "MUS_RG_VICTORY_ROAD",
+  "region_map_section": "MAPSEC_INDIGO_PLATEAU",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
@@ -16,12 +16,7 @@
     {
       "direction": "down",
       "offset": 0,
-      "map": "MAP_ROUTE17"
-    },
-    {
-      "direction": "right",
-      "offset": -10,
-      "map": "MAP_CELADON_CITY"
+      "map": "MAP_ROUTE23"
     }
   ],
   "object_events": [

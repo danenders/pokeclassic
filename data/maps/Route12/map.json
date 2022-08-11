@@ -12,7 +12,23 @@
   "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "direction": "left",
+      "offset": 60,
+      "map": "MAP_ROUTE11"
+    },
+    {
+      "direction": "up",
+      "offset": 0,
+      "map": "MAP_LAVENDER_TOWN"
+    },
+    {
+      "direction": "down",
+      "offset": -48,
+      "map": "MAP_ROUTE13"
+    }
+  ],
   "object_events": [
 
   ],

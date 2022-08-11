@@ -17,6 +17,11 @@
       "direction": "down",
       "offset": 0,
       "map": "MAP_PALLET_TOWN"
+    },
+    {
+      "direction": "up",
+      "offset": -12,
+      "map": "MAP_VIRIDIAN_CITY"
     }
   ],
   "object_events": [
