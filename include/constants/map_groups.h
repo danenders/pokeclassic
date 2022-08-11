@@ -88,6 +88,11 @@
 #define MAP_ROUTE13             (79 | (0 << 8))
 #define MAP_ROUTE14             (80 | (0 << 8))
 #define MAP_ROUTE15             (81 | (0 << 8))
+#define MAP_ROUTE16             (82 | (0 << 8))
+#define MAP_ROUTE17             (83 | (0 << 8))
+#define MAP_ROUTE18             (84 | (0 << 8))
+#define MAP_ROUTE19             (85 | (0 << 8))
+#define MAP_ROUTE20             (86 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))
