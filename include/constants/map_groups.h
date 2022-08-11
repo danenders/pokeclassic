@@ -629,6 +629,10 @@
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (33 << 8))
 
 // gMapGroup_IndoorPallet
+#define MAP_PALLET_TOWN_PLAYERS_HOUSE_1F   (0 | (34 << 8))
+#define MAP_PALLET_TOWN_PLAYERS_HOUSE_2F   (1 | (34 << 8))
+#define MAP_PALLET_TOWN_RIVALS_HOUSE       (2 | (34 << 8))
+#define MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB (3 | (34 << 8))
 
 // gMapGroup_IndoorViridian
 

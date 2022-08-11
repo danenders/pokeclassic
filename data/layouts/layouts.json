@@ -5736,6 +5736,54 @@
       "secondary_tileset": "gTileset_IndigoPlateau",
       "border_filepath": "data/layouts/IndigoPlateau_Exterior/border.bin",
       "blockdata_filepath": "data/layouts/IndigoPlateau_Exterior/map.bin"
+    },
+    {
+      "id": "LAYOUT_PALLET_TOWN_PLAYERS_HOUSE_1F",
+      "name": "PalletTown_PlayersHouse_1F_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/PalletTown_PlayersHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/PalletTown_PlayersHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_PALLET_TOWN_PLAYERS_HOUSE_2F",
+      "name": "PalletTown_PlayersHouse_2F_Layout",
+      "width": 12,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/PalletTown_PlayersHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/PalletTown_PlayersHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_PALLET_TOWN_RIVALS_HOUSE",
+      "name": "PalletTown_RivalsHouse_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/PalletTown_RivalsHouse/border.bin",
+      "blockdata_filepath": "data/layouts/PalletTown_RivalsHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_PALLET_TOWN_PROFESSOR_OAKS_LAB",
+      "name": "PalletTown_ProfessorOaksLab_Layout",
+      "width": 13,
+      "height": 14,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/PalletTown_ProfessorOaksLab/border.bin",
+      "blockdata_filepath": "data/layouts/PalletTown_ProfessorOaksLab/map.bin"
     }
   ]
 }

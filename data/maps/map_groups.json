@@ -687,7 +687,10 @@
     "Route124_DivingTreasureHuntersHouse"
   ],
   "gMapGroup_IndoorPallet": [
-
+    "PalletTown_PlayersHouse_1F",
+    "PalletTown_PlayersHouse_2F",
+    "PalletTown_RivalsHouse",
+    "PalletTown_ProfessorOaksLab"
   ],
   "gMapGroup_IndoorViridian": [
 

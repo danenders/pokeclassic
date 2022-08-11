@@ -1129,3 +1129,11 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route25/scripts.inc"
 
 	.include "data/maps/IndigoPlateau_Exterior/scripts.inc"
+
+	.include "data/maps/PalletTown_PlayersHouse_1F/scripts.inc"
+
+	.include "data/maps/PalletTown_PlayersHouse_2F/scripts.inc"
+
+	.include "data/maps/PalletTown_RivalsHouse/scripts.inc"
+
+	.include "data/maps/PalletTown_ProfessorOaksLab/scripts.inc"
