@@ -628,6 +628,60 @@
 // gMapGroup_IndoorRoute124
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (33 << 8))
 
-#define MAP_GROUPS_COUNT 34
+// gMapGroup_IndoorPallet
+
+// gMapGroup_IndoorViridian
+
+// gMapGroup_IndoorPewter
+
+// gMapGroup_IndoorCerulean
+
+// gMapGroup_IndoorLavender
+
+// gMapGroup_IndoorVermilion
+
+// gMapGroup_IndoorCeladon
+
+// gMapGroup_IndoorFuchsia
+
+// gMapGroup_IndoorCinnabar
+
+// gMapGroup_IndoorSaffron
+
+// gMapGroup_IndoorIndigoPlateau
+
+// gMapGroup_IndoorRoute2
+
+// gMapGroup_IndoorRoute4
+
+// gMapGroup_IndoorRoute5
+
+// gMapGroup_IndoorRoute6
+
+// gMapGroup_IndoorRoute7
+
+// gMapGroup_IndoorRoute8
+
+// gMapGroup_IndoorRoute10
+
+// gMapGroup_IndoorRoute11
+
+// gMapGroup_IndoorRoute12
+
+// gMapGroup_IndoorRoute15
+
+// gMapGroup_IndoorRoute16
+
+// gMapGroup_IndoorRoute18
+
+// gMapGroup_IndoorRoute19
+
+// gMapGroup_IndoorRoute22
+
+// gMapGroup_IndoorRoute23
+
+// gMapGroup_IndoorRoute25
+
+#define MAP_GROUPS_COUNT 61
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

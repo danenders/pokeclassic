@@ -34,7 +34,34 @@
     "gMapGroup_IndoorRoute113",
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
-    "gMapGroup_IndoorRoute124"
+    "gMapGroup_IndoorRoute124",
+    "gMapGroup_IndoorPallet",
+    "gMapGroup_IndoorViridian",
+    "gMapGroup_IndoorPewter",
+    "gMapGroup_IndoorCerulean",
+    "gMapGroup_IndoorLavender",
+    "gMapGroup_IndoorVermilion",
+    "gMapGroup_IndoorCeladon",
+    "gMapGroup_IndoorFuchsia",
+    "gMapGroup_IndoorCinnabar",
+    "gMapGroup_IndoorSaffron",
+    "gMapGroup_IndoorIndigoPlateau",
+    "gMapGroup_IndoorRoute2",
+    "gMapGroup_IndoorRoute4",
+    "gMapGroup_IndoorRoute5",
+    "gMapGroup_IndoorRoute6",
+    "gMapGroup_IndoorRoute7",
+    "gMapGroup_IndoorRoute8",
+    "gMapGroup_IndoorRoute10",
+    "gMapGroup_IndoorRoute11",
+    "gMapGroup_IndoorRoute12",
+    "gMapGroup_IndoorRoute15",
+    "gMapGroup_IndoorRoute16",
+    "gMapGroup_IndoorRoute18",
+    "gMapGroup_IndoorRoute19",
+    "gMapGroup_IndoorRoute22",
+    "gMapGroup_IndoorRoute23",
+    "gMapGroup_IndoorRoute25"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -658,5 +685,86 @@
   ],
   "gMapGroup_IndoorRoute124": [
     "Route124_DivingTreasureHuntersHouse"
+  ],
+  "gMapGroup_IndoorPallet": [
+
+  ],
+  "gMapGroup_IndoorViridian": [
+
+  ],
+  "gMapGroup_IndoorPewter": [
+
+  ],
+  "gMapGroup_IndoorCerulean": [
+
+  ],
+  "gMapGroup_IndoorLavender": [
+
+  ],
+  "gMapGroup_IndoorVermilion": [
+
+  ],
+  "gMapGroup_IndoorCeladon": [
+
+  ],
+  "gMapGroup_IndoorFuchsia": [
+
+  ],
+  "gMapGroup_IndoorCinnabar": [
+
+  ],
+  "gMapGroup_IndoorSaffron": [
+
+  ],
+  "gMapGroup_IndoorIndigoPlateau": [
+
+  ],
+  "gMapGroup_IndoorRoute2": [
+
+  ],
+  "gMapGroup_IndoorRoute4": [
+
+  ],
+  "gMapGroup_IndoorRoute5": [
+
+  ],
+  "gMapGroup_IndoorRoute6": [
+
+  ],
+  "gMapGroup_IndoorRoute7": [
+
+  ],
+  "gMapGroup_IndoorRoute8": [
+
+  ],
+  "gMapGroup_IndoorRoute10": [
+
+  ],
+  "gMapGroup_IndoorRoute11": [
+
+  ],
+  "gMapGroup_IndoorRoute12": [
+
+  ],
+  "gMapGroup_IndoorRoute15": [
+
+  ],
+  "gMapGroup_IndoorRoute16": [
+
+  ],
+  "gMapGroup_IndoorRoute18": [
+
+  ],
+  "gMapGroup_IndoorRoute19": [
+
+  ],
+  "gMapGroup_IndoorRoute22": [
+
+  ],
+  "gMapGroup_IndoorRoute23": [
+
+  ],
+  "gMapGroup_IndoorRoute25": [
+
   ]
 }

@@ -42,8 +42,8 @@
       "x": 33,
       "y": 30,
       "elevation": 0,
-      "dest_map": "MAP_PALLET_TOWN",
-      "dest_warp_id": 2
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": 1
     }
   ],
   "coord_events": [

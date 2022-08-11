@@ -17,6 +17,16 @@
       "direction": "down",
       "offset": 12,
       "map": "MAP_ROUTE1"
+    },
+    {
+      "direction": "left",
+      "offset": 10,
+      "map": "MAP_ROUTE22"
+    },
+    {
+      "direction": "up",
+      "offset": 12,
+      "map": "MAP_ROUTE2"
     }
   ],
   "object_events": [
@@ -34,15 +44,8 @@
       "x": 36,
       "y": 10,
       "elevation": 0,
-      "dest_map": "MAP_VIRIDIAN_CITY",
-      "dest_warp_id": 2
-    },
-    {
-      "x": 25,
-      "y": 18,
-      "elevation": 0,
-      "dest_map": "MAP_VIRIDIAN_CITY",
-      "dest_warp_id": 1
+      "dest_map": "MAP_SAFFRON_CITY",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [
