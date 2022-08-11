@@ -466,7 +466,10 @@ string generate_layout_headers_text(Json layouts_data) {
              << "\t.4byte " << border_label << "\n"
              << "\t.4byte " << blockdata_label << "\n"
              << "\t.4byte " << layout["primary_tileset"].string_value() << "\n"
-             << "\t.4byte " << layout["secondary_tileset"].string_value() << "\n\n";
+             << "\t.4byte " << layout["secondary_tileset"].string_value() << "\n"
+             << "\t.byte " << layout["border_width"].int_value() << "\n"
+             << "\t.byte " << layout["border_height"].int_value() << "\n"
+             << "\t.2byte 0\n\n";
     }
 
     return text.str();
