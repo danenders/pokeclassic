@@ -5532,6 +5532,66 @@
       "secondary_tileset": "gTileset_LavenderTown",
       "border_filepath": "data/layouts/Route10/border.bin",
       "blockdata_filepath": "data/layouts/Route10/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE11",
+      "name": "Route11_Layout",
+      "width": 72,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_VermilionCity",
+      "border_filepath": "data/layouts/Route11/border.bin",
+      "blockdata_filepath": "data/layouts/Route11/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE12",
+      "name": "Route12_Layout",
+      "width": 24,
+      "height": 120,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_LavenderTown",
+      "border_filepath": "data/layouts/Route12/border.bin",
+      "blockdata_filepath": "data/layouts/Route12/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE13",
+      "name": "Route13_Layout",
+      "width": 72,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_LavenderTown",
+      "border_filepath": "data/layouts/Route13/border.bin",
+      "blockdata_filepath": "data/layouts/Route13/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE14",
+      "name": "Route14_Layout",
+      "width": 24,
+      "height": 60,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_LavenderTown",
+      "border_filepath": "data/layouts/Route14/border.bin",
+      "blockdata_filepath": "data/layouts/Route14/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE15",
+      "name": "Route15_Layout",
+      "width": 72,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_FuchsiaCity",
+      "border_filepath": "data/layouts/Route15/border.bin",
+      "blockdata_filepath": "data/layouts/Route15/map.bin"
     }
   ]
 }
