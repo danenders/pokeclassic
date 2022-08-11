@@ -701,7 +701,14 @@
     "ViridianCity_PokemonCenter_2F"
   ],
   "gMapGroup_IndoorPewter": [
-
+    "PewterCity_Museum_1F",
+    "PewterCity_Museum_2F",
+    "PewterCity_Gym",
+    "PewterCity_Mart",
+    "PewterCity_PokemonCenter_1F",
+    "PewterCity_PokemonCenter_2F",
+    "PewterCity_House1",
+    "PewterCity_House2"
   ],
   "gMapGroup_IndoorCerulean": [
 

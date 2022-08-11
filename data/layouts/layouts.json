@@ -705,7 +705,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding",
+      "secondary_tileset": "gTileset_GenericBuilding2",
       "border_filepath": "data/layouts/House1/border.bin",
       "blockdata_filepath": "data/layouts/House1/map.bin"
     },
@@ -717,7 +717,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding",
+      "secondary_tileset": "gTileset_GenericBuilding2",
       "border_filepath": "data/layouts/House2/border.bin",
       "blockdata_filepath": "data/layouts/House2/map.bin"
     },
@@ -5856,6 +5856,102 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/ViridianCity_PokemonCenter_2F/border.bin",
       "blockdata_filepath": "data/layouts/ViridianCity_PokemonCenter_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_PEWTER_CITY_MUSEUM_1F",
+      "name": "PewterCity_Museum_1F_Layout",
+      "width": 28,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Museum",
+      "border_filepath": "data/layouts/PewterCity_Museum_1F/border.bin",
+      "blockdata_filepath": "data/layouts/PewterCity_Museum_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_PEWTER_CITY_MUSEUM_2F",
+      "name": "PewterCity_Museum_2F_Layout",
+      "width": 19,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Museum",
+      "border_filepath": "data/layouts/PewterCity_Museum_2F/border.bin",
+      "blockdata_filepath": "data/layouts/PewterCity_Museum_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_PEWTER_CITY_GYM",
+      "name": "PewterCity_Gym_Layout",
+      "width": 13,
+      "height": 16,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PewterGym",
+      "border_filepath": "data/layouts/PewterCity_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/PewterCity_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_PEWTER_CITY_MART",
+      "name": "PewterCity_Mart_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Mart",
+      "border_filepath": "data/layouts/PewterCity_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/PewterCity_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_PEWTER_CITY_POKEMON_CENTER_1F",
+      "name": "PewterCity_PokemonCenter_1F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/PewterCity_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/PewterCity_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_PEWTER_CITY_POKEMON_CENTER_2F",
+      "name": "PewterCity_PokemonCenter_2F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/PewterCity_PokemonCenter_2F/border.bin",
+      "blockdata_filepath": "data/layouts/PewterCity_PokemonCenter_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_PEWTER_CITY_HOUSE1",
+      "name": "PewterCity_House1_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/PewterCity_House1/border.bin",
+      "blockdata_filepath": "data/layouts/PewterCity_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_PEWTER_CITY_HOUSE2",
+      "name": "PewterCity_House2_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/PewterCity_House2/border.bin",
+      "blockdata_filepath": "data/layouts/PewterCity_House2/map.bin"
     }
   ]
 }

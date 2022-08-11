@@ -643,6 +643,14 @@
 #define MAP_VIRIDIAN_CITY_POKEMON_CENTER_2F (5 | (35 << 8))
 
 // gMapGroup_IndoorPewter
+#define MAP_PEWTER_CITY_MUSEUM_1F         (0 | (36 << 8))
+#define MAP_PEWTER_CITY_MUSEUM_2F         (1 | (36 << 8))
+#define MAP_PEWTER_CITY_GYM               (2 | (36 << 8))
+#define MAP_PEWTER_CITY_MART              (3 | (36 << 8))
+#define MAP_PEWTER_CITY_POKEMON_CENTER_1F (4 | (36 << 8))
+#define MAP_PEWTER_CITY_POKEMON_CENTER_2F (5 | (36 << 8))
+#define MAP_PEWTER_CITY_HOUSE1            (6 | (36 << 8))
+#define MAP_PEWTER_CITY_HOUSE2            (7 | (36 << 8))
 
 // gMapGroup_IndoorCerulean
 
