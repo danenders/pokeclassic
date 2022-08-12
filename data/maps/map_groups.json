@@ -837,10 +837,13 @@
     "Route12_FishingHouse"
   ],
   "gMapGroup_IndoorRoute15": [
-
+    "Route15_WestEntrance_1F",
+    "Route15_WestEntrance_2F"
   ],
   "gMapGroup_IndoorRoute16": [
-
+    "Route16_NorthEntrance_1F",
+    "Route16_NorthEntrance_2F",
+    "Route16_House"
   ],
   "gMapGroup_IndoorRoute18": [
 

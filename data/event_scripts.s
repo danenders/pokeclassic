@@ -1349,3 +1349,13 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route12_NorthEntrance_2F/scripts.inc"
 
 	.include "data/maps/Route12_FishingHouse/scripts.inc"
+
+	.include "data/maps/Route15_WestEntrance_1F/scripts.inc"
+
+	.include "data/maps/Route15_WestEntrance_2F/scripts.inc"
+
+	.include "data/maps/Route16_NorthEntrance_1F/scripts.inc"
+
+	.include "data/maps/Route16_NorthEntrance_2F/scripts.inc"
+
+	.include "data/maps/Route16_House/scripts.inc"

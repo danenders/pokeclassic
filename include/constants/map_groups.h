@@ -779,8 +779,13 @@
 #define MAP_ROUTE12_FISHING_HOUSE     (2 | (53 << 8))
 
 // gMapGroup_IndoorRoute15
+#define MAP_ROUTE15_WEST_ENTRANCE_1F (0 | (54 << 8))
+#define MAP_ROUTE15_WEST_ENTRANCE_2F (1 | (54 << 8))
 
 // gMapGroup_IndoorRoute16
+#define MAP_ROUTE16_NORTH_ENTRANCE_1F (0 | (55 << 8))
+#define MAP_ROUTE16_NORTH_ENTRANCE_2F (1 | (55 << 8))
+#define MAP_ROUTE16_HOUSE             (2 | (55 << 8))
 
 // gMapGroup_IndoorRoute18
 
