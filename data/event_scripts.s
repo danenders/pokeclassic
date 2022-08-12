@@ -1289,3 +1289,7 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/CinnabarIsland_Lab_ResearchRoom/scripts.inc"
 
 	.include "data/maps/CinnabarIsland_Lab_ExperimentRoom/scripts.inc"
+
+	.include "data/maps/IndigoPlateau_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/IndigoPlateau_PokemonCenter_2F/scripts.inc"

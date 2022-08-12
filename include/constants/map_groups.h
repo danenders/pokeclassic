@@ -729,6 +729,8 @@
 // gMapGroup_IndoorSaffron
 
 // gMapGroup_IndoorIndigoPlateau
+#define MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F (0 | (44 << 8))
+#define MAP_INDIGO_PLATEAU_POKEMON_CENTER_2F (1 | (44 << 8))
 
 // gMapGroup_IndoorRoute2
 
