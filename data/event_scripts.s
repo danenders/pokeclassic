@@ -1369,3 +1369,9 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route25_SeaCottage/scripts.inc"
 
 	.include "data/maps/ViridianForest/scripts.inc"
+
+	.include "data/maps/MtMoon_1F/scripts.inc"
+
+	.include "data/maps/MtMoon_B1F/scripts.inc"
+
+	.include "data/maps/MtMoon_B2F/scripts.inc"

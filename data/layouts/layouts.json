@@ -7224,6 +7224,42 @@
       "secondary_tileset": "gTileset_ViridianForest",
       "border_filepath": "data/layouts/ViridianForest/border.bin",
       "blockdata_filepath": "data/layouts/ViridianForest/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_MOON_1F",
+      "name": "MtMoon_1F_Layout",
+      "width": 48,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtMoon_1F/border.bin",
+      "blockdata_filepath": "data/layouts/MtMoon_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_MOON_B1F",
+      "name": "MtMoon_B1F_Layout",
+      "width": 49,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtMoon_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/MtMoon_B1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_MOON_B2F",
+      "name": "MtMoon_B2F_Layout",
+      "width": 48,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtMoon_B2F/border.bin",
+      "blockdata_filepath": "data/layouts/MtMoon_B2F/map.bin"
     }
   ]
 }

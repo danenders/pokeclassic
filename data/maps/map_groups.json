@@ -493,7 +493,10 @@
     "TerraCave_End",
     "AlteringCave",
     "MeteorFalls_StevensCave",
-    "ViridianForest"
+    "ViridianForest",
+    "MtMoon_1F",
+    "MtMoon_B1F",
+    "MtMoon_B2F"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
