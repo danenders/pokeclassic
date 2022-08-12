@@ -673,6 +673,14 @@
 #define MAP_LAVENDER_TOWN_HOUSE2                  (5 | (38 << 8))
 
 // gMapGroup_IndoorVermilion
+#define MAP_VERMILION_CITY_HOUSE1            (0 | (39 << 8))
+#define MAP_VERMILION_CITY_HOUSE2            (1 | (39 << 8))
+#define MAP_VERMILION_CITY_HOUSE3            (2 | (39 << 8))
+#define MAP_VERMILION_CITY_POKEMON_CENTER_1F (3 | (39 << 8))
+#define MAP_VERMILION_CITY_POKEMON_CENTER_2F (4 | (39 << 8))
+#define MAP_VERMILION_CITY_MART              (5 | (39 << 8))
+#define MAP_VERMILION_CITY_GYM               (6 | (39 << 8))
+#define MAP_VERMILION_CITY_POKEMON_FAN_CLUB  (7 | (39 << 8))
 
 // gMapGroup_IndoorCeladon
 

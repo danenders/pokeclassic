@@ -6156,6 +6156,102 @@
       "secondary_tileset": "gTileset_GenericBuilding1",
       "border_filepath": "data/layouts/LavenderTown_House2/border.bin",
       "blockdata_filepath": "data/layouts/LavenderTown_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILION_CITY_HOUSE1",
+      "name": "VermilionCity_House1_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/VermilionCity_House1/border.bin",
+      "blockdata_filepath": "data/layouts/VermilionCity_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILION_CITY_HOUSE2",
+      "name": "VermilionCity_House2_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/VermilionCity_House2/border.bin",
+      "blockdata_filepath": "data/layouts/VermilionCity_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILION_CITY_HOUSE3",
+      "name": "VermilionCity_House3_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/VermilionCity_House3/border.bin",
+      "blockdata_filepath": "data/layouts/VermilionCity_House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILION_CITY_POKEMON_CENTER_1F",
+      "name": "VermilionCity_PokemonCenter_1F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/VermilionCity_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/VermilionCity_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILION_CITY_POKEMON_CENTER_2F",
+      "name": "VermilionCity_PokemonCenter_2F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/VermilionCity_PokemonCenter_2F/border.bin",
+      "blockdata_filepath": "data/layouts/VermilionCity_PokemonCenter_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILION_CITY_MART",
+      "name": "VermilionCity_Mart_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/VermilionCity_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/VermilionCity_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILION_CITY_GYM",
+      "name": "VermilionCity_Gym_Layout",
+      "width": 11,
+      "height": 21,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_VermilionGym",
+      "border_filepath": "data/layouts/VermilionCity_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/VermilionCity_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILION_CITY_POKEMON_FAN_CLUB",
+      "name": "VermilionCity_PokemonFanClub_Layout",
+      "width": 12,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_FanClubDaycare",
+      "border_filepath": "data/layouts/VermilionCity_PokemonFanClub/border.bin",
+      "blockdata_filepath": "data/layouts/VermilionCity_PokemonFanClub/map.bin"
     }
   ]
 }

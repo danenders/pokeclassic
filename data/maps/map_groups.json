@@ -731,7 +731,14 @@
     "LavenderTown_House2"
   ],
   "gMapGroup_IndoorVermilion": [
-
+    "VermilionCity_House1",
+    "VermilionCity_House2",
+    "VermilionCity_House3",
+    "VermilionCity_PokemonCenter_1F",
+    "VermilionCity_PokemonCenter_2F",
+    "VermilionCity_Mart",
+    "VermilionCity_Gym",
+    "VermilionCity_PokemonFanClub"
   ],
   "gMapGroup_IndoorCeladon": [
 
