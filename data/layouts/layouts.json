@@ -736,12 +736,12 @@
     {
       "id": "LAYOUT_HOUSE4",
       "name": "House4_Layout",
-      "width": 10,
+      "width": 11,
       "height": 9,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding",
+      "secondary_tileset": "gTileset_GenericBuilding2",
       "border_filepath": "data/layouts/House4/border.bin",
       "blockdata_filepath": "data/layouts/House4/map.bin"
     },
@@ -7092,6 +7092,42 @@
       "secondary_tileset": "gTileset_GenericBuilding2",
       "border_filepath": "data/layouts/Entrance_2F/border.bin",
       "blockdata_filepath": "data/layouts/Entrance_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE12_NORTH_ENTRANCE_1F",
+      "name": "Route12_NorthEntrance_1F_Layout",
+      "width": 11,
+      "height": 13,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/Route12_NorthEntrance_1F/border.bin",
+      "blockdata_filepath": "data/layouts/Route12_NorthEntrance_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE12_NORTH_ENTRANCE_2F",
+      "name": "Route12_NorthEntrance_2F_Layout",
+      "width": 13,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/Route12_NorthEntrance_2F/border.bin",
+      "blockdata_filepath": "data/layouts/Route12_NorthEntrance_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE12_FISHING_HOUSE",
+      "name": "Route12_FishingHouse_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/Route12_FishingHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Route12_FishingHouse/map.bin"
     }
   ]
 }
