@@ -807,10 +807,12 @@
     "Route2_EastBuilding"
   ],
   "gMapGroup_IndoorRoute4": [
-
+    "Route4_PokemonCenter_1F",
+    "Route4_PokemonCenter_2F"
   ],
   "gMapGroup_IndoorRoute5": [
-
+    "Route5_PokemonDayCare",
+    "Route5_SouthEntrance"
   ],
   "gMapGroup_IndoorRoute6": [
 

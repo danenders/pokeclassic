@@ -749,8 +749,12 @@
 #define MAP_ROUTE2_EAST_BUILDING           (3 | (45 << 8))
 
 // gMapGroup_IndoorRoute4
+#define MAP_ROUTE4_POKEMON_CENTER_1F (0 | (46 << 8))
+#define MAP_ROUTE4_POKEMON_CENTER_2F (1 | (46 << 8))
 
 // gMapGroup_IndoorRoute5
+#define MAP_ROUTE5_POKEMON_DAY_CARE (0 | (47 << 8))
+#define MAP_ROUTE5_SOUTH_ENTRANCE   (1 | (47 << 8))
 
 // gMapGroup_IndoorRoute6
 

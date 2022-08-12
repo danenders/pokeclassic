@@ -4725,7 +4725,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_UnionRoom",
+      "secondary_tileset": "gTileset_HallOfFame",
       "border_filepath": "data/layouts/UnionRoom/border.bin",
       "blockdata_filepath": "data/layouts/UnionRoom/map.bin"
     },
@@ -5424,6 +5424,30 @@
       "secondary_tileset": "gTileset_SaffronCity",
       "border_filepath": "data/layouts/SaffronCity/border.bin",
       "blockdata_filepath": "data/layouts/SaffronCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFFRON_CITY_NORTH_SOUTH_ENTRANCE",
+      "name": "SaffronCity_NorthSouthEntrance_Layout",
+      "width": 9,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/SaffronCity_NorthSouthEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/SaffronCity_NorthSouthEntrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFFRON_CITY_EAST_WEST_ENTRANCE",
+      "name": "SaffronCity_EastWestEntrance_Layout",
+      "width": 13,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/SaffronCity_EastWestEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/SaffronCity_EastWestEntrance/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE1",
@@ -6912,6 +6936,54 @@
       "secondary_tileset": "gTileset_GenericBuilding2",
       "border_filepath": "data/layouts/Route2_EastBuilding/border.bin",
       "blockdata_filepath": "data/layouts/Route2_EastBuilding/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4_POKEMON_CENTER_1F",
+      "name": "Route4_PokemonCenter_1F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Route4_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/Route4_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4_POKEMON_CENTER_2F",
+      "name": "Route4_PokemonCenter_2F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Route4_PokemonCenter_2F/border.bin",
+      "blockdata_filepath": "data/layouts/Route4_PokemonCenter_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE5_POKEMON_DAY_CARE",
+      "name": "Route5_PokemonDayCare_Layout",
+      "width": 12,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_FanClubDaycare",
+      "border_filepath": "data/layouts/Route5_PokemonDayCare/border.bin",
+      "blockdata_filepath": "data/layouts/Route5_PokemonDayCare/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE5_SOUTH_ENTRANCE",
+      "name": "Route5_SouthEntrance_Layout",
+      "width": 9,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/Route5_SouthEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/Route5_SouthEntrance/map.bin"
     }
   ]
 }
