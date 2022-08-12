@@ -743,6 +743,10 @@
 #define MAP_INDIGO_PLATEAU_POKEMON_CENTER_2F (1 | (44 << 8))
 
 // gMapGroup_IndoorRoute2
+#define MAP_VIRIDIAN_FOREST_NORTH_ENTRANCE (0 | (45 << 8))
+#define MAP_VIRIDIAN_FOREST_SOUTH_ENTRANCE (1 | (45 << 8))
+#define MAP_ROUTE2_HOUSE                   (2 | (45 << 8))
+#define MAP_ROUTE2_EAST_BUILDING           (3 | (45 << 8))
 
 // gMapGroup_IndoorRoute4
 

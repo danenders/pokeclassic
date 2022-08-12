@@ -5450,6 +5450,18 @@
       "blockdata_filepath": "data/layouts/Route2/map.bin"
     },
     {
+      "id": "LAYOUT_ROUTE2_ENTRANCE",
+      "name": "Route2_Entrance_Layout",
+      "width": 15,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/Route2_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/Route2_Entrance/map.bin"
+    },
+    {
       "id": "LAYOUT_ROUTE3",
       "name": "Route3_Layout",
       "width": 84,
@@ -6852,6 +6864,54 @@
       "secondary_tileset": "gTileset_GenericBuilding1",
       "border_filepath": "data/layouts/SaffronCity_House/border.bin",
       "blockdata_filepath": "data/layouts/SaffronCity_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_VIRIDIAN_FOREST_NORTH_ENTRANCE",
+      "name": "ViridianForest_NorthEntrance_Layout",
+      "width": 15,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/ViridianForest_NorthEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/ViridianForest_NorthEntrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_VIRIDIAN_FOREST_SOUTH_ENTRANCE",
+      "name": "ViridianForest_SouthEntrance_Layout",
+      "width": 15,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/ViridianForest_SouthEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/ViridianForest_SouthEntrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE2_HOUSE",
+      "name": "Route2_House_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/Route2_House/border.bin",
+      "blockdata_filepath": "data/layouts/Route2_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE2_EAST_BUILDING",
+      "name": "Route2_EastBuilding_Layout",
+      "width": 15,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/Route2_EastBuilding/border.bin",
+      "blockdata_filepath": "data/layouts/Route2_EastBuilding/map.bin"
     }
   ]
 }

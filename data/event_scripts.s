@@ -1313,3 +1313,11 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/SaffronCity_CopycatsHouse_2F/scripts.inc"
 
 	.include "data/maps/SaffronCity_House/scripts.inc"
+
+	.include "data/maps/ViridianForest_NorthEntrance/scripts.inc"
+
+	.include "data/maps/ViridianForest_SouthEntrance/scripts.inc"
+
+	.include "data/maps/Route2_House/scripts.inc"
+
+	.include "data/maps/Route2_EastBuilding/scripts.inc"

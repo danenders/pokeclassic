@@ -801,7 +801,10 @@
     "IndigoPlateau_PokemonCenter_2F"
   ],
   "gMapGroup_IndoorRoute2": [
-
+    "ViridianForest_NorthEntrance",
+    "ViridianForest_SouthEntrance",
+    "Route2_House",
+    "Route2_EastBuilding"
   ],
   "gMapGroup_IndoorRoute4": [
 
