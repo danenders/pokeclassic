@@ -717,6 +717,14 @@
 #define MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE (9 | (41 << 8))
 
 // gMapGroup_IndoorCinnabar
+#define MAP_CINNABAR_ISLAND_POKEMON_CENTER_1F   (0 | (42 << 8))
+#define MAP_CINNABAR_ISLAND_POKEMON_CENTER_2F   (1 | (42 << 8))
+#define MAP_CINNABAR_ISLAND_MART                (2 | (42 << 8))
+#define MAP_CINNABAR_ISLAND_GYM                 (3 | (42 << 8))
+#define MAP_CINNABAR_ISLAND_LAB_ENTRANCE        (4 | (42 << 8))
+#define MAP_CINNABAR_ISLAND_LAB_LOUNGE          (5 | (42 << 8))
+#define MAP_CINNABAR_ISLAND_LAB_RESEARCH_ROOM   (6 | (42 << 8))
+#define MAP_CINNABAR_ISLAND_LAB_EXPERIMENT_ROOM (7 | (42 << 8))
 
 // gMapGroup_IndoorSaffron
 

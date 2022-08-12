@@ -6612,6 +6612,102 @@
       "secondary_tileset": "gTileset_SafariZoneBuilding",
       "border_filepath": "data/layouts/FuchsiaCity_SafariZone_Entrance/border.bin",
       "blockdata_filepath": "data/layouts/FuchsiaCity_SafariZone_Entrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_POKEMON_CENTER_1F",
+      "name": "CinnabarIsland_PokemonCenter_1F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/CinnabarIsland_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIsland_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_POKEMON_CENTER_2F",
+      "name": "CinnabarIsland_PokemonCenter_2F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/CinnabarIsland_PokemonCenter_2F/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIsland_PokemonCenter_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_MART",
+      "name": "CinnabarIsland_Mart_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Mart",
+      "border_filepath": "data/layouts/CinnabarIsland_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIsland_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_GYM",
+      "name": "CinnabarIsland_Gym_Layout",
+      "width": 30,
+      "height": 25,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_CinnabarGym",
+      "border_filepath": "data/layouts/CinnabarIsland_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIsland_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_LAB_ENTRANCE",
+      "name": "CinnabarIsland_Lab_Entrance_Layout",
+      "width": 28,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/CinnabarIsland_Lab_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIsland_Lab_Entrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_LAB_LOUNGE",
+      "name": "CinnabarIsland_Lab_Lounge_Layout",
+      "width": 15,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/CinnabarIsland_Lab_Lounge/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIsland_Lab_Lounge/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_LAB_RESEARCH_ROOM",
+      "name": "CinnabarIsland_Lab_ResearchRoom_Layout",
+      "width": 15,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/CinnabarIsland_Lab_ResearchRoom/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIsland_Lab_ResearchRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_LAB_EXPERIMENT_ROOM",
+      "name": "CinnabarIsland_Lab_ExperimentRoom_Layout",
+      "width": 15,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/CinnabarIsland_Lab_ExperimentRoom/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIsland_Lab_ExperimentRoom/map.bin"
     }
   ]
 }

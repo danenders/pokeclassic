@@ -775,7 +775,14 @@
     "FuchsiaCity_SafariZone_Entrance"
   ],
   "gMapGroup_IndoorCinnabar": [
-
+    "CinnabarIsland_PokemonCenter_1F",
+    "CinnabarIsland_PokemonCenter_2F",
+    "CinnabarIsland_Mart",
+    "CinnabarIsland_Gym",
+    "CinnabarIsland_Lab_Entrance",
+    "CinnabarIsland_Lab_Lounge",
+    "CinnabarIsland_Lab_ResearchRoom",
+    "CinnabarIsland_Lab_ExperimentRoom"
   ],
   "gMapGroup_IndoorSaffron": [
 
