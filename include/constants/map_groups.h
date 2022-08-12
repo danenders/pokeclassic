@@ -757,10 +757,13 @@
 #define MAP_ROUTE5_SOUTH_ENTRANCE   (1 | (47 << 8))
 
 // gMapGroup_IndoorRoute6
+#define MAP_ROUTE6_NORTH_ENTRANCE (0 | (48 << 8))
 
 // gMapGroup_IndoorRoute7
+#define MAP_ROUTE7_EAST_ENTRANCE (0 | (49 << 8))
 
 // gMapGroup_IndoorRoute8
+#define MAP_ROUTE8_WEST_ENTRANCE (0 | (50 << 8))
 
 // gMapGroup_IndoorRoute10
 
