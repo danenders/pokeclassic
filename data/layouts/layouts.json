@@ -6732,6 +6732,126 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/IndigoPlateau_PokemonCenter_2F/border.bin",
       "blockdata_filepath": "data/layouts/IndigoPlateau_PokemonCenter_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFFRON_CITY_POKEMON_CENTER_1F",
+      "name": "SaffronCity_PokemonCenter_1F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/SaffronCity_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SaffronCity_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFFRON_CITY_POKEMON_CENTER_2F",
+      "name": "SaffronCity_PokemonCenter_2F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/SaffronCity_PokemonCenter_2F/border.bin",
+      "blockdata_filepath": "data/layouts/SaffronCity_PokemonCenter_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFFRON_CITY_MART",
+      "name": "SaffronCity_Mart_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Mart",
+      "border_filepath": "data/layouts/SaffronCity_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/SaffronCity_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFFRON_CITY_GYM",
+      "name": "SaffronCity_Gym_Layout",
+      "width": 29,
+      "height": 25,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SaffronGym",
+      "border_filepath": "data/layouts/SaffronCity_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/SaffronCity_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFFRON_CITY_DOJO",
+      "name": "SaffronCity_Dojo_Layout",
+      "width": 13,
+      "height": 16,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PewterGym",
+      "border_filepath": "data/layouts/SaffronCity_Dojo/border.bin",
+      "blockdata_filepath": "data/layouts/SaffronCity_Dojo/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFFRON_CITY_MR_PSYCHICS_HOUSE",
+      "name": "SaffronCity_MrPsychicsHouse_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/SaffronCity_MrPsychicsHouse/border.bin",
+      "blockdata_filepath": "data/layouts/SaffronCity_MrPsychicsHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFFRON_CITY_POKEMON_TRAINER_FAN_CLUB",
+      "name": "SaffronCity_PokemonTrainerFanClub_Layout",
+      "width": 11,
+      "height": 17,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_FanClubDaycare",
+      "border_filepath": "data/layouts/SaffronCity_PokemonTrainerFanClub/border.bin",
+      "blockdata_filepath": "data/layouts/SaffronCity_PokemonTrainerFanClub/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFFRON_CITY_COPYCATS_HOUSE_1F",
+      "name": "SaffronCity_CopycatsHouse_1F_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/SaffronCity_CopycatsHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SaffronCity_CopycatsHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFFRON_CITY_COPYCATS_HOUSE_2F",
+      "name": "SaffronCity_CopycatsHouse_2F_Layout",
+      "width": 12,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/SaffronCity_CopycatsHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/SaffronCity_CopycatsHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFFRON_CITY_HOUSE",
+      "name": "SaffronCity_House_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/SaffronCity_House/border.bin",
+      "blockdata_filepath": "data/layouts/SaffronCity_House/map.bin"
     }
   ]
 }

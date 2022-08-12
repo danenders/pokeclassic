@@ -785,7 +785,16 @@
     "CinnabarIsland_Lab_ExperimentRoom"
   ],
   "gMapGroup_IndoorSaffron": [
-
+    "SaffronCity_PokemonCenter_1F",
+    "SaffronCity_PokemonCenter_2F",
+    "SaffronCity_Mart",
+    "SaffronCity_Gym",
+    "SaffronCity_Dojo",
+    "SaffronCity_MrPsychicsHouse",
+    "SaffronCity_PokemonTrainerFanClub",
+    "SaffronCity_CopycatsHouse_1F",
+    "SaffronCity_CopycatsHouse_2F",
+    "SaffronCity_House"
   ],
   "gMapGroup_IndoorIndigoPlateau": [
     "IndigoPlateau_PokemonCenter_1F",

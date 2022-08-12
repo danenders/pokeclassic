@@ -727,6 +727,16 @@
 #define MAP_CINNABAR_ISLAND_LAB_EXPERIMENT_ROOM (7 | (42 << 8))
 
 // gMapGroup_IndoorSaffron
+#define MAP_SAFFRON_CITY_POKEMON_CENTER_1F        (0 | (43 << 8))
+#define MAP_SAFFRON_CITY_POKEMON_CENTER_2F        (1 | (43 << 8))
+#define MAP_SAFFRON_CITY_MART                     (2 | (43 << 8))
+#define MAP_SAFFRON_CITY_GYM                      (3 | (43 << 8))
+#define MAP_SAFFRON_CITY_DOJO                     (4 | (43 << 8))
+#define MAP_SAFFRON_CITY_MR_PSYCHICS_HOUSE        (5 | (43 << 8))
+#define MAP_SAFFRON_CITY_POKEMON_TRAINER_FAN_CLUB (6 | (43 << 8))
+#define MAP_SAFFRON_CITY_COPYCATS_HOUSE_1F        (7 | (43 << 8))
+#define MAP_SAFFRON_CITY_COPYCATS_HOUSE_2F        (8 | (43 << 8))
+#define MAP_SAFFRON_CITY_HOUSE                    (9 | (43 << 8))
 
 // gMapGroup_IndoorIndigoPlateau
 #define MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F (0 | (44 << 8))

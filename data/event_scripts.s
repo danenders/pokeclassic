@@ -1293,3 +1293,23 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/IndigoPlateau_PokemonCenter_1F/scripts.inc"
 
 	.include "data/maps/IndigoPlateau_PokemonCenter_2F/scripts.inc"
+
+	.include "data/maps/SaffronCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/SaffronCity_PokemonCenter_2F/scripts.inc"
+
+	.include "data/maps/SaffronCity_Mart/scripts.inc"
+
+	.include "data/maps/SaffronCity_Gym/scripts.inc"
+
+	.include "data/maps/SaffronCity_Dojo/scripts.inc"
+
+	.include "data/maps/SaffronCity_MrPsychicsHouse/scripts.inc"
+
+	.include "data/maps/SaffronCity_PokemonTrainerFanClub/scripts.inc"
+
+	.include "data/maps/SaffronCity_CopycatsHouse_1F/scripts.inc"
+
+	.include "data/maps/SaffronCity_CopycatsHouse_2F/scripts.inc"
+
+	.include "data/maps/SaffronCity_House/scripts.inc"
