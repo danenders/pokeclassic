@@ -665,6 +665,12 @@
 #define MAP_CERULEAN_CITY_POKEMON_CENTER_2F (9 | (37 << 8))
 
 // gMapGroup_IndoorLavender
+#define MAP_LAVENDER_TOWN_POKEMON_CENTER_1F       (0 | (38 << 8))
+#define MAP_LAVENDER_TOWN_POKEMON_CENTER_2F       (1 | (38 << 8))
+#define MAP_LAVENDER_TOWN_MART                    (2 | (38 << 8))
+#define MAP_LAVENDER_TOWN_VOLUNTEER_POKEMON_HOUSE (3 | (38 << 8))
+#define MAP_LAVENDER_TOWN_HOUSE1                  (4 | (38 << 8))
+#define MAP_LAVENDER_TOWN_HOUSE2                  (5 | (38 << 8))
 
 // gMapGroup_IndoorVermilion
 

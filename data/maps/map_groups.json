@@ -723,7 +723,12 @@
     "CeruleanCity_PokemonCenter_2F"
   ],
   "gMapGroup_IndoorLavender": [
-
+    "LavenderTown_PokemonCenter_1F",
+    "LavenderTown_PokemonCenter_2F",
+    "LavenderTown_Mart",
+    "LavenderTown_VolunteerPokemonHouse",
+    "LavenderTown_House1",
+    "LavenderTown_House2"
   ],
   "gMapGroup_IndoorVermilion": [
 
