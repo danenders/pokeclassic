@@ -1,2 +1,2 @@
-Route11_EastEntrance1F_MapScripts::
+Route11_EastEntrance_1F_MapScripts::
 	.byte 0

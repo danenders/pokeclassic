@@ -788,15 +788,15 @@
 #define MAP_ROUTE16_HOUSE             (2 | (55 << 8))
 
 // gMapGroup_IndoorRoute18
-
-// gMapGroup_IndoorRoute19
+#define MAP_ROUTE18_EAST_ENTRANCE_1F (0 | (56 << 8))
+#define MAP_ROUTE18_EAST_ENTRANCE_2F (1 | (56 << 8))
 
 // gMapGroup_IndoorRoute22
-
-// gMapGroup_IndoorRoute23
+#define MAP_ROUTE22_NORTH_ENTRANCE (0 | (57 << 8))
 
 // gMapGroup_IndoorRoute25
+#define MAP_ROUTE25_SEA_COTTAGE (0 | (58 << 8))
 
-#define MAP_GROUPS_COUNT 61
+#define MAP_GROUPS_COUNT 59
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

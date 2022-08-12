@@ -7046,30 +7046,6 @@
       "blockdata_filepath": "data/layouts/Route10_PokemonCenter_2F/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE11_EAST_ENTRANCE1F",
-      "name": "Route11_EastEntrance1F_Layout",
-      "width": 13,
-      "height": 12,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding2",
-      "border_filepath": "data/layouts/Route11_EastEntrance1F/border.bin",
-      "blockdata_filepath": "data/layouts/Route11_EastEntrance1F/map.bin"
-    },
-    {
-      "id": "LAYOUT_ROUTE11_EAST_ENTRANCE_2F",
-      "name": "Route11_EastEntrance_2F_Layout",
-      "width": 13,
-      "height": 11,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding2",
-      "border_filepath": "data/layouts/Route11_EastEntrance_2F/border.bin",
-      "blockdata_filepath": "data/layouts/Route11_EastEntrance_2F/map.bin"
-    },
-    {
       "id": "LAYOUT_ENTRANCE_1F",
       "name": "Entrance_1F_Layout",
       "width": 13,
@@ -7188,6 +7164,54 @@
       "secondary_tileset": "gTileset_GenericBuilding1",
       "border_filepath": "data/layouts/Route16_House/border.bin",
       "blockdata_filepath": "data/layouts/Route16_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE18_EAST_ENTRANCE_1F",
+      "name": "Route18_EastEntrance_1F_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/Route18_EastEntrance_1F/border.bin",
+      "blockdata_filepath": "data/layouts/Route18_EastEntrance_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE18_EAST_ENTRANCE_2F",
+      "name": "Route18_EastEntrance_2F_Layout",
+      "width": 13,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/Route18_EastEntrance_2F/border.bin",
+      "blockdata_filepath": "data/layouts/Route18_EastEntrance_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE22_NORTH_ENTRANCE",
+      "name": "Route22_NorthEntrance_Layout",
+      "width": 15,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/Route22_NorthEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/Route22_NorthEntrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE25_SEA_COTTAGE",
+      "name": "Route25_SeaCottage_Layout",
+      "width": 15,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SeaCottage",
+      "border_filepath": "data/layouts/Route25_SeaCottage/border.bin",
+      "blockdata_filepath": "data/layouts/Route25_SeaCottage/map.bin"
     }
   ]
 }

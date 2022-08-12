@@ -58,9 +58,7 @@
     "gMapGroup_IndoorRoute15",
     "gMapGroup_IndoorRoute16",
     "gMapGroup_IndoorRoute18",
-    "gMapGroup_IndoorRoute19",
     "gMapGroup_IndoorRoute22",
-    "gMapGroup_IndoorRoute23",
     "gMapGroup_IndoorRoute25"
   ],
   "gMapGroup_TownsAndRoutes": [
@@ -846,18 +844,13 @@
     "Route16_House"
   ],
   "gMapGroup_IndoorRoute18": [
-
-  ],
-  "gMapGroup_IndoorRoute19": [
-
+    "Route18_EastEntrance_1F",
+    "Route18_EastEntrance_2F"
   ],
   "gMapGroup_IndoorRoute22": [
-
-  ],
-  "gMapGroup_IndoorRoute23": [
-
+    "Route22_NorthEntrance"
   ],
   "gMapGroup_IndoorRoute25": [
-
+    "Route25_SeaCottage"
   ]
 }
