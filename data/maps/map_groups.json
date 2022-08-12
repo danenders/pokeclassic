@@ -528,7 +528,10 @@
     "UndergroundPath_SouthEntrance",
     "UndergroundPath_WestEntrance",
     "UndergroundPath_EastWestTunnel",
-    "UndergroundPath_EastEntrance"
+    "UndergroundPath_EastEntrance",
+    "DiglettsCave_NorthEntrance",
+    "DiglettsCave_B1F",
+    "DiglettsCave_SouthEntrance"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

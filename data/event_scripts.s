@@ -1439,3 +1439,9 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/UndergroundPath_EastWestTunnel/scripts.inc"
 
 	.include "data/maps/UndergroundPath_EastEntrance/scripts.inc"
+
+	.include "data/maps/DiglettsCave_NorthEntrance/scripts.inc"
+
+	.include "data/maps/DiglettsCave_B1F/scripts.inc"
+
+	.include "data/maps/DiglettsCave_SouthEntrance/scripts.inc"

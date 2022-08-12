@@ -473,6 +473,9 @@
 #define MAP_UNDERGROUND_PATH_WEST_ENTRANCE           (141 | (24 << 8))
 #define MAP_UNDERGROUND_PATH_EAST_WEST_TUNNEL        (142 | (24 << 8))
 #define MAP_UNDERGROUND_PATH_EAST_ENTRANCE           (143 | (24 << 8))
+#define MAP_DIGLETTS_CAVE_NORTH_ENTRANCE             (144 | (24 << 8))
+#define MAP_DIGLETTS_CAVE_B1F                        (145 | (24 << 8))
+#define MAP_DIGLETTS_CAVE_SOUTH_ENTRANCE             (146 | (24 << 8))
 
 // gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))
