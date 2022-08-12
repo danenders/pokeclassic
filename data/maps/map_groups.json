@@ -522,7 +522,13 @@
     "SSAnne_B1F_Room2",
     "SSAnne_B1F_Room3",
     "SSAnne_B1F_Room4",
-    "SSAnne_B1F_Room5"
+    "SSAnne_B1F_Room5",
+    "UndergroundPath_NorthEntrance",
+    "UndergroundPath_NorthSouthTunnel",
+    "UndergroundPath_SouthEntrance",
+    "UndergroundPath_WestEntrance",
+    "UndergroundPath_EastWestTunnel",
+    "UndergroundPath_EastEntrance"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

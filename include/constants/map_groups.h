@@ -467,6 +467,12 @@
 #define MAP_SSANNE_B1F_ROOM3                         (135 | (24 << 8))
 #define MAP_SSANNE_B1F_ROOM4                         (136 | (24 << 8))
 #define MAP_SSANNE_B1F_ROOM5                         (137 | (24 << 8))
+#define MAP_UNDERGROUND_PATH_NORTH_ENTRANCE          (138 | (24 << 8))
+#define MAP_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL      (139 | (24 << 8))
+#define MAP_UNDERGROUND_PATH_SOUTH_ENTRANCE          (140 | (24 << 8))
+#define MAP_UNDERGROUND_PATH_WEST_ENTRANCE           (141 | (24 << 8))
+#define MAP_UNDERGROUND_PATH_EAST_WEST_TUNNEL        (142 | (24 << 8))
+#define MAP_UNDERGROUND_PATH_EAST_ENTRANCE           (143 | (24 << 8))
 
 // gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))

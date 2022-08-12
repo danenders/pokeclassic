@@ -1427,3 +1427,15 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/SSAnne_B1F_Room5/scripts.inc"
 
 	.include "data/maps/SSAnne_1F_Room6/scripts.inc"
+
+	.include "data/maps/UndergroundPath_NorthEntrance/scripts.inc"
+
+	.include "data/maps/UndergroundPath_NorthSouthTunnel/scripts.inc"
+
+	.include "data/maps/UndergroundPath_SouthEntrance/scripts.inc"
+
+	.include "data/maps/UndergroundPath_WestEntrance/scripts.inc"
+
+	.include "data/maps/UndergroundPath_EastWestTunnel/scripts.inc"
+
+	.include "data/maps/UndergroundPath_EastEntrance/scripts.inc"
