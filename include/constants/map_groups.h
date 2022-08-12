@@ -705,6 +705,16 @@
 #define MAP_CELADON_CITY_DEPARTMENT_STORE_ELEVATOR (19 | (40 << 8))
 
 // gMapGroup_IndoorFuchsia
+#define MAP_FUCHSIA_CITY_POKEMON_CENTER_1F    (0 | (41 << 8))
+#define MAP_FUCHSIA_CITY_POKEMON_CENTER_2F    (1 | (41 << 8))
+#define MAP_FUCHSIA_CITY_MART                 (2 | (41 << 8))
+#define MAP_FUCHSIA_CITY_GYM                  (3 | (41 << 8))
+#define MAP_FUCHSIA_CITY_HOUSE1               (4 | (41 << 8))
+#define MAP_FUCHSIA_CITY_HOUSE2               (5 | (41 << 8))
+#define MAP_FUCHSIA_CITY_HOUSE3               (6 | (41 << 8))
+#define MAP_FUCHSIA_CITY_WARDENS_HOUSE        (7 | (41 << 8))
+#define MAP_FUCHSIA_CITY_SAFARI_ZONE_OFFICE   (8 | (41 << 8))
+#define MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE (9 | (41 << 8))
 
 // gMapGroup_IndoorCinnabar
 

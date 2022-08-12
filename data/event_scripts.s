@@ -1253,3 +1253,23 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/CeladonCity_DepartmentStore_Roof/scripts.inc"
 
 	.include "data/maps/CeladonCity_DepartmentStore_Elevator/scripts.inc"
+
+	.include "data/maps/FuchsiaCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/FuchsiaCity_PokemonCenter_2F/scripts.inc"
+
+	.include "data/maps/FuchsiaCity_Mart/scripts.inc"
+
+	.include "data/maps/FuchsiaCity_Gym/scripts.inc"
+
+	.include "data/maps/FuchsiaCity_House1/scripts.inc"
+
+	.include "data/maps/FuchsiaCity_House2/scripts.inc"
+
+	.include "data/maps/FuchsiaCity_House3/scripts.inc"
+
+	.include "data/maps/FuchsiaCity_WardensHouse/scripts.inc"
+
+	.include "data/maps/FuchsiaCity_SafariZone_Office/scripts.inc"
+
+	.include "data/maps/FuchsiaCity_SafariZone_Entrance/scripts.inc"

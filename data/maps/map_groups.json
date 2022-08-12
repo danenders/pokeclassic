@@ -763,7 +763,16 @@
     "CeladonCity_DepartmentStore_Elevator"
   ],
   "gMapGroup_IndoorFuchsia": [
-
+    "FuchsiaCity_PokemonCenter_1F",
+    "FuchsiaCity_PokemonCenter_2F",
+    "FuchsiaCity_Mart",
+    "FuchsiaCity_Gym",
+    "FuchsiaCity_House1",
+    "FuchsiaCity_House2",
+    "FuchsiaCity_House3",
+    "FuchsiaCity_WardensHouse",
+    "FuchsiaCity_SafariZone_Office",
+    "FuchsiaCity_SafariZone_Entrance"
   ],
   "gMapGroup_IndoorCinnabar": [
 

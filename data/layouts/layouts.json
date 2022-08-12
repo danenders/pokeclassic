@@ -6492,6 +6492,126 @@
       "secondary_tileset": "gTileset_SilphCo",
       "border_filepath": "data/layouts/CeladonCity_DepartmentStore_Elevator/border.bin",
       "blockdata_filepath": "data/layouts/CeladonCity_DepartmentStore_Elevator/map.bin"
+    },
+    {
+      "id": "LAYOUT_FUCHSIA_CITY_POKEMON_CENTER_1F",
+      "name": "FuchsiaCity_PokemonCenter_1F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/FuchsiaCity_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/FuchsiaCity_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_FUCHSIA_CITY_POKEMON_CENTER_2F",
+      "name": "FuchsiaCity_PokemonCenter_2F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/FuchsiaCity_PokemonCenter_2F/border.bin",
+      "blockdata_filepath": "data/layouts/FuchsiaCity_PokemonCenter_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_FUCHSIA_CITY_MART",
+      "name": "FuchsiaCity_Mart_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Mart",
+      "border_filepath": "data/layouts/FuchsiaCity_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/FuchsiaCity_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_FUCHSIA_CITY_GYM",
+      "name": "FuchsiaCity_Gym_Layout",
+      "width": 15,
+      "height": 23,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_FuchsiaGym",
+      "border_filepath": "data/layouts/FuchsiaCity_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/FuchsiaCity_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_FUCHSIA_CITY_HOUSE1",
+      "name": "FuchsiaCity_House1_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/FuchsiaCity_House1/border.bin",
+      "blockdata_filepath": "data/layouts/FuchsiaCity_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_FUCHSIA_CITY_HOUSE2",
+      "name": "FuchsiaCity_House2_Layout",
+      "width": 10,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Museum",
+      "border_filepath": "data/layouts/FuchsiaCity_House2/border.bin",
+      "blockdata_filepath": "data/layouts/FuchsiaCity_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_FUCHSIA_CITY_HOUSE3",
+      "name": "FuchsiaCity_House3_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/FuchsiaCity_House3/border.bin",
+      "blockdata_filepath": "data/layouts/FuchsiaCity_House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_FUCHSIA_CITY_WARDENS_HOUSE",
+      "name": "FuchsiaCity_WardensHouse_Layout",
+      "width": 13,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Museum",
+      "border_filepath": "data/layouts/FuchsiaCity_WardensHouse/border.bin",
+      "blockdata_filepath": "data/layouts/FuchsiaCity_WardensHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_OFFICE",
+      "name": "FuchsiaCity_SafariZone_Office_Layout",
+      "width": 20,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SafariZoneBuilding",
+      "border_filepath": "data/layouts/FuchsiaCity_SafariZone_Office/border.bin",
+      "blockdata_filepath": "data/layouts/FuchsiaCity_SafariZone_Office/map.bin"
+    },
+    {
+      "id": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE",
+      "name": "FuchsiaCity_SafariZone_Entrance_Layout",
+      "width": 9,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SafariZoneBuilding",
+      "border_filepath": "data/layouts/FuchsiaCity_SafariZone_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/FuchsiaCity_SafariZone_Entrance/map.bin"
     }
   ]
 }
