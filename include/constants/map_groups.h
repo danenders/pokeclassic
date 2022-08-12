@@ -683,6 +683,26 @@
 #define MAP_VERMILION_CITY_POKEMON_FAN_CLUB  (7 | (39 << 8))
 
 // gMapGroup_IndoorCeladon
+#define MAP_CELADON_CITY_POKEMON_CENTER_1F         (0 | (40 << 8))
+#define MAP_CELADON_CITY_POKEMON_CENTER_2F         (1 | (40 << 8))
+#define MAP_CELADON_CITY_GYM                       (2 | (40 << 8))
+#define MAP_CELADON_CITY_RESTAURANT                (3 | (40 << 8))
+#define MAP_CELADON_CITY_HOTEL                     (4 | (40 << 8))
+#define MAP_CELADON_CITY_HOUSE1                    (5 | (40 << 8))
+#define MAP_CELADON_CITY_GAME_CORNER               (6 | (40 << 8))
+#define MAP_CELADON_CITY_GAME_CORNER_PRIZE_ROOM    (7 | (40 << 8))
+#define MAP_CELADON_CITY_CONDOMINIUMS_1F           (8 | (40 << 8))
+#define MAP_CELADON_CITY_CONDOMINIUMS_2F           (9 | (40 << 8))
+#define MAP_CELADON_CITY_CONDOMINIUMS_3F           (10 | (40 << 8))
+#define MAP_CELADON_CITY_CONDOMINIUMS_ROOF         (11 | (40 << 8))
+#define MAP_CELADON_CITY_CONDOMINIUMS_ROOF_ROOM    (12 | (40 << 8))
+#define MAP_CELADON_CITY_DEPARTMENT_STORE_1F       (13 | (40 << 8))
+#define MAP_CELADON_CITY_DEPARTMENT_STORE_2F       (14 | (40 << 8))
+#define MAP_CELADON_CITY_DEPARTMENT_STORE_3F       (15 | (40 << 8))
+#define MAP_CELADON_CITY_DEPARTMENT_STORE_4F       (16 | (40 << 8))
+#define MAP_CELADON_CITY_DEPARTMENT_STORE_5F       (17 | (40 << 8))
+#define MAP_CELADON_CITY_DEPARTMENT_STORE_ROOF     (18 | (40 << 8))
+#define MAP_CELADON_CITY_DEPARTMENT_STORE_ELEVATOR (19 | (40 << 8))
 
 // gMapGroup_IndoorFuchsia
 

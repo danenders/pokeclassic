@@ -1213,3 +1213,43 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/VermilionCity_Gym/scripts.inc"
 
 	.include "data/maps/VermilionCity_PokemonFanClub/scripts.inc"
+
+	.include "data/maps/CeladonCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/CeladonCity_PokemonCenter_2F/scripts.inc"
+
+	.include "data/maps/CeladonCity_Gym/scripts.inc"
+
+	.include "data/maps/CeladonCity_Restaurant/scripts.inc"
+
+	.include "data/maps/CeladonCity_Hotel/scripts.inc"
+
+	.include "data/maps/CeladonCity_House1/scripts.inc"
+
+	.include "data/maps/CeladonCity_GameCorner/scripts.inc"
+
+	.include "data/maps/CeladonCity_GameCornerPrizeRoom/scripts.inc"
+
+	.include "data/maps/CeladonCity_Condominiums_1F/scripts.inc"
+
+	.include "data/maps/CeladonCity_Condominiums_2F/scripts.inc"
+
+	.include "data/maps/CeladonCity_Condominiums_3F/scripts.inc"
+
+	.include "data/maps/CeladonCity_Condominiums_Roof/scripts.inc"
+
+	.include "data/maps/CeladonCity_Condominiums_RoofRoom/scripts.inc"
+
+	.include "data/maps/CeladonCity_DepartmentStore_1F/scripts.inc"
+
+	.include "data/maps/CeladonCity_DepartmentStore_2F/scripts.inc"
+
+	.include "data/maps/CeladonCity_DepartmentStore_3F/scripts.inc"
+
+	.include "data/maps/CeladonCity_DepartmentStore_4F/scripts.inc"
+
+	.include "data/maps/CeladonCity_DepartmentStore_5F/scripts.inc"
+
+	.include "data/maps/CeladonCity_DepartmentStore_Roof/scripts.inc"
+
+	.include "data/maps/CeladonCity_DepartmentStore_Elevator/scripts.inc"

@@ -741,7 +741,26 @@
     "VermilionCity_PokemonFanClub"
   ],
   "gMapGroup_IndoorCeladon": [
-
+    "CeladonCity_PokemonCenter_1F",
+    "CeladonCity_PokemonCenter_2F",
+    "CeladonCity_Gym",
+    "CeladonCity_Restaurant",
+    "CeladonCity_Hotel",
+    "CeladonCity_House1",
+    "CeladonCity_GameCorner",
+    "CeladonCity_GameCornerPrizeRoom",
+    "CeladonCity_Condominiums_1F",
+    "CeladonCity_Condominiums_2F",
+    "CeladonCity_Condominiums_3F",
+    "CeladonCity_Condominiums_Roof",
+    "CeladonCity_Condominiums_RoofRoom",
+    "CeladonCity_DepartmentStore_1F",
+    "CeladonCity_DepartmentStore_2F",
+    "CeladonCity_DepartmentStore_3F",
+    "CeladonCity_DepartmentStore_4F",
+    "CeladonCity_DepartmentStore_5F",
+    "CeladonCity_DepartmentStore_Roof",
+    "CeladonCity_DepartmentStore_Elevator"
   ],
   "gMapGroup_IndoorFuchsia": [
 
