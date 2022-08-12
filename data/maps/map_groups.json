@@ -824,10 +824,12 @@
     "Route8_WestEntrance"
   ],
   "gMapGroup_IndoorRoute10": [
-
+    "Route10_PokemonCenter_1F",
+    "Route10_PokemonCenter_2F"
   ],
   "gMapGroup_IndoorRoute11": [
-
+    "Route11_EastEntrance_1F",
+    "Route11_EastEntrance_2F"
   ],
   "gMapGroup_IndoorRoute12": [
 

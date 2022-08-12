@@ -766,8 +766,12 @@
 #define MAP_ROUTE8_WEST_ENTRANCE (0 | (50 << 8))
 
 // gMapGroup_IndoorRoute10
+#define MAP_ROUTE10_POKEMON_CENTER_1F (0 | (51 << 8))
+#define MAP_ROUTE10_POKEMON_CENTER_2F (1 | (51 << 8))
 
 // gMapGroup_IndoorRoute11
+#define MAP_ROUTE11_EAST_ENTRANCE_1F (0 | (52 << 8))
+#define MAP_ROUTE11_EAST_ENTRANCE_2F (1 | (52 << 8))
 
 // gMapGroup_IndoorRoute12
 
