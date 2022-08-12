@@ -1375,3 +1375,55 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/MtMoon_B1F/scripts.inc"
 
 	.include "data/maps/MtMoon_B2F/scripts.inc"
+
+	.include "data/maps/SSAnne_Exterior/scripts.inc"
+
+	.include "data/maps/SSAnne_1F_Corridor/scripts.inc"
+
+	.include "data/maps/SSAnne_2F_Corridor/scripts.inc"
+
+	.include "data/maps/SSAnne_3F_Corridor/scripts.inc"
+
+	.include "data/maps/SSAnne_B1F_Corridor/scripts.inc"
+
+	.include "data/maps/SSAnne_Deck/scripts.inc"
+
+	.include "data/maps/SSAnne_Kitchen/scripts.inc"
+
+	.include "data/maps/SSAnne_CaptainsOffice/scripts.inc"
+
+	.include "data/maps/SSAnne_1F_Room1/scripts.inc"
+
+	.include "data/maps/SSAnne_1F_Room2/scripts.inc"
+
+	.include "data/maps/SSAnne_1F_Room3/scripts.inc"
+
+	.include "data/maps/SSAnne_1F_Room4/scripts.inc"
+
+	.include "data/maps/SSAnne_1F_Room5/scripts.inc"
+
+	.include "data/maps/SSAnne_1F_Room7/scripts.inc"
+
+	.include "data/maps/SSAnne_2F_Room1/scripts.inc"
+
+	.include "data/maps/SSAnne_2F_Room2/scripts.inc"
+
+	.include "data/maps/SSAnne_2F_Room3/scripts.inc"
+
+	.include "data/maps/SSAnne_2F_Room4/scripts.inc"
+
+	.include "data/maps/SSAnne_2F_Room5/scripts.inc"
+
+	.include "data/maps/SSAnne_2F_Room6/scripts.inc"
+
+	.include "data/maps/SSAnne_B1F_Room1/scripts.inc"
+
+	.include "data/maps/SSAnne_B1F_Room2/scripts.inc"
+
+	.include "data/maps/SSAnne_B1F_Room3/scripts.inc"
+
+	.include "data/maps/SSAnne_B1F_Room4/scripts.inc"
+
+	.include "data/maps/SSAnne_B1F_Room5/scripts.inc"
+
+	.include "data/maps/SSAnne_1F_Room6/scripts.inc"
