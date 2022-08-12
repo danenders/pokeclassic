@@ -711,7 +711,16 @@
     "PewterCity_House2"
   ],
   "gMapGroup_IndoorCerulean": [
-
+    "CeruleanCity_House1",
+    "CeruleanCity_House2",
+    "CeruleanCity_House3",
+    "CeruleanCity_House4",
+    "CeruleanCity_House5",
+    "CeruleanCity_Gym",
+    "CeruleanCity_BikeShop",
+    "CeruleanCity_Mart",
+    "CeruleanCity_PokemonCenter_1F",
+    "CeruleanCity_PokemonCenter_2F"
   ],
   "gMapGroup_IndoorLavender": [
 

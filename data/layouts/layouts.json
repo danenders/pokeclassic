@@ -700,7 +700,7 @@
     {
       "id": "LAYOUT_HOUSE1",
       "name": "House1_Layout",
-      "width": 10,
+      "width": 11,
       "height": 9,
       "border_width": 2,
       "border_height": 2,
@@ -5952,6 +5952,126 @@
       "secondary_tileset": "gTileset_GenericBuilding2",
       "border_filepath": "data/layouts/PewterCity_House2/border.bin",
       "blockdata_filepath": "data/layouts/PewterCity_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_CERULEAN_CITY_HOUSE1",
+      "name": "CeruleanCity_House1_Layout",
+      "width": 10,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/CeruleanCity_House1/border.bin",
+      "blockdata_filepath": "data/layouts/CeruleanCity_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_CERULEAN_CITY_HOUSE2",
+      "name": "CeruleanCity_House2_Layout",
+      "width": 10,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BurgledHouse",
+      "border_filepath": "data/layouts/CeruleanCity_House2/border.bin",
+      "blockdata_filepath": "data/layouts/CeruleanCity_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_CERULEAN_CITY_HOUSE3",
+      "name": "CeruleanCity_House3_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/CeruleanCity_House3/border.bin",
+      "blockdata_filepath": "data/layouts/CeruleanCity_House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_CERULEAN_CITY_HOUSE4",
+      "name": "CeruleanCity_House4_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/CeruleanCity_House4/border.bin",
+      "blockdata_filepath": "data/layouts/CeruleanCity_House4/map.bin"
+    },
+    {
+      "id": "LAYOUT_CERULEAN_CITY_HOUSE5",
+      "name": "CeruleanCity_House5_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/CeruleanCity_House5/border.bin",
+      "blockdata_filepath": "data/layouts/CeruleanCity_House5/map.bin"
+    },
+    {
+      "id": "LAYOUT_CERULEAN_CITY_GYM",
+      "name": "CeruleanCity_Gym_Layout",
+      "width": 17,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_CeruleanGym",
+      "border_filepath": "data/layouts/CeruleanCity_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/CeruleanCity_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_CERULEAN_CITY_BIKE_SHOP",
+      "name": "CeruleanCity_BikeShop_Layout",
+      "width": 11,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BikeShop",
+      "border_filepath": "data/layouts/CeruleanCity_BikeShop/border.bin",
+      "blockdata_filepath": "data/layouts/CeruleanCity_BikeShop/map.bin"
+    },
+    {
+      "id": "LAYOUT_CERULEAN_CITY_MART",
+      "name": "CeruleanCity_Mart_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Mart",
+      "border_filepath": "data/layouts/CeruleanCity_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/CeruleanCity_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_CERULEAN_CITY_POKEMON_CENTER_1F",
+      "name": "CeruleanCity_PokemonCenter_1F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/CeruleanCity_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/CeruleanCity_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CERULEAN_CITY_POKEMON_CENTER_2F",
+      "name": "CeruleanCity_PokemonCenter_2F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/CeruleanCity_PokemonCenter_2F/border.bin",
+      "blockdata_filepath": "data/layouts/CeruleanCity_PokemonCenter_2F/map.bin"
     }
   ]
 }

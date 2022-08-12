@@ -1165,3 +1165,23 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/PewterCity_House1/scripts.inc"
 
 	.include "data/maps/PewterCity_House2/scripts.inc"
+
+	.include "data/maps/CeruleanCity_House1/scripts.inc"
+
+	.include "data/maps/CeruleanCity_House2/scripts.inc"
+
+	.include "data/maps/CeruleanCity_House3/scripts.inc"
+
+	.include "data/maps/CeruleanCity_House4/scripts.inc"
+
+	.include "data/maps/CeruleanCity_House5/scripts.inc"
+
+	.include "data/maps/CeruleanCity_Gym/scripts.inc"
+
+	.include "data/maps/CeruleanCity_BikeShop/scripts.inc"
+
+	.include "data/maps/CeruleanCity_Mart/scripts.inc"
+
+	.include "data/maps/CeruleanCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/CeruleanCity_PokemonCenter_2F/scripts.inc"

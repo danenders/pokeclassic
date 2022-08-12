@@ -653,6 +653,16 @@
 #define MAP_PEWTER_CITY_HOUSE2            (7 | (36 << 8))
 
 // gMapGroup_IndoorCerulean
+#define MAP_CERULEAN_CITY_HOUSE1            (0 | (37 << 8))
+#define MAP_CERULEAN_CITY_HOUSE2            (1 | (37 << 8))
+#define MAP_CERULEAN_CITY_HOUSE3            (2 | (37 << 8))
+#define MAP_CERULEAN_CITY_HOUSE4            (3 | (37 << 8))
+#define MAP_CERULEAN_CITY_HOUSE5            (4 | (37 << 8))
+#define MAP_CERULEAN_CITY_GYM               (5 | (37 << 8))
+#define MAP_CERULEAN_CITY_BIKE_SHOP         (6 | (37 << 8))
+#define MAP_CERULEAN_CITY_MART              (7 | (37 << 8))
+#define MAP_CERULEAN_CITY_POKEMON_CENTER_1F (8 | (37 << 8))
+#define MAP_CERULEAN_CITY_POKEMON_CENTER_2F (9 | (37 << 8))
 
 // gMapGroup_IndoorLavender
 
