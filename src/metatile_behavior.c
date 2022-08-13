@@ -1407,3 +1407,33 @@ bool8 MetatileBehavior_IsTrainerHillTimer(u8 metatileBehavior)
     else
         return FALSE;
 }
+
+bool8 MetatileBehavior_IsSpinRight(u8 metatileBehavior)
+{
+    return metatileBehavior == MB_SPIN_RIGHT;
+}
+
+bool8 MetatileBehavior_IsSpinLeft(u8 metatileBehavior)
+{
+    return metatileBehavior == MB_SPIN_LEFT;
+}
+
+bool8 MetatileBehavior_IsSpinUp(u8 metatileBehavior)
+{
+    return metatileBehavior == MB_SPIN_UP;
+}
+
+bool8 MetatileBehavior_IsSpinDown(u8 metatileBehavior)
+{
+    return metatileBehavior == MB_SPIN_DOWN;
+}
+
+bool8 MetatileBehavior_IsStopSpinning(u8 metatileBehavior)
+{
+    return metatileBehavior == MB_STOP_SPINNING;
+}
+
+bool8 MetatileBehavior_IsSpinTile(u8 metatileBehavior)
+{
+    return metatileBehavior >= MB_SPIN_RIGHT && metatileBehavior <= MB_SPIN_DOWN;
+}
