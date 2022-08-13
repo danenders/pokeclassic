@@ -843,6 +843,18 @@ static const u8 sRunningDirectionAnimNums[] = {
     [DIR_NORTHEAST] = ANIM_RUN_NORTH,
 };
 
+static const u8 sSpinDirectionAnimNums[] = {
+    [DIR_NONE] = ANIM_SPIN_SOUTH,
+    [DIR_SOUTH] = ANIM_SPIN_SOUTH,
+    [DIR_NORTH] = ANIM_SPIN_NORTH,
+    [DIR_WEST] = ANIM_SPIN_WEST,
+    [DIR_EAST] = ANIM_SPIN_EAST,
+    [DIR_SOUTHWEST] = ANIM_SPIN_SOUTH,
+    [DIR_SOUTHEAST] = ANIM_SPIN_SOUTH,
+    [DIR_NORTHWEST] = ANIM_SPIN_NORTH,
+    [DIR_NORTHEAST] = ANIM_SPIN_NORTH,
+};
+
 const u8 gTrainerFacingDirectionMovementTypes[] = {
     [DIR_NONE] = MOVEMENT_TYPE_FACE_DOWN,
     [DIR_SOUTH] = MOVEMENT_TYPE_FACE_DOWN,
@@ -936,6 +948,13 @@ const u8 gPlayerRunMovementActions[] = {
     MOVEMENT_ACTION_PLAYER_RUN_UP,
     MOVEMENT_ACTION_PLAYER_RUN_LEFT,
     MOVEMENT_ACTION_PLAYER_RUN_RIGHT,
+};
+const u8 gSpinMovementActions[] = {
+    MOVEMENT_ACTION_SPIN_DOWN,
+    MOVEMENT_ACTION_SPIN_DOWN,
+    MOVEMENT_ACTION_SPIN_UP,
+    MOVEMENT_ACTION_SPIN_LEFT,
+    MOVEMENT_ACTION_SPIN_RIGHT,
 };
 const u8 gJump2MovementActions[] = {
     MOVEMENT_ACTION_JUMP_2_DOWN,
@@ -4537,6 +4556,11 @@ u8 GetRunningDirectionAnimNum(u8 direction)
     return sRunningDirectionAnimNums[direction];
 }
 
+u8 GetSpinDirectionAnimNum(u8 direction)
+{
+    return sSpinDirectionAnimNums[direction];
+}
+
 static const struct StepAnimTable *GetStepAnimTable(const union AnimCmd *const *anims)
 {
     const struct StepAnimTable *stepTable;
@@ -4933,6 +4957,7 @@ dirn_to_anim(GetRideWaterCurrentMovementAction, gRideWaterCurrentMovementActions
 dirn_to_anim(GetWalkFasterMovementAction, gWalkFasterMovementActions);
 dirn_to_anim(GetSlideMovementAction, gSlideMovementActions);
 dirn_to_anim(GetPlayerRunMovementAction, gPlayerRunMovementActions);
+dirn_to_anim(GetSpinMovementAction, gSpinMovementActions);
 dirn_to_anim(GetJump2MovementAction, gJump2MovementActions);
 dirn_to_anim(GetJumpInPlaceMovementAction, gJumpInPlaceMovementActions);
 dirn_to_anim(GetJumpInPlaceTurnAroundMovementAction, gJumpInPlaceTurnAroundMovementActions);
@@ -8940,4 +8965,75 @@ u8 MovementAction_FlyDown_Step1(struct ObjectEvent *objectEvent, struct Sprite *
 u8 MovementAction_Fly_Finish(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
     return TRUE;
+}
+
+static void InitSpin(struct ObjectEvent *objectEvent, struct Sprite *sprite, u8 direction, u8 speed)
+{
+    InitNpcForMovement(objectEvent, sprite, direction, speed);
+    SetStepAnimHandleAlternation(objectEvent, sprite, GetSpinDirectionAnimNum(objectEvent->facingDirection));
+    SeekSpriteAnim(sprite, 0);
+}
+
+u8 MovementAction_SpinDown_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    InitSpin(objectEvent, sprite, DIR_SOUTH, MOVE_SPEED_FAST_1);
+    return MovementAction_SpinDown_Step1(objectEvent, sprite);
+}
+
+u8 MovementAction_SpinDown_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (UpdateMovementNormal(objectEvent, sprite))
+    {
+        sprite->sActionFuncId = 2;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+u8 MovementAction_SpinUp_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    InitSpin(objectEvent, sprite, DIR_NORTH, MOVE_SPEED_FAST_1);
+    return MovementAction_SpinUp_Step1(objectEvent, sprite);
+}
+
+u8 MovementAction_SpinUp_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (UpdateMovementNormal(objectEvent, sprite))
+    {
+        sprite->sActionFuncId = 2;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+u8 MovementAction_SpinLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    InitSpin(objectEvent, sprite, DIR_WEST, MOVE_SPEED_FAST_1);
+    return MovementAction_SpinLeft_Step1(objectEvent, sprite);
+}
+
+u8 MovementAction_SpinLeft_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (UpdateMovementNormal(objectEvent, sprite))
+    {
+        sprite->sActionFuncId = 2;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+u8 MovementAction_SpinRight_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    InitSpin(objectEvent, sprite, DIR_EAST, MOVE_SPEED_FAST_1);
+    return MovementAction_SpinRight_Step1(objectEvent, sprite);
+}
+
+u8 MovementAction_SpinRight_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (UpdateMovementNormal(objectEvent, sprite))
+    {
+        sprite->sActionFuncId = 2;
+        return TRUE;
+    }
+    return FALSE;
 }
