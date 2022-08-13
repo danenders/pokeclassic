@@ -505,6 +505,9 @@
 #define MAP_POKEMON_TOWER_6F                         (173 | (24 << 8))
 #define MAP_POKEMON_TOWER_7F                         (174 | (24 << 8))
 #define MAP_POWER_PLANT                              (175 | (24 << 8))
+#define MAP_CERULEAN_CAVE_1F                         (176 | (24 << 8))
+#define MAP_CERULEAN_CAVE_2F                         (177 | (24 << 8))
+#define MAP_CERULEAN_CAVE_B1F                        (178 | (24 << 8))
 
 // gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))

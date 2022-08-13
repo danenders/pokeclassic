@@ -560,7 +560,10 @@
     "PokemonTower_5F",
     "PokemonTower_6F",
     "PokemonTower_7F",
-    "PowerPlant"
+    "PowerPlant",
+    "CeruleanCave_1F",
+    "CeruleanCave_2F",
+    "CeruleanCave_B1F"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

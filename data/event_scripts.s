@@ -1503,3 +1503,10 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/PokemonTower_7F/scripts.inc"
 	
 	.include "data/maps/PowerPlant/scripts.inc"
+
+	.include "data/maps/CeruleanCave_1F/scripts.inc"
+	
+	.include "data/maps/CeruleanCave_2F/scripts.inc"
+	
+	.include "data/maps/CeruleanCave_B1F/scripts.inc"
+	
