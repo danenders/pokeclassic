@@ -476,6 +476,11 @@
 #define MAP_DIGLETTS_CAVE_NORTH_ENTRANCE             (144 | (24 << 8))
 #define MAP_DIGLETTS_CAVE_B1F                        (145 | (24 << 8))
 #define MAP_DIGLETTS_CAVE_SOUTH_ENTRANCE             (146 | (24 << 8))
+#define MAP_ROCKET_HIDEOUT_B1F                       (147 | (24 << 8))
+#define MAP_ROCKET_HIDEOUT_B2F                       (148 | (24 << 8))
+#define MAP_ROCKET_HIDEOUT_B3F                       (149 | (24 << 8))
+#define MAP_ROCKET_HIDEOUT_B4F                       (150 | (24 << 8))
+#define MAP_ROCKET_HIDEOUT_ELEVATOR                  (151 | (24 << 8))
 
 // gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))

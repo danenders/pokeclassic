@@ -7452,6 +7452,66 @@
       "secondary_tileset": "gTileset_DiglettsCave",
       "border_filepath": "data/layouts/DiglettsCave_SouthEntrance/border.bin",
       "blockdata_filepath": "data/layouts/DiglettsCave_SouthEntrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROCKET_HIDEOUT_B1F",
+      "name": "RocketHideout_B1F_Layout",
+      "width": 28,
+      "height": 34,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SilphCo",
+      "border_filepath": "data/layouts/RocketHideout_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/RocketHideout_B1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROCKET_HIDEOUT_B2F",
+      "name": "RocketHideout_B2F_Layout",
+      "width": 32,
+      "height": 22,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SilphCo",
+      "border_filepath": "data/layouts/RocketHideout_B2F/border.bin",
+      "blockdata_filepath": "data/layouts/RocketHideout_B2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROCKET_HIDEOUT_B3F",
+      "name": "RocketHideout_B3F_Layout",
+      "width": 22,
+      "height": 27,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SilphCo",
+      "border_filepath": "data/layouts/RocketHideout_B3F/border.bin",
+      "blockdata_filepath": "data/layouts/RocketHideout_B3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROCKET_HIDEOUT_B4F",
+      "name": "RocketHideout_B4F_Layout",
+      "width": 24,
+      "height": 26,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SilphCo",
+      "border_filepath": "data/layouts/RocketHideout_B4F/border.bin",
+      "blockdata_filepath": "data/layouts/RocketHideout_B4F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROCKET_HIDEOUT_ELEVATOR",
+      "name": "RocketHideout_Elevator_Layout",
+      "width": 5,
+      "height": 7,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SilphCo",
+      "border_filepath": "data/layouts/RocketHideout_Elevator/border.bin",
+      "blockdata_filepath": "data/layouts/RocketHideout_Elevator/map.bin"
     }
   ]
 }

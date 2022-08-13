@@ -1445,3 +1445,13 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/DiglettsCave_B1F/scripts.inc"
 
 	.include "data/maps/DiglettsCave_SouthEntrance/scripts.inc"
+
+	.include "data/maps/RocketHideout_B1F/scripts.inc"
+
+	.include "data/maps/RocketHideout_B2F/scripts.inc"
+
+	.include "data/maps/RocketHideout_B3F/scripts.inc"
+
+	.include "data/maps/RocketHideout_B4F/scripts.inc"
+
+	.include "data/maps/RocketHideout_Elevator/scripts.inc"
