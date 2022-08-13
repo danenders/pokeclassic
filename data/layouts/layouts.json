@@ -2858,18 +2858,6 @@
       "blockdata_filepath": "data/layouts/SafariZone_Northwest/map.bin"
     },
     {
-      "id": "LAYOUT_SAFARI_ZONE_NORTH",
-      "name": "SafariZone_North_Layout",
-      "width": 40,
-      "height": 40,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lilycove",
-      "border_filepath": "data/layouts/SafariZone_North/border.bin",
-      "blockdata_filepath": "data/layouts/SafariZone_North/map.bin"
-    },
-    {
       "id": "LAYOUT_SAFARI_ZONE_SOUTHWEST",
       "name": "SafariZone_Southwest_Layout",
       "width": 40,
@@ -3936,18 +3924,6 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/ShoalCave_LowTideIceRoom/border.bin",
       "blockdata_filepath": "data/layouts/ShoalCave_LowTideIceRoom/map.bin"
-    },
-    {
-      "id": "LAYOUT_SAFARI_ZONE_REST_HOUSE",
-      "name": "SafariZone_RestHouse_Layout",
-      "width": 10,
-      "height": 9,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding",
-      "border_filepath": "data/layouts/SafariZone_RestHouse/border.bin",
-      "blockdata_filepath": "data/layouts/SafariZone_RestHouse/map.bin"
     },
     {
       "id": "LAYOUT_SKY_PILLAR_5F",
@@ -8040,6 +8016,78 @@
       "secondary_tileset": "gTileset_RockTunnel",
       "border_filepath": "data/layouts/RockTunnel_B1F/border.bin",
       "blockdata_filepath": "data/layouts/RockTunnel_B1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFARI_ZONE_CENTER",
+      "name": "SafariZone_Center_Layout",
+      "width": 51,
+      "height": 36,
+      "border_width": 3,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_FuchsiaCity",
+      "border_filepath": "data/layouts/SafariZone_Center/border.bin",
+      "blockdata_filepath": "data/layouts/SafariZone_Center/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFARI_ZONE_EAST",
+      "name": "SafariZone_East_Layout",
+      "width": 54,
+      "height": 35,
+      "border_width": 3,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_FuchsiaCity",
+      "border_filepath": "data/layouts/SafariZone_East/border.bin",
+      "blockdata_filepath": "data/layouts/SafariZone_East/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFARI_ZONE_NORTH",
+      "name": "SafariZone_North_Layout",
+      "width": 57,
+      "height": 40,
+      "border_width": 3,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_FuchsiaCity",
+      "border_filepath": "data/layouts/SafariZone_North/border.bin",
+      "blockdata_filepath": "data/layouts/SafariZone_North/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFARI_ZONE_WEST",
+      "name": "SafariZone_West_Layout",
+      "width": 48,
+      "height": 36,
+      "border_width": 3,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_FuchsiaCity",
+      "border_filepath": "data/layouts/SafariZone_West/border.bin",
+      "blockdata_filepath": "data/layouts/SafariZone_West/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFARI_ZONE_SECRET_HOUSE",
+      "name": "SafariZone_SecretHouse_Layout",
+      "width": 13,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SafariZoneBuilding",
+      "border_filepath": "data/layouts/SafariZone_SecretHouse/border.bin",
+      "blockdata_filepath": "data/layouts/SafariZone_SecretHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFARI_ZONE_REST_HOUSE",
+      "name": "SafariZone_RestHouse_Layout",
+      "width": 13,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SafariZoneBuilding",
+      "border_filepath": "data/layouts/SafariZone_RestHouse/border.bin",
+      "blockdata_filepath": "data/layouts/SafariZone_RestHouse/map.bin"
     }
   ]
 }

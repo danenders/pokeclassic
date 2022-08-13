@@ -33,7 +33,41 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 26,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 36,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 25,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 36,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 25,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": 5
+    }
   ],
   "coord_events": [
 

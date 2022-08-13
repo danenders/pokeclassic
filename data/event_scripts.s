@@ -459,7 +459,6 @@ gStdScripts_End::
 	.include "data/maps/BattlePyramidSquare01/scripts.inc"
 	.include "data/maps/UnionRoom/scripts.inc"
 	.include "data/maps/SafariZone_Northwest/scripts.inc"
-	.include "data/maps/SafariZone_North/scripts.inc"
 	.include "data/maps/SafariZone_Southwest/scripts.inc"
 	.include "data/maps/SafariZone_South/scripts.inc"
 	.include "data/maps/BattleFrontier_OutsideWest/scripts.inc"
@@ -1540,3 +1539,22 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/VictoryRoad_2F/scripts.inc"
 
 	.include "data/maps/VictoryRoad_3F/scripts.inc"
+
+	.include "data/maps/SafariZone_Center/scripts.inc"
+	
+	.include "data/maps/SafariZone_East/scripts.inc"
+	
+	.include "data/maps/SafariZone_North/scripts.inc"
+	
+	.include "data/maps/SafariZone_West/scripts.inc"
+	
+	.include "data/maps/SafariZone_Center_RestHouse/scripts.inc"
+	
+	.include "data/maps/SafariZone_East_RestHouse/scripts.inc"
+	
+	.include "data/maps/SafariZone_North_RestHouse/scripts.inc"
+	
+	.include "data/maps/SafariZone_West_RestHouse/scripts.inc"
+	
+	.include "data/maps/SafariZone_SecretHouse/scripts.inc"
+	
