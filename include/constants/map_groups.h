@@ -481,6 +481,18 @@
 #define MAP_ROCKET_HIDEOUT_B3F                       (149 | (24 << 8))
 #define MAP_ROCKET_HIDEOUT_B4F                       (150 | (24 << 8))
 #define MAP_ROCKET_HIDEOUT_ELEVATOR                  (151 | (24 << 8))
+#define MAP_SILPH_CO_1F                              (152 | (24 << 8))
+#define MAP_SILPH_CO_2F                              (153 | (24 << 8))
+#define MAP_SILPH_CO_3F                              (154 | (24 << 8))
+#define MAP_SILPH_CO_4F                              (155 | (24 << 8))
+#define MAP_SILPH_CO_5F                              (156 | (24 << 8))
+#define MAP_SILPH_CO_6F                              (157 | (24 << 8))
+#define MAP_SILPH_CO_7F                              (158 | (24 << 8))
+#define MAP_SILPH_CO_8F                              (159 | (24 << 8))
+#define MAP_SILPH_CO_9F                              (160 | (24 << 8))
+#define MAP_SILPH_CO_10F                             (161 | (24 << 8))
+#define MAP_SILPH_CO_11F                             (162 | (24 << 8))
+#define MAP_SILPH_CO_ELEVATOR                        (163 | (24 << 8))
 
 // gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))

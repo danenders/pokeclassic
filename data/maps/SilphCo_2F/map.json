@@ -1,0 +1,24 @@
+{
+  "id": "MAP_SILPH_CO_2F",
+  "name": "SilphCo_2F",
+  "layout": "LAYOUT_SILPH_CO_2F",
+  "music": "MUS_RG_SILPH",
+  "region_map_section": "MAPSEC_SILPH_CO",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "floor_number": 2,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+  ],
+  "warp_events": [
+  ],
+  "coord_events": [],
+  "bg_events": [
+  ]
+}

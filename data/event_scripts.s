@@ -1455,3 +1455,27 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/RocketHideout_B4F/scripts.inc"
 
 	.include "data/maps/RocketHideout_Elevator/scripts.inc"
+
+	.include "data/maps/SilphCo_1F/scripts.inc"
+
+	.include "data/maps/SilphCo_2F/scripts.inc"
+	
+	.include "data/maps/SilphCo_3F/scripts.inc"
+	
+	.include "data/maps/SilphCo_4F/scripts.inc"
+	
+	.include "data/maps/SilphCo_5F/scripts.inc"
+	
+	.include "data/maps/SilphCo_6F/scripts.inc"
+	
+	.include "data/maps/SilphCo_7F/scripts.inc"
+	
+	.include "data/maps/SilphCo_8F/scripts.inc"
+	
+	.include "data/maps/SilphCo_9F/scripts.inc"
+	
+	.include "data/maps/SilphCo_10F/scripts.inc"
+	
+	.include "data/maps/SilphCo_11F/scripts.inc"
+
+	.include "data/maps/SilphCo_Elevator/scripts.inc"

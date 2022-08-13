@@ -536,7 +536,19 @@
     "RocketHideout_B2F",
     "RocketHideout_B3F",
     "RocketHideout_B4F",
-    "RocketHideout_Elevator"
+    "RocketHideout_Elevator",
+    "SilphCo_1F",
+    "SilphCo_2F",
+    "SilphCo_3F",
+    "SilphCo_4F",
+    "SilphCo_5F",
+    "SilphCo_6F",
+    "SilphCo_7F",
+    "SilphCo_8F",
+    "SilphCo_9F",
+    "SilphCo_10F",
+    "SilphCo_11F",
+    "SilphCo_Elevator"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
