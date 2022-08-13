@@ -428,6 +428,9 @@
     "CaveOfOrigin_UnusedRubySapphireMap2",
     "CaveOfOrigin_UnusedRubySapphireMap3",
     "CaveOfOrigin_B1F",
+    "VictoryRoad_1F",
+    "VictoryRoad_2F",
+    "VictoryRoad_3F",
     "VictoryRoad_B1F",
     "VictoryRoad_B2F",
     "ShoalCave_LowTideEntranceRoom",
@@ -569,10 +572,7 @@
     "SeafoamIslands_B1F",
     "SeafoamIslands_B2F",
     "SeafoamIslands_B3F",
-    "SeafoamIslands_B4F",
-    "VictoryRoad_1F",
-    "VictoryRoad_2F",
-    "VictoryRoad_3F"
+    "SeafoamIslands_B4F"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
