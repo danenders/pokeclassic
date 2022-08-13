@@ -33,27 +33,7 @@
 
   ],
   "warp_events": [
-    {
-      "x": 26,
-      "y": 26,
-      "elevation": 0,
-      "dest_map": "MAP_VIRIDIAN_CITY_POKEMON_CENTER_1F",
-      "dest_warp_id": 0
-    },
-    {
-      "x": 25,
-      "y": 18,
-      "elevation": 0,
-      "dest_map": "MAP_ROCKET_HIDEOUT_B3F",
-      "dest_warp_id": 0
-    },
-    {
-      "x": 36,
-      "y": 19,
-      "elevation": 0,
-      "dest_map": "MAP_SSANNE_B1F_ROOM5",
-      "dest_warp_id": 0
-    }
+
   ],
   "coord_events": [
 
