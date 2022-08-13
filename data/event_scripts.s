@@ -382,7 +382,6 @@ gStdScripts_End::
 	.include "data/maps/CaveOfOrigin_UnusedRubySapphireMap2/scripts.inc"
 	.include "data/maps/CaveOfOrigin_UnusedRubySapphireMap3/scripts.inc"
 	.include "data/maps/CaveOfOrigin_B1F/scripts.inc"
-	.include "data/maps/VictoryRoad_1F/scripts.inc"
 	.include "data/maps/VictoryRoad_B1F/scripts.inc"
 	.include "data/maps/VictoryRoad_B2F/scripts.inc"
 	.include "data/maps/ShoalCave_LowTideEntranceRoom/scripts.inc"
@@ -1509,4 +1508,35 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/CeruleanCave_2F/scripts.inc"
 	
 	.include "data/maps/CeruleanCave_B1F/scripts.inc"
+
+	.include "data/maps/PokemonLeague_LoreleisRoom/scripts.inc"
 	
+	.include "data/maps/PokemonLeague_BrunosRoom/scripts.inc"
+	
+	.include "data/maps/PokemonLeague_AgathasRoom/scripts.inc"
+	
+	.include "data/maps/PokemonLeague_LancesRoom/scripts.inc"
+	
+	.include "data/maps/PokemonLeague_ChampionsRoom/scripts.inc"
+	
+	.include "data/maps/PokemonLeague_HallOfFame/scripts.inc"
+	
+	.include "data/maps/RockTunnel_1F/scripts.inc"
+	
+	.include "data/maps/RockTunnel_B1F/scripts.inc"
+
+	.include "data/maps/SeafoamIslands_1F/scripts.inc"
+	
+	.include "data/maps/SeafoamIslands_B1F/scripts.inc"
+	
+	.include "data/maps/SeafoamIslands_B2F/scripts.inc"
+	
+	.include "data/maps/SeafoamIslands_B3F/scripts.inc"
+	
+	.include "data/maps/SeafoamIslands_B4F/scripts.inc"
+
+	.include "data/maps/VictoryRoad_1F/scripts.inc"
+	
+	.include "data/maps/VictoryRoad_2F/scripts.inc"
+
+	.include "data/maps/VictoryRoad_3F/scripts.inc"

@@ -428,7 +428,6 @@
     "CaveOfOrigin_UnusedRubySapphireMap2",
     "CaveOfOrigin_UnusedRubySapphireMap3",
     "CaveOfOrigin_B1F",
-    "VictoryRoad_1F",
     "VictoryRoad_B1F",
     "VictoryRoad_B2F",
     "ShoalCave_LowTideEntranceRoom",
@@ -563,7 +562,17 @@
     "PowerPlant",
     "CeruleanCave_1F",
     "CeruleanCave_2F",
-    "CeruleanCave_B1F"
+    "CeruleanCave_B1F",
+    "RockTunnel_1F",
+    "RockTunnel_B1F",
+    "SeafoamIslands_1F",
+    "SeafoamIslands_B1F",
+    "SeafoamIslands_B2F",
+    "SeafoamIslands_B3F",
+    "SeafoamIslands_B4F",
+    "VictoryRoad_1F",
+    "VictoryRoad_2F",
+    "VictoryRoad_3F"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
@@ -867,7 +876,13 @@
   ],
   "gMapGroup_IndoorIndigoPlateau": [
     "IndigoPlateau_PokemonCenter_1F",
-    "IndigoPlateau_PokemonCenter_2F"
+    "IndigoPlateau_PokemonCenter_2F",
+    "PokemonLeague_LoreleisRoom",
+    "PokemonLeague_BrunosRoom",
+    "PokemonLeague_AgathasRoom",
+    "PokemonLeague_LancesRoom",
+    "PokemonLeague_ChampionsRoom",
+    "PokemonLeague_HallOfFame"
   ],
   "gMapGroup_IndoorRoute2": [
     "ViridianForest_NorthEntrance",
