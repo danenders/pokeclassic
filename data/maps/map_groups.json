@@ -548,7 +548,19 @@
     "SilphCo_9F",
     "SilphCo_10F",
     "SilphCo_11F",
-    "SilphCo_Elevator"
+    "SilphCo_Elevator",
+    "PokemonMansion_1F",
+    "PokemonMansion_2F",
+    "PokemonMansion_3F",
+    "PokemonMansion_B1F",
+    "PokemonTower_1F",
+    "PokemonTower_2F",
+    "PokemonTower_3F",
+    "PokemonTower_4F",
+    "PokemonTower_5F",
+    "PokemonTower_6F",
+    "PokemonTower_7F",
+    "PowerPlant"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

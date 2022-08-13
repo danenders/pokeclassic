@@ -493,6 +493,18 @@
 #define MAP_SILPH_CO_10F                             (161 | (24 << 8))
 #define MAP_SILPH_CO_11F                             (162 | (24 << 8))
 #define MAP_SILPH_CO_ELEVATOR                        (163 | (24 << 8))
+#define MAP_POKEMON_MANSION_1F                       (164 | (24 << 8))
+#define MAP_POKEMON_MANSION_2F                       (165 | (24 << 8))
+#define MAP_POKEMON_MANSION_3F                       (166 | (24 << 8))
+#define MAP_POKEMON_MANSION_B1F                      (167 | (24 << 8))
+#define MAP_POKEMON_TOWER_1F                         (168 | (24 << 8))
+#define MAP_POKEMON_TOWER_2F                         (169 | (24 << 8))
+#define MAP_POKEMON_TOWER_3F                         (170 | (24 << 8))
+#define MAP_POKEMON_TOWER_4F                         (171 | (24 << 8))
+#define MAP_POKEMON_TOWER_5F                         (172 | (24 << 8))
+#define MAP_POKEMON_TOWER_6F                         (173 | (24 << 8))
+#define MAP_POKEMON_TOWER_7F                         (174 | (24 << 8))
+#define MAP_POWER_PLANT                              (175 | (24 << 8))
 
 // gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))
