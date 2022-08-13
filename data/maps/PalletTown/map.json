@@ -28,7 +28,13 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 6,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_ROCKET_HIDEOUT_B3F",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 
