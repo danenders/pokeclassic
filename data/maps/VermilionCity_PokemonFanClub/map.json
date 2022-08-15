@@ -17,7 +17,13 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 5,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY",
+      "dest_warp_id": 3
+    }
   ],
   "coord_events": [
 

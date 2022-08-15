@@ -17,7 +17,13 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 2,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_SSANNE_1F_CORRIDOR",
+      "dest_warp_id": 6
+    }
   ],
   "coord_events": [
 

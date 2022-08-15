@@ -22,13 +22,87 @@
       "direction": "up",
       "offset": 12,
       "map": "MAP_ROUTE6"
+    },
+    {
+      "direction": "down",
+      "offset": -9,
+      "map": "MAP_SSANNE_EXTERIOR"
     }
   ],
   "object_events": [
 
   ],
   "warp_events": [
-
+    {
+      "x": 15,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY_POKEMON_CENTER_1F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 29,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY_MART",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 14,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY_GYM",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 12,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY_POKEMON_FAN_CLUB",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY_HOUSE1",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 19,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY_HOUSE2",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 28,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY_HOUSE3",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 22,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_SSANNE_EXTERIOR",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 23,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_SSANNE_EXTERIOR",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 24,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_SSANNE_EXTERIOR",
+      "dest_warp_id": 1
+    }
   ],
   "coord_events": [
 

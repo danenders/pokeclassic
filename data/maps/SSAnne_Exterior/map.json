@@ -12,12 +12,31 @@
   "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "direction": "up",
+      "offset": 9,
+      "map": "MAP_VERMILION_CITY"
+    }
+  ],
   "object_events": [
 
   ],
   "warp_events": [
-
+    {
+      "x": 32,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_SSANNE_1F_CORRIDOR",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 32,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY",
+      "dest_warp_id": 8
+    }
   ],
   "coord_events": [
 
