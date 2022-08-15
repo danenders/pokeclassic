@@ -161,7 +161,6 @@ static const u8 gText_MenuDebug[] = _("DEBUG");
 
 static const struct MenuAction sStartMenuItems[] =
 {
-<<<<<<< HEAD
     {gText_MenuPokedex, {.u8_void = StartMenuPokedexCallback}},
     {gText_MenuPokemon, {.u8_void = StartMenuPokemonCallback}},
     {gText_MenuBag, {.u8_void = StartMenuBagCallback}},

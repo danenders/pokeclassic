@@ -1437,6 +1437,7 @@ bool8 MetatileBehavior_IsStopSpinning(u8 metatileBehavior)
 bool8 MetatileBehavior_IsSpinTile(u8 metatileBehavior)
 {
     return metatileBehavior >= MB_SPIN_RIGHT && metatileBehavior <= MB_SPIN_DOWN;
+}
 
 bool8 MetatileBehavior_IsDirectionalUpRightStairWarp(u8 metatileBehavior)
 {

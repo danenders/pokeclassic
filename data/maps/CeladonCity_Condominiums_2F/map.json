@@ -18,28 +18,28 @@
   ],
   "warp_events": [
     {
-      "x": 5,
+      "x": 4,
       "y": 2,
       "elevation": 3,
       "dest_map": "MAP_CELADON_CITY_CONDOMINIUMS_1F",
       "dest_warp_id": 3
     },
     {
-      "x": 1,
+      "x": 2,
       "y": 2,
       "elevation": 3,
       "dest_map": "MAP_CELADON_CITY_CONDOMINIUMS_3F",
       "dest_warp_id": 0
     },
     {
-      "x": 10,
+      "x": 11,
       "y": 2,
       "elevation": 3,
       "dest_map": "MAP_CELADON_CITY_CONDOMINIUMS_3F",
       "dest_warp_id": 3
     },
     {
-      "x": 13,
+      "x": 12,
       "y": 2,
       "elevation": 3,
       "dest_map": "MAP_CELADON_CITY_CONDOMINIUMS_1F",

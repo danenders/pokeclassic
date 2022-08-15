@@ -85,11 +85,11 @@
 #define MB_WESTWARD_CURRENT 0x51
 #define MB_NORTHWARD_CURRENT 0x52
 #define MB_SOUTHWARD_CURRENT 0x53
-#define MB_SPIN_RIGHT 0x54 // TODO: implement this
-#define MB_SPIN_LEFT 0x55 // TODO: implement this
-#define MB_SPIN_UP 0x56 // TODO: implement this
-#define MB_SPIN_DOWN 0x57 // TODO: implement this
-#define MB_STOP_SPINNING 0x58 // TODO: implement this
+#define MB_SPIN_RIGHT 0x54
+#define MB_SPIN_LEFT 0x55
+#define MB_SPIN_UP 0x56
+#define MB_SPIN_DOWN 0x57
+#define MB_STOP_SPINNING 0x58
 #define MB_CABINET 0x59 // TODO: implement this
 #define MB_KITCHEN 0x5A // TODO: implement this
 #define MB_DRESSER 0x5B // TODO: implement this
@@ -216,11 +216,11 @@
 #define MB_ISOLATED_HORIZONTAL_RAIL 0xD4
 #define MB_VERTICAL_RAIL 0xD5
 #define MB_HORIZONTAL_RAIL 0xD6
-#define MB_VIDEO_GAME 0xD7// TODO: implement this
-#define MB_BURGLARY 0xD8 // TODO: implement this
-#define MB_TRAINER_TOWER_MONITOR 0xD9 // TODO: implement this
-#define MB_CYCLING_ROAD_PULL_DOWN 0xDA // TODO: implement this
-#define MB_CYCLING_ROAD_PULL_DOWN_GRASS 0xDB // TODO: implement this
+#define MB_UNUSED_D7 0xD7
+#define MB_UNUSED_D8 0xD8
+#define MB_UNUSED_D9 0xD9
+#define MB_UNUSED_DA 0xDA
+#define MB_UNUSED_DB 0xDB
 #define MB_UNUSED_DC 0xDC
 #define MB_UNUSED_DD 0xDD
 #define MB_UNUSED_DE 0xDE
@@ -236,11 +236,12 @@
 #define MB_WIRELESS_BOX_RESULTS 0xE8
 #define MB_TRAINER_HILL_TIMER 0xE9
 #define MB_SKY_PILLAR_CLOSED_DOOR 0xEA
-#define MB_UP_RIGHT_STAIR_WARP 0xEB
-#define MB_UP_LEFT_STAIR_WARP 0xEC
-#define MB_DOWN_RIGHT_STAIR_WARP 0xED
-#define MB_DOWN_LEFT_STAIR_WARP 0xEE
-#define MB_UNUSED_EF 0xEF
+
+#define MB_VIDEO_GAME 0xEB // TODO: implement this
+#define MB_BURGLARY 0xEC // TODO: implement this
+#define MB_TRAINER_TOWER_MONITOR 0xED // TODO: implement this
+#define MB_CYCLING_ROAD_PULL_DOWN 0xEE // TODO: implement this
+#define MB_CYCLING_ROAD_PULL_DOWN_GRASS 0xEF // TODO: implement this
 
 #define NUM_METATILE_BEHAVIORS 0xF0
 
