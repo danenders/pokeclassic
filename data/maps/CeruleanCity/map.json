@@ -109,13 +109,6 @@
       "dest_warp_id": 1
     },
     {
-      "x": 32,
-      "y": 8,
-      "elevation": 3,
-      "dest_map": "MAP_CERULEAN_CITY_HOUSE2",
-      "dest_warp_id": 1
-    },
-    {
       "x": 14,
       "y": 28,
       "elevation": 3,
@@ -135,13 +128,6 @@
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_HOUSE5",
       "dest_warp_id": 0
-    },
-    {
-      "x": 30,
-      "y": 8,
-      "elevation": 3,
-      "dest_map": "MAP_CERULEAN_CITY_HOUSE2",
-      "dest_warp_id": 1
     }
   ],
   "coord_events": [

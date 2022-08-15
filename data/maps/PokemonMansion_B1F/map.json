@@ -17,7 +17,13 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 34,
+      "y": 29,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_MANSION_1F",
+      "dest_warp_id": 2
+    }
   ],
   "coord_events": [
 

@@ -17,7 +17,41 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 9,
+      "y": 3,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_MANSION_3F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 34,
+      "y": 22,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_MANSION_3F",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 6,
+      "y": 14,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_MANSION_1F",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 9,
+      "y": 14,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_MANSION_3F",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 27,
+      "y": 17,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_MANSION_3F",
+      "dest_warp_id": 5
+    }
   ],
   "coord_events": [
 

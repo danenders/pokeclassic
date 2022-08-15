@@ -32,7 +32,21 @@
       "x": 6,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ROCKET_HIDEOUT_B3F",
+      "dest_map": "MAP_PALLET_TOWN_PLAYERS_HOUSE_1F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 15,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_PALLET_TOWN_RIVALS_HOUSE",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 16,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB",
       "dest_warp_id": 0
     }
   ],

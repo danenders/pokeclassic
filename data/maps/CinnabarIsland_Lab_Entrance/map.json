@@ -17,7 +17,34 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 4,
+      "y": 9,
+      "elevation": 3,
+      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 13,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_LAB_LOUNGE",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 19,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_LAB_RESEARCH_ROOM",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 25,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_LAB_EXPERIMENT_ROOM",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 

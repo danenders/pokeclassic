@@ -17,7 +17,55 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 8,
+      "y": 33,
+      "elevation": 3,
+      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_MANSION_2F",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 25,
+      "y": 27,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_MANSION_B1F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 34,
+      "y": 33,
+      "elevation": 3,
+      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 19,
+      "y": 22,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_MANSION_3F",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 20,
+      "y": 22,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_MANSION_3F",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 21,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_POKEMON_MANSION_1F",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 
