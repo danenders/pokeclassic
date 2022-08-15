@@ -515,7 +515,7 @@ static void AnimTask_UnusedLevelUpHealthBox_Step(u8 taskId)
             SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(gTasks[taskId].data[12], 16 - gTasks[taskId].data[12]));
             if (gTasks[taskId].data[12] == 0)
             {
-                ResetBattleAnimBg(0);
+                ResetBattleAnimBg(FALSE);
                 gBattle_WIN0H = 0;
                 gBattle_WIN0V = 0;
                 SetGpuReg(REG_OFFSET_WININ, WININ_WIN0_BG_ALL | WININ_WIN0_OBJ | WININ_WIN0_CLR | WININ_WIN1_BG_ALL | WININ_WIN1_OBJ | WININ_WIN1_CLR);
@@ -690,7 +690,7 @@ void AnimTask_SwitchOutBallEffect(u8 taskId)
         priority = gSprites[spriteId].oam.priority;
         subpriority = gSprites[spriteId].subpriority;
         gTasks[taskId].data[10] = AnimateBallOpenParticles(x, y + 32, priority, subpriority, ballId);
-        selectedPalettes = GetBattleBgPalettesMask(1, 0, 0, 0, 0, 0, 0);
+        selectedPalettes = GetBattlePalettesMask(TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE);
         gTasks[taskId].data[11] = LaunchBallFadeMonTask(FALSE, gBattleAnimAttacker, selectedPalettes, ballId);
         gTasks[taskId].data[0]++;
         break;
@@ -2018,24 +2018,24 @@ static void DestroyBallOpenAnimationParticle(struct Sprite *sprite)
 #define tPaletteHi data[11]
 #define tBallId    data[15]
 
-u8 LaunchBallFadeMonTask(bool8 unfadeLater, u8 battler, u32 selectedPalettes, u8 ballId)
+u8 LaunchBallFadeMonTask(bool8 unfadeLater, u8 spritePalNum, u32 selectedPalettes, u8 ballId)
 {
     u8 taskId;
 
     taskId = CreateTask(Task_FadeMon_ToBallColor, 5);
     gTasks[taskId].tBallId = ballId;
-    gTasks[taskId].tPalOffset = battler;
+    gTasks[taskId].tPalOffset = spritePalNum;
     gTasks[taskId].tPaletteLo = selectedPalettes;
     gTasks[taskId].tPaletteHi = selectedPalettes >> 16;
 
     if (!unfadeLater)
     {
-        BlendPalette(battler * 16 + 0x100, 16, 0, gBallOpenFadeColors[ballId]);
+        BlendPalette(spritePalNum * 16 + 0x100, 16, 0, gBallOpenFadeColors[ballId]);
         gTasks[taskId].tdCoeff = 1;
     }
     else
     {
-        BlendPalette(battler * 16 + 0x100, 16, 16, gBallOpenFadeColors[ballId]);
+        BlendPalette(spritePalNum * 16 + 0x100, 16, 16, gBallOpenFadeColors[ballId]);
         gTasks[taskId].tCoeff = 16;
         gTasks[taskId].tdCoeff = -1;
         gTasks[taskId].func = Task_FadeMon_ToNormal;
@@ -2408,7 +2408,7 @@ void AnimTask_FreePokeblockGfx(u8 taskId)
 
 static void SpriteCB_PokeBlock_Throw(struct Sprite *sprite)
 {
-    InitSpritePosToAnimAttacker(sprite, 0);
+    InitSpritePosToAnimAttacker(sprite, FALSE);
     sprite->sDuration = 30;
     sprite->sTargetX = GetBattlerSpriteCoord(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT), BATTLER_COORD_X) + gBattleAnimArgs[2];
     sprite->sTargetY = GetBattlerSpriteCoord(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT), BATTLER_COORD_Y) + gBattleAnimArgs[3];

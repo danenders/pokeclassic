@@ -22,9 +22,6 @@ struct MultiPartnerMenuPokemon
     /*0x1D*/ u8 language;
 };
 
-#define TYPE_NAME_LENGTH 6
-#define ABILITY_NAME_LENGTH 12
-
 // defines for the u8 array gTypeEffectiveness
 #define TYPE_EFFECT_ATK_TYPE(i)((gTypeEffectiveness[i + 0]))
 #define TYPE_EFFECT_DEF_TYPE(i)((gTypeEffectiveness[i + 1]))
@@ -61,8 +58,8 @@ void SpriteCb_HideAsMoveTarget(struct Sprite *sprite);
 void SpriteCB_OpponentMonFromBall(struct Sprite *sprite);
 void SpriteCB_BattleSpriteStartSlideLeft(struct Sprite *sprite);
 void SpriteCB_FaintSlideAnim(struct Sprite *sprite);
-void DoBounceEffect(u8 battlerId, u8 b, s8 c, s8 d);
-void EndBounceEffect(u8 battlerId, bool8 b);
+void DoBounceEffect(u8 battler, u8 which, s8 delta, s8 amplitude);
+void EndBounceEffect(u8 battler, u8 which);
 void SpriteCB_PlayerMonFromBall(struct Sprite *sprite);
 void SpriteCB_TrainerThrowObject(struct Sprite *sprite);
 void AnimSetCenterToCornerVecX(struct Sprite *sprite);

@@ -1950,7 +1950,7 @@ static void Task_SendMysteryGift(u8 taskId)
         data->state = 7;
         break;
     case 7:
-        switch (DoMysteryGiftYesNo(&data->textState, &data->yesNoWindowId, 0, gStringVar4))
+        switch (DoMysteryGiftYesNo(&data->textState, &data->yesNoWindowId, FALSE, gStringVar4))
         {
         case 0:
             LoadWirelessStatusIndicatorSpriteGfx();
@@ -3585,7 +3585,7 @@ static u8 CreateTask_ListenForWonderDistributor(struct RfuIncomingPlayerList * l
 static bool32 UR_PrintFieldMessage(const u8 *src)
 {
     LoadMessageBoxAndBorderGfx();
-    DrawDialogueFrame(0, 1);
+    DrawDialogueFrame(0, TRUE);
     StringExpandPlaceholders(gStringVar4, src);
     AddTextPrinterWithCustomSpeedForMessage(FALSE, 1);
     return FALSE;
@@ -3605,7 +3605,7 @@ static bool8 PrintOnTextbox(u8 *textState, const u8 *str)
     {
     case 0:
         LoadMessageBoxAndBorderGfx();
-        DrawDialogueFrame(0, 1);
+        DrawDialogueFrame(0, TRUE);
         StringExpandPlaceholders(gStringVar4, str);
         AddTextPrinterForMessage_2(TRUE);
         (*textState)++;
@@ -4318,7 +4318,7 @@ static bool32 HasAtLeastTwoMonsOfLevel30OrLower(void)
 
     for (i = 0; i < gPlayerPartyCount; i++)
     {
-        if (GetMonData(&gPlayerParty[i], MON_DATA_LEVEL) <= 30
+        if (GetMonData(&gPlayerParty[i], MON_DATA_LEVEL) <= UNION_ROOM_MAX_LEVEL
          && GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2) != SPECIES_EGG)
             count++;
     }

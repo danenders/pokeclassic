@@ -202,6 +202,7 @@ EWRAM_DATA static struct InitialPlayerAvatarState sInitialPlayerAvatarState = {0
 EWRAM_DATA static u16 sAmbientCrySpecies = 0;
 EWRAM_DATA static bool8 sIsAmbientCryWaterMon = FALSE;
 EWRAM_DATA struct LinkPlayerObjectEvent gLinkPlayerObjectEvents[4] = {0};
+EWRAM_DATA bool8 gExitStairsMovementDisabled = FALSE;
 
 static const struct WarpData sDummyWarpData =
 {
@@ -318,7 +319,7 @@ static u8 MovementEventModeCB_Normal(struct LinkPlayerObjectEvent *, struct Obje
 static u8 MovementEventModeCB_Ignored(struct LinkPlayerObjectEvent *, struct ObjectEvent *, u8);
 static u8 MovementEventModeCB_Scripted(struct LinkPlayerObjectEvent *, struct ObjectEvent *, u8);
 
-static u8 (*const gLinkPlayerMovementModes[])(struct LinkPlayerObjectEvent *, struct ObjectEvent *, u8) =
+static u8 (*const sLinkPlayerMovementModes[])(struct LinkPlayerObjectEvent *, struct ObjectEvent *, u8) =
 {
     [MOVEMENT_MODE_FREE]     = MovementEventModeCB_Normal,
     [MOVEMENT_MODE_FROZEN]   = MovementEventModeCB_Ignored,
@@ -330,7 +331,7 @@ static u8 FacingHandler_DpadMovement(struct LinkPlayerObjectEvent *, struct Obje
 static u8 FacingHandler_ForcedFacingChange(struct LinkPlayerObjectEvent *, struct ObjectEvent *, u8);
 
 // These handlers return TRUE if the movement was scripted and successful, and FALSE otherwise.
-static bool8 (*const gLinkPlayerFacingHandlers[])(struct LinkPlayerObjectEvent *, struct ObjectEvent *, u8) =
+static bool8 (*const sLinkPlayerFacingHandlers[])(struct LinkPlayerObjectEvent *, struct ObjectEvent *, u8) =
 {
     FacingHandler_DoNothing,
     FacingHandler_DpadMovement,
@@ -349,7 +350,7 @@ static void MovementStatusHandler_EnterFreeMode(struct LinkPlayerObjectEvent *, 
 static void MovementStatusHandler_TryAdvanceScript(struct LinkPlayerObjectEvent *, struct ObjectEvent *);
 
 // These handlers are run after an attempted movement.
-static void (*const gMovementStatusHandler[])(struct LinkPlayerObjectEvent *, struct ObjectEvent *) =
+static void (*const sMovementStatusHandler[])(struct LinkPlayerObjectEvent *, struct ObjectEvent *) =
 {
     // FALSE:
     MovementStatusHandler_EnterFreeMode,
@@ -945,6 +946,10 @@ static u8 GetAdjustedInitialDirection(struct InitialPlayerAvatarState *playerStr
         return DIR_EAST;
     else if (MetatileBehavior_IsEastArrowWarp(metatileBehavior) == TRUE)
         return DIR_WEST;
+    else if (MetatileBehavior_IsDirectionalUpRightStairWarp(metatileBehavior) == TRUE || MetatileBehavior_IsDirectionalDownRightStairWarp(metatileBehavior) == TRUE)
+        return DIR_WEST;
+    else if (MetatileBehavior_IsDirectionalUpLeftStairWarp(metatileBehavior) == TRUE || MetatileBehavior_IsDirectionalDownLeftStairWarp(metatileBehavior) == TRUE)
+        return DIR_EAST;
     else if ((playerStruct->transitionFlags == PLAYER_AVATAR_FLAG_UNDERWATER  && transitionFlags == PLAYER_AVATAR_FLAG_SURFING)
           || (playerStruct->transitionFlags == PLAYER_AVATAR_FLAG_SURFING && transitionFlags == PLAYER_AVATAR_FLAG_UNDERWATER))
         return playerStruct->direction;
@@ -1725,6 +1730,7 @@ void CB2_ContinueSavedGame(void)
     PlayTimeCounter_Start();
     ScriptContext1_Init();
     ScriptContext2_Disable();
+    gExitStairsMovementDisabled = TRUE;
     InitMatchCallCounters();
     if (UseContinueGameWarp() == TRUE)
     {
@@ -1810,6 +1816,7 @@ static bool32 LoadMapInStepsLink(u8 *state)
         (*state)++;
         break;
     case 1:
+        gExitStairsMovementDisabled = FALSE;
         LoadMapFromWarp(TRUE);
         (*state)++;
         break;
@@ -2477,9 +2484,9 @@ static u16 KeyInterCB_ReadButtons(u32 key)
     return LINK_KEY_CODE_EMPTY;
 }
 
-static u16 GetDirectionForDpadKey(u16 a1)
+static u16 GetDirectionForDpadKey(u16 key)
 {
-    switch (a1)
+    switch (key)
     {
     case LINK_KEY_CODE_DPAD_RIGHT:
         return FACING_RIGHT;
@@ -2598,7 +2605,7 @@ static u16 KeyInterCB_Ready(u32 keyOrPlayerId)
     }
 }
 
-static u16 KeyInterCB_SetReady(u32 a1)
+static u16 KeyInterCB_SetReady(u32 key)
 {
     SetKeyInterceptCallback(KeyInterCB_Ready);
     return LINK_KEY_CODE_READY;
@@ -3048,9 +3055,9 @@ static void SetPlayerFacingDirection(u8 linkPlayerId, u8 facing)
         {
             // This is a hack to split this code onto two separate lines, without declaring a local variable.
             // C++ style inline variables would be nice here.
-            #define TEMP gLinkPlayerMovementModes[linkPlayerObjEvent->movementMode](linkPlayerObjEvent, objEvent, facing)
+            #define TEMP sLinkPlayerMovementModes[linkPlayerObjEvent->movementMode](linkPlayerObjEvent, objEvent, facing)
 
-            gMovementStatusHandler[TEMP](linkPlayerObjEvent, objEvent);
+            sMovementStatusHandler[TEMP](linkPlayerObjEvent, objEvent);
 
             // Clean up the hack.
             #undef TEMP
@@ -3061,7 +3068,7 @@ static void SetPlayerFacingDirection(u8 linkPlayerId, u8 facing)
 
 static u8 MovementEventModeCB_Normal(struct LinkPlayerObjectEvent *linkPlayerObjEvent, struct ObjectEvent *objEvent, u8 dir)
 {
-    return gLinkPlayerFacingHandlers[dir](linkPlayerObjEvent, objEvent, dir);
+    return sLinkPlayerFacingHandlers[dir](linkPlayerObjEvent, objEvent, dir);
 }
 
 static u8 MovementEventModeCB_Ignored(struct LinkPlayerObjectEvent *linkPlayerObjEvent, struct ObjectEvent *objEvent, u8 dir)
@@ -3072,7 +3079,7 @@ static u8 MovementEventModeCB_Ignored(struct LinkPlayerObjectEvent *linkPlayerOb
 // Identical to MovementEventModeCB_Normal
 static u8 MovementEventModeCB_Scripted(struct LinkPlayerObjectEvent *linkPlayerObjEvent, struct ObjectEvent *objEvent, u8 dir)
 {
-    return gLinkPlayerFacingHandlers[dir](linkPlayerObjEvent, objEvent, dir);
+    return sLinkPlayerFacingHandlers[dir](linkPlayerObjEvent, objEvent, dir);
 }
 
 static bool8 FacingHandler_DoNothing(struct LinkPlayerObjectEvent *linkPlayerObjEvent, struct ObjectEvent *objEvent, u8 dir)
@@ -3209,7 +3216,7 @@ static void SpriteCB_LinkPlayer(struct Sprite *sprite)
     else
         StartSpriteAnimIfDifferent(sprite, GetMoveDirectionAnimNum(linkDirection(objEvent)));
 
-    UpdateObjectEventSpriteInvisibility(sprite, 0);
+    UpdateObjectEventSpriteInvisibility(sprite, FALSE);
     if (objEvent->triggerGroundEffectsOnMove)
     {
         sprite->invisible = ((sprite->data[7] & 4) >> 2);

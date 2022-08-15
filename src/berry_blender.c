@@ -1188,9 +1188,9 @@ static void SetBerrySpriteData(struct Sprite* sprite, s16 x, s16 y, s16 bounceSp
 #undef sXSpeed
 #undef sYDownSpeed
 
-static void CreateBerrySprite(u16 a0, u8 playerId)
+static void CreateBerrySprite(u16 itemId, u8 playerId)
 {
-    u8 spriteId = CreateSpinningBerrySprite(a0 + FIRST_BERRY_INDEX - 10, 0, 80, playerId & 1);
+    u8 spriteId = CreateSpinningBerrySprite(ITEM_TO_BERRY(itemId) - 1, 0, 80, playerId & 1);
     SetBerrySpriteData(&gSprites[spriteId],
                         sBerrySpriteData[playerId][0],
                         sBerrySpriteData[playerId][1],
@@ -2238,7 +2238,7 @@ static void CB2_PlayBlender(void)
     UpdatePaletteFade();
 }
 
-static void Blender_DummiedOutFunc(s16 a0, s16 a1)
+static void Blender_DummiedOutFunc(s16 bgX, s16 bgY)
 {
 
 }
@@ -3553,7 +3553,7 @@ static bool8 PrintBlendingResults(void)
             sBerryBlender->mainState++;
         break;
     case 5:
-        ClearStdWindowAndFrameToTransparent(5, 1);
+        ClearStdWindowAndFrameToTransparent(5, TRUE);
 
         for (i = 0; i < BLENDER_MAX_PLAYERS; i++)
         {
@@ -3692,7 +3692,7 @@ static bool8 PrintBlendingRanking(void)
         }
         break;
     case 3:
-        DrawStdFrameWithCustomTileAndPalette(5, 0, 1, 0xD);
+        DrawStdFrameWithCustomTileAndPalette(5, FALSE, 1, 0xD);
         xPos = GetStringCenterAlignXOffset(FONT_NORMAL, sText_Ranking, 168);
         Blender_AddTextPrinter(5, sText_Ranking, xPos, 1, TEXT_SKIP_DRAW, 0);
 
@@ -3764,7 +3764,7 @@ void ShowBerryBlenderRecordWindow(void)
 
     winTemplate = sBlenderRecordWindowTemplate;
     gRecordsWindowId = AddWindow(&winTemplate);
-    DrawStdWindowFrame(gRecordsWindowId, 0);
+    DrawStdWindowFrame(gRecordsWindowId, FALSE);
     FillWindowPixelBuffer(gRecordsWindowId, PIXEL_FILL(1));
 
     xPos = GetStringCenterAlignXOffset(FONT_NORMAL, gText_BlenderMaxSpeedRecord, 144);

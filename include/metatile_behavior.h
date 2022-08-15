@@ -148,11 +148,18 @@ bool8 MetatileBehavior_IsQuestionnaire(u8);
 bool8 MetatileBehavior_IsLongGrass_Duplicate(u8);
 bool8 MetatileBehavior_IsLongGrassSouthEdge(u8);
 bool8 MetatileBehavior_IsTrainerHillTimer(u8);
+
 bool8 MetatileBehavior_IsSpinRight(u8);
 bool8 MetatileBehavior_IsSpinLeft(u8);
 bool8 MetatileBehavior_IsSpinUp(u8);
 bool8 MetatileBehavior_IsSpinDown(u8);
 bool8 MetatileBehavior_IsStopSpinning(u8);
 bool8 MetatileBehavior_IsSpinTile(u8);
+
+bool8 MetatileBehavior_IsDirectionalUpRightStairWarp(u8);
+bool8 MetatileBehavior_IsDirectionalUpLeftStairWarp(u8);
+bool8 MetatileBehavior_IsDirectionalDownRightStairWarp(u8);
+bool8 MetatileBehavior_IsDirectionalDownLeftStairWarp(u8);
+bool8 MetatileBehavior_IsDirectionalStairWarp(u8);
 
 #endif // GUARD_METATILE_BEHAVIOR_H

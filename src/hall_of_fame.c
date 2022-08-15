@@ -52,6 +52,8 @@ struct HallofFameTeam
     struct HallofFameMon mon[PARTY_SIZE];
 };
 
+STATIC_ASSERT(sizeof(struct HallofFameTeam) * HALL_OF_FAME_MAX_TEAMS <= SECTOR_DATA_SIZE * NUM_HOF_SECTORS, HallOfFameFreeSpace);
+
 struct HofGfx
 {
     u16 state;
@@ -512,7 +514,7 @@ static void Task_Hof_InitTeamSaveData(u8 taskId)
     }
     *lastSavedTeam = *sHofMonPtr;
 
-    DrawDialogueFrame(0, 0);
+    DrawDialogueFrame(0, FALSE);
     AddTextPrinterParameterized2(0, FONT_NORMAL, gText_SavingDontTurnOffPower, 0, NULL, 2, 1, 3);
     CopyWindowToVram(0, COPYWIN_FULL);
     gTasks[taskId].func = Task_Hof_TrySaveData;
@@ -527,10 +529,8 @@ static void Task_Hof_TrySaveData(u8 taskId)
         UnsetBgTilemapBuffer(3);
         FreeAllWindowBuffers();
 
-        if (sHofGfxPtr != NULL)
-            FREE_AND_SET_NULL(sHofGfxPtr);
-        if (sHofMonPtr != NULL)
-            FREE_AND_SET_NULL(sHofMonPtr);
+        TRY_FREE_AND_SET_NULL(sHofGfxPtr);
+        TRY_FREE_AND_SET_NULL(sHofMonPtr);
 
         DestroyTask(taskId);
     }
@@ -700,7 +700,7 @@ static void Task_Hof_DisplayPlayer(u8 taskId)
     ShowBg(0);
     ShowBg(1);
     ShowBg(3);
-    gTasks[taskId].tPlayerSpriteID = CreateTrainerPicSprite(PlayerGenderToFrontTrainerPicId_Debug(gSaveBlock2Ptr->playerGender, TRUE), 1, 120, 72, 6, TAG_NONE);
+    gTasks[taskId].tPlayerSpriteID = CreateTrainerPicSprite(PlayerGenderToFrontTrainerPicId_Debug(gSaveBlock2Ptr->playerGender, TRUE), TRUE, 120, 72, 6, TAG_NONE);
     AddWindow(&sHof_WindowTemplate);
     LoadWindowGfx(1, gSaveBlock2Ptr->optionsWindowFrameType, 0x21D, 0xD0);
     LoadPalette(GetTextWindowPalette(1), 0xE0, 0x20);
@@ -722,7 +722,7 @@ static void Task_Hof_WaitAndPrintPlayerInfo(u8 taskId)
     {
         FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 0x20, 0x20);
         HallOfFame_PrintPlayerInfo(1, 2);
-        DrawDialogueFrame(0, 0);
+        DrawDialogueFrame(0, FALSE);
         AddTextPrinterParameterized2(0, FONT_NORMAL, gText_LeagueChamp, 0, NULL, 2, 1, 3);
         CopyWindowToVram(0, COPYWIN_FULL);
         gTasks[taskId].func = Task_Hof_ExitOnKeyPressed;
@@ -771,10 +771,8 @@ static void Task_Hof_HandleExit(u8 taskId)
         ResetBgsAndClearDma3BusyFlags(0);
         DestroyTask(taskId);
 
-        if (sHofGfxPtr != NULL)
-            FREE_AND_SET_NULL(sHofGfxPtr);
-        if (sHofMonPtr != NULL)
-            FREE_AND_SET_NULL(sHofMonPtr);
+        TRY_FREE_AND_SET_NULL(sHofGfxPtr);
+        TRY_FREE_AND_SET_NULL(sHofMonPtr);
 
         StartCredits();
     }
@@ -933,7 +931,7 @@ static void Task_HofPC_DrawSpritesPrintText(u8 taskId)
             if (currMon->species == SPECIES_EGG)
                 posY += 10;
 
-            spriteId = CreateMonPicSprite_HandleDeoxys(currMon->species, currMon->tid, currMon->personality, 1, posX, posY, i, TAG_NONE);
+            spriteId = CreateMonPicSprite_HandleDeoxys(currMon->species, currMon->tid, currMon->personality, TRUE, posX, posY, i, TAG_NONE);
             gSprites[spriteId].oam.priority = 1;
             gTasks[taskId].tMonSpriteId(i) = spriteId;
         }
@@ -1079,10 +1077,8 @@ static void Task_HofPC_HandleExit(u8 taskId)
         ResetBgsAndClearDma3BusyFlags(0);
         DestroyTask(taskId);
 
-        if (sHofGfxPtr != NULL)
-            FREE_AND_SET_NULL(sHofGfxPtr);
-        if (sHofMonPtr != NULL)
-            FREE_AND_SET_NULL(sHofMonPtr);
+        TRY_FREE_AND_SET_NULL(sHofGfxPtr);
+        TRY_FREE_AND_SET_NULL(sHofMonPtr);
 
         ReturnFromHallOfFamePC();
     }
@@ -1091,7 +1087,7 @@ static void Task_HofPC_HandleExit(u8 taskId)
 static void Task_HofPC_PrintDataIsCorrupted(u8 taskId)
 {
     HofPCTopBar_Print(gText_AButtonExit, 8, TRUE);
-    DrawDialogueFrame(0, 0);
+    DrawDialogueFrame(0, FALSE);
     AddTextPrinterParameterized2(0, FONT_NORMAL, gText_HOFCorrupted, 0, NULL, 2, 1, 3);
     CopyWindowToVram(0, COPYWIN_FULL);
     gTasks[taskId].func = Task_HofPC_ExitOnButtonPress;

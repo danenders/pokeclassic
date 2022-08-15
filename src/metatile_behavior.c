@@ -1408,6 +1408,7 @@ bool8 MetatileBehavior_IsTrainerHillTimer(u8 metatileBehavior)
         return FALSE;
 }
 
+
 bool8 MetatileBehavior_IsSpinRight(u8 metatileBehavior)
 {
     return metatileBehavior == MB_SPIN_RIGHT;
@@ -1436,4 +1437,44 @@ bool8 MetatileBehavior_IsStopSpinning(u8 metatileBehavior)
 bool8 MetatileBehavior_IsSpinTile(u8 metatileBehavior)
 {
     return metatileBehavior >= MB_SPIN_RIGHT && metatileBehavior <= MB_SPIN_DOWN;
+
+bool8 MetatileBehavior_IsDirectionalUpRightStairWarp(u8 metatileBehavior)
+{
+    if(metatileBehavior == MB_UP_RIGHT_STAIR_WARP)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsDirectionalUpLeftStairWarp(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_UP_LEFT_STAIR_WARP)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsDirectionalDownRightStairWarp(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_DOWN_RIGHT_STAIR_WARP)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsDirectionalDownLeftStairWarp(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_DOWN_LEFT_STAIR_WARP)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsDirectionalStairWarp(u8 metatileBehavior)
+{
+    if (metatileBehavior >= MB_UP_RIGHT_STAIR_WARP && metatileBehavior <= MB_DOWN_LEFT_STAIR_WARP)
+        return TRUE;
+    else
+        return FALSE;
+
 }

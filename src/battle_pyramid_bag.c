@@ -1195,7 +1195,7 @@ static void Task_ChooseHowManyToToss(u8 taskId)
     {
         // Toss
         PlaySE(SE_SELECT);
-        ClearStdWindowAndFrameToTransparent(WIN_TOSS_NUM, 0);
+        ClearStdWindowAndFrameToTransparent(WIN_TOSS_NUM, FALSE);
         ClearWindowTilemap(WIN_TOSS_NUM);
         ScheduleBgCopyTilemapToVram(1);
         AskConfirmToss(taskId);
@@ -1204,7 +1204,7 @@ static void Task_ChooseHowManyToToss(u8 taskId)
     {
         // Cancel tossing
         PlaySE(SE_SELECT);
-        ClearStdWindowAndFrameToTransparent(WIN_TOSS_NUM, 0);
+        ClearStdWindowAndFrameToTransparent(WIN_TOSS_NUM, FALSE);
         ClearWindowTilemap(WIN_TOSS_NUM);
         ScheduleBgCopyTilemapToVram(1);
         DontTossItem(taskId);
@@ -1410,7 +1410,7 @@ void TryStoreHeldItemsInPyramidBag(void)
 
     memcpy(newItems, gSaveBlock2Ptr->frontier.pyramidBag.itemId[gSaveBlock2Ptr->frontier.lvlMode], PYRAMID_BAG_ITEMS_COUNT * sizeof(u16));
     memcpy(newQuantities, gSaveBlock2Ptr->frontier.pyramidBag.quantity[gSaveBlock2Ptr->frontier.lvlMode], PYRAMID_BAG_ITEMS_COUNT * sizeof(u8));
-    for (i = 0; i < 3; i++)
+    for (i = 0; i < FRONTIER_PARTY_SIZE; i++)
     {
         heldItem = GetMonData(&party[i], MON_DATA_HELD_ITEM);
         if (heldItem != ITEM_NONE && !AddBagItem(heldItem, 1))
@@ -1426,10 +1426,8 @@ void TryStoreHeldItemsInPyramidBag(void)
     }
 
     heldItem = ITEM_NONE;
-    for (i = 0; i < 3; i++)
-    {
+    for (i = 0; i < FRONTIER_PARTY_SIZE; i++)
         SetMonData(&party[i], MON_DATA_HELD_ITEM, &heldItem);
-    }
     gSpecialVar_Result = 0;
     Free(newItems);
     Free(newQuantities);
@@ -1466,7 +1464,7 @@ static void PyramidBagPrint_Quantity(u8 windowId, const u8 *src, u8 x, u8 y, u8 
 
 static void DrawTossNumberWindow(u8 windowId)
 {
-    DrawStdFrameWithCustomTileAndPalette(windowId, 0, 1, 0xE);
+    DrawStdFrameWithCustomTileAndPalette(windowId, FALSE, 1, 0xE);
     ScheduleBgCopyTilemapToVram(1);
 }
 

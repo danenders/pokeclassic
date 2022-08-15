@@ -1344,7 +1344,7 @@ static void SwitchBagPocket(u8 taskId, s16 deltaBagPocketId, bool16 skipEraseLis
     DrawPocketIndicatorSquare(newPocket, TRUE);
     FillBgTilemapBufferRect_Palette0(2, 11, 14, 2, 15, 16);
     ScheduleBgCopyTilemapToVram(2);
-    SetBagVisualPocketId(newPocket, 1);
+    SetBagVisualPocketId(newPocket, TRUE);
     RemoveBagSprite(ITEMMENUSPRITE_BALL);
     AddSwitchPocketRotatingBallSprite(deltaBagPocketId);
     SetTaskFuncWithFollowupFunc(taskId, Task_SwitchBagPocket, gTasks[taskId].func);
@@ -2478,7 +2478,7 @@ static u8 BagMenu_AddWindow(u8 windowType)
     if (*windowId == WINDOW_NONE)
     {
         *windowId = AddWindow(&sContextMenuWindowTemplates[windowType]);
-        DrawStdFrameWithCustomTileAndPalette(*windowId, 0, 1, 14);
+        DrawStdFrameWithCustomTileAndPalette(*windowId, FALSE, 1, 14);
         ScheduleBgCopyTilemapToVram(1);
     }
     return *windowId;

@@ -1641,7 +1641,7 @@ static void Task_PrintAndWaitForText(u8 taskId)
     {
         if (gTasks[taskId].tKeepOpen == FALSE)
         {
-            ClearStdWindowAndFrameToTransparent(6, 0);
+            ClearStdWindowAndFrameToTransparent(6, FALSE);
             ClearWindowTilemap(6);
         }
         DestroyTask(taskId);
@@ -1668,7 +1668,7 @@ static void Task_ReturnToChooseMonAfterText(u8 taskId)
 {
     if (IsPartyMenuTextPrinterActive() != TRUE)
     {
-        ClearStdWindowAndFrameToTransparent(6, 0);
+        ClearStdWindowAndFrameToTransparent(6, FALSE);
         ClearWindowTilemap(6);
         if (MenuHelpers_IsLinkActive() == TRUE)
         {
@@ -2371,7 +2371,7 @@ static void PartyMenuRemoveWindow(u8 *ptr)
 {
     if (*ptr != WINDOW_NONE)
     {
-        ClearStdWindowAndFrameToTransparent(*ptr, 0);
+        ClearStdWindowAndFrameToTransparent(*ptr, FALSE);
         RemoveWindow(*ptr);
         *ptr = WINDOW_NONE;
         ScheduleBgCopyTilemapToVram(2);
@@ -3309,7 +3309,7 @@ static void CursorCb_Read(u8 taskId)
 
 static void CB2_ReadHeldMail(void)
 {
-    ReadMail(&gSaveBlock1Ptr->mail[GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_MAIL)], CB2_ReturnToPartyMenuFromReadingMail, 1);
+    ReadMail(&gSaveBlock1Ptr->mail[GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_MAIL)], CB2_ReturnToPartyMenuFromReadingMail, TRUE);
 }
 
 static void CB2_ReturnToPartyMenuFromReadingMail(void)
@@ -4969,7 +4969,7 @@ static void Task_TryLearnNewMoves(u8 taskId)
 {
     u16 learnMove;
 
-    if (WaitFanfare(0) && ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON))))
+    if (WaitFanfare(FALSE) && ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON))))
     {
         RemoveLevelUpStatsWindow();
         learnMove = MonTryLearningNewMove(&gPlayerParty[gPartyMenu.slotId], TRUE);
@@ -5647,11 +5647,11 @@ static u8 GetBattleEntryLevelCap(void)
     case FACILITY_MULTI_OR_EREADER:
         return MAX_LEVEL;
     case FACILITY_UNION_ROOM:
-        return 30;
+        return UNION_ROOM_MAX_LEVEL;
     default: // Battle Frontier
         if (gSpecialVar_0x8004 == FRONTIER_LVL_50)
-            return 50;
-        return MAX_LEVEL;
+            return FRONTIER_MAX_LEVEL_50;
+        return FRONTIER_MAX_LEVEL_OPEN;
     }
 }
 
