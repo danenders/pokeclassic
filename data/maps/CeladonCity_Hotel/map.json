@@ -17,7 +17,27 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 3,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY",
+      "dest_warp_id": 9
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY",
+      "dest_warp_id": 9
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY",
+      "dest_warp_id": 9
+    }
   ],
   "coord_events": [
 

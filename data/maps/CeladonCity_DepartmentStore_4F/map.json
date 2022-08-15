@@ -17,7 +17,27 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 6,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY_DEPARTMENT_STORE_ELEVATOR",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY_DEPARTMENT_STORE_3F",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY_DEPARTMENT_STORE_5F",
+      "dest_warp_id": 1
+    }
   ],
   "coord_events": [
 

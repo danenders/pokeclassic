@@ -17,7 +17,34 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 8,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 9,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 16,
+      "y": 2,
+      "elevation": 3,
+      "dest_map": "MAP_ROCKET_HIDEOUT_B1F",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 
