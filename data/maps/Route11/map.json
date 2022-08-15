@@ -22,6 +22,11 @@
       "direction": "right",
       "offset": -60,
       "map": "MAP_ROUTE12"
+    },
+    {
+      "direction": "left",
+      "offset": -10,
+      "map": "MAP_VERMILION_CITY"
     }
   ],
   "object_events": [

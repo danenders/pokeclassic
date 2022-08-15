@@ -17,7 +17,27 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 14,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_PEWTER_CITY",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 21,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_PEWTER_CITY",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_PEWTER_CITY_MUSEUM_2F",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 
