@@ -28,7 +28,76 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 17,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE2_HOUSE",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 17,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_DIGLETTS_CAVE_NORTH_ENTRANCE",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 18,
+      "y": 46,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE2_EAST_BUILDING",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 19,
+      "y": 46,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE2_EAST_BUILDING",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 19,
+      "y": 41,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE2_EAST_BUILDING",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 18,
+      "y": 41,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE2_EAST_BUILDING",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 5,
+      "y": 51,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_FOREST_SOUTH_ENTRANCE",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 6,
+      "y": 51,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_FOREST_SOUTH_ENTRANCE",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 5,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_FOREST_NORTH_ENTRANCE",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 6,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_FOREST_NORTH_ENTRANCE",
+      "dest_warp_id": 1
+    }
   ],
   "coord_events": [
 
