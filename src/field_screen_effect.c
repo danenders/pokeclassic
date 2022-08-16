@@ -555,7 +555,8 @@ void DoTeleportTileWarp(void)
 {
     ScriptContext2_Enable();
     TryFadeOutOldMapMusic();
-    WarpFadeOutScreen();
+    DoPlayerSpinExit();
+    FadeScreen(FADE_TO_BLACK, 3);
     PlaySE(SE_WARP_IN);
     CreateTask(Task_WarpAndLoadMap, 10);
     gFieldCallback = FieldCB_SpinEnterWarp;
