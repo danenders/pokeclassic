@@ -17,7 +17,13 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 10,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE16_NORTH_ENTRANCE_1F",
+      "dest_warp_id": 4
+    }
   ],
   "coord_events": [
 

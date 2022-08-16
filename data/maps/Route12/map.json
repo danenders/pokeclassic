@@ -33,7 +33,27 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 14,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE12_NORTH_ENTRANCE_1F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 14,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE12",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 12,
+      "y": 86,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE12_FISHING_HOUSE",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 

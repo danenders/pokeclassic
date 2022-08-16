@@ -28,7 +28,20 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 9,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE15_WEST_ENTRANCE_1F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 16,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE15_WEST_ENTRANCE_1F",
+      "dest_warp_id": 1
+    }
   ],
   "coord_events": [
 

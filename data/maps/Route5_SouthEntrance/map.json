@@ -23,6 +23,13 @@
       "elevation": 0,
       "dest_map": "MAP_SAFFRON_CITY",
       "dest_warp_id": 11
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE5",
+      "dest_warp_id": 2
     }
   ],
   "coord_events": [

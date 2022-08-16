@@ -23,7 +23,13 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 51,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE25_SEA_COTTAGE",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 
