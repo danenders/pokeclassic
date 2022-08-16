@@ -17,7 +17,20 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 18,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_POKEMON_TOWER_3F",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_POKEMON_TOWER_5F",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 

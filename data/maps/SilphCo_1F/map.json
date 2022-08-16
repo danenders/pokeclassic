@@ -17,13 +17,32 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 22,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_SILPH_CO_ELEVATOR",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 8,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_SAFFRON_CITY",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 31,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_SILPH_CO_2F",
+      "dest_warp_id": 1
+    }
   ],
   "coord_events": [
 
   ],
   "bg_events": [
 
-  ],
-  "floor_number": ""
+  ]
 }

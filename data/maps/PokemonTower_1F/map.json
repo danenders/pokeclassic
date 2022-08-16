@@ -17,7 +17,20 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 11,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_LAVENDER_TOWN",
+      "dest_warp_id": 5
+    },
+    {
+      "x": 18,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_POKEMON_TOWER_2F",
+      "dest_warp_id": 1
+    }
   ],
   "coord_events": [
 

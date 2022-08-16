@@ -28,7 +28,13 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 31,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_UNDERGROUND_PATH_NORTH_ENTRANCE",
+      "dest_warp_id": 1
+    }
   ],
   "coord_events": [
 

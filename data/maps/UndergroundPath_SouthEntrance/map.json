@@ -17,7 +17,20 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 6,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE6",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 
