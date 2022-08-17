@@ -1,0 +1,52 @@
+{
+  "id": "MAP_ROUTE20",
+  "name": "Route20",
+  "layout": "LAYOUT_ROUTE20",
+  "music": "MUS_RG_ROUTE3",
+  "region_map_section": "MAPSEC_ROUTE_20",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "direction": "right",
+      "offset": -40,
+      "map": "MAP_ROUTE19"
+    },
+    {
+      "direction": "left",
+      "offset": 0,
+      "map": "MAP_CINNABAR_ISLAND"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 60,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_1F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 72,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_1F",
+      "dest_warp_id": 1
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

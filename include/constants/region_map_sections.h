@@ -98,8 +98,8 @@
 #define MAPSEC_CELADON_CITY                 0x5E
 #define MAPSEC_FUCHSIA_CITY                 0x5F
 #define MAPSEC_CINNABAR_ISLAND              0x60
-#define MAPSEC_INDIGO_PLATEAU               0x61
-#define MAPSEC_SAFFRON_CITY                 0x62
+#define MAPSEC_SAFFRON_CITY                 0x61
+#define MAPSEC_INDIGO_PLATEAU               0x62
 #define MAPSEC_ROUTE_4_FLYDUP               0x63
 #define MAPSEC_ROUTE_10_FLYDUP              0x64
 #define MAPSEC_ROUTE_1                      0x65

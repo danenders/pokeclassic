@@ -581,7 +581,7 @@ static u32 LoopedTask_OpenConditionMenu(s32 state)
     case 0:
         ResetBldCnt();
         StartOptionAnimations_Exit();
-        HideMainOrSubMenuLeftHeader(POKENAV_GFX_MAIN_MENU, 0);
+        HideMainOrSubMenuLeftHeader(POKENAV_GFX_MAIN_MENU, FALSE);
         PlaySE(SE_SELECT);
         return LT_INC_AND_PAUSE;
     case 1:
@@ -620,7 +620,7 @@ static u32 LoopedTask_ReturnToMainMenu(s32 state)
     case 0:
         ResetBldCnt();
         StartOptionAnimations_Exit();
-        HideMainOrSubMenuLeftHeader(POKENAV_GFX_CONDITION_MENU, 0);
+        HideMainOrSubMenuLeftHeader(POKENAV_GFX_CONDITION_MENU, FALSE);
         return LT_INC_AND_PAUSE;
     case 1:
         if (AreMenuOptionSpritesMoving())
@@ -691,7 +691,7 @@ static u32 LoopedTask_ReturnToConditionMenu(s32 state)
     case 0:
         ResetBldCnt();
         StartOptionAnimations_Exit();
-        HideMainOrSubMenuLeftHeader(POKENAV_GFX_SEARCH_MENU, 0);
+        HideMainOrSubMenuLeftHeader(POKENAV_GFX_SEARCH_MENU, FALSE);
         return LT_INC_AND_PAUSE;
     case 1:
         if (AreMenuOptionSpritesMoving())

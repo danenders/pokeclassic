@@ -1,0 +1,29 @@
+{
+  "id": "MAP_POKEMON_LEAGUE_HALL_OF_FAME",
+  "name": "PokemonLeague_HallOfFame",
+  "layout": "LAYOUT_POKEMON_LEAGUE_HALL_OF_FAME",
+  "music": "MUS_RG_SLOW_PALLET",
+  "region_map_section": "MAPSEC_POKEMON_LEAGUE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ],
+  "floor_number": ""
+}

@@ -1,0 +1,29 @@
+{
+  "id": "MAP_ROCK_TUNNEL_1F",
+  "name": "RockTunnel_1F",
+  "layout": "LAYOUT_ROCK_TUNNEL_1F",
+  "music": "MUS_RG_MT_MOON",
+  "region_map_section": "MAPSEC_ROCK_TUNNEL",
+  "requires_flash": true,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ],
+  "floor_number": ""
+}

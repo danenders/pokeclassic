@@ -1,0 +1,78 @@
+{
+  "id": "MAP_VIRIDIAN_CITY",
+  "name": "ViridianCity",
+  "layout": "LAYOUT_VIRIDIAN_CITY",
+  "music": "MUS_RG_PEWTER",
+  "region_map_section": "MAPSEC_VIRIDIAN_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "direction": "down",
+      "offset": 12,
+      "map": "MAP_ROUTE1"
+    },
+    {
+      "direction": "left",
+      "offset": 10,
+      "map": "MAP_ROUTE22"
+    },
+    {
+      "direction": "up",
+      "offset": 12,
+      "map": "MAP_ROUTE2"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 26,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY_POKEMON_CENTER_1F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 36,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY_MART",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 25,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY_SCHOOL",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 25,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY_HOUSE",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 36,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY_GYM",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}
