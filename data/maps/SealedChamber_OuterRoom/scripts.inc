@@ -18,12 +18,6 @@ SealedChamber_OuterRoom_OnLoad:
 	end
 
 SealedChamber_OuterRoom_EventScript_CloseInnerRoomEntrance::
-	setmetatile 9, 1, METATILE_Cave_EntranceCover, TRUE
-	setmetatile 10, 1, METATILE_Cave_EntranceCover, TRUE
-	setmetatile 11, 1, METATILE_Cave_EntranceCover, TRUE
-	setmetatile 9, 2, METATILE_Cave_SealedChamberBraille_Mid, TRUE
-	setmetatile 10, 2, METATILE_Cave_SealedChamberBraille_Mid, TRUE
-	setmetatile 11, 2, METATILE_Cave_SealedChamberBraille_Mid, TRUE
 	return
 
 SealedChamber_OuterRoom_EventScript_BrailleABC::

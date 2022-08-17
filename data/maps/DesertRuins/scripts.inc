@@ -19,12 +19,6 @@ DesertRuins_OnLoad:
 	end
 
 DesertRuins_EventScript_HideRegiEntrance::
-	setmetatile 7, 19, METATILE_Cave_EntranceCover, TRUE
-	setmetatile 8, 19, METATILE_Cave_EntranceCover, TRUE
-	setmetatile 9, 19, METATILE_Cave_EntranceCover, TRUE
-	setmetatile 7, 20, METATILE_Cave_SealedChamberBraille_Mid, TRUE
-	setmetatile 8, 20, METATILE_Cave_SealedChamberBraille_Mid, TRUE
-	setmetatile 9, 20, METATILE_Cave_SealedChamberBraille_Mid, TRUE
 	return
 
 DesertRuins_OnTransition:
