@@ -17,7 +17,41 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 8,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_SAFARI_ZONE_CENTER",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 8,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_SAFARI_ZONE_CENTER",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_SAFARI_ZONE_NORTH",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_SAFARI_ZONE_NORTH",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 40,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_SAFARI_ZONE_EAST_REST_HOUSE",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 

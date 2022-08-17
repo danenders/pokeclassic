@@ -16,23 +16,9 @@
   "object_events": [
 
   ],
-   "warp_events": [
-    {
-      "x": 5,
-      "y": 9,
-      "elevation": 0,
-      "dest_map": "MAP_CELADON_CITY",
-      "dest_warp_id": 7
-    },
+  "warp_events": [
     {
       "x": 6,
-      "y": 9,
-      "elevation": 0,
-      "dest_map": "MAP_CELADON_CITY",
-      "dest_warp_id": 7
-    },
-    {
-      "x": 7,
       "y": 9,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY",
