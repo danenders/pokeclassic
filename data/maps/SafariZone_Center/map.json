@@ -19,14 +19,14 @@
   "warp_events": [
     {
       "x": 26,
-      "y": 29,
+      "y": 30,
       "elevation": 0,
       "dest_map": "MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE",
       "dest_warp_id": 1
     },
     {
       "x": 25,
-      "y": 29,
+      "y": 30,
       "elevation": 0,
       "dest_map": "MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE",
       "dest_warp_id": 1
