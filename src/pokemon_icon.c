@@ -464,6 +464,7 @@ const u8 *const gMonIconTable[] =
     [SPECIES_UNOWN_Z] = gMonIcon_UnownZ,
     [SPECIES_UNOWN_EMARK] = gMonIcon_UnownExclamationMark,
     [SPECIES_UNOWN_QMARK] = gMonIcon_UnownQuestionMark,
+    [SPECIES_PIKACHU_PARTNER] = gMonIcon_Pikachu,
 };
 
 const u8 gMonIconPaletteIndices[] =
@@ -908,6 +909,7 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_UNOWN_Z] = 0,
     [SPECIES_UNOWN_EMARK] = 0,
     [SPECIES_UNOWN_QMARK] = 0,
+    [SPECIES_PIKACHU_PARTNER] = 2,
 };
 
 const struct SpritePalette gMonIconPaletteTable[] =

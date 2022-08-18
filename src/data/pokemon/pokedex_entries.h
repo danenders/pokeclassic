@@ -4643,4 +4643,16 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 290,
         .trainerOffset = 2,
     },
+
+    [NATIONAL_DEX_PIKACHU_PARTNER] =
+    {
+        .categoryName = _("Partner"),
+        .height = 4,
+        .weight = 60,
+        .description = gPikachuPokedexText,
+        .pokemonScale = 479,
+        .pokemonOffset = 19,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
 };

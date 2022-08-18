@@ -200,11 +200,11 @@ extern const u32 gMonBackPic_Arbok[];
 extern const u32 gMonShinyPalette_Arbok[];
 extern const u8 gMonIcon_Arbok[];
 extern const u8 gMonFootprint_Arbok[];
+extern const u32 gMonStillFrontPic_Arbok[];
 extern const u32 gMonFrontPic_Pikachu[];
 extern const u32 gMonPalette_Pikachu[];
 extern const u32 gMonBackPic_Pikachu[];
 extern const u32 gMonShinyPalette_Pikachu[];
-extern const u32 gMonStillFrontPic_Arbok[];
 extern const u8 gMonIcon_Pikachu[];
 extern const u8 gMonFootprint_Pikachu[];
 extern const u32 gMonStillFrontPic_Pikachu[];
@@ -5400,5 +5400,11 @@ extern const u8 gMailTilemap_Retro[];
 
 extern const u8 gMonMarkingsMenu_Gfx[];
 extern const u16 gMonMarkingsMenu_Pal[];
+
+//Partner Pikachu (uses Pikachu icon, footprint, and palette)
+extern const u32 gMonFrontPic_PikachuPartner[];
+extern const u32 gMonBackPic_PikachuPartner[];
+extern const u32 gMonStillFrontPic_PikachuPartner[];
+
 
 #endif //GUARD_GRAPHICS_H
