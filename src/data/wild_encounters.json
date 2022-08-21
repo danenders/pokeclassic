@@ -7688,7 +7688,7 @@
           "map": "MAP_ROCK_TUNNEL_1F",
           "base_label": "gRockTunnel_1F",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 16,
@@ -7777,7 +7777,7 @@
           "map": "MAP_ROCK_TUNNEL_B1F",
           "base_label": "gRockTunnel_B1F",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 16,
