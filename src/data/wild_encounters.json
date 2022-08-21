@@ -9549,7 +9549,7 @@
           "map": "MAP_VICTORY_ROAD_1F",
           "base_label": "gVictoryRoad_1F",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 44,
@@ -9638,7 +9638,7 @@
           "map": "MAP_VICTORY_ROAD_2F",
           "base_label": "gVictoryRoad_2F",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 44,
@@ -9727,7 +9727,7 @@
           "map": "MAP_VICTORY_ROAD_3F",
           "base_label": "gVictoryRoad_3F",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 44,
