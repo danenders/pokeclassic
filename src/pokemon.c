@@ -4289,13 +4289,28 @@ u8 GetMonsStateToDoubles_2(void)
     return (aliveCount > 1) ? PLAYER_HAS_TWO_USABLE_MONS : PLAYER_HAS_ONE_USABLE_MON;
 }
 
-u16 GetAbilityBySpecies(u16 species, u8 abilityNum)
+u8 GetAbilityBySpecies(u16 species, u8 abilityNum)
 {
-    if (abilityNum)
-        gLastUsedAbility = gBaseStats[species].abilities[1];
-    else
-        gLastUsedAbility = gBaseStats[species].abilities[0];
+    int i;
 
+    if (abilityNum < NUM_ABILITY_SLOTS)
+        gLastUsedAbility = gBaseStats[species].abilities[abilityNum];
+    else
+        gLastUsedAbility = ABILITY_NONE;
+    
+    if (abilityNum >= NUM_NORMAL_ABILITY_SLOTS) // if abilityNum is empty hidden ability, look for other hidden abilities
+    {
+        for (i = NUM_NORMAL_ABILITY_SLOTS; i < NUM_ABILITY_SLOTS && gLastUsedAbility == ABILITY_NONE; i++)
+        {
+            gLastUsedAbility = gBaseStats[species].abilities[i];
+        }
+    }
+    
+    for (i = 0; i < NUM_ABILITY_SLOTS && gLastUsedAbility == ABILITY_NONE; i++) // look for any non-empty ability
+    {
+        gLastUsedAbility = gBaseStats[species].abilities[i];
+    }
+    
     return gLastUsedAbility;
 }
 
