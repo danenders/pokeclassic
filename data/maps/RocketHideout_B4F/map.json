@@ -1,0 +1,42 @@
+{
+  "id": "MAP_ROCKET_HIDEOUT_B4F",
+  "name": "RocketHideout_B4F",
+  "layout": "LAYOUT_ROCKET_HIDEOUT_B4F",
+  "music": "MUS_RG_ROCKET_HIDEOUT",
+  "region_map_section": "MAPSEC_ROCKET_HIDEOUT",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 20,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_ROCKET_HIDEOUT_ELEVATOR",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 11,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_ROCKET_HIDEOUT_B3F",
+      "dest_warp_id": 1
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ],
+  "floor_number": ""
+}

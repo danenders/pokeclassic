@@ -1,0 +1,73 @@
+{
+  "id": "MAP_CINNABAR_ISLAND",
+  "name": "CinnabarIsland",
+  "layout": "LAYOUT_CINNABAR_ISLAND",
+  "music": "MUS_RG_CINNABAR",
+  "region_map_section": "MAPSEC_CINNABAR_ISLAND",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "direction": "right",
+      "offset": 0,
+      "map": "MAP_ROUTE20"
+    },
+    {
+      "direction": "up",
+      "offset": 0,
+      "map": "MAP_ROUTE21_SOUTH"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 8,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_POKEMON_MANSION_1F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 20,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_GYM",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 14,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_POKEMON_CENTER_1F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 19,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_MART",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_LAB_ENTRANCE",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

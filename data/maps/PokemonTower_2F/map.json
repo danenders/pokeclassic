@@ -1,0 +1,42 @@
+{
+  "id": "MAP_POKEMON_TOWER_2F",
+  "name": "PokemonTower_2F",
+  "layout": "LAYOUT_POKEMON_TOWER_2F",
+  "music": "MUS_RG_POKE_TOWER",
+  "region_map_section": "MAPSEC_POKEMON_TOWER",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 18,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_POKEMON_TOWER_1F",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_POKEMON_TOWER_3F",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ],
+  "floor_number": ""
+}

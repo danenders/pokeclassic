@@ -1,0 +1,84 @@
+{
+  "id": "MAP_POKEMON_MANSION_3F",
+  "name": "PokemonMansion_3F",
+  "layout": "LAYOUT_POKEMON_MANSION_3F",
+  "music": "MUS_RG_POKE_MANSION",
+  "region_map_section": "MAPSEC_POKEMON_MANSION",
+  "requires_flash": false,
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 8,
+      "y": 3,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_MANSION_2F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 34,
+      "y": 18,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_MANSION_2F",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 11,
+      "y": 11,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_MANSION_2F",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 18,
+      "y": 18,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_MANSION_1F",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 19,
+      "y": 18,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_MANSION_1F",
+      "dest_warp_id": 5
+    },
+    {
+      "x": 23,
+      "y": 18,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_MANSION_2F",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 20,
+      "y": 18,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_MANSION_1F",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 24,
+      "y": 18,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_MANSION_2F",
+      "dest_warp_id": 4
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ],
+  "floor_number": ""
+}

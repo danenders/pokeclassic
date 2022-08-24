@@ -1,0 +1,69 @@
+{
+  "id": "MAP_SILPH_CO_10F",
+  "name": "SilphCo_10F",
+  "layout": "LAYOUT_SILPH_CO_10F",
+  "music": "MUS_RG_SILPH",
+  "region_map_section": "MAPSEC_SILPH_CO",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 13,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_SILPH_CO_ELEVATOR",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_SILPH_CO_9F",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_SILPH_CO_11F",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 14,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_SILPH_CO_4F",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 10,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_SILPH_CO_4F",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 14,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_SILPH_CO_4F",
+      "dest_warp_id": 5
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

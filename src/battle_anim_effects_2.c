@@ -1684,7 +1684,7 @@ void AnimTask_AirCutterProjectile(u8 taskId)
     if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
         && IsBattlerSpriteVisible(BATTLE_PARTNER(gBattleAnimTarget)))
     {
-        SetAverageBattlerPositions(gBattleAnimTarget, 0, &targetX, &targetY);
+        SetAverageBattlerPositions(gBattleAnimTarget, FALSE, &targetX, &targetY);
     }
     else
     {
@@ -3116,7 +3116,7 @@ static void AnimTask_FakeOut_Step2(u8 taskId)
     {
         gTasks[taskId].data[11] = 0x88;
         SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG3 | BLDCNT_EFFECT_LIGHTEN);
-        BlendPalettes(GetBattleBgPalettesMask(1, 0, 0, 0, 0, 0, 0), 16, RGB(31, 31, 31));
+        BlendPalettes(GetBattlePalettesMask(TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE), 16, RGB(31, 31, 31));
     }
     else if (gTasks[taskId].data[10] > 4)
     {
@@ -3720,7 +3720,7 @@ static void AnimPerishSongMusicNote2(struct Sprite *sprite)
     }
 
     if (++sprite->data[0] == sprite->data[1])
-        SetGrayscaleOrOriginalPalette(sprite->oam.paletteNum + 16, 0);
+        SetGrayscaleOrOriginalPalette(sprite->oam.paletteNum + 16, FALSE);
 
     if (sprite->data[0] == sprite->data[1] + 80)
         DestroyAnimSprite(sprite);
@@ -3807,7 +3807,7 @@ static void AnimGuardRing(struct Sprite *sprite)
 {
     if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && IsBattlerSpriteVisible(BATTLE_PARTNER(gBattleAnimAttacker)))
     {
-        SetAverageBattlerPositions(gBattleAnimAttacker, 0, &sprite->x, &sprite->y);
+        SetAverageBattlerPositions(gBattleAnimAttacker, FALSE, &sprite->x, &sprite->y);
         sprite->y += 40;
 
         StartSpriteAffineAnim(sprite, 1);

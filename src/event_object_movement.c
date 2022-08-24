@@ -165,7 +165,7 @@ static void CreateLevitateMovementTask(struct ObjectEvent *);
 static void DestroyLevitateMovementTask(u8);
 static bool8 NpcTakeStep(struct Sprite *);
 static bool8 IsElevationMismatchAt(u8, s16, s16);
-static bool8 AreElevationsCompatible(u8 a, u8 b);
+static bool8 AreElevationsCompatible(u8, u8);
 
 static const struct SpriteFrameImage sPicTable_PechaBerryTree[];
 
@@ -844,6 +844,18 @@ static const u8 sRunningDirectionAnimNums[] = {
     [DIR_NORTHEAST] = ANIM_RUN_NORTH,
 };
 
+static const u8 sSpinDirectionAnimNums[] = {
+    [DIR_NONE] = ANIM_SPIN_SOUTH,
+    [DIR_SOUTH] = ANIM_SPIN_SOUTH,
+    [DIR_NORTH] = ANIM_SPIN_NORTH,
+    [DIR_WEST] = ANIM_SPIN_WEST,
+    [DIR_EAST] = ANIM_SPIN_EAST,
+    [DIR_SOUTHWEST] = ANIM_SPIN_SOUTH,
+    [DIR_SOUTHEAST] = ANIM_SPIN_SOUTH,
+    [DIR_NORTHWEST] = ANIM_SPIN_NORTH,
+    [DIR_NORTHEAST] = ANIM_SPIN_NORTH,
+};
+
 const u8 gTrainerFacingDirectionMovementTypes[] = {
     [DIR_NONE] = MOVEMENT_TYPE_FACE_DOWN,
     [DIR_SOUTH] = MOVEMENT_TYPE_FACE_DOWN,
@@ -937,6 +949,13 @@ const u8 gPlayerRunMovementActions[] = {
     MOVEMENT_ACTION_PLAYER_RUN_UP,
     MOVEMENT_ACTION_PLAYER_RUN_LEFT,
     MOVEMENT_ACTION_PLAYER_RUN_RIGHT,
+};
+const u8 gSpinMovementActions[] = {
+    MOVEMENT_ACTION_SPIN_DOWN,
+    MOVEMENT_ACTION_SPIN_DOWN,
+    MOVEMENT_ACTION_SPIN_UP,
+    MOVEMENT_ACTION_SPIN_LEFT,
+    MOVEMENT_ACTION_SPIN_RIGHT,
 };
 const u8 gJump2MovementActions[] = {
     MOVEMENT_ACTION_JUMP_2_DOWN,
@@ -4538,6 +4557,11 @@ u8 GetRunningDirectionAnimNum(u8 direction)
     return sRunningDirectionAnimNums[direction];
 }
 
+u8 GetSpinDirectionAnimNum(u8 direction)
+{
+    return sSpinDirectionAnimNums[direction];
+}
+
 static const struct StepAnimTable *GetStepAnimTable(const union AnimCmd *const *anims)
 {
     const struct StepAnimTable *stepTable;
@@ -4940,6 +4964,7 @@ dirn_to_anim(GetRideWaterCurrentMovementAction, gRideWaterCurrentMovementActions
 dirn_to_anim(GetWalkFasterMovementAction, gWalkFasterMovementActions);
 dirn_to_anim(GetSlideMovementAction, gSlideMovementActions);
 dirn_to_anim(GetPlayerRunMovementAction, gPlayerRunMovementActions);
+dirn_to_anim(GetSpinMovementAction, gSpinMovementActions);
 dirn_to_anim(GetJump2MovementAction, gJump2MovementActions);
 dirn_to_anim(GetJumpInPlaceMovementAction, gJumpInPlaceMovementActions);
 dirn_to_anim(GetJumpInPlaceTurnAroundMovementAction, gJumpInPlaceTurnAroundMovementActions);
@@ -7844,7 +7869,7 @@ void GroundEffect_FlowingWater(struct ObjectEvent *objEvent, struct Sprite *spri
     StartFieldEffectForObjectEvent(FLDEFF_FEET_IN_FLOWING_WATER, objEvent);
 }
 
-static void (*const sGroundEffectTracksFuncs[])(struct ObjectEvent *objEvent, struct Sprite *sprite, u8 a) = {
+static void (*const sGroundEffectTracksFuncs[])(struct ObjectEvent *objEvent, struct Sprite *sprite, bool8 isDeepSand) = {
     [TRACKS_NONE] = DoTracksGroundEffect_None,
     [TRACKS_FOOT] = DoTracksGroundEffect_Footprints,
     [TRACKS_BIKE_TIRE] = DoTracksGroundEffect_BikeTireTracks,
@@ -7853,20 +7878,20 @@ static void (*const sGroundEffectTracksFuncs[])(struct ObjectEvent *objEvent, st
 void GroundEffect_SandTracks(struct ObjectEvent *objEvent, struct Sprite *sprite)
 {
     const struct ObjectEventGraphicsInfo *info = GetObjectEventGraphicsInfo(objEvent->graphicsId);
-    sGroundEffectTracksFuncs[info->tracks](objEvent, sprite, 0);
+    sGroundEffectTracksFuncs[info->tracks](objEvent, sprite, FALSE);
 }
 
 void GroundEffect_DeepSandTracks(struct ObjectEvent *objEvent, struct Sprite *sprite)
 {
     const struct ObjectEventGraphicsInfo *info = GetObjectEventGraphicsInfo(objEvent->graphicsId);
-    sGroundEffectTracksFuncs[info->tracks](objEvent, sprite, 1);
+    sGroundEffectTracksFuncs[info->tracks](objEvent, sprite, TRUE);
 }
 
-static void DoTracksGroundEffect_None(struct ObjectEvent *objEvent, struct Sprite *sprite, u8 a)
+static void DoTracksGroundEffect_None(struct ObjectEvent *objEvent, struct Sprite *sprite, bool8 isDeepSand)
 {
 }
 
-static void DoTracksGroundEffect_Footprints(struct ObjectEvent *objEvent, struct Sprite *sprite, u8 a)
+static void DoTracksGroundEffect_Footprints(struct ObjectEvent *objEvent, struct Sprite *sprite, bool8 isDeepSand)
 {
     // First half-word is a Field Effect script id. (gFieldEffectScriptPointers)
     u16 sandFootprints_FieldEffectData[2] = {
@@ -7879,10 +7904,10 @@ static void DoTracksGroundEffect_Footprints(struct ObjectEvent *objEvent, struct
     gFieldEffectArguments[2] = 149;
     gFieldEffectArguments[3] = 2;
     gFieldEffectArguments[4] = objEvent->facingDirection;
-    FieldEffectStart(sandFootprints_FieldEffectData[a]);
+    FieldEffectStart(sandFootprints_FieldEffectData[isDeepSand]);
 }
 
-static void DoTracksGroundEffect_BikeTireTracks(struct ObjectEvent *objEvent, struct Sprite *sprite, u8 a)
+static void DoTracksGroundEffect_BikeTireTracks(struct ObjectEvent *objEvent, struct Sprite *sprite, bool8 isDeepSand)
 {
     //  Specifies which bike track shape to show next.
     //  For example, when the bike turns from up to right, it will show
@@ -8258,11 +8283,11 @@ static const SpriteStepFunc *const sNpcStepFuncTables[] = {
 };
 
 static const s16 sStepTimes[] = {
-    [MOVE_SPEED_NORMAL] = 16,
-    [MOVE_SPEED_FAST_1] = 8,
-    [MOVE_SPEED_FAST_2] = 6,
-    [MOVE_SPEED_FASTER] = 4,
-    [MOVE_SPEED_FASTEST] = 2,
+    [MOVE_SPEED_NORMAL] = ARRAY_COUNT(sStep1Funcs),
+    [MOVE_SPEED_FAST_1] = ARRAY_COUNT(sStep2Funcs),
+    [MOVE_SPEED_FAST_2] = ARRAY_COUNT(sStep3Funcs),
+    [MOVE_SPEED_FASTER] = ARRAY_COUNT(sStep4Funcs),
+    [MOVE_SPEED_FASTEST] = ARRAY_COUNT(sStep8Funcs),
 };
 
 static bool8 NpcTakeStep(struct Sprite *sprite)
@@ -8947,4 +8972,75 @@ u8 MovementAction_FlyDown_Step1(struct ObjectEvent *objectEvent, struct Sprite *
 u8 MovementAction_Fly_Finish(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
     return TRUE;
+}
+
+static void InitSpin(struct ObjectEvent *objectEvent, struct Sprite *sprite, u8 direction, u8 speed)
+{
+    InitNpcForMovement(objectEvent, sprite, direction, speed);
+    SetStepAnimHandleAlternation(objectEvent, sprite, GetSpinDirectionAnimNum(objectEvent->facingDirection));
+    SeekSpriteAnim(sprite, 0);
+}
+
+u8 MovementAction_SpinDown_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    InitSpin(objectEvent, sprite, DIR_SOUTH, MOVE_SPEED_FAST_1);
+    return MovementAction_SpinDown_Step1(objectEvent, sprite);
+}
+
+u8 MovementAction_SpinDown_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (UpdateMovementNormal(objectEvent, sprite))
+    {
+        sprite->sActionFuncId = 2;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+u8 MovementAction_SpinUp_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    InitSpin(objectEvent, sprite, DIR_NORTH, MOVE_SPEED_FAST_1);
+    return MovementAction_SpinUp_Step1(objectEvent, sprite);
+}
+
+u8 MovementAction_SpinUp_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (UpdateMovementNormal(objectEvent, sprite))
+    {
+        sprite->sActionFuncId = 2;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+u8 MovementAction_SpinLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    InitSpin(objectEvent, sprite, DIR_WEST, MOVE_SPEED_FAST_1);
+    return MovementAction_SpinLeft_Step1(objectEvent, sprite);
+}
+
+u8 MovementAction_SpinLeft_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (UpdateMovementNormal(objectEvent, sprite))
+    {
+        sprite->sActionFuncId = 2;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+u8 MovementAction_SpinRight_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    InitSpin(objectEvent, sprite, DIR_EAST, MOVE_SPEED_FAST_1);
+    return MovementAction_SpinRight_Step1(objectEvent, sprite);
+}
+
+u8 MovementAction_SpinRight_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (UpdateMovementNormal(objectEvent, sprite))
+    {
+        sprite->sActionFuncId = 2;
+        return TRUE;
+    }
+    return FALSE;
 }
