@@ -1,34 +1,12 @@
-# Pokémon Emerald
+# About this branch
+This is a decapitalized (all-caps text replaced with proper capitalization) version of the [**pokeemerald**](https://travis-ci.org/pret/pokeemerald) dissasembly, originally made by [**Wyrserth**](https://github.com/Wyrserth) and adapted to the current structure of the project.
 
-This is a fork of the [matching decompilation](https://github.com/pret/pokeemerald) at [PRET](https://github.com/pret).
+It builds the following ROM:
 
-The general philosophy of this fork is to maintain vanilla behavior & compatibility where possible, especially in terms of data structures. For that reason, this fork does not increase the size of the save data structure or the object event structure, nor does it add a `nature` field to the Pokémon structure.
-
-There are several branches, each with additional features compared to vanilla:
-
-**romhack** branch:
-* [HGSS-style pokémon followers](https://bulbapedia.bulbagarden.net/wiki/Walking_Pok%C3%A9mon#Pok.C3.A9mon_HeartGold_and_SoulSilver) for all 386 pokémon, including emotes, the 28 Unown forms and a majority of follower messages.
-* Dynamic overworld palettes & reflections compatible with vanilla berry trees.
-* A way to change a pokemon's nature while mangling its PID as little as possible.
-* Function to detect newer emulators/new GBA hardware.
-
-**icons** branch:
-* Everything from the **romhack** branch.
-* All pokemon icons updated to Gen 6, based on [this repo](https://github.com/msikma/pokesprite/tree/master/icons/pokemon/regular)
-* This includes compatibility with the PC, trade, contests, mail, Battle Dome. Examples:
-![PC](https://i.imgur.com/wzwJfd1.png)
-![Party](https://i.imgur.com/8hbE88t.png)
-![Contest](https://i.imgur.com/S9mCEFL.png)
-* Icons share palettes with front sprites, meaning that shiny pokemon will also have shiny icons!
-
-**lighting** branch:
-* Everything from the **romhack** branch.
-* Day/night shading compatible with weather.
-* GSC-style window lights.
-* WIP interframe-blended lamp lights at night, i.e in Rustboro.
-* HGSS-style alpha-blended shadows for object events.
+* pokeemerald.gba `sha1: 8C19F2555E10DFF32A9914CEAC360B018AF42E6C`
 
 To set up the repository, see [INSTALL.md](INSTALL.md).
+
 
 ## See also
 
@@ -49,4 +27,4 @@ Other disassembly and/or decompilation projects:
 
 ## Contacts
 
-You can find PRET on [Discord](https://discord.gg/d5dubZ3) and [IRC](https://web.libera.chat/?#pret).
+You can find us on [Discord](https://discord.gg/d5dubZ3) and [IRC](https://web.libera.chat/?#pret).
