@@ -13,7 +13,7 @@ gTileset_General::
 gTileset_Petalburg::
 	.byte TRUE @ is compressed
 	.byte TRUE @ is secondary tileset
-	.2byte 0 @ padding
+  .2byte 3 @ lightPalettes 6,7
 	.4byte gTilesetTiles_Petalburg
 	.4byte gTilesetPalettes_Petalburg
 	.4byte gMetatiles_Petalburg
@@ -24,7 +24,7 @@ gTileset_Petalburg::
 gTileset_Rustboro::
 	.byte TRUE @ is compressed
 	.byte TRUE @ is secondary tileset
-	.2byte 0 @ padding
+  .2byte 1 @ lightPalettes 6
 	.4byte gTilesetTiles_Rustboro
 	.4byte gTilesetPalettes_Rustboro
 	.4byte gMetatiles_Rustboro
@@ -35,7 +35,7 @@ gTileset_Rustboro::
 gTileset_Dewford::
 	.byte TRUE @ is compressed
 	.byte TRUE @ is secondary tileset
-	.2byte 0 @ padding
+	.2byte 64 @ lightPalettes 12
 	.4byte gTilesetTiles_Dewford
 	.4byte gTilesetPalettes_Dewford
 	.4byte gMetatiles_Dewford
@@ -46,7 +46,7 @@ gTileset_Dewford::
 gTileset_Slateport::
 	.byte TRUE @ is compressed
 	.byte TRUE @ is secondary tileset
-	.2byte 0 @ padding
+  .2byte 0x41 @ lightPalettes 6,12
 	.4byte gTilesetTiles_Slateport
 	.4byte gTilesetPalettes_Slateport
 	.4byte gMetatiles_Slateport
@@ -57,7 +57,7 @@ gTileset_Slateport::
 gTileset_Mauville::
 	.byte TRUE @ is compressed
 	.byte TRUE @ is secondary tileset
-	.2byte 0 @ padding
+	.2byte 0x32 @ lightPalettes 7,10,11
 	.4byte gTilesetTiles_Mauville
 	.4byte gTilesetPalettes_Mauville
 	.4byte gMetatiles_Mauville
@@ -79,7 +79,7 @@ gTileset_Lavaridge::
 gTileset_Fallarbor::
 	.byte TRUE @ is compressed
 	.byte TRUE @ is secondary tileset
-	.2byte 0 @ padding
+	.2byte 2 @ lightPalettes 7
 	.4byte gTilesetTiles_Fallarbor
 	.4byte gTilesetPalettes_Fallarbor
 	.4byte gMetatiles_Fallarbor
@@ -90,7 +90,7 @@ gTileset_Fallarbor::
 gTileset_Fortree::
 	.byte TRUE @ is compressed
 	.byte TRUE @ is secondary tileset
-	.2byte 0 @ padding
+	.2byte 0x0404 @ lightPalettes 8, customLights 8
 	.4byte gTilesetTiles_Fortree
 	.4byte gTilesetPalettes_Fortree
 	.4byte gMetatiles_Fortree
@@ -101,7 +101,7 @@ gTileset_Fortree::
 gTileset_Lilycove::
 	.byte TRUE @ is compressed
 	.byte TRUE @ is secondary tileset
-	.2byte 0 @ padding
+	.2byte 0x01 @ lightPalettes 6
 	.4byte gTilesetTiles_Lilycove
 	.4byte gTilesetPalettes_Lilycove
 	.4byte gMetatiles_Lilycove
@@ -112,7 +112,7 @@ gTileset_Lilycove::
 gTileset_Mossdeep::
 	.byte TRUE @ is compressed
 	.byte TRUE @ is secondary tileset
-	.2byte 0 @ padding
+	.2byte 0 @ lightPalettes 8,9
 	.4byte gTilesetTiles_Mossdeep
 	.4byte gTilesetPalettes_Mossdeep
 	.4byte gMetatiles_Mossdeep
@@ -134,7 +134,7 @@ gTileset_EverGrande::
 gTileset_Pacifidlog::
 	.byte TRUE @ is compressed
 	.byte TRUE @ is secondary tileset
-	.2byte 0 @ padding
+	.2byte 8 @ lightPalettes 9
 	.4byte gTilesetTiles_Pacifidlog
 	.4byte gTilesetPalettes_Pacifidlog
 	.4byte gMetatiles_Pacifidlog
@@ -145,7 +145,7 @@ gTileset_Pacifidlog::
 gTileset_Sootopolis::
 	.byte TRUE @ is compressed
 	.byte TRUE @ is secondary tileset
-	.2byte 0 @ padding
+	.2byte 0x101 @ lightPalettes 6, customLights 6
 	.4byte gTilesetTiles_Sootopolis
 	.4byte gTilesetPalettes_Sootopolis
 	.4byte gMetatiles_Sootopolis
