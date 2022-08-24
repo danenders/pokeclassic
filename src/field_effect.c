@@ -3891,3 +3891,19 @@ static void Task_MoveDeoxysRock(u8 taskId)
             break;
     }
 }
+
+// new
+u8 FldEff_CaveDust(void)
+{
+    u8 spriteId;
+    
+    SetSpritePosToOffsetMapCoords((s16 *)&gFieldEffectArguments[0], (s16 *)&gFieldEffectArguments[1], 8, 8);
+    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_CAVE_DUST], gFieldEffectArguments[0], gFieldEffectArguments[1], 0xFF);
+    if (spriteId != MAX_SPRITES)
+    {
+        gSprites[spriteId].coordOffsetEnabled = TRUE;
+        gSprites[spriteId].data[0] = 22;
+    }
+    
+    return spriteId;
+}

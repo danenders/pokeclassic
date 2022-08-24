@@ -781,3 +781,6 @@ const u16 gObjectEventPal_Lugia[] = INCBIN_U16("graphics/object_events/palettes/
 
 const u16 gObjectEventPaletteLight[] = INCBIN_U16("graphics/object_events/palettes/light.gbapal");
 const u16 gObjectEventPaletteEmotes[] = INCBIN_U16("graphics/misc/emotes.gbapal");
+
+const u32 gFieldEffectObjectPic_CaveDust[] = INCBIN_U32("graphics/field_effects/pics/cave_dust.4bpp");
+const u16 gFieldEffectObjectPalette_CaveDust[] = INCBIN_U16("graphics/field_effects/palettes/cave_dust.gbapal");
