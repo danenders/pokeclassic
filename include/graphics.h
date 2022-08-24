@@ -200,11 +200,11 @@ extern const u32 gMonBackPic_Arbok[];
 extern const u32 gMonShinyPalette_Arbok[];
 extern const u8 gMonIcon_Arbok[];
 extern const u8 gMonFootprint_Arbok[];
+extern const u32 gMonStillFrontPic_Arbok[];
 extern const u32 gMonFrontPic_Pikachu[];
 extern const u32 gMonPalette_Pikachu[];
 extern const u32 gMonBackPic_Pikachu[];
 extern const u32 gMonShinyPalette_Pikachu[];
-extern const u32 gMonStillFrontPic_Arbok[];
 extern const u8 gMonIcon_Pikachu[];
 extern const u8 gMonFootprint_Pikachu[];
 extern const u32 gMonStillFrontPic_Pikachu[];
@@ -2853,6 +2853,14 @@ extern const u32 gMonFrontPic_UnownQuestionMark[];
 extern const u32 gMonStillFrontPic_UnownQuestionMark[];
 extern const u32 gMonBackPic_UnownQuestionMark[];
 extern const u8 gMonIcon_UnownQuestionMark[];
+
+extern const u32 gMonFrontPic_PikachuPartner[];
+extern const u32 gMonPalette_PikachuPartner[];
+extern const u32 gMonBackPic_PikachuPartner[];
+extern const u32 gMonShinyPalette_PikachuPartner[];
+extern const u8 gMonIcon_PikachuPartner[];
+extern const u8 gMonFootprint_PikachuPartner[];
+extern const u32 gMonStillFrontPic_PikachuPartner[];
 
 extern const u32 gMonFrontPic_CircledQuestionMark[];
 extern const u32 gMonBackPic_CircledQuestionMark[];

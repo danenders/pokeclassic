@@ -464,6 +464,7 @@ const u8 *const gMonIconTable[] =
     [SPECIES_UNOWN_Z] = gMonIcon_UnownZ,
     [SPECIES_UNOWN_EMARK] = gMonIcon_UnownExclamationMark,
     [SPECIES_UNOWN_QMARK] = gMonIcon_UnownQuestionMark,
+    [SPECIES_PIKACHU_PARTNER] = gMonIcon_Pikachu,
 };
 
 const u8 gMonIconPaletteIndices[] =
@@ -494,6 +495,7 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_EKANS] = 2,
     [SPECIES_ARBOK] = 2,
     [SPECIES_PIKACHU] = 2,
+    [SPECIES_PIKACHU_PARTNER] = 2,
     [SPECIES_RAICHU] = 0,
     [SPECIES_SANDSHREW] = 2,
     [SPECIES_SANDSLASH] = 2,

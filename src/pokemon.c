@@ -509,6 +509,7 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(JIRACHI),
     SPECIES_TO_HOENN(DEOXYS),
     SPECIES_TO_HOENN(CHIMECHO),
+    SPECIES_TO_HOENN(PIKACHU_PARTNER),
 };
 
 // Assigns all species to the National Dex Index (Summary No. for National Dex)
@@ -925,6 +926,7 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(JIRACHI),
     SPECIES_TO_NATIONAL(DEOXYS),
     SPECIES_TO_NATIONAL(CHIMECHO),
+    SPECIES_TO_NATIONAL(PIKACHU_PARTNER),
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index
@@ -1341,6 +1343,7 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(OLD_UNOWN_X),
     HOENN_TO_NATIONAL(OLD_UNOWN_Y),
     HOENN_TO_NATIONAL(OLD_UNOWN_Z),
+    HOENN_TO_NATIONAL(PIKACHU_PARTNER),
 };
 
 const struct SpindaSpot gSpindaSpotGraphics[] =
@@ -1423,6 +1426,7 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_EKANS - 1]       = ANIM_H_STRETCH,
     [SPECIES_ARBOK - 1]       = ANIM_V_STRETCH,
     [SPECIES_PIKACHU - 1]     = ANIM_FLASH_YELLOW,
+    [SPECIES_PIKACHU_PARTNER - 1]     = ANIM_FLASH_YELLOW,
     [SPECIES_RAICHU - 1]      = ANIM_V_STRETCH,
     [SPECIES_SANDSHREW - 1]   = ANIM_SWING_CONCAVE_FAST_SHORT,
     [SPECIES_SANDSLASH - 1]   = ANIM_V_STRETCH,

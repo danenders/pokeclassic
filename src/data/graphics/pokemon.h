@@ -2822,3 +2822,10 @@ const u8 gMonIcon_UnownExclamationMark[] = INCBIN_U8("graphics/pokemon/unown/exc
 const u32 gMonStillFrontPic_UnownQuestionMark[] = INCBIN_U32("graphics/pokemon/unown/question_mark/front.4bpp.lz");
 const u32 gMonBackPic_UnownQuestionMark[] = INCBIN_U32("graphics/pokemon/unown/question_mark/back.4bpp.lz");
 const u8 gMonIcon_UnownQuestionMark[] = INCBIN_U8("graphics/pokemon/unown/question_mark/icon.4bpp");
+
+const u32 gMonStillFrontPic_PikachuPartner[] = INCBIN_U32("graphics/pokemon/pikachu_partner/front.4bpp.lz");
+const u32 gMonPalette_PikachuPartner[] = INCBIN_U32("graphics/pokemon/pikachu/normal.gbapal.lz");
+const u32 gMonBackPic_PikachuPartner[] = INCBIN_U32("graphics/pokemon/pikachu_partner/back.4bpp.lz");
+const u32 gMonShinyPalette_PikachuPartner[] = INCBIN_U32("graphics/pokemon/pikachu/shiny.gbapal.lz");
+const u8 gMonIcon_PikachuPartner[] = INCBIN_U8("graphics/pokemon/pikachu/icon.4bpp");
+const u8 gMonFootprint_PikachuPartner[] = INCBIN_U8("graphics/pokemon/pikachu/footprint.1bpp");

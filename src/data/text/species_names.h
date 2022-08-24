@@ -25,6 +25,7 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_EKANS] = _("Ekans"),
     [SPECIES_ARBOK] = _("Arbok"),
     [SPECIES_PIKACHU] = _("Pikachu"),
+    [SPECIES_PIKACHU_PARTNER] = _("Pikachu"),
     [SPECIES_RAICHU] = _("Raichu"),
     [SPECIES_SANDSHREW] = _("Sandshrew"),
     [SPECIES_SANDSLASH] = _("Sandslash"),

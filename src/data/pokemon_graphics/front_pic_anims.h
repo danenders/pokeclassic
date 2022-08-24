@@ -4936,6 +4936,12 @@ static const union AnimCmd *const sAnims_PIKACHU[] ={
     sAnim_PIKACHU_2,
 };
 
+static const union AnimCmd *const sAnims_PIKACHU_PARTNER[] ={
+    sAnim_GeneralFrame0,
+    sAnim_PIKACHU_1,
+    sAnim_PIKACHU_2,
+};
+
 static const union AnimCmd *const sAnims_RAICHU[] ={
     sAnim_GeneralFrame0,
     sAnim_RAICHU_1,
@@ -6976,6 +6982,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(EKANS),
     ANIM_CMD(ARBOK),
     ANIM_CMD(PIKACHU),
+    ANIM_CMD(PIKACHU_PARTNER),
     ANIM_CMD(RAICHU),
     ANIM_CMD(SANDSHREW),
     ANIM_CMD(SANDSLASH),
