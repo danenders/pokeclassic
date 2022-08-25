@@ -2190,11 +2190,8 @@ static void DebugAction_Give_Pokemon_SelectNature(u8 taskId)
 static void DebugAction_Give_Pokemon_SelectAbility(u8 taskId)
 {
     u8 abilityId;
-    u8 abilityCount = 2 - 1; //-1 for proper iteration
+    u8 abilityCount = NUM_ABILITY_SLOTS - 1; //-1 for proper iteration
     u8 i = 0;
-    #ifdef POKEMON_EXPANSION
-        abilityCount = NUM_ABILITY_SLOTS - 1;
-    #endif
 
     if (gMain.newKeys & DPAD_ANY)
     {
