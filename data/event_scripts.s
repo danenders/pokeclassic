@@ -873,6 +873,14 @@ gText_SelectWithoutRegisteredItem::
 	.string "An item in the Bag can be\n"
 	.string "registered to Select for easy use.$"
 
+gText_LWithoutRegisteredItem::
+	.string "An item in the Bag can be\n"
+	.string "registered to L for easy use.$"
+
+gText_RWithoutRegisteredItem::
+	.string "An item in the Bag can be\n"
+	.string "registered to R for easy use.$"
+
 gText_PokemonTrainerSchoolEmail::
 	.string "There's an e-mail from Pokémon Trainer\n"
 	.string "School.\p"
@@ -972,6 +980,14 @@ gText_LegendaryFlewAway::
 
 EventScript_SelectWithoutRegisteredItem::
 	msgbox gText_SelectWithoutRegisteredItem, MSGBOX_SIGN
+	end
+
+EventScript_LWithoutRegisteredItem::
+	msgbox gText_LWithoutRegisteredItem, MSGBOX_SIGN
+	end
+
+EventScript_RWithoutRegisteredItem::
+	msgbox gText_RWithoutRegisteredItem, MSGBOX_SIGN
 	end
 
 	.include "data/scripts/field_poison.inc"
