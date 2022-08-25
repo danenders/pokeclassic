@@ -1922,7 +1922,12 @@ static void ItemMenu_RegisterL(u8 taskId)
     if (gSaveBlock1Ptr->registeredItemL == gSpecialVar_ItemId)
         gSaveBlock1Ptr->registeredItemL = 0;
     else
+    {
         gSaveBlock1Ptr->registeredItemL = gSpecialVar_ItemId;
+        if (gSaveBlock1Ptr->registeredItemL == gSaveBlock1Ptr->registeredItemR)
+            gSaveBlock1Ptr->registeredItemR = 0;
+
+    }
     DestroyListMenuTask(tListTaskId, scrollPos, cursorPos);
     LoadBagItemListBuffers(gBagPosition.pocket);
     tListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, *scrollPos, *cursorPos);
@@ -1939,7 +1944,12 @@ static void ItemMenu_RegisterR(u8 taskId)
     if (gSaveBlock1Ptr->registeredItemR == gSpecialVar_ItemId)
         gSaveBlock1Ptr->registeredItemR = 0;
     else
+    {
         gSaveBlock1Ptr->registeredItemR = gSpecialVar_ItemId;
+        if (gSaveBlock1Ptr->registeredItemR == gSaveBlock1Ptr->registeredItemL)
+            gSaveBlock1Ptr->registeredItemL = 0;
+
+    }
     DestroyListMenuTask(tListTaskId, scrollPos, cursorPos);
     LoadBagItemListBuffers(gBagPosition.pocket);
     tListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, *scrollPos, *cursorPos);
