@@ -51,6 +51,56 @@ extern const u8 gText_BadlyStartlesMonsGoodAppeals[];
 extern const u8 gText_AppealBestMoreCrowdExcited[];
 extern const u8 gText_TemporarilyStopCrowdExcited[];
 
+// gContestEffectFourLineDescriptionPointers
+extern const u8 gText_FourLine_HighlyAppealingMove[];
+extern const u8 gText_FourLine_UserMoreEasilyStartled[];
+extern const u8 gText_FourLine_GreatAppealButNoMoreToEnd[];
+extern const u8 gText_FourLine_UsedRepeatedlyWithoutBoringJudge[];
+extern const u8 gText_FourLine_AvoidStartledByOthersOnce[];
+extern const u8 gText_FourLine_AvoidStartledByOthers[];
+extern const u8 gText_FourLine_AvoidStartledByOthersLittle[];
+extern const u8 gText_FourLine_UserLessLikelyStartled[];
+extern const u8 gText_FourLine_SlightlyStartleFrontMon[];
+extern const u8 gText_FourLine_SlightlyStartleAppealed[];
+extern const u8 gText_FourLine_StartleAppealedBeforeUser[];
+extern const u8 gText_FourLine_StartleAllAppealed[];
+extern const u8 gText_FourLine_BadlyStartleFrontMon[];
+extern const u8 gText_FourLine_BadlyStartleAppealed[];
+extern const u8 gText_FourLine_StartleAppealedBeforeUser2[];
+extern const u8 gText_FourLine_StartleAllAppealed2[];
+extern const u8 gText_FourLine_ShiftJudgesAttentionFromOthers[];
+extern const u8 gText_FourLine_StartleMonHasJudgesAttention[];
+extern const u8 gText_FourLine_JamOthersMissesTurn[];
+extern const u8 gText_FourLine_StartleMonsMadeSameTypeAppeal[];
+extern const u8 gText_FourLine_BadlyStartleCoolAppeals[];
+extern const u8 gText_FourLine_BadlyStartleBeautyAppeals[];
+extern const u8 gText_FourLine_BadlyStartleCuteAppeals[];
+extern const u8 gText_FourLine_BadlyStartleSmartAppeals[];
+extern const u8 gText_FourLine_BadlyStartleToughAppeals[];
+extern const u8 gText_FourLine_MakeMonAfterUserNervous[];
+extern const u8 gText_FourLine_MakeAllMonsAfterUserNervous[];
+extern const u8 gText_FourLine_WorsenConditionOfThoseMadeAppeals[];
+extern const u8 gText_FourLine_BadlyStartleMonsGoodCondition[];
+extern const u8 gText_FourLine_AppealGreatIfPerformedFirst[];
+extern const u8 gText_FourLine_AppealGreatIfPerformedLast[];
+extern const u8 gText_FourLine_AppealAsGoodAsThoseBeforeIt[];
+extern const u8 gText_FourLine_AppealAsGoodAsOneBeforeIt[];
+extern const u8 gText_FourLine_AppealBetterLaterItsPerformed[];
+extern const u8 gText_FourLine_AppealVariesDependingOnTiming[];
+extern const u8 gText_FourLine_WorksWellIfSameTypeAsBefore[];
+extern const u8 gText_FourLine_WorksWellIfDifferentTypeAsBefore[];
+extern const u8 gText_FourLine_AffectedByAppealInFront[];
+extern const u8 gText_FourLine_UpsConditionHelpsPreventNervousness[];
+extern const u8 gText_FourLine_AppealWorksWellIfConditionGood[];
+extern const u8 gText_FourLine_NextAppealMadeEarlier[];
+extern const u8 gText_FourLine_NextAppealMadeLater[];
+extern const u8 gText_FourLine_TurnOrderMoreEasilyScrambled[];
+extern const u8 gText_FourLine_ScrambleOrderOfNextAppeals[];
+extern const u8 gText_FourLine_AppealExcitesAudienceInAnyContest[];
+extern const u8 gText_FourLine_BadlyStartlesMonsGoodAppeals[];
+extern const u8 gText_FourLine_AppealBestMoreCrowdExcited[];
+extern const u8 gText_FourLine_TemporarilyStopCrowdExcited[];
+
 // sUnusedComboMoveNameTexts
 extern const u8 gText_RainDance[];
 extern const u8 gText_Rage[];
@@ -267,6 +317,58 @@ const u8 *const gContestEffectDescriptionPointers[] =
     [CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS]  = gText_BadlyStartlesMonsGoodAppeals,
     [CONTEST_EFFECT_BETTER_WHEN_AUDIENCE_EXCITED]          = gText_AppealBestMoreCrowdExcited,
     [CONTEST_EFFECT_DONT_EXCITE_AUDIENCE]                  = gText_TemporarilyStopCrowdExcited
+};
+
+const u8 *const gContestEffectFourLineDescriptionPointers[] =
+{
+    [CONTEST_EFFECT_HIGHLY_APPEALING]                      = gText_FourLine_HighlyAppealingMove,
+    [CONTEST_EFFECT_USER_MORE_EASILY_STARTLED]             = gText_FourLine_UserMoreEasilyStartled,
+    [CONTEST_EFFECT_GREAT_APPEAL_BUT_NO_MORE_MOVES]        = gText_FourLine_GreatAppealButNoMoreToEnd,
+    [CONTEST_EFFECT_REPETITION_NOT_BORING]                 = gText_FourLine_UsedRepeatedlyWithoutBoringJudge,
+    [CONTEST_EFFECT_AVOID_STARTLE_ONCE]                    = gText_FourLine_AvoidStartledByOthersOnce,
+    [CONTEST_EFFECT_AVOID_STARTLE]                         = gText_FourLine_AvoidStartledByOthers,
+    [CONTEST_EFFECT_AVOID_STARTLE_SLIGHTLY]                = gText_FourLine_AvoidStartledByOthersLittle,
+    [CONTEST_EFFECT_USER_LESS_EASILY_STARTLED]             = gText_FourLine_UserLessLikelyStartled,
+    [CONTEST_EFFECT_STARTLE_FRONT_MON]                     = gText_FourLine_SlightlyStartleFrontMon,
+    [CONTEST_EFFECT_SLIGHTLY_STARTLE_PREV_MONS]            = gText_FourLine_SlightlyStartleAppealed,
+    [CONTEST_EFFECT_STARTLE_PREV_MON]                      = gText_FourLine_StartleAppealedBeforeUser,
+    [CONTEST_EFFECT_STARTLE_PREV_MONS]                     = gText_FourLine_StartleAllAppealed,
+    [CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON]               = gText_FourLine_BadlyStartleFrontMon,
+    [CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS]               = gText_FourLine_BadlyStartleAppealed,
+    [CONTEST_EFFECT_STARTLE_PREV_MON_2]                    = gText_FourLine_StartleAppealedBeforeUser2,
+    [CONTEST_EFFECT_STARTLE_PREV_MONS_2]                   = gText_FourLine_StartleAllAppealed2,
+    [CONTEST_EFFECT_SHIFT_JUDGE_ATTENTION]                 = gText_FourLine_ShiftJudgesAttentionFromOthers,
+    [CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION]     = gText_FourLine_StartleMonHasJudgesAttention,
+    [CONTEST_EFFECT_JAMS_OTHERS_BUT_MISS_ONE_TURN]         = gText_FourLine_JamOthersMissesTurn,
+    [CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL]         = gText_FourLine_StartleMonsMadeSameTypeAppeal,
+    [CONTEST_EFFECT_STARTLE_MONS_COOL_APPEAL]              = gText_FourLine_BadlyStartleCoolAppeals,
+    [CONTEST_EFFECT_STARTLE_MONS_BEAUTY_APPEAL]            = gText_FourLine_BadlyStartleBeautyAppeals,
+    [CONTEST_EFFECT_STARTLE_MONS_CUTE_APPEAL]              = gText_FourLine_BadlyStartleCuteAppeals,
+    [CONTEST_EFFECT_STARTLE_MONS_SMART_APPEAL]             = gText_FourLine_BadlyStartleSmartAppeals,
+    [CONTEST_EFFECT_STARTLE_MONS_TOUGH_APPEAL]             = gText_FourLine_BadlyStartleToughAppeals,
+    [CONTEST_EFFECT_MAKE_FOLLOWING_MON_NERVOUS]            = gText_FourLine_MakeMonAfterUserNervous,
+    [CONTEST_EFFECT_MAKE_FOLLOWING_MONS_NERVOUS]           = gText_FourLine_MakeAllMonsAfterUserNervous,
+    [CONTEST_EFFECT_WORSEN_CONDITION_OF_PREV_MONS]         = gText_FourLine_WorsenConditionOfThoseMadeAppeals,
+    [CONTEST_EFFECT_BADLY_STARTLES_MONS_IN_GOOD_CONDITION] = gText_FourLine_BadlyStartleMonsGoodCondition,
+    [CONTEST_EFFECT_BETTER_IF_FIRST]                       = gText_FourLine_AppealGreatIfPerformedFirst,
+    [CONTEST_EFFECT_BETTER_IF_LAST]                        = gText_FourLine_AppealGreatIfPerformedLast,
+    [CONTEST_EFFECT_APPEAL_AS_GOOD_AS_PREV_ONES]           = gText_FourLine_AppealAsGoodAsThoseBeforeIt,
+    [CONTEST_EFFECT_APPEAL_AS_GOOD_AS_PREV_ONE]            = gText_FourLine_AppealAsGoodAsOneBeforeIt,
+    [CONTEST_EFFECT_BETTER_WHEN_LATER]                     = gText_FourLine_AppealBetterLaterItsPerformed,
+    [CONTEST_EFFECT_QUALITY_DEPENDS_ON_TIMING]             = gText_FourLine_AppealVariesDependingOnTiming,
+    [CONTEST_EFFECT_BETTER_IF_SAME_TYPE]                   = gText_FourLine_WorksWellIfSameTypeAsBefore,
+    [CONTEST_EFFECT_BETTER_IF_DIFF_TYPE]                   = gText_FourLine_WorksWellIfDifferentTypeAsBefore,
+    [CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL]               = gText_FourLine_AffectedByAppealInFront,
+    [CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS] = gText_FourLine_UpsConditionHelpsPreventNervousness,
+    [CONTEST_EFFECT_BETTER_WITH_GOOD_CONDITION]            = gText_FourLine_AppealWorksWellIfConditionGood,
+    [CONTEST_EFFECT_NEXT_APPEAL_EARLIER]                   = gText_FourLine_NextAppealMadeEarlier,
+    [CONTEST_EFFECT_NEXT_APPEAL_LATER]                     = gText_FourLine_NextAppealMadeLater,
+    [CONTEST_EFFECT_MAKE_SCRAMBLING_TURN_ORDER_EASIER]     = gText_FourLine_TurnOrderMoreEasilyScrambled,
+    [CONTEST_EFFECT_SCRAMBLE_NEXT_TURN_ORDER]              = gText_FourLine_ScrambleOrderOfNextAppeals,
+    [CONTEST_EFFECT_EXCITE_AUDIENCE_IN_ANY_CONTEST]        = gText_FourLine_AppealExcitesAudienceInAnyContest,
+    [CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS]  = gText_FourLine_BadlyStartlesMonsGoodAppeals,
+    [CONTEST_EFFECT_BETTER_WHEN_AUDIENCE_EXCITED]          = gText_FourLine_AppealBestMoreCrowdExcited,
+    [CONTEST_EFFECT_DONT_EXCITE_AUDIENCE]                  = gText_FourLine_TemporarilyStopCrowdExcited
 };
 
 // Unreferenced array of pointers to move names.
