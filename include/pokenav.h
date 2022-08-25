@@ -118,11 +118,13 @@ enum
 {
 	POKENAV_MAIN_MENU = POKENAV_MENU_IDS_START, // The main menu where the player selects Hoenn Map/Condition/Match Call/Ribbons 
 	POKENAV_MAIN_MENU_CURSOR_ON_MAP,
+    POKENAV_MAIN_MENU_CURSOR_ON_DEXNAV,
 	POKENAV_CONDITION_MENU,                     // The first Condition screen where the player selects Party or Search
 	POKENAV_CONDITION_SEARCH_MENU,              // The Condition search menu where the player selects a search parameter
 	POKENAV_MAIN_MENU_CURSOR_ON_MATCH_CALL,
 	POKENAV_MAIN_MENU_CURSOR_ON_RIBBONS,
 	POKENAV_REGION_MAP,
+    POKENAV_DEXNAV,
 	POKENAV_CONDITION_GRAPH_PARTY,              // The Condition graph screen when Party has been selected
 	POKENAV_CONDITION_SEARCH_RESULTS,           // The list of results from a Condition search
 	POKENAV_CONDITION_GRAPH_SEARCH,             // The Condition graph screen when a search result has been selected
@@ -148,6 +150,7 @@ enum
 enum
 {
     POKENAV_MENUITEM_MAP,
+    POKENAV_MENUITEM_DEXNAV,
     POKENAV_MENUITEM_CONDITION,
     POKENAV_MENUITEM_MATCH_CALL,
     POKENAV_MENUITEM_RIBBONS,
@@ -246,6 +249,7 @@ enum RegionMapFuncIds
     POKENAV_MENU_FUNC_NO_RIBBON_WINNERS,
     POKENAV_MENU_FUNC_RESHOW_DESCRIPTION,
     POKENAV_MENU_FUNC_OPEN_FEATURE,
+    POKENAV_MENU_FUNC_OPEN_DEXNAV,
 };
 
 enum
@@ -394,6 +398,8 @@ int GetPokenavMenuType(void);
 int GetPokenavCursorPos(void);
 int GetCurrentMenuItemId(void);
 u16 GetHelpBarTextId(void);
+bool32 PokenavCallback_Init_MainMenuCursorOnDexNav(void);
+void FreePokenavResources(void);
 
 // pokenav_menu_handler_gfx.c
 bool32 OpenPokenavMenuInitial(void);

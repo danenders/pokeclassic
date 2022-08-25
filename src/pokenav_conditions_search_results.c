@@ -462,7 +462,7 @@ static u32 LoopedTask_OpenConditionSearchResults(s32 state)
         HideBg(3);
         if (!gfx->fromGraph)
         {
-            u8 searchGfxId = GetSelectedConditionSearch() + POKENAV_MENUITEM_CONDITION_SEARCH_COOL;
+            u8 searchGfxId = GetSelectedConditionSearch() + POKENAV_MENUITEM_CONDITION_SEARCH_COOL - 1;
             LoadLeftHeaderGfxForIndex(searchGfxId);
             ShowLeftHeaderGfx(searchGfxId, TRUE, FALSE);
             ShowLeftHeaderGfx(POKENAV_GFX_CONDITION_MENU, TRUE, FALSE);

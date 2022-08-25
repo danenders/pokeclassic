@@ -1,3 +1,4 @@
+
 #include "global.h"
 #include "battle_main.h"
 #include "battle_setup.h"
@@ -58,6 +59,7 @@
 #include "constants/rgb.h"
 #include "constants/region_map_sections.h"
 #include "gba/m4a_internal.h"
+#include "pokenav.h"
 
 // Defines
 enum WindowIds
@@ -1894,6 +1896,7 @@ static void Task_DexNavFadeAndExit(u8 taskId)
 {
     if (!gPaletteFade.active)
     {
+        FreePokenavResources();
         SetMainCallback2(sDexNavUiDataPtr->savedCallback);
         DexNavGuiFreeResources();
         DestroyTask(taskId);
@@ -2350,6 +2353,23 @@ void Task_OpenDexNavFromStartMenu(u8 taskId)
     {
         CleanupOverworldWindowsAndTilemaps();
         DexNavGuiInit(CB2_ReturnToFieldWithOpenMenu);
+        DestroyTask(taskId);
+    }
+}
+
+u32 PokeNavMenuDexNavCallback(void)
+{
+    FlagSet(FLAG_TEMP_1);
+    CreateTask(Task_OpenDexNavFromPokenav, 0);
+    return TRUE;
+}
+
+void Task_OpenDexNavFromPokenav(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        CleanupOverworldWindowsAndTilemaps();
+        DexNavGuiInit(CB2_InitPokeNav);
         DestroyTask(taskId);
     }
 }
