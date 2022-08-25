@@ -4236,3 +4236,20 @@ u8 Script_TryGainNewFanFromCounter(void)
 {
     return TryGainNewFanFromCounter(gSpecialVar_0x8004);
 }
+
+
+void GetDayOrNight(void)
+{
+    u8 nightorday;
+    RtcCalcLocalTime();
+    if (gLocalTime.hours >= 8 && gLocalTime.hours <=19)
+    {
+        nightorday = 0; //Day
+    }
+    else
+    {
+        nightorday = 1; //Night
+    }
+    gSpecialVar_Result = nightorday;
+}
+

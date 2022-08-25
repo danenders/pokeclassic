@@ -833,6 +833,20 @@ Common_EventScript_PlayerHandedOverTheItem::
 	.include "data/text/mart_clerk.inc"
 	.include "data/text/obtain_item.inc"
 
+Common_EventScript_GetDayOrNight::
+	special GetDayOrNight
+	goto_if_eq VAR_RESULT, 1, Common_EventScript_Night
+	goto_if_eq VAR_RESULT, 0, Common_EventScript_Day
+	end
+
+Common_EventScript_Night::
+	setvar VAR_DAYNIGHT, 1
+	end
+
+Common_EventScript_Day::
+	setvar VAR_DAYNIGHT, 0
+	end
+
 @ The below and surf.inc could be split into some text/notices.inc
 gText_PokemartSign::
 	.string "“Selected items for your convenience!”\n"
