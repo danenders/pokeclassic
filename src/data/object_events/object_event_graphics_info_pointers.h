@@ -237,6 +237,112 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireBrenda
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireMay;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lugia;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SnorlaxSleeping;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BreederM;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BreederF;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedNormal;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedMachBike;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedAcroBike;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedSurfing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedUnderwater;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedFieldMove;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedFishing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedWatering;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedDecorating;
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeafNormal;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeafMachBike;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeafAcroBike;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeafSurfing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeafUnderwater;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeafFieldMove;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeafFishing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeafWatering;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeafDecorating;
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanNormal;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanMachBike;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanAcroBike;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanSurfing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanUnderwater;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanFieldMove;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanFishing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanWatering;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanDecorating;
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraNormal;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraMachBike;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraAcroBike;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraSurfing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraUnderwater;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraFieldMove;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraFishing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraWatering;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraDecorating;
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisNormal;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisMachBike;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisAcroBike;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisSurfing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisUnderwater;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisFieldMove;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisFishing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisWatering;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisDecorating;
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasNormal;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasMachBike;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasAcroBike;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasSurfing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasUnderwater;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasFieldMove;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasFishing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasWatering;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasDecorating;
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnNormal;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnMachBike;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnAcroBike;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnSurfing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnUnderwater;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnFieldMove;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnFishing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnWatering;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnDecorating;
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasPlatinumNormal;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasPlatinumMachBike;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasPlatinumAcroBike;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasPlatinumSurfing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasPlatinumUnderwater;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasPlatinumFieldMove;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasPlatinumFishing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasPlatinumWatering;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasPlatinumDecorating;
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumNormal;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumMachBike;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumAcroBike;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumSurfing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumUnderwater;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumFieldMove;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumFishing;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumWatering;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumDecorating;
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfOak;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lanette;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blue;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Zinnia;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PsychicF;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberFSwimming;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SchoolKidF;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Giovanni;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketMemberF;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketMemberM;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CoolTrainerM;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CoolTrainerF;
+
 // Begin pokemon event objects
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AnimatedBall;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower;
@@ -492,6 +598,105 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_HOOH] =                     &gObjectEventGraphicsInfo_HoOh,
     [OBJ_EVENT_GFX_ANIMATED_BALL] =            &gObjectEventGraphicsInfo_AnimatedBall,
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
+	[OBJ_EVENT_GFX_RED_NORMAL] =           	 	 	 &gObjectEventGraphicsInfo_RedNormal,
+    [OBJ_EVENT_GFX_RED_MACH_BIKE] =        	  		 &gObjectEventGraphicsInfo_RedMachBike,
+    [OBJ_EVENT_GFX_RED_ACRO_BIKE] =        	 		 &gObjectEventGraphicsInfo_RedAcroBike,
+    [OBJ_EVENT_GFX_RED_SURFING] =          	  		 &gObjectEventGraphicsInfo_RedSurfing,
+    [OBJ_EVENT_GFX_RED_UNDERWATER] =       	 	 	 &gObjectEventGraphicsInfo_RedUnderwater,
+    [OBJ_EVENT_GFX_RED_FIELD_MOVE] =       	 	 	 &gObjectEventGraphicsInfo_RedFieldMove,
+    [OBJ_EVENT_GFX_RED_FISHING] =             		 &gObjectEventGraphicsInfo_RedFishing,
+    [OBJ_EVENT_GFX_RED_WATERING] =            		 &gObjectEventGraphicsInfo_RedWatering,
+    [OBJ_EVENT_GFX_RED_DECORATING] =           		 &gObjectEventGraphicsInfo_RedDecorating,
+    [OBJ_EVENT_GFX_LEAF_NORMAL] =           		 &gObjectEventGraphicsInfo_LeafNormal,
+    [OBJ_EVENT_GFX_LEAF_MACH_BIKE] =        		 &gObjectEventGraphicsInfo_LeafMachBike,
+    [OBJ_EVENT_GFX_LEAF_ACRO_BIKE] =        		 &gObjectEventGraphicsInfo_LeafAcroBike,
+    [OBJ_EVENT_GFX_LEAF_SURFING] =         		  	 &gObjectEventGraphicsInfo_LeafSurfing,
+    [OBJ_EVENT_GFX_LEAF_UNDERWATER] =     			 &gObjectEventGraphicsInfo_LeafUnderwater,
+    [OBJ_EVENT_GFX_LEAF_FIELD_MOVE] =      			 &gObjectEventGraphicsInfo_LeafFieldMove,
+    [OBJ_EVENT_GFX_LEAF_FISHING] =         			 &gObjectEventGraphicsInfo_LeafFishing,
+    [OBJ_EVENT_GFX_LEAF_WATERING] =        			 &gObjectEventGraphicsInfo_LeafWatering,
+    [OBJ_EVENT_GFX_LEAF_DECORATING] =      			 &gObjectEventGraphicsInfo_LeafDecorating,
+    [OBJ_EVENT_GFX_ETHAN_NORMAL] =          		 &gObjectEventGraphicsInfo_EthanNormal,
+    [OBJ_EVENT_GFX_ETHAN_MACH_BIKE] =       		 &gObjectEventGraphicsInfo_EthanMachBike,
+    [OBJ_EVENT_GFX_ETHAN_ACRO_BIKE] =       		 &gObjectEventGraphicsInfo_EthanAcroBike,
+    [OBJ_EVENT_GFX_ETHAN_SURFING] =         		 &gObjectEventGraphicsInfo_EthanSurfing,
+    [OBJ_EVENT_GFX_ETHAN_UNDERWATER] =      		 &gObjectEventGraphicsInfo_EthanUnderwater,
+    [OBJ_EVENT_GFX_ETHAN_FIELD_MOVE] =      		 &gObjectEventGraphicsInfo_EthanFieldMove,
+    [OBJ_EVENT_GFX_ETHAN_FISHING] =         		 &gObjectEventGraphicsInfo_EthanFishing,
+    [OBJ_EVENT_GFX_ETHAN_WATERING] =         		 &gObjectEventGraphicsInfo_EthanWatering,
+    [OBJ_EVENT_GFX_ETHAN_DECORATING] =       		 &gObjectEventGraphicsInfo_EthanDecorating,
+    [OBJ_EVENT_GFX_LYRA_NORMAL] =           		 &gObjectEventGraphicsInfo_LyraNormal,
+    [OBJ_EVENT_GFX_LYRA_MACH_BIKE] =        		 &gObjectEventGraphicsInfo_LyraMachBike,
+    [OBJ_EVENT_GFX_LYRA_ACRO_BIKE] =        		 &gObjectEventGraphicsInfo_LyraAcroBike,
+    [OBJ_EVENT_GFX_LYRA_SURFING] =          		 &gObjectEventGraphicsInfo_LyraSurfing,
+    [OBJ_EVENT_GFX_LYRA_UNDERWATER] =       		 &gObjectEventGraphicsInfo_LyraUnderwater,
+    [OBJ_EVENT_GFX_LYRA_FIELD_MOVE] =       		 &gObjectEventGraphicsInfo_LyraFieldMove,
+    [OBJ_EVENT_GFX_LYRA_FISHING] =          		 &gObjectEventGraphicsInfo_LyraFishing,
+    [OBJ_EVENT_GFX_LYRA_WATERING] =         		 &gObjectEventGraphicsInfo_LyraWatering,
+    [OBJ_EVENT_GFX_LYRA_DECORATING] =      	 		 &gObjectEventGraphicsInfo_LyraDecorating,
+    [OBJ_EVENT_GFX_KRIS_NORMAL] =           		 &gObjectEventGraphicsInfo_KrisNormal,
+    [OBJ_EVENT_GFX_KRIS_MACH_BIKE] =        		 &gObjectEventGraphicsInfo_KrisMachBike,
+    [OBJ_EVENT_GFX_KRIS_ACRO_BIKE] =        		 &gObjectEventGraphicsInfo_KrisAcroBike,
+    [OBJ_EVENT_GFX_KRIS_SURFING] =          		 &gObjectEventGraphicsInfo_KrisSurfing,
+    [OBJ_EVENT_GFX_KRIS_UNDERWATER] =       		 &gObjectEventGraphicsInfo_KrisUnderwater,
+    [OBJ_EVENT_GFX_KRIS_FIELD_MOVE] =       		 &gObjectEventGraphicsInfo_KrisFieldMove,
+    [OBJ_EVENT_GFX_KRIS_FISHING] =         		  	 &gObjectEventGraphicsInfo_KrisFishing,
+    [OBJ_EVENT_GFX_KRIS_WATERING] =         		 &gObjectEventGraphicsInfo_KrisWatering,
+    [OBJ_EVENT_GFX_KRIS_DECORATING] =     			 &gObjectEventGraphicsInfo_KrisDecorating,
+   	[OBJ_EVENT_GFX_LUCAS_NORMAL] =          		 &gObjectEventGraphicsInfo_LucasNormal,
+    [OBJ_EVENT_GFX_LUCAS_MACH_BIKE] =        		 &gObjectEventGraphicsInfo_LucasMachBike,
+    [OBJ_EVENT_GFX_LUCAS_ACRO_BIKE] =       		 &gObjectEventGraphicsInfo_LucasAcroBike,
+    [OBJ_EVENT_GFX_LUCAS_SURFING] =          		 &gObjectEventGraphicsInfo_LucasSurfing,
+    [OBJ_EVENT_GFX_LUCAS_UNDERWATER] =       		 &gObjectEventGraphicsInfo_LucasUnderwater,
+    [OBJ_EVENT_GFX_LUCAS_FIELD_MOVE] =       		 &gObjectEventGraphicsInfo_LucasFieldMove,
+    [OBJ_EVENT_GFX_LUCAS_FISHING] =          		 &gObjectEventGraphicsInfo_LucasFishing,
+    [OBJ_EVENT_GFX_LUCAS_WATERING] =         		 &gObjectEventGraphicsInfo_LucasWatering,
+    [OBJ_EVENT_GFX_LUCAS_DECORATING] =       		 &gObjectEventGraphicsInfo_LucasDecorating,
+    [OBJ_EVENT_GFX_DAWN_NORMAL] =           		 &gObjectEventGraphicsInfo_DawnNormal,
+    [OBJ_EVENT_GFX_DAWN_MACH_BIKE] =        		 &gObjectEventGraphicsInfo_DawnMachBike,
+    [OBJ_EVENT_GFX_DAWN_ACRO_BIKE] =        	 	 &gObjectEventGraphicsInfo_DawnAcroBike,
+    [OBJ_EVENT_GFX_DAWN_SURFING] =          		 &gObjectEventGraphicsInfo_DawnSurfing,
+    [OBJ_EVENT_GFX_DAWN_UNDERWATER] =       		 &gObjectEventGraphicsInfo_DawnUnderwater,
+    [OBJ_EVENT_GFX_DAWN_FIELD_MOVE] =       	     &gObjectEventGraphicsInfo_DawnFieldMove,
+    [OBJ_EVENT_GFX_DAWN_FISHING] =          		 &gObjectEventGraphicsInfo_DawnFishing,
+    [OBJ_EVENT_GFX_DAWN_WATERING] =         		 &gObjectEventGraphicsInfo_DawnWatering,
+    [OBJ_EVENT_GFX_DAWN_DECORATING] =       		 &gObjectEventGraphicsInfo_DawnDecorating,
+    [OBJ_EVENT_GFX_LUCAS_PLATINUM_NORMAL] =          &gObjectEventGraphicsInfo_LucasPlatinumNormal,
+    [OBJ_EVENT_GFX_LUCAS_PLATINUM_MACH_BIKE] =       &gObjectEventGraphicsInfo_LucasPlatinumMachBike,
+    [OBJ_EVENT_GFX_LUCAS_PLATINUM_ACRO_BIKE] =       &gObjectEventGraphicsInfo_LucasPlatinumAcroBike,
+    [OBJ_EVENT_GFX_LUCAS_PLATINUM_SURFING] =         &gObjectEventGraphicsInfo_LucasPlatinumSurfing,
+    [OBJ_EVENT_GFX_LUCAS_PLATINUM_UNDERWATER] =      &gObjectEventGraphicsInfo_LucasPlatinumUnderwater,
+    [OBJ_EVENT_GFX_LUCAS_PLATINUM_FIELD_MOVE] =      &gObjectEventGraphicsInfo_LucasPlatinumFieldMove,
+    [OBJ_EVENT_GFX_LUCAS_PLATINUM_FISHING] =         &gObjectEventGraphicsInfo_LucasPlatinumFishing,
+    [OBJ_EVENT_GFX_LUCAS_PLATINUM_WATERING] =        &gObjectEventGraphicsInfo_LucasPlatinumWatering,
+    [OBJ_EVENT_GFX_LUCAS_PLATINUM_DECORATING] =      &gObjectEventGraphicsInfo_LucasPlatinumDecorating,
+    [OBJ_EVENT_GFX_DAWN_PLATINUM_NORMAL] =           &gObjectEventGraphicsInfo_DawnPlatinumNormal,
+    [OBJ_EVENT_GFX_DAWN_PLATINUM_MACH_BIKE] =        &gObjectEventGraphicsInfo_DawnPlatinumMachBike,
+    [OBJ_EVENT_GFX_DAWN_PLATINUM_ACRO_BIKE] =        &gObjectEventGraphicsInfo_DawnPlatinumAcroBike,
+    [OBJ_EVENT_GFX_DAWN_PLATINUM_SURFING] =          &gObjectEventGraphicsInfo_DawnPlatinumSurfing,
+    [OBJ_EVENT_GFX_DAWN_PLATINUM_UNDERWATER] =       &gObjectEventGraphicsInfo_DawnPlatinumUnderwater,
+    [OBJ_EVENT_GFX_DAWN_PLATINUM_FIELD_MOVE] =       &gObjectEventGraphicsInfo_DawnPlatinumFieldMove,
+    [OBJ_EVENT_GFX_DAWN_PLATINUM_FISHING] =          &gObjectEventGraphicsInfo_DawnPlatinumFishing,
+    [OBJ_EVENT_GFX_DAWN_PLATINUM_WATERING] =         &gObjectEventGraphicsInfo_DawnPlatinumWatering,
+    [OBJ_EVENT_GFX_DAWN_PLATINUM_DECORATING] =       &gObjectEventGraphicsInfo_DawnPlatinumDecorating,
+    
+	[OBJ_EVENT_GFX_PROF_OAK] =           			 &gObjectEventGraphicsInfo_ProfOak,
+    [OBJ_EVENT_GFX_ZINNIA] =           				 &gObjectEventGraphicsInfo_Zinnia,
+    [OBJ_EVENT_GFX_BLUE] =           				 &gObjectEventGraphicsInfo_Blue,
+    [OBJ_EVENT_GFX_LANETTE] =           			 &gObjectEventGraphicsInfo_Lanette,
+    [OBJ_EVENT_GFX_GIOVANNI] =           			 &gObjectEventGraphicsInfo_Giovanni,
+    [OBJ_EVENT_GFX_ROCKET_MEMBER_M] =           	 &gObjectEventGraphicsInfo_RocketMemberM,
+    [OBJ_EVENT_GFX_ROCKET_MEMBER_F] =       		 &gObjectEventGraphicsInfo_RocketMemberF,
+    [OBJ_EVENT_GFX_PSYCHIC_F] =           			 &gObjectEventGraphicsInfo_PsychicF,
+    [OBJ_EVENT_GFX_TUBER_F_SWIMMING] =           	 &gObjectEventGraphicsInfo_TuberFSwimming,
+    [OBJ_EVENT_GFX_SCHOOL_KID_F] =           		 &gObjectEventGraphicsInfo_SchoolKidF,
+    [OBJ_EVENT_GFX_COOL_TRAINER_M] =           	 	 &gObjectEventGraphicsInfo_CoolTrainerM,
+    [OBJ_EVENT_GFX_COOL_TRAINER_F] =       		 	 &gObjectEventGraphicsInfo_CoolTrainerF,
+    [OBJ_EVENT_GFX_BREEDER_M] =           	 	 	 &gObjectEventGraphicsInfo_BreederM,
+    [OBJ_EVENT_GFX_BREEDER_F] =       		 	 	 &gObjectEventGraphicsInfo_BreederF,
+
+    [OBJ_EVENT_GFX_SNORLAX_SLEEPING] =           	 &gObjectEventGraphicsInfo_SnorlaxSleeping,
+
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
