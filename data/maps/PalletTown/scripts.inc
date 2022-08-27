@@ -10,3 +10,13 @@ PalletTown_OnTransition:
 PalletTown_OnResume:
 	call Common_EventScript_GetDayOrNight
 	end
+
+PalletTown_EventScript_Tutorial::
+	lockall
+	special SavePlayerParty
+	special PutZigzagoonInPlayerParty
+	special StartWallyTutorialBattle
+	waitstate
+	special LoadPlayerParty
+	releaseall
+	end
