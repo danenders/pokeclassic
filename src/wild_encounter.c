@@ -693,7 +693,7 @@ static bool8 AreLegendariesInSootopolisPreventingEncounters(void)
         return FALSE;
     }
 
-    return FlagGet(FLAG_LEGENDARIES_IN_SOOTOPOLIS);
+    return FALSE; //Flag removed, Sootopolis inaccessible in PokeClassic
 }
 
 bool8 StandardWildEncounter(u16 currMetaTileBehavior, u16 previousMetaTileBehavior)

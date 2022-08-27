@@ -156,7 +156,6 @@ SecretBase_EventScript_FirstEntrance::
 
 SecretBase_EventScript_SetAsBase::
 	closemessage
-	setflag FLAG_RECEIVED_SECRET_POWER
 	special EnterNewlyCreatedSecretBase
 	waitstate
 	end

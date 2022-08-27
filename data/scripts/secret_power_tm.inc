@@ -47,7 +47,6 @@ Route111_EventScript_GiveSecretPower::
 	goto_if_eq VAR_RESULT, FALSE, Route111_EventScript_NoRoomForSecretPower
 	msgbox Route111_Text_ExplainSecretPower, MSGBOX_DEFAULT
 	closemessage
-	setflag FLAG_RECEIVED_SECRET_POWER
 	clearflag FLAG_HIDE_SLATEPORT_CITY_TM_SALESMAN
 	call_if_eq VAR_FACING, DIR_WEST, Route111_EventScript_SecretPowerManExit
 	call_if_eq VAR_FACING, DIR_EAST, Route111_EventScript_SecretPowerManExit

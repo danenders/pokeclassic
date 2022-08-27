@@ -351,52 +351,12 @@ u8 GetSSTidalLocation(s8 *mapGroup, s8 *mapNum, s16 *x, s16 *y)
 
 bool32 ShouldDoWallyCall(void)
 {
-    if (FlagGet(FLAG_ENABLE_FIRST_WALLY_POKENAV_CALL))
-    {
-        switch (gMapHeader.mapType)
-        {
-        case MAP_TYPE_TOWN:
-        case MAP_TYPE_CITY:
-        case MAP_TYPE_ROUTE:
-        case MAP_TYPE_OCEAN_ROUTE:
-            if (++(*GetVarPointer(VAR_WALLY_CALL_STEP_COUNTER)) < 250)
-                return FALSE;
-            break;
-        default:
-            return FALSE;
-        }
-    }
-    else
-    {
-        return FALSE;
-    }
-
-    return TRUE;
+    return FALSE; //Removed in Pokeclassic
 }
 
 bool32 ShouldDoScottFortreeCall(void)
 {
-    if (FlagGet(FLAG_SCOTT_CALL_FORTREE_GYM))
-    {
-        switch (gMapHeader.mapType)
-        {
-        case MAP_TYPE_TOWN:
-        case MAP_TYPE_CITY:
-        case MAP_TYPE_ROUTE:
-        case MAP_TYPE_OCEAN_ROUTE:
-            if (++(*GetVarPointer(VAR_SCOTT_FORTREE_CALL_STEP_COUNTER)) < 10)
-                return FALSE;
-            break;
-        default:
-            return FALSE;
-        }
-    }
-    else
-    {
-        return FALSE;
-    }
-
-    return TRUE;
+    return FALSE; //Removed in Pokeclassic
 }
 
 bool32 ShouldDoScottBattleFrontierCall(void)
@@ -426,52 +386,12 @@ bool32 ShouldDoScottBattleFrontierCall(void)
 
 bool32 ShouldDoRoxanneCall(void)
 {
-    if (FlagGet(FLAG_ENABLE_ROXANNE_FIRST_CALL))
-    {
-        switch (gMapHeader.mapType)
-        {
-        case MAP_TYPE_TOWN:
-        case MAP_TYPE_CITY:
-        case MAP_TYPE_ROUTE:
-        case MAP_TYPE_OCEAN_ROUTE:
-            if (++(*GetVarPointer(VAR_ROXANNE_CALL_STEP_COUNTER)) < 250)
-                return FALSE;
-            break;
-        default:
-            return FALSE;
-        }
-    }
-    else
-    {
-        return FALSE;
-    }
-
-    return TRUE;
+    return FALSE; //Removed in Pokeclassic
 }
 
-bool32 ShouldDoRivalRayquazaCall(void)
+bool32 ShouldDoRivalRayquazaCall(void) //Function removed, unobtainable in Pokeclassic
 {
-    if (FlagGet(FLAG_DEFEATED_MAGMA_SPACE_CENTER))
-    {
-        switch (gMapHeader.mapType)
-        {
-        case MAP_TYPE_TOWN:
-        case MAP_TYPE_CITY:
-        case MAP_TYPE_ROUTE:
-        case MAP_TYPE_OCEAN_ROUTE:
-            if (++(*GetVarPointer(VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER)) < 250)
-                return FALSE;
-            break;
-        default:
-            return FALSE;
-        }
-    }
-    else
-    {
-        return FALSE;
-    }
-
-    return TRUE;
+    return FALSE;
 }
 
 u8 GetLinkPartnerNames(void)
@@ -1133,18 +1053,12 @@ void EndLotteryCornerComputerEffect(void)
 
 void SetTrickHouseNuggetFlag(void)
 {
-    u16 *specVar = &gSpecialVar_0x8004;
-    u16 flag = FLAG_HIDDEN_ITEM_TRICK_HOUSE_NUGGET;
-    *specVar = flag;
-    FlagSet(flag);
+    return; //Removed in Pokeclassic
 }
 
 void ResetTrickHouseNuggetFlag(void)
 {
-    u16 *specVar = &gSpecialVar_0x8004;
-    u16 flag = FLAG_HIDDEN_ITEM_TRICK_HOUSE_NUGGET;
-    *specVar = flag;
-    FlagClear(flag);
+    return; //Removed in Pokeclassic
 }
 
 bool8 CheckLeadMonCool(void)
@@ -1287,46 +1201,22 @@ u16 GetSlotMachineId(void)
 
 bool8 FoundAbandonedShipRoom1Key(void)
 {
-    u16 *specVar = &gSpecialVar_0x8004;
-    u16 flag = FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_1_KEY;
-    *specVar = flag;
-    if (!FlagGet(flag))
-        return FALSE;
-
-    return TRUE;
+    return FALSE; //Removed in Pokeclassic
 }
 
 bool8 FoundAbandonedShipRoom2Key(void)
 {
-    u16 *specVar = &gSpecialVar_0x8004;
-    u16 flag = FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_2_KEY;
-    *specVar = flag;
-    if (!FlagGet(flag))
-        return FALSE;
-
-    return TRUE;
+    return FALSE; //Removed in Pokeclassic
 }
 
 bool8 FoundAbandonedShipRoom4Key(void)
 {
-    u16 *specVar = &gSpecialVar_0x8004;
-    u16 flag = FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_4_KEY;
-    *specVar = flag;
-    if (!FlagGet(flag))
-        return FALSE;
-
-    return TRUE;
+    return FALSE; //Removed in Pokeclassic
 }
 
 bool8 FoundAbandonedShipRoom6Key(void)
 {
-    u16 *specVar = &gSpecialVar_0x8004;
-    u16 flag = FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_6_KEY;
-    *specVar = flag;
-    if (!FlagGet(flag))
-        return FALSE;
-
-    return TRUE;
+    return FALSE; //Removed in Pokeclassic
 }
 
 bool8 LeadMonHasEffortRibbon(void)
@@ -1355,23 +1245,8 @@ bool8 Special_AreLeadMonEVsMaxedOut(void)
     return FALSE;
 }
 
-u8 TryUpdateRusturfTunnelState(void)
+u8 TryUpdateRusturfTunnelState(void) //Rusturf is inaccessible in PokeClassic, removed functions to free up the flags
 {
-    if (!FlagGet(FLAG_RUSTURF_TUNNEL_OPENED)
-        && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(RUSTURF_TUNNEL)
-        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(RUSTURF_TUNNEL))
-    {
-        if (FlagGet(FLAG_HIDE_RUSTURF_TUNNEL_ROCK_1))
-        {
-            VarSet(VAR_RUSTURF_TUNNEL_STATE, 4);
-            return TRUE;
-        }
-        else if (FlagGet(FLAG_HIDE_RUSTURF_TUNNEL_ROCK_2))
-        {
-            VarSet(VAR_RUSTURF_TUNNEL_STATE, 5);
-            return TRUE;
-        }
-    }
     return FALSE;
 }
 
@@ -1472,7 +1347,7 @@ static void StopCameraShake(u8 taskId)
 
 bool8 FoundBlackGlasses(void)
 {
-    return FlagGet(FLAG_HIDDEN_ITEM_ROUTE_116_BLACK_GLASSES);
+    return FALSE; //Removed in Pokeclassic
 }
 
 void SetRoute119Weather(void)

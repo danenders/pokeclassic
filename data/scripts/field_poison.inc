@@ -14,14 +14,9 @@ EventScript_FieldWhiteOut::
 	special Script_FadeOutMapMusic
 	waitstate
 	fadescreen FADE_TO_BLACK
-	call_if_set FLAG_WHITEOUT_TO_LAVARIDGE, EventScript_SetRespawnLavaridgePkmnCenter
 	special SetCB2WhiteOut
 	waitstate
 	end
-
-EventScript_SetRespawnLavaridgePkmnCenter::
-	setrespawn HEAL_LOCATION_LAVARIDGE_TOWN
-	return
 
 EventScript_FrontierFieldWhiteOut::
 	message gText_PlayerWhitedOut
