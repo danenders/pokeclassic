@@ -12,17 +12,9 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+    "connections": null,
   "object_events": [],
-  "warp_events": [
-    {
-      "x": 18,
-      "y": 22,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE103",
-      "dest_warp_id": 0
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

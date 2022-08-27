@@ -13,23 +13,9 @@
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
+    "connections": null,
   "object_events": [],
-  "warp_events": [
-    {
-      "x": 11,
-      "y": 17,
-      "elevation": 3,
-      "dest_map": "MAP_CAVE_OF_ORIGIN_ENTRANCE",
-      "dest_warp_id": 1
-    },
-    {
-      "x": 14,
-      "y": 5,
-      "elevation": 3,
-      "dest_map": "MAP_CAVE_OF_ORIGIN_B1F",
-      "dest_warp_id": 0
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

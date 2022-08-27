@@ -14,22 +14,7 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [],
-  "warp_events": [
-    {
-      "x": 3,
-      "y": 3,
-      "elevation": 3,
-      "dest_map": "MAP_NAVEL_ROCK_DOWN08",
-      "dest_warp_id": 1
-    },
-    {
-      "x": 5,
-      "y": 5,
-      "elevation": 3,
-      "dest_map": "MAP_NAVEL_ROCK_DOWN10",
-      "dest_warp_id": 0
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

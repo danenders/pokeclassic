@@ -1504,8 +1504,8 @@
     {
       "id": "LAYOUT_METEOR_FALLS_1F_1R",
       "name": "MeteorFalls_1F_1R_Layout",
-      "width": 30,
-      "height": 42,
+      "width": 1,
+      "height": 1,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -1516,8 +1516,8 @@
     {
       "id": "LAYOUT_METEOR_FALLS_1F_2R",
       "name": "MeteorFalls_1F_2R_Layout",
-      "width": 30,
-      "height": 32,
+      "width": 1,
+      "height": 1,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",

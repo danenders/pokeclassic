@@ -14,36 +14,7 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [],
-  "warp_events": [
-    {
-      "x": 13,
-      "y": 3,
-      "elevation": 3,
-      "dest_map": "MAP_ROUTE110_TRICK_HOUSE_END",
-      "dest_warp_id": 1
-    },
-    {
-      "x": 14,
-      "y": 3,
-      "elevation": 3,
-      "dest_map": "MAP_ROUTE110_TRICK_HOUSE_END",
-      "dest_warp_id": 1
-    },
-    {
-      "x": 4,
-      "y": 23,
-      "elevation": 3,
-      "dest_map": "MAP_ROUTE110_TRICK_HOUSE_ENTRANCE",
-      "dest_warp_id": 2
-    },
-    {
-      "x": 5,
-      "y": 23,
-      "elevation": 3,
-      "dest_map": "MAP_ROUTE110_TRICK_HOUSE_ENTRANCE",
-      "dest_warp_id": 2
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

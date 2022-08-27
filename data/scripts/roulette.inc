@@ -1,6 +1,6 @@
 Roulette_EventScript_Table1::
 	checkitem ITEM_COIN_CASE
-	goto_if_eq VAR_RESULT, FALSE, MauvilleCity_GameCorner_EventScript_NoCoinCase
+	goto_if_eq VAR_RESULT, FALSE, GameCorner_EventScript_NoCoinCase
 	setvar VAR_0x8004, 0
 	getpokenewsactive POKENEWS_GAME_CORNER
 	goto_if_eq VAR_RESULT, FALSE, Roulette_EventScript_Play
@@ -10,7 +10,7 @@ Roulette_EventScript_Table1::
 
 Roulette_EventScript_Table2::
 	checkitem ITEM_COIN_CASE
-	goto_if_eq VAR_RESULT, FALSE, MauvilleCity_GameCorner_EventScript_NoCoinCase
+	goto_if_eq VAR_RESULT, FALSE, GameCorner_EventScript_NoCoinCase
 	setvar VAR_0x8004, 1
 	getpokenewsactive POKENEWS_GAME_CORNER
 	goto_if_eq VAR_RESULT, FALSE, Roulette_EventScript_Play
@@ -65,3 +65,12 @@ Roulette_Text_YouDontHaveACoinCase::
 Roulette_Text_CoinCaseIsFull::
 	.string "Your Coin Case is full!\n"
 	.string "Coins can be exchanged for prizes.$"
+
+GameCorner_EventScript_NoCoinCase::
+	msgbox GameCorner_Text_CantPlayWithNoCoinCase, MSGBOX_DEFAULT
+	releaseall
+	end
+
+GameCorner_Text_CantPlayWithNoCoinCase:
+	.string "You can't play if you don't have\n"
+	.string "a Coin Case.$"

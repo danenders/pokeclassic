@@ -12,31 +12,9 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+   "connections": null,
   "object_events": [],
-  "warp_events": [
-    {
-      "x": 4,
-      "y": 6,
-      "elevation": 3,
-      "dest_map": "MAP_NAVEL_ROCK_UP1",
-      "dest_warp_id": 0
-    },
-    {
-      "x": 11,
-      "y": 79,
-      "elevation": 3,
-      "dest_map": "MAP_NAVEL_ROCK_B1F",
-      "dest_warp_id": 1
-    },
-    {
-      "x": 22,
-      "y": 6,
-      "elevation": 3,
-      "dest_map": "MAP_NAVEL_ROCK_DOWN01",
-      "dest_warp_id": 0
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

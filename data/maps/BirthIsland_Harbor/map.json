@@ -13,43 +13,8 @@
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
-  "object_events": [
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 8,
-      "y": 5,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "BirthIsland_Harbor_EventScript_Sailor",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
-      "x": 8,
-      "y": 7,
-      "elevation": 1,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
-      "flag": "0"
-    }
-  ],
-  "warp_events": [
-    {
-      "x": 8,
-      "y": 2,
-      "elevation": 0,
-      "dest_map": "MAP_BIRTH_ISLAND_EXTERIOR",
-      "dest_warp_id": 0
-    }
-  ],
+  "object_events": [],
+  "warp_events": [ ],
   "coord_events": [],
   "bg_events": []
 }
