@@ -198,16 +198,16 @@
 //Evil Teams
 #define OBJ_EVENT_GFX_ARCHIE                     	NPC_GFX + 22
 #define OBJ_EVENT_GFX_MAXIE                      	NPC_GFX + 23
-#define OBJ_EVENT_GFX_AQUA_ADMIN              		NPC_GFX + 24	//Placeholder
-#define OBJ_EVENT_GFX_MAGMA_ADMIN	             	NPC_GFX + 25    //Placeholder
-#define OBJ_EVENT_GFX_AQUA_MEMBER_M              	NPC_GFX + 26
-#define OBJ_EVENT_GFX_AQUA_MEMBER_F              	NPC_GFX + 27
-#define OBJ_EVENT_GFX_MAGMA_MEMBER_M             	NPC_GFX + 28
-#define OBJ_EVENT_GFX_MAGMA_MEMBER_F             	NPC_GFX + 29
-#define OBJ_EVENT_GFX_GIOVANNI             			NPC_GFX + 30 	//Placeholder
-#define OBJ_EVENT_GFX_ROCKET_ADMIN             		NPC_GFX + 31 	
-#define OBJ_EVENT_GFX_ROCKET_MEMBER_M             	NPC_GFX + 32 	
-#define OBJ_EVENT_GFX_ROCKET_MEMBER_F             	NPC_GFX + 33 	
+#define OBJ_EVENT_GFX_AQUA_MEMBER_M              	NPC_GFX + 24
+#define OBJ_EVENT_GFX_AQUA_MEMBER_F              	NPC_GFX + 25
+#define OBJ_EVENT_GFX_MAGMA_MEMBER_M             	NPC_GFX + 26
+#define OBJ_EVENT_GFX_MAGMA_MEMBER_F             	NPC_GFX + 27
+#define OBJ_EVENT_GFX_GIOVANNI             			NPC_GFX + 28 	
+#define OBJ_EVENT_GFX_ROCKET_ADMIN             		NPC_GFX + 29 	
+#define OBJ_EVENT_GFX_ROCKET_MEMBER_M             	NPC_GFX + 30 	
+#define OBJ_EVENT_GFX_ROCKET_MEMBER_F             	NPC_GFX + 31 	
+#define OBJ_EVENT_GFX_JESSIE              			NPC_GFX + 32	
+#define OBJ_EVENT_GFX_JAMES	             			NPC_GFX + 33
 
 //Unique NPCs
 #define OBJ_EVENT_GFX_MOM                        	NPC_GFX + 34

@@ -342,6 +342,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketMemberF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketMemberM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CoolTrainerM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CoolTrainerF;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jessie;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_James;
 
 // Begin pokemon event objects
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AnimatedBall;
@@ -685,6 +687,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BLUE] =           				 &gObjectEventGraphicsInfo_Blue,
     [OBJ_EVENT_GFX_LANETTE] =           			 &gObjectEventGraphicsInfo_Lanette,
     [OBJ_EVENT_GFX_GIOVANNI] =           			 &gObjectEventGraphicsInfo_Giovanni,
+   	[OBJ_EVENT_GFX_JESSIE] =           			 	 &gObjectEventGraphicsInfo_Jessie,
+    [OBJ_EVENT_GFX_JAMES] =           			 	 &gObjectEventGraphicsInfo_James,
     [OBJ_EVENT_GFX_ROCKET_MEMBER_M] =           	 &gObjectEventGraphicsInfo_RocketMemberM,
     [OBJ_EVENT_GFX_ROCKET_MEMBER_F] =       		 &gObjectEventGraphicsInfo_RocketMemberF,
     [OBJ_EVENT_GFX_PSYCHIC_F] =           			 &gObjectEventGraphicsInfo_PsychicF,

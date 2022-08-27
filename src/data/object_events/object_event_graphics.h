@@ -1138,6 +1138,12 @@ const u32 gObjectEventPic_BreederM[] = INCBIN_U32("graphics/object_events/pics/p
 const u32 gObjectEventPic_BreederF[] = INCBIN_U32("graphics/object_events/pics/people/breeder_f.4bpp");
 const u16 gObjectEventPal_Breeder[] = INCBIN_U16("graphics/object_events/palettes/breeder.gbapal");
 
+const u32 gObjectEventPic_Jessie[] = INCBIN_U32("graphics/object_events/pics/people/team_rocket/jessie.4bpp");
+const u16 gObjectEventPal_Jessie[] = INCBIN_U16("graphics/object_events/palettes/jessie.gbapal");
+
+const u32 gObjectEventPic_James[] = INCBIN_U32("graphics/object_events/pics/people/team_rocket/james.4bpp");
+const u16 gObjectEventPal_James[] = INCBIN_U16("graphics/object_events/palettes/james.gbapal");
+
 //Other Pokemon
 const u32 gObjectEventPic_SnorlaxSleeping[] = INCBIN_U32("graphics/object_events/pics/pokemon/snorlax_sleep.4bpp");
-
+const u16 gObjectEventPal_Snorlax[] = INCBIN_U16("graphics/object_events/palettes/snorlax.gbapal");
