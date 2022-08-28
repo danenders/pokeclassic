@@ -115,7 +115,5 @@ EventScript_ResetAllBerries::
 EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_CONTEST_POKE_BALL
 	setflag FLAG_HIDE_BATTLE_TOWER_OPPONENT
-	setflag FLAG_UNKNOWN_0x393
-	setflag FLAG_UNKNOWN_0x363
 	call EventScript_ResetAllBerries
 	end

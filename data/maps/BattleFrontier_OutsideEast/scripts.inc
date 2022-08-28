@@ -1,5 +1,3 @@
-.set LOCALID_SUDOWOODO, 14
-
 BattleFrontier_OutsideEast_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, BattleFrontier_OutsideEast_OnResume
 	map_script MAP_SCRIPT_ON_TRANSITION, BattleFrontier_OutsideEast_OnTransition
@@ -18,12 +16,10 @@ BattleFrontier_OutsideEast_EventScript_TryRemoveSudowoodo::
 BattleFrontier_OutsideEast_OnTransition:
 	setvar VAR_BRAVO_TRAINER_BATTLE_TOWER_ON, 0
 	setflag FLAG_HIDE_BATTLE_TOWER_REPORTER
-	call_if_unset FLAG_DEFEATED_SUDOWOODO, BattleFrontier_OutsideEast_EventScript_ShowSudowoodo
-	end
+end
 
 BattleFrontier_OutsideEast_EventScript_ShowSudowoodo::
-	clearflag FLAG_HIDE_BATTLE_FRONTIER_SUDOWOODO
-	return
+ 	return
 
 BattleFrontier_OutsideEast_EventScript_BattleTowerSign::
 	msgbox BattleFrontier_OutsideEast_Text_BattleTowerSign, MSGBOX_SIGN
@@ -108,7 +104,6 @@ BattleFrontier_OutsideEast_EventScript_Sudowoodo::
 	faceplayer
 	waitse
 	playse SE_SUDOWOODO_SHAKE
-	applymovement LOCALID_SUDOWOODO, BattleFrontier_OutsideEast_Movement_SudowoodoShake
 	waitmovement 0
 	release
 	end
@@ -120,7 +115,6 @@ BattleFrontier_OutsideEast_EventScript_WaterSudowoodo::
 	waitstate
 	waitse
 	playse SE_SUDOWOODO_SHAKE
-	applymovement LOCALID_SUDOWOODO, BattleFrontier_OutsideEast_Movement_SudowoodoShake
 	waitmovement 0
 	msgbox gText_Sudowoodo_Attacked, MSGBOX_DEFAULT
 	closemessage
@@ -128,7 +122,6 @@ BattleFrontier_OutsideEast_EventScript_WaterSudowoodo::
 	playmoncry SPECIES_SUDOWOODO, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setvar VAR_LAST_TALKED, LOCALID_SUDOWOODO
 	setwildbattle SPECIES_SUDOWOODO, 40
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	dowildbattle
@@ -137,12 +130,10 @@ BattleFrontier_OutsideEast_EventScript_WaterSudowoodo::
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, BattleFrontier_OutsideEast_EventScript_DefeatedSudowoodo
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, BattleFrontier_OutsideEast_EventScript_DefeatedSudowoodo
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, BattleFrontier_OutsideEast_EventScript_DefeatedSudowoodo
-	setflag FLAG_DEFEATED_SUDOWOODO
 	release
 	end
 
 BattleFrontier_OutsideEast_EventScript_DefeatedSudowoodo::
-	setflag FLAG_DEFEATED_SUDOWOODO
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 
@@ -219,7 +210,6 @@ BattleFrontier_OutsideEast_EventScript_Gentleman::
 BattleFrontier_OutsideEast_EventScript_OldWoman::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_SUDOWOODO, BattleFrontier_OutsideEast_EventScript_OldWomanSudowoodoGone
 	msgbox BattleFrontier_OutsideEast_Text_OddTreeHereSeemsToWiggle, MSGBOX_DEFAULT
 	release
 	end
