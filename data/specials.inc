@@ -537,4 +537,5 @@ gSpecials::
 	def_special TrySetBattleTowerLinkType
 	def_special SetTotemBoost
 	def_special GetDayOrNight
+	def_special NameRival
 

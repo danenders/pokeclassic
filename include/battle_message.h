@@ -72,6 +72,7 @@
 #define B_TXT_DEF_TEAM2 0x3B // your/the opposing
 #define B_TXT_ACTIVE_NAME 0x3C
 #define B_TXT_ACTIVE_NAME2 0x3D // no Illusion check
+#define B_TXT_RIVAL_NAME 0x3E
 
 // for B_TXT_BUFF1, B_TXT_BUFF2 and B_TXT_BUFF3
 

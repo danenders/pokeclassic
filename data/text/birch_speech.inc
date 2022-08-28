@@ -36,9 +36,18 @@ gText_Birch_SoItsPlayer::
     .string "Right…\n"
     .string "So your name is {PLAYER}.$"
 
+gText_Birch_ThisIsYourRival::
+    .string "This is my grandson.\p"
+    .string "He's been your rival since you both\n"
+    .string "were babies.\p"
+    .string "…Erm, what was his name now?$"
+
+gText_Birch_ConfirmRivalName::
+    .string "…Er, was it {RIVAL}?$"
+
 gText_Birch_YourePlayer::
-	.string "PLACEHOLDER TEXT\p"
-	.string "$"
+    .string "That's right! I remember now!\n"
+    .string "His name is {RIVAL}!\p$"
 
 gText_Birch_AreYouReady::
     .string "{PLAYER}!\p"

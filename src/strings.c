@@ -97,6 +97,17 @@ const u8 gText_DefaultNameLillie[] = _("Lillie");
 const u8 gText_DefaultNameTerra[] = _("Terra");
 const u8 gText_DefaultNameLucy[] = _("Lucy");
 const u8 gText_DefaultNameHalie[] = _("Halie");
+
+const u8 gText_RivalNameGary[] = _("Gary");
+const u8 gText_RivalNameBlue[] = _("Blue");
+const u8 gText_RivalNameJohn[] = _("John");
+const u8 gText_RivalNameKaz[] = _("Kaz");
+const u8 gText_RivalNameToru[] = _("Toru");
+const u8 gText_RivalNameKene[] = _("Kene");
+const u8 gText_RivalNameGeki[] = _("Geki");
+const u8 gText_RivalNameSatoru[] = _("Satoru");
+const u8 gText_RivalNameKen[] = _("Ken");
+
 const u8 gText_ThisIsAPokemon[] = _("This world…{PAUSE 96}\p");
 const u8 gText_5MarksPokemon[] = _("????? Pokémon");
 const u8 gText_UnkHeight[] = _("{CLEAR_TO 0x0C}??'??”");

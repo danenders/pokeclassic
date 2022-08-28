@@ -346,6 +346,8 @@ extern const u8 gText_Birch_MainSpeech[];
 extern const u8 gText_Birch_AndYouAre[];
 extern const u8 gText_Birch_BoyOrGirl[];
 extern const u8 gText_Birch_WhatsYourName[];
+extern const u8 gText_Birch_ThisIsYourRival[];
+extern const u8 gText_Birch_ConfirmRivalName[];
 extern const u8 gText_Birch_SoItsPlayer[];
 extern const u8 gText_Birch_YourePlayer[];
 extern const u8 gText_Birch_AreYouReady[];
@@ -395,6 +397,16 @@ extern const u8 gText_DefaultNameLillie[];
 extern const u8 gText_DefaultNameTerra[];
 extern const u8 gText_DefaultNameLucy[];
 extern const u8 gText_DefaultNameHalie[];
+
+extern const u8 gText_RivalNameGary[];
+extern const u8 gText_RivalNameBlue[];
+extern const u8 gText_RivalNameJohn[];
+extern const u8 gText_RivalNameKaz[];
+extern const u8 gText_RivalNameToru[];
+extern const u8 gText_RivalNameKene[];
+extern const u8 gText_RivalNameGeki[];
+extern const u8 gText_RivalNameSatoru[];
+extern const u8 gText_RivalNameKen[];
 
 extern const u8 gText_BirchInTrouble[];
 extern const u8 gText_ConfirmStarterChoice[];
