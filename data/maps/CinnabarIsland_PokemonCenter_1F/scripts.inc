@@ -1,2 +1,7 @@
 CinnabarIsland_PokemonCenter_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, CinnabarIsland_PokemonCenter_1F_OnTransition
 	.byte 0
+
+CinnabarIsland_PokemonCenter_1F_OnTransition::
+	setrespawn HEAL_LOCATION_CINNABAR_ISLAND
+	end

@@ -1,5 +1,11 @@
 PalletTown_PlayersHouse_2F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_PlayersHouse_2F_OnTransition
 	.byte 0
+
+PalletTown_PlayersHouse_2F_OnTransition::
+	setrespawn HEAL_LOCATION_PLAYERS_HOUSE
+	end
+
 
 PlayersHouse_2F_EventScript_PC::
 	lockall
