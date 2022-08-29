@@ -1,10 +1,182 @@
+.set LOCALID_MOM, 1
+
 PalletTown_PlayersHouse_2F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_PlayersHouse_2F_OnTransition
 	.byte 0
 
-PalletTown_PlayersHouse_2F_OnTransition::
+PalletTown_PlayersHouse_2F_OnTransition:
 	setrespawn HEAL_LOCATION_PLAYERS_HOUSE
 	end
+
+PlayersHouse_2F_EventScript_NewGameStart1::
+	lockall
+	addobject LOCALID_MOM
+	applymovement LOCALID_MOM, MomWalksUpstairs
+	waitmovement 1
+	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
+	waitmovement 1
+	applymovement LOCALID_MOM, Common_Movement_Delay48
+	waitmovement 1
+	applymovement LOCALID_MOM, WalkToPlayer1
+	waitmovement 1
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	msgbox PalletTown_PlayersHouse_2F_Text_LookAtTheTime, MSGBOX_DEFAULT
+	call PlayersHouse_2F_EventScript_SetWallClock
+	msgbox PalletTown_PlayersHouse_2F_Text_GoingToBeLate, MSGBOX_DEFAULT
+	applymovement LOCALID_MOM, WalkToStairs1
+	waitmovement 1
+	turnobject LOCALID_MOM, DIR_SOUTH
+	msgbox PalletTown_PlayersHouse_2F_Text_FoldedYourLaundry, MSGBOX_DEFAULT
+	applymovement LOCALID_MOM, MomGoesDownstairs
+	waitmovement 1
+	setflag FLAG_HIDE_MOM_PLAYERS_ROOM
+	removeobject LOCALID_MOM
+	setvar VAR_PLAYER_ROOM_STATE, 1
+	releaseall
+	end
+
+PlayersHouse_2F_EventScript_NewGameStart2::
+	lockall
+	addobject LOCALID_MOM
+	applymovement LOCALID_MOM, MomWalksUpstairsAlt
+	waitmovement 1
+	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
+	waitmovement 1
+	applymovement LOCALID_MOM, Common_Movement_Delay48
+	waitmovement 1
+	applymovement LOCALID_MOM, WalkToPlayer2
+	waitmovement 1
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	msgbox PalletTown_PlayersHouse_2F_Text_LookAtTheTime, MSGBOX_DEFAULT
+	call PlayersHouse_2F_EventScript_SetWallClock
+	msgbox PalletTown_PlayersHouse_2F_Text_GoingToBeLate, MSGBOX_DEFAULT
+	applymovement LOCALID_MOM, WalkToStairs2
+	waitmovement 1
+	turnobject LOCALID_MOM, DIR_SOUTH
+	msgbox PalletTown_PlayersHouse_2F_Text_FoldedYourLaundry, MSGBOX_DEFAULT
+	applymovement LOCALID_MOM, MomGoesDownstairs
+	waitmovement 1
+	setflag FLAG_HIDE_MOM_PLAYERS_ROOM
+	removeobject LOCALID_MOM
+	setvar VAR_PLAYER_ROOM_STATE, 1
+	releaseall
+	end
+
+PlayersHouse_2F_EventScript_NewGameStart3::
+	lockall
+	addobject LOCALID_MOM
+	applymovement LOCALID_MOM, MomWalksUpstairs
+	waitmovement 1
+	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
+	waitmovement 1
+	applymovement LOCALID_MOM, Common_Movement_Delay48
+	waitmovement 1
+	applymovement LOCALID_MOM, WalkToPlayer3
+	waitmovement 1
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	msgbox PalletTown_PlayersHouse_2F_Text_LookAtTheTime, MSGBOX_DEFAULT
+	call PlayersHouse_2F_EventScript_SetWallClock
+	msgbox PalletTown_PlayersHouse_2F_Text_GoingToBeLate, MSGBOX_DEFAULT
+	applymovement LOCALID_MOM, WalkToStairs3
+	waitmovement 1
+	turnobject LOCALID_MOM, DIR_SOUTH
+	msgbox PalletTown_PlayersHouse_2F_Text_FoldedYourLaundry, MSGBOX_DEFAULT
+	applymovement LOCALID_MOM, MomGoesDownstairs
+	waitmovement 1
+	setflag FLAG_HIDE_MOM_PLAYERS_ROOM
+	removeobject LOCALID_MOM
+	setvar VAR_PLAYER_ROOM_STATE, 1
+	releaseall
+	end
+
+MomWalksUpstairs:
+	walk_right
+	walk_down
+	step_end
+
+MomWalksUpstairsAlt:
+	walk_right
+	walk_down
+	walk_down
+	step_end
+
+WalkToPlayer1:
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+WalkToPlayer2:
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+WalkToPlayer3:
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	step_end
+
+WalkToStairs1:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+WalkToStairs2:
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+WalkToStairs3:
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+MomGoesDownstairs:
+	walk_up
+	walk_left
+	walk_left
+	step_end
+
+PalletTown_PlayersHouse_2F_Text_LookAtTheTime:
+	.string "Mom:{PLAYER}! There you are!\p"
+	.string "Have you been playing games\n"
+	.string "up here this whole time?\p"
+	.string "Weren't you supposed to meet\n"
+	.string "Professor Oak at his lab today?\p"
+	.string "Do you even know what time it is?$"
+
+PalletTown_PlayersHouse_2F_Text_GoingToBeLate:
+	.string "You should hurry over to the lab,\n"
+	.string "you're going to miss the Professor!$"
+
+PalletTown_PlayersHouse_2F_Text_FoldedYourLaundry:
+	.string "Oh! If you want to change your\n"
+	.string "clothes before you go out, \l"
+	.string "I put your laundry in your dresser.$"
 
 
 PlayersHouse_2F_EventScript_PC::
@@ -38,3 +210,23 @@ PlayersHouse_2F_EventScript_SetWallClock::
 	special StartWallClock
 	waitstate
 	return
+
+PlayersHouse_2F_EventScript_Console::
+	lock
+	msgbox PlayersHouse_2F_Text_Console, MSGBOX_DEFAULT
+	release
+	end
+
+PlayersHouse_2F_Text_Console:
+	.string "It's an old game console.\p"
+	.string "Retro-gaming is all the rage!$"
+
+PlayersHouse_2F_EventScript_Dresser::
+	lock
+	msgbox PlayersHouse_2F_Text_Dresser, MSGBOX_DEFAULT
+	release
+	end
+
+PlayersHouse_2F_Text_Dresser:
+	.string "It's full of clean clothes...\p"
+	.string "Love that fresh laundry smell!$"

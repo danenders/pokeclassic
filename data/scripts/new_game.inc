@@ -116,4 +116,5 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_CONTEST_POKE_BALL
 	setflag FLAG_HIDE_BATTLE_TOWER_OPPONENT
 	call EventScript_ResetAllBerries
+	setflag FLAG_HIDE_MOM_PLAYERS_ROOM
 	end

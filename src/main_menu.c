@@ -1683,7 +1683,7 @@ static void Task_NewGameBirchSpeech_ShowRival(u8 taskId)
     {
         gSprites[gTasks[taskId].tRedSpriteId].invisible = TRUE;
         spriteId = gTasks[taskId].tRivalSpriteId;
-        gSprites[spriteId].x = 136;
+        gSprites[spriteId].x = 120;
         gSprites[spriteId].y = 60;
         gSprites[spriteId].invisible = FALSE;
         gSprites[spriteId].oam.objMode = ST_OAM_OBJ_BLEND;

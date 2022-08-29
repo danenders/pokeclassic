@@ -65,8 +65,10 @@
 #define FLAG_RECEIVED_COIN_CASE    		0x31 
 #define FLAG_RECEIVED_EXP_SHARE    		0x32 
 #define FLAG_RECEIVED_POKENAV    		0x33
-#define FLAG_RECEIVED_BIKE    		0x34
-#define FLAG_UNUSED_0x035    		0x35 // Unused Flag
+#define FLAG_RECEIVED_BIKE    			0x34
+
+//Story Flags
+#define FLAG_SET_CLOCK    			0x35
 #define FLAG_UNUSED_0x036    		0x36 // Unused Flag
 #define FLAG_UNUSED_0x037    		0x37 // Unused Flag
 #define FLAG_UNUSED_0x038    		0x38 // Unused Flag
@@ -768,7 +770,8 @@
 #define FLAG_HIDE_FANCLUB_LADY                          			0x2DB
 #define FLAG_HIDE_LILYCOVE_FAN_CLUB_INTERVIEWER                    	0x2DC
 #define FLAG_HIDE_BATTLE_TOWER_REPORTER              				0x2DD
-#define FLAG_HIDE_UNUSED_8                                 			0x2DE
+
+#define FLAG_HIDE_MOM_PLAYERS_ROOM                                 	0x2DE
 #define FLAG_HIDE_UNUSED_9      									0x2DF
 #define FLAG_HIDE_UNUSED_10          								0x2E0
 #define FLAG_HIDE_UNUSED_11             							0x2E1

@@ -1,5 +1,20 @@
+.set LOCALID_MOM, 1
+
 PalletTown_PlayersHouse_1F_MapScripts::
 	.byte 0
+
+PalletTown_PlayersHouse_1F_EvenScripts_Mom::
+	lock
+	faceplayer
+	msgbox PalletTown_PlayersHouse_1F_Text_BetterHurry, MSGBOX_DEFAULT
+	turnobject LOCALID_MOM, DIR_LEFT
+	release
+	end
+
+PalletTown_PlayersHouse_1F_Text_BetterHurry:
+	.string "Mom: You don't want to miss\n"
+	.string "Professor Oak!\p"
+	.string "You better hurry!$"
 
 PlayersHouse_1F_Text_TheresAMovieOnTV:
 	.string "There is a movie on TV.\p"
