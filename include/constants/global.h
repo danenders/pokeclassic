@@ -155,4 +155,17 @@
 #define CONNECTION_DIVE     5
 #define CONNECTION_EMERGE   6
 
+#define	RED_COSTUME					0
+#define	LEAF_COSTUME				1
+#define	ETHAN_COSTUME				2
+#define	LYRA_COSTUME				3
+#define	KRIS_COSTUME				4
+#define BRENDAN_COSTUME       		5
+#define MAY_COSTUME       			6
+#define	LUCAS_COSTUME				7
+#define	DAWN_COSTUME				8
+#define	LUCAS_PLATINUM_COSTUME		9
+#define	DAWN_PLATINUM_COSTUME		10
+#define COSTUME_COUNT   			11
+
 #endif // GUARD_CONSTANTS_GLOBAL_H

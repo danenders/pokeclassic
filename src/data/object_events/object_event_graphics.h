@@ -508,6 +508,7 @@ const u16 gObjectEventPal_QuintyPlump[] = INCBIN_U16("graphics/object_events/pal
 const u16 gObjectEventPal_MovingBox[] = INCBIN_U16("graphics/object_events/palettes/moving_box.gbapal");
 const u16 gObjectEventPal_RedLeaf[] = INCBIN_U16("graphics/object_events/palettes/red_leaf.gbapal");
 const u16 gObjectEventPal_Deoxys[] = INCBIN_U16("graphics/object_events/palettes/deoxys.gbapal");
+const u16 gObjectEventPal_Pikachu[] = INCBIN_U16("graphics/object_events/palettes/pikachu.gbapal");
 const u16 gObjectEventPal_HoOh[] = INCBIN_U16("graphics/object_events/palettes/ho_oh.gbapal");
 const u16 gObjectEventPal_Lugia[] = INCBIN_U16("graphics/object_events/palettes/lugia.gbapal");
 const u16 gObjectEventPal_BirthIslandStone[] = INCBIN_U16("graphics/object_events/palettes/birth_island_stone.gbapal");

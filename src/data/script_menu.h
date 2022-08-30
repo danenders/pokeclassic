@@ -776,6 +776,46 @@ static const struct MenuAction MultichoiceList_Exit[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_DresserDrawers[] =
+{
+    {gText_FirstDrawer},
+    {gText_SecondDrawer},
+    {gText_ThirdDrawer},
+    {gText_FourthDrawer},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_HoennCostumes[] =
+{
+    {gText_BrendanCostume},
+    {gText_MayCostume},
+    {gText_Cancel2},
+};
+
+static const struct MenuAction MultichoiceList_KantoCostumes[] =
+{
+    {gText_RedCostume},
+    {gText_LeafCostume},
+    {gText_Cancel2},
+};
+
+static const struct MenuAction MultichoiceList_JohtoCostumes[] =
+{
+    {gText_EthanCostume},
+    {gText_LyraCostume},
+    {gText_KrisCostume},
+    {gText_Cancel2},
+};
+
+static const struct MenuAction MultichoiceList_SinnohCostumes[] =
+{
+    {gText_LucasCostume},
+    {gText_DawnCostume},
+    {gText_LucasPlatinumCostume},
+    {gText_DawnPlatinumCostume},
+    {gText_Cancel2},
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -898,6 +938,11 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_SLATEPORT_TENT_RULES]       = MULTICHOICE(MultichoiceList_SlateportTentRules),
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
+    [MULTI_DRESSER_DRAWERS]            = MULTICHOICE(MultichoiceList_DresserDrawers),
+    [MULTI_KANTO_COSTUMES]             = MULTICHOICE(MultichoiceList_KantoCostumes),
+    [MULTI_JOHTO_COSTUMES]             = MULTICHOICE(MultichoiceList_JohtoCostumes),
+    [MULTI_HOENN_COSTUMES]             = MULTICHOICE(MultichoiceList_HoennCostumes),
+    [MULTI_SINNOH_COSTUMES]            = MULTICHOICE(MultichoiceList_SinnohCostumes),
 };
 
 const u8 *const gStdStrings[] =

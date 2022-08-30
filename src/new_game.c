@@ -208,6 +208,7 @@ void NewGameInitData(void)
     ResetContestLinkResults();
     memset(gSaveBlock1Ptr->dexNavSearchLevels, 0, sizeof(gSaveBlock1Ptr->dexNavSearchLevels));
     gSaveBlock1Ptr->dexNavChain = 0;
+    gSaveBlock2Ptr->costumeId = 0;
 }
 
 static void ResetMiniGamesRecords(void)

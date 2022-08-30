@@ -1255,4 +1255,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/SafariZone_SecretHouse/scripts.inc"
 	
     .include "data/scripts/dexnav.inc"
+    .include "data/scripts/costume_swap.inc"
     

@@ -7,7 +7,7 @@ PalletTown_PlayersHouse_1F_EvenScripts_Mom::
 	lock
 	faceplayer
 	msgbox PalletTown_PlayersHouse_1F_Text_BetterHurry, MSGBOX_DEFAULT
-	turnobject LOCALID_MOM, DIR_LEFT
+	turnobject LOCALID_MOM, DIR_WEST
 	release
 	end
 

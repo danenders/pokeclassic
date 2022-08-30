@@ -18,9 +18,7 @@ BattleFrontier_BattleFactoryBattleRoom_MapScripts::
 
 BattleFrontier_BattleFactoryBattleRoom_OnTransition:
 	frontier_settrainers
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, BattleFrontier_BattleFactoryBattleRoom_EventScript_SetPlayerGfxMale
-	call_if_eq VAR_RESULT, FEMALE, BattleFrontier_BattleFactoryBattleRoom_EventScript_SetPlayerGfxFemale
+	specialvar VAR_OBJ_GFX_ID_F, GetPlayerCostumeId
 	frontier_getbrainstatus
 	copyvar VAR_TEMP_F, VAR_RESULT
 	goto_if_ne VAR_RESULT, FRONTIER_BRAIN_NOT_READY, BattleFrontier_BattleFactoryBattleRoom_EventScript_SetUpFactoryHeadObj
@@ -42,14 +40,6 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_HideObjects::
 	hideobjectat LOCALID_OPPONENT, MAP_BATTLE_FRONTIER_BATTLE_FACTORY_BATTLE_ROOM
 BattleFrontier_BattleFactoryBattleRoom_EventScript_EndHideObjects::
 	end
-
-BattleFrontier_BattleFactoryBattleRoom_EventScript_SetPlayerGfxMale::
-	setvar VAR_OBJ_GFX_ID_F, OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
-	return
-
-BattleFrontier_BattleFactoryBattleRoom_EventScript_SetPlayerGfxFemale::
-	setvar VAR_OBJ_GFX_ID_F, OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
-	return
 
 BattleFrontier_BattleFactoryBattleRoom_OnFrame:
 	map_script_2 VAR_TEMP_0, 0, BattleFrontier_BattleFactoryBattleRoom_EventScript_EnterRoom

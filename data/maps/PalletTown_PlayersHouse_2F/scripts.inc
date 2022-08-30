@@ -11,6 +11,7 @@ PalletTown_PlayersHouse_2F_OnTransition:
 PlayersHouse_2F_EventScript_NewGameStart1::
 	lockall
 	addobject LOCALID_MOM
+	playse SE_DOOR
 	applymovement LOCALID_MOM, MomWalksUpstairs
 	waitmovement 1
 	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
@@ -30,6 +31,7 @@ PlayersHouse_2F_EventScript_NewGameStart1::
 	applymovement LOCALID_MOM, MomGoesDownstairs
 	waitmovement 1
 	setflag FLAG_HIDE_MOM_PLAYERS_ROOM
+	playse SE_EXIT
 	removeobject LOCALID_MOM
 	setvar VAR_PLAYER_ROOM_STATE, 1
 	releaseall
@@ -57,6 +59,7 @@ PlayersHouse_2F_EventScript_NewGameStart2::
 	applymovement LOCALID_MOM, MomGoesDownstairs
 	waitmovement 1
 	setflag FLAG_HIDE_MOM_PLAYERS_ROOM
+	playse SE_EXIT
 	removeobject LOCALID_MOM
 	setvar VAR_PLAYER_ROOM_STATE, 1
 	releaseall
@@ -84,6 +87,7 @@ PlayersHouse_2F_EventScript_NewGameStart3::
 	applymovement LOCALID_MOM, MomGoesDownstairs
 	waitmovement 1
 	setflag FLAG_HIDE_MOM_PLAYERS_ROOM
+	playse SE_EXIT
 	removeobject LOCALID_MOM
 	setvar VAR_PLAYER_ROOM_STATE, 1
 	releaseall
@@ -158,11 +162,10 @@ WalkToStairs3:
 MomGoesDownstairs:
 	walk_up
 	walk_left
-	walk_left
 	step_end
 
 PalletTown_PlayersHouse_2F_Text_LookAtTheTime:
-	.string "Mom:{PLAYER}! There you are!\p"
+	.string "Mom: {PLAYER}! There you are!\p"
 	.string "Have you been playing games\n"
 	.string "up here this whole time?\p"
 	.string "Weren't you supposed to meet\n"
@@ -220,13 +223,3 @@ PlayersHouse_2F_EventScript_Console::
 PlayersHouse_2F_Text_Console:
 	.string "It's an old game console.\p"
 	.string "Retro-gaming is all the rage!$"
-
-PlayersHouse_2F_EventScript_Dresser::
-	lock
-	msgbox PlayersHouse_2F_Text_Dresser, MSGBOX_DEFAULT
-	release
-	end
-
-PlayersHouse_2F_Text_Dresser:
-	.string "It's full of clean clothes...\p"
-	.string "Love that fresh laundry smell!$"

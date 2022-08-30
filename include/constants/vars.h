@@ -140,11 +140,11 @@
 #define VAR_DEXNAV_STEP_COUNTER             0x407B // steps for finding hidden pokemon
 
 //Variables
-#define VAR_PLAYER_ROOM_STATE                   0x407C 
-#define UNUSED_VARIABLE_2                   0x407D 
-#define UNUSED_VARIABLE_3                  	0x407E 
-#define UNUSED_VARIABLE_4                   0x407F 
-#define UNUSED_VARIABLE_5                   0x4080 
+#define VAR_STORY_PROGRESSION               0x407C 
+#define VAR_PLAYER_ROOM_STATE               0x407D 
+#define VAR_PALLET_TOWN_STATE               0x407E 
+#define VAR_ROUTE_1_STATE                   0x407F 
+#define VAR_OAK_LAB_STATE                   0x4080 
 #define UNUSED_VARIABLE_6      				0x4081 
 #define UNUSED_VARIABLE_7     				0x4082
 #define UNUSED_VARIABLE_8                   0x4083

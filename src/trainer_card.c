@@ -277,6 +277,21 @@ static const u8 sTrainerCardTextColors[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_D
 static const u8 sTrainerCardStatColors[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_RED, TEXT_COLOR_LIGHT_RED};
 static const u8 sTimeColonInvisibleTextColors[6] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_TRANSPARENT, TEXT_COLOR_TRANSPARENT};
 
+static const u8 sCostumeFrontPics[COSTUME_COUNT][GENDER_COUNT] = 
+{
+    [RED_COSTUME]               = {TRAINER_PIC_RED, TRAINER_PIC_RED},
+    [LEAF_COSTUME]              = {TRAINER_PIC_LEAF, TRAINER_PIC_LEAF},
+    [ETHAN_COSTUME]             = {TRAINER_PIC_ETHAN, TRAINER_PIC_ETHAN},
+    [LYRA_COSTUME]              = {TRAINER_PIC_LYRA, TRAINER_PIC_LYRA},
+    [KRIS_COSTUME]              = {TRAINER_PIC_KRIS, TRAINER_PIC_KRIS},
+    [BRENDAN_COSTUME]           = {TRAINER_PIC_BRENDAN, TRAINER_PIC_BRENDAN},
+    [MAY_COSTUME]               = {TRAINER_PIC_MAY, TRAINER_PIC_MAY},
+    [LUCAS_COSTUME]             = {TRAINER_PIC_LUCAS, TRAINER_PIC_LUCAS},
+    [DAWN_COSTUME]              = {TRAINER_PIC_DAWN, TRAINER_PIC_DAWN},
+    [LUCAS_PLATINUM_COSTUME]    = {TRAINER_PIC_LUCAS_PLATINUM, TRAINER_PIC_LUCAS_PLATINUM},
+    [DAWN_PLATINUM_COSTUME]     = {TRAINER_PIC_DAWN_PLATINUM, TRAINER_PIC_DAWN_PLATINUM},
+};
+
 static const u8 sTrainerPicOffset[2][GENDER_COUNT][2] =
 {
     // Kanto
@@ -1885,7 +1900,7 @@ static void CreateTrainerCardTrainerPic(void)
     }
     else
     {
-        CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(sTrainerPicFacilityClass[sData->cardType][sData->trainerCard.gender]),
+        CreateTrainerCardTrainerPicSprite(sCostumeFrontPics[gSaveBlock2Ptr->costumeId][sData->trainerCard.gender],
                     TRUE,
                     sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][0],
                     sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][1],

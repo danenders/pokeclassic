@@ -13,7 +13,6 @@ Debug_CheckWeekDay_Text:
 Debug_CheatStart::
 	lockall
 	setflag FLAG_SYS_POKEMON_GET
-	setflag FLAG_ADVENTURE_STARTED
 	givemon SPECIES_TREECKO, 20, ITEM_NONE
 	givemon SPECIES_TORCHIC, 20, ITEM_NONE
 	givemon SPECIES_MUDKIP, 20, ITEM_NONE
@@ -22,7 +21,6 @@ Debug_CheatStart::
 	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
 	@ setflag FLAG_SYS_NATIONAL_DEX
 	@ special EnableNationalPokedex
-	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_RECEIVED_BIKE
 	giveitem ITEM_ACRO_BIKE

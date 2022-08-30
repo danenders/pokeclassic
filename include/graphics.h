@@ -2972,6 +2972,14 @@ extern const u32 gTrainerFrontPic_RubySapphireBrendan[];
 extern const u32 gTrainerFrontPic_RubySapphireMay[];
 extern const u32 gTrainerFrontPic_Blue[];
 
+extern const u32 gTrainerFrontPic_Ethan[];
+extern const u32 gTrainerFrontPic_Lyra[];
+extern const u32 gTrainerFrontPic_Kris[];
+extern const u32 gTrainerFrontPic_Lucas[];
+extern const u32 gTrainerFrontPic_Dawn[];
+extern const u32 gTrainerFrontPic_LucasPlatinum[];
+extern const u32 gTrainerFrontPic_DawnPlatinum[];
+
 extern const u32 gTrainerPalette_Hiker[];
 extern const u32 gTrainerPalette_AquaGruntM[];
 extern const u32 gTrainerPalette_PokemonBreederF[];
@@ -3066,6 +3074,13 @@ extern const u32 gTrainerPalette_Leaf[];
 extern const u32 gTrainerPalette_RubySapphireBrendan[];
 extern const u32 gTrainerPalette_RubySapphireMay[];
 extern const u32 gTrainerPalette_Blue[];
+extern const u32 gTrainerPalette_Ethan[];
+extern const u32 gTrainerPalette_Lyra[];
+extern const u32 gTrainerPalette_Kris[];
+extern const u32 gTrainerPalette_Lucas[];
+extern const u32 gTrainerPalette_Dawn[];
+extern const u32 gTrainerPalette_LucasPlatinum[];
+extern const u32 gTrainerPalette_DawnPlatinum[];
 
 extern const u8 gTrainerBackPic_Brendan[];
 extern const u8 gTrainerBackPic_May[];
@@ -3075,9 +3090,27 @@ extern const u8 gTrainerBackPic_RubySapphireBrendan[];
 extern const u8 gTrainerBackPic_RubySapphireMay[];
 extern const u8 gTrainerBackPic_Wally[];
 extern const u8 gTrainerBackPic_Steven[];
+extern const u8 gTrainerBackPic_Ethan[];
+extern const u8 gTrainerBackPic_Lyra[];
+extern const u8 gTrainerBackPic_Kris[];
+extern const u8 gTrainerBackPic_Lucas[];
+extern const u8 gTrainerBackPic_Dawn[];
+extern const u8 gTrainerBackPic_LucasPlatinum[];
+extern const u8 gTrainerBackPic_DawnPlatinum[];
 
 extern const u32 gTrainerBackPicPalette_Red[];
 extern const u32 gTrainerBackPicPalette_Leaf[];
+extern const u32 gTrainerBackPicPalette_Brendan[];
+extern const u32 gTrainerBackPicPalette_May[];
+extern const u32 gTrainerBackPicPalette_Red[];
+extern const u32 gTrainerBackPicPalette_Leaf[];
+extern const u32 gTrainerBackPicPalette_Ethan[];
+extern const u32 gTrainerBackPicPalette_Lyra[];
+extern const u32 gTrainerBackPicPalette_Kris[];
+extern const u32 gTrainerBackPicPalette_Lucas[];
+extern const u32 gTrainerBackPicPalette_Dawn[];
+extern const u32 gTrainerBackPicPalette_LucasPlatinum[];
+extern const u32 gTrainerBackPicPalette_DawnPlatinum[];
 
 // pokeblock
 extern const u32 gMenuPokeblock_Gfx[];

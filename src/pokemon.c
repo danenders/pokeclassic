@@ -510,7 +510,8 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(JIRACHI),
     SPECIES_TO_HOENN(DEOXYS),
     SPECIES_TO_HOENN(CHIMECHO),
-    SPECIES_TO_HOENN(PIKACHU_PARTNER),
+
+    [SPECIES_PIKACHU_PARTNER - 1] = NATIONAL_DEX_PIKACHU,
 };
 
 // Assigns all species to the National Dex Index (Summary No. for National Dex)
@@ -927,7 +928,8 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(JIRACHI),
     SPECIES_TO_NATIONAL(DEOXYS),
     SPECIES_TO_NATIONAL(CHIMECHO),
-    SPECIES_TO_NATIONAL(PIKACHU_PARTNER),
+
+    [SPECIES_PIKACHU_PARTNER - 1] = NATIONAL_DEX_PIKACHU,
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index
@@ -1344,7 +1346,6 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(OLD_UNOWN_X),
     HOENN_TO_NATIONAL(OLD_UNOWN_Y),
     HOENN_TO_NATIONAL(OLD_UNOWN_Z),
-    HOENN_TO_NATIONAL(PIKACHU_PARTNER),
 };
 
 const struct SpindaSpot gSpindaSpotGraphics[] =
@@ -2024,6 +2025,69 @@ static const struct SpriteTemplate sTrainerBackSpriteTemplates[] =
         .oam = &gOamData_BattleSpritePlayerSide,
         .anims = NULL,
         .images = gTrainerBackPicTable_Steven,
+        .affineAnims = gAffineAnims_BattleSpritePlayerSide,
+        .callback = SpriteCB_BattleSpriteStartSlideLeft,
+    },
+    [TRAINER_BACK_PIC_ETHAN] = {
+        .tileTag = TAG_NONE,
+        .paletteTag = 0,
+        .oam = &gOamData_BattleSpritePlayerSide,
+        .anims = NULL,
+        .images = gTrainerBackPicTable_Ethan,
+        .affineAnims = gAffineAnims_BattleSpritePlayerSide,
+        .callback = SpriteCB_BattleSpriteStartSlideLeft,
+    },
+    [TRAINER_BACK_PIC_LYRA] = {
+        .tileTag = TAG_NONE,
+        .paletteTag = 0,
+        .oam = &gOamData_BattleSpritePlayerSide,
+        .anims = NULL,
+        .images = gTrainerBackPicTable_Lyra,
+        .affineAnims = gAffineAnims_BattleSpritePlayerSide,
+        .callback = SpriteCB_BattleSpriteStartSlideLeft,
+    },
+    [TRAINER_BACK_PIC_KRIS] = {
+        .tileTag = TAG_NONE,
+        .paletteTag = 0,
+        .oam = &gOamData_BattleSpritePlayerSide,
+        .anims = NULL,
+        .images = gTrainerBackPicTable_Kris,
+        .affineAnims = gAffineAnims_BattleSpritePlayerSide,
+        .callback = SpriteCB_BattleSpriteStartSlideLeft,
+    },
+    [TRAINER_BACK_PIC_LUCAS] = {
+        .tileTag = TAG_NONE,
+        .paletteTag = 0,
+        .oam = &gOamData_BattleSpritePlayerSide,
+        .anims = NULL,
+        .images = gTrainerBackPicTable_Lucas,
+        .affineAnims = gAffineAnims_BattleSpritePlayerSide,
+        .callback = SpriteCB_BattleSpriteStartSlideLeft,
+    },
+    [TRAINER_BACK_PIC_DAWN] = {
+        .tileTag = TAG_NONE,
+        .paletteTag = 0,
+        .oam = &gOamData_BattleSpritePlayerSide,
+        .anims = NULL,
+        .images = gTrainerBackPicTable_Dawn,
+        .affineAnims = gAffineAnims_BattleSpritePlayerSide,
+        .callback = SpriteCB_BattleSpriteStartSlideLeft,
+    },
+    [TRAINER_BACK_PIC_LUCAS_PLATINUM] = {
+        .tileTag = TAG_NONE,
+        .paletteTag = 0,
+        .oam = &gOamData_BattleSpritePlayerSide,
+        .anims = NULL,
+        .images = gTrainerBackPicTable_LucasPlatinum,
+        .affineAnims = gAffineAnims_BattleSpritePlayerSide,
+        .callback = SpriteCB_BattleSpriteStartSlideLeft,
+    },
+    [TRAINER_BACK_PIC_DAWN_PLATINUM] = {
+        .tileTag = TAG_NONE,
+        .paletteTag = 0,
+        .oam = &gOamData_BattleSpritePlayerSide,
+        .anims = NULL,
+        .images = gTrainerBackPicTable_DawnPlatinum,
         .affineAnims = gAffineAnims_BattleSpritePlayerSide,
         .callback = SpriteCB_BattleSpriteStartSlideLeft,
     },
@@ -7143,3 +7207,48 @@ u8 GetFormIdFromFormSpeciesId(u16 formSpeciesId)
     }
     return targetFormId;
 }
+
+u16 GetTrainerFrontSpriteBasedOnPlayerCostumeAndGender(u8 costumeId, u8 playerGender)
+{
+    u16 trainerPic;
+
+    switch (costumeId)
+    {
+        case BRENDAN_COSTUME:
+            trainerPic = TRAINER_PIC_BRENDAN;
+            break;
+        case MAY_COSTUME:
+            trainerPic = TRAINER_PIC_MAY;
+            break;
+        case RED_COSTUME:
+            trainerPic = TRAINER_PIC_RED;
+            break;
+        case LEAF_COSTUME:
+            trainerPic = TRAINER_PIC_LEAF;
+            break;
+        case ETHAN_COSTUME:
+            trainerPic = TRAINER_PIC_ETHAN;
+            break;
+        case LYRA_COSTUME:
+            trainerPic = TRAINER_PIC_LYRA;
+            break;
+        case KRIS_COSTUME:
+            trainerPic = TRAINER_PIC_KRIS;
+            break;
+        case LUCAS_COSTUME:
+            trainerPic = TRAINER_PIC_LUCAS;
+            break;
+        case DAWN_COSTUME:
+            trainerPic = TRAINER_PIC_DAWN;
+            break;
+        case LUCAS_PLATINUM_COSTUME:
+            trainerPic = TRAINER_PIC_LUCAS_PLATINUM;
+            break;
+        case DAWN_PLATINUM_COSTUME:
+            trainerPic = TRAINER_PIC_DAWN_PLATINUM;
+            break;
+    }
+
+    return trainerPic;
+}
+

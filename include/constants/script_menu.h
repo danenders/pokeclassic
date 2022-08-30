@@ -122,6 +122,11 @@
 #define MULTI_SLATEPORT_TENT_RULES         111
 #define MULTI_FALLARBOR_TENT_RULES         112
 #define MULTI_TAG_MATCH_TYPE               113
+#define MULTI_DRESSER_DRAWERS              114
+#define MULTI_KANTO_COSTUMES               115
+#define MULTI_JOHTO_COSTUMES               116
+#define MULTI_HOENN_COSTUMES               117
+#define MULTI_SINNOH_COSTUMES              118
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0

@@ -112,6 +112,14 @@
 #define TRAINER_PIC_RS_MAY                92
 #define TRAINER_PIC_BLUE				  93
 
+#define TRAINER_PIC_ETHAN                 94
+#define TRAINER_PIC_LYRA                  95
+#define TRAINER_PIC_KRIS                  96
+#define TRAINER_PIC_LUCAS                 97
+#define TRAINER_PIC_DAWN                  98
+#define TRAINER_PIC_LUCAS_PLATINUM        99
+#define TRAINER_PIC_DAWN_PLATINUM         100
+
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
 #define TRAINER_BACK_PIC_MAY                    1
@@ -121,6 +129,13 @@
 #define TRAINER_BACK_PIC_RUBY_SAPPHIRE_MAY      5
 #define TRAINER_BACK_PIC_WALLY                  6
 #define TRAINER_BACK_PIC_STEVEN                 7
+#define TRAINER_BACK_PIC_ETHAN                  8
+#define TRAINER_BACK_PIC_LYRA                   9
+#define TRAINER_BACK_PIC_KRIS                   10
+#define TRAINER_BACK_PIC_LUCAS                  11
+#define TRAINER_BACK_PIC_DAWN                   12
+#define TRAINER_BACK_PIC_LUCAS_PLATINUM         13
+#define TRAINER_BACK_PIC_DAWN_PLATINUM          14
 
 #define FACILITY_CLASS_HIKER                 0x0
 #define FACILITY_CLASS_AQUA_GRUNT_M          0x1
@@ -203,10 +218,17 @@
 #define FACILITY_CLASS_RED                   0x4e
 #define FACILITY_CLASS_LEAF                  0x4f
 #define FACILITY_CLASS_RS_BRENDAN            0x50
-#define FACILITY_CLASS_RS_MAY                0x52
-#define	FACILITY_CLASS_BLUE					 0x53
+#define FACILITY_CLASS_RS_MAY                0x51
+#define	FACILITY_CLASS_BLUE					 0x52
+#define FACILITY_CLASS_ETHAN              	 0x53
+#define FACILITY_CLASS_LYRA                  0x54
+#define FACILITY_CLASS_KRIS                  0x55
+#define FACILITY_CLASS_LUCAS                 0x56
+#define FACILITY_CLASS_DAWN                  0x57
+#define FACILITY_CLASS_LUCAS_PLATINUM        0x58
+#define FACILITY_CLASS_DAWN_PLATINUM         0x59
 
-#define FACILITY_CLASSES_COUNT               0x54
+#define FACILITY_CLASSES_COUNT               0x5a
 
 #define RS_FACILITY_CLASS_AQUA_LEADER_ARCHIE    0x0
 #define RS_FACILITY_CLASS_AQUA_GRUNT_M          0x1

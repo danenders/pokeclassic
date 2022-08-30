@@ -116,5 +116,9 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_CONTEST_POKE_BALL
 	setflag FLAG_HIDE_BATTLE_TOWER_OPPONENT
 	call EventScript_ResetAllBerries
+	setflag FLAG_SYS_B_DASH
 	setflag FLAG_HIDE_MOM_PLAYERS_ROOM
+	setflag FLAG_HIDE_OAK_ROUTE1
+	setflag FLAG_HIDE_PIKACHU_ROUTE1
+	setflag FLAG_HIDE_OAK_IN_LAB
 	end

@@ -538,4 +538,7 @@ gSpecials::
 	def_special SetTotemBoost
 	def_special GetDayOrNight
 	def_special NameRival
+	def_special SwapPlayersCostume
+	def_special GetPlayerCostumeId
+
 

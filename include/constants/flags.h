@@ -61,7 +61,7 @@
 #define FLAG_RECEIVED_OLD_ROD    		0x2D 
 #define FLAG_RECEIVED_GOOD_ROD    		0x2E 
 #define FLAG_RECEIVED_SUPER_ROD    		0x2F 
-#define FLAG_RECEIVED_RUNNING_SHOES    	0x30 
+#define FLAG_UNUSUED_0x030    			0x30 // Unused Flag
 #define FLAG_RECEIVED_COIN_CASE    		0x31 
 #define FLAG_RECEIVED_EXP_SHARE    		0x32 
 #define FLAG_RECEIVED_POKENAV    		0x33
@@ -69,7 +69,7 @@
 
 //Story Flags
 #define FLAG_SET_CLOCK    			0x35
-#define FLAG_UNUSED_0x036    		0x36 // Unused Flag
+#define FLAG_MET_OAK_ROUTE_1    	0x36 
 #define FLAG_UNUSED_0x037    		0x37 // Unused Flag
 #define FLAG_UNUSED_0x038    		0x38 // Unused Flag
 #define FLAG_UNUSED_0x039    		0x39 // Unused Flag
@@ -772,11 +772,11 @@
 #define FLAG_HIDE_BATTLE_TOWER_REPORTER              				0x2DD
 
 #define FLAG_HIDE_MOM_PLAYERS_ROOM                                 	0x2DE
-#define FLAG_HIDE_UNUSED_9      									0x2DF
-#define FLAG_HIDE_UNUSED_10          								0x2E0
-#define FLAG_HIDE_UNUSED_11             							0x2E1
-#define FLAG_HIDE_UNUSED_12                               			0x2E2
-#define FLAG_HIDE_UNUSED_13                           				0x2E3
+#define FLAG_HIDE_OAK_ROUTE1      									0x2DF
+#define FLAG_HIDE_PIKACHU_ROUTE1          							0x2E0
+#define FLAG_HIDE_OAK_IN_LAB             							0x2E1
+#define FLAG_HIDE_BLUE_IN_LAB                              			0x2E2
+#define FLAG_HIDE_OAK_LAB_POKEBALL                           		0x2E3
 #define FLAG_HIDE_UNUSED_14                            				0x2E4
 #define FLAG_HIDE_UNUSED_15                               			0x2E5
 #define FLAG_HIDE_UNUSED_16                          					0x2E6
@@ -1516,12 +1516,12 @@
 
 #define FLAG_CONTEST_SKETCH_CREATED                 (SYSTEM_FLAGS + 0x98) // Set but never read
 
-#define FLAG_ADVENTURE_STARTED                      (SYSTEM_FLAGS + 0x99) // Used in debug?
+#define FLAG_UNUSED_SYSTEM_FLAG_1                   (SYSTEM_FLAGS + 0x99)
 
 #define FLAG_NURSE_MENTIONS_GOLD_CARD               (SYSTEM_FLAGS + 0x9A) 
 #define FLAG_POKERUS_EXPLAINED                      (SYSTEM_FLAGS + 0x9B)
 
-#define FLAG_UNUSED_SYSTEM_FLAG_1                   (SYSTEM_FLAGS + 0x9C) 
+#define FLAG_UNUSED_SYSTEM_FLAG_2                   (SYSTEM_FLAGS + 0x9C) 
 #define FLAG_HIDE_CONTEST_POKE_BALL           		(SYSTEM_FLAGS + 0x9D) // Always set after new game, object it hides is added directly
 #define FLAG_SCOTT_CALL_BATTLE_FRONTIER             (SYSTEM_FLAGS + 0x9E) // Retained for match call
 #define FLAG_MET_SCOTT_ON_SS_TIDAL                  (SYSTEM_FLAGS + 0x9F) // Retained for match call

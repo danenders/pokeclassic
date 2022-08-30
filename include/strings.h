@@ -157,6 +157,9 @@ extern const u8 gText_Decorate[];
 extern const u8 gText_PutAway[];
 extern const u8 gText_Toss2[];
 extern const u8 gText_Hoenn[];
+extern const u8 gText_Kanto[];
+extern const u8 gText_Johto[];
+extern const u8 gText_Sinnoh[];
 extern const u8 gText_Ferry[];
 extern const u8 gText_SecretBase[];
 extern const u8 gText_Hideout[];
@@ -3037,5 +3040,23 @@ extern const u8 gText_SamePkmnInPartyAlready[];
 extern const u8 gText_Cancel3[];
 
 extern const u8 gText_DexNavDescription[];
+
+//Costumes
+extern const u8 gText_RedCostume[];
+extern const u8 gText_LeafCostume[];
+extern const u8 gText_BrendanCostume[];
+extern const u8 gText_MayCostume[];
+extern const u8 gText_EthanCostume[];
+extern const u8 gText_LyraCostume[];
+extern const u8 gText_KrisCostume[];
+extern const u8 gText_LucasCostume[];
+extern const u8 gText_DawnCostume[];
+extern const u8 gText_LucasPlatinumCostume[];
+extern const u8 gText_DawnPlatinumCostume[];
+
+extern const u8 gText_FirstDrawer[];
+extern const u8 gText_SecondDrawer[];
+extern const u8 gText_ThirdDrawer[];
+extern const u8 gText_FourthDrawer[];
 
 #endif // GUARD_STRINGS_H

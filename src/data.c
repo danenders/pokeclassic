@@ -112,6 +112,62 @@ const struct SpriteFrameImage gTrainerBackPicTable_Steven[] =
     gTrainerBackPic_Steven + 0x1800, 0x0800,
 };
 
+const struct SpriteFrameImage gTrainerBackPicTable_Ethan[] =
+{
+    gTrainerBackPic_Ethan, 0x0800,
+    gTrainerBackPic_Ethan + 0x0800, 0x0800,
+    gTrainerBackPic_Ethan + 0x1000, 0x0800,
+    gTrainerBackPic_Ethan + 0x1800, 0x0800,
+};
+
+const struct SpriteFrameImage gTrainerBackPicTable_Lyra[] =
+{
+    gTrainerBackPic_Lyra, 0x0800,
+    gTrainerBackPic_Lyra + 0x0800, 0x0800,
+    gTrainerBackPic_Lyra + 0x1000, 0x0800,
+    gTrainerBackPic_Lyra + 0x1800, 0x0800,
+};
+
+const struct SpriteFrameImage gTrainerBackPicTable_Kris[] =
+{
+    gTrainerBackPic_Kris, 0x0800,
+    gTrainerBackPic_Kris + 0x0800, 0x0800,
+    gTrainerBackPic_Kris + 0x1000, 0x0800,
+    gTrainerBackPic_Kris + 0x1800, 0x0800,
+};
+
+const struct SpriteFrameImage gTrainerBackPicTable_Lucas[] =
+{
+    gTrainerBackPic_Lucas, 0x0800,
+    gTrainerBackPic_Lucas + 0x0800, 0x0800,
+    gTrainerBackPic_Lucas + 0x1000, 0x0800,
+    gTrainerBackPic_Lucas + 0x1800, 0x0800,
+};
+
+const struct SpriteFrameImage gTrainerBackPicTable_Dawn[] =
+{
+    gTrainerBackPic_Dawn, 0x0800,
+    gTrainerBackPic_Dawn + 0x0800, 0x0800,
+    gTrainerBackPic_Dawn + 0x1000, 0x0800,
+    gTrainerBackPic_Dawn + 0x1800, 0x0800,
+};
+
+const struct SpriteFrameImage gTrainerBackPicTable_LucasPlatinum[] =
+{
+    gTrainerBackPic_LucasPlatinum, 0x0800,
+    gTrainerBackPic_LucasPlatinum + 0x0800, 0x0800,
+    gTrainerBackPic_LucasPlatinum + 0x1000, 0x0800,
+    gTrainerBackPic_LucasPlatinum + 0x1800, 0x0800,
+};
+
+const struct SpriteFrameImage gTrainerBackPicTable_DawnPlatinum[] =
+{
+    gTrainerBackPic_DawnPlatinum, 0x0800,
+    gTrainerBackPic_DawnPlatinum + 0x0800, 0x0800,
+    gTrainerBackPic_DawnPlatinum + 0x1000, 0x0800,
+    gTrainerBackPic_DawnPlatinum + 0x1800, 0x0800,
+};
+
 static const union AnimCmd sAnim_GeneralFrame0[] =
 {
     ANIMCMD_FRAME(0, 0),
