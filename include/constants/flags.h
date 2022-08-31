@@ -1303,9 +1303,9 @@
 #define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
 #define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
 #define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
-#define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
-#define FLAG_UNUSED_0x4F0                                           0x4F9 // Unused Flag
-#define FLAG_UNUSED_0x4F1                                           0x4FA // Unused Flag
+#define FLAG_ADDED_MATCH_CALL_TO_POKENAV                            0x4EF
+#define FLAG_ENABLE_PROF_OAK_MATCH_CALL                             0x4F9
+#define FLAG_HAS_MATCH_CALL                                         0x4FA //Used to enable a Match Call?
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F2
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F3
@@ -1516,19 +1516,19 @@
 
 #define FLAG_CONTEST_SKETCH_CREATED                 (SYSTEM_FLAGS + 0x98) // Set but never read
 
-#define FLAG_UNUSED_SYSTEM_FLAG_1                   (SYSTEM_FLAGS + 0x99)
+#define FLAG_UNUSED_SYSTEM_FLAG_0x99                (SYSTEM_FLAGS + 0x99)
 
 #define FLAG_NURSE_MENTIONS_GOLD_CARD               (SYSTEM_FLAGS + 0x9A) 
 #define FLAG_POKERUS_EXPLAINED                      (SYSTEM_FLAGS + 0x9B)
 
-#define FLAG_UNUSED_SYSTEM_FLAG_2                   (SYSTEM_FLAGS + 0x9C) 
+#define FLAG_UNUSED_SYSTEM_FLAG_0x9C                (SYSTEM_FLAGS + 0x9C) 
 #define FLAG_HIDE_CONTEST_POKE_BALL           		(SYSTEM_FLAGS + 0x9D) // Always set after new game, object it hides is added directly
 #define FLAG_SCOTT_CALL_BATTLE_FRONTIER             (SYSTEM_FLAGS + 0x9E) // Retained for match call
 #define FLAG_MET_SCOTT_ON_SS_TIDAL                  (SYSTEM_FLAGS + 0x9F) // Retained for match call
-#define FLAG_HAS_MATCH_CALL                         (SYSTEM_FLAGS + 0xA0) // Retained for match call
+#define FLAG_UNUSED_SYSTEM_FLAG_0xA0                (SYSTEM_FLAGS + 0xA0) 
 #define FLAG_ENABLE_NORMAN_MATCH_CALL               (SYSTEM_FLAGS + 0xA1) // Retained for match call
-#define FLAG_ADDED_MATCH_CALL_TO_POKENAV            (SYSTEM_FLAGS + 0xA2) // Retained for match call
-#define FLAG_ENABLE_PROF_BIRCH_MATCH_CALL           (SYSTEM_FLAGS + 0xA3) // Retained for match call
+#define FLAG_UNUSED_SYSTEM_FLAG_0xA2            	(SYSTEM_FLAGS + 0xA2) // Retained for match call
+#define FLAG_UNUSED_SYSTEM_FLAG_0xA3           		(SYSTEM_FLAGS + 0xA3) 
 #define FLAG_ENABLE_MOM_MATCH_CALL                  (SYSTEM_FLAGS + 0xA4) // Retained for match call
 #define FLAG_ENABLE_SCOTT_MATCH_CALL                (SYSTEM_FLAGS + 0xA5) // Retained for match call
 #define FLAG_ENABLE_WALLY_MATCH_CALL                (SYSTEM_FLAGS + 0xA6) // Retained for match call

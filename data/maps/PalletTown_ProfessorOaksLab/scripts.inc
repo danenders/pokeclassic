@@ -681,6 +681,8 @@ PalletTown_ProfessorOaksLab_EventScript_ProfOak::
 	goto_if_eq VAR_OAK_LAB_STATE, 3, PalletTown_ProfessorOaksLab_EventScript_OakCanReachNextTownWithMon
 	goto_if_le VAR_OAK_LAB_STATE, 5, PalletTown_ProfessorOaksLab_EventScript_OakBattleMonForItToGrow
 	goto_if_eq VAR_OAK_LAB_STATE, 7, PalletTown_ProfessorOaksLab_EventScript_OakMonsAroundWorldWait
+	goto_if_unset FLAG_ENABLE_PROF_OAK_MATCH_CALL, EventScript_RegisterProfOak
+	goto ProfOak_EventScript_AskRatePokedex
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_GoTakePokeball::
@@ -721,5 +723,49 @@ PalletTown_ProfessorOaksLab_EventScript_OakMonsAroundWorldWait::
 	end
 
 PalletTown_ProfessorOaksLab_Text_OakMonsAroundWorldWait::
-    .string "POKéMON around the world wait for\n"
+    .string "Pokémon around the world wait for\n"
     .string "you, {PLAYER}!$"
+
+EventScript_RegisterProfOak::
+	msgbox MatchCall_Text_BirchRegisterCall, MSGBOX_DEFAULT
+	closemessage
+	delay 30
+	playfanfare MUS_REGISTER_MATCH_CALL
+	msgbox MatchCall_Text_RegisteredBirch, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	delay 30
+	setflag FLAG_ENABLE_PROF_OAK_MATCH_CALL
+	release
+	end
+
+ProfOak_EventScript_AskRatePokedex::
+	msgbox gBirchDexRatingText_AreYouCurious, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, ProfOak_EventScript_DeclineRating
+	call ProfBirch_EventScript_RatePokedex
+	release
+	end
+
+ProfOak_EventScript_DeclineRating::
+	msgbox gBirchDexRatingText_Cancel, MSGBOX_DEFAULT
+	release
+	end
+
+ProfBirch_EventScript_ShowRatingMessage::
+	copyvar VAR_0x8004, VAR_0x8009
+	special ShowPokedexRatingMessage
+	waitmessage
+	waitbuttonpress
+	return
+
+ProfBirch_EventScript_RatePokedex::
+	setvar VAR_0x8004, 0
+	specialvar VAR_RESULT, ScriptGetPokedexInfo
+	copyvar VAR_0x8008, VAR_0x8005
+	copyvar VAR_0x8009, VAR_0x8006
+	copyvar VAR_0x800A, VAR_RESULT
+	buffernumberstring STR_VAR_1, VAR_0x8008  @ Num Hoenn seen
+	buffernumberstring STR_VAR_2, VAR_0x8009  @ Num Hoenn caught
+	msgbox gBirchDexRatingText_SoYouveSeenAndCaught, MSGBOX_DEFAULT
+	call ProfBirch_EventScript_ShowRatingMessage
+	return

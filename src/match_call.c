@@ -2011,26 +2011,10 @@ static u8 GetPokedexRatingLevel(u16 numSeen)
         return 13;
     if (numSeen < 150)
         return 14;
-    if (numSeen < 160)
+    if (numSeen < 151)
         return 15;
-    if (numSeen < 170)
-        return 16;
-    if (numSeen < 180)
-        return 17;
-    if (numSeen < 190)
-        return 18;
-    if (numSeen < 200)
-        return 19;
-
-    if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_DEOXYS), FLAG_GET_CAUGHT))
-        numSeen--;
-    if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_JIRACHI), FLAG_GET_CAUGHT))
-        numSeen--;
-
-    if (numSeen < 200)
-        return 19;
     else
-        return 20;
+        return 16;
 }
 
 static const u8 *const sBirchDexRatingTexts[] =
@@ -2050,11 +2034,7 @@ static const u8 *const sBirchDexRatingTexts[] =
     gBirchDexRatingText_LessThan130,
     gBirchDexRatingText_LessThan140,
     gBirchDexRatingText_LessThan150,
-    gBirchDexRatingText_LessThan160,
-    gBirchDexRatingText_LessThan170,
-    gBirchDexRatingText_LessThan180,
-    gBirchDexRatingText_LessThan190,
-    gBirchDexRatingText_LessThan200,
+    gBirchDexRatingText_LessThan151,
     gBirchDexRatingText_DexCompleted,
 };
 

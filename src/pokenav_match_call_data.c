@@ -199,7 +199,7 @@ static const struct MatchCallBirch sProfBirchMatchCallHeader =
 {
     .type = MC_TYPE_BIRCH,
     .mapSec = 0,
-    .flag = FLAG_ENABLE_PROF_BIRCH_MATCH_CALL,
+    .flag = FLAG_ENABLE_PROF_OAK_MATCH_CALL,
     .desc = gText_ProfBirchMatchCallDesc,
     .name = gText_ProfBirchMatchCallName
 };

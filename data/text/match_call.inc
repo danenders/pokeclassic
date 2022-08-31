@@ -1,3 +1,21 @@
+@UPDATED
+MatchCall_Text_BirchRegisterCall: @ 82B5F52
+	.string "Oak: Oh, {PLAYER}{KUN}!\n"
+	.string "I've already heard about you!\p"
+	.string "It seems your Pokénav's been\n"
+	.string "upgraded with Match Call.\p"
+	.string "Well, I should register, too!\p"
+	.string "That way, I'd be able to examine\n"
+	.string "your Pokédex even while you're\l"
+	.string "out in the field.\p"
+	.string "… … … … … …$"
+
+MatchCall_Text_RegisteredBirch: @ 82B603A
+	.string "Registered Professor Oak\n"
+	.string "in the Pokénav.$"
+
+
+@UNUSED
 MatchCall_WildBattleText1::
 	.string "Hi! {PLAYER}{KUN}, hello!\n"
 	.string "This is {STR_VAR_1}.\p"
@@ -2830,21 +2848,6 @@ MatchCall_Text_Steven7:: @ 82B5ED9
 	.string "… … … … … …\p"
 	.string "I hope we can meet again\n"
 	.string "somewhere!$"
-
-MatchCall_Text_BirchRegisterCall: @ 82B5F52
-	.string "Prof. Birch: Oh, {PLAYER}{KUN}!\n"
-	.string "I've already heard about you!\p"
-	.string "It seems your Pokénav's been\n"
-	.string "upgraded with Match Call.\p"
-	.string "Well, I should register, too!\p"
-	.string "That way, I'd be able to examine\n"
-	.string "your Pokédex even while you're\l"
-	.string "out in the field.\p"
-	.string "… … … … … …$"
-
-MatchCall_Text_RegisteredBirch: @ 82B603A
-	.string "Registered Prof. Birch\n"
-	.string "in the Pokénav.$"
 	
 MatchCall_Text_UnusedProfBirch:
 	.string "Prof. Birch: When one has both\n"

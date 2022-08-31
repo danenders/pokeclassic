@@ -79,11 +79,11 @@ gBirchDexRatingText_LessThan150::
 	.string "many Pokémon species in the Hoenn\l"
 	.string "region.$"
 
-gBirchDexRatingText_LessThan160::
-	.string "On occasion, some Pokémon appear\n"
-	.string "in large numbers like outbreaks.\p"
-	.string "Don't miss opportunities like\n"
-	.string "those.$"
+gBirchDexRatingText_LessThan151::
+	.string "I heard some children talking\n"
+	.string "about how some rare Pokémon like\l"
+	.string "to hide underneath trucks!\p"
+	.string "I don't believe them, though.$"
 
 gBirchDexRatingText_LessThan170::
 	.string "One can get a very good idea about\n"
