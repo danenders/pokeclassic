@@ -1620,6 +1620,18 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
+    [NATIONAL_DEX_RIVAL_EEVEE] =
+    {
+        .categoryName = _("Rival"),
+        .height = 3,
+        .weight = 65,
+        .description = gEeveePokedexText,
+        .pokemonScale = 476,
+        .pokemonOffset = 18,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
     [NATIONAL_DEX_VAPOREON] =
     {
         .categoryName = _("Bubble Jet"),

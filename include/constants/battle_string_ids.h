@@ -625,7 +625,11 @@
 #define STRINGID_ZMOVEHPTRAP                          623
 #define STRINGID_TERRAINREMOVED                       624
 
-#define BATTLESTRINGS_COUNT                           625
+#define STRINGID_PLAYERWHITEOUT3					  625
+#define STRINGID_PLAYERPAIDPRIZEMONEYNOWHITEOUT		  626
+#define STRINGID_PLAYERDROPPEDMONEYNOWHITEOUT		  627
+
+#define BATTLESTRINGS_COUNT                           628
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

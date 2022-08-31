@@ -135,6 +135,7 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_LAPRAS] = gMonFootprint_Lapras,
     [SPECIES_DITTO] = gMonFootprint_Ditto,
     [SPECIES_EEVEE] = gMonFootprint_Eevee,
+    [SPECIES_RIVAL_EEVEE] = gMonFootprint_Eevee,
     [SPECIES_VAPOREON] = gMonFootprint_Vaporeon,
     [SPECIES_JOLTEON] = gMonFootprint_Jolteon,
     [SPECIES_FLAREON] = gMonFootprint_Flareon,

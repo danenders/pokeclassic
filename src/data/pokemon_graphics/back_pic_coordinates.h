@@ -679,6 +679,11 @@ const struct MonCoords gMonBackPicCoords[] =
         .size = MON_COORDS_SIZE(48, 48),
         .y_offset = 10,
     },
+    [SPECIES_RIVAL_EEVEE] =
+    {
+        .size = MON_COORDS_SIZE(48, 48),
+        .y_offset = 10,
+    },
     [SPECIES_VAPOREON] =
     {
         .size = MON_COORDS_SIZE(48, 48),

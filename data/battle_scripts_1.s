@@ -3,6 +3,7 @@
 #include "constants/pokemon.h"
 #include "constants/battle_script_commands.h"
 #include "constants/battle_anim.h"
+#include "constants/battle_setup.h"
 #include "constants/battle_string_ids.h"
 #include "constants/abilities.h"
 #include "constants/hold_effects.h"
@@ -6271,6 +6272,8 @@ BattleScript_LocalBattleLostPrintWhiteOut::
 	printstring STRINGID_PLAYERWHITEOUT
 	waitmessage B_WAIT_TIME_LONG
 	getmoneyreward
+	jumpifhalfword CMP_EQUAL, gTrainerBattleMode, TRAINER_BATTLE_NO_WHITEOUT_CONTINUE_SCRIPT, BattleScript_LocalBattleLostDropMoneyPrintNoWhiteout
+	jumpifhalfword CMP_EQUAL, gTrainerBattleMode, TRAINER_BATTLE_NO_INTRO_NO_WHITEOUT, BattleScript_LocalBattleLostDropMoneyPrintNoWhiteout
 	printstring STRINGID_PLAYERWHITEOUT2
 	waitmessage B_WAIT_TIME_LONG
 	end2
@@ -6278,17 +6281,33 @@ BattleScript_LocalBattleLostEnd::
 	printstring STRINGID_PLAYERLOSTTOENEMYTRAINER
 	waitmessage B_WAIT_TIME_LONG
 	getmoneyreward
+	jumpifhalfword CMP_EQUAL, gTrainerBattleMode, TRAINER_BATTLE_NO_WHITEOUT_CONTINUE_SCRIPT, BattleScript_LocalBattleLostPayMoneyPrintNoWhiteout
+	jumpifhalfword CMP_EQUAL, gTrainerBattleMode, TRAINER_BATTLE_NO_INTRO_NO_WHITEOUT, BattleScript_LocalBattleLostPayMoneyPrintNoWhiteout
 	printstring STRINGID_PLAYERPAIDPRIZEMONEY
+	waitmessage B_WAIT_TIME_LONG
+	end2
+BattleScript_LocalBattleLostPayMoneyPrintNoWhiteout::
+	printstring STRINGID_PLAYERPAIDPRIZEMONEYNOWHITEOUT
+	waitmessage B_WAIT_TIME_LONG
+	end2
+BattleScript_LocalBattleLostDropMoneyPrintNoWhiteout::
+	printstring STRINGID_PLAYERDROPPEDMONEYNOWHITEOUT
 	waitmessage B_WAIT_TIME_LONG
 	end2
 .else
 	printstring STRINGID_PLAYERWHITEOUT
 	waitmessage B_WAIT_TIME_LONG
+	jumpifhalfword CMP_EQUAL, gTrainerBattleMode, TRAINER_BATTLE_NO_WHITEOUT_CONTINUE_SCRIPT, BattleScript_LocalBattleLostPrintNoWhiteout
+	jumpifhalfword CMP_EQUAL, gTrainerBattleMode, TRAINER_BATTLE_NO_INTRO_NO_WHITEOUT, BattleScript_LocalBattleLostPrintNoWhiteout
 	printstring STRINGID_PLAYERWHITEOUT2
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_LocalBattleLostEnd::
 	end2
 .endif
+BattleScript_LocalBattleLostPrintNoWhiteout::
+	printstring STRINGID_PLAYERWHITEOUT3
+	waitmessage B_WAIT_TIME_LONG
+	end2
 
 BattleScript_CheckDomeDrew::
 	jumpifbyte CMP_EQUAL, gBattleOutcome, B_OUTCOME_DREW, BattleScript_LocalBattleLostEnd_

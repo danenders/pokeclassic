@@ -134,6 +134,7 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_LAPRAS] = _("Lapras"),
     [SPECIES_DITTO] = _("Ditto"),
     [SPECIES_EEVEE] = _("Eevee"),
+    [SPECIES_RIVAL_EEVEE] = _("Eevee"),
     [SPECIES_VAPOREON] = _("Vaporeon"),
     [SPECIES_JOLTEON] = _("Jolteon"),
     [SPECIES_FLAREON] = _("Flareon"),

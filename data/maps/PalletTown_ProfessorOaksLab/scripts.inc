@@ -3,19 +3,23 @@
 .set LOCALID_POKEBALL, 3
 
 @OAK LAB STATES:
-@ 0:
-@ 1: 
-@ 2:
-@ 3: 
+@ 0: Player hasn't met Oak yet
+@ 1: Player met Oak and warped back to lab
+@ 2: Oak gave intro speech
+@ 3: Rival grabbed Eevee
+@ 4: Triggered Rival Battle
+@ 5: Returned from Rival Battle
 
 PalletTown_ProfessorOaksLab_MapScripts::
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PalletTown_ProfessorOaksLab_OnWarp
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, PalletTown_ProfessorOaksLab_OnFrame
+	map_script MAP_SCRIPT_ON_RETURN_TO_FIELD, PalletTown_ProfessorOaksLab_OnReturnToField
 	.byte 0
 
 PalletTown_ProfessorOaksLab_OnWarp:
 	map_script_2 VAR_OAK_LAB_STATE, 1, PalletTown_ProfessorOaksLab_EventScript_SetPositionsForStarterScene
 	.2byte 0
+
 
 PalletTown_ProfessorOaksLab_EventScript_SetPositionsForStarterScene::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -36,6 +40,16 @@ PalletTown_ProfessorOaksLab_EventScript_GetStarterScene::
 	msgbox PalletTown_ProfessorOaksLab_Text_OakBePatientRival
 	setvar VAR_OAK_LAB_STATE, 2
 	releaseall
+	end
+
+PalletTown_ProfessorOaksLab_OnReturnToField:
+	call_if_eq VAR_OAK_LAB_STATE, 4, PalletTown_ProfessorOaksLab_EventScript_HealAfterFirstBattle
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_HealAfterFirstBattle::
+	special HealPlayerParty
+	callnative UpdateFollowingPokemon
+	setvar VAR_OAK_LAB_STATE, 5
 	end
 
 PalletTown_ProfessorOaksLab_Text_RivalFedUpWithWaiting:
@@ -66,24 +80,24 @@ PalletTown_ProfessorOaksLab_Text_OakBePatientRival::
 
 PalletTown_ProfessorOaksLab_EventScript_PikachuAppears1::
 	lockall
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_MovetoPikachu1
 	turnobject LOCALID_BLUE, DIR_EAST
 	setvar VAR_TEMP_1, 1
 	goto PalletTown_ProfessorOaksLab_EventScript_GetPartnerPikachu
 
 PalletTown_ProfessorOaksLab_EventScript_PikachuAppears2::
 	lockall
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_MovetoPikachu2
 	turnobject LOCALID_BLUE, DIR_EAST
 	goto PalletTown_ProfessorOaksLab_EventScript_GetPartnerPikachu
 
 PalletTown_ProfessorOaksLab_EventScript_GetPartnerPikachu::
 	applymovement LOCALID_OAK, Movement_OakStepBack
 	waitmovement 1
-	msgbox PalletTown_ProfessorOaksLab_Text_PikachuBrokeFree, MSGBOX_DEFAULT
 	playmoncry SPECIES_PIKACHU, CRY_MODE_NORMAL
-	msgbox PalletTown_ProfessorOaksLab_Text_PikachuWantsToFollow, MSGBOX_DEFAULT
+	msgbox PalletTown_ProfessorOaksLab_Text_PikachuBrokeFree, MSGBOX_DEFAULT
 	waitmessage
+	msgbox PalletTown_ProfessorOaksLab_Text_PikachuWantsToFollow, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
 	setflag FLAG_SYS_POKEMON_GET
@@ -97,6 +111,16 @@ Movement_OakStepBack:
 	face_down
 	emote_exclamation_mark
 	walk_in_place_faster_down
+	step_end
+
+Movement_MovetoPikachu1:
+	walk_up
+	face_up
+	step_end
+
+Movement_MovetoPikachu2:
+	walk_left
+	face_up
 	step_end
 
 PalletTown_ProfessorOaksLab_Text_PikachuBrokeFree:
@@ -166,73 +190,48 @@ PalletTown_ProfessorOaksLab_EventScript_RivalTrigger3::
 
 PalletTown_ProfessorOaksLab_EventScript_RivalWantsToBattle::
 	lockall
+	setvar VAR_OAK_LAB_STATE, 4
 	turnobject LOCALID_BLUE, DIR_SOUTH
-	fadenewbgm MUS_RG_ENCOUNTER_RIVAL
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalLetsCheckOutMons, MSGBOX_DEFAULT
-	waitmessage
 	call_if_eq VAR_TEMP_1, 1, PalletTown_ProfessorOaksLab_EventScript_RivalApproach1
 	call_if_eq VAR_TEMP_1, 2, PalletTown_ProfessorOaksLab_EventScript_RivalApproach2
 	call_if_eq VAR_TEMP_1, 3, PalletTown_ProfessorOaksLab_EventScript_RivalApproach3
 	waitmovement 2
-	msgbox PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon, MSGBOX_DEFAULT
-	applymovement LOCALID_BLUE, Movement_BlueLeavesAfterBattle
-	playbgm MUS_RG_RIVAL_EXIT
-	waitmovement 2
-	playse SE_EXIT
-	removeobject LOCALID_BLUE
-	setflag FLAG_HIDE_BLUE_IN_LAB
-	setvar VAR_OAK_LAB_STATE, 4
-	fadedefaultbgm
-	releaseall
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	trainerbattle_no_whiteout_continue_script TRAINER_BLUE_FIRST_BATTLE,PalletTown_ProfessorOaksLab_Text_RivalBattleIntro,PalletTown_ProfessorOaksLab_Text_RivalDefeated,PalletTown_ProfessorOaksLab_EventScript_RivalBattleOutcome
 	end
 
-PalletTown_ProfessorOaksLab_EventScript_RivalApproach1::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_PlayerStepsAside1
-	applymovement LOCALID_BLUE, Movement_RivalApproach
-	return
-
-PalletTown_ProfessorOaksLab_EventScript_RivalApproach2::
-	applymovement LOCALID_BLUE, Movement_RivalApproach
-	return
-
-PalletTown_ProfessorOaksLab_EventScript_RivalApproach3::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_PlayerStepsAside2
-	applymovement LOCALID_BLUE, Movement_RivalApproach
-	return
-
-Movement_RivalApproach:
-	walk_left
-	walk_left
-	walk_left
-	walk_down
-	walk_down
-	step_end
-
-Movement_PlayerStepsAside1:
-	walk_right
-	face_up
-	step_end
-
-Movement_PlayerStepsAside2:
-	walk_left
-	face_up
-	step_end
-
-Movement_BlueLeavesAfterBattle:
-	walk_left
-	walk_down
-	walk_down
-	walk_right
-	walk_down
-	walk_down
-	walk_down
-	step_end
-
-
 PalletTown_ProfessorOaksLab_Text_RivalLetsCheckOutMons::
-    .string "{RIVAL}: Wait, {PLAYER}!\n"
+    .string "{RIVAL}: Wait, {PLAYER}!$"
+
+PalletTown_ProfessorOaksLab_Text_RivalBattleIntro::
     .string "Let's check out our POKéMON!\p"
     .string "Come on, I'll take you on!$"
+
+PalletTown_ProfessorOaksLab_Text_RivalDefeated::
+    .string "{RIVAL}: WHAT?\n"
+    .string "Unbelievable!\l"
+    .string "I picked the wrong POKéMON!$"
+
+PalletTown_ProfessorOaksLab_EventScript_RivalBattleOutcome::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, PalletTown_ProfessorOaksLab_EventScript_RivalBattleWon
+	goto PalletTown_ProfessorOaksLab_EventScript_RivalBattleLost
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_RivalBattleLost::
+	msgbox PalletTown_ProfessorOaksLab_Text_RivalVictory, MSGBOX_DEFAULT
+	goto PalletTown_ProfessorOaksLab_EventScript_PostRivalBattle
+	end
+
+PalletTown_ProfessorOaksLab_Text_RivalVictory::
+    .string "{RIVAL}: Yeah!\n"
+    .string "Am I great or what?$"
+
+PalletTown_ProfessorOaksLab_EventScript_RivalBattleWon::
+	msgbox PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon, MSGBOX_DEFAULT
+	goto PalletTown_ProfessorOaksLab_EventScript_PostRivalBattle
+	end
 
 PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon::
     .string "{RIVAL}: Okay! I'll make my\n"
@@ -240,9 +239,101 @@ PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon::
     .string "{PLAYER}! Gramps!\n"
     .string "Smell you later!$"
 
+PalletTown_ProfessorOaksLab_EventScript_PostRivalBattle::
+	call_if_eq VAR_TEMP_1, 1, PalletTown_ProfessorOaksLab_EventScript_RivalLeavesAfterBattle1
+	call_if_eq VAR_TEMP_1, 2, PalletTown_ProfessorOaksLab_EventScript_RivalLeavesAfterBattle2
+	call_if_eq VAR_TEMP_1, 3, PalletTown_ProfessorOaksLab_EventScript_RivalLeavesAfterBattle3
+	playbgm MUS_RG_RIVAL_EXIT, 0
+	waitmovement 2
+	playse SE_EXIT
+	removeobject LOCALID_BLUE
+	setflag FLAG_HIDE_BLUE_IN_LAB
+	fadedefaultbgm
+	releaseall
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_RivalApproach1::
+	applymovement LOCALID_BLUE, Movement_RivalApproach1
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_RivalApproach2::
+	applymovement LOCALID_BLUE, Movement_RivalApproach2
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_RivalApproach3::
+	applymovement LOCALID_BLUE, Movement_RivalApproach3
+	return
+
+Movement_RivalApproach1:
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	face_down
+	step_end
+
+Movement_RivalApproach2:
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	face_down
+	step_end
+
+Movement_RivalApproach3:
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	face_down
+	step_end
+
+PalletTown_ProfessorOaksLab_EventScript_RivalLeavesAfterBattle1::
+	applymovement LOCALID_BLUE, Movement_RivalLeavesAfterBattle1
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_RivalLeavesAfterBattle2::
+	applymovement LOCALID_BLUE, Movement_RivalLeavesAfterBattle2
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_RivalLeavesAfterBattle3::
+	applymovement LOCALID_BLUE, Movement_RivalLeavesAfterBattle3
+	return
+
+Movement_RivalLeavesAfterBattle1:
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Movement_RivalLeavesAfterBattle2:
+	walk_right
+	walk_down
+	walk_down
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Movement_RivalLeavesAfterBattle3:
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
 PalletTown_ProfessorOaksLab_EventScript_Rival::
 	goto_if_eq VAR_OAK_LAB_STATE, 0, PalletTown_ProfessorOaksLab_EventScript_RivalWaiting
-	goto_if_eq VAR_OAK_LAB_STATE, 1, PalletTown_ProfessorOaksLab_EventScript_RivalNotGreedy
+	goto_if_eq VAR_OAK_LAB_STATE, 2, PalletTown_ProfessorOaksLab_EventScript_RivalNotGreedy
 	goto_if_eq VAR_OAK_LAB_STATE, 3, PalletTown_ProfessorOaksLab_EventScript_RivalMyMonLooksTough
 	end
 

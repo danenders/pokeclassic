@@ -1610,6 +1610,13 @@ static const union AnimCmd sAnim_EEVEE_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_RIVAL_EEVEE_1[] =
+{
+    ANIMCMD_FRAME(1, 33),
+    ANIMCMD_FRAME(0, 5),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_VAPOREON_1[] =
 {
     ANIMCMD_FRAME(1, 40),
@@ -5502,6 +5509,11 @@ static const union AnimCmd *const sAnims_EEVEE[] ={
     sAnim_EEVEE_1,
 };
 
+static const union AnimCmd *const sAnims_RIVAL_EEVEE[] ={
+    sAnim_GeneralFrame0,
+    sAnim_EEVEE_1,
+};
+
 static const union AnimCmd *const sAnims_VAPOREON[] ={
     sAnim_GeneralFrame0,
     sAnim_VAPOREON_1,
@@ -7091,6 +7103,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(LAPRAS),
     ANIM_CMD(DITTO),
     ANIM_CMD(EEVEE),
+    ANIM_CMD(RIVAL_EEVEE),
     ANIM_CMD(VAPOREON),
     ANIM_CMD(JOLTEON),
     ANIM_CMD(FLAREON),

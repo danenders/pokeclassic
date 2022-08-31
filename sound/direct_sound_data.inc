@@ -916,6 +916,7 @@ Cry_Ditto::
 
 	.align 2
 Cry_Eevee::
+Cry_Rival_Eevee::
 	.incbin "sound/direct_sound_samples/cries/eevee.bin"
 
 	.align 2

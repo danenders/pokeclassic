@@ -512,6 +512,7 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(CHIMECHO),
 
     [SPECIES_PIKACHU_PARTNER - 1] = NATIONAL_DEX_PIKACHU,
+    [SPECIES_RIVAL_EEVEE - 1] = NATIONAL_DEX_EEVEE,
 };
 
 // Assigns all species to the National Dex Index (Summary No. for National Dex)
@@ -930,6 +931,7 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(CHIMECHO),
 
     [SPECIES_PIKACHU_PARTNER - 1] = NATIONAL_DEX_PIKACHU,
+    [SPECIES_RIVAL_EEVEE - 1] = NATIONAL_DEX_EEVEE,
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index
@@ -1537,6 +1539,7 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_LAPRAS - 1]      = ANIM_V_STRETCH,
     [SPECIES_DITTO - 1]       = ANIM_CIRCULAR_STRETCH_TWICE,
     [SPECIES_EEVEE - 1]       = ANIM_V_STRETCH,
+    [SPECIES_RIVAL_EEVEE - 1]       = ANIM_V_STRETCH,
     [SPECIES_VAPOREON - 1]    = ANIM_V_STRETCH,
     [SPECIES_JOLTEON - 1]     = ANIM_V_SQUISH_AND_BOUNCE,
     [SPECIES_FLAREON - 1]     = ANIM_V_STRETCH,

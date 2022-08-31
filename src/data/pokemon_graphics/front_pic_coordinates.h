@@ -679,6 +679,11 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = MON_COORDS_SIZE(40, 48),
         .y_offset = 9,
     },
+    [SPECIES_RIVAL_EEVEE] =
+    {
+        .size = MON_COORDS_SIZE(40, 48),
+        .y_offset = 9,
+    },
     [SPECIES_VAPOREON] =
     {
         .size = MON_COORDS_SIZE(48, 56),
