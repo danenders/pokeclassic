@@ -5529,7 +5529,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("{B_RIVAL_NAME}"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_FIRST_BATTLE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_BlueFirstBattle),
         .party = {.NoItemDefaultMoves = sParty_BlueFirstBattle},
     },

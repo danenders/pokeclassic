@@ -370,3 +370,65 @@ PalletTown_ProfessorOaksLab_EventScript_RivalMyMonLooksTough::
 PalletTown_ProfessorOaksLab_Text_RivalMyMonLooksTougher::
     .string "{RIVAL}: My Pokémon looks a lot\n"
     .string "tougher than yours, {PLAYER}.$"
+
+PalletTown_ProfessorOaksLab_EventScript_Computer::
+	msgbox PalletTown_ProfessorOaksLab_Text_EmailMessage, MSGBOX_SIGN
+	end
+
+PalletTown_ProfessorOaksLab_Text_EmailMessage::
+    .string "There's an e-mail message here.\p"
+    .string "…\p"
+    .string "Finally!\n"
+    .string "The ultimate trainers of the\l"
+    .string "Pokémon League are ready to\l"
+    .string "take on all comers!\p"
+    .string "Bring your best Pokémon and see\n"
+    .string "how you rate as a trainer!\p"
+    .string "Pokémon League HQ\n"
+    .string "Indigo Plateau\p"
+    .string "Prof. Oak, please visit us!\n"
+    .string "…$"
+
+PalletTown_ProfessorOaksLab_EventScript_LeftSign::
+	msgbox PalletTown_ProfessorOaksLab_Text_PressStartToOpenMenu, MSGBOX_SIGN
+	end
+
+PalletTown_ProfessorOaksLab_Text_PressStartToOpenMenu::
+    .string "Press START to open the MENU!\p"
+    .string "The SAVE option is on the MENU.\n"
+    .string "Use it regularly.$"
+
+PalletTown_ProfessorOaksLab_EventScript_RightSign::
+	msgbox PalletTown_ProfessorOaksLab_Text_AllMonTypesHaveStrongAndWeakPoints
+	releaseall
+	end
+
+PalletTown_ProfessorOaksLab_Text_AllMonTypesHaveStrongAndWeakPoints::
+    .string "All Pokémon types have strong and\n"
+    .string "weak points against others.$"
+
+PalletTown_ProfessorOaksLab_EventScript_Aide1::
+	lock
+	faceplayer
+	msgbox PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide
+	release
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_Aide2::
+	lock
+	faceplayer
+	msgbox PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide
+	release
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_Aide3::
+	lock
+	faceplayer
+	msgbox PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide::
+    .string "I study Pokémon as Prof. Oak's\n"
+    .string "Aide.$"
+
