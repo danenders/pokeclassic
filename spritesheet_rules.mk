@@ -2223,3 +2223,6 @@ $(MISCGFXDIR)/emotes.4bpp: %.4bpp: %.png
 
 $(OBJEVENTGFXDIR)/pokemon/snorlax_sleep.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 6 -mheight 6
+
+$(OBJEVENTGFXDIR)/misc/ss_anne.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4

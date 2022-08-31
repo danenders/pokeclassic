@@ -1,6 +1,8 @@
 .set LOCALID_OAK, 1
 .set LOCALID_BLUE, 2
 .set LOCALID_POKEBALL, 3
+.set LOCALID_POKEDEX_L, 7
+.set LOCALID_POKEDEX_R, 8
 
 @OAK LAB STATES:
 @ 0: Player hasn't met Oak yet
@@ -9,25 +11,45 @@
 @ 3: Rival grabbed Eevee
 @ 4: Triggered Rival Battle
 @ 5: Returned from Rival Battle
+@ 6: Collected Oak's Parcel
+@ 7: Received Pokedex
+@ 8: Left Lab after getting Pokedex
 
 PalletTown_ProfessorOaksLab_MapScripts::
+	map_script MAP_SCRIPT_ON_RETURN_TO_FIELD, PalletTown_ProfessorOaksLab_OnReturnToField
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PalletTown_ProfessorOaksLab_OnWarp
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, PalletTown_ProfessorOaksLab_OnFrame
-	map_script MAP_SCRIPT_ON_RETURN_TO_FIELD, PalletTown_ProfessorOaksLab_OnReturnToField
 	.byte 0
+
+PalletTown_ProfessorOaksLab_OnReturnToField:
+	call_if_eq VAR_OAK_LAB_STATE, 4, PalletTown_ProfessorOaksLab_EventScript_HealAfterFirstBattle
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_HealAfterFirstBattle::
+	special HealPlayerParty
+	callnative UpdateFollowingPokemon
+	setvar VAR_OAK_LAB_STATE, 5
+	end
 
 PalletTown_ProfessorOaksLab_OnWarp:
 	map_script_2 VAR_OAK_LAB_STATE, 1, PalletTown_ProfessorOaksLab_EventScript_SetPositionsForStarterScene
+	map_script_2 VAR_OAK_LAB_STATE, 6, PalletTown_ProfessorOaksLab_EventScript_SetPositionsForPokedexScene
 	.2byte 0
-
 
 PalletTown_ProfessorOaksLab_EventScript_SetPositionsForStarterScene::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	turnobject LOCALID_BLUE, DIR_NORTH
 	end
 
+PalletTown_ProfessorOaksLab_EventScript_SetPositionsForPokedexScene::
+	setobjectxyperm LOCALID_BLUE, 6, 11
+	setobjectmovementtype LOCALID_OAK, MOVEMENT_TYPE_FACE_UP
+	savebgm MUS_RG_OAK
+	end
+
 PalletTown_ProfessorOaksLab_OnFrame:
 	map_script_2 VAR_OAK_LAB_STATE, 1, PalletTown_ProfessorOaksLab_EventScript_GetStarterScene
+	map_script_2 VAR_OAK_LAB_STATE, 6, PalletTown_ProfessorOaksLab_EventScript_GetPokedexScene
 	.2byte 0
 
 PalletTown_ProfessorOaksLab_EventScript_GetStarterScene::
@@ -40,16 +62,6 @@ PalletTown_ProfessorOaksLab_EventScript_GetStarterScene::
 	msgbox PalletTown_ProfessorOaksLab_Text_OakBePatientRival
 	setvar VAR_OAK_LAB_STATE, 2
 	releaseall
-	end
-
-PalletTown_ProfessorOaksLab_OnReturnToField:
-	call_if_eq VAR_OAK_LAB_STATE, 4, PalletTown_ProfessorOaksLab_EventScript_HealAfterFirstBattle
-	end
-
-PalletTown_ProfessorOaksLab_EventScript_HealAfterFirstBattle::
-	special HealPlayerParty
-	callnative UpdateFollowingPokemon
-	setvar VAR_OAK_LAB_STATE, 5
 	end
 
 PalletTown_ProfessorOaksLab_Text_RivalFedUpWithWaiting:
@@ -77,6 +89,8 @@ PalletTown_ProfessorOaksLab_Text_RivalNoFairWhatAboutMe::
 PalletTown_ProfessorOaksLab_Text_OakBePatientRival::
     .string "Oak: Be patient, {RIVAL}.\n"
     .string "You can have one, too!$"
+
+
 
 PalletTown_ProfessorOaksLab_EventScript_PikachuAppears1::
 	lockall
@@ -331,6 +345,226 @@ Movement_RivalLeavesAfterBattle3:
 	walk_down
 	step_end
 
+PalletTown_ProfessorOaksLab_EventScript_GetPokedexScene::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_PlayerApproachOak
+	waitmovement 0
+	turnobject LOCALID_OAK, DIR_SOUTH
+	applymovement LOCALID_OAK, Common_Movement_ExclamationMark
+	waitmovement 1
+	applymovement LOCALID_OAK, Common_Movement_Delay48
+	waitmovement 1
+	msgbox PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_TMHM
+	message PalletTown_ProfessorOaksLab_Text_DeliveredOaksParcel
+	waitmessage
+	waitfanfare
+	removeitem ITEM_OAKS_PARCEL, 1
+	msgbox PalletTown_ProfessorOaksLab_Text_OakCustomBallIOrdered
+	addobject LOCALID_BLUE
+	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
+	msgbox PalletTown_ProfessorOaksLab_Text_RivalGramps
+	closemessage
+	applymovement LOCALID_BLUE, Movement_RivalReturnsToLab
+	fadedefaultbgm
+	msgbox PalletTown_ProfessorOaksLab_Text_RivalWhatDidYouCallMeFor
+	closemessage
+	delay 30
+	playse SE_PIN
+	applymovement LOCALID_OAK, Common_Movement_ExclamationMark
+	waitmovement 1
+	applymovement LOCALID_OAK, Common_Movement_Delay48
+	waitmovement 1
+	msgbox PalletTown_ProfessorOaksLab_Text_OakHaveRequestForYouTwo
+	closemessage
+	applymovement LOCALID_OAK, Movement_OakGoToPokedex1
+	msgbox PalletTown_ProfessorOaksLab_Text_OakPokedexOnDesk
+	closemessage
+	delay 40
+	msgbox PalletTown_ProfessorOaksLab_Text_OakTakeTheseWithYou
+	closemessage
+	applymovement LOCALID_OAK, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 1
+	removeobject LOCALID_POKEDEX_L
+	delay 10
+	applymovement LOCALID_OAK, Movement_OakGoToPokedex2
+	waitmovement 1
+	applymovement LOCALID_OAK, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 1
+	removeobject LOCALID_POKEDEX_R
+	setflag FLAG_HIDE_POKEDEX_ON_TABLE
+	delay 10
+	applymovement LOCALID_OAK, Movement_OakReturnToPlayer
+	waitmovement 1
+	delay 10
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	message PalletTown_ProfessorOaksLab_Text_ReceivedPokedexFromOak
+	waitmessage
+	waitfanfare
+	setflag FLAG_SYS_POKEDEX_GET
+	special SetUnlockedPokedexFlags
+	msgbox PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese
+	giveitem ITEM_POKE_BALL, 5
+	@PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls 
+	msgbox PalletTown_ProfessorOaksLab_Text_OakExplainCatching
+	@TODO: Register Oak in Match Call
+	msgbox PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream
+	msgbox PalletTown_ProfessorOaksLab_Text_RivalLeaveItToMeGramps
+	turnobject LOCALID_BLUE, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	msgbox PalletTown_ProfessorOaksLab_Text_RivalTellSisNotToGiveYouNumber
+	closemessage
+	playbgm MUS_RG_RIVAL_EXIT, 0
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	applymovement LOCALID_BLUE, Movement_RivalLeavesWithPokedex
+	waitmovement 2
+	playse SE_EXIT
+	removeobject LOCALID_BLUE
+	fadedefaultbgm
+	setvar VAR_OAK_LAB_STATE, 7
+	setvar VAR_STORY_PROGRESSION, 2
+	release
+	end
+
+Movement_PlayerApproachOak:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Movement_RivalReturnsToLab:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_up
+	face_up
+	step_end
+
+Movement_OakGoToPokedex1:
+	walk_up
+	walk_left
+	walk_left
+	face_up
+	step_end
+
+Movement_OakGoToPokedex2:
+	walk_right
+	face_up
+	step_end
+
+Movement_OakReturnToPlayer:
+	walk_right
+	walk_down
+	step_end
+
+Movement_RivalLeavesWithPokedex:
+	walk_down
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe::
+    .string "Oak: Oh, {PLAYER}!\n"
+    .string "How is my old Pokémon?\p"
+    .string "Well, it seems to be growing more\n"
+    .string "attached to you.\p"
+    .string "You must be talented as a Pokémon\n"
+    .string "trainer.\p"
+    .string "What's that?\n"
+    .string "You have something for me?$"
+
+PalletTown_ProfessorOaksLab_Text_DeliveredOaksParcel::
+    .string "{PLAYER} delivered Oak's Parcel.$"
+
+PalletTown_ProfessorOaksLab_Text_OakCustomBallIOrdered::
+    .string "Ah! \n"
+    .string "It's the custom Poké Ball!\p"
+    .string "I had it on order.\n"
+    .string "Thank you!$"
+
+PalletTown_ProfessorOaksLab_Text_RivalGramps::
+    .string "{RIVAL}: Gramps!$"
+
+PalletTown_ProfessorOaksLab_Text_RivalWhatDidYouCallMeFor::
+    .string "{RIVAL}: I almost forgot!\n"
+    .string "What did you call me for?$"
+
+PalletTown_ProfessorOaksLab_Text_OakHaveRequestForYouTwo::
+    .string "Oak: Oh, right!\n"
+    .string "I have a request for you two.$"
+
+PalletTown_ProfessorOaksLab_Text_OakPokedexOnDesk::
+    .string "On the desk there is my invention,\n"
+    .string "the Pokédex!\p"
+    .string "It automatically records data on\n"
+    .string "Pokémon you've seen or caught.\p"
+    .string "It's a high-tech encyclopedia!$"
+
+PalletTown_ProfessorOaksLab_Text_OakTakeTheseWithYou::
+    .string "Oak: {PLAYER} and {RIVAL}.\n"
+    .string "Take these with you.$"
+
+PalletTown_ProfessorOaksLab_Text_ReceivedPokedexFromOak::
+    .string "{PLAYER} received the Pokédex\n"
+    .string "from Professor Oak!$"
+
+PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese::
+    .string "Oak: You can't get detailed data\n"
+    .string "on Pokémon by just seeing them.\p"
+    .string "You must catch them to obtain\n"
+    .string "complete data.\p"
+    .string "So, here are some tools for\n"
+    .string "catching wild Pokémon.$"
+
+PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls::
+    .string "{PLAYER} received five Poké Balls.$"
+
+PalletTown_ProfessorOaksLab_Text_OakExplainCatching::
+    .string "When a wild Pokémon appears,\n"
+    .string "it's fair game.\p"
+    .string "Just throw a Poké Ball at it and\n"
+    .string "try to catch it!\p"
+    .string "This won't always work, however.\p"
+    .string "A healthy Pokémon can escape.\n"
+    .string "You have to be lucky!$"
+
+PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream::
+    .string "To make a complete guide on all\n"
+    .string "the Pokémon in the world…\p"
+    .string "That was my dream!\p"
+    .string "But, I'm too old.\n"
+    .string "I can't get the job done.\p"
+    .string "So, I want you two to fulfill my\n"
+    .string "dream for me.\p"
+    .string "Get moving, you two.\p"
+    .string "This is a great undertaking in\n"
+    .string "Pokémon history!$"
+
+PalletTown_ProfessorOaksLab_Text_RivalLeaveItToMeGramps::
+    .string "{RIVAL}: All right, Gramps!\n"
+    .string "Leave it all to me!$"
+
+PalletTown_ProfessorOaksLab_Text_RivalTellSisNotToGiveYouNumber::
+    .string "{PLAYER}, I hate to say it, but you\n"
+    .string "won't be necessary for this.\p"
+    .string "You're on your own from here, so\n"
+    .string "don't bother calling me!\p"
+    .string "And don't try and get my number from\n"
+    .string "my sister, either.\p"
+    .string "I'll tell her not to give it to you,\n"
+    .string "{PLAYER}! Hahaha!$"
+
 PalletTown_ProfessorOaksLab_EventScript_Rival::
 	goto_if_eq VAR_OAK_LAB_STATE, 0, PalletTown_ProfessorOaksLab_EventScript_RivalWaiting
 	goto_if_eq VAR_OAK_LAB_STATE, 2, PalletTown_ProfessorOaksLab_EventScript_RivalNotGreedy
@@ -432,3 +666,60 @@ PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide::
     .string "I study Pokémon as Prof. Oak's\n"
     .string "Aide.$"
 
+PalletTown_ProfessorOaksLab_EventScript_Pokedex::
+	msgbox PalletTown_ProfessorOaksLab_Text_BlankEncyclopedia, MSGBOX_NPC
+	end
+
+PalletTown_ProfessorOaksLab_Text_BlankEncyclopedia::
+    .string "It's like an encyclopedia, but the\n"
+    .string "pages are blank.$"
+
+PalletTown_ProfessorOaksLab_EventScript_ProfOak::
+	lock
+	faceplayer
+	goto_if_eq VAR_OAK_LAB_STATE, 2, PalletTown_ProfessorOaksLab_EventScript_GoTakePokeball
+	goto_if_eq VAR_OAK_LAB_STATE, 3, PalletTown_ProfessorOaksLab_EventScript_OakCanReachNextTownWithMon
+	goto_if_le VAR_OAK_LAB_STATE, 5, PalletTown_ProfessorOaksLab_EventScript_OakBattleMonForItToGrow
+	goto_if_eq VAR_OAK_LAB_STATE, 7, PalletTown_ProfessorOaksLab_EventScript_OakMonsAroundWorldWait
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_GoTakePokeball::
+	msgbox PalletTown_ProfessorOaksLab_Text_TakeMyPokemon
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_TakeMyPokemon::
+    .string "Oak: Now, {PLAYER}.\p"
+    .string "Inside that Pokéball is\n"
+    .string "one of my Pokémon.\p"
+    .string "Please take good care of it!$"
+
+PalletTown_ProfessorOaksLab_EventScript_OakCanReachNextTownWithMon::
+	msgbox PalletTown_ProfessorOaksLab_Text_OakCanReachNextTownWithMon
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_OakCanReachNextTownWithMon::
+    .string "Oak: If a wild Pokémon appears,\n"
+    .string "your Pokémon can battle it.\p"
+    .string "With it at your side, you should be\n"
+    .string "able to reach the next town.$"
+
+PalletTown_ProfessorOaksLab_EventScript_OakBattleMonForItToGrow::
+	msgbox PalletTown_ProfessorOaksLab_Text_OakBattleMonForItToGrow
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_OakBattleMonForItToGrow::
+    .string "Oak: {PLAYER}, raise your young\n"
+    .string "Pokémon by making it battle.\p"
+    .string "It has to battle for it to grow.$"
+
+PalletTown_ProfessorOaksLab_EventScript_OakMonsAroundWorldWait::
+	msgbox PalletTown_ProfessorOaksLab_Text_OakMonsAroundWorldWait
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_OakMonsAroundWorldWait::
+    .string "POKéMON around the world wait for\n"
+    .string "you, {PLAYER}!$"

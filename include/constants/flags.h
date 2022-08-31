@@ -777,7 +777,7 @@
 #define FLAG_HIDE_OAK_IN_LAB             							0x2E1
 #define FLAG_HIDE_BLUE_IN_LAB                              			0x2E2
 #define FLAG_HIDE_OAK_LAB_POKEBALL                           		0x2E3
-#define FLAG_HIDE_UNUSED_14                            				0x2E4
+#define FLAG_HIDE_POKEDEX_ON_TABLE                            		0x2E4
 #define FLAG_HIDE_UNUSED_15                               			0x2E5
 #define FLAG_HIDE_UNUSED_16                          					0x2E6
 #define FLAG_HIDE_UNUSED_17                       					0x2E7

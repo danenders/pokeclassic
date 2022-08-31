@@ -357,6 +357,9 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Giddy;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldMan1;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldMan2;
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSAnne;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pokedex;
+
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -700,7 +703,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BREEDER_F] =       		 	 	 &gObjectEventGraphicsInfo_BreederF,
 
     [OBJ_EVENT_GFX_SNORLAX_SLEEPING] =           	 &gObjectEventGraphicsInfo_SnorlaxSleeping,
-
+    [OBJ_EVENT_GFX_SS_ANNE]          = 				 &gObjectEventGraphicsInfo_SSAnne,
+    [OBJ_EVENT_GFX_POKEDEX]          = 				 &gObjectEventGraphicsInfo_Pokedex,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
