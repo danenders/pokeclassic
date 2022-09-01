@@ -262,6 +262,7 @@ PalletTown_ProfessorOaksLab_EventScript_PostRivalBattle::
 	playse SE_EXIT
 	removeobject LOCALID_BLUE
 	setflag FLAG_HIDE_BLUE_IN_LAB
+	setvar VAR_ADVENTURE_BEGINS, 3
 	fadedefaultbgm
 	releaseall
 	end
@@ -422,7 +423,6 @@ PalletTown_ProfessorOaksLab_EventScript_GetPokedexScene::
 	removeobject LOCALID_BLUE
 	fadedefaultbgm
 	setvar VAR_OAK_LAB_STATE, 7
-	setvar VAR_STORY_PROGRESSION, 2
 	release
 	end
 

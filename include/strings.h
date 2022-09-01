@@ -2385,7 +2385,8 @@ extern const u8 MatchCall_BattlePyramidText11[];
 extern const u8 MatchCall_BattlePyramidText12[];
 extern const u8 MatchCall_BattlePyramidText13[];
 extern const u8 MatchCall_BattlePyramidText14[];
-extern const u8 MatchCall_Text_MrStone1[];
+
+
 extern const u8 MatchCall_Text_MrStone2[];
 extern const u8 MatchCall_Text_MrStone3[];
 extern const u8 MatchCall_Text_MrStone4[];
@@ -2406,8 +2407,7 @@ extern const u8 MatchCall_Text_Norman7[];
 extern const u8 MatchCall_Text_Norman8[];
 extern const u8 MatchCall_Text_Norman9[];
 extern const u8 MatchCall_Text_Mom1[];
-extern const u8 MatchCall_Text_Mom2[];
-extern const u8 MatchCall_Text_Mom3[];
+extern const u8 MatchCall_Text_MomGameClear[];
 extern const u8 MatchCall_Text_Steven1[];
 extern const u8 MatchCall_Text_Steven2[];
 extern const u8 MatchCall_Text_Steven3[];

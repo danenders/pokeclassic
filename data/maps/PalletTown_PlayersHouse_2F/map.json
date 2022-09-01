@@ -43,7 +43,7 @@
       "x": 5,
       "y": 6,
       "elevation": 0,
-      "var": "VAR_PLAYER_ROOM_STATE",
+      "var": "VAR_ADVENTURE_BEGINS",
       "var_value": "0",
       "script": "PlayersHouse_2F_EventScript_NewGameStart1"
     },
@@ -52,7 +52,7 @@
       "x": 7,
       "y": 6,
       "elevation": 0,
-      "var": "VAR_PLAYER_ROOM_STATE",
+      "var": "VAR_ADVENTURE_BEGINS",
       "var_value": "0",
       "script": "PlayersHouse_2F_EventScript_NewGameStart3"
     },
@@ -61,7 +61,7 @@
       "x": 6,
       "y": 7,
       "elevation": 0,
-      "var": "VAR_PLAYER_ROOM_STATE",
+      "var": "VAR_ADVENTURE_BEGINS",
       "var_value": "0",
       "script": "PlayersHouse_2F_EventScript_NewGameStart2"
     }

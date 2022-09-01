@@ -118,6 +118,7 @@ EventScript_ResetAllMapFlags::
 	call EventScript_ResetAllBerries
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_HIDE_MOM_PLAYERS_ROOM
+	setflag FLAG_HIDE_MOM_PALLET_TOWN
 	setflag FLAG_HIDE_OAK_ROUTE1
 	setflag FLAG_HIDE_PIKACHU_ROUTE1
 	setflag FLAG_HIDE_OAK_IN_LAB

@@ -112,7 +112,7 @@ Route1_EventScript_PikachuEncounter::
 	special LoadPlayerParty
 	turnobject LOCALID_OAK, DIR_SOUTH
 	msgbox Route1_Text_ThatWasClose, MSGBOX_DEFAULT
-	setvar VAR_ROUTE_1_STATE, 1
+	setvar VAR_ADVENTURE_BEGINS, 2
 	fadescreen FADE_TO_BLACK
 	setflag FLAG_HIDE_MAP_NAME_POPUP
 	clearflag FLAG_HIDE_OAK_IN_LAB

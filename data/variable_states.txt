@@ -1,0 +1,19 @@
+Variable States:
+
+//Adventure Begins:
+0: Begin a new game
+1: Triggered intro cutscene, ready to meet Oak on Route 1
+2: Met Oak on Route 1, ready for Partner Pokemon scene
+3: Completed first rival battle, ready for Pokenav scene
+4: Got PokeNav from Mom, ready for Oak's Parcel scene
+
+//Oak's Lab
+0: Player hasn't met Oak yet
+1: Player met Oak and warped back to lab
+2: Oak gave intro speech
+3: Rival grabbed Eevee
+4: Triggered Rival Battle
+5: Returned from Rival Battle
+6: Collected Oak's Parcel
+7: Received Pokedex
+8: Left Lab after getting Pokedex

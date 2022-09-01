@@ -25,7 +25,19 @@
     }
   ],
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MOM",
+      "x": 6,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_MOM_PALLET_TOWN"
+    }
   ],
   "warp_events": [
     {
@@ -51,7 +63,51 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ADVENTURE_BEGINS",
+      "var_value": "3",
+      "script": "PalletTown_EventScript_PokenavSceneStart1"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ADVENTURE_BEGINS",
+      "var_value": "3",
+      "script": "PalletTown_EventScript_PokenavSceneStart2"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ADVENTURE_BEGINS",
+      "var_value": "3",
+      "script": "PalletTown_EventScript_PokenavSceneStart3"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_ADVENTURE_BEGINS",
+      "var_value": "3",
+      "script": "PalletTown_EventScript_PokenavSceneStart4"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_ADVENTURE_BEGINS",
+      "var_value": "3",
+      "script": "PalletTown_EventScript_PokenavSceneStart5"
+    }
   ],
   "bg_events": [
 

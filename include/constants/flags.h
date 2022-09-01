@@ -778,7 +778,7 @@
 #define FLAG_HIDE_BLUE_IN_LAB                              			0x2E2
 #define FLAG_HIDE_OAK_LAB_POKEBALL                           		0x2E3
 #define FLAG_HIDE_POKEDEX_ON_TABLE                            		0x2E4
-#define FLAG_HIDE_UNUSED_15                               			0x2E5
+#define FLAG_HIDE_MOM_PALLET_TOWN                               	0x2E5
 #define FLAG_HIDE_UNUSED_16                          					0x2E6
 #define FLAG_HIDE_UNUSED_17                       					0x2E7
 #define FLAG_HIDE_UNUSED_18                          					0x2E8
@@ -1516,34 +1516,34 @@
 
 #define FLAG_CONTEST_SKETCH_CREATED                 (SYSTEM_FLAGS + 0x98) // Set but never read
 
-#define FLAG_UNUSED_SYSTEM_FLAG_0x99                (SYSTEM_FLAGS + 0x99)
+#define FLAG_HIDE_CONTEST_POKE_BALL                	(SYSTEM_FLAGS + 0x99) // Always set after new game, object it hides is added directly
 
 #define FLAG_NURSE_MENTIONS_GOLD_CARD               (SYSTEM_FLAGS + 0x9A) 
 #define FLAG_POKERUS_EXPLAINED                      (SYSTEM_FLAGS + 0x9B)
 
 #define FLAG_UNUSED_SYSTEM_FLAG_0x9C                (SYSTEM_FLAGS + 0x9C) 
-#define FLAG_HIDE_CONTEST_POKE_BALL           		(SYSTEM_FLAGS + 0x9D) // Always set after new game, object it hides is added directly
+#define FLAG_UNUSED_SYSTEM_FLAG_0x9D          		(SYSTEM_FLAGS + 0x9D) 
 #define FLAG_SCOTT_CALL_BATTLE_FRONTIER             (SYSTEM_FLAGS + 0x9E) // Retained for match call
 #define FLAG_MET_SCOTT_ON_SS_TIDAL                  (SYSTEM_FLAGS + 0x9F) // Retained for match call
 #define FLAG_UNUSED_SYSTEM_FLAG_0xA0                (SYSTEM_FLAGS + 0xA0) 
-#define FLAG_ENABLE_NORMAN_MATCH_CALL               (SYSTEM_FLAGS + 0xA1) // Retained for match call
-#define FLAG_UNUSED_SYSTEM_FLAG_0xA2            	(SYSTEM_FLAGS + 0xA2) // Retained for match call
+#define FLAG_UNUSED_SYSTEM_FLAG_0xA1               	(SYSTEM_FLAGS + 0xA1)
+#define FLAG_UNUSED_SYSTEM_FLAG_0xA2            	(SYSTEM_FLAGS + 0xA2) 
 #define FLAG_UNUSED_SYSTEM_FLAG_0xA3           		(SYSTEM_FLAGS + 0xA3) 
-#define FLAG_ENABLE_MOM_MATCH_CALL                  (SYSTEM_FLAGS + 0xA4) // Retained for match call
+#define FLAG_UNUSED_SYSTEM_FLAG_0xA4                (SYSTEM_FLAGS + 0xA4) 
 #define FLAG_ENABLE_SCOTT_MATCH_CALL                (SYSTEM_FLAGS + 0xA5) // Retained for match call
-#define FLAG_ENABLE_WALLY_MATCH_CALL                (SYSTEM_FLAGS + 0xA6) // Retained for match call
-#define FLAG_REGISTERED_STEVEN_POKENAV              (SYSTEM_FLAGS + 0xA7) // Retained for match call
-#define FLAG_ENABLE_RIVAL_MATCH_CALL                (SYSTEM_FLAGS + 0xA8) // Retained for match call
-#define FLAG_ENABLE_JUAN_MATCH_CALL                 (SYSTEM_FLAGS + 0xA9) // Retained for match call
-#define FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL        (SYSTEM_FLAGS + 0xAA) // Retained for match call
-#define FLAG_ENABLE_WINONA_MATCH_CALL               (SYSTEM_FLAGS + 0xAB) // Retained for match call
-#define FLAG_ENABLE_FLANNERY_MATCH_CALL             (SYSTEM_FLAGS + 0xAC) // Retained for match call
-#define FLAG_ENABLE_WATTSON_MATCH_CALL              (SYSTEM_FLAGS + 0xAD) // Retained for match call
-#define FLAG_ENABLE_BRAWLY_MATCH_CALL               (SYSTEM_FLAGS + 0xAE) // Retained for match call
-#define FLAG_ENABLE_ROXANNE_MATCH_CALL              (SYSTEM_FLAGS + 0xAF) // Retained for match call
-#define FLAG_ENABLE_MR_STONE_POKENAV                (SYSTEM_FLAGS + 0xB0) // Retained for match call
-#define FLAG_ENABLE_FIRST_WALLY_POKENAV_CALL        (SYSTEM_FLAGS + 0xB1) // Retained for match call
-#define FLAG_UNUSED_0x912                 			(SYSTEM_FLAGS + 0xB2) // Unused Flag
+#define FLAG_UNUSED_SYSTEM_FLAG_0xA6                (SYSTEM_FLAGS + 0xA6) 
+#define FLAG_UNUSED_SYSTEM_FLAG_0xA7              	(SYSTEM_FLAGS + 0xA7) 
+#define FLAG_UNUSED_SYSTEM_FLAG_0xA8                (SYSTEM_FLAGS + 0xA8) 
+#define FLAG_ENABLE_JUAN_MATCH_CALL                 (SYSTEM_FLAGS + 0xA9) // Look into how Juan Rematch was using this, repurpose for Gym Leader match call?
+#define FLAG_UNUSED_SYSTEM_FLAG_0xAA        		(SYSTEM_FLAGS + 0xAA) 
+#define FLAG_UNUSED_SYSTEM_FLAG_0xAB               	(SYSTEM_FLAGS + 0xAB) 
+#define FLAG_UNUSED_SYSTEM_FLAG_0xAD             	(SYSTEM_FLAGS + 0xAC) 
+#define FLAG_UNUSED_SYSTEM_FLAG_0xAC              	(SYSTEM_FLAGS + 0xAD) 
+#define FLAG_UNUSED_SYSTEM_FLAG_0xAE               	(SYSTEM_FLAGS + 0xAE) 
+#define FLAG_UNUSED_SYSTEM_FLAG_0xAF              	(SYSTEM_FLAGS + 0xAF) 
+#define FLAG_UNUSED_SYSTEM_FLAG_0xB0                (SYSTEM_FLAGS + 0xB0) 
+#define FLAG_UNUSED_SYSTEM_FLAG_0xB1        		(SYSTEM_FLAGS + 0xB1)
+#define FLAG_UNUSED_SYSTEM_FLAG_0xB2                (SYSTEM_FLAGS + 0xB2) // Unused Flag
 #define FLAG_SCOTT_GIVES_BATTLE_POINTS              (SYSTEM_FLAGS + 0xB3) // Used for Scott script
 #define FLAG_COLLECTED_ALL_SILVER_SYMBOLS           (SYSTEM_FLAGS + 0xB4) // Used for Scott script
 #define FLAG_RECEIVED_SILVER_SHIELD                 (SYSTEM_FLAGS + 0xB5) // Used for Scott script

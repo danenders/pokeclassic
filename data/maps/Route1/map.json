@@ -61,8 +61,8 @@
       "x": 12,
       "y": 39,
       "elevation": 0,
-      "var": "VAR_ROUTE_1_STATE",
-      "var_value": "0",
+      "var": "VAR_ADVENTURE_BEGINS",
+      "var_value": "1",
       "script": "Route1_EventScript_OakAppears1"
     },
     {
@@ -70,8 +70,8 @@
       "x": 13,
       "y": 39,
       "elevation": 0,
-      "var": "VAR_ROUTE_1_STATE",
-      "var_value": "0",
+      "var": "VAR_ADVENTURE_BEGINS",
+      "var_value": "1",
       "script": "Route1_EventScript_OakAppears2"
     }
   ],

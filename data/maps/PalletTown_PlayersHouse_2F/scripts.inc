@@ -33,7 +33,7 @@ PlayersHouse_2F_EventScript_NewGameStart1::
 	setflag FLAG_HIDE_MOM_PLAYERS_ROOM
 	playse SE_EXIT
 	removeobject LOCALID_MOM
-	setvar VAR_PLAYER_ROOM_STATE, 1
+	setvar VAR_ADVENTURE_BEGINS, 1
 	releaseall
 	end
 
@@ -61,7 +61,7 @@ PlayersHouse_2F_EventScript_NewGameStart2::
 	setflag FLAG_HIDE_MOM_PLAYERS_ROOM
 	playse SE_EXIT
 	removeobject LOCALID_MOM
-	setvar VAR_PLAYER_ROOM_STATE, 1
+	setvar VAR_ADVENTURE_BEGINS, 1
 	releaseall
 	end
 
@@ -89,7 +89,7 @@ PlayersHouse_2F_EventScript_NewGameStart3::
 	setflag FLAG_HIDE_MOM_PLAYERS_ROOM
 	playse SE_EXIT
 	removeobject LOCALID_MOM
-	setvar VAR_PLAYER_ROOM_STATE, 1
+	setvar VAR_ADVENTURE_BEGINS, 1
 	releaseall
 	end
 

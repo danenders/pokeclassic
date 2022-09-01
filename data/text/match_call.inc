@@ -14,8 +14,42 @@ MatchCall_Text_RegisteredOak: @ 82B603A
 	.string "Registered Professor Oak\n"
 	.string "in the Pokénav.$"
 
+MatchCall_Text_Mom1::
+	.string "Mom: Oh? {PLAYER}!\p"
+	.string "I'm so happy you called!\p"
+	.string "That means your Cell Phone\n"
+	.string "must be working properly!\p"
+	.string "You'll make lots of friends on\n"
+	.string "your journey, so make sure to\l"
+	.string "register them too!\p"
+	.string "Good! Good!\n"
+	.string "You seem to be quite happy!\p"
+	.string "Hm…\n"
+	.string "How could I know that?\p"
+	.string "It's because I'm your mom!\p"
+	.string "I know everything about you!\p"
+	.string "Hehehehe.\n"
+	.string "See you soon, honey!$"
+
+MatchCall_Text_MomGameClear::
+	.string "Mom: {PLAYER}…\n"
+	.string "It feels like you just left\n"
+	.string "Pallet Town the other day, and\l"
+	.string "now you've been all over Kanto!\p"
+	.string "Who knew you'd have such an\n"
+	.string "adventure with your Pokémon!\p"
+	.string "I'm so proud of you!$"
+
 
 @UNUSED
+MatchCall_Text_Mom2::
+	.string "Mom: Your father and you…\n"
+	.string "Everyone is captivated by Pokémon.\p"
+	.string "What is the charm of Pokémon?\p"
+	.string "Me?\n"
+	.string "I adore Pokémon that help me with\l"
+	.string "my everyday chores.$"
+
 MatchCall_WildBattleText1::
 	.string "Hi! {PLAYER}{KUN}, hello!\n"
 	.string "This is {STR_VAR_1}.\p"
@@ -2032,29 +2066,7 @@ MatchCall_BattlePyramidText14::
 	.string "You're an inspiration!\n"
 	.string "See you again!$"
 
-MatchCall_Text_Mom1::
-	.string "Mom: Your father and you…\n"
-	.string "Everyone is captivated by Pokémon.\p"
-	.string "What is the charm of Pokémon?\p"
-	.string "Me?\n"
-	.string "I adore Pokémon that help me with\l"
-	.string "my everyday chores.$"
 
-MatchCall_Text_Mom2::
-	.string "Mom: Hi, {PLAYER}!\n"
-	.string "Your father keeps himself locked\l"
-	.string "away in the Petalburg Gym.\p"
-	.string "He comes home every so often.\n"
-	.string "But he goes back to the Gym when\l"
-	.string "he's eaten everything he can.\p"
-	.string "I'm guessing that losing to you\n"
-	.string "was a big blow to his pride!$"
-
-MatchCall_Text_Mom3::
-	.string "Mom: {PLAYER}…\n"
-	.string "Don't worry about me or the house.\p"
-	.string "Wear those Running Shoes until\n"
-	.string "they fall apart, honey!$"
 
 MatchCall_Text_Roxanne1::
 	.string "Roxanne: Oh, hello, {PLAYER}!\p"
@@ -2853,21 +2865,6 @@ MatchCall_Text_UnusedProfBirch:
 	.string "Prof. Birch: When one has both\n"
 	.string "the Pokédex and Pokénav, studying\l"
 	.string "Pokémon becomes more fun, eh?$"
-
-MatchCall_Text_MrStone1:: @ 82B60C0
-	.string "Mr. Stone: Oh? {PLAYER}{KUN}!\p"
-	.string "Since you called me, the Pokénav\n"
-	.string "must be working properly!\p"
-	.string "Other people will be registered,\n"
-	.string "so try calling them up, too!\p"
-	.string "Good! Good!\n"
-	.string "You seem to be quite happy!\p"
-	.string "Hm…\n"
-	.string "How could I know that?\p"
-	.string "It's because I'm looking down at\n"
-	.string "you from my office window!\p"
-	.string "Wahahaha!\n"
-	.string "See you again!$"
 
 MatchCall_Text_MrStone2:: @ 82B61E6
 	.string "Mr. Stone: Oh? {PLAYER}{KUN}!\p"
