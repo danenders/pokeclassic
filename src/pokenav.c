@@ -144,12 +144,12 @@ const struct PokenavCallbacks PokenavMenuCallbacks[17] =
     [POKENAV_DEXNAV - POKENAV_MENU_IDS_START] =
     {
         .init = PokeNavMenuDexNavCallback,
-        .callback = GetConditionGraphMenuCallback,
-        .open = OpenConditionGraphMenu,
-        .createLoopTask = CreateConditionGraphMenuLoopedTask,
-        .isLoopTaskActive = IsConditionGraphMenuLoopedTaskActive,
-        .free1 = FreeConditionGraphMenuSubstruct1,
-        .free2 = FreeConditionGraphMenuSubstruct2,
+        .callback = GetMatchCallCallback,
+        .open = OpenMatchCall,
+        .createLoopTask = CreateMatchCallLoopedTask,
+        .isLoopTaskActive = IsMatchCallLoopedTaskActive,
+        .free1 = FreeMatchCallSubstruct1,
+        .free2 = FreeMatchCallSubstruct2,
     },
     [POKENAV_CONDITION_GRAPH_PARTY - POKENAV_MENU_IDS_START] =
     {
