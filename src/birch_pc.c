@@ -17,48 +17,48 @@ bool16 ScriptGetPokedexInfo(void)
 const u8 *GetPokedexRatingText(u16 count)
 {
     if (count < 10)
-        return gBirchDexRatingText_LessThan10;
+        return gOakDexRatingText_LessThan10;
     if (count < 20)
-        return gBirchDexRatingText_LessThan20;
+        return gOakDexRatingText_LessThan20;
     if (count < 30)
-        return gBirchDexRatingText_LessThan30;
+        return gOakDexRatingText_LessThan30;
     if (count < 40)
-        return gBirchDexRatingText_LessThan40;
+        return gOakDexRatingText_LessThan40;
     if (count < 50)
-        return gBirchDexRatingText_LessThan50;
+        return gOakDexRatingText_LessThan50;
     if (count < 60)
-        return gBirchDexRatingText_LessThan60;
+        return gOakDexRatingText_LessThan60;
     if (count < 70)
-        return gBirchDexRatingText_LessThan70;
+        return gOakDexRatingText_LessThan70;
     if (count < 80)
-        return gBirchDexRatingText_LessThan80;
+        return gOakDexRatingText_LessThan80;
     if (count < 90)
-        return gBirchDexRatingText_LessThan90;
+        return gOakDexRatingText_LessThan90;
     if (count < 100)
-        return gBirchDexRatingText_LessThan100;
+        return gOakDexRatingText_LessThan100;
     if (count < 110)
-        return gBirchDexRatingText_LessThan110;
+        return gOakDexRatingText_LessThan110;
     if (count < 120)
-        return gBirchDexRatingText_LessThan120;
+        return gOakDexRatingText_LessThan120;
     if (count < 130)
-        return gBirchDexRatingText_LessThan130;
+        return gOakDexRatingText_LessThan130;
     if (count < 140)
-        return gBirchDexRatingText_LessThan140;
+        return gOakDexRatingText_LessThan140;
     if (count < 150)
-        return gBirchDexRatingText_LessThan150;
+        return gOakDexRatingText_LessThan150;
     if (count < 151)
-        return gBirchDexRatingText_LessThan151;
+        return gOakDexRatingText_LessThan151;
     if (count == 151)
     {
-        return gBirchDexRatingText_DexCompleted;
+        return gOakDexRatingText_DexCompleted;
     }
     if (count == HOENN_DEX_COUNT - 1)
     {
-        return gBirchDexRatingText_DexCompleted;
+        return gOakDexRatingText_DexCompleted;
     }
     if (count == HOENN_DEX_COUNT)
-        return gBirchDexRatingText_DexCompleted;
-    return gBirchDexRatingText_LessThan10;
+        return gOakDexRatingText_DexCompleted;
+    return gOakDexRatingText_LessThan10;
 }
 
 void ShowPokedexRatingMessage(void)

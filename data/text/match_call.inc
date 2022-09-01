@@ -1,5 +1,5 @@
 @UPDATED
-MatchCall_Text_BirchRegisterCall: @ 82B5F52
+MatchCall_Text_OakRegisterCall: @ 82B5F52
 	.string "Oak: Oh, {PLAYER}{KUN}!\n"
 	.string "I've already heard about you!\p"
 	.string "It seems your Pokénav's been\n"
@@ -10,7 +10,7 @@ MatchCall_Text_BirchRegisterCall: @ 82B5F52
 	.string "out in the field.\p"
 	.string "… … … … … …$"
 
-MatchCall_Text_RegisteredBirch: @ 82B603A
+MatchCall_Text_RegisteredOak: @ 82B603A
 	.string "Registered Professor Oak\n"
 	.string "in the Pokénav.$"
 

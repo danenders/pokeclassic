@@ -1022,9 +1022,8 @@ static const struct MatchCallText *const sMatchCallGeneralTopics[] =
     [GEN_TOPIC_B_PYRAMID - 1]     = sMatchCallBattlePyramidTexts,
 };
 
-extern const u8 gBirchDexRatingText_AreYouCurious[];
-extern const u8 gBirchDexRatingText_SoYouveSeenAndCaught[];
-extern const u8 gBirchDexRatingText_OnANationwideBasis[];
+extern const u8 gOakDexRatingText_AreYouCurious[];
+extern const u8 gOakDexRatingText_SoYouveSeenAndCaught[];
 
 void InitMatchCallCounters(void)
 {
@@ -2017,25 +2016,25 @@ static u8 GetPokedexRatingLevel(u16 numSeen)
         return 16;
 }
 
-static const u8 *const sBirchDexRatingTexts[] =
+static const u8 *const sOakDexRatingTexts[] =
 {
-    gBirchDexRatingText_LessThan10,
-    gBirchDexRatingText_LessThan20,
-    gBirchDexRatingText_LessThan30,
-    gBirchDexRatingText_LessThan40,
-    gBirchDexRatingText_LessThan50,
-    gBirchDexRatingText_LessThan60,
-    gBirchDexRatingText_LessThan70,
-    gBirchDexRatingText_LessThan80,
-    gBirchDexRatingText_LessThan90,
-    gBirchDexRatingText_LessThan100,
-    gBirchDexRatingText_LessThan110,
-    gBirchDexRatingText_LessThan120,
-    gBirchDexRatingText_LessThan130,
-    gBirchDexRatingText_LessThan140,
-    gBirchDexRatingText_LessThan150,
-    gBirchDexRatingText_LessThan151,
-    gBirchDexRatingText_DexCompleted,
+    gOakDexRatingText_LessThan10,
+    gOakDexRatingText_LessThan20,
+    gOakDexRatingText_LessThan30,
+    gOakDexRatingText_LessThan40,
+    gOakDexRatingText_LessThan50,
+    gOakDexRatingText_LessThan60,
+    gOakDexRatingText_LessThan70,
+    gOakDexRatingText_LessThan80,
+    gOakDexRatingText_LessThan90,
+    gOakDexRatingText_LessThan100,
+    gOakDexRatingText_LessThan110,
+    gOakDexRatingText_LessThan120,
+    gOakDexRatingText_LessThan130,
+    gOakDexRatingText_LessThan140,
+    gOakDexRatingText_LessThan150,
+    gOakDexRatingText_LessThan151,
+    gOakDexRatingText_DexCompleted,
 };
 
 void BufferPokedexRatingForMatchCall(u8 *destStr)
@@ -2056,11 +2055,11 @@ void BufferPokedexRatingForMatchCall(u8 *destStr)
     ConvertIntToDecimalStringN(gStringVar1, numSeen, STR_CONV_MODE_LEFT_ALIGN, 3);
     ConvertIntToDecimalStringN(gStringVar2, numCaught, STR_CONV_MODE_LEFT_ALIGN, 3);
     dexRatingLevel = GetPokedexRatingLevel(numCaught);
-    str = StringCopy(buffer, gBirchDexRatingText_AreYouCurious);
+    str = StringCopy(buffer, gOakDexRatingText_AreYouCurious);
     *(str++) = CHAR_PROMPT_CLEAR;
-    str = StringCopy(str, gBirchDexRatingText_SoYouveSeenAndCaught);
+    str = StringCopy(str, gOakDexRatingText_SoYouveSeenAndCaught);
     *(str++) = CHAR_PROMPT_CLEAR;
-    StringCopy(str, sBirchDexRatingTexts[dexRatingLevel]);
+    StringCopy(str, sOakDexRatingTexts[dexRatingLevel]);
     str = StringExpandPlaceholders(destStr, buffer);
 
     if (IsNationalPokedexEnabled())
@@ -2070,7 +2069,7 @@ void BufferPokedexRatingForMatchCall(u8 *destStr)
         numCaught = GetNationalPokedexCount(FLAG_GET_CAUGHT);
         ConvertIntToDecimalStringN(gStringVar1, numSeen, STR_CONV_MODE_LEFT_ALIGN, 3);
         ConvertIntToDecimalStringN(gStringVar2, numCaught, STR_CONV_MODE_LEFT_ALIGN, 3);
-        StringExpandPlaceholders(str, gBirchDexRatingText_OnANationwideBasis);
+        StringExpandPlaceholders(str, gOakDexRatingText_SoYouveSeenAndCaught);
     }
 
     Free(buffer);

@@ -727,11 +727,11 @@ PalletTown_ProfessorOaksLab_Text_OakMonsAroundWorldWait::
     .string "you, {PLAYER}!$"
 
 EventScript_RegisterProfOak::
-	msgbox MatchCall_Text_BirchRegisterCall, MSGBOX_DEFAULT
+	msgbox MatchCall_Text_OakRegisterCall, MSGBOX_DEFAULT
 	closemessage
 	delay 30
 	playfanfare MUS_REGISTER_MATCH_CALL
-	msgbox MatchCall_Text_RegisteredBirch, MSGBOX_DEFAULT
+	msgbox MatchCall_Text_RegisteredOak, MSGBOX_DEFAULT
 	waitfanfare
 	closemessage
 	delay 30
@@ -740,25 +740,25 @@ EventScript_RegisterProfOak::
 	end
 
 ProfOak_EventScript_AskRatePokedex::
-	msgbox gBirchDexRatingText_AreYouCurious, MSGBOX_YESNO
+	msgbox gOakDexRatingText_GoodToSeeYou, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, ProfOak_EventScript_DeclineRating
-	call ProfBirch_EventScript_RatePokedex
+	call ProfOak_EventScript_RatePokedex
 	release
 	end
 
 ProfOak_EventScript_DeclineRating::
-	msgbox gBirchDexRatingText_Cancel, MSGBOX_DEFAULT
+	msgbox gOakDexRatingText_Cancel, MSGBOX_DEFAULT
 	release
 	end
 
-ProfBirch_EventScript_ShowRatingMessage::
+ProfOak_EventScript_ShowRatingMessage::
 	copyvar VAR_0x8004, VAR_0x8009
 	special ShowPokedexRatingMessage
 	waitmessage
 	waitbuttonpress
 	return
 
-ProfBirch_EventScript_RatePokedex::
+ProfOak_EventScript_RatePokedex::
 	setvar VAR_0x8004, 0
 	specialvar VAR_RESULT, ScriptGetPokedexInfo
 	copyvar VAR_0x8008, VAR_0x8005
@@ -766,6 +766,6 @@ ProfBirch_EventScript_RatePokedex::
 	copyvar VAR_0x800A, VAR_RESULT
 	buffernumberstring STR_VAR_1, VAR_0x8008  @ Num Hoenn seen
 	buffernumberstring STR_VAR_2, VAR_0x8009  @ Num Hoenn caught
-	msgbox gBirchDexRatingText_SoYouveSeenAndCaught, MSGBOX_DEFAULT
-	call ProfBirch_EventScript_ShowRatingMessage
+	msgbox gOakDexRatingText_SoYouveSeenAndCaught, MSGBOX_DEFAULT
+	call ProfOak_EventScript_ShowRatingMessage
 	return
