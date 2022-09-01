@@ -124,12 +124,12 @@ enum
 	POKENAV_MAIN_MENU_CURSOR_ON_MATCH_CALL,
 	POKENAV_MAIN_MENU_CURSOR_ON_RIBBONS,
 	POKENAV_REGION_MAP,
+    POKENAV_MATCH_CALL,
     POKENAV_DEXNAV,
 	POKENAV_CONDITION_GRAPH_PARTY,              // The Condition graph screen when Party has been selected
 	POKENAV_CONDITION_SEARCH_RESULTS,           // The list of results from a Condition search
 	POKENAV_CONDITION_GRAPH_SEARCH,             // The Condition graph screen when a search result has been selected
 	POKENAV_RETURN_CONDITION_SEARCH,            // Exited the graph screen back to the list of Condition search results
-	POKENAV_MATCH_CALL,
 	POKENAV_RIBBONS_MON_LIST,                   // The list of Pokémon with ribbons
 	POKENAV_RIBBONS_SUMMARY_SCREEN,             // The ribbon summary screen shown when a Pokémon has been selected
 	POKENAV_RIBBONS_RETURN_TO_MON_LIST,         // Exited the summary screen back to the ribbon list
@@ -138,8 +138,8 @@ enum
 enum
 {
     POKENAV_MENU_TYPE_DEFAULT,
-    POKENAV_MENU_TYPE_UNLOCK_MC,
-    POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS,
+    POKENAV_MENU_TYPE_UNLOCK_DEXNAV,
+    POKENAV_MENU_TYPE_UNLOCK_DEXNAV_RIBBONS,
     POKENAV_MENU_TYPE_CONDITION,
     POKENAV_MENU_TYPE_CONDITION_SEARCH,
     POKENAV_MENU_TYPE_COUNT
@@ -150,9 +150,9 @@ enum
 enum
 {
     POKENAV_MENUITEM_MAP,
+    POKENAV_MENUITEM_MATCH_CALL,
     POKENAV_MENUITEM_DEXNAV,
     POKENAV_MENUITEM_CONDITION,
-    POKENAV_MENUITEM_MATCH_CALL,
     POKENAV_MENUITEM_RIBBONS,
     POKENAV_MENUITEM_SWITCH_OFF,
     POKENAV_MENUITEM_CONDITION_PARTY,

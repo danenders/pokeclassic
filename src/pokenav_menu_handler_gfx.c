@@ -149,7 +149,7 @@ static const LoopedTask sMenuHandlerLoopTaskFuncs[] =
     [POKENAV_MENU_FUNC_NO_RIBBON_WINNERS]     = LoopedTask_SelectRibbonsNoWinners,
     [POKENAV_MENU_FUNC_RESHOW_DESCRIPTION]    = LoopedTask_ReShowDescription,
     [POKENAV_MENU_FUNC_OPEN_FEATURE]          = LoopedTask_OpenPokenavFeature,
-    [POKENAV_MENU_FUNC_OPEN_DEXNAV]           = LoopedTask_OpenPokenavDexNav
+    [POKENAV_MENU_FUNC_OPEN_DEXNAV]           = LoopedTask_OpenPokenavFeature
 };
 
 static const struct CompressedSpriteSheet sPokenavOptionsSpriteSheets[] =
@@ -207,32 +207,32 @@ struct
         .deltaY = 20,
         .gfx = {
             sOptionsLabelGfx_RegionMap,
-            sOptionsLabelGfx_DexNav,
+            sOptionsLabelGfx_MatchCall,
             sOptionsLabelGfx_Condition,
             sOptionsLabelGfx_SwitchOff
         }
     },
-    [POKENAV_MENU_TYPE_UNLOCK_MC] =
+    [POKENAV_MENU_TYPE_UNLOCK_DEXNAV] =
     {
         .yStart = 42,
         .deltaY = 20,
         .gfx = {
             sOptionsLabelGfx_RegionMap,
+            sOptionsLabelGfx_MatchCall,
             sOptionsLabelGfx_DexNav,
             sOptionsLabelGfx_Condition,
-            sOptionsLabelGfx_MatchCall,
             sOptionsLabelGfx_SwitchOff
         }
     },
-    [POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS] =
+    [POKENAV_MENU_TYPE_UNLOCK_DEXNAV_RIBBONS] =
     {
         .yStart = 40,
         .deltaY = 17,
         .gfx = {
             sOptionsLabelGfx_RegionMap,
+            sOptionsLabelGfx_MatchCall,
             sOptionsLabelGfx_DexNav,
             sOptionsLabelGfx_Condition,
-            sOptionsLabelGfx_MatchCall,
             sOptionsLabelGfx_Ribbons,
             sOptionsLabelGfx_SwitchOff
         }
@@ -276,9 +276,9 @@ static const struct WindowTemplate sOptionDescWindowTemplate =
 static const u8 *const sPageDescriptions[] =
 {
     [POKENAV_MENUITEM_MAP]                     = gText_CheckMapOfHoenn,
-    [POKENAV_MENUITEM_DEXNAV] = gText_DexNavDescription,
-    [POKENAV_MENUITEM_CONDITION]               = gText_CheckPokemonInDetail,
     [POKENAV_MENUITEM_MATCH_CALL]              = gText_CallRegisteredTrainer,
+    [POKENAV_MENUITEM_DEXNAV]                  = gText_DexNavDescription,
+    [POKENAV_MENUITEM_CONDITION]               = gText_CheckPokemonInDetail,
     [POKENAV_MENUITEM_RIBBONS]                 = gText_CheckObtainedRibbons,
     [POKENAV_MENUITEM_SWITCH_OFF]              = gText_PutAwayPokenav,
     [POKENAV_MENUITEM_CONDITION_PARTY]         = gText_CheckPartyPokemonInDetail,
