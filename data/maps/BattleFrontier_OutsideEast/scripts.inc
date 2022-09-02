@@ -9,7 +9,7 @@ BattleFrontier_OutsideEast_OnResume:
 
 BattleFrontier_OutsideEast_EventScript_TryRemoveSudowoodo::
 	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_Return
 	removeobject VAR_LAST_TALKED
 	return
 

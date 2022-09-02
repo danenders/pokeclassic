@@ -868,13 +868,13 @@ BattleFrontier_BattleDomePreBattleRoom_EventScript_WarpToLobbyDoubles::
 BattleFrontier_BattleDomeBattleRoom_EventScript_SetWalkingAudienceMemberPos::
 	random 2
 	copyvar VAR_TEMP_D, VAR_RESULT
-	goto_if_eq VAR_TEMP_D, 0, Common_EventScript_NopReturn
+	goto_if_eq VAR_TEMP_D, 0, Common_EventScript_Return
 	setobjectxyperm LOCALID_AUDIENCE_WALKING, 2, 0
 	setobjectmovementtype LOCALID_AUDIENCE_WALKING, MOVEMENT_TYPE_FACE_RIGHT
 	return
 
 BattleFrontier_BattleDomeBattleRoom_EventScript_TryDoAudienceMemberWalkToSeat::
-	goto_if_eq VAR_TEMP_D, 0, Common_EventScript_NopReturn
+	goto_if_eq VAR_TEMP_D, 0, Common_EventScript_Return
 	applymovement LOCALID_AUDIENCE_WALKING, BattleFrontier_BattleDomeBattleRoom_Movement_AudienceMemberWalkToSeat
 	return
 

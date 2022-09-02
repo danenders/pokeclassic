@@ -30,7 +30,7 @@ FarawayIsland_Interior_OnResume:
 
 FarawayIsland_Interior_EventScript_TryRemoveMew::
 	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_Return
 	removeobject VAR_LAST_TALKED
 	return
 
@@ -41,7 +41,7 @@ FarawayIsland_Interior_OnTransition:
 	end
 
 FarawayIsland_Interior_EventScript_TryShowMew::
-	goto_if_set FLAG_DEFEATED_MEW, Common_EventScript_NopReturn
+	goto_if_set FLAG_DEFEATED_MEW, Common_EventScript_Return
 	clearflag FLAG_HIDE_MEW
 	setvar VAR_TEMP_1, 0
 	return

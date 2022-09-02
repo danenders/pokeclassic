@@ -1039,7 +1039,7 @@
 #define FLAG_HIDE_UNUSED_273                						0x3E7
 
 // Item Ball Flags
-#define FLAG_UNUSED_ITEM_0x3E8                                  	0x3E8
+#define FLAG_VIRIDIAN_CITY_POTION                                  	0x3E8
 #define FLAG_UNUSED_ITEM_0x3E9                               		0x3E9
 #define FLAG_UNUSED_ITEM_0x3EA                                   	0x3EA
 #define FLAG_UNUSED_ITEM_0x3EB                                    	0x3EB

@@ -1856,3 +1856,9 @@ const u8 gText_DawnPlatinumCostume[] = _("Platinum 2");
 
 const u8 gText_DexNavDescription[] = _("Search for wild Pokémon.");
 
+const u8 gText_ReadPoison[] = _("Poison");
+const u8 gText_ReadSleep[] = _("Sleep");
+const u8 gText_ReadParalysis[] = _("Paralysis");
+const u8 gText_ReadBurn[] = _("Burn");
+const u8 gText_ReadFreeze[] = _("Ice");
+

@@ -243,6 +243,7 @@ PalletTown_ProfessorOaksLab_Text_RivalVictory::
     .string "Am I great or what?$"
 
 PalletTown_ProfessorOaksLab_EventScript_RivalBattleWon::
+	addvar VAR_RIVAL_WINRATE, 1
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon, MSGBOX_DEFAULT
 	goto PalletTown_ProfessorOaksLab_EventScript_PostRivalBattle
 	end
@@ -365,7 +366,7 @@ PalletTown_ProfessorOaksLab_EventScript_GetPokedexScene::
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCustomBallIOrdered
 	addobject LOCALID_BLUE
 	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
-	mmsbox PalletTown_ProfessorOaksLab_Text_RivalGramps
+	msgbox PalletTown_ProfessorOaksLab_Text_RivalGramps, MSGBOX_DEFAULT
 	waitmessage
 	closemessage
 	applymovement LOCALID_BLUE, Movement_RivalReturnsToLab

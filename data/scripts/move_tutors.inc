@@ -1,3 +1,53 @@
+@KANTO, Updated
+
+MoveTutor_DreamEater::
+	lock
+	faceplayer
+	msgbox MoveTutor_Text_DreamEaterTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_DreamEaterDeclined
+	msgbox MoveTutor_Text_DreamEaterWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_DREAM_EATER
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_DreamEaterDeclined
+	goto MoveTutor_EventScript_DreamEaterTaught
+	end
+
+MoveTutor_EventScript_DreamEaterDeclined::
+	msgbox MoveTutor_Text_DreamEaterDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_DreamEaterDeclined::
+    .string "…Snore…$"
+
+MoveTutor_Text_DreamEaterWhichMon::
+    .string "Which Pokémon wants to learn\n"
+    .string "Dream Eater?$"
+
+MoveTutor_EventScript_DreamEaterTaught::
+	msgbox MoveTutor_Text_SwaggerTaught, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_DreamEaterTaught::
+    .string "…ZZZ…\n"
+    .string "I…can't eat…anymore…$"
+
+MoveTutor_Text_DreamEaterTeach::
+    .string "Yawn!\n"
+    .string "I must have dozed off in the sun.\p"
+    .string "I had this weird dream about\n"
+    .string "a Drowzee eating my dream.\p"
+    .string "And…\n"
+    .string "I learned how to eat dreams…\p"
+    .string "Oogh, this is too spooky!\p"
+    .string "Let me teach it to a Pokémon so\n"
+    .string "I can forget about it!$"
+
+
+
+
+@OLD
 SlateportCity_PokemonFanClub_EventScript_SwaggerTutor::
 	lock
 	faceplayer

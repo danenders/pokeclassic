@@ -142,8 +142,8 @@
 //Variables
 #define VAR_ADVENTURE_BEGINS                0x407C 
 #define VAR_OAK_LAB_STATE               	0x407D 
-#define UNUSED_VARIABLE_3               	0x407E 
-#define UNUSED_VARIABLE_4                   0x407F 
+#define VAR_RIVAL_WINRATE               	0x407E 
+#define VAR_VIRIDIAN_CITY_GYM               0x407F 
 #define UNUSED_VARIABLE_5                  	0x4080 
 #define UNUSED_VARIABLE_6      				0x4081 
 #define UNUSED_VARIABLE_7     				0x4082

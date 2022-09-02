@@ -3055,4 +3055,11 @@ extern const u8 gText_SecondDrawer[];
 extern const u8 gText_ThirdDrawer[];
 extern const u8 gText_FourthDrawer[];
 
+//Trainer School
+extern const u8 gText_ReadPoison[];
+extern const u8 gText_ReadSleep[];
+extern const u8 gText_ReadParalysis[];
+extern const u8 gText_ReadBurn[];
+extern const u8 gText_ReadFreeze[];
+
 #endif // GUARD_STRINGS_H

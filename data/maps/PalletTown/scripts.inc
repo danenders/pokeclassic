@@ -6,6 +6,7 @@ PalletTown_MapScripts::
 	.byte 0
 
 PalletTown_OnTransition:
+	setflag FLAG_VISITED_PALLET_TOWN
 	call_if_eq VAR_OAK_LAB_STATE, 7, EventScript_UpdateOakLabState
 	call Common_EventScript_GetDayOrNight
 	end

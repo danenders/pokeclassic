@@ -2229,3 +2229,6 @@ $(OBJEVENTGFXDIR)/pokemon/snorlax_sleep.4bpp: %.4bpp: %.png
 
 $(OBJEVENTGFXDIR)/misc/ss_anne.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 8 -mheight 4
+
+$(OBJEVENTGFXDIR)/pokemon/spearow_overworld.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4

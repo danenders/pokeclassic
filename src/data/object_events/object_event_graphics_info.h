@@ -109,6 +109,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldM
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower = {TAG_NONE, OBJ_EVENT_PAL_TAG_MAY, OBJ_EVENT_PAL_TAG_NONE, 512, 32, 32, 2, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_32x32, sOamTables_32x32, sAnimTable_Following, sPicTable_Togetic, gDummySpriteAffineAnimTable};
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SnorlaxSleeping = {TAG_NONE, OBJ_EVENT_PAL_TAG_SNORLAX, OBJ_EVENT_PAL_TAG_NONE, 1152, 48, 48, 10, SHADOW_SIZE_M, TRUE, FALSE, TRACKS_NONE, &gObjectEventBaseOam_32x32, sOamTables_48x48, sAnimTable_Inanimate, sPicTable_SnorlaxSleeping, gDummySpriteAffineAnimTable};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spearow = {TAG_NONE, OBJ_EVENT_PAL_TAG_SPEAROW, OBJ_EVENT_PAL_TAG_NONE, 512, 32, 32, 3, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_32x32, sOamTables_32x32, sAnimTable_Standard, sPicTable_SpearowOverworld, gDummySpriteAffineAnimTable};
+
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal = {TAG_NONE, OBJ_EVENT_PAL_TAG_BRENDAN, OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION, 512, 32, 32, 0, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_32x32, sOamTables_32x32, sAnimTable_BrendanMayNormal, sPicTable_BrendanNormal, gDummySpriteAffineAnimTable};
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike = {TAG_NONE, OBJ_EVENT_PAL_TAG_BRENDAN, OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION, 512, 32, 32, 0, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_BIKE_TIRE, &gObjectEventBaseOam_32x32, sOamTables_32x32, sAnimTable_Standard, sPicTable_BrendanMachBike, gDummySpriteAffineAnimTable};

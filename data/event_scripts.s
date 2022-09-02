@@ -903,7 +903,7 @@ EventScript_RWithoutRegisteredItem::
 
 	.include "data/scripts/field_poison.inc"
 
-Common_EventScript_NopReturn::
+Common_EventScript_Return::
 	return
 
 @ Unused
