@@ -21,6 +21,7 @@ Route1_EventScript_OakAppears1::
 	applymovement LOCALID_OAK, Movement_OakAppears
 	waitmovement 1
 	msgbox Route1_Text_OakDontGoOut, MSGBOX_DEFAULT
+	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
@@ -41,6 +42,7 @@ Route1_EventScript_OakAppears2::
 	applymovement LOCALID_OAK, Movement_OakAppears
 	waitmovement 1
 	msgbox Route1_Text_OakDontGoOut, MSGBOX_DEFAULT
+	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
@@ -100,6 +102,7 @@ Movement_PikachuApproaches2:
 
 Route1_EventScript_PikachuEncounter::
 	turnobject LOCALID_OAK, DIR_NORTH
+	playse SE_PIN
 	applymovement LOCALID_OAK, Common_Movement_ExclamationMark
 	waitmovement 1
 	applymovement LOCALID_OAK, Common_Movement_Delay48

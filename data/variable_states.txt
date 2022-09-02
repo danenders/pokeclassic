@@ -6,6 +6,8 @@ Variable States:
 2: Met Oak on Route 1, ready for Partner Pokemon scene
 3: Completed first rival battle, ready for Pokenav scene
 4: Got PokeNav from Mom, ready for Oak's Parcel scene
+5: Got Oak's Parcel
+6: Delivered Oak's Parcel
 
 //Oak's Lab
 0: Player hasn't met Oak yet

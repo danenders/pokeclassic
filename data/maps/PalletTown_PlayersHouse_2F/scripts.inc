@@ -14,6 +14,7 @@ PlayersHouse_2F_EventScript_NewGameStart1::
 	playse SE_DOOR
 	applymovement LOCALID_MOM, MomWalksUpstairs
 	waitmovement 1
+	playse SE_PIN
 	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
 	waitmovement 1
 	applymovement LOCALID_MOM, Common_Movement_Delay48
@@ -42,6 +43,7 @@ PlayersHouse_2F_EventScript_NewGameStart2::
 	addobject LOCALID_MOM
 	applymovement LOCALID_MOM, MomWalksUpstairsAlt
 	waitmovement 1
+	playse SE_PIN
 	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
 	waitmovement 1
 	applymovement LOCALID_MOM, Common_Movement_Delay48
@@ -70,6 +72,7 @@ PlayersHouse_2F_EventScript_NewGameStart3::
 	addobject LOCALID_MOM
 	applymovement LOCALID_MOM, MomWalksUpstairs
 	waitmovement 1
+	playse SE_PIN
 	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
 	waitmovement 1
 	applymovement LOCALID_MOM, Common_Movement_Delay48

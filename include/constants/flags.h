@@ -779,7 +779,7 @@
 #define FLAG_HIDE_OAK_LAB_POKEBALL                           		0x2E3
 #define FLAG_HIDE_POKEDEX_ON_TABLE                            		0x2E4
 #define FLAG_HIDE_MOM_PALLET_TOWN                               	0x2E5
-#define FLAG_HIDE_UNUSED_16                          					0x2E6
+#define FLAG_HIDE_OFFICER_JENNY_VIRIDIAN_CITY                       0x2E6
 #define FLAG_HIDE_UNUSED_17                       					0x2E7
 #define FLAG_HIDE_UNUSED_18                          					0x2E8
 #define FLAG_HIDE_UNUSED_19            								0x2E9

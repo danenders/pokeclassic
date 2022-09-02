@@ -1145,6 +1145,9 @@ const u16 gObjectEventPal_Jessie[] = INCBIN_U16("graphics/object_events/palettes
 const u32 gObjectEventPic_James[] = INCBIN_U32("graphics/object_events/pics/people/team_rocket/james.4bpp");
 const u16 gObjectEventPal_James[] = INCBIN_U16("graphics/object_events/palettes/james.gbapal");
 
+const u32 gObjectEventPic_OfficerJenny[] = INCBIN_U32("graphics/object_events/pics/people/officer_jenny.4bpp");
+const u16 gObjectEventPal_OfficerJenny[] = INCBIN_U16("graphics/object_events/palettes/jenny.gbapal");
+
 //Other Pokemon
 const u32 gObjectEventPic_SnorlaxSleeping[] = INCBIN_U32("graphics/object_events/pics/pokemon/snorlax_sleep.4bpp");
 const u16 gObjectEventPal_Snorlax[] = INCBIN_U16("graphics/object_events/palettes/snorlax.gbapal");

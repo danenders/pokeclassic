@@ -1861,6 +1861,18 @@ static const struct SpriteFrameImage sPicTable_James[] = {
     overworld_frame(gObjectEventPic_James, 4, 4, 8),
 };
 
+static const struct SpriteFrameImage sPicTable_OfficerJenny[] = {
+    overworld_frame(gObjectEventPic_OfficerJenny, 4, 4, 0),
+    overworld_frame(gObjectEventPic_OfficerJenny, 4, 4, 1),
+    overworld_frame(gObjectEventPic_OfficerJenny, 4, 4, 2),
+    overworld_frame(gObjectEventPic_OfficerJenny, 4, 4, 3),
+    overworld_frame(gObjectEventPic_OfficerJenny, 4, 4, 4),
+    overworld_frame(gObjectEventPic_OfficerJenny, 4, 4, 5),
+    overworld_frame(gObjectEventPic_OfficerJenny, 4, 4, 6),
+    overworld_frame(gObjectEventPic_OfficerJenny, 4, 4, 7),
+    overworld_frame(gObjectEventPic_OfficerJenny, 4, 4, 8),
+};
+
 static const struct SpriteFrameImage sPicTable_KyogreFront[] = {
     overworld_frame(gObjectEventPic_KyogreOld, 4, 4, 0),
     overworld_frame(gObjectEventPic_KyogreOld, 4, 4, 0),

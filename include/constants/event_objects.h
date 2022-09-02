@@ -235,10 +235,11 @@
 #define OBJ_EVENT_GFX_RED                        	NPC_GFX + 54
 #define OBJ_EVENT_GFX_BLUE                       	NPC_GFX + 55
 #define OBJ_EVENT_GFX_LEAF                       	NPC_GFX + 56
+#define OBJ_EVENT_GFX_OFFICER_JENNY                 NPC_GFX + 57
 
 //MISC
-#define OBJ_EVENT_GFX_LITTLE_BOY_3               	NPC_GFX + 57 //UNUSED?
-#define OBJ_EVENT_GFX_QUINTY_PLUMP                 	NPC_GFX + 58
+#define OBJ_EVENT_GFX_LITTLE_BOY_3               	NPC_GFX + 58 //UNUSED?
+#define OBJ_EVENT_GFX_QUINTY_PLUMP                 	NPC_GFX + 59
 
 #define GENERIC_NPC_GFX								OBJ_EVENT_GFX_QUINTY_PLUMP
 

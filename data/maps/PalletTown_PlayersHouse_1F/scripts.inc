@@ -47,7 +47,7 @@ PlayersHouse_1F_EventScript_PokenavScene::
 	applymovement LOCALID_MOM, Common_Movement_Delay48
 	waitmovement 1
 	msgbox PalletTown_Text_WhatACutePokemon, MSGBOX_DEFAULT
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	message PalletTown_Text_ReceivedPokeGear
 	waitmessage
 	waitfanfare

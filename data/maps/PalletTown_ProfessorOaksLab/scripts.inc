@@ -351,6 +351,7 @@ PalletTown_ProfessorOaksLab_EventScript_GetPokedexScene::
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_PlayerApproachOak
 	waitmovement 0
 	turnobject LOCALID_OAK, DIR_SOUTH
+	playse SE_PIN
 	applymovement LOCALID_OAK, Common_Movement_ExclamationMark
 	waitmovement 1
 	applymovement LOCALID_OAK, Common_Movement_Delay48
@@ -364,9 +365,11 @@ PalletTown_ProfessorOaksLab_EventScript_GetPokedexScene::
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCustomBallIOrdered
 	addobject LOCALID_BLUE
 	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
-	msgbox PalletTown_ProfessorOaksLab_Text_RivalGramps
+	mmsbox PalletTown_ProfessorOaksLab_Text_RivalGramps
+	waitmessage
 	closemessage
 	applymovement LOCALID_BLUE, Movement_RivalReturnsToLab
+	waitmovement 2
 	fadedefaultbgm
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalWhatDidYouCallMeFor
 	closemessage
@@ -422,7 +425,9 @@ PalletTown_ProfessorOaksLab_EventScript_GetPokedexScene::
 	playse SE_EXIT
 	removeobject LOCALID_BLUE
 	fadedefaultbgm
+	setflag FLAG_HIDE_OFFICER_JENNY_VIRIDIAN_CITY
 	setvar VAR_OAK_LAB_STATE, 7
+	setvar VAR_ADVENTURE_BEGINS, 6
 	release
 	end
 
