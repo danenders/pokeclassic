@@ -1,5 +1,5 @@
 .set LOCALID_OAK, 1
-.set LOCALID_BLUE, 2
+.set LOCALID_RIVAL, 2
 .set LOCALID_POKEBALL, 3
 .set LOCALID_POKEDEX_L, 7
 .set LOCALID_POKEDEX_R, 8
@@ -38,11 +38,11 @@ PalletTown_ProfessorOaksLab_OnWarp:
 
 PalletTown_ProfessorOaksLab_EventScript_SetPositionsForStarterScene::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-	turnobject LOCALID_BLUE, DIR_NORTH
+	turnobject LOCALID_RIVAL, DIR_NORTH
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_SetPositionsForPokedexScene::
-	setobjectxyperm LOCALID_BLUE, 6, 11
+	setobjectxyperm LOCALID_RIVAL, 6, 11
 	setobjectmovementtype LOCALID_OAK, MOVEMENT_TYPE_FACE_UP
 	savebgm MUS_RG_OAK
 	end
@@ -95,14 +95,14 @@ PalletTown_ProfessorOaksLab_Text_OakBePatientRival::
 PalletTown_ProfessorOaksLab_EventScript_PikachuAppears1::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_MovetoPikachu1
-	turnobject LOCALID_BLUE, DIR_EAST
+	turnobject LOCALID_RIVAL, DIR_EAST
 	setvar VAR_TEMP_1, 1
 	goto PalletTown_ProfessorOaksLab_EventScript_GetPartnerPikachu
 
 PalletTown_ProfessorOaksLab_EventScript_PikachuAppears2::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_MovetoPikachu2
-	turnobject LOCALID_BLUE, DIR_EAST
+	turnobject LOCALID_RIVAL, DIR_EAST
 	goto PalletTown_ProfessorOaksLab_EventScript_GetPartnerPikachu
 
 PalletTown_ProfessorOaksLab_EventScript_GetPartnerPikachu::
@@ -161,12 +161,12 @@ PalletTown_ProfessorOaksLab_EventScript_NicknameStarter::
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_RivalGetsEevee::
-	applymovement LOCALID_BLUE, Movement_RivalGoesToTable
+	applymovement LOCALID_RIVAL, Movement_RivalGoesToTable
 	waitmovement 2
-	turnobject LOCALID_BLUE, DIR_NORTH
+	turnobject LOCALID_RIVAL, DIR_NORTH
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalIllTakeThisOneThen, MSGBOX_DEFAULT
 	waitmessage
-	applymovement LOCALID_BLUE, Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceFasterUp
 	removeobject LOCALID_POKEBALL
 	setflag FLAG_HIDE_OAK_LAB_POKEBALL
 	setvar VAR_OAK_LAB_STATE, 3
@@ -205,14 +205,14 @@ PalletTown_ProfessorOaksLab_EventScript_RivalTrigger3::
 PalletTown_ProfessorOaksLab_EventScript_RivalWantsToBattle::
 	lockall
 	setvar VAR_OAK_LAB_STATE, 4
-	turnobject LOCALID_BLUE, DIR_SOUTH
+	turnobject LOCALID_RIVAL, DIR_SOUTH
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalLetsCheckOutMons, MSGBOX_DEFAULT
 	call_if_eq VAR_TEMP_1, 1, PalletTown_ProfessorOaksLab_EventScript_RivalApproach1
 	call_if_eq VAR_TEMP_1, 2, PalletTown_ProfessorOaksLab_EventScript_RivalApproach2
 	call_if_eq VAR_TEMP_1, 3, PalletTown_ProfessorOaksLab_EventScript_RivalApproach3
 	waitmovement 2
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-	trainerbattle_no_whiteout_continue_script TRAINER_BLUE_FIRST_BATTLE,PalletTown_ProfessorOaksLab_Text_RivalBattleIntro,PalletTown_ProfessorOaksLab_Text_RivalDefeated,PalletTown_ProfessorOaksLab_EventScript_RivalBattleOutcome
+	trainerbattle_no_whiteout_continue_script TRAINER_RIVAL_FIRST_BATTLE,PalletTown_ProfessorOaksLab_Text_RivalBattleIntro,PalletTown_ProfessorOaksLab_Text_RivalDefeated,PalletTown_ProfessorOaksLab_EventScript_RivalBattleOutcome
 	end
 
 PalletTown_ProfessorOaksLab_Text_RivalLetsCheckOutMons::
@@ -261,23 +261,23 @@ PalletTown_ProfessorOaksLab_EventScript_PostRivalBattle::
 	playbgm MUS_RG_RIVAL_EXIT, 0
 	waitmovement 2
 	playse SE_EXIT
-	removeobject LOCALID_BLUE
-	setflag FLAG_HIDE_BLUE_IN_LAB
+	removeobject LOCALID_RIVAL
+	setflag FLAG_HIDE_RIVAL_IN_LAB
 	setvar VAR_ADVENTURE_BEGINS, 3
 	fadedefaultbgm
 	releaseall
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_RivalApproach1::
-	applymovement LOCALID_BLUE, Movement_RivalApproach1
+	applymovement LOCALID_RIVAL, Movement_RivalApproach1
 	return
 
 PalletTown_ProfessorOaksLab_EventScript_RivalApproach2::
-	applymovement LOCALID_BLUE, Movement_RivalApproach2
+	applymovement LOCALID_RIVAL, Movement_RivalApproach2
 	return
 
 PalletTown_ProfessorOaksLab_EventScript_RivalApproach3::
-	applymovement LOCALID_BLUE, Movement_RivalApproach3
+	applymovement LOCALID_RIVAL, Movement_RivalApproach3
 	return
 
 Movement_RivalApproach1:
@@ -308,15 +308,15 @@ Movement_RivalApproach3:
 	step_end
 
 PalletTown_ProfessorOaksLab_EventScript_RivalLeavesAfterBattle1::
-	applymovement LOCALID_BLUE, Movement_RivalLeavesAfterBattle1
+	applymovement LOCALID_RIVAL, Movement_RivalLeavesAfterBattle1
 	return
 
 PalletTown_ProfessorOaksLab_EventScript_RivalLeavesAfterBattle2::
-	applymovement LOCALID_BLUE, Movement_RivalLeavesAfterBattle2
+	applymovement LOCALID_RIVAL, Movement_RivalLeavesAfterBattle2
 	return
 
 PalletTown_ProfessorOaksLab_EventScript_RivalLeavesAfterBattle3::
-	applymovement LOCALID_BLUE, Movement_RivalLeavesAfterBattle3
+	applymovement LOCALID_RIVAL, Movement_RivalLeavesAfterBattle3
 	return
 
 Movement_RivalLeavesAfterBattle1:
@@ -364,12 +364,12 @@ PalletTown_ProfessorOaksLab_EventScript_GetPokedexScene::
 	waitfanfare
 	removeitem ITEM_OAKS_PARCEL, 1
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCustomBallIOrdered
-	addobject LOCALID_BLUE
+	addobject LOCALID_RIVAL
 	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalGramps, MSGBOX_DEFAULT
 	waitmessage
 	closemessage
-	applymovement LOCALID_BLUE, Movement_RivalReturnsToLab
+	applymovement LOCALID_RIVAL, Movement_RivalReturnsToLab
 	waitmovement 2
 	fadedefaultbgm
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalWhatDidYouCallMeFor
@@ -415,16 +415,16 @@ PalletTown_ProfessorOaksLab_EventScript_GetPokedexScene::
 	@TODO: Register Oak in Match Call
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalLeaveItToMeGramps
-	turnobject LOCALID_BLUE, DIR_EAST
+	turnobject LOCALID_RIVAL, DIR_EAST
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalTellSisNotToGiveYouNumber
 	closemessage
 	playbgm MUS_RG_RIVAL_EXIT, 0
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
-	applymovement LOCALID_BLUE, Movement_RivalLeavesWithPokedex
+	applymovement LOCALID_RIVAL, Movement_RivalLeavesWithPokedex
 	waitmovement 2
 	playse SE_EXIT
-	removeobject LOCALID_BLUE
+	removeobject LOCALID_RIVAL
 	fadedefaultbgm
 	setflag FLAG_HIDE_OFFICER_JENNY_VIRIDIAN_CITY
 	setvar VAR_OAK_LAB_STATE, 7

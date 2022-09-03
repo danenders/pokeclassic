@@ -1780,29 +1780,32 @@ const u8 gText_ClearingData[] = _("Clearing data…\nPlease wait.");
 const u8 gText_IsThisTheCorrectTime[] = _("Is this the correct time?");
 const u8 gText_Confirm3[] = _("Confirm");
 const u8 gText_Cancel4[] = _("Cancel");
+
 //Updated Match Call
-const u8 gText_RivalMatchCallDesc[] = _("Rude neighbor");
-const u8 gText_ExpandedPlaceholder_RivalMatchCallName[] = _("{RIVAL}");
 const u8 gText_ProfOakMatchCallDesc[] = _("{PKMN} Prof.");
 const u8 gText_ProfOakMatchCallName[] = _("Prof. Oak");
 
+const u8 gText_MomMatchCallDesc[] = _("Calm & kind");
+const u8 gText_MomMatchCallName[] = _("Mom");
+
+const u8 gText_AideMatchCallDesc[] = _("Prof.'s Aide");
+const u8 gText_AideMatchCallName[] = _("Cedar");
+
+const u8 gText_RivalMatchCallDesc[] = _("Rude neighbor");
 const u8 gText_MatchCallRival_Strategy[] = _("I'm in the mood for battles.");
 const u8 gText_MatchCallRival_Pokemon[] = _("I'll use any Pokémon to win!");
 const u8 gText_MatchCallRival_Intro1[] = _("If I see a strong trainer,");
 const u8 gText_MatchCallRival_Intro2[] = _("I'm gonna want to fight!");
 
 //Old Match Call
+const u8 gText_ScottMatchCallDesc[] = _("Elusive eyes");
+const u8 gText_ScottMatchCallName[] = _("Scott");
 const u8 gText_MrStoneMatchCallDesc[] = _("Devon Pres");
 const u8 gText_MrStoneMatchCallName[] = _("Mr. Stone");
 const u8 gText_StevenMatchCallDesc[] = _("Hard as rock");
 const u8 gText_StevenMatchCallName[] = _("Steven");
 const u8 gText_NormanMatchCallDesc[] = _("Reliable one");
-const u8 gText_MomMatchCallDesc[] = _("Calm & kind");
-const u8 gText_WallyMatchCallDesc[] = _("{PKMN} lover");
 const u8 gText_NormanMatchCallName[] = _("Dad");
-const u8 gText_MomMatchCallName[] = _("Mom");
-const u8 gText_ScottMatchCallDesc[] = _("Elusive eyes");
-const u8 gText_ScottMatchCallName[] = _("Scott");
 const u8 gText_RoxanneMatchCallDesc[] = _("Rockin' whiz");
 const u8 gText_BrawlyMatchCallDesc[] = _("The big hit");
 const u8 gText_WattsonMatchCallDesc[] = _("Swell shock");

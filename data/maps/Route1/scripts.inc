@@ -141,9 +141,7 @@ Route1_EventScript_MartClerk::
 	checkitemspace ITEM_POTION, 1
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
 	giveitem ITEM_POTION, 1
-	playfanfare MUS_OBTAIN_ITEM
 	waitmessage
-	waitfanfare
 	msgbox Route1_Text_PutPotionAway, MSGBOX_DEFAULT
 	setflag FLAG_GOT_POTION_ON_ROUTE_1
 	release

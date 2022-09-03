@@ -101,6 +101,7 @@ PalletTown_EventScript_PokenavScene::
 	removeobject LOCALID_MOM
 	setflag FLAG_HIDE_MOM_PALLET_TOWN
 	setflag FLAG_SYS_POKENAV_GET
+	setflag FLAG_HAS_MATCH_CALL
 	setvar VAR_ADVENTURE_BEGINS, 4
 	releaseall
 	end

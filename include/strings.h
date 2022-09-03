@@ -2406,8 +2406,6 @@ extern const u8 MatchCall_Text_Norman6[];
 extern const u8 MatchCall_Text_Norman7[];
 extern const u8 MatchCall_Text_Norman8[];
 extern const u8 MatchCall_Text_Norman9[];
-extern const u8 MatchCall_Text_Mom1[];
-extern const u8 MatchCall_Text_MomGameClear[];
 extern const u8 MatchCall_Text_Steven1[];
 extern const u8 MatchCall_Text_Steven2[];
 extern const u8 MatchCall_Text_Steven3[];
@@ -2416,13 +2414,7 @@ extern const u8 MatchCall_Text_Steven5[];
 extern const u8 MatchCall_Text_Steven6[];
 extern const u8 MatchCall_Text_Steven7[];
 
-extern const u8 MatchCall_Text_Wally1[];
-extern const u8 MatchCall_Text_Wally2[];
-extern const u8 MatchCall_Text_Wally3[];
-extern const u8 MatchCall_Text_Wally4[];
-extern const u8 MatchCall_Text_Wally5[];
-extern const u8 MatchCall_Text_Wally6[];
-extern const u8 MatchCall_Text_Wally7[];
+
 extern const u8 MatchCall_Text_Scott1[];
 extern const u8 MatchCall_Text_Scott2[];
 extern const u8 MatchCall_Text_Scott3[];
@@ -2465,13 +2457,26 @@ extern const u8 MatchCall_Text_Drake[];
 extern const u8 MatchCall_Text_Wallace[];
 
 //Updated Match Call Data
-extern const u8 gText_RivalMatchCallDesc[];
-extern const u8 gText_ExpandedPlaceholder_RivalMatchCallName[];
 extern const u8 gText_MomMatchCallDesc[];
 extern const u8 gText_MomMatchCallName[];
+extern const u8 MatchCall_Text_Mom1[];
+extern const u8 MatchCall_Text_MomGameClear[];
+
 extern const u8 gText_ProfOakMatchCallDesc[];
 extern const u8 gText_ProfOakMatchCallName[];
 
+extern const u8 gText_AideMatchCallDesc[];
+extern const u8 gText_AideMatchCallName[];
+extern const u8 gText_MatchCall_Text_AideIntro[];
+extern const u8 MatchCall_Text_AideNoProgress[];
+extern const u8 MatchCall_Text_AideFlashReady[];
+extern const u8 MatchCall_Text_AideEverstoneReady[];
+extern const u8 MatchCall_Text_AideItemfinderReady[];
+extern const u8 MatchCall_Text_AideAmuletCoinReady[];
+extern const u8 MatchCall_Text_AideExpShareReady[];
+extern const u8 MatchCall_Text_AideGameClear[];
+
+extern const u8 gText_RivalMatchCallDesc[];
 extern const u8 gText_MatchCallRival_Strategy[];
 extern const u8 gText_MatchCallRival_Pokemon[];
 extern const u8 gText_MatchCallRival_Intro1[];
@@ -2484,7 +2489,7 @@ extern const u8 gText_MrStoneMatchCallDesc[];
 extern const u8 gText_MrStoneMatchCallName[];
 extern const u8 gText_StevenMatchCallDesc[];
 extern const u8 gText_StevenMatchCallName[];
-extern const u8 gText_WallyMatchCallDesc[];
+
 extern const u8 gText_NormanMatchCallDesc[];
 extern const u8 gText_NormanMatchCallName[];
 extern const u8 gText_ScottMatchCallDesc[];

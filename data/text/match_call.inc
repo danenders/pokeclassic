@@ -58,6 +58,62 @@ MatchCall_Text_RivalGameClear::
 	.string "was a total fluke!\p"
 	.string "I'll beat you next time!$"
 
+MatchCall_Text_AideIntro::
+	.string "Cedar: ……………\n"
+	.string "Hello? Ah, {PLAYER}!\p"
+	.string "This is Cedar! I'm one of the\n"
+	.string "professor's aides!\p"
+	.string "We met in Pallet Town, do you\n"
+	.string "remember?\p"
+	.string "Yes, yes! Good!\p"
+	.string "The professor gave me your\n"
+	.string "number. I hope that's alright.\p"
+	.string "He's asked me to assist you on\n"
+	.string "your journey, so I'll be checking\l"
+	.string "on you again soon. Goodbye!$"
+
+MatchCall_Text_AideNoProgress::
+	.string "Cedar: Ah, hello {PLAYER}!\p"
+	.string "How is your journey coming along?\p"
+	.string "That's good!\p"
+	.string "I'll be watching your progress!$"
+
+MatchCall_Text_AideFlashReady::
+	.string "Cedar: Ah, hello {PLAYER}!\p"
+	.string "I'm at the Pokémon Center on\n"
+	.string "Route 4 right now, come meet me\l"
+	.string "if you have a chance!$"
+
+MatchCall_Text_AideEverstoneReady::
+	.string "Cedar: Ah, hello {PLAYER}!\p"
+	.string "I'm at the Pokémon Center on\n"
+	.string "Route 4 right now, come meet me\l"
+	.string "if you have a chance!$"
+
+MatchCall_Text_AideItemfinderReady::
+	.string "Cedar: Ah, hello {PLAYER}!\p"
+	.string "I'm at the Pokémon Center on\n"
+	.string "Route 4 right now, come meet me\l"
+	.string "if you have a chance!$"
+
+MatchCall_Text_AideAmuletCoinReady::
+	.string "Cedar: Ah, hello {PLAYER}!\p"
+	.string "I'm at the Pokémon Center on\n"
+	.string "Route 4 right now, come meet me\l"
+	.string "if you have a chance!$"
+
+MatchCall_Text_AideExpShareReady::
+	.string "Cedar: Ah, hello {PLAYER}!\p"
+	.string "I'm at the Pokémon Center on\n"
+	.string "Route 4 right now, come meet me\l"
+	.string "if you have a chance!$"
+
+MatchCall_Text_AideGameClear::
+	.string "Cedar: Ah, hello {PLAYER}!\p"
+	.string "I'm at the Pokémon Center on\n"
+	.string "Route 4 right now, come meet me\l"
+	.string "if you have a chance!$"
+
 @UNUSED
 MatchCall_Text_Mom2::
 	.string "Mom: Your father and you…\n"
@@ -2381,60 +2437,6 @@ MatchCall_Text_BrendanRayquazaCall:
 	.string "{PLAYER}.\p"
 	.string "… … … … … …\n"
 	.string "… … … … … Click!$"
-
-MatchCall_Text_Wally1:: @ 2B4DE2
-	.string "Wally: Oh, {PLAYER}!\p"
-	.string "I've been getting healthier and\n"
-	.string "more physically fit.\p"
-	.string "I hope I can become a Trainer like\n"
-	.string "you soon, {PLAYER}!$"
-
-MatchCall_Text_Wally2:: @ 2B4E57
-	.string "Wally: {PLAYER}, hello!\p"
-	.string "After Rusturf Tunnel went\n"
-	.string "through, Wanda's been very happy!$"
-
-MatchCall_Text_Wally3:: @ 2B4EA5
-	.string "Wally: Oh, {PLAYER}!\p"
-	.string "I… I left my uncle's place in\n"
-	.string "Verdanturf without telling anyone.\p"
-	.string "I wonder if he's furious with me…\p"
-	.string "{PLAYER}, you understand how\n"
-	.string "I feel, don't you?$"
-
-MatchCall_Text_Wally4:: @ 2B4F41
-	.string "Wally: {PLAYER}?\n"
-	.string "It's me, Wally!\p"
-	.string "The world of Trainers is amazing!\p"
-	.string "When I have my Pokémon with me,\n"
-	.string "all sorts of people say hi!\p"
-	.string "It's as if everyone's getting\n"
-	.string "connected through Pokémon!$"
-
-MatchCall_Text_Wally5:: @ 2B4FF3
-	.string "Wally: {PLAYER}? It's awesome!\n"
-	.string "That Ralts we caught together?\l"
-	.string "It evolved, {PLAYER}!\p"
-	.string "Maybe I'm talented…\p"
-	.string "Oh, but I shouldn't get a big head\n"
-	.string "like that!\p"
-	.string "After all, it's the Pokémon that\n"
-	.string "should be praised!$"
-
-MatchCall_Text_Wally6::
-	.string "… … … … … …\n"
-	.string "… … … … … …\p"
-	.string "Wally appears to be out of\n"
-	.string "the Pokénav's service area…$"
-
-MatchCall_Text_Wally7:: @ 2B5100
-	.string "Wally: Oh, {PLAYER}!\p"
-	.string "Before I met you, I hardly ever\n"
-	.string "left my house…\p"
-	.string "But now, I'm on an adventure with\n"
-	.string "my very own Pokémon…\p"
-	.string "{PLAYER}…\n"
-	.string "Thank you…$"
 
 MatchCall_Text_Scott1:: @ 2B5184
 	.string "Scott: Howdy, {PLAYER}{KUN}!\p"

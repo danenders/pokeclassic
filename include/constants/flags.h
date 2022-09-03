@@ -61,7 +61,7 @@
 #define FLAG_RECEIVED_OLD_ROD    		0x2D 
 #define FLAG_RECEIVED_GOOD_ROD    		0x2E 
 #define FLAG_RECEIVED_SUPER_ROD    		0x2F 
-#define FLAG_UNUSUED_0x030    			0x30 // Unused Flag
+#define FLAG_RECEIVED_ITEMFINDER   		0x30
 #define FLAG_RECEIVED_COIN_CASE    		0x31 
 #define FLAG_RECEIVED_EXP_SHARE    		0x32 
 #define FLAG_RECEIVED_POKENAV    		0x33
@@ -467,11 +467,11 @@
 #define FLAG_MOVE_TUTOR_TAUGHT_EXPLOSION     0x1B7
 
 //More Unused Flags
-#define FLAG_UNUSED_0x1B8                    0x1B8
-#define FLAG_UNUSED_0x1B9                    0x1B9
-#define FLAG_UNUSED_0x1BA                	 0x1BA
-#define FLAG_UNUSED_0x1BB               	 0x1BB
-#define FLAG_UNUSED_0x1BC                 	 0x1BC
+#define FLAG_AIDE_LOCATION_1                 0x1B8 // Aide moves to Route 2
+#define FLAG_AIDE_LOCATION_2                 0x1B9 // Aide moves to Route 10
+#define FLAG_AIDE_LOCATION_3                 0x1BA // Aide moves to Route 11
+#define FLAG_AIDE_LOCATION_4               	 0x1BB // Aide moves to Route 4
+#define FLAG_AIDE_LOCATION_5                 0x1BC // Aide moves to Route 5
 #define FLAG_UNUSED_0x1BD             	  	 0x1BD
 #define FLAG_UNUSED_0x1BE                 	 0x1BE
 #define FLAG_UNUSED_0x1BF                	 0x1BF
@@ -775,7 +775,7 @@
 #define FLAG_HIDE_OAK_ROUTE1      									0x2DF
 #define FLAG_HIDE_PIKACHU_ROUTE1          							0x2E0
 #define FLAG_HIDE_OAK_IN_LAB             							0x2E1
-#define FLAG_HIDE_BLUE_IN_LAB                              			0x2E2
+#define FLAG_HIDE_RIVAL_IN_LAB                              		0x2E2
 #define FLAG_HIDE_OAK_LAB_POKEBALL                           		0x2E3
 #define FLAG_HIDE_POKEDEX_ON_TABLE                            		0x2E4
 #define FLAG_HIDE_MOM_PALLET_TOWN                               	0x2E5
@@ -1301,11 +1301,11 @@
 #define FLAG_UNUSED_0x4EA                                           0x4EA // Unused Flag
 #define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag
 #define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
-#define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
+#define FLAG_REGISTERED_AIDE                                        0x4ED
 #define FLAG_REGISTERED_DAISY                                       0x4EE
 #define FLAG_REGISTERED_RIVAL                            			0x4EF
 #define FLAG_REGISTERED_PROF_OAK                         			0x4F9
-#define FLAG_HAS_MATCH_CALL                                         0x4FA //Used to enable a Match Call?
+#define FLAG_HAS_MATCH_CALL                                         0x4FA
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F2
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F3

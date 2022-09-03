@@ -66,7 +66,7 @@ enum {
     REMATCH_TRENT,
     REMATCH_SAWYER,
     REMATCH_KIRA_AND_DAN,
-    REMATCH_WALLY_VR,  // Entries above WALLY are considered normal trainers, from Wally below are special trainers
+    REMATCH_RIVAL,  // Entries above this are considered normal trainers, from here below are special trainers
     REMATCH_ROXANNE,
     REMATCH_BRAWLY,
     REMATCH_WATTSON,
@@ -83,7 +83,7 @@ enum {
     REMATCH_TABLE_ENTRIES // The total number of rematch entries. Must be last in enum
 };
 
-#define REMATCH_SPECIAL_TRAINER_START   REMATCH_WALLY_VR
+#define REMATCH_SPECIAL_TRAINER_START   REMATCH_RIVAL
 #define REMATCH_ELITE_FOUR_ENTRIES      REMATCH_SIDNEY
 
 void UpdateGymLeaderRematch(void);
