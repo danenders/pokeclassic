@@ -2415,36 +2415,7 @@ extern const u8 MatchCall_Text_Steven4[];
 extern const u8 MatchCall_Text_Steven5[];
 extern const u8 MatchCall_Text_Steven6[];
 extern const u8 MatchCall_Text_Steven7[];
-extern const u8 MatchCall_Text_May1[];
-extern const u8 MatchCall_Text_May2[];
-extern const u8 MatchCall_Text_May3[];
-extern const u8 MatchCall_Text_May4[];
-extern const u8 MatchCall_Text_May5[];
-extern const u8 MatchCall_Text_May6[];
-extern const u8 MatchCall_Text_May7[];
-extern const u8 MatchCall_Text_May8[];
-extern const u8 MatchCall_Text_May9[];
-extern const u8 MatchCall_Text_May10[];
-extern const u8 MatchCall_Text_May11[];
-extern const u8 MatchCall_Text_May12[];
-extern const u8 MatchCall_Text_May13[];
-extern const u8 MatchCall_Text_May14[];
-extern const u8 MatchCall_Text_May15[];
-extern const u8 MatchCall_Text_Brendan1[];
-extern const u8 MatchCall_Text_Brendan2[];
-extern const u8 MatchCall_Text_Brendan3[];
-extern const u8 MatchCall_Text_Brendan4[];
-extern const u8 MatchCall_Text_Brendan5[];
-extern const u8 MatchCall_Text_Brendan6[];
-extern const u8 MatchCall_Text_Brendan7[];
-extern const u8 MatchCall_Text_Brendan8[];
-extern const u8 MatchCall_Text_Brendan9[];
-extern const u8 MatchCall_Text_Brendan10[];
-extern const u8 MatchCall_Text_Brendan11[];
-extern const u8 MatchCall_Text_Brendan12[];
-extern const u8 MatchCall_Text_Brendan13[];
-extern const u8 MatchCall_Text_Brendan14[];
-extern const u8 MatchCall_Text_Brendan15[];
+
 extern const u8 MatchCall_Text_Wally1[];
 extern const u8 MatchCall_Text_Wally2[];
 extern const u8 MatchCall_Text_Wally3[];
@@ -2492,16 +2463,30 @@ extern const u8 MatchCall_Text_Phoebe[];
 extern const u8 MatchCall_Text_Glacia[];
 extern const u8 MatchCall_Text_Drake[];
 extern const u8 MatchCall_Text_Wallace[];
+
+//Updated Match Call Data
+extern const u8 gText_RivalMatchCallDesc[];
+extern const u8 gText_ExpandedPlaceholder_RivalMatchCallName[];
+extern const u8 gText_MomMatchCallDesc[];
+extern const u8 gText_MomMatchCallName[];
+extern const u8 gText_ProfOakMatchCallDesc[];
+extern const u8 gText_ProfOakMatchCallName[];
+
+extern const u8 gText_MatchCallRival_Strategy[];
+extern const u8 gText_MatchCallRival_Pokemon[];
+extern const u8 gText_MatchCallRival_Intro1[];
+extern const u8 gText_MatchCallRival_Intro2[];
+extern const u8 MatchCall_Text_Rival1[];
+extern const u8 MatchCall_Text_RivalGameClear[];
+
+//Old Match Call Data
 extern const u8 gText_MrStoneMatchCallDesc[];
 extern const u8 gText_MrStoneMatchCallName[];
 extern const u8 gText_StevenMatchCallDesc[];
 extern const u8 gText_StevenMatchCallName[];
-extern const u8 gText_MayBrendanMatchCallDesc[];
 extern const u8 gText_WallyMatchCallDesc[];
 extern const u8 gText_NormanMatchCallDesc[];
 extern const u8 gText_NormanMatchCallName[];
-extern const u8 gText_MomMatchCallDesc[];
-extern const u8 gText_MomMatchCallName[];
 extern const u8 gText_ScottMatchCallDesc[];
 extern const u8 gText_ScottMatchCallName[];
 extern const u8 gText_RoxanneMatchCallDesc[];
@@ -2513,22 +2498,13 @@ extern const u8 gText_TateLizaMatchCallDesc[];
 extern const u8 gText_JuanMatchCallDesc[];
 extern const u8 gText_EliteFourMatchCallDesc[];
 extern const u8 gText_ChampionMatchCallDesc[];
-extern const u8 gText_ProfOakMatchCallDesc[];
-extern const u8 gText_ProfOakMatchCallName[];
 extern const u8 gText_MatchCallSteven_Strategy[];
 extern const u8 gText_MatchCallSteven_Pokemon[];
 extern const u8 gText_MatchCallSteven_Intro1_BeforeMeteorFallsBattle[];
 extern const u8 gText_MatchCallSteven_Intro2_BeforeMeteorFallsBattle[];
 extern const u8 gText_MatchCallSteven_Intro1_AfterMeteorFallsBattle[];
 extern const u8 gText_MatchCallSteven_Intro2_AfterMeteorFallsBattle[];
-extern const u8 gText_MatchCallBrendan_Strategy[];
-extern const u8 gText_MatchCallBrendan_Pokemon[];
-extern const u8 gText_MatchCallBrendan_Intro1[];
-extern const u8 gText_MatchCallBrendan_Intro2[];
-extern const u8 gText_MatchCallMay_Strategy[];
-extern const u8 gText_MatchCallMay_Pokemon[];
-extern const u8 gText_MatchCallMay_Intro1[];
-extern const u8 gText_MatchCallMay_Intro2[];
+
 
 // Contest Link
 extern const u8 gText_ColorDarkGray[];

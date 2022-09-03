@@ -70,7 +70,7 @@
 //Story Flags
 #define FLAG_SET_CLOCK    			0x35
 #define FLAG_MET_OAK_ROUTE_1    	0x36 
-#define FLAG_UNUSED_0x037    		0x37 // Unused Flag
+#define FLAG_GOT_POTION_ON_ROUTE_1  0x37
 #define FLAG_UNUSED_0x038    		0x38 // Unused Flag
 #define FLAG_UNUSED_0x039    		0x39 // Unused Flag
 #define FLAG_UNUSED_0x03A    		0x3A // Unused Flag
@@ -1302,9 +1302,9 @@
 #define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag
 #define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
 #define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
-#define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
-#define FLAG_ADDED_MATCH_CALL_TO_POKENAV                            0x4EF
-#define FLAG_ENABLE_PROF_OAK_MATCH_CALL                             0x4F9
+#define FLAG_REGISTERED_DAISY                                       0x4EE
+#define FLAG_REGISTERED_RIVAL                            			0x4EF
+#define FLAG_REGISTERED_PROF_OAK                         			0x4F9
 #define FLAG_HAS_MATCH_CALL                                         0x4FA //Used to enable a Match Call?
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F2
@@ -1338,7 +1338,7 @@
 #define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x860
 #define FLAG_SYS_POKEDEX_GET                         (SYSTEM_FLAGS + 0x1)
 #define FLAG_SYS_POKENAV_GET                         (SYSTEM_FLAGS + 0x2)
-#define FLAG_UNUSED_0x863                            (SYSTEM_FLAGS + 0x3) // Unused Flag
+#define FLAG_SYS_DEXNAV_GET                          (SYSTEM_FLAGS + 0x3) // dexnav shows in PokeNav
 #define FLAG_SYS_GAME_CLEAR                          (SYSTEM_FLAGS + 0x4)
 #define FLAG_SYS_CHAT_USED                           (SYSTEM_FLAGS + 0x5)
 #define FLAG_SYS_HIPSTER_MEET                        (SYSTEM_FLAGS + 0x6)
@@ -1366,22 +1366,24 @@
 #define FLAG_VISITED_FUCHSIA_CITY                 	(SYSTEM_FLAGS + 0x17)
 #define FLAG_VISITED_CINNABAR_ISLAND                (SYSTEM_FLAGS + 0x18)
 #define FLAG_VISITED_INDIGO_PLATEAU                 (SYSTEM_FLAGS + 0x19)
-#define FLAG_VISITED_UNUSED_1                   		(SYSTEM_FLAGS + 0x1A)
+#define FLAG_VISITED_UNUSED_1                   	(SYSTEM_FLAGS + 0x1A)
 #define FLAG_VISITED_UNUSED_2                  		(SYSTEM_FLAGS + 0x1B)
 #define FLAG_VISITED_UNUSED_3                  		(SYSTEM_FLAGS + 0x1C)
 #define FLAG_VISITED_UNUSED_4                		(SYSTEM_FLAGS + 0x1D)
 #define FLAG_VISITED_UNUSED_5              			(SYSTEM_FLAGS + 0x1E)
 
 #define FLAG_IS_CHAMPION                            (SYSTEM_FLAGS + 0x1F) // Seems to be related to linking.
-#define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20)
 
-#define FLAG_SYS_DEXNAV_SEARCH                      (SYSTEM_FLAGS + 0x21)
-#define FLAG_SHINY_CREATION                         (SYSTEM_FLAGS + 0x22)   // force creation of a shiny mon
-#define FLAG_UNUSED_0x883                           (SYSTEM_FLAGS + 0x23) // Unused Flag
+
+#define FLAG_SYS_DEXNAV_SEARCH                      (SYSTEM_FLAGS + 0x20)
+#define FLAG_SHINY_CREATION                         (SYSTEM_FLAGS + 0x21) // force creation of a shiny mon
+#define FLAG_SYS_DETECTOR_MODE                      (SYSTEM_FLAGS + 0x22) // allow player to find hidden mons
+
+#define FLAG_UNUSED_0x883             				(SYSTEM_FLAGS + 0x23) // Unused Flag
 #define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
 #define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
 #define FLAG_UNUSED_0x886                           (SYSTEM_FLAGS + 0x26) // Unused Flag
-#define FLAG_RECEIVED_SECRET_POWER                  (SYSTEM_FLAGS + 0x27) // Retained for secret_base.c, unused in Pokeclassic
+#define FLAG_UNUSED_0x887                  			(SYSTEM_FLAGS + 0x27) // Unused Flag
 
 #define FLAG_SYS_USE_FLASH                          (SYSTEM_FLAGS + 0x28)
 #define FLAG_SYS_USE_STRENGTH                       (SYSTEM_FLAGS + 0x29)
@@ -1390,8 +1392,8 @@
 #define FLAG_SYS_SAFARI_MODE                        (SYSTEM_FLAGS + 0x2C)
 #define FLAG_SYS_CRUISE_MODE                        (SYSTEM_FLAGS + 0x2D)
 
-#define FLAG_SYS_DETECTOR_MODE                      (SYSTEM_FLAGS + 0x2E) // allow player to find hidden mons
-#define FLAG_SYS_DEXNAV_GET                         (SYSTEM_FLAGS + 0x2F) // dexnav shows in start menu
+#define FLAG_UNUSED_SYSTEM_FLAG_0x2E                (SYSTEM_FLAGS + 0x2E) 
+#define FLAG_UNUSED_SYSTEM_FLAG_0x2F                (SYSTEM_FLAGS + 0x2F) 
 
 #define FLAG_SYS_TV_HOME                            (SYSTEM_FLAGS + 0x30)
 #define FLAG_SYS_TV_WATCH                           (SYSTEM_FLAGS + 0x31)

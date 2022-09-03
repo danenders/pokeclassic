@@ -1731,7 +1731,7 @@ void ReceiveSecretBasesData(void *secretBases, size_t recordSize, u8 linkIdx)
     struct SecretBaseRecordMixer mixers[3];
     u16 i;
 
-    if (FlagGet(FLAG_RECEIVED_SECRET_POWER))
+    if (FlagGet(FLAG_SYS_GAME_CLEAR))
     {
         switch (GetLinkPlayerCount())
         {

@@ -687,7 +687,7 @@ PalletTown_ProfessorOaksLab_EventScript_ProfOak::
 	goto_if_eq VAR_OAK_LAB_STATE, 3, PalletTown_ProfessorOaksLab_EventScript_OakCanReachNextTownWithMon
 	goto_if_le VAR_OAK_LAB_STATE, 5, PalletTown_ProfessorOaksLab_EventScript_OakBattleMonForItToGrow
 	goto_if_eq VAR_OAK_LAB_STATE, 7, PalletTown_ProfessorOaksLab_EventScript_OakMonsAroundWorldWait
-	goto_if_unset FLAG_ENABLE_PROF_OAK_MATCH_CALL, EventScript_RegisterProfOak
+	goto_if_unset FLAG_REGISTERED_PROF_OAK, EventScript_RegisterProfOak
 	goto ProfOak_EventScript_AskRatePokedex
 	end
 
@@ -741,7 +741,7 @@ EventScript_RegisterProfOak::
 	waitfanfare
 	closemessage
 	delay 30
-	setflag FLAG_ENABLE_PROF_OAK_MATCH_CALL
+	setflag FLAG_REGISTERED_PROF_OAK
 	release
 	end
 

@@ -540,5 +540,6 @@ gSpecials::
 	def_special NameRival
 	def_special SwapPlayersCostume
 	def_special GetPlayerCostumeId
+	def_special DaisyMassageServices
 
 

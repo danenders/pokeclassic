@@ -270,9 +270,10 @@
 #define FRIENDSHIP_EVENT_LEAGUE_BATTLE    3
 #define FRIENDSHIP_EVENT_LEARN_TMHM       4
 #define FRIENDSHIP_EVENT_WALKING          5
-#define FRIENDSHIP_EVENT_FAINT_SMALL      6
-#define FRIENDSHIP_EVENT_FAINT_FIELD_PSN  7
-#define FRIENDSHIP_EVENT_FAINT_LARGE      8 // If opponent was >= 30 levels higher. See AdjustFriendshipOnBattleFaint
+#define FRIENDSHIP_EVENT_MASSAGE          6
+#define FRIENDSHIP_EVENT_FAINT_SMALL      7
+#define FRIENDSHIP_EVENT_FAINT_FIELD_PSN  8
+#define FRIENDSHIP_EVENT_FAINT_LARGE      9 // If opponent was >= 30 levels higher. See AdjustFriendshipOnBattleFaint
 
 #define MAX_FRIENDSHIP  255
 #define MAX_SHEEN       255

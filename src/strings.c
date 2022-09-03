@@ -20,7 +20,6 @@ const u8 gText_ExpandedPlaceholder_Brendan[] = _("Brendan");
 const u8 gText_ExpandedPlaceholder_May[] = _("May");
 const u8 gText_EggNickname[] = _("Egg");
 const u8 gText_Pokemon[] = _("Pokémon");
-const u8 gText_ProfOakMatchCallName[] = _("Prof. Oak");
 const u8 gText_MainMenuNewGame[] = _("New Game");
 const u8 gText_MainMenuContinue[] = _("Continue");
 const u8 gText_MainMenuOption[] = _("Option");
@@ -1297,14 +1296,7 @@ const u8 gText_MatchCallSteven_Intro1_BeforeMeteorFallsBattle[] = _("I'd climb e
 const u8 gText_MatchCallSteven_Intro2_BeforeMeteorFallsBattle[] = _("to find a rare stone!");
 const u8 gText_MatchCallSteven_Intro1_AfterMeteorFallsBattle[] = _("I'm the strongest and most");
 const u8 gText_MatchCallSteven_Intro2_AfterMeteorFallsBattle[] = _("energetic after all!");
-const u8 gText_MatchCallBrendan_Strategy[] = _("Battle with knowledge!");
-const u8 gText_MatchCallBrendan_Pokemon[] = _("I will use various Pokémon.");
-const u8 gText_MatchCallBrendan_Intro1[] = _("I'll be a better Pokémon");
-const u8 gText_MatchCallBrendan_Intro2[] = _("prof than my father is!");
-const u8 gText_MatchCallMay_Strategy[] = _("I'm not so good at battles.");
-const u8 gText_MatchCallMay_Pokemon[] = _("I'll use any Pokémon!");
-const u8 gText_MatchCallMay_Intro1[] = _("My Pokémon and I help");
-const u8 gText_MatchCallMay_Intro2[] = _("my father's research.");
+
 const u8 gText_HatchedFromEgg[] = _("{STR_VAR_1} hatched from the Egg!");
 const u8 gText_NicknameHatchPrompt[] = _("Would you like to nickname the newly\nhatched {STR_VAR_1}?");
 ALIGNED(4) const u8 gText_ReadyPickBerry[] = _("Are you ready to Berry-Crush?\nPlease pick a Berry for use.\p");
@@ -1788,11 +1780,22 @@ const u8 gText_ClearingData[] = _("Clearing data…\nPlease wait.");
 const u8 gText_IsThisTheCorrectTime[] = _("Is this the correct time?");
 const u8 gText_Confirm3[] = _("Confirm");
 const u8 gText_Cancel4[] = _("Cancel");
+//Updated Match Call
+const u8 gText_RivalMatchCallDesc[] = _("Rude neighbor");
+const u8 gText_ExpandedPlaceholder_RivalMatchCallName[] = _("{RIVAL}");
+const u8 gText_ProfOakMatchCallDesc[] = _("{PKMN} Prof.");
+const u8 gText_ProfOakMatchCallName[] = _("Prof. Oak");
+
+const u8 gText_MatchCallRival_Strategy[] = _("I'm in the mood for battles.");
+const u8 gText_MatchCallRival_Pokemon[] = _("I'll use any Pokémon to win!");
+const u8 gText_MatchCallRival_Intro1[] = _("If I see a strong trainer,");
+const u8 gText_MatchCallRival_Intro2[] = _("I'm gonna want to fight!");
+
+//Old Match Call
 const u8 gText_MrStoneMatchCallDesc[] = _("Devon Pres");
 const u8 gText_MrStoneMatchCallName[] = _("Mr. Stone");
 const u8 gText_StevenMatchCallDesc[] = _("Hard as rock");
 const u8 gText_StevenMatchCallName[] = _("Steven");
-const u8 gText_MayBrendanMatchCallDesc[] = _("Rad neighbor");
 const u8 gText_NormanMatchCallDesc[] = _("Reliable one");
 const u8 gText_MomMatchCallDesc[] = _("Calm & kind");
 const u8 gText_WallyMatchCallDesc[] = _("{PKMN} lover");
@@ -1809,7 +1812,7 @@ const u8 gText_TateLizaMatchCallDesc[] = _("Mystic duo");
 const u8 gText_JuanMatchCallDesc[] = _("Dandy charm");
 const u8 gText_EliteFourMatchCallDesc[] = _("Elite Four");
 const u8 gText_ChampionMatchCallDesc[] = _("Champion");
-const u8 gText_ProfOakMatchCallDesc[] = _("{PKMN} Prof.");
+
 const u8 gText_CommStandbyAwaitingOtherPlayer[] = _("Communication standby…\nAwaiting another player to choose.");
 const u8 gText_BattleWasRefused[] = _("The battle was refused.{PAUSE 60}");
 const u8 gText_RefusedBattle[] = _("Refused the battle.{PAUSE 60}");

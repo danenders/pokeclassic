@@ -4123,3 +4123,15 @@ u8 GetPlayerCostumeId(void)
     return GetPlayerAvatarGraphicsIdByStateIdAndGender(PLAYER_AVATAR_STATE_NORMAL, gSaveBlock2Ptr->playerGender);
 }
 
+void RunMassageCooldownStepCounter(void)
+{
+    u16 count = VarGet(VAR_MASSAGE_COOLDOWN_STEP_COUNTER);
+    if (count < 500)
+        VarSet(VAR_MASSAGE_COOLDOWN_STEP_COUNTER, count + 1);
+}
+
+void DaisyMassageServices(void)
+{
+    AdjustFriendship(&gPlayerParty[gSpecialVar_0x8004], FRIENDSHIP_EVENT_MASSAGE);
+    VarSet(VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 0);
+}

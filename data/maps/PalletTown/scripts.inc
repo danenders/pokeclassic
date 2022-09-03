@@ -267,8 +267,75 @@ Movement_MomExitPokenav5:
 	walk_down
 	step_end
 
+PalletTown_EventScript_TownSign::
+	msgbox PalletTown_Text_TownSign, MSGBOX_SIGN
+	end
 
+PalletTown_Text_TownSign::
+    .string "Pallet Town\n"
+    .string "Shades of your journey await!$"
 
+PalletTown_EventScript_TrainerTips::
+	lockall
+	msgbox PalletTown_Text_PressStartToOpenMenu, MSGBOX_DEFAULT
+	releaseall
+	end
 
+PalletTown_Text_PressStartToOpenMenu::
+	.string "Trainer Tips:\p"
+	.string "Press Start to open the Menu!$"
 
+PalletTown_EventScript_OaksLabSign::
+	lockall
+	msgbox PalletTown_Text_OakPokemonResearchLab, MSGBOX_SIGN
+	releaseall
+	end
 
+PalletTown_Text_OakPokemonResearchLab::
+    .string "Oak Pokémon Research Lab$"
+
+PalletTown_EventScript_Lady::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SYS_POKEMON_GET, PalletTown_EventScript_SignLady
+	msgbox PalletTown_Text_RaisingMonsToo, MSGBOX_DEFAULT
+	release
+	end
+
+PalletTown_Text_RaisingMonsToo::
+    .string "I'm raising Pokémon, too.\p"
+    .string "When they get strong, they can\n"
+    .string "protect me.$"
+
+PalletTown_EventScript_SignLady::
+	msgbox PalletTown_Text_SignsAreUsefulArentThey, MSGBOX_DEFAULT
+	release
+	end
+
+PalletTown_Text_SignsAreUsefulArentThey::
+	.string "Signs are useful, aren't they?$"
+	.string "You can learn quite a lot from\n"
+	.string "those Trainer Tips signs!$"
+
+PalletTown_EventScript_FatMan::
+	msgbox PalletTown_Text_CanStoreItemsAndMonsInPC, MSGBOX_NPC
+	end
+
+PalletTown_Text_CanStoreItemsAndMonsInPC::
+    .string "Technology is incredible!\p"
+    .string "You can now store and recall items\n"
+    .string "and Pokémon as data via PC.$"
+
+PalletTown_EventScript_PlayersHouseSign::
+	msgbox PalletTown_Text_PlayersHouse, MSGBOX_SIGN
+	end
+
+PalletTown_Text_PlayersHouse::
+    .string "{PLAYER}'s house$"
+
+PalletTown_EventScript_RivalsHouseSign::
+	msgbox PalletTown_Text_RivalsHouse, MSGBOX_SIGN
+	end
+
+PalletTown_Text_RivalsHouse::
+    .string "{RIVAL}'s house$"

@@ -194,7 +194,10 @@ ViridianCity_Text_ViridiansGymLeaderReturned::
     .string "Virdian Gym's leader returned!$"
 
 ViridianCity_EventScript_Boy::
+	lock
+	faceplayer
 	msgbox ViridianCity_Text_CanCarryMonsAnywhere, MSGBOX_DEFAULT
+	release
 	end
 
 ViridianCity_Text_CanCarryMonsAnywhere::
@@ -227,7 +230,7 @@ ViridianCity_Text_UsedToGetGrumpy:
 	.string "I used to get very grumpy when\n"
 	.string "I didn't my coffee.\p"
 	.string "I'd block the road and everything!\p"
-	.string "It was a whole thing...\n"
+	.string "It was a whole thing...\p"
 	.string "So my granddaughter made me give up\n"
 	.string "the stuff.\p"
 	.string "Now I get refreshed by talking walks!$"
@@ -247,7 +250,9 @@ ViridianCity_Text_WantToKnowAboutCaterpillarMons::
     .string "kinds of caterpillar Pokémon?$"
 
 ViridianCity_EventScript_YoungsterExplainCaterpillars::
-	msgbox ViridianCity_Text_ExplainCaterpieWeedle
+	lock
+	faceplayer
+	msgbox ViridianCity_Text_ExplainCaterpieWeedle, MSGBOX_DEFAULT
 	release
 	end
 
@@ -258,7 +263,7 @@ ViridianCity_Text_ExplainCaterpieWeedle::
     .string "stabbed by Weedle's Poison Sting.$"
 
 ViridianCity_EventScript_YoungsterDeclineExplanation::
-	msgbox ViridianCity_Text_OhOkayThen
+	msgbox ViridianCity_Text_OhOkayThen, MSGBOX_DEFAULT
 	release
 	end
 
