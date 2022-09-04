@@ -350,9 +350,29 @@ u8 GetSSTidalLocation(s8 *mapGroup, s8 *mapNum, s16 *x, s16 *y)
     return SS_TIDAL_LOCATION_CURRENTS;
 }
 
-bool32 ShouldDoWallyCall(void)
+bool32 ShouldDoAideCall(void)
 {
-    return FALSE; //Removed in Pokeclassic
+    if (FlagGet(FLAG_QUEUE_AIDE_CALL))
+    {
+        switch (gMapHeader.mapType)
+        {
+        case MAP_TYPE_TOWN:
+        case MAP_TYPE_CITY:
+        case MAP_TYPE_ROUTE:
+        case MAP_TYPE_OCEAN_ROUTE:
+            if (++(*GetVarPointer(VAR_AIDE_CALL_STEP_COUNTER)) < 200)
+                return FALSE;
+            break;
+        default:
+            return FALSE;
+        }
+    }
+    else
+    {
+        return FALSE;
+    }
+
+    return TRUE;
 }
 
 bool32 ShouldDoScottFortreeCall(void)
@@ -4134,4 +4154,11 @@ void DaisyMassageServices(void)
 {
     AdjustFriendship(&gPlayerParty[gSpecialVar_0x8004], FRIENDSHIP_EVENT_MASSAGE);
     VarSet(VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 0);
+}
+
+void RunAideCallStepCounter(void)
+{
+    u16 count = VarGet(VAR_AIDE_CALL_STEP_COUNTER);
+    if (count < 200)
+        VarSet(VAR_AIDE_CALL_STEP_COUNTER, count + 1);
 }

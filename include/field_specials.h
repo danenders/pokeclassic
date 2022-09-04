@@ -12,7 +12,6 @@ void UpdateTrainerFansAfterLinkBattle(void);
 void IncrementBirthIslandRockStepCount(void);
 bool8 AbnormalWeatherHasExpired(void);
 bool8 ShouldDoBrailleRegicePuzzle(void);
-bool32 ShouldDoWallyCall(void);
 bool32 ShouldDoScottFortreeCall(void);
 bool32 ShouldDoScottBattleFrontierCall(void);
 bool32 ShouldDoRoxanneCall(void);
@@ -33,5 +32,7 @@ bool8 ShouldShowBoxWasFullMessage(void);
 void SetPCBoxToSendMon(u8 boxId);
 u8 GetPlayerCostumeId(void);
 void RunMassageCooldownStepCounter(void);
+void RunAideCallStepCounter(void);
+bool32 ShouldDoAideCall(void);
 
 #endif // GUARD_FIELD_SPECIALS_H

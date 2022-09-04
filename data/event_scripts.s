@@ -906,6 +906,10 @@ EventScript_RWithoutRegisteredItem::
 Common_EventScript_Return::
 	return
 
+Common_EventScript_End::
+	releaseall
+	end
+
 @ Unused
 EventScript_CableClub_SetVarResult1::
 	setvar VAR_RESULT, 1

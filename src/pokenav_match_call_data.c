@@ -216,12 +216,12 @@ static const struct MatchCallRival sRivalMatchCallHeader =
 
 //AIDE
 static const match_call_text_data_t sAideTextScripts[] = {
-    { MatchCall_Text_AideNoProgress,      0xFFFF,      FLAG_REGISTERED_AIDE },
-    { MatchCall_Text_AideFlashReady,      FLAG_AIDE_LOCATION_1,      0xFFFF },
-    { MatchCall_Text_AideEverstoneReady,  FLAG_AIDE_LOCATION_2,      0xFFFF },
-    { MatchCall_Text_AideItemfinderReady, FLAG_AIDE_LOCATION_3,      0xFFFF },
-    { MatchCall_Text_AideAmuletCoinReady, FLAG_AIDE_LOCATION_4,      0xFFFF },
-    { MatchCall_Text_AideExpShareReady,   FLAG_AIDE_LOCATION_5,      0xFFFF },
+    { MatchCall_Text_AideWatchingProgress,      0xFFFF,      FLAG_REGISTERED_AIDE },
+    { MatchCall_Text_AideOnMyWayRoute2,   FLAG_AIDE_LOCATION_1,      0xFFFF },
+    { MatchCall_Text_AideOnMyWayRoute10,  FLAG_AIDE_LOCATION_2,      0xFFFF },
+    { MatchCall_Text_AideOnMyWayRoute11,  FLAG_AIDE_LOCATION_3,      0xFFFF },
+    { MatchCall_Text_AideOnMyWayRoute16,  FLAG_AIDE_LOCATION_4,      0xFFFF },
+    { MatchCall_Text_AideOnMyWayRoute15,  FLAG_AIDE_LOCATION_5,      0xFFFF },
     { MatchCall_Text_AideGameClear,       FLAG_SYS_GAME_CLEAR,       0xFFFF },
     { NULL,                               0xFFFF,                    0xFFFF }
 };

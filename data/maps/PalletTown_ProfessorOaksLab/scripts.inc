@@ -482,7 +482,7 @@ Movement_RivalLeavesWithPokedex:
 
 PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe::
     .string "Oak: Oh, {PLAYER}!\n"
-    .string "How is my old Pokémon?\p"
+    .string "How is your new Pokémon?\p"
     .string "Well, it seems to be growing more\n"
     .string "attached to you.\p"
     .string "You must be talented as a Pokémon\n"
@@ -654,23 +654,34 @@ PalletTown_ProfessorOaksLab_EventScript_Aide1::
 	release
 	end
 
-PalletTown_ProfessorOaksLab_EventScript_Aide2::
-	lock
-	faceplayer
-	msgbox PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide
-	release
-	end
-
-PalletTown_ProfessorOaksLab_EventScript_Aide3::
-	lock
-	faceplayer
-	msgbox PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide
-	release
-	end
-
 PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide::
     .string "I study Pokémon as Prof. Oak's\n"
     .string "Aide.$"
+
+PalletTown_ProfessorOaksLab_EventScript_Aide2::
+	lock
+	faceplayer
+	msgbox PalletTown_ProfessorOaksLab_Text_CedarRunsErrands
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_CedarRunsErrands::
+    .string "Cedar is the newest aide in the lab,\n"
+    .string "so she is always out running errands.$"
+
+PalletTown_ProfessorOaksLab_EventScript_Cedar::
+	lock
+	faceplayer
+	msgbox PalletTown_ProfessorOaksLab_Text_JustJoined
+	setflag FLAG_MET_CEDAR
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_JustJoined::
+    .string "Cedar: Hello. Nice to meet you!\n"
+    .string "I recently joined Professor Oak's\l"
+    .string "team.\p"
+    .string "I'm excited to work with everyone.\p"
 
 PalletTown_ProfessorOaksLab_EventScript_Pokedex::
 	msgbox PalletTown_ProfessorOaksLab_Text_BlankEncyclopedia, MSGBOX_NPC

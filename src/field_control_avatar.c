@@ -195,6 +195,8 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     {
         IncrementGameStat(GAME_STAT_STEPS);
         RunMassageCooldownStepCounter();
+        if (FlagGet(FLAG_QUEUE_AIDE_CALL) == TRUE)
+            RunAideCallStepCounter();
         IncrementBirthIslandRockStepCount();
         if (TryStartStepBasedScript(&position, metatileBehavior, playerDirection) == TRUE)
             return TRUE;
@@ -623,11 +625,20 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
             ScriptContext1_SetupScript(AbnormalWeather_EventScript_EndEventAndCleanup_1);
             return TRUE;
         }
-        /*if (ShouldDoWallyCall() == TRUE)
+        if (ShouldDoAideCall() == TRUE)
         {
-            ScriptContext1_SetupScript(MauvilleCity_EventScript_RegisterWallyCall);
+            if (FlagGet(FLAG_AIDE_LOCATION_1) == TRUE)
+                ScriptContext1_SetupScript(MatchCall_EventScript_AideFlashReady);
+            if (FlagGet(FLAG_AIDE_LOCATION_2) == TRUE)
+                ScriptContext1_SetupScript(MatchCall_EventScript_AideEverstoneReady);
+            if (FlagGet(FLAG_AIDE_LOCATION_3) == TRUE)
+                ScriptContext1_SetupScript(MatchCall_EventScript_AideItemfinderReady);
+            if (FlagGet(FLAG_AIDE_LOCATION_4) == TRUE)
+                ScriptContext1_SetupScript(MatchCall_EventScript_AideAmuletCoinReady);
+            if (FlagGet(FLAG_AIDE_LOCATION_5) == TRUE)
+                ScriptContext1_SetupScript(MatchCall_EventScript_AideExpShareReady);
             return TRUE;
-        }*/
+        }
     }
 
     if (SafariZoneTakeStep() == TRUE)

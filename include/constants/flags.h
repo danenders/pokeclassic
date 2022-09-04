@@ -1,4 +1,4 @@
-#ifndef GUARD_CONSTANTS_FLAGS_H
+ #ifndef GUARD_CONSTANTS_FLAGS_H
 #define GUARD_CONSTANTS_FLAGS_H
 
 #include "constants/opponents.h"
@@ -71,7 +71,7 @@
 #define FLAG_SET_CLOCK    			0x35
 #define FLAG_MET_OAK_ROUTE_1    	0x36 
 #define FLAG_GOT_POTION_ON_ROUTE_1  0x37
-#define FLAG_UNUSED_0x038    		0x38 // Unused Flag
+#define FLAG_MET_CEDAR    		    0x38 // Used for Optional Dialogue
 #define FLAG_UNUSED_0x039    		0x39 // Unused Flag
 #define FLAG_UNUSED_0x03A    		0x3A // Unused Flag
 #define FLAG_UNUSED_0x03B    		0x3B // Unused Flag
@@ -472,9 +472,9 @@
 #define FLAG_AIDE_LOCATION_3                 0x1BA // Aide moves to Route 11
 #define FLAG_AIDE_LOCATION_4               	 0x1BB // Aide moves to Route 4
 #define FLAG_AIDE_LOCATION_5                 0x1BC // Aide moves to Route 5
-#define FLAG_UNUSED_0x1BD             	  	 0x1BD
-#define FLAG_UNUSED_0x1BE                 	 0x1BE
-#define FLAG_UNUSED_0x1BF                	 0x1BF
+#define FLAG_QUEUE_AIDE_CALL           		 0x1BD // Aide is prepped to call player about a new item
+#define FLAG_IN_GAME_TRADE_MR_MIME           0x1BE
+#define FLAG_UNUSED_0x1BF           		 0x1BF
 #define FLAG_UNUSED_0x1C0               	 0x1C0
 #define FLAG_UNUSED_0x1C1 					 0x1C1
 #define FLAG_UNUSED_0x1C2 					 0x1C2
@@ -780,36 +780,36 @@
 #define FLAG_HIDE_POKEDEX_ON_TABLE                            		0x2E4
 #define FLAG_HIDE_MOM_PALLET_TOWN                               	0x2E5
 #define FLAG_HIDE_OFFICER_JENNY_VIRIDIAN_CITY                       0x2E6
-#define FLAG_HIDE_UNUSED_17                       					0x2E7
-#define FLAG_HIDE_UNUSED_18                          					0x2E8
-#define FLAG_HIDE_UNUSED_19            								0x2E9
-#define FLAG_HIDE_UNUSED_20                    						0x2EA
-#define FLAG_HIDE_UNUSED_21                  							0x2EB
-#define FLAG_HIDE_UNUSED_22                							0x2EC
-#define FLAG_HIDE_UNUSED_23                              				0x2ED
+#define FLAG_HIDE_AIDE_OAK_LAB                       				0x2E7
+#define FLAG_HIDE_AIDE_ROUTE2                          				0x2E8
+#define FLAG_HIDE_AIDE_ROUTE10            							0x2E9
+#define FLAG_HIDE_AIDE_ROUTE11                    					0x2EA
+#define FLAG_HIDE_AIDE_ROUTE16                  					0x2EB
+#define FLAG_HIDE_AIDE_ROUTE15               						0x2EC
+#define FLAG_HIDE_UNUSED_23                            				0x2ED
 #define FLAG_HIDE_UNUSED_24                               			0x2EE
-#define FLAG_HIDE_UNUSED_25                          					0x2EF
+#define FLAG_HIDE_UNUSED_25                        					0x2EF
 #define FLAG_HIDE_UNUSED_26                       					0x2F0
-#define FLAG_HIDE_UNUSED_27              								0x2F1
-#define FLAG_HIDE_UNUSED_28          									0x2F2
-#define FLAG_HIDE_UNUSED_29          									0x2F3
-#define FLAG_HIDE_UNUSED_30          									0x2F4
+#define FLAG_HIDE_UNUSED_27            								0x2F1
+#define FLAG_HIDE_UNUSED_28         								0x2F2
+#define FLAG_HIDE_UNUSED_29        									0x2F3
+#define FLAG_HIDE_UNUSED_30        									0x2F4
 #define FLAG_HIDE_UNUSED_31               							0x2F5
 #define FLAG_HIDE_UNUSED_32                							0x2F6
 #define FLAG_HIDE_UNUSED_33                    						0x2F7
-#define FLAG_HIDE_UNUSED_34      										0x2F8
-#define FLAG_HIDE_UNUSED_35             								0x2F9
-#define FLAG_HIDE_UNUSED_36                 							0x2FA
-#define FLAG_HIDE_UNUSED_37                                           0x2FB
-#define FLAG_HIDE_UNUSED_38                      						0x2FC
+#define FLAG_HIDE_UNUSED_34    										0x2F8
+#define FLAG_HIDE_UNUSED_35             							0x2F9
+#define FLAG_HIDE_UNUSED_36                 						0x2FA
+#define FLAG_HIDE_UNUSED_37                                         0x2FB
+#define FLAG_HIDE_UNUSED_38                      					0x2FC
 #define FLAG_HIDE_UNUSED_39                               			0x2FD
-#define FLAG_HIDE_UNUSED_40                             				0x2FE
-#define FLAG_HIDE_UNUSED_41                  							0x2FF
+#define FLAG_HIDE_UNUSED_40                            				0x2FE
+#define FLAG_HIDE_UNUSED_41                  						0x2FF
 #define FLAG_HIDE_UNUSED_42                        					0x300
-#define FLAG_HIDE_UNUSED_43                      						0x301
-#define FLAG_HIDE_UNUSED_44                          					0x302
-#define FLAG_HIDE_UNUSED_45                         					0x303
-#define FLAG_HIDE_UNUSED_46                              				0x304
+#define FLAG_HIDE_UNUSED_43                    						0x301
+#define FLAG_HIDE_UNUSED_44                        					0x302
+#define FLAG_HIDE_UNUSED_45                        					0x303
+#define FLAG_HIDE_UNUSED_46                            				0x304
 #define FLAG_HIDE_UNUSED_47                           				0x305
 #define FLAG_HIDE_UNUSED_48         									0x306
 #define FLAG_HIDE_UNUSED_49                           				0x307
@@ -1040,8 +1040,8 @@
 
 // Item Ball Flags
 #define FLAG_VIRIDIAN_CITY_POTION                                  	0x3E8
-#define FLAG_UNUSED_ITEM_0x3E9                               		0x3E9
-#define FLAG_UNUSED_ITEM_0x3EA                                   	0x3EA
+#define FLAG_ROUTE2_ETHER                               			0x3E9
+#define FLAG_ROUTE2_PARALYZE_HEAL                                   0x3EA
 #define FLAG_UNUSED_ITEM_0x3EB                                    	0x3EB
 #define FLAG_UNUSED_ITEM_0x3EC                                 		0x3EC
 #define FLAG_UNUSED_ITEM_0x3ED                                   	0x3ED

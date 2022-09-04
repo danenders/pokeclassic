@@ -645,5 +645,11 @@ extern const u8 EventScript_LostSignal[];
 extern const u8 EventScript_TooDark[];
 extern const u8 EventScript_MovedTooFast[];
 
+//Aide AutoCalls
+extern const u8 MatchCall_EventScript_AideFlashReady[]; //Autocall after getting Badge 2
+extern const u8 MatchCall_EventScript_AideEverstoneReady[]; //Autocall after getting Badge 3
+extern const u8 MatchCall_EventScript_AideItemfinderReady[]; //Autocall after getting Badge 4
+extern const u8 MatchCall_EventScript_AideAmuletCoinReady[]; //Autocall after getting Badge 5
+extern const u8 MatchCall_EventScript_AideExpShareReady[]; //Autocall after getting Badge 6
 
 #endif // GUARD_EVENT_SCRIPTS_H

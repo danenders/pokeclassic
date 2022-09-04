@@ -2467,13 +2467,12 @@ extern const u8 gText_ProfOakMatchCallName[];
 
 extern const u8 gText_AideMatchCallDesc[];
 extern const u8 gText_AideMatchCallName[];
-extern const u8 gText_MatchCall_Text_AideIntro[];
-extern const u8 MatchCall_Text_AideNoProgress[];
-extern const u8 MatchCall_Text_AideFlashReady[];
-extern const u8 MatchCall_Text_AideEverstoneReady[];
-extern const u8 MatchCall_Text_AideItemfinderReady[];
-extern const u8 MatchCall_Text_AideAmuletCoinReady[];
-extern const u8 MatchCall_Text_AideExpShareReady[];
+extern const u8 MatchCall_Text_AideWatchingProgress[]; //If no aide location is set
+extern const u8 MatchCall_Text_AideOnMyWayRoute2[];  //Called while AIDE_LOCATION_1 is set
+extern const u8 MatchCall_Text_AideOnMyWayRoute10[]; //Called while AIDE_LOCATION_2 is set
+extern const u8 MatchCall_Text_AideOnMyWayRoute11[]; //Called while AIDE_LOCATION_3 is set
+extern const u8 MatchCall_Text_AideOnMyWayRoute16[]; //Called while AIDE_LOCATION_4 is set
+extern const u8 MatchCall_Text_AideOnMyWayRoute15[]; //Called while AIDE_LOCATION_5 is set
 extern const u8 MatchCall_Text_AideGameClear[];
 
 extern const u8 gText_RivalMatchCallDesc[];

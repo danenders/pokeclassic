@@ -1,14 +1,11 @@
 @UPDATED
 MatchCall_Text_OakRegisterCall: @ 82B5F52
 	.string "Oak: Oh, {PLAYER}{KUN}!\n"
-	.string "I've already heard about you!\p"
-	.string "It seems your Pokénav's been\n"
-	.string "upgraded with Match Call.\p"
-	.string "Well, I should register, too!\p"
+	.string "I see you have a Cell Phone!\p"
+	.string "Well, I should give you my number.\p"
 	.string "That way, I'd be able to examine\n"
 	.string "your Pokédex even while you're\l"
-	.string "out in the field.\p"
-	.string "… … … … … …$"
+	.string "out in the field.$"
 
 MatchCall_Text_RegisteredOak: @ 82B603A
 	.string "Registered Professor Oak\n"
@@ -72,47 +69,177 @@ MatchCall_Text_AideIntro::
 	.string "your journey, so I'll be checking\l"
 	.string "on you again soon. Goodbye!$"
 
-MatchCall_Text_AideNoProgress::
+MatchCall_Text_AideIntro2::
+	.string "Cedar: ……………\n"
+	.string "Hello? Ah, {PLAYER}!\p"
+	.string "This is Cedar! I'm one of the\n"
+	.string "professor's aides!\p"
+	.string "I've seen you at Oak's Lab, but\n"
+	.string "we never had a chance to speak.\p"
+	.string "The professor gave me your\n"
+	.string "number. I hope that's alright.\p"
+	.string "He's asked me to assist you on\n"
+	.string "your journey, so I'll be checking\l"
+	.string "on you again soon. Goodbye!$"
+
+MatchCall_Text_RegisteredOaksAide:
+	.string "Registered Oak's Aide\n"
+	.string "in your Cell Phone.$"
+
+MatchCall_Text_AideWatchingProgress::
 	.string "Cedar: Ah, hello {PLAYER}!\p"
 	.string "How is your journey coming along?\p"
 	.string "That's good!\p"
 	.string "I'll be watching your progress!$"
 
+
+MatchCall_EventScript_AideFlashReady::
+	lockall
+	pokenavcall MatchCall_Text_AideFlashReady
+	waitmessage
+	delay 30
+	closemessage
+	clearflag FLAG_HIDE_AIDE_ROUTE2
+	clearflag FLAG_QUEUE_AIDE_CALL
+	releaseall
+	end
+
 MatchCall_Text_AideFlashReady::
 	.string "Cedar: Ah, hello {PLAYER}!\p"
-	.string "I'm at the Pokémon Center on\n"
-	.string "Route 4 right now, come meet me\l"
-	.string "if you have a chance!$"
+	.string "Congratulations on earning\n"
+	.string "another Gym Badge!\p"
+	.string "Professor Oak would like to\n"
+	.string "give you a reward.\p"
+	.string "If you meet me on Route 2, \n"
+	.string "I will deliver it to you!$"
+
+MatchCall_Text_AideOnMyWayRoute2::
+	.string "Cedar: Hello, {PLAYER}!\p"
+	.string "I'm headed towards Route 2\n"
+	.string "as we speak!\p"
+	.string "I think I took a wrong turn\n"
+	.string "somewhere, though.\p"
+	.string "I ended up in the East Building.\p"
+	.string "It may be a little harder for you\n"
+	.string "to get to me, so I'll be waiting!$"
+
+MatchCall_EventScript_AideEverstoneReady::
+	lockall
+	pokenavcall MatchCall_Text_AideEverstoneReady
+	waitmessage
+	delay 30
+	closemessage
+	clearflag FLAG_HIDE_AIDE_ROUTE10
+	clearflag FLAG_QUEUE_AIDE_CALL
+	releaseall
+	end
 
 MatchCall_Text_AideEverstoneReady::
 	.string "Cedar: Ah, hello {PLAYER}!\p"
-	.string "I'm at the Pokémon Center on\n"
-	.string "Route 4 right now, come meet me\l"
-	.string "if you have a chance!$"
+	.string "Congratulations on earning\n"
+	.string "another Gym Badge!\p"
+	.string "Professor Oak would like to\n"
+	.string "give you a reward.\p"
+	.string "If you meet me on Route 10, \n"
+	.string "I will deliver it to you!$"
+
+MatchCall_Text_AideOnMyWayRoute10::
+	.string "Cedar: Hello, {PLAYER}!\p"
+	.string "I'm headed towards Route 10\n"
+	.string "as we speak!\p"
+	.string "I ended up battling a few Trainers,\n"
+	.string "so my Pokémon needs a rest.\p"
+	.string "Meet me at the Pokémon Center!$"
+
+MatchCall_EventScript_AideItemfinderReady::
+	lockall
+	pokenavcall MatchCall_Text_AideItemfinderReady
+	waitmessage
+	delay 30
+	closemessage
+	clearflag FLAG_HIDE_AIDE_ROUTE11
+	clearflag FLAG_QUEUE_AIDE_CALL
+	releaseall
+	end
 
 MatchCall_Text_AideItemfinderReady::
 	.string "Cedar: Ah, hello {PLAYER}!\p"
-	.string "I'm at the Pokémon Center on\n"
-	.string "Route 4 right now, come meet me\l"
-	.string "if you have a chance!$"
+	.string "Congratulations on earning\n"
+	.string "another Gym Badge!\p"
+	.string "Professor Oak would like to\n"
+	.string "give you a reward.\p"
+	.string "If you meet me on Route 11,\n"
+	.string "I will deliver it to you!$"
+
+MatchCall_Text_AideOnMyWayRoute11::
+	.string "Cedar: Hello, {PLAYER}!\p"
+	.string "I'm headed towards Route 11\n"
+	.string "as we speak!\p"
+	.string "I wanted to get a good look at\n"
+	.string "the ocean, so I'll try to find\l"
+	.string "a spot to get a good look.$"
+
+MatchCall_EventScript_AideAmuletCoinReady::
+	lockall
+	pokenavcall MatchCall_Text_AideAmuletCoinReady
+	waitmessage
+	delay 30
+	closemessage
+	clearflag FLAG_HIDE_AIDE_ROUTE16
+	clearflag FLAG_QUEUE_AIDE_CALL
+	releaseall
+	end
 
 MatchCall_Text_AideAmuletCoinReady::
 	.string "Cedar: Ah, hello {PLAYER}!\p"
-	.string "I'm at the Pokémon Center on\n"
-	.string "Route 4 right now, come meet me\l"
-	.string "if you have a chance!$"
+	.string "Congratulations on earning\n"
+	.string "another Gym Badge!\p"
+	.string "Professor Oak would like to\n"
+	.string "give you a reward.\p"
+	.string "If you meet me on Route 16,\n"
+	.string "I will deliver it to you!$"
+
+MatchCall_Text_AideOnMyWayRoute16::
+	.string "Cedar: Hello, {PLAYER}!\p"
+	.string "I'm headed towards Route 16\n"
+	.string "as we speak!\p"
+	.string "There were some scary guys on\n"
+	.string "the Cycling Road, so I'm going\l"
+	.string "to stay in the Gate House!$"
+
+MatchCall_EventScript_AideExpShareReady::
+	lockall
+	pokenavcall MatchCall_Text_AideExpShareReady
+	waitmessage
+	delay 30
+	closemessage
+	clearflag FLAG_HIDE_AIDE_ROUTE15
+	clearflag FLAG_QUEUE_AIDE_CALL
+	releaseall
+	end
 
 MatchCall_Text_AideExpShareReady::
 	.string "Cedar: Ah, hello {PLAYER}!\p"
-	.string "I'm at the Pokémon Center on\n"
-	.string "Route 4 right now, come meet me\l"
-	.string "if you have a chance!$"
+	.string "Congratulations on earning\n"
+	.string "another Gym Badge!\p"
+	.string "Professor Oak would like to\n"
+	.string "give you a reward.\p"
+	.string "If you meet me on Route 15,\n"
+	.string "I will deliver it to you!$"
+
+MatchCall_Text_AideOnMyWayRoute15::
+	.string "Cedar: Hello, {PLAYER}!\p"
+	.string "I'm headed towards Route 15\n"
+	.string "as we speak!\p"
+	.string "Have you visited the Safari Zone?\p"
+	.string "I tried to catch a super rare\n"
+	.string "Pokémon, but it ran away!$"
 
 MatchCall_Text_AideGameClear::
 	.string "Cedar: Ah, hello {PLAYER}!\p"
-	.string "I'm at the Pokémon Center on\n"
-	.string "Route 4 right now, come meet me\l"
-	.string "if you have a chance!$"
+	.string "Congratulations on becoming\n"
+	.string "the champion!\p"
+	.string "I hope my rewards were helpful!$"
 
 @UNUSED
 MatchCall_Text_Mom2::

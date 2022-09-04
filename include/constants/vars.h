@@ -145,7 +145,7 @@
 #define VAR_RIVAL_WINRATE               	0x407E 
 #define VAR_VIRIDIAN_CITY_GYM               0x407F 
 #define VAR_MASSAGE_COOLDOWN_STEP_COUNTER   0x4080 
-#define UNUSED_VARIABLE_6      				0x4081 
+#define VAR_AIDE_CALL_STEP_COUNTER      	0x4081 
 #define UNUSED_VARIABLE_7     				0x4082
 #define UNUSED_VARIABLE_8                   0x4083
 #define UNUSED_VARIABLE_9      				0x4084

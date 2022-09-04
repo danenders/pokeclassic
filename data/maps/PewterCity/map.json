@@ -79,7 +79,42 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 37,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "PewterCity_Trigger_RegisterOakAide"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 37,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "PewterCity_Trigger_RegisterOakAide"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 37,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "PewterCity_Trigger_RegisterOakAide"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 37,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "PewterCity_Trigger_RegisterOakAide"
+    }
   ],
   "bg_events": [
 
