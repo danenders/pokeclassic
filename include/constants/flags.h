@@ -1379,7 +1379,7 @@
 #define FLAG_SHINY_CREATION                         (SYSTEM_FLAGS + 0x21) // force creation of a shiny mon
 #define FLAG_SYS_DETECTOR_MODE                      (SYSTEM_FLAGS + 0x22) // allow player to find hidden mons
 
-#define FLAG_UNUSED_0x883             				(SYSTEM_FLAGS + 0x23) // Unused Flag
+#define FLAG_HIDE_FOLLOWER             				(SYSTEM_FLAGS + 0x23) // Unused Flag
 #define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
 #define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
 #define FLAG_UNUSED_0x886                           (SYSTEM_FLAGS + 0x26) // Unused Flag

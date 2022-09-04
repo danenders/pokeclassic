@@ -828,15 +828,6 @@ gText_ComeBackWithSecretPower::
 	.string "We'll accept you as a member and sell\n"
 	.string "you good stuff in secrecy.$"
 
-gText_PokerusExplanation::
-	.string "Your Pokémon may be infected with\n"
-	.string "Pokérus.\p"
-	.string "Little is known about the Pokérus\n"
-	.string "except that they are microscopic life-\l"
-	.string "forms that attach to Pokémon.\p"
-	.string "While infected, Pokémon are said to\n"
-	.string "grow exceptionally well.$"
-
 	.include "data/text/surf.inc"
 
 gText_DoorOpenedFarAway::
@@ -908,6 +899,16 @@ Common_EventScript_Return::
 
 Common_EventScript_End::
 	releaseall
+	end
+
+Follower_Hide::
+	setvar VAR_FOLLOWER_VISIBILITY, 1
+	setflag FLAG_HIDE_FOLLOWER
+	end
+
+Follower_Show::
+	setvar VAR_FOLLOWER_VISIBILITY, 0
+	clearflag FLAG_HIDE_FOLLOWER
 	end
 
 @ Unused

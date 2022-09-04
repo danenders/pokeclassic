@@ -11,8 +11,8 @@ ViridianCity_PokemonCenter_1F_OnTransition::
 ViridianCity_PokemonCenter_1F_EventScript_Nurse::
 	lock
 	faceplayer
-	call Common_EventScript_PkmnCenterNurse
-	release
+	setvar VAR_0x800B, LOCALID_NURSE
+	goto Common_EventScript_PkmnCenterNurse
 	end
 
 ViridianCity_PokemonCenter_1F_EventScript_Gentleman::
