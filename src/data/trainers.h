@@ -5450,18 +5450,255 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_RivalFirstBattle},
     },
 
-    [TRAINER_RIVAL_REMATCH] =
+    [TRAINER_RIVAL_OPTIONAL_BATTLE] =
     {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_RIVAL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
         .trainerPic = TRAINER_PIC_BLUE,
         .trainerName = _("{B_RIVAL_NAME}"),
-        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
+        .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_RivalRematch),
-        .party = {.NoItemCustomMoves = sParty_RivalRematch},
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_RivalOptionalBattle),
+        .party = {.NoItemDefaultMoves = sParty_RivalOptionalBattle},
     },
 
+    [TRAINER_RIVAL_CERULEAN_CITY] =
+    {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
+        .trainerPic = TRAINER_PIC_BLUE,
+        .trainerName = _("{B_RIVAL_NAME}"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_RivalCeruleanCity),
+        .party = {.NoItemDefaultMoves = sParty_RivalCeruleanCity},
+    },
+
+    [TRAINER_RIVAL_SS_ANNE] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM,
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
+        .trainerPic = TRAINER_PIC_BLUE,
+        .trainerName = _("{B_RIVAL_NAME}"),
+        .items = {ITEM_POTION, ITEM_POTION, ITEM_POTION, ITEM_POTION},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_RivalSSAnne),
+        .party = {.ItemDefaultMoves = sParty_RivalSSAnne},
+    },
+
+    [TRAINER_RIVAL_POKEMON_TOWER_JOLTEON] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
+        .trainerPic = TRAINER_PIC_BLUE,
+        .trainerName = _("{B_RIVAL_NAME}"),
+        .items = {ITEM_POTION, ITEM_POTION, ITEM_POTION, ITEM_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_RivalPokemonTowerJolteon),
+        .party = {.ItemCustomMoves = sParty_RivalPokemonTowerJolteon},
+    },
+
+    [TRAINER_RIVAL_POKEMON_TOWER_FLAREON] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
+        .trainerPic = TRAINER_PIC_BLUE,
+        .trainerName = _("{B_RIVAL_NAME}"),
+        .items = {ITEM_POTION, ITEM_POTION, ITEM_POTION, ITEM_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_RivalPokemonTowerFlareon),
+        .party = {.ItemCustomMoves = sParty_RivalPokemonTowerFlareon},
+    },
+
+    [TRAINER_RIVAL_POKEMON_TOWER_VAPOREON] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
+        .trainerPic = TRAINER_PIC_BLUE,
+        .trainerName = _("{B_RIVAL_NAME}"),
+        .items = {ITEM_POTION, ITEM_POTION, ITEM_POTION, ITEM_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_RivalPokemonTowerVaporeon),
+        .party = {.ItemCustomMoves = sParty_RivalPokemonTowerVaporeon},
+    },
+
+    [TRAINER_RIVAL_SILPH_CO_JOLTEON] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
+        .trainerPic = TRAINER_PIC_BLUE,
+        .trainerName = _("{B_RIVAL_NAME}"),
+        .items = {ITEM_POTION, ITEM_POTION, ITEM_POTION, ITEM_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_RivalSilphCoJolteon),
+        .party = {.ItemCustomMoves = sParty_RivalSilphCoJolteon},
+    },
+
+    [TRAINER_RIVAL_SILPH_CO_FLAREON] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
+        .trainerPic = TRAINER_PIC_BLUE,
+        .trainerName = _("{B_RIVAL_NAME}"),
+        .items = {ITEM_POTION, ITEM_POTION, ITEM_POTION, ITEM_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_RivalSilphCoFlareon),
+        .party = {.ItemCustomMoves = sParty_RivalSilphCoFlareon},
+    },
+
+    [TRAINER_RIVAL_SILPH_CO_VAPOREON] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
+        .trainerPic = TRAINER_PIC_BLUE,
+        .trainerName = _("{B_RIVAL_NAME}"),
+        .items = {ITEM_POTION, ITEM_POTION, ITEM_POTION, ITEM_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_RivalSilphCoVaporeon),
+        .party = {.ItemCustomMoves = sParty_RivalSilphCoVaporeon},
+    },
+
+    [TRAINER_RIVAL_ROUTE22_JOLTEON] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
+        .trainerPic = TRAINER_PIC_BLUE,
+        .trainerName = _("{B_RIVAL_NAME}"),
+        .items = {ITEM_POTION, ITEM_POTION, ITEM_POTION, ITEM_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_RivalRoute22Jolteon),
+        .party = {.ItemCustomMoves = sParty_RivalRoute22Jolteon},
+    },
+
+    [TRAINER_RIVAL_ROUTE22_FLAREON] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
+        .trainerPic = TRAINER_PIC_BLUE,
+        .trainerName = _("{B_RIVAL_NAME}"),
+        .items = {ITEM_POTION, ITEM_POTION, ITEM_POTION, ITEM_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_RivalRoute22Flareon),
+        .party = {.ItemCustomMoves = sParty_RivalRoute22Flareon},
+    },
+
+    [TRAINER_RIVAL_ROUTE22_VAPOREON] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
+        .trainerPic = TRAINER_PIC_BLUE,
+        .trainerName = _("{B_RIVAL_NAME}"),
+        .items = {ITEM_POTION, ITEM_POTION, ITEM_POTION, ITEM_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_RivalRoute22Vaporeon),
+        .party = {.ItemCustomMoves = sParty_RivalRoute22Vaporeon},
+    },
+
+    [TRAINER_RIVAL_CHAMPION_JOLTEON] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
+        .trainerPic = TRAINER_PIC_BLUE,
+        .trainerName = _("{B_RIVAL_NAME}"),
+        .items = {ITEM_POTION, ITEM_POTION, ITEM_POTION, ITEM_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_RivalChampionJolteon),
+        .party = {.ItemCustomMoves = sParty_RivalChampionJolteon},
+    },
+
+    [TRAINER_RIVAL_CHAMPION_FLAREON] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
+        .trainerPic = TRAINER_PIC_BLUE,
+        .trainerName = _("{B_RIVAL_NAME}"),
+        .items = {ITEM_POTION, ITEM_POTION, ITEM_POTION, ITEM_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_RivalChampionFlareon),
+        .party = {.ItemCustomMoves = sParty_RivalChampionFlareon},
+    },
+
+    [TRAINER_RIVAL_CHAMPION_VAPOREON] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
+        .trainerPic = TRAINER_PIC_BLUE,
+        .trainerName = _("{B_RIVAL_NAME}"),
+        .items = {ITEM_POTION, ITEM_POTION, ITEM_POTION, ITEM_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_RivalChampionVaporeon),
+        .party = {.ItemCustomMoves = sParty_RivalChampionVaporeon},
+    },
+
+    [TRAINER_RIVAL_POSTGAME_JOLTEON] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
+        .trainerPic = TRAINER_PIC_BLUE,
+        .trainerName = _("{B_RIVAL_NAME}"),
+        .items = {ITEM_POTION, ITEM_POTION, ITEM_POTION, ITEM_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_RivalPostGameJolteon),
+        .party = {.ItemCustomMoves = sParty_RivalPostGameJolteon},
+    },
+
+    [TRAINER_RIVAL_POSTGAME_FLAREON] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
+        .trainerPic = TRAINER_PIC_BLUE,
+        .trainerName = _("{B_RIVAL_NAME}"),
+        .items = {ITEM_POTION, ITEM_POTION, ITEM_POTION, ITEM_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_RivalPostGameFlareon),
+        .party = {.ItemCustomMoves = sParty_RivalPostGameFlareon},
+    },
+
+    [TRAINER_RIVAL_POSTGAME_VAPOREON] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RIVAL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
+        .trainerPic = TRAINER_PIC_BLUE,
+        .trainerName = _("{B_RIVAL_NAME}"),
+        .items = {ITEM_POTION, ITEM_POTION, ITEM_POTION, ITEM_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_RivalPostGameVaporeon),
+        .party = {.ItemCustomMoves = sParty_RivalPostGameVaporeon},
+    },
 };

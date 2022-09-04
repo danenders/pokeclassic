@@ -429,6 +429,7 @@ PalletTown_ProfessorOaksLab_EventScript_GetPokedexScene::
 	setflag FLAG_HIDE_OFFICER_JENNY_VIRIDIAN_CITY
 	setvar VAR_OAK_LAB_STATE, 7
 	setvar VAR_ADVENTURE_BEGINS, 6
+	setvar VAR_ROUTE_22_RIVAL_STATE, 1
 	release
 	end
 

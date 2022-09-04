@@ -67,7 +67,6 @@ struct MatchCallRival {
     u8 type;
     u8 mapSec;
     u16 flag;
-    u16 rematchTableIdx;
     const u8 *name;
     const u8 *desc;
     const match_call_text_data_t *textData;
@@ -208,7 +207,6 @@ static const struct MatchCallRival sRivalMatchCallHeader =
     .type = MC_TYPE_RIVAL,
     .mapSec = 0,
     .flag = FLAG_REGISTERED_RIVAL,
-    .rematchTableIdx = REMATCH_RIVAL,
     .desc = gText_RivalMatchCallDesc,
     .textData = sRivalTextScripts,
     .locationData = sRivalLocationData
@@ -776,11 +774,7 @@ static bool32 MatchCall_IsRematchable_Trainer(match_call_t matchCall)
 
 static bool32 MatchCall_IsRematchable_Rival(match_call_t matchCall)
 {
-    #ifndef FREE_MATCH_CALL
-    return gSaveBlock1Ptr->trainerRematches[matchCall.rival->rematchTableIdx] ? TRUE : FALSE;
-    #else
     return FALSE;
-    #endif
 }
 
 static bool32 MatchCall_IsRematchable_Aide(match_call_t matchCall)
@@ -861,7 +855,7 @@ static u32 MatchCall_GetRematchTableIdx_Trainer(match_call_t matchCall)
 
 static u32 MatchCall_GetRematchTableIdx_Rival(match_call_t matchCall)
 {
-    return matchCall.rival->rematchTableIdx;
+    return REMATCH_TABLE_ENTRIES;
 }
 
 static u32 MatchCall_GetRematchTableIdx_Aide(match_call_t matchCall)

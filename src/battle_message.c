@@ -3960,7 +3960,7 @@ static const struct TrainerSlide sTrainerSlides[] =
     /* Put any trainer slide-in messages inside this array.
     Example:
     {
-        .trainerId = TRAINER_RIVAL_REMATCH,
+        .trainerId = TRAINER_FLAG,
         .msgLastSwitchIn = sText_AarghAlmostHadIt,
         .msgLastLowHp = sText_BoxIsFull,
         .msgFirstDown = sText_123Poof,

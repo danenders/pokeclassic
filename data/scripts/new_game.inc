@@ -127,4 +127,5 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_AIDE_ROUTE11
 	setflag FLAG_HIDE_AIDE_ROUTE16
 	setflag FLAG_HIDE_AIDE_ROUTE15
+	setflag FLAG_HIDE_RIVAL_ROUTE_22
 	end

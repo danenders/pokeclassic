@@ -786,7 +786,7 @@
 #define FLAG_HIDE_AIDE_ROUTE11                    					0x2EA
 #define FLAG_HIDE_AIDE_ROUTE16                  					0x2EB
 #define FLAG_HIDE_AIDE_ROUTE15               						0x2EC
-#define FLAG_HIDE_UNUSED_23                            				0x2ED
+#define FLAG_HIDE_RIVAL_ROUTE_22                            		0x2ED
 #define FLAG_HIDE_UNUSED_24                               			0x2EE
 #define FLAG_HIDE_UNUSED_25                        					0x2EF
 #define FLAG_HIDE_UNUSED_26                       					0x2F0

@@ -147,7 +147,7 @@
 #define VAR_MASSAGE_COOLDOWN_STEP_COUNTER   0x4080 
 #define VAR_AIDE_CALL_STEP_COUNTER      	0x4081 
 #define VAR_FOLLOWER_VISIBILITY     		0x4082
-#define UNUSED_VARIABLE_8                   0x4083
+#define VAR_ROUTE_22_RIVAL_STATE            0x4083
 #define UNUSED_VARIABLE_9      				0x4084
 #define UNUSED_VARIABLE_10  				0x4085
 #define UNUSED_VARIABLE_11               	0x4086
