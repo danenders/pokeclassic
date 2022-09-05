@@ -38,6 +38,7 @@
 #include "constants/songs.h"
 #include "constants/trainers.h"
 #include "constants/rgb.h"
+#include "field_specials.h"
 
 static void PlayerHandleGetMonData(void);
 static void PlayerHandleSetMonData(void);
@@ -2435,7 +2436,10 @@ static void PlayerHandleSwitchInAnim(void)
 // In normal singles, if follower pokemon is out, have it slide in instead of being thrown
 static bool8 ShouldDoSlideInAnim(void) {
     struct ObjectEvent *followerObj = GetFollowerObject();
+
     if (!followerObj || followerObj->invisible)
+        return FALSE;
+    if (GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_SPECIES) != SPECIES_PIKACHU_PARTNER)
         return FALSE;
     if (gBattleTypeFlags & (
         BATTLE_TYPE_LINK | BATTLE_TYPE_DOUBLE | BATTLE_TYPE_FRONTIER | BATTLE_TYPE_FIRST_BATTLE |
