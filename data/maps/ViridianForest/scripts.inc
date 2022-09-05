@@ -191,3 +191,4 @@ ViridianForest_EventScript_ItemAntidote::
 ViridianForest_EventScript_ItemPokeBall::
 	finditem ITEM_POKE_BALL, 1
 	end
+

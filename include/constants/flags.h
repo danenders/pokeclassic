@@ -531,10 +531,10 @@
 #define FLAG_MYSTERY_GIFT_15                 0x1F3
 
 // Hidden Items
-#define FLAG_HIDDEN_ITEMS_START                                                         0x1F4
-#define FLAG_HIDDEN_ITEM_0            	(FLAG_HIDDEN_ITEMS_START + 0x00)
-#define FLAG_HIDDEN_ITEM_1              (FLAG_HIDDEN_ITEMS_START + 0x01)
-#define FLAG_HIDDEN_ITEM_2              (FLAG_HIDDEN_ITEMS_START + 0x02)
+#define FLAG_HIDDEN_ITEMS_START                         0x1F4
+#define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_ANTIDOTE       (FLAG_HIDDEN_ITEMS_START + 0x00)
+#define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_POTION         (FLAG_HIDDEN_ITEMS_START + 0x01)
+#define FLAG_HIDDEN_ITEM_PEWTER_CITY_POKE_BALL          (FLAG_HIDDEN_ITEMS_START + 0x02)
 #define FLAG_HIDDEN_ITEM_3              (FLAG_HIDDEN_ITEMS_START + 0x03)
 #define FLAG_HIDDEN_ITEM_4              (FLAG_HIDDEN_ITEMS_START + 0x04)
 #define FLAG_HIDDEN_ITEM_5              (FLAG_HIDDEN_ITEMS_START + 0x05)
@@ -787,8 +787,8 @@
 #define FLAG_HIDE_AIDE_ROUTE16                  					0x2EB
 #define FLAG_HIDE_AIDE_ROUTE15               						0x2EC
 #define FLAG_HIDE_RIVAL_ROUTE_22                            		0x2ED
-#define FLAG_HIDE_UNUSED_24                               			0x2EE
-#define FLAG_HIDE_UNUSED_25                        					0x2EF
+#define FLAG_HIDE_PEWTER_MUSEUM_GUIDE                               0x2EE
+#define FLAG_HIDE_PEWTER_CITY_GYM_GUIDE                        		0x2EF
 #define FLAG_HIDE_UNUSED_26                       					0x2F0
 #define FLAG_HIDE_UNUSED_27            								0x2F1
 #define FLAG_HIDE_UNUSED_28         								0x2F2
@@ -1045,7 +1045,7 @@
 #define FLAG_HIDE_VIRIDIAN_FOREST_POTION                            0x3EB
 #define FLAG_HIDE_VIRIDIAN_FOREST_POTION_2                          0x3EC
 #define FLAG_HIDE_VIRIDIAN_FOREST_ANTIDOTE                          0x3ED
-#define FLAG_UNUSED_ITEM_0x3EE                              		0x3EE
+#define FLAG_HIDE_VIRIDIAN_FOREST_POKE_BALL                         0x3EE
 #define FLAG_UNUSED_ITEM_0x3EF                                		0x3EF
 #define FLAG_UNUSED_ITEM_0x3F0                                   	0x3F0
 #define FLAG_UNUSED_ITEM_0x3F1                                		0x3F1

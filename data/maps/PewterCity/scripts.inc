@@ -1,3 +1,10 @@
+.set LOCALID_MUSEUM_GUIDE, 2
+.set LOCALID_GYM_GUIDE, 5
+
+@VAR_PEWTER_CITY_STATE
+@0 = Brock Undefeated
+@1 = Brock Defeated
+
 PewterCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, PewterCity_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, PewterCity_OnResume
@@ -40,3 +47,1083 @@ PewterCity_Trigger_RegisterOakAideAlternate::
 	setflag FLAG_HIDE_AIDE_OAK_LAB
 	releaseall
 	end
+
+PewterCity_EventScript_FatMan::
+	lock
+	faceplayer
+	msgbox PewterCity_Text_BrockOnlySeriousTrainerHere, MSGBOX_DEFAULT
+	release
+	end
+
+PewterCity_Text_BrockOnlySeriousTrainerHere::
+    .string "There aren't many serious Pokémon\n"
+    .string "Trainers here.\p"
+    .string "They're all like Bug Catchers,\n"
+    .string "you know, just hobbyists.\p"
+    .string "But Pewter Gym's Brock isn't like\n"
+    .string "that, not one bit.$"
+
+
+PewterCity_EventScript_MuseumGuide::
+	lock
+	faceplayer
+	msgbox PewterCity_Text_DidYouCheckOutMuseum, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, PewterCity_EventScript_CheckedOutMuseum
+	msgbox PewterCity_Text_ReallyYouHaveToGo, MSGBOX_DEFAULT
+	delay 10
+	playbgm MUS_RG_FOLLOW_ME, 0
+	goto_if_eq VAR_FACING, DIR_NORTH, PewterCity_EventScript_LeadToMuseumNorth
+	goto_if_eq VAR_FACING, DIR_SOUTH, PewterCity_EventScript_LeadToMuseumSouth
+	goto_if_eq VAR_FACING, DIR_WEST, PewterCity_EventScript_LeadToMuseumWest
+	goto_if_eq VAR_FACING, DIR_EAST, PewterCity_EventScript_LeadToMuseumEast
+	end
+
+PewterCity_Text_DidYouCheckOutMuseum::
+    .string "Did you check out the Museum?$"
+
+PewterCity_Text_ReallyYouHaveToGo::
+    .string "Really?\n"
+    .string "You absolutely have to go!$"
+
+PewterCity_EventScript_LeadToMuseumNorth::
+	applymovement LOCALID_MUSEUM_GUIDE, PewterCity_Movement_GuideWalkToMuseumNorth
+	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Movement_PlayerWalkToMuseumNorth
+	waitmovement 0
+	return
+
+PewterCity_Movement_PlayerWalkToMuseumNorth::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	delay_8
+	walk_in_place_faster_up
+	step_end
+
+PewterCity_Movement_GuideWalkToMuseumNorth::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_faster_up
+	step_end
+
+PewterCity_EventScript_LeadToMuseumSouth::
+	applymovement LOCALID_MUSEUM_GUIDE, PewterCity_Movement_GuideWalkToMuseumSouth
+	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Movement_PlayerWalkToMuseumSouth
+	waitmovement 0
+	return
+
+PewterCity_Movement_PlayerWalkToMuseumSouth::
+	delay_16
+	delay_16
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	delay_8
+	walk_in_place_faster_up
+	step_end
+
+PewterCity_Movement_GuideWalkToMuseumSouth::
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_faster_up
+	step_end
+
+PewterCity_EventScript_LeadToMuseumWest::
+	applymovement LOCALID_MUSEUM_GUIDE, PewterCity_Movement_GuideWalkToMuseumWest
+	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Movement_PlayerWalkToMuseumWest
+	waitmovement 0
+	return
+
+PewterCity_Movement_PlayerWalkToMuseumWest::
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	delay_8
+	walk_in_place_faster_up
+	step_end
+
+PewterCity_Movement_GuideWalkToMuseumWest::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_faster_up
+	step_end
+
+PewterCity_EventScript_LeadToMuseumEast::
+	applymovement LOCALID_MUSEUM_GUIDE, PewterCity_Movement_GuideWalkToMuseumEast
+	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Movement_PlayerWalkToMuseumEast
+	waitmovement 0
+	return
+
+PewterCity_Movement_PlayerWalkToMuseumEast::
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	delay_8
+	walk_in_place_faster_up
+	step_end
+
+PewterCity_Movement_GuideWalkToMuseumEast::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_faster_up
+	step_end
+
+PewterCity_EventScript_MuseumGuideFinished::
+	msgbox PewterCity_Text_ThisIsTheMuseum, MSGBOX_DEFAULT
+	delay 10
+	applymovement LOCALID_MUSEUM_GUIDE, PewterCity_Movement_MuseumGuideExit
+	waitmovement 0
+	fadedefaultbgm
+	removeobject LOCALID_MUSEUM_GUIDE
+	clearflag FLAG_HIDE_PEWTER_MUSEUM_GUIDE
+	release
+	end
+
+PewterCity_Movement_MuseumGuideExit::
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+PewterCity_Text_ThisIsTheMuseum::
+    .string "This is it, the Museum.\p"
+    .string "You have to pay to get in, but it's\n"
+    .string "worth it. See you around!$"
+
+PewterCity_EventScript_CheckedOutMuseum::
+	msgbox PewterCity_Text_WerentThoseFossilsAmazing, MSGBOX_DEFAULT
+	release
+	end
+
+PewterCity_Text_WerentThoseFossilsAmazing::
+    .string "Weren't those fossils from Mt. Moon\n"
+    .string "amazing?$"
+
+PewterCity_EventScript_BugCatcher::
+	lock
+	faceplayer
+	msgbox PewterCity_Text_DoYouKnowWhatImDoing, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, PewterCity_EventScript_KnowWhatTheyreDoing
+	msgbox PewterCity_Text_SprayingRepelToKeepWildMonsOut, MSGBOX_DEFAULT
+	release
+	end
+
+PewterCity_Text_DoYouKnowWhatImDoing::
+    .string "Psssst!\n"
+    .string "Do you know what I'm doing?$"
+
+PewterCity_Text_SprayingRepelToKeepWildMonsOut::
+    .string "I'm spraying Repel to keep wild\n"
+    .string "Pokémon out of my garden!$"
+
+PewterCity_EventScript_KnowWhatTheyreDoing::
+	msgbox PewterCity_Text_ThatsRightItsHardWork, MSGBOX_DEFAULT
+	release
+	end
+
+PewterCity_Text_ThatsRightItsHardWork::
+    .string "That's right!\n"
+    .string "It's hard work!$"
+
+PewterCity_EventScript_Lass::
+	msgbox PewterCity_Text_ClefairyCameFromMoon, MSGBOX_NPC
+	end
+
+PewterCity_Text_ClefairyCameFromMoon::
+    .string "Clefairy came from the moon.\n"
+    .string "That's what the rumor is.\p"
+    .string "They appeared after Moon Stones\n"
+    .string "fell on Mt. Moon.$"
+
+
+PewterCity_EventScript_GymGuide::
+	lock
+	faceplayer
+	msgbox PewterCity_Text_BrocksLookingForChallengersFollowMe, MSGBOX_DEFAULT
+	playbgm MUS_RG_FOLLOW_ME, 0
+	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Movement_PlayerWaitForGuideEast
+	applymovement LOCALID_GYM_GUIDE, PewterCity_Movement_GuideMoveToLeadEast
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Movement_PlayerWalkToGymEast
+	applymovement LOCALID_GYM_GUIDE, PewterCity_Movement_GuideWalkToGymEast
+	waitmovement 0
+	goto PewterCity_EventScript_GymGuideFinish
+
+PewterCity_Movement_PlayerWaitForGuideEast::
+	delay_16
+	delay_16
+	delay_4
+	walk_in_place_faster_down
+	step_end
+
+PewterCity_Movement_GuideMoveToLeadEast::
+	walk_down
+	walk_left
+	walk_in_place_faster_up
+	walk_in_place_up
+	step_end
+
+PewterCity_Movement_GuideWalkToGymEast::
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_in_place_faster_left
+	step_end
+
+PewterCity_Movement_PlayerWalkToGymEast::
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+PewterCity_EventScript_GymGuideTriggerTop::
+	lockall
+	setvar VAR_TEMP_1, 0
+	goto PewterCity_EventScript_GymGuideTrigger
+	end
+
+PewterCity_EventScript_GymGuideTriggerMid::
+	lockall
+	setvar VAR_TEMP_1, 1
+	goto PewterCity_EventScript_GymGuideTrigger
+	end
+
+PewterCity_EventScript_GymGuideTriggerBottom::
+	lockall
+	setvar VAR_TEMP_1, 2
+	goto PewterCity_EventScript_GymGuideTrigger
+	end
+
+PewterCity_EventScript_GymGuideTrigger::
+	msgbox PewterCity_Text_BrocksLookingForChallengersFollowMe, MSGBOX_DEFAULT
+	playbgm MUS_RG_FOLLOW_ME, 0
+	goto_if_eq VAR_TEMP_1, 0, PewterCity_EventScript_WalkToGymTop
+	goto_if_eq VAR_TEMP_1, 1, PewterCity_EventScript_WalkToGymMid
+	goto_if_eq VAR_TEMP_1, 2, PewterCity_EventScript_WalkToGymBottom
+	end
+
+PewterCity_EventScript_WalkToGymTop::
+	applymovement LOCALID_GYM_GUIDE, PewterCity_Movement_GuideMoveToLeadTop
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Movement_PlayerWalkToGymTop
+	applymovement LOCALID_GYM_GUIDE, PewterCity_Movement_GuideWalkToGymTop
+	waitmovement 0
+	goto PewterCity_EventScript_GymGuideFinish
+
+PewterCity_Movement_PlayerWalkToGymTop::
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+PewterCity_Movement_GuideMoveToLeadTop::
+	walk_left
+	walk_down
+	walk_in_place_faster_right
+	walk_in_place_right
+	step_end
+
+PewterCity_Movement_GuideWalkToGymTop::
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_in_place_faster_left
+	step_end
+
+PewterCity_EventScript_WalkToGymMid::
+	applymovement LOCALID_GYM_GUIDE, PewterCity_Movement_GuideMoveToLeadMid
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Movement_PlayerWalkToGymMid
+	applymovement LOCALID_GYM_GUIDE, PewterCity_Movement_GuideWalkToGymMid
+	waitmovement 0
+	goto PewterCity_EventScript_GymGuideFinish
+
+PewterCity_Movement_PlayerWalkToGymMid::
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+PewterCity_Movement_GuideMoveToLeadMid::
+	walk_down
+	walk_in_place_down
+	step_end
+
+PewterCity_Movement_GuideWalkToGymMid::
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_in_place_faster_left
+	step_end
+
+PewterCity_EventScript_WalkToGymBottom::
+	applymovement LOCALID_GYM_GUIDE, PewterCity_Movement_GuideMoveToLeadBottom
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Movement_PlayerWalkToGymBottom
+	applymovement LOCALID_GYM_GUIDE, PewterCity_Movement_GuideWalkToGymBottom
+	waitmovement 0
+	goto PewterCity_EventScript_GymGuideFinish
+
+PewterCity_Movement_PlayerWalkToGymBottom::
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+PewterCity_Movement_GuideMoveToLeadBottom::
+	walk_down
+	walk_down
+	walk_in_place_down
+	step_end
+
+PewterCity_Movement_GuideWalkToGymBottom::
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_in_place_faster_left
+	step_end
+
+PewterCity_EventScript_GymGuideFinish::
+	msgbox PewterCity_Text_GoTakeOnBrock, MSGBOX_DEFAULT
+	applymovement LOCALID_GYM_GUIDE, PewterCity_Movement_GymGuideExit
+	waitmovement 0
+	fadedefaultbgm
+	removeobject LOCALID_GYM_GUIDE
+	clearflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
+	release
+	end
+
+PewterCity_Movement_GymGuideExit::
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+PewterCity_Text_GoTakeOnBrock::
+    .string "If you have the right stuff,\n"
+    .string "go take on Brock!$"
+
+PewterCity_Text_BrocksLookingForChallengersFollowMe::
+    .string "You're a Trainer, right?\p"
+    .string "Brock's looking for new\n"
+    .string "challengers. Follow me!$"
+
+PewterCity_EventScript_TrainerTips::
+	msgbox PewterCity_Text_TrainerTipsEarningEXP, MSGBOX_SIGN
+	end
+
+PewterCity_Text_TrainerTipsEarningEXP::
+    .string "Trainer Tips:\p"
+    .string "All Pokémon that appear in battle,\n"
+    .string "however briefly, earn Exp Points.$"
+
+
+PewterCity_EventScript_CitySign::
+	msgbox PewterCity_Text_CitySign, MSGBOX_SIGN
+	end
+
+PewterCity_Text_CitySign::
+    .string "Pewter City\n"
+    .string "A Stone Gray City$"
+
+PewterCity_EventScript_PoliceNotice::
+	msgbox PewterCity_Text_CallPoliceIfInfoOnThieves, MSGBOX_SIGN
+	end
+
+PewterCity_Text_CallPoliceIfInfoOnThieves::
+    .string "NOTICE!\p"
+    .string "Thieves have been stealing Pokémon\n"
+    .string "fossils from Mt. Moon.\p"
+    .string "Please call the Pewter Police if\n"
+    .string "you have any information.$"
+
+PewterCity_EventScript_MuseumSign::
+	msgbox PewterCity_Text_MuseumOfScience, MSGBOX_SIGN
+	end
+
+PewterCity_Text_MuseumOfScience::
+    .string "Pewter City Science Museum$"
+
+PewterCity_EventScript_GymSign::
+	lockall
+	msgbox PewterCity_Text_GymSign, MSGBOX_SIGN
+	releaseall
+	end
+
+PewterCity_Text_GymSign::
+    .string "Pewter City Pokémon GYM\n"
+    .string "Leader: Brock\l"
+    .string "The Rock-Solid Pokémon Trainer!$"
