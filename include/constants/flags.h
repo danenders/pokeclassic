@@ -1042,9 +1042,9 @@
 #define FLAG_VIRIDIAN_CITY_POTION                                  	0x3E8
 #define FLAG_ROUTE2_ETHER                               			0x3E9
 #define FLAG_ROUTE2_PARALYZE_HEAL                                   0x3EA
-#define FLAG_UNUSED_ITEM_0x3EB                                    	0x3EB
-#define FLAG_UNUSED_ITEM_0x3EC                                 		0x3EC
-#define FLAG_UNUSED_ITEM_0x3ED                                   	0x3ED
+#define FLAG_HIDE_VIRIDIAN_FOREST_POTION                            0x3EB
+#define FLAG_HIDE_VIRIDIAN_FOREST_POTION_2                          0x3EC
+#define FLAG_HIDE_VIRIDIAN_FOREST_ANTIDOTE                          0x3ED
 #define FLAG_UNUSED_ITEM_0x3EE                              		0x3EE
 #define FLAG_UNUSED_ITEM_0x3EF                                		0x3EF
 #define FLAG_UNUSED_ITEM_0x3F0                                   	0x3F0

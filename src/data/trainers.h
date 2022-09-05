@@ -5701,4 +5701,67 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_RivalPostGameVaporeon),
         .party = {.ItemCustomMoves = sParty_RivalPostGameVaporeon},
     },
+
+//Viridian Forest
+    [TRAINER_BUG_CATCHER_RICK] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BUG_CATCHER,
+        .trainerName = _("Rick"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BugCatcherRick),
+        .party = {.NoItemDefaultMoves = sParty_BugCatcherRick}
+    },
+    [TRAINER_BUG_CATCHER_DOUG] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BUG_CATCHER,
+        .trainerName = _("Doug"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BugCatcherDoug),
+        .party = {.NoItemDefaultMoves = sParty_BugCatcherDoug}
+    },
+    [TRAINER_BUG_CATCHER_SAMMY] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BUG_CATCHER,
+        .trainerName = _("Sammy"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BugCatcherSammy),
+        .party = {.NoItemDefaultMoves = sParty_BugCatcherSammy}
+    },
+    [TRAINER_BUG_CATCHER_ANTHONY] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BUG_CATCHER,
+        .trainerName = _("Anthony"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BugCatcherAnthony),
+        .party = {.NoItemDefaultMoves = sParty_BugCatcherAnthony}
+    },
+    [TRAINER_BUG_CATCHER_CHARLIE] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BUG_CATCHER,
+        .trainerName = _("Charlie"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BugCatcherCharlie),
+        .party = {.NoItemDefaultMoves = sParty_BugCatcherCharlie}
+    },
 };
+

@@ -7380,3 +7380,76 @@ static const struct TrainerMonItemCustomMoves sParty_RivalPostGameVaporeon[] = {
 
 //New Trainers
 
+//Viridian Forest
+static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherRick[] = {
+    {
+        .iv = 0,
+        .lvl = 6,
+        .species = SPECIES_WEEDLE,
+    },
+    {
+        .iv = 0,
+        .lvl = 6,
+        .species = SPECIES_CATERPIE,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherDoug[] = {
+    {
+        .iv = 0,
+        .lvl = 7,
+        .species = SPECIES_WEEDLE,
+    },
+    {
+        .iv = 0,
+        .lvl = 7,
+        .species = SPECIES_KAKUNA,
+    },
+    {
+        .iv = 0,
+        .lvl = 7,
+        .species = SPECIES_WEEDLE,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherSammy[] = {
+    {
+        .iv = 0,
+        .lvl = 9,
+        .species = SPECIES_WEEDLE,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherAnthony[] = {
+    {
+        .iv = 0,
+        .lvl = 7,
+        .species = SPECIES_CATERPIE,
+    },
+    {
+        .iv = 0,
+        .lvl = 8,
+        .species = SPECIES_CATERPIE,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherCharlie[] = {
+    {
+        .iv = 0,
+        .lvl = 7,
+        .species = SPECIES_METAPOD,
+    },
+    {
+        .iv = 0,
+        .lvl = 7,
+        .species = SPECIES_CATERPIE,
+    },
+    {
+        .iv = 0,
+        .lvl = 7,
+        .species = SPECIES_METAPOD,
+    },
+};
+
+
+
