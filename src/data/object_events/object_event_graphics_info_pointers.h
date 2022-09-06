@@ -361,6 +361,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldM
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSAnne;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pokedex;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spearow;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jigglypuff;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -709,6 +710,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SS_ANNE]          = 				 &gObjectEventGraphicsInfo_SSAnne,
     [OBJ_EVENT_GFX_POKEDEX]          = 				 &gObjectEventGraphicsInfo_Pokedex,
     [OBJ_EVENT_GFX_SPEAROW] =           	 		 &gObjectEventGraphicsInfo_Spearow,
+    [OBJ_EVENT_GFX_JIGGLYPUFF] =           	 		 &gObjectEventGraphicsInfo_Jigglypuff,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

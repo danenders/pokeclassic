@@ -1155,6 +1155,9 @@ const u16 gObjectEventPal_Snorlax[] = INCBIN_U16("graphics/object_events/palette
 const u32 gObjectEventPic_SpearowOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/spearow_overworld.4bpp");
 const u16 gObjectEventPal_Spearow[] = INCBIN_U16("graphics/object_events/palettes/spearow.gbapal");
 
+const u32 gObjectEventPic_JigglypuffOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/jigglypuff_overworld.4bpp");
+const u16 gObjectEventPal_Jigglypuff[] = INCBIN_U16("graphics/object_events/palettes/jigglypuff.gbapal");
+
 //FRLG Objects
 const u16 gObjectEventPic_Pokedex[] = INCBIN_U16("graphics/object_events/pics/misc/pokedex.4bpp");
 
