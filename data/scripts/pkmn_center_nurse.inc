@@ -43,6 +43,7 @@ EventScript_PkmnCenterNurse_HealPkmn::
 	incrementgamestat GAME_STAT_USED_POKECENTER
 	message gText_IllTakeYourPkmn
 	waitmessage
+	callnative RemoveFollowingPokemon
 	applymovement VAR_0x800B, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	dofieldeffect FLDEFF_POKECENTER_HEAL
