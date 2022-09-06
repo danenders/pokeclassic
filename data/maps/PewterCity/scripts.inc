@@ -70,7 +70,9 @@ PewterCity_EventScript_MuseumGuide::
 	msgbox PewterCity_Text_DidYouCheckOutMuseum, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, PewterCity_EventScript_CheckedOutMuseum
 	msgbox PewterCity_Text_ReallyYouHaveToGo, MSGBOX_DEFAULT
+	closemessage
 	delay 10
+	callnative RemoveFollowingPokemon
 	playbgm MUS_RG_FOLLOW_ME, 0
 	goto_if_eq VAR_FACING, DIR_NORTH, PewterCity_EventScript_LeadToMuseumNorth
 	goto_if_eq VAR_FACING, DIR_SOUTH, PewterCity_EventScript_LeadToMuseumSouth
@@ -89,7 +91,7 @@ PewterCity_EventScript_LeadToMuseumNorth::
 	applymovement LOCALID_MUSEUM_GUIDE, PewterCity_Movement_GuideWalkToMuseumNorth
 	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Movement_PlayerWalkToMuseumNorth
 	waitmovement 0
-	return
+	goto PewterCity_EventScript_MuseumGuideFinished
 
 PewterCity_Movement_PlayerWalkToMuseumNorth::
 	walk_up
@@ -154,7 +156,7 @@ PewterCity_EventScript_LeadToMuseumSouth::
 	applymovement LOCALID_MUSEUM_GUIDE, PewterCity_Movement_GuideWalkToMuseumSouth
 	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Movement_PlayerWalkToMuseumSouth
 	waitmovement 0
-	return
+	goto PewterCity_EventScript_MuseumGuideFinished
 
 PewterCity_Movement_PlayerWalkToMuseumSouth::
 	delay_16
@@ -219,7 +221,7 @@ PewterCity_EventScript_LeadToMuseumWest::
 	applymovement LOCALID_MUSEUM_GUIDE, PewterCity_Movement_GuideWalkToMuseumWest
 	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Movement_PlayerWalkToMuseumWest
 	waitmovement 0
-	return
+	goto PewterCity_EventScript_MuseumGuideFinished
 
 PewterCity_Movement_PlayerWalkToMuseumWest::
 	walk_left
@@ -284,7 +286,7 @@ PewterCity_EventScript_LeadToMuseumEast::
 	applymovement LOCALID_MUSEUM_GUIDE, PewterCity_Movement_GuideWalkToMuseumEast
 	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Movement_PlayerWalkToMuseumEast
 	waitmovement 0
-	return
+	goto PewterCity_EventScript_MuseumGuideFinished
 
 PewterCity_Movement_PlayerWalkToMuseumEast::
 	walk_right
@@ -347,12 +349,14 @@ PewterCity_Movement_GuideWalkToMuseumEast::
 
 PewterCity_EventScript_MuseumGuideFinished::
 	msgbox PewterCity_Text_ThisIsTheMuseum, MSGBOX_DEFAULT
+	closemessage
 	delay 10
 	applymovement LOCALID_MUSEUM_GUIDE, PewterCity_Movement_MuseumGuideExit
 	waitmovement 0
 	fadedefaultbgm
 	removeobject LOCALID_MUSEUM_GUIDE
 	clearflag FLAG_HIDE_PEWTER_MUSEUM_GUIDE
+	callnative UpdateFollowingPokemon
 	release
 	end
 
@@ -428,6 +432,8 @@ PewterCity_EventScript_GymGuide::
 	lock
 	faceplayer
 	msgbox PewterCity_Text_BrocksLookingForChallengersFollowMe, MSGBOX_DEFAULT
+	closemessage
+	callnative RemoveFollowingPokemon
 	playbgm MUS_RG_FOLLOW_ME, 0
 	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Movement_PlayerWaitForGuideEast
 	applymovement LOCALID_GYM_GUIDE, PewterCity_Movement_GuideMoveToLeadEast
@@ -602,6 +608,8 @@ PewterCity_EventScript_GymGuideTriggerBottom::
 
 PewterCity_EventScript_GymGuideTrigger::
 	msgbox PewterCity_Text_BrocksLookingForChallengersFollowMe, MSGBOX_DEFAULT
+	closemessage
+	callnative RemoveFollowingPokemon
 	playbgm MUS_RG_FOLLOW_ME, 0
 	goto_if_eq VAR_TEMP_1, 0, PewterCity_EventScript_WalkToGymTop
 	goto_if_eq VAR_TEMP_1, 1, PewterCity_EventScript_WalkToGymMid
@@ -1051,11 +1059,13 @@ PewterCity_Movement_GuideWalkToGymBottom::
 
 PewterCity_EventScript_GymGuideFinish::
 	msgbox PewterCity_Text_GoTakeOnBrock, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_GYM_GUIDE, PewterCity_Movement_GymGuideExit
 	waitmovement 0
 	fadedefaultbgm
 	removeobject LOCALID_GYM_GUIDE
 	clearflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
+	callnative UpdateFollowingPokemon
 	release
 	end
 
