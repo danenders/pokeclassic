@@ -249,7 +249,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedFieldMove;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedFishing;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedWatering;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedDecorating;
-
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeafNormal;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeafMachBike;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeafAcroBike;
@@ -259,7 +258,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeafFieldMove;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeafFishing;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeafWatering;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeafDecorating;
-
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanNormal;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanMachBike;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanAcroBike;
@@ -269,7 +267,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanFieldMove;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanFishing;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanWatering;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EthanDecorating;
-
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraNormal;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraMachBike;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraAcroBike;
@@ -279,7 +276,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraFieldMove;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraFishing;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraWatering;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraDecorating;
-
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisNormal;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisMachBike;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisAcroBike;
@@ -289,7 +285,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisFieldMove;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisFishing;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisWatering;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisDecorating;
-
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasNormal;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasMachBike;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasAcroBike;
@@ -299,7 +294,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasFieldMove;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasFishing;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasWatering;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasDecorating;
-
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnNormal;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnMachBike;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnAcroBike;
@@ -309,7 +303,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnFieldMove;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnFishing;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnWatering;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnDecorating;
-
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasPlatinumNormal;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasPlatinumMachBike;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasPlatinumAcroBike;
@@ -319,7 +312,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasPlatinumField
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasPlatinumFishing;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasPlatinumWatering;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasPlatinumDecorating;
-
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumNormal;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumMachBike;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumAcroBike;
@@ -329,7 +321,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumFieldM
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumFishing;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumWatering;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumDecorating;
-
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfOak;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lanette;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blue;
@@ -345,11 +336,17 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CoolTrainerF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jessie;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_James;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OfficerJenny;
-
-// Begin pokemon event objects
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AnimatedBall;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower;
-
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lorelei;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bruno;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Agatha;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lance;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Brock;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Misty;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Surge;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Erika;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sabrina;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Koga;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blaine;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bard;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hipster;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Trader;
@@ -357,7 +354,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Storyteller;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Giddy;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldMan1;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldMan2;
-
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSAnne;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pokedex;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldAmber;
@@ -365,6 +361,9 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spearow;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jigglypuff;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NidoranM;
 
+// Begin pokemon event objects
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AnimatedBall;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -689,7 +688,6 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DAWN_PLATINUM_FISHING] =          &gObjectEventGraphicsInfo_DawnPlatinumFishing,
     [OBJ_EVENT_GFX_DAWN_PLATINUM_WATERING] =         &gObjectEventGraphicsInfo_DawnPlatinumWatering,
     [OBJ_EVENT_GFX_DAWN_PLATINUM_DECORATING] =       &gObjectEventGraphicsInfo_DawnPlatinumDecorating,
-    
 	[OBJ_EVENT_GFX_PROF_OAK] =           			 &gObjectEventGraphicsInfo_ProfOak,
     [OBJ_EVENT_GFX_ZINNIA] =           				 &gObjectEventGraphicsInfo_Zinnia,
     [OBJ_EVENT_GFX_BLUE] =           				 &gObjectEventGraphicsInfo_Blue,
@@ -707,7 +705,6 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BREEDER_M] =           	 	 	 &gObjectEventGraphicsInfo_BreederM,
     [OBJ_EVENT_GFX_BREEDER_F] =       		 	 	 &gObjectEventGraphicsInfo_BreederF,
     [OBJ_EVENT_GFX_OFFICER_JENNY] = 				 &gObjectEventGraphicsInfo_OfficerJenny,
-
     [OBJ_EVENT_GFX_SNORLAX_SLEEPING] =           	 &gObjectEventGraphicsInfo_SnorlaxSleeping,
     [OBJ_EVENT_GFX_SS_ANNE]          = 				 &gObjectEventGraphicsInfo_SSAnne,
     [OBJ_EVENT_GFX_POKEDEX]          = 				 &gObjectEventGraphicsInfo_Pokedex,
@@ -715,6 +712,17 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SPEAROW] =           	 		 &gObjectEventGraphicsInfo_Spearow,
     [OBJ_EVENT_GFX_JIGGLYPUFF] =           	 		 &gObjectEventGraphicsInfo_Jigglypuff,
     [OBJ_EVENT_GFX_NIDORAN_M] =           	 		 &gObjectEventGraphicsInfo_NidoranM,
+    [OBJ_EVENT_GFX_LORELEI] = 				 		 &gObjectEventGraphicsInfo_Lorelei,
+	[OBJ_EVENT_GFX_BRUNO] = 				 		 &gObjectEventGraphicsInfo_Bruno,
+	[OBJ_EVENT_GFX_AGATHA] = 				 		 &gObjectEventGraphicsInfo_Agatha,
+	[OBJ_EVENT_GFX_LANCE] = 				 		 &gObjectEventGraphicsInfo_Lance,
+	[OBJ_EVENT_GFX_BROCK] = 				 		 &gObjectEventGraphicsInfo_Brock,
+	[OBJ_EVENT_GFX_MISTY] = 				 		 &gObjectEventGraphicsInfo_Misty,
+	[OBJ_EVENT_GFX_SURGE] = 				 		 &gObjectEventGraphicsInfo_Surge,
+	[OBJ_EVENT_GFX_ERIKA] = 				 		 &gObjectEventGraphicsInfo_Erika,
+	[OBJ_EVENT_GFX_SABRINA] = 				 		 &gObjectEventGraphicsInfo_Sabrina,
+	[OBJ_EVENT_GFX_KOGA] = 				 	 		 &gObjectEventGraphicsInfo_Koga,
+	[OBJ_EVENT_GFX_BLAINE] = 				 		 &gObjectEventGraphicsInfo_Blaine
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

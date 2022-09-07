@@ -180,7 +180,7 @@
 #define OBJ_EVENT_GFX_LUCY                        	NPC_GFX + 6
 #define OBJ_EVENT_GFX_BRANDON                    	NPC_GFX + 7
 
-//Gym Leaders
+//Hoenn Gym Leaders
 #define OBJ_EVENT_GFX_ROXANNE                    	NPC_GFX + 8
 #define OBJ_EVENT_GFX_BRAWLY                     	NPC_GFX + 9
 #define OBJ_EVENT_GFX_WATTSON                    	NPC_GFX + 10
@@ -191,7 +191,7 @@
 #define OBJ_EVENT_GFX_TATE                       	NPC_GFX + 15
 #define OBJ_EVENT_GFX_JUAN                       	NPC_GFX + 16
 
-//Elite 4 & Champions
+//Hoenn Elite 4 & Champions
 #define OBJ_EVENT_GFX_SIDNEY                     	NPC_GFX + 17
 #define OBJ_EVENT_GFX_PHOEBE                     	NPC_GFX + 18
 #define OBJ_EVENT_GFX_GLACIA                     	NPC_GFX + 19
@@ -238,9 +238,24 @@
 #define OBJ_EVENT_GFX_LEAF                       	NPC_GFX + 56
 #define OBJ_EVENT_GFX_OFFICER_JENNY                 NPC_GFX + 57
 
+//Kanto Elite Four
+#define OBJ_EVENT_GFX_LORELEI                 		NPC_GFX + 58
+#define OBJ_EVENT_GFX_BRUNO                			NPC_GFX + 59
+#define OBJ_EVENT_GFX_AGATHA                 		NPC_GFX + 60
+#define OBJ_EVENT_GFX_LANCE                 		NPC_GFX + 61
+
+//Kanto Gym Leaders
+#define OBJ_EVENT_GFX_BROCK                 		NPC_GFX + 62
+#define OBJ_EVENT_GFX_MISTY                 		NPC_GFX + 63
+#define OBJ_EVENT_GFX_SURGE                 		NPC_GFX + 64
+#define OBJ_EVENT_GFX_ERIKA                 		NPC_GFX + 65
+#define OBJ_EVENT_GFX_SABRINA                 		NPC_GFX + 66
+#define OBJ_EVENT_GFX_KOGA                 			NPC_GFX + 67
+#define OBJ_EVENT_GFX_BLAINE                 		NPC_GFX + 68
+
 //MISC
-#define OBJ_EVENT_GFX_LITTLE_BOY_3               	NPC_GFX + 58 //UNUSED?
-#define OBJ_EVENT_GFX_QUINTY_PLUMP                 	NPC_GFX + 59
+#define OBJ_EVENT_GFX_LITTLE_BOY_3               	NPC_GFX + 69 //UNUSED?
+#define OBJ_EVENT_GFX_QUINTY_PLUMP                 	NPC_GFX + 70
 
 #define GENERIC_NPC_GFX								OBJ_EVENT_GFX_QUINTY_PLUMP
 

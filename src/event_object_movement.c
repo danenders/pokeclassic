@@ -581,7 +581,17 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_SPEAROW                 0x119A
 #define OBJ_EVENT_PAL_TAG_JIGGLYPUFF              0x119B
 #define OBJ_EVENT_PAL_TAG_NIDORAN                 0x119C
-
+#define OBJ_EVENT_PAL_TAG_LORELEI                 0x119D
+#define OBJ_EVENT_PAL_TAG_BRUNO                   0x119E
+#define OBJ_EVENT_PAL_TAG_AGATHA                  0x119F
+#define OBJ_EVENT_PAL_TAG_LANCE                   0x11A0
+#define OBJ_EVENT_PAL_TAG_BROCK                   0x11A1
+#define OBJ_EVENT_PAL_TAG_MISTY                   0x11A2
+#define OBJ_EVENT_PAL_TAG_SURGE                   0x11A3
+#define OBJ_EVENT_PAL_TAG_ERIKA                   0x11A4
+#define OBJ_EVENT_PAL_TAG_SABRINA                 0x11A5
+#define OBJ_EVENT_PAL_TAG_KOGA                    0x11A6
+#define OBJ_EVENT_PAL_TAG_BLAINE                  0x11A7
 
 #define OBJ_EVENT_PAL_TAG_NONE 0x128D
 
@@ -752,6 +762,17 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Spearow,               OBJ_EVENT_PAL_TAG_SPEAROW},
     {gObjectEventPal_Jigglypuff,            OBJ_EVENT_PAL_TAG_JIGGLYPUFF},
     {gObjectEventPal_Nidoran,               OBJ_EVENT_PAL_TAG_NIDORAN},
+    {gObjectEventPal_Lorelei,               OBJ_EVENT_PAL_TAG_LORELEI},
+    {gObjectEventPal_Bruno,                 OBJ_EVENT_PAL_TAG_BRUNO},
+    {gObjectEventPal_Agatha,                OBJ_EVENT_PAL_TAG_AGATHA},
+    {gObjectEventPal_Lance,                 OBJ_EVENT_PAL_TAG_LANCE},
+    {gObjectEventPal_Brock,                 OBJ_EVENT_PAL_TAG_BROCK},
+    {gObjectEventPal_Misty,                 OBJ_EVENT_PAL_TAG_MISTY},
+    {gObjectEventPal_Surge,                 OBJ_EVENT_PAL_TAG_SURGE},
+    {gObjectEventPal_Erika,                 OBJ_EVENT_PAL_TAG_ERIKA},
+    {gObjectEventPal_Sabrina,               OBJ_EVENT_PAL_TAG_SABRINA},
+    {gObjectEventPal_Koga,                  OBJ_EVENT_PAL_TAG_KOGA},
+    {gObjectEventPal_Lance,                 OBJ_EVENT_PAL_TAG_BLAINE},
     {NULL,                  0x0000},
 };
 

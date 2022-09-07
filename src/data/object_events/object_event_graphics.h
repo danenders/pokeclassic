@@ -1148,6 +1148,40 @@ const u16 gObjectEventPal_James[] = INCBIN_U16("graphics/object_events/palettes/
 const u32 gObjectEventPic_OfficerJenny[] = INCBIN_U32("graphics/object_events/pics/people/officer_jenny.4bpp");
 const u16 gObjectEventPal_OfficerJenny[] = INCBIN_U16("graphics/object_events/palettes/jenny.gbapal");
 
+const u32 gObjectEventPic_Brock[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/brock.4bpp");
+const u16 gObjectEventPal_Brock[] = INCBIN_U16("graphics/object_events/palettes/brock.gbapal");
+
+const u32 gObjectEventPic_Misty[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/misty.4bpp");
+const u16 gObjectEventPal_Misty[] = INCBIN_U16("graphics/object_events/palettes/misty.gbapal");
+
+const u32 gObjectEventPic_Surge[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/surge.4bpp");
+const u16 gObjectEventPal_Surge[] = INCBIN_U16("graphics/object_events/palettes/surge.gbapal");
+
+const u32 gObjectEventPic_Erika[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/erika.4bpp");
+const u16 gObjectEventPal_Erika[] = INCBIN_U16("graphics/object_events/palettes/erika.gbapal");
+
+const u32 gObjectEventPic_Sabrina[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/sabrina.4bpp");
+const u16 gObjectEventPal_Sabrina[] = INCBIN_U16("graphics/object_events/palettes/sabrina.gbapal");
+
+const u32 gObjectEventPic_Koga[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/koga.4bpp");
+const u16 gObjectEventPal_Koga[] = INCBIN_U16("graphics/object_events/palettes/koga.gbapal");
+
+const u32 gObjectEventPic_Blaine[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/blaine.4bpp");
+const u16 gObjectEventPal_Blaine[] = INCBIN_U16("graphics/object_events/palettes/blaine.gbapal");
+
+const u32 gObjectEventPic_Lorelei[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/lorelei.4bpp");
+const u16 gObjectEventPal_Lorelei[] = INCBIN_U16("graphics/object_events/palettes/lorelei.gbapal");
+
+const u32 gObjectEventPic_Bruno[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/bruno.4bpp");
+const u16 gObjectEventPal_Bruno[] = INCBIN_U16("graphics/object_events/palettes/bruno.gbapal");
+
+const u32 gObjectEventPic_Agatha[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/agatha.4bpp");
+const u16 gObjectEventPal_Agatha[] = INCBIN_U16("graphics/object_events/palettes/agatha.gbapal");
+
+const u32 gObjectEventPic_Lance[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/lance.4bpp");
+const u16 gObjectEventPal_Lance[] = INCBIN_U16("graphics/object_events/palettes/lance.gbapal");
+
+
 //Other Pokemon
 const u32 gObjectEventPic_SnorlaxSleeping[] = INCBIN_U32("graphics/object_events/pics/pokemon/snorlax_sleep.4bpp");
 const u16 gObjectEventPal_Snorlax[] = INCBIN_U16("graphics/object_events/palettes/snorlax.gbapal");
