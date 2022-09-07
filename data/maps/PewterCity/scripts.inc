@@ -12,6 +12,7 @@ PewterCity_MapScripts::
 
 PewterCity_OnTransition:
 	setflag FLAG_VISITED_PEWTER_CITY
+	setvar VAR_PEWTER_CITY_MUSEUM_STATE, 0
 	call Common_EventScript_GetDayOrNight
 	end
 

@@ -149,7 +149,7 @@
 #define VAR_FOLLOWER_VISIBILITY     		0x4082
 #define VAR_ROUTE_22_RIVAL_STATE            0x4083
 #define VAR_PEWTER_CITY_STATE       		0x4084
-#define UNUSED_VARIABLE_10  				0x4085
+#define VAR_PEWTER_CITY_MUSEUM_STATE  		0x4085
 #define UNUSED_VARIABLE_11               	0x4086
 #define UNUSED_VARIABLE_12                 	0x4087
 #define UNUSED_VARIABLE_13                  0x4088

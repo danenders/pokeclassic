@@ -154,6 +154,7 @@ ViridianCity_Text_MovesLimitedByPP::
 
 ViridianCity_EventScript_GymDoorLocked::
 	lockall
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
 	waitmovement 0
@@ -176,7 +177,7 @@ ViridianCity_EventScript_OldMan::
 	faceplayer
 	goto_if_eq VAR_VIRIDIAN_CITY_GYM, 1, ViridianCity_EventScript_OldManGymLeaderReturned
 	msgbox ViridianCity_Text_GymClosedWonderWhoLeaderIs, MSGBOX_DEFAULT
-	applymovement LOCALID_OLD_MAN, Common_Movement_FaceOriginalDirection
+	turnobject LOCALID_OLD_MAN, DIR_NORTH
 	waitmovement 2
 	release
 	end

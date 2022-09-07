@@ -541,5 +541,6 @@ gSpecials::
 	def_special SwapPlayersCostume
 	def_special GetPlayerCostumeId
 	def_special DaisyMassageServices
-
+	def_special OpenMuseumFossilPic
+	def_special CloseMuseumFossilPic
 

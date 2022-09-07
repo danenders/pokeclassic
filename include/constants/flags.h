@@ -72,16 +72,15 @@
 #define FLAG_MET_OAK_ROUTE_1    	0x36 
 #define FLAG_GOT_POTION_ON_ROUTE_1  0x37
 #define FLAG_MET_CEDAR    		    0x38 // Used for Optional Dialogue
-#define FLAG_UNUSED_0x039    		0x39 // Unused Flag
-#define FLAG_UNUSED_0x03A    		0x3A // Unused Flag
-#define FLAG_UNUSED_0x03B    		0x3B // Unused Flag
-#define FLAG_UNUSED_0x03C    		0x3C // Unused Flag
-#define FLAG_UNUSED_0x03D    		0x3D // Unused Flag
-#define FLAG_UNUSED_0x03E    		0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F    		0x3F // Unused Flag
-#define FLAG_UNUSED_0x040    		0x40 // Unused Flag
-#define FLAG_UNUSED_0x041    		0x41 // Unused Flag
-#define FLAG_UNUSED_0x042    		0x42 // Unused Flag
+#define FLAG_GOT_OLD_AMBER    		0x39
+#define FLAG_RESSURECTED_AERODACTYL 0x3A 
+#define FLAG_GOT_AERODACTYL_REWARD  0x3B // Undecided!
+#define FLAG_UNUSED_0x03C    		0x3C 
+#define FLAG_UNUSED_0x03E    		0x3E 
+#define FLAG_UNUSED_0x03F    		0x3F 
+#define FLAG_UNUSED_0x040    		0x40 
+#define FLAG_UNUSED_0x041    		0x41 
+#define FLAG_UNUSED_0x042    		0x42 
 #define FLAG_UNUSED_0x043    		0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    		0x44 // Unused Flag
 #define FLAG_UNUSED_0x045    		0x45 // Unused Flag
@@ -99,8 +98,8 @@
 #define FLAG_UNUSED_0x051    		0x51
 #define FLAG_UNUSED_0x052    		0x52
 #define FLAG_UNUSED_0x053    		0x53 
-#define FLAG_UNUSED_0x054    		0x54  // Unused Flag
-#define FLAG_UNUSED_0x055    		0x55  // Unused Flag
+#define FLAG_UNUSED_0x054    		0x54
+#define FLAG_UNUSED_0x055    		0x55  
 #define FLAG_UNUSED_0x056         	0x56  
 #define FLAG_UNUSED_0x057         	0x57
 #define FLAG_UNUSED_0x058           0x58

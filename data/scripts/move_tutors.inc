@@ -25,7 +25,7 @@ MoveTutor_Text_DreamEaterWhichMon::
     .string "Dream Eater?$"
 
 MoveTutor_EventScript_DreamEaterTaught::
-	msgbox MoveTutor_Text_SwaggerTaught, MSGBOX_DEFAULT
+	msgbox MoveTutor_Text_DreamEaterTaught, MSGBOX_DEFAULT
 	release
 	end
 
@@ -43,6 +43,56 @@ MoveTutor_Text_DreamEaterTeach::
     .string "Oogh, this is too spooky!\p"
     .string "Let me teach it to a Pokémon so\n"
     .string "I can forget about it!$"
+
+MoveTutor_SeismicToss::
+	lock
+	faceplayer
+	msgbox MoveTutor_Text_SeismicTossTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_SeismicTossDeclined
+	msgbox MoveTutor_Text_SeismicTossWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_DREAM_EATER
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_SeismicTossDeclined
+	goto MoveTutor_EventScript_SeismicTossTaught
+	end
+
+MoveTutor_EventScript_SeismicTossDeclined::
+	msgbox MoveTutor_Text_SeismicTossDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_SeismicTossDeclined::
+    .string "Is that so?\n"
+    .string "I'm sure you'll be back for it.$"
+
+MoveTutor_Text_SeismicTossWhichMon::
+    .string "Which Pokémon wants to learn\n"
+    .string "Seismic Toss?$"
+
+MoveTutor_EventScript_SeismicTossTaught::
+	msgbox MoveTutor_Text_SeismicTossTaught, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_SeismicTossTaught::
+    .string "I hope you won't toss in the towel.\n"
+    .string "Keep it up.$"
+
+MoveTutor_Text_SeismicTossTeach::
+    .string "The secrets of space…\n"
+    .string "The mysteries of earth…\p"
+    .string "There are so many things about\n"
+    .string "which we know so little.\p"
+    .string "But that should spur us to study\n"
+    .string "harder, not toss in the towel.\p"
+    .string "The only thing you should toss…\p"
+    .string "Well, how about Seismic Toss?\n"
+    .string "Should I teach that to a Pokémon?$"
+
+
+
+
+
 
 
 

@@ -21,7 +21,7 @@ ViridianCity_School_EventScript_Woman::
 	lock
 	faceplayer
 	msgbox ViridianCity_School_Text_ReadBlackboardCarefully, MSGBOX_DEFAULT
-	applymovement LOCALID_WOMAN, Common_Movement_FaceOriginalDirection
+	turnobject LOCALID_WOMAN, DIR_SOUTH
 	waitmovement 1
 	release
 	end

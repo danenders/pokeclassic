@@ -580,6 +580,8 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_JENNY                   0x1199
 #define OBJ_EVENT_PAL_TAG_SPEAROW                 0x119A
 #define OBJ_EVENT_PAL_TAG_JIGGLYPUFF              0x119B
+#define OBJ_EVENT_PAL_TAG_NIDORAN                 0x119C
+
 
 #define OBJ_EVENT_PAL_TAG_NONE 0x128D
 
@@ -749,6 +751,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_OfficerJenny,          OBJ_EVENT_PAL_TAG_JENNY},
     {gObjectEventPal_Spearow,               OBJ_EVENT_PAL_TAG_SPEAROW},
     {gObjectEventPal_Jigglypuff,            OBJ_EVENT_PAL_TAG_JIGGLYPUFF},
+    {gObjectEventPal_Nidoran,               OBJ_EVENT_PAL_TAG_NIDORAN},
     {NULL,                  0x0000},
 };
 

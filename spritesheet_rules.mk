@@ -2236,3 +2236,6 @@ $(OBJEVENTGFXDIR)/pokemon/spearow_overworld.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/pokemon/jigglypuff_overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
+$(OBJEVENTGFXDIR)/pokemon/nidoran_m_overworld.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
+

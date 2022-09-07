@@ -101,6 +101,27 @@ const struct MonCoords gTrainerFrontPicCoords[] =
     [TRAINER_PIC_DAWN] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_LUCAS_PLATINUM] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_DAWN_PLATINUM] = {.size = 8, .y_offset = 1},
+    
+    [TRAINER_PIC_LORELEI] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_BRUNO] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_AGATHA] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_LANCE] = {.size = 8, .y_offset = 1},
+
+    [TRAINER_PIC_GIOVANNI] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_JESSIE] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_JAMES] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_ROCKET_GRUNT_F] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_ROCKET_GRUNT_M] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_ROCKET_DUO] = {.size = 8, .y_offset = 1},
+
+    [TRAINER_PIC_BROCK] = {.size = 8, .y_offset = 1},   
+    [TRAINER_PIC_MISTY] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_SURGE] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_ERIKA] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_SABRINA] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_KOGA] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_BLAINE] = {.size = 8, .y_offset = 1},
+
 };
 
 #define TRAINER_SPRITE(trainerPic, sprite, size) [TRAINER_PIC_##trainerPic] = {sprite, size, TRAINER_PIC_##trainerPic}
@@ -208,6 +229,27 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(DAWN, gTrainerFrontPic_Dawn, 0x800),
     TRAINER_SPRITE(LUCAS_PLATINUM, gTrainerFrontPic_LucasPlatinum, 0x800),
     TRAINER_SPRITE(DAWN_PLATINUM, gTrainerFrontPic_DawnPlatinum, 0x800),
+
+    TRAINER_SPRITE(LORELEI, gTrainerFrontPic_Lorelei, 0x800),
+    TRAINER_SPRITE(BRUNO, gTrainerFrontPic_Bruno, 0x800),
+    TRAINER_SPRITE(AGATHA, gTrainerFrontPic_Agatha, 0x800),
+    TRAINER_SPRITE(LANCE, gTrainerFrontPic_Lance, 0x800),
+
+    TRAINER_SPRITE(GIOVANNI, gTrainerFrontPic_Giovanni, 0x800),
+    TRAINER_SPRITE(JESSIE, gTrainerFrontPic_Jessie, 0x800),
+    TRAINER_SPRITE(JAMES, gTrainerFrontPic_James, 0x800),
+    TRAINER_SPRITE(ROCKET_GRUNT_F, gTrainerFrontPic_RocketGruntF, 0x800),
+    TRAINER_SPRITE(ROCKET_GRUNT_M, gTrainerFrontPic_RocketGruntM, 0x800),
+    TRAINER_SPRITE(ROCKET_DUO, gTrainerFrontPic_RocketDuo, 0x800),
+
+    TRAINER_SPRITE(BROCK, gTrainerFrontPic_Brock, 0x800),
+    TRAINER_SPRITE(MISTY, gTrainerFrontPic_Misty, 0x800),
+    TRAINER_SPRITE(SURGE, gTrainerFrontPic_Surge, 0x800),
+    TRAINER_SPRITE(ERIKA, gTrainerFrontPic_Erika, 0x800),
+    TRAINER_SPRITE(SABRINA, gTrainerFrontPic_Sabrina, 0x800),
+    TRAINER_SPRITE(KOGA, gTrainerFrontPic_Koga, 0x800),
+    TRAINER_SPRITE(BLAINE, gTrainerFrontPic_Blaine, 0x800),
+
 };
 
 #define TRAINER_PAL(trainerPic, pal) [TRAINER_PIC_##trainerPic] = {pal, TRAINER_PIC_##trainerPic}
@@ -315,4 +357,16 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(DAWN, gTrainerPalette_Dawn),
     TRAINER_PAL(LUCAS_PLATINUM, gTrainerPalette_LucasPlatinum),
     TRAINER_PAL(DAWN_PLATINUM, gTrainerPalette_DawnPlatinum),
+
+    TRAINER_PAL(LORELEI, gTrainerPalette_Lorelei),
+    TRAINER_PAL(BRUNO, gTrainerPalette_Bruno),
+    TRAINER_PAL(AGATHA, gTrainerPalette_Agatha),
+    TRAINER_PAL(LANCE, gTrainerPalette_Lance),
+
+    TRAINER_PAL(GIOVANNI, gTrainerPalette_Giovanni),
+    TRAINER_PAL(JESSIE, gTrainerPalette_Jessie),
+    TRAINER_PAL(JAMES, gTrainerPalette_James),
+    TRAINER_PAL(ROCKET_GRUNT_F, gTrainerPalette_RocketGruntF),
+    TRAINER_PAL(ROCKET_GRUNT_M, gTrainerPalette_RocketGruntM),
+    TRAINER_PAL(ROCKET_DUO, gTrainerPalette_RocketDuo),
 };

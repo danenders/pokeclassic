@@ -49,7 +49,7 @@ const u8 gTrainerClassNames[][13] = {
     [TRAINER_CLASS_SAILOR] = _("Sailor"),
     [TRAINER_CLASS_COOLTRAINER_2] = _("Cooltrainer"),
     [TRAINER_CLASS_MAGMA_ADMIN] = _("Magma Admin"),
-    [TRAINER_CLASS_RIVAL] = _("{PKMN} Trainer"),
+    [TRAINER_CLASS_RIVAL] = _("Rival"),
     [TRAINER_CLASS_BUG_CATCHER] = _("Bug Catcher"),
     [TRAINER_CLASS_PKMN_RANGER] = _("{PKMN} Ranger"),
     [TRAINER_CLASS_MAGMA_LEADER] = _("Magma Leader"),
@@ -65,4 +65,7 @@ const u8 gTrainerClassNames[][13] = {
     [TRAINER_CLASS_PIKE_QUEEN] = _("Pike Queen"),
     [TRAINER_CLASS_PYRAMID_KING] = _("Pyramid King"),
     [TRAINER_CLASS_RS_PROTAG] = _("{PKMN} Trainer"),
+    [TRAINER_CLASS_ROCKET_DUO] = _("Rocket Duo"),
+    [TRAINER_CLASS_TEAM_ROCKET] = _("Team Rocket"),
+    [TRAINER_CLASS_ROCKET_BOSS] = _("Rocket Boss"),
 };

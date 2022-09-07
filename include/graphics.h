@@ -2980,6 +2980,26 @@ extern const u32 gTrainerFrontPic_Dawn[];
 extern const u32 gTrainerFrontPic_LucasPlatinum[];
 extern const u32 gTrainerFrontPic_DawnPlatinum[];
 
+extern const u32 gTrainerFrontPic_Lance[];
+extern const u32 gTrainerFrontPic_Lorelei[];
+extern const u32 gTrainerFrontPic_Bruno[];
+extern const u32 gTrainerFrontPic_Agatha[];
+
+extern const u32 gTrainerFrontPic_Giovanni[];
+extern const u32 gTrainerFrontPic_Jessie[];
+extern const u32 gTrainerFrontPic_James[];
+extern const u32 gTrainerFrontPic_RocketGruntF[];
+extern const u32 gTrainerFrontPic_RocketGruntM[];
+extern const u32 gTrainerFrontPic_RocketDuo[];
+
+extern const u32 gTrainerFrontPic_Brock[];
+extern const u32 gTrainerFrontPic_Misty[];
+extern const u32 gTrainerFrontPic_Surge[];
+extern const u32 gTrainerFrontPic_Erika[];
+extern const u32 gTrainerFrontPic_Sabrina[];
+extern const u32 gTrainerFrontPic_Koga[];
+extern const u32 gTrainerFrontPic_Blaine[];
+
 extern const u32 gTrainerPalette_Hiker[];
 extern const u32 gTrainerPalette_AquaGruntM[];
 extern const u32 gTrainerPalette_PokemonBreederF[];
@@ -3081,6 +3101,26 @@ extern const u32 gTrainerPalette_Lucas[];
 extern const u32 gTrainerPalette_Dawn[];
 extern const u32 gTrainerPalette_LucasPlatinum[];
 extern const u32 gTrainerPalette_DawnPlatinum[];
+
+extern const u32 gTrainerPalette_Lance[];
+extern const u32 gTrainerPalette_Lorelei[];
+extern const u32 gTrainerPalette_Bruno[];
+extern const u32 gTrainerPalette_Agatha[];
+
+extern const u32 gTrainerPalette_Giovanni[];
+extern const u32 gTrainerPalette_Jessie[];
+extern const u32 gTrainerPalette_James[];
+extern const u32 gTrainerPalette_RocketGruntF[];
+extern const u32 gTrainerPalette_RocketGruntM[];
+extern const u32 gTrainerPalette_RocketDuo[];
+
+extern const u32 gTrainerPalette_Brock[];
+extern const u32 gTrainerPalette_Misty[];
+extern const u32 gTrainerPalette_Surge[];
+extern const u32 gTrainerPalette_Erika[];
+extern const u32 gTrainerPalette_Sabrina[];
+extern const u32 gTrainerPalette_Koga[];
+extern const u32 gTrainerPalette_Blaine[];
 
 extern const u8 gTrainerBackPic_Brendan[];
 extern const u8 gTrainerBackPic_May[];
