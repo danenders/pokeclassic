@@ -244,6 +244,38 @@ static const struct MatchCallAide sAideMatchCallHeader =
     .locationData = sAideLocationData
 };
 
+static const match_call_text_data_t sScottTextScripts[] = {
+    { MatchCall_Text_ScottBusy,         0xFFFF,                         0xFFFF },
+    { MatchCall_Text_ScottCerulean,     FLAG_VISITED_CERULEAN_CITY,     0xFFFF },
+    { MatchCall_Text_ScottGotBadge2,    FLAG_BADGE02_GET,               0xFFFF },
+    { MatchCall_Text_ScottVermilion,    FLAG_VISITED_VERMILION_CITY,    0xFFFF },
+    { MatchCall_Text_ScottGotBadge3,    FLAG_BADGE03_GET,               0xFFFF },
+    { MatchCall_Text_ScottCeladon,      FLAG_VISITED_CELADON_CITY,      0xFFFF },
+    { MatchCall_Text_ScottGotBadge4,    FLAG_BADGE04_GET,               0xFFFF },
+    { MatchCall_Text_ScottSaffron,      FLAG_VISITED_SAFFRON_CITY,      0xFFFF },
+    { MatchCall_Text_ScottGotBadge5,    FLAG_BADGE05_GET,               0xFFFF },
+    { MatchCall_Text_ScottFuchsia,      FLAG_VISITED_FUCHSIA_CITY,      0xFFFF },
+    { MatchCall_Text_ScottGotBadge6,    FLAG_BADGE06_GET,               0xFFFF },
+    { MatchCall_Text_ScottCinnabar,     FLAG_VISITED_CINNABAR_ISLAND,   0xFFFF },
+    { MatchCall_Text_ScottGotBadge7,    FLAG_BADGE07_GET,               0xFFFF },
+    { MatchCall_Text_ScottFinalBadge,   FLAG_GOT_SEVEN_BADGES,          0xFFFF },
+    { MatchCall_Text_ScottPkmnLeague,   FLAG_BADGE08_GET,               0xFFFF },
+    { MatchCall_Text_ScottThisIsIt,     FLAG_VISITED_INDIGO_PLATEAU,    0xFFFF },
+    { MatchCall_Text_ScottNoService,    FLAG_SYS_GAME_CLEAR,            0xFFFF },
+    { NULL,                  0xFFFF,                                    0xFFFF }
+};
+
+
+static const struct MatchCallStructNPC sScottMatchCallHeader =
+{
+    .type = 0,
+    .mapSec = MAPSEC_NONE,
+    .flag = FLAG_REGISTERED_SCOTT,
+    .desc = gText_ScottMatchCallDesc,
+    .name = gText_ScottMatchCallName,
+    .textData = sScottTextScripts
+};
+
 //UNUSED
 static const match_call_text_data_t sMrStoneTextScripts[] = {
     { MatchCall_Text_MrStone2,  0xFFFF, 0xFFFF },
@@ -289,22 +321,6 @@ static const struct MatchCallStructNPC sStevenMatchCallHeader =
     .desc = gText_StevenMatchCallDesc,
     .name = gText_StevenMatchCallName,
     .textData = sStevenTextScripts
-};
-
-static const match_call_text_data_t sScottTextScripts[] = {
-    { MatchCall_Text_Scott1, 0xFFFF,                              0xFFFF },
-    { NULL,                  0xFFFF,                              0xFFFF }
-};
-
-
-static const struct MatchCallStructNPC sScottMatchCallHeader =
-{
-    .type = 0,
-    .mapSec = MAPSEC_NONE,
-    .flag = FLAG_SYS_GAME_CLEAR, //PLACEHOLDER
-    .desc = gText_ScottMatchCallDesc,
-    .name = gText_ScottMatchCallName,
-    .textData = sScottTextScripts
 };
 
 static const match_call_text_data_t sRoxanneTextScripts[] = {

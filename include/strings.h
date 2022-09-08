@@ -2413,15 +2413,6 @@ extern const u8 MatchCall_Text_Steven4[];
 extern const u8 MatchCall_Text_Steven5[];
 extern const u8 MatchCall_Text_Steven6[];
 extern const u8 MatchCall_Text_Steven7[];
-
-
-extern const u8 MatchCall_Text_Scott1[];
-extern const u8 MatchCall_Text_Scott2[];
-extern const u8 MatchCall_Text_Scott3[];
-extern const u8 MatchCall_Text_Scott4[];
-extern const u8 MatchCall_Text_Scott5[];
-extern const u8 MatchCall_Text_Scott6[];
-extern const u8 MatchCall_Text_Scott7[];
 extern const u8 MatchCall_Text_Roxanne1[];
 extern const u8 MatchCall_Text_Roxanne2[];
 extern const u8 MatchCall_Text_Roxanne3[];
@@ -2465,6 +2456,27 @@ extern const u8 MatchCall_Text_MomGameClear[];
 extern const u8 gText_ProfOakMatchCallDesc[];
 extern const u8 gText_ProfOakMatchCallName[];
 
+extern const u8 gText_ScottMatchCallDesc[];
+extern const u8 gText_ScottMatchCallName[];
+extern const u8 MatchCall_Text_ScottBusy[];
+extern const u8 MatchCall_Text_ScottCerulean[];
+extern const u8 MatchCall_Text_ScottGotBadge2[];
+extern const u8 MatchCall_Text_ScottVermilion[];
+extern const u8 MatchCall_Text_ScottGotBadge3[];
+extern const u8 MatchCall_Text_ScottCeladon[];
+extern const u8 MatchCall_Text_ScottGotBadge4[];
+extern const u8 MatchCall_Text_ScottSaffron[];
+extern const u8 MatchCall_Text_ScottGotBadge5[];
+extern const u8 MatchCall_Text_ScottFuchsia[];
+extern const u8 MatchCall_Text_ScottGotBadge6[];
+extern const u8 MatchCall_Text_ScottCinnabar[];
+extern const u8 MatchCall_Text_ScottGotBadge7[];
+extern const u8 MatchCall_Text_ScottFinalBadge[];
+extern const u8 MatchCall_Text_ScottPkmnLeague[];
+extern const u8 MatchCall_Text_ScottThisIsIt[];
+extern const u8 MatchCall_Text_ScottGameClear[];
+extern const u8 MatchCall_Text_ScottNoService[];
+
 extern const u8 gText_AideMatchCallDesc[];
 extern const u8 gText_AideMatchCallName[];
 extern const u8 MatchCall_Text_AideWatchingProgress[]; //If no aide location is set
@@ -2491,8 +2503,6 @@ extern const u8 gText_StevenMatchCallName[];
 
 extern const u8 gText_NormanMatchCallDesc[];
 extern const u8 gText_NormanMatchCallName[];
-extern const u8 gText_ScottMatchCallDesc[];
-extern const u8 gText_ScottMatchCallName[];
 extern const u8 gText_RoxanneMatchCallDesc[];
 extern const u8 gText_BrawlyMatchCallDesc[];
 extern const u8 gText_WattsonMatchCallDesc[];

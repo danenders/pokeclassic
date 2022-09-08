@@ -5763,5 +5763,45 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_BugCatcherCharlie),
         .party = {.NoItemDefaultMoves = sParty_BugCatcherCharlie}
     },
+
+//Pewter Gym
+    [TRAINER_CAMPER_LIAM] = {
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_CAMPER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CAMPER,
+        .trainerName = _("Liam"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_CamperLiam),
+        .party = {.NoItemCustomMoves = sParty_CamperLiam}
+    },
+
+    [TRAINER_LEADER_BROCK] = {
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BROCK,
+        .trainerName = _("Brock"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_LeaderBrock),
+        .party = {.NoItemCustomMoves = sParty_LeaderBrock}
+    },
+
+
+
+
+
+
+
+
+
+
+
+
 };
+
 

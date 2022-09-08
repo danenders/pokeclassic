@@ -11,6 +11,145 @@ MatchCall_Text_RegisteredOak: @ 82B603A
 	.string "Registered Professor Oak\n"
 	.string "in your Cell Phone.$"
 
+MatchCall_Text_RegisteredScott:
+	.string "Registered Scott\n"
+	.string "in your Cell Phone.$"
+
+MatchCall_Text_ScottBusy::
+	.string "… beep … beep … beep …\p"
+	.string "Scott's line seems to be'\n"
+	.string "busy…$"
+
+MatchCall_Text_ScottCerulean::
+	.string "Scott: Hey! Champ in the making!\p"
+	.string "You made it to Cerulean City!\p"
+	.string "You going to challenge Misty?\n"
+	.string "Better bring a swimsuit! Ha!\p"
+	.string "Let's see if I was right about\n"
+	.string "you. See you at the gym!$"
+
+MatchCall_Text_ScottGotBadge2::
+	.string "Scott: Hey! Champ in the making!\p"
+	.string "Congratulations on earning your\n"
+	.string "Cascade Badge!\p"
+	.string "You're really getting the hang of this!$"
+
+MatchCall_Text_ScottVermilion::
+	.string "Scott: Hey! Champ in the making!\p"
+	.string "I heard you reached Vermilion City!\p"
+	.string "Planning to take on Lt. Surge?\p"
+	.string "Great! I'll be watching!$"
+
+MatchCall_Text_ScottGotBadge3::
+	.string "Scott: Hey! Champ in the making!\p"
+	.string "What a match! I knew you'd be able\n"
+	.string "to get that Thunder Badge!\p"
+	.string "But it only gets harder from here!$"
+
+MatchCall_Text_ScottCeladon::
+	.string "Scott: Hey! Champ in the making!\p"
+	.string "So you made it to Celadon City!\p"
+	.string "Maybe I'll take a break from the\n"
+	.string "game corner and catch your match!$"
+
+MatchCall_Text_ScottGotBadge4::
+	.string "Scott: Hey! Champ in the making!\p"
+	.string "I'm glad I didn't miss that match.\n"
+	.string "What a show!\p"
+	.string "You're definitely making a name for\n"
+	.string "for yourself!$"
+
+MatchCall_Text_ScottSaffron::
+	.string "Scott: Hey! Champ in the making!\p"
+	.string "I was hoping to catch you in\n"
+	.string "Saffron City, but there were all\l"
+	.string "these Team Rocket grunts around!\p"
+	.string "Did you know anything about that?$"
+
+MatchCall_Text_ScottGotBadge5::
+	.string "Scott: Hey! Champ in the making!\p"
+	.string "If Sabrina had read my mind,\n"
+	.string "she'd know I never had any doubts!\p"
+	.string "Great job earning your Marsh Badge!$"
+
+MatchCall_Text_ScottFuchsia::
+	.string "Scott: Hey! Champ in the making!\p"
+	.string "What's that? You're in Fuchsia?\n"
+	.string "City, too?\p"
+	.string "Come again?\n"
+	.string "Yeah! I'm over at the Safari Zone!\p"
+	.string "Sorry, I didn't catch that!\p"
+	.string "I can't hear you over all these\n"
+	.string "wild Tauros...\p"
+	.string "They kind of look like they're going\n"
+	.string "to stampede!\p"
+	.string "... ... ...\p"
+	.string "I gotta go!$"
+
+MatchCall_Text_ScottGotBadge6::
+	.string "Scott: Hey! Champ in the making!\p"
+	.string "Even with his tricks, Koga didn't\n"
+	.string "stand a chance!\p"
+	.string "That's how many badges now?\p"
+	.string "You're on quite a roll!$"
+
+MatchCall_Text_ScottCinnabar::
+	.string "Scott: Hey! Champ in the making!\p"
+	.string "Are you heading to Cinnabar Island\n"
+	.string "to take on Blaine?\p"
+	.string "I'll see you there!$"
+
+MatchCall_Text_ScottGotBadge7::
+	.string "Scott: Hey! Champ in the making!\p"
+	.string "You could really feel the heat\n"
+	.string "from that match!\p"
+	.string "But don't get cocky!\n"
+	.string "On to the next badge!$"
+
+MatchCall_Text_ScottFinalBadge::
+	.string "Scott: Hey! Champ in the making!\p"
+	.string "So, one more badge to go!\p"
+	.string "Did you hear that the Leader\n"
+	.string "of Viridian City's Gym has\l"
+	.string "returned?\p"
+	.string "No one knows much about them,\n"
+	.string "so this should prove interesting.$"
+
+MatchCall_Text_ScottPkmnLeague::
+	.string "Scott: Hey! Champ in the making!\p"
+	.string "Wow! All eight badges!\p"
+	.string "Ever since I saw you face Brock,\n"
+	.string "I knew you were different.\p"
+	.string "But is that enough to beat the\n"
+	.string "Elite Four?$"
+
+MatchCall_Text_ScottThisIsIt::
+	.string "Scott: Hey! Champ in the making!\p"
+	.string "What can I say...\n"
+	.string "You've made it to Indigo Plateau.\p"
+	.string "Let's get this happening!$"
+
+MatchCall_Text_ScottNoService::
+	.string "… … … … … …\n"
+	.string "… … … … … …\p"
+	.string "Scott appears to be out of\n"
+	.string "the Cell Phone's service area…$"
+
+MatchCall_Text_ScottGameClear::
+	.string "Scott: Hey, champ in -!\p"
+	.string "Wait, I guess it's just Champ\n"
+	.string "now!\p"
+	.string "But, I'll let you in on a little\n"
+	.string "secret.\p"
+	.string "Your journey doesn't end at the\n"
+	.string "Pokémon League!\p"
+	.string "There's somewhere even better.\p"
+	.string "But, that's all I'm willing to say\n"
+	.string "for the time being.\p"
+	.string "It's something you can look\n"
+	.string "forward to.\p"
+	.string "I'll call you when it's ready.$"
+
 MatchCall_Text_Mom1::
 	.string "Mom: Oh? {PLAYER}!\p"
 	.string "I'm so happy you called!\p"
@@ -2564,75 +2703,6 @@ MatchCall_Text_BrendanRayquazaCall:
 	.string "{PLAYER}.\p"
 	.string "… … … … … …\n"
 	.string "… … … … … Click!$"
-
-MatchCall_Text_Scott1:: @ 2B5184
-	.string "Scott: Howdy, {PLAYER}{KUN}!\p"
-	.string "You know how Pokémon can be found\n"
-	.string "everywhere?\p"
-	.string "Like in the mountains, in the sea,\n"
-	.string "in tall grass anywhere?\p"
-	.string "Just like Pokémon, you can find\n"
-	.string "Trainers everywhere, too.\p"
-	.string "As a result, I have to hurry\n"
-	.string "everywhere, too. Busy, busy!$"
-
-MatchCall_Text_Scott2:: @ 2B5275
-	.string "Scott: I'm on Route 119 right now.\n"
-	.string "It's teeming with Trainers!\p"
-	.string "It's also overgrown with tall grass\n"
-	.string "everywhere, it seems.\p"
-	.string "Walking around in shorts here\n"
-	.string "makes me all ticklish!$"
-
-MatchCall_Text_Scott3:: @ 2B5323
-	.string "Scott: Hi, hi, {PLAYER}{KUN}!\p"
-	.string "Have you had the chance to climb\n"
-	.string "Mt. Pyre?\p"
-	.string "The place is a memorial to Pokémon\n"
-	.string "that have passed away.\p"
-	.string "It's somewhere every Trainer\n"
-	.string "should climb to the top of once.$"
-
-MatchCall_Text_Scott4:: @ 2B53DB
-	.string "Scott: Hi, {PLAYER}{KUN}!\p"
-	.string "I've been hearing about these odd\n"
-	.string "gangs being a nuisance.\p"
-	.string "Team Magma and Team Aqua,\n"
-	.string "I think they were.\p"
-	.string "I would think there'd be some\n"
-	.string "skilled Trainers among them.\p"
-	.string "…But if they're thugs…$"
-
-MatchCall_Text_Scott5:: @ 2B54A5
-	.string "Scott: Oh, hi, {PLAYER}{KUN}.\p"
-	.string "Might there be tough Trainers\n"
-	.string "at the bottom of the sea?\p"
-	.string "I can't go check for myself.\n"
-	.string "I can't swim, for one.\l"
-	.string "And I don't raise Pokémon…$"
-
-MatchCall_Text_Scott6:: @ 2B5541
-	.string "Scott: Hi, hi, {PLAYER}{KUN}!\p"
-	.string "You know that you can challenge\n"
-	.string "the Pokémon League when you've\l"
-	.string "collected all the Gym Badges?\p"
-	.string "With your talent, becoming the\n"
-	.string "Champion isn't a pipe dream.\p"
-	.string "But did you know?\n"
-	.string "There's somewhere even better.\p"
-	.string "But, that's all I'm willing to say\n"
-	.string "for the time being.\p"
-	.string "It's something you can look\n"
-	.string "forward to.\p"
-	.string "When you've won your way through\n"
-	.string "the Pokémon League into the Hall\l"
-	.string "of Fame!$"
-
-MatchCall_Text_Scott7::
-	.string "… … … … … …\n"
-	.string "… … … … … …\p"
-	.string "Scott appears to be out of\n"
-	.string "the Pokénav's service area…$"
 
 MatchCall_Text_Norman1:: @ 82B5719
 	.string "Dad: In Rustboro, there's a man\n"

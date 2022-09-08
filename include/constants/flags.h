@@ -75,7 +75,7 @@
 #define FLAG_GOT_OLD_AMBER    		0x39
 #define FLAG_RESSURECTED_AERODACTYL 0x3A 
 #define FLAG_GOT_AERODACTYL_REWARD  0x3B // Undecided!
-#define FLAG_UNUSED_0x03C    		0x3C 
+#define FLAG_GOT_BROCK_REWARD    	0x3C 
 #define FLAG_UNUSED_0x03E    		0x3E 
 #define FLAG_UNUSED_0x03F    		0x3F 
 #define FLAG_UNUSED_0x040    		0x40 
@@ -1298,8 +1298,8 @@
 #define FLAG_UNUSED_0x4E8                                           0x4E8 // Unused Flag
 #define FLAG_UNUSED_0x4E9                                           0x4E9 // Unused Flag
 #define FLAG_UNUSED_0x4EA                                           0x4EA // Unused Flag
-#define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag
-#define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
+#define FLAG_GOT_SEVEN_BADGES                                       0x4EB // Used for Scott Match Call tracking
+#define FLAG_REGISTERED_SCOTT                                       0x4EC
 #define FLAG_REGISTERED_AIDE                                        0x4ED
 #define FLAG_REGISTERED_DAISY                                       0x4EE
 #define FLAG_REGISTERED_RIVAL                            			0x4EF
@@ -1531,7 +1531,7 @@
 #define FLAG_UNUSED_SYSTEM_FLAG_0xA2            	(SYSTEM_FLAGS + 0xA2) 
 #define FLAG_UNUSED_SYSTEM_FLAG_0xA3           		(SYSTEM_FLAGS + 0xA3) 
 #define FLAG_UNUSED_SYSTEM_FLAG_0xA4                (SYSTEM_FLAGS + 0xA4) 
-#define FLAG_ENABLE_SCOTT_MATCH_CALL                (SYSTEM_FLAGS + 0xA5) // Retained for match call
+#define FLAG_UNUSED_SYSTEM_FLAG_0xA5                (SYSTEM_FLAGS + 0xA5)
 #define FLAG_UNUSED_SYSTEM_FLAG_0xA6                (SYSTEM_FLAGS + 0xA6) 
 #define FLAG_UNUSED_SYSTEM_FLAG_0xA7              	(SYSTEM_FLAGS + 0xA7) 
 #define FLAG_UNUSED_SYSTEM_FLAG_0xA8                (SYSTEM_FLAGS + 0xA8) 
@@ -1567,16 +1567,21 @@
 #define FLAG_DAILY_PICKED_LOTO_TICKET     			(DAILY_FLAGS_START + 0x1)
 #define FLAG_DAILY_SECRET_BASE                      (DAILY_FLAGS_START + 0x2)
 #define FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY     (DAILY_FLAGS_START + 0x3)
-#define FLAG_UNUSED_0x924                           (DAILY_FLAGS_START + 0x4)  // Unused Flag
-#define FLAG_UNUSED_0x925                           (DAILY_FLAGS_START + 0x5)  // Unused Flag
-#define FLAG_UNUSED_0x926                           (DAILY_FLAGS_START + 0x6)  // Unused Flag
-#define FLAG_UNUSED_0x927                           (DAILY_FLAGS_START + 0x7)  // Unused Flag
-#define FLAG_UNUSED_0x928                           (DAILY_FLAGS_START + 0x8)  // Unused Flag
-#define FLAG_UNUSED_0x929                           (DAILY_FLAGS_START + 0x9)  // Unused Flag
-#define FLAG_UNUSED_0x92A               			(DAILY_FLAGS_START + 0xA)  // Unused Flag
-#define FLAG_UNUSED_0x92B        					(DAILY_FLAGS_START + 0xB)  // Unused Flag
-#define FLAG_UNUSED_0x92C         					(DAILY_FLAGS_START + 0xC)  // Unused Flag
-#define FLAG_UNUSED_0x92D      						(DAILY_FLAGS_START + 0xD)  // Unused Flag
+
+//Gym Leader Daily Rematches
+#define FLAG_DAILY_BROCK_REMATCH                    (DAILY_FLAGS_START + 0x4)
+#define FLAG_DAILY_MISTY_REMATCH                    (DAILY_FLAGS_START + 0x5)
+#define FLAG_DAILY_SURGE_REMATCH                    (DAILY_FLAGS_START + 0x6)
+#define FLAG_DAILY_ERIKA_REMATCH                    (DAILY_FLAGS_START + 0x7)
+#define FLAG_DAILY_SABRINA_REMATCH                  (DAILY_FLAGS_START + 0x8)
+#define FLAG_DAILY_KOGA_REMATCH                     (DAILY_FLAGS_START + 0x9)
+#define FLAG_DAILY_BLAINE_REMATCH               	(DAILY_FLAGS_START + 0xA)
+#define FLAG_DAILY_RIVAL_REMATCH        			(DAILY_FLAGS_START + 0xB)
+
+//Title Match Flags
+#define FLAG_DAILY_IS_CURRENTLY_CHAMPION            (DAILY_FLAGS_START + 0xC)  // Champion status resets every day. Used for post-game content and dialogue differences
+#define FLAG_DAILY_TITLE_MATCH     					(DAILY_FLAGS_START + 0xD)  // You only get one shot to retain the title every day.
+
 #define FLAG_UNUSED_0x92E        					(DAILY_FLAGS_START + 0xE)  // Unused Flag
 #define FLAG_UNUSED_0x92F          					(DAILY_FLAGS_START + 0xF)  // Unused Flag
 #define FLAG_UNUSED_0x930       					(DAILY_FLAGS_START + 0x10)  // Unused Flag
@@ -1584,7 +1589,6 @@
 #define FLAG_UNUSED_0x932        					(DAILY_FLAGS_START + 0x12)  // Unused Flag
 #define FLAG_UNUSED_0x933                           (DAILY_FLAGS_START + 0x13)   // Unused Flag
 #define FLAG_UNUSED_0x934                			(DAILY_FLAGS_START + 0x14)  // Unused Flag
-
 #define FLAG_UNUSED_0x935                           (DAILY_FLAGS_START + 0x15) // Unused Flag
 #define FLAG_UNUSED_0x936                           (DAILY_FLAGS_START + 0x16) // Unused Flag
 #define FLAG_UNUSED_0x937                           (DAILY_FLAGS_START + 0x17) // Unused Flag

@@ -369,4 +369,12 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(ROCKET_GRUNT_F, gTrainerPalette_RocketGruntF),
     TRAINER_PAL(ROCKET_GRUNT_M, gTrainerPalette_RocketGruntM),
     TRAINER_PAL(ROCKET_DUO, gTrainerPalette_RocketDuo),
+
+    TRAINER_PAL(BROCK, gTrainerPalette_Brock),
+    TRAINER_PAL(MISTY, gTrainerPalette_Misty),
+    TRAINER_PAL(SURGE, gTrainerPalette_Surge),
+    TRAINER_PAL(ERIKA, gTrainerPalette_Erika),
+    TRAINER_PAL(SABRINA, gTrainerPalette_Sabrina),
+    TRAINER_PAL(KOGA, gTrainerPalette_Koga),
+    TRAINER_PAL(BLAINE, gTrainerPalette_Blaine),
 };
