@@ -816,8 +816,8 @@ gText_PlayerWhitedOut::
 	.string "Pokémon!\p{PLAYER} whited out!$"
 
 gText_RegisteredTrainerinPokeNav::
-	.string "Registered {STR_VAR_1} {STR_VAR_2}\n"
-	.string "in the PokéNav.$"
+	.string "{STR_VAR_1} {STR_VAR_2} gave you\n"
+	.string "their Cell Phone number.$"
 
 gText_ComeBackWithSecretPower::
 	.string "Do you know the TM Secret Power?\p"

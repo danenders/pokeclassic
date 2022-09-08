@@ -367,112 +367,111 @@
 #define NUM_WONDER_CARD_FLAGS                (1 + FLAG_WONDER_CARD_UNUSED_17 - FLAG_RECEIVED_AURORA_TICKET)
 
 // Trainer Rematch Flags
-#define FLAG_MATCH_CALL_REGISTERED           0x15C
-#define FLAG_REMATCH_ROSE                    0x15D
-#define FLAG_REMATCH_ANDRES                  0x15E
-#define FLAG_REMATCH_DUSTY                   0x15F
-#define FLAG_REMATCH_LOLA                    0x160
-#define FLAG_REMATCH_RICKY                   0x161
-#define FLAG_REMATCH_LILA_AND_ROY            0x162
-#define FLAG_REMATCH_CRISTIN                 0x163
-#define FLAG_REMATCH_BROOKE                  0x164
-#define FLAG_REMATCH_WILTON                  0x165
-#define FLAG_REMATCH_VALERIE                 0x166
-#define FLAG_REMATCH_CINDY                   0x167
-#define FLAG_REMATCH_THALIA                  0x168
-#define FLAG_REMATCH_JESSICA                 0x169
-#define FLAG_REMATCH_WINSTON                 0x16A
-#define FLAG_REMATCH_STEVE                   0x16B
-#define FLAG_REMATCH_TONY                    0x16C
-#define FLAG_REMATCH_NOB                     0x16D
-#define FLAG_REMATCH_KOJI                    0x16E
-#define FLAG_REMATCH_FERNANDO                0x16F
-#define FLAG_REMATCH_DALTON                  0x170
-#define FLAG_REMATCH_BERNIE                  0x171
-#define FLAG_REMATCH_ETHAN                   0x172
-#define FLAG_REMATCH_JOHN_AND_JAY            0x173
-#define FLAG_REMATCH_JEFFREY                 0x174
-#define FLAG_REMATCH_CAMERON                 0x175
-#define FLAG_REMATCH_JACKI                   0x176
-#define FLAG_REMATCH_WALTER                  0x177
-#define FLAG_REMATCH_KAREN                   0x178
-#define FLAG_REMATCH_JERRY                   0x179
-#define FLAG_REMATCH_ANNA_AND_MEG            0x17A
-#define FLAG_REMATCH_ISABEL                  0x17B
-#define FLAG_REMATCH_MIGUEL                  0x17C
-#define FLAG_REMATCH_TIMOTHY                 0x17D
-#define FLAG_REMATCH_SHELBY                  0x17E
-#define FLAG_REMATCH_CALVIN                  0x17F
-#define FLAG_REMATCH_ELLIOT                  0x180
-#define FLAG_REMATCH_ISAIAH                  0x181
-#define FLAG_REMATCH_MARIA                   0x182
-#define FLAG_REMATCH_ABIGAIL                 0x183
-#define FLAG_REMATCH_DYLAN                   0x184
-#define FLAG_REMATCH_KATELYN                 0x185
-#define FLAG_REMATCH_BENJAMIN                0x186
-#define FLAG_REMATCH_PABLO                   0x187
-#define FLAG_REMATCH_NICOLAS                 0x188
-#define FLAG_REMATCH_ROBERT                  0x189
-#define FLAG_REMATCH_LAO                     0x18A
-#define FLAG_REMATCH_CYNDY                   0x18B
-#define FLAG_REMATCH_MADELINE                0x18C
-#define FLAG_REMATCH_JENNY                   0x18D
-#define FLAG_REMATCH_DIANA                   0x18E
-#define FLAG_REMATCH_AMY_AND_LIV             0x18F
-#define FLAG_REMATCH_ERNEST                  0x190
-#define FLAG_REMATCH_CORY                    0x191
-#define FLAG_REMATCH_EDWIN                   0x192
-#define FLAG_REMATCH_LYDIA                   0x193
-#define FLAG_REMATCH_ISAAC                   0x194
-#define FLAG_REMATCH_GABRIELLE               0x195
-#define FLAG_REMATCH_CATHERINE               0x196
-#define FLAG_REMATCH_JACKSON                 0x197
-#define FLAG_REMATCH_HALEY                   0x198
-#define FLAG_REMATCH_JAMES                   0x199
-#define FLAG_REMATCH_TRENT                   0x19A
-#define FLAG_REMATCH_SAWYER                  0x19B
-#define FLAG_REMATCH_KIRA_AND_DAN            0x19C
-#define FLAG_REMATCH_WALLY                   0x19D
-#define FLAG_REMATCH_ROXANNE                 0x19E
-#define FLAG_REMATCH_BRAWLY                  0x19F
-#define FLAG_REMATCH_WATTSON                 0x1A0
-#define FLAG_REMATCH_FLANNERY                0x1A1
-#define FLAG_REMATCH_NORMAN                  0x1A2
-#define FLAG_REMATCH_WINONA                  0x1A3
-#define FLAG_REMATCH_TATE_AND_LIZA           0x1A4
-// Note: FLAG_REMATCH_JUAN is handled by FLAG_ENABLE_JUAN_MATCH_CALL instead.
-#define FLAG_REMATCH_SIDNEY                  0x1A5
-#define FLAG_REMATCH_PHOEBE                  0x1A6
-#define FLAG_REMATCH_GLACIA                  0x1A7
-#define FLAG_REMATCH_DRAKE                   0x1A8
-#define FLAG_REMATCH_WALLACE                 0x1A9
+#define FLAG_MATCH_CALL_REGISTERED              0x15C
+#define FLAG_REMATCH_JANICE                  0x15D
+#define FLAG_REMATCH_UNUSED_1                  0x15E
+#define FLAG_REMATCH_UNUSED_2                  0x15F
+#define FLAG_REMATCH_UNUSED_3                  0x160
+#define FLAG_REMATCH_UNUSED_4                  0x161
+#define FLAG_REMATCH_UNUSED_5                  0x162
+#define FLAG_REMATCH_UNUSED_6                  0x163
+#define FLAG_REMATCH_UNUSED_7                  0x164
+#define FLAG_REMATCH_UNUSED_8                  0x165
+#define FLAG_REMATCH_UNUSED_9                  0x166
+#define FLAG_REMATCH_UNUSED_10                 0x167
+#define FLAG_REMATCH_UNUSED_11                 0x168
+#define FLAG_REMATCH_UNUSED_12                 0x169
+#define FLAG_REMATCH_UNUSED_13                 0x16A
+#define FLAG_REMATCH_UNUSED_14                 0x16B
+#define FLAG_REMATCH_UNUSED_15                 0x16C
+#define FLAG_REMATCH_UNUSED_16                 0x16D
+#define FLAG_REMATCH_UNUSED_17                 0x16E
+#define FLAG_REMATCH_UNUSED_18                 0x16F
+#define FLAG_REMATCH_UNUSED_19                 0x170
+#define FLAG_REMATCH_UNUSED_20                 0x171
+#define FLAG_REMATCH_UNUSED_21                 0x172
+#define FLAG_REMATCH_UNUSED_22                 0x173
+#define FLAG_REMATCH_UNUSED_23                 0x174
+#define FLAG_REMATCH_UNUSED_24                 0x175
+#define FLAG_REMATCH_UNUSED_25                 0x176
+#define FLAG_REMATCH_UNUSED_26                 0x177
+#define FLAG_REMATCH_UNUSED_27                 0x178
+#define FLAG_REMATCH_UNUSED_28                 0x179
+#define FLAG_REMATCH_UNUSED_29                 0x17A
+#define FLAG_REMATCH_UNUSED_30                 0x17B
+#define FLAG_REMATCH_UNUSED_31                 0x17C
+#define FLAG_REMATCH_UNUSED_32                 0x17D
+#define FLAG_REMATCH_UNUSED_33                 0x17E
+#define FLAG_REMATCH_UNUSED_34                 0x17F
+#define FLAG_REMATCH_UNUSED_35                 0x180
+#define FLAG_REMATCH_UNUSED_36                 0x181
+#define FLAG_REMATCH_UNUSED_37                 0x182
+#define FLAG_REMATCH_UNUSED_38                 0x183
+#define FLAG_REMATCH_UNUSED_39                 0x184
+#define FLAG_REMATCH_UNUSED_40                 0x185
+#define FLAG_REMATCH_UNUSED_41                 0x186
+#define FLAG_REMATCH_UNUSED_42                 0x187
+#define FLAG_REMATCH_UNUSED_43                 0x188
+#define FLAG_REMATCH_UNUSED_44                 0x189
+#define FLAG_REMATCH_UNUSED_45                 0x18A
+#define FLAG_REMATCH_UNUSED_46                 0x18B
+#define FLAG_REMATCH_UNUSED_47                 0x18C
+#define FLAG_REMATCH_UNUSED_48                 0x18D
+#define FLAG_REMATCH_UNUSED_49                 0x18E
+#define FLAG_REMATCH_UNUSED_50                 0x18F
+#define FLAG_REMATCH_UNUSED_51                 0x190
+#define FLAG_REMATCH_UNUSED_52                 0x191
+#define FLAG_REMATCH_UNUSED_53                 0x192
+#define FLAG_REMATCH_UNUSED_54                 0x193
+#define FLAG_REMATCH_UNUSED_55                 0x194
+#define FLAG_REMATCH_UNUSED_56                 0x195
+#define FLAG_REMATCH_UNUSED_57                 0x196
+#define FLAG_REMATCH_UNUSED_58                 0x197
+#define FLAG_REMATCH_UNUSED_59                 0x198
+#define FLAG_REMATCH_UNUSED_60                 0x199
+#define FLAG_REMATCH_UNUSED_61                 0x19A
+#define FLAG_REMATCH_UNUSED_62                 0x19B
+#define FLAG_REMATCH_UNUSED_63                 0x19C
+#define FLAG_REMATCH_SPECIAL_TRAINER           0x19D //Special Rematches Start here. Unused aside from rematch enums
+#define FLAG_REMATCH_ELITE_FOUR                0x19E // Unused aside from rematch enums
 
 // Mew Flags
-#define FLAG_CAUGHT_MEW                  	 0x1AA
-#define FLAG_DEFEATED_MEW                 	 0x1AB
-#define FLAG_HIDE_MEW            		 	 0x1AC
-#define FLAG_SHOWN_OLD_SEA_MAP               0x1AD
+#define FLAG_CAUGHT_MEW                  	 0x19F
+#define FLAG_DEFEATED_MEW                 	 0x1A0
+#define FLAG_HIDE_MEW            		 	 0x1A1
+#define FLAG_SHOWN_OLD_SEA_MAP               0x1A2
 
 //Move Tutor Flags
-#define FLAG_MOVE_TUTOR_TAUGHT_SWAGGER       0x1AE
-#define FLAG_MOVE_TUTOR_TAUGHT_ROLLOUT       0x1AF
-#define FLAG_MOVE_TUTOR_TAUGHT_FURY_CUTTER   0x1B0
-#define FLAG_MOVE_TUTOR_TAUGHT_MIMIC         0x1B1
-#define FLAG_MOVE_TUTOR_TAUGHT_METRONOME     0x1B2
-#define FLAG_MOVE_TUTOR_TAUGHT_SLEEP_TALK    0x1B3
-#define FLAG_MOVE_TUTOR_TAUGHT_SUBSTITUTE    0x1B4
-#define FLAG_MOVE_TUTOR_TAUGHT_DYNAMICPUNCH  0x1B5
-#define FLAG_MOVE_TUTOR_TAUGHT_DOUBLE_EDGE   0x1B6
-#define FLAG_MOVE_TUTOR_TAUGHT_EXPLOSION     0x1B7
+#define FLAG_MOVE_TUTOR_TAUGHT_SWAGGER       0x1A3
+#define FLAG_MOVE_TUTOR_TAUGHT_ROLLOUT       0x1A4
+#define FLAG_MOVE_TUTOR_TAUGHT_FURY_CUTTER   0x1A5
+#define FLAG_MOVE_TUTOR_TAUGHT_MIMIC         0x1A6
+#define FLAG_MOVE_TUTOR_TAUGHT_METRONOME     0x1A7
+#define FLAG_MOVE_TUTOR_TAUGHT_SLEEP_TALK    0x1A8
+#define FLAG_MOVE_TUTOR_TAUGHT_SUBSTITUTE    0x1A9
+#define FLAG_MOVE_TUTOR_TAUGHT_DYNAMICPUNCH  0x1AA
+#define FLAG_MOVE_TUTOR_TAUGHT_DOUBLE_EDGE   0x1AB
+#define FLAG_MOVE_TUTOR_TAUGHT_EXPLOSION     0x1AC
 
 //More Unused Flags
+#define FLAG_IN_GAME_TRADE_MR_MIME           0x1AD
+#define FLAG_UNUSED_0x1AE                    0x1AE
+#define FLAG_UNUSED_0x1AF                    0x1AF
+#define FLAG_UNUSED_0x1B0                    0x1B0
+#define FLAG_UNUSED_0x1B1                    0x1B1
+#define FLAG_UNUSED_0x1B2                    0x1B2
+#define FLAG_UNUSED_0x1B3                    0x1B3
+#define FLAG_UNUSED_0x1B4                    0x1B4
+#define FLAG_UNUSED_0x1B5                    0x1B5
+#define FLAG_UNUSED_0x1B6                    0x1B6
+#define FLAG_UNUSED_0x1B7                    0x1B7
 #define FLAG_AIDE_LOCATION_1                 0x1B8 // Aide moves to Route 2
 #define FLAG_AIDE_LOCATION_2                 0x1B9 // Aide moves to Route 10
 #define FLAG_AIDE_LOCATION_3                 0x1BA // Aide moves to Route 11
 #define FLAG_AIDE_LOCATION_4               	 0x1BB // Aide moves to Route 4
 #define FLAG_AIDE_LOCATION_5                 0x1BC // Aide moves to Route 5
 #define FLAG_QUEUE_AIDE_CALL           		 0x1BD // Aide is prepped to call player about a new item
-#define FLAG_IN_GAME_TRADE_MR_MIME           0x1BE
+#define FLAG_UNUSED_0x1BE                    0x1BE
 #define FLAG_UNUSED_0x1BF           		 0x1BF
 #define FLAG_UNUSED_0x1C0               	 0x1C0
 #define FLAG_UNUSED_0x1C1 					 0x1C1
@@ -1378,8 +1377,8 @@
 #define FLAG_SHINY_CREATION                         (SYSTEM_FLAGS + 0x21) // force creation of a shiny mon
 #define FLAG_SYS_DETECTOR_MODE                      (SYSTEM_FLAGS + 0x22) // allow player to find hidden mons
 
-#define FLAG_HIDE_FOLLOWER             				(SYSTEM_FLAGS + 0x23) // Unused Flag
-#define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
+#define FLAG_HIDE_FOLLOWER             				(SYSTEM_FLAGS + 0x23) 
+#define FLAG_SYS_GYM_LEADER_MATCH_CALL_ENABLED      (SYSTEM_FLAGS + 0x24) // Never set. Used to prevent Gym Leader match calls.
 #define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
 #define FLAG_UNUSED_0x886                           (SYSTEM_FLAGS + 0x26) // Unused Flag
 #define FLAG_UNUSED_0x887                  			(SYSTEM_FLAGS + 0x27) // Unused Flag

@@ -1053,34 +1053,6 @@ Route110_Text_BenjaminRematchPostBattle:
 	.string "There's no need to panic or stress.\n"
 	.string "Take it easy. There's plenty of time.$"
 
-Route110_Text_AbigailIntro:
-	.string "The triathlon is hard in the extreme.\p"
-	.string "You have to complete the three events\n"
-	.string "of swimming, cycling, and running.$"
-
-Route110_Text_AbigailDefeated:
-	.string "Pokémon battles are hard, too!$"
-
-Route110_Text_AbigailPostBattle:
-	.string "I'm exhausted, so I need a break.\n"
-	.string "It's important to get proper rest.$"
-
-Route110_Text_AbigailRegister:
-	.string "You know, I like you!\n"
-	.string "Let's have a rematch on Cycling Road.$"
-
-Route110_Text_AbigailRematchIntro:
-	.string "Isn't it neat to hold a battle while\n"
-	.string "cycling?$"
-
-Route110_Text_AbigailRematchDefeated:
-	.string "Wow…\n"
-	.string "How could you be so strong?$"
-
-Route110_Text_AbigailRematchPostBattle:
-	.string "Were you going after a record?\p"
-	.string "I'm sorry if I held you up!$"
-
 Route110_Text_JasmineIntro:
 	.string "I've been riding without stopping.\n"
 	.string "My thighs are like rocks!$"

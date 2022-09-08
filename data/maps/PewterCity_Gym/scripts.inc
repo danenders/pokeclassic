@@ -48,6 +48,7 @@ PewterCity_Gym_EventScript_DefeatedBrockGetBadge::
 	msgbox PewterCity_Gym_Text_ExplainBoulderBadge, MSGBOX_DEFAULT
 	setflag FLAG_BADGE01_GET
 	setflag FLAG_DAILY_BROCK_REMATCH
+	setflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
 	settrainerflag TRAINER_CAMPER_LIAM
 	setvar VAR_PEWTER_CITY_STATE, 1
 	goto PewterCity_Gym_EventScript_GetTM39
