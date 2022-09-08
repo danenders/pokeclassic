@@ -368,8 +368,8 @@
 
 // Trainer Rematch Flags
 #define FLAG_MATCH_CALL_REGISTERED              0x15C
-#define FLAG_REMATCH_JANICE                  0x15D
-#define FLAG_REMATCH_UNUSED_1                  0x15E
+#define FLAG_REMATCH_JANICE                    0x15D // Lass Janice on Route 3
+#define FLAG_REMATCH_BEN                       0x15E // Youngster Ben on Route 3
 #define FLAG_REMATCH_UNUSED_2                  0x15F
 #define FLAG_REMATCH_UNUSED_3                  0x160
 #define FLAG_REMATCH_UNUSED_4                  0x161
@@ -533,7 +533,7 @@
 #define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_ANTIDOTE       (FLAG_HIDDEN_ITEMS_START + 0x00)
 #define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_POTION         (FLAG_HIDDEN_ITEMS_START + 0x01)
 #define FLAG_HIDDEN_ITEM_PEWTER_CITY_POKE_BALL          (FLAG_HIDDEN_ITEMS_START + 0x02)
-#define FLAG_HIDDEN_ITEM_3              (FLAG_HIDDEN_ITEMS_START + 0x03)
+#define HIDDEN_ITEM_ROUTE3_ORAN_BERRY                   (FLAG_HIDDEN_ITEMS_START + 0x03)
 #define FLAG_HIDDEN_ITEM_4              (FLAG_HIDDEN_ITEMS_START + 0x04)
 #define FLAG_HIDDEN_ITEM_5              (FLAG_HIDDEN_ITEMS_START + 0x05)
 #define FLAG_HIDDEN_ITEM_6              (FLAG_HIDDEN_ITEMS_START + 0x06)

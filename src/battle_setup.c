@@ -248,16 +248,17 @@ static const struct TrainerBattleParameter sTrainerBContinueScriptBattleParams[]
     {&sTrainerBattleEndScript,      TRAINER_PARAM_LOAD_SCRIPT_RET_ADDR},
 };
 
-#define REMATCH(trainer1, trainer2, trainer3, trainer4, trainer5, map)  \
+#define REMATCH(trainer1, trainer2, trainer3, map)  \
 {                                                                       \
-    .trainerIds = {trainer1, trainer2, trainer3, trainer4, trainer5},   \
+    .trainerIds = {trainer1, trainer2, trainer3},   \
     .mapGroup = MAP_GROUP(map),                                         \
     .mapNum = MAP_NUM(map),                                             \
 }
 
 const struct RematchTrainer gRematchTable[REMATCH_TABLE_ENTRIES] =
 {
-    [REMATCH_JANICE] = REMATCH(REMATCHABLE_TRAINER_JANICE_1, REMATCHABLE_TRAINER_JANICE_2, REMATCHABLE_TRAINER_JANICE_3, REMATCHABLE_TRAINER_JANICE_3, REMATCHABLE_TRAINER_JANICE_3, ROUTE3),
+    [REMATCH_JANICE] = REMATCH(REMATCHABLE_TRAINER_LASS_JANICE_1, REMATCHABLE_TRAINER_LASS_JANICE_2, REMATCHABLE_TRAINER_LASS_JANICE_3, ROUTE3),
+    [REMATCH_BEN] = REMATCH(REMATCHABLE_TRAINER_YOUNGSTER_BEN_1, REMATCHABLE_TRAINER_YOUNGSTER_BEN_2, REMATCHABLE_TRAINER_YOUNGSTER_BEN_3, ROUTE3),
 };
 
 static const u16 sBadgeFlags[NUM_BADGES] =
