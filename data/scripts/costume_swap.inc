@@ -30,7 +30,7 @@ EventScript_CloseDresser::
 EventScript_Dresser_Exit::
 	closemessage
 	msgbox Text_ChangeClothes_Cancel, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, TRUE, EventScript_Dresser_Loop
+	goto_if_eq VAR_RESULT, FALSE, EventScript_Dresser_Loop
 	releaseall
 	end
 
