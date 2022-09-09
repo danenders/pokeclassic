@@ -263,10 +263,15 @@ PalletTown_ProfessorOaksLab_EventScript_PostRivalBattle::
 	playse SE_EXIT
 	removeobject LOCALID_RIVAL
 	setflag FLAG_HIDE_RIVAL_IN_LAB
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_ReturnToPikachu
 	setvar VAR_ADVENTURE_BEGINS, 3
 	fadedefaultbgm
 	releaseall
 	end
+
+Movement_ReturnToPikachu:
+	walk_up
+	step_end
 
 PalletTown_ProfessorOaksLab_EventScript_RivalApproach1::
 	applymovement LOCALID_RIVAL, Movement_RivalApproach1
@@ -682,7 +687,7 @@ PalletTown_ProfessorOaksLab_Text_JustJoined::
     .string "Cedar: Hello. Nice to meet you!\n"
     .string "I recently joined Professor Oak's\l"
     .string "team.\p"
-    .string "I'm excited to work with everyone.\p"
+    .string "I'm excited to work with everyone.$"
 
 PalletTown_ProfessorOaksLab_EventScript_Pokedex::
 	msgbox PalletTown_ProfessorOaksLab_Text_BlankEncyclopedia, MSGBOX_NPC

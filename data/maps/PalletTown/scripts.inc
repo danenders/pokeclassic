@@ -59,8 +59,16 @@ PlayerMovement_StepAsideLeft:
 	face_down
 	step_end
 
-PalletTown_EventScript_PokenavSceneEnterSFX::
+PalletTown_EventScript_MomEntersFromDoor::
+	opendoor 6,7
 	playse SE_DOOR
+	waitdooranim
+	clearflag FLAG_HIDE_MOM_PALLET_TOWN
+	addobject LOCALID_MOM
+	closedoor 6,7
+	call_if_eq VAR_TEMP_1, 1, PalletTown_EventScript_PokenavMomApproach1
+	call_if_eq VAR_TEMP_1, 2, PalletTown_EventScript_PokenavMomApproach2
+	call_if_eq VAR_TEMP_1, 3, PalletTown_EventScript_PokenavMomApproach3
 	return
 
 PalletTown_EventScript_PokenavSceneStartFar::
@@ -68,12 +76,7 @@ PalletTown_EventScript_PokenavSceneStartFar::
 	goto PalletTown_EventScript_PokenavScene
 
 PalletTown_EventScript_PokenavScene::
-	call_if_le VAR_TEMP_1, 3, PalletTown_EventScript_PokenavSceneEnterSFX
-	clearflag FLAG_HIDE_MOM_PALLET_TOWN
-	addobject LOCALID_MOM
-	call_if_eq VAR_TEMP_1, 1, PalletTown_EventScript_PokenavMomApproach1
-	call_if_eq VAR_TEMP_1, 2, PalletTown_EventScript_PokenavMomApproach2
-	call_if_eq VAR_TEMP_1, 3, PalletTown_EventScript_PokenavMomApproach3
+	call_if_le VAR_TEMP_1, 3, PalletTown_EventScript_MomEntersFromDoor
 	call_if_eq VAR_TEMP_1, 4, PalletTown_EventScript_PokenavMomApproach4
 	call_if_eq VAR_TEMP_1, 5, PalletTown_EventScript_PokenavMomApproach5
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
@@ -97,7 +100,7 @@ PalletTown_EventScript_PokenavScene::
 	call_if_eq VAR_TEMP_1, 4, PalletTown_EventScript_PokenavMomExit4
 	call_if_eq VAR_TEMP_1, 5, PalletTown_EventScript_PokenavMomExit5
 	waitmovement 1
-	call_if_le VAR_TEMP_1, 3, PalletTown_EventScript_PokenavSceneExitSFX
+	call_if_le VAR_TEMP_1, 3, PalletTown_EventScript_PokenavSceneExitDoor
 	removeobject LOCALID_MOM
 	setflag FLAG_HIDE_MOM_PALLET_TOWN
 	setflag FLAG_SYS_POKENAV_GET
@@ -132,9 +135,16 @@ PalletTown_Text_ReceivedPokeGear:
 	.string "{PLAYER} received the PokéGear\n"
     .string "from Mom!$"
 
-PalletTown_EventScript_PokenavSceneExitSFX::
+PalletTown_EventScript_PokenavSceneExitDoor::
+	applymovement LOCALID_MOM, Movement_MomExitDoor
+	waitmovement 1
+	closedoor 6,7
 	playse SE_EXIT
 	return
+
+Movement_MomExitDoor:
+	walk_up
+	step_end
 
 PalletTown_EventScript_PokenavMomApproach1::
 	applymovement LOCALID_MOM, Movement_MomApproachPokenav1
@@ -175,6 +185,8 @@ Movement_MomApproachPokenav3:
 	step_end
 
 PalletTown_EventScript_PokenavMomApproach4::
+	clearflag FLAG_HIDE_MOM_PALLET_TOWN
+	addobject LOCALID_MOM
 	applymovement LOCALID_MOM, Movement_MomApproachPokenav4
 	return
 
@@ -190,6 +202,8 @@ Movement_MomApproachPokenav4:
 	step_end
 
 PalletTown_EventScript_PokenavMomApproach5::
+	clearflag FLAG_HIDE_MOM_PALLET_TOWN
+	addobject LOCALID_MOM
 	applymovement LOCALID_MOM, Movement_MomApproachPokenav5
 	return
 
@@ -205,6 +219,9 @@ Movement_MomApproachPokenav5:
 
 PalletTown_EventScript_PokenavMomExit1::
 	applymovement LOCALID_MOM, Movement_MomExitPokenav1
+	waitmovement 1
+	opendoor 6, 7
+	waitdooranim
 	return
 
 Movement_MomExitPokenav1:
