@@ -260,16 +260,13 @@
 #define METATILE_General_CaveEntrance_Bottom     0x0A7
 #define METATILE_General_CaveEntrance_Top        0x09F
 #define METATILE_General_Door                    0x03D
-#define METATILE_General_Grass                   0x001
 #define METATILE_General_Grass_TreeLeft          0x1CE
 #define METATILE_General_Grass_TreeRight         0x1CF
-#define METATILE_General_Grass_TreeUp            0x00E
 #define METATILE_General_LongGrass               0x015
 #define METATILE_General_MuddySlope_Frame0       0x0E8
 #define METATILE_General_MuddySlope_Frame1       0x0E9
 #define METATILE_General_MuddySlope_Frame2       0x0EA
 #define METATILE_General_MuddySlope_Frame3       0x0EB
-#define METATILE_General_Plain_Grass             0x00D
 #define METATILE_General_Plain_Mowed             0x001
 #define METATILE_General_RedCaveIndent           0x1A0
 #define METATILE_General_RedCaveOpen             0x1A1
