@@ -68,4 +68,5 @@ const u8 gTrainerClassNames[][13] = {
     [TRAINER_CLASS_ROCKET_DUO] = _("Rocket Duo"),
     [TRAINER_CLASS_TEAM_ROCKET] = _("Team Rocket"),
     [TRAINER_CLASS_ROCKET_BOSS] = _("Rocket Boss"),
+    [TRAINER_CLASS_SUPER_NERD] = _("Super Nerd"),
 };

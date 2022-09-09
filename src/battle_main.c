@@ -394,6 +394,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_TEAM_ROCKET, 5},
     {TRAINER_CLASS_ROCKET_DUO, 10},
     {TRAINER_CLASS_ROCKET_BOSS, 20},
+    {TRAINER_CLASS_SUPER_NERD, 6},
     {0xFF, 5}, // Any trainer class not listed above uses this
 };
 

@@ -186,14 +186,43 @@ PewterCity_Museum_1F_Text_GetOldAmberChecked::
 
 PewterCity_Museum_1F_EventScript_WowThatsAerodactyl::
 	msgbox PewterCity_Museum_1F_Text_WowThatsAerodactyl, MSGBOX_DEFAULT
-	giveitem ITEM_NUGGET, 1
+	goto_if_eq VAR_FOSSIL_SELECTION, 1, PewterCity_Museum_1F_EventScript_GiveHelixFossil
+	goto_if_eq VAR_FOSSIL_SELECTION, 2, PewterCity_Museum_1F_EventScript_GiveDomeFossil
+	end
+
+PewterCity_Museum_1F_EventScript_GiveHelixFossil::
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	message PewterCity_Museum_1F_Text_ObtainedHelixFossil
+	waitfanfare
+	waitmessage
+	additem ITEM_HELIX_FOSSIL, 1
+	goto PewterCity_Museum_1F_EventScript_GaveReward
+	end
+
+PewterCity_Museum_1F_Text_ObtainedHelixFossil::
+    .string "Obtained the Helix Fossil!$"
+
+PewterCity_Museum_1F_EventScript_GiveDomeFossil::
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	message PewterCity_Museum_1F_Text_ObtainedDomeFossil
+	waitfanfare
+	waitmessage
+	additem ITEM_DOME_FOSSIL, 1
+	goto PewterCity_Museum_1F_EventScript_GaveReward
+	end
+
+PewterCity_Museum_1F_Text_ObtainedDomeFossil::
+    .string "Obtained the Dome Fossil!$"
+
+PewterCity_Museum_1F_EventScript_GaveReward::
+	setvar VAR_FOSSIL_SELECTION, 3
 	setflag FLAG_GOT_AERODACTYL_REWARD
 	release
 	end
 
 PewterCity_Museum_1F_Text_WowThatsAerodactyl::
     .string "Wow!\n"
-    .string "You ressurected the  Pokémon?\p"
+    .string "You ressurected the Pokémon?\p"
     .string "I knew it contained DNA!\p"
     .string "Thank you for letting me know.\n"
     .string "Please take this as a reward!$"

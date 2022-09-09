@@ -111,7 +111,6 @@
 #define TRAINER_PIC_RS_BRENDAN            91
 #define TRAINER_PIC_RS_MAY                92
 #define TRAINER_PIC_BLUE				  93
-
 #define TRAINER_PIC_ETHAN                 94
 #define TRAINER_PIC_LYRA                  95
 #define TRAINER_PIC_KRIS                  96
@@ -119,27 +118,25 @@
 #define TRAINER_PIC_DAWN                  98
 #define TRAINER_PIC_LUCAS_PLATINUM        99
 #define TRAINER_PIC_DAWN_PLATINUM         100
+#define TRAINER_PIC_BROCK 				  101
+#define TRAINER_PIC_MISTY				  102
+#define TRAINER_PIC_SURGE				  103
+#define TRAINER_PIC_ERIKA				  104
+#define TRAINER_PIC_SABRINA			      105
+#define TRAINER_PIC_KOGA				  106
+#define TRAINER_PIC_BLAINE				  107	
+#define TRAINER_PIC_LORELEI				  108
+#define	TRAINER_PIC_BRUNO				  109
+#define	TRAINER_PIC_AGATHA				  110
+#define TRAINER_PIC_LANCE				  111
+#define TRAINER_PIC_GIOVANNI			  112
+#define TRAINER_PIC_JESSIE				  113
+#define TRAINER_PIC_JAMES				  114
+#define TRAINER_PIC_ROCKET_GRUNT_M		  115
+#define TRAINER_PIC_ROCKET_GRUNT_F		  116
+#define TRAINER_PIC_ROCKET_DUO			  117
 
-#define TRAINER_PIC_BROCK 				  	101
-#define TRAINER_PIC_MISTY					102
-#define TRAINER_PIC_SURGE					103
-#define TRAINER_PIC_ERIKA					104
-#define TRAINER_PIC_SABRINA					105
-#define TRAINER_PIC_KOGA					106
-#define TRAINER_PIC_BLAINE					107	
-
-#define TRAINER_PIC_LORELEI					108
-#define	TRAINER_PIC_BRUNO					109
-#define	TRAINER_PIC_AGATHA					110
-#define TRAINER_PIC_LANCE					111
-
-#define TRAINER_PIC_GIOVANNI				112
-#define TRAINER_PIC_JESSIE					113
-#define TRAINER_PIC_JAMES					114
-#define TRAINER_PIC_ROCKET_GRUNT_M			115
-#define TRAINER_PIC_ROCKET_GRUNT_F			116
-#define TRAINER_PIC_ROCKET_DUO				117
-
+#define TRAINER_PIC_SUPER_NERD			  118
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
@@ -400,6 +397,7 @@
 #define TRAINER_CLASS_ROCKET_DUO	 0x42
 #define TRAINER_CLASS_TEAM_ROCKET	 0x43
 #define TRAINER_CLASS_ROCKET_BOSS	 0x44
+#define	TRAINER_CLASS_SUPER_NERD	 0x45
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music

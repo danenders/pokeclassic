@@ -2877,6 +2877,7 @@ extern const u32 gMonStillFrontPic_DoubleQuestionMark[];
 extern const u16 gMonIconPalettes[][16];
 
 // trainer sprites
+extern const u32 gTrainerFrontPic_SuperNerd[];
 extern const u32 gTrainerFrontPic_Hiker[];
 extern const u32 gTrainerFrontPic_AquaGruntM[];
 extern const u32 gTrainerFrontPic_PokemonBreederF[];
@@ -3000,6 +3001,7 @@ extern const u32 gTrainerFrontPic_Sabrina[];
 extern const u32 gTrainerFrontPic_Koga[];
 extern const u32 gTrainerFrontPic_Blaine[];
 
+extern const u32 gTrainerPalette_SuperNerd[];
 extern const u32 gTrainerPalette_Hiker[];
 extern const u32 gTrainerPalette_AquaGruntM[];
 extern const u32 gTrainerPalette_PokemonBreederF[];

@@ -68,16 +68,16 @@
 #define FLAG_RECEIVED_BIKE    			0x34
 
 //Story Flags
-#define FLAG_SET_CLOCK    			0x35
-#define FLAG_MET_OAK_ROUTE_1    	0x36 
-#define FLAG_GOT_POTION_ON_ROUTE_1  0x37
-#define FLAG_MET_CEDAR    		    0x38 // Used for Optional Dialogue
-#define FLAG_GOT_OLD_AMBER    		0x39
-#define FLAG_RESSURECTED_AERODACTYL 0x3A 
-#define FLAG_GOT_AERODACTYL_REWARD  0x3B // Undecided!
-#define FLAG_GOT_BROCK_REWARD    	0x3C 
-#define FLAG_UNUSED_0x03E    		0x3E 
-#define FLAG_UNUSED_0x03F    		0x3F 
+#define FLAG_SET_CLOCK                      0x35
+#define FLAG_MET_OAK_ROUTE_1                0x36 
+#define FLAG_GOT_POTION_ON_ROUTE_1          0x37
+#define FLAG_MET_CEDAR                      0x38 // Used for Optional Dialogue
+#define FLAG_GOT_OLD_AMBER                  0x39
+#define FLAG_RESSURECTED_AERODACTYL         0x3A 
+#define FLAG_GOT_AERODACTYL_REWARD          0x3B
+#define FLAG_GOT_BROCK_REWARD               0x3C 
+#define FLAG_GOT_FOSSIL_FROM_MT_MOON        0x3E 
+#define FLAG_UNUSED_0x03F                   0x3F 
 #define FLAG_UNUSED_0x040    		0x40 
 #define FLAG_UNUSED_0x041    		0x41 
 #define FLAG_UNUSED_0x042    		0x42 
@@ -537,14 +537,14 @@
 #define FLAG_HIDDEN_ITEM_ROUTE4_PERSIM_BERRY            (FLAG_HIDDEN_ITEMS_START + 0x04)
 #define FLAG_HIDDEN_ITEM_ROUTE4_GREAT_BALL              (FLAG_HIDDEN_ITEMS_START + 0x05)
 #define FLAG_HIDDEN_ITEM_ROUTE4_RAZZ_BERRY              (FLAG_HIDDEN_ITEMS_START + 0x06)
-#define FLAG_HIDDEN_ITEM_7              (FLAG_HIDDEN_ITEMS_START + 0x07)
-#define FLAG_HIDDEN_ITEM_8              (FLAG_HIDDEN_ITEMS_START + 0x08)
-#define FLAG_HIDDEN_ITEM_9          	(FLAG_HIDDEN_ITEMS_START + 0x09)
-#define FLAG_HIDDEN_ITEM_10             (FLAG_HIDDEN_ITEMS_START + 0x0A)
-#define FLAG_HIDDEN_ITEM_11            	(FLAG_HIDDEN_ITEMS_START + 0x0B)
-#define FLAG_HIDDEN_ITEM_12       		(FLAG_HIDDEN_ITEMS_START + 0x0C)
-#define FLAG_HIDDEN_ITEM_13       		(FLAG_HIDDEN_ITEMS_START + 0x0D)
-#define FLAG_HIDDEN_ITEM_14          	(FLAG_HIDDEN_ITEMS_START + 0x0E)
+#define FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM      (FLAG_HIDDEN_ITEMS_START + 0x07)
+#define FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM_2    (FLAG_HIDDEN_ITEMS_START + 0x08)
+#define FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM_3    (FLAG_HIDDEN_ITEMS_START + 0x09)
+#define FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM       (FLAG_HIDDEN_ITEMS_START + 0x0A)
+#define FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM_2     (FLAG_HIDDEN_ITEMS_START + 0x0B)
+#define FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM_3     (FLAG_HIDDEN_ITEMS_START + 0x0C)
+#define FLAG_HIDDEN_ITEM_MT_MOON_B2F_ETHER       		(FLAG_HIDDEN_ITEMS_START + 0x0D)
+#define FLAG_HIDDEN_ITEM_MT_MOON_B2F_MOON_STONE         (FLAG_HIDDEN_ITEMS_START + 0x0E)
 #define FLAG_HIDDEN_ITEM_15           	(FLAG_HIDDEN_ITEMS_START + 0x0F)
 #define FLAG_HIDDEN_ITEM_16             (FLAG_HIDDEN_ITEMS_START + 0x10)
 #define FLAG_HIDDEN_ITEM_17             (FLAG_HIDDEN_ITEMS_START + 0x11)
@@ -787,9 +787,9 @@
 #define FLAG_HIDE_RIVAL_ROUTE_22                            		0x2ED
 #define FLAG_HIDE_PEWTER_MUSEUM_GUIDE                               0x2EE
 #define FLAG_HIDE_PEWTER_CITY_GYM_GUIDE                        		0x2EF
-#define FLAG_HIDE_UNUSED_26                       					0x2F0
-#define FLAG_HIDE_UNUSED_27            								0x2F1
-#define FLAG_HIDE_UNUSED_28         								0x2F2
+#define FLAG_HIDE_MT_MOON_ROCKETS                       			0x2F0
+#define FLAG_HIDE_DOME_FOSSIL            							0x2F1
+#define FLAG_HIDE_HELIX_FOSSIL         								0x2F2
 #define FLAG_HIDE_UNUSED_29        									0x2F3
 #define FLAG_HIDE_UNUSED_30        									0x2F4
 #define FLAG_HIDE_UNUSED_31               							0x2F5
@@ -1045,16 +1045,16 @@
 #define FLAG_HIDE_VIRIDIAN_FOREST_ANTIDOTE                          0x3ED
 #define FLAG_HIDE_VIRIDIAN_FOREST_POKE_BALL                         0x3EE
 #define FLAG_HIDE_ROUTE4_TM05                                		0x3EF
-#define FLAG_UNUSED_ITEM_0x3F0                                   	0x3F0
-#define FLAG_UNUSED_ITEM_0x3F1                                		0x3F1
-#define FLAG_UNUSED_ITEM_0x3F2                                   	0x3F2
-#define FLAG_UNUSED_ITEM_0x3F3                                  	0x3F3
-#define FLAG_UNUSED_ITEM_0x3F4                               		0x3F4
-#define FLAG_UNUSED_ITEM_0x3F5                            			0x3F5
-#define FLAG_UNUSED_ITEM_0x3F6                              		0x3F6
-#define FLAG_UNUSED_ITEM_0x3F7                                 		0x3F7
-#define FLAG_UNUSED_ITEM_0x3F8                           			0x3F8
-#define FLAG_UNUSED_ITEM_0x3F9                                   	0x3F9
+#define FLAG_HIDE_MT_MOON_1F_MOON_STONE                             0x3F0
+#define FLAG_HIDE_MT_MOON_1F_ESCAPE_ROPE                            0x3F1
+#define FLAG_HIDE_MT_MOON_1F_RARE_CANDY                             0x3F2
+#define FLAG_HIDE_MT_MOON_1F_POTION                                 0x3F3
+#define FLAG_HIDE_MT_MOON_1F_TM09                               	0x3F4
+#define FLAG_HIDE_MT_MOON_1F_PARALYZE_HEAL                          0x3F5
+#define FLAG_HIDE_MT_MOON_B2F_ANTIDOTE                              0x3F6
+#define FLAG_HIDE_MT_MOON_B2F_STAR_PIECE                            0x3F7
+#define FLAG_HIDE_MT_MOON_B2F_REVIVE                           		0x3F8
+#define FLAG_HIDE_MT_MOON_B2F_TM46                                  0x3F9
 #define FLAG_UNUSED_ITEM_0x3FA                                    	0x3FA
 #define FLAG_UNUSED_ITEM_0x3FB                                 		0x3FB
 #define FLAG_UNUSED_ITEM_0x3FC                                  	0x3FC
@@ -1581,7 +1581,9 @@
 #define FLAG_DAILY_IS_CURRENTLY_CHAMPION            (DAILY_FLAGS_START + 0xC)  // Champion status resets every day. Used for post-game content and dialogue differences
 #define FLAG_DAILY_TITLE_MATCH     					(DAILY_FLAGS_START + 0xD)  // You only get one shot to retain the title every day.
 
-#define FLAG_UNUSED_0x92E        					(DAILY_FLAGS_START + 0xE)  // Unused Flag
+//Daily Events
+#define FLAG_DAILY_MT_MOON_MUSHROOMS        		(DAILY_FLAGS_START + 0xE)  // Hidden mushrooms in Mt. Moon reset each day
+
 #define FLAG_UNUSED_0x92F          					(DAILY_FLAGS_START + 0xF)  // Unused Flag
 #define FLAG_UNUSED_0x930       					(DAILY_FLAGS_START + 0x10)  // Unused Flag
 #define FLAG_UNUSED_0x931               			(DAILY_FLAGS_START + 0x11)  // Unused Flag
