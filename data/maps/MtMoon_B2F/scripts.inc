@@ -276,6 +276,7 @@ MtMoon_B2F_EventScript_RocketDuoTrigger2::
 
 Movement_FaceRockets2:
 	walk_up
+	face_right
 	step_end
 
 MtMoon_B2F_Text_StopRightThere::
@@ -290,13 +291,21 @@ MtMoon_B2F_EventScript_RocketDuo::
 	applymovement LOCALID_JAMES, MtMoon_Movement_AndMakeItDouble
 	waitmovement 13
 	trainerbattle_double TRAINER_ROCKET_DUO_1, MtMoon_B2F_Text_RocketDuoIntro, MtMoon_B2F_Text_RocketDuoDefeat, MtMoon_B2F_Text_RocketDuoNeedTwoMons, MtMoon_B2F_EventScript_RocketDuoDefeated, NO_MUSIC
+	end
+
+MtMoon_B2F_EventScript_RocketDuoDefeated::
+	delay 10
+	playbgm MUS_RG_ENCOUNTER_ROCKET, 0
+	msgbox MtMoon_B2F_Text_RocketDuoDefeated, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	setflag FLAG_HIDE_MT_MOON_JESSIE_JAMES
 	setflag FLAG_HIDE_MT_MOON_ROCKETS
 	removeobject LOCALID_JESSIE
 	removeobject LOCALID_JAMES
+	setvar VAR_MT_MOON_STATE, 2
 	playse SE_EXIT
 	waitse
+	fadedefaultbgm
 	fadescreen FADE_FROM_BLACK
 	callnative UpdateFollowingPokemon
 	releaseall
@@ -335,7 +344,7 @@ MtMoon_B2F_Text_RocketDuoIntro::
 MtMoon_B2F_Text_RocketDuoDefeat::
 	.string "What, this brat beat us?$"
 
-MtMoon_B2F_EventScript_RocketDuoDefeated::
+MtMoon_B2F_Text_RocketDuoDefeated::
 	.string "Jessie: This isn't over, kid!\p"
 	.string "James: Team Rocket, blast off at\n"
 	.string "the speed of light!$"
