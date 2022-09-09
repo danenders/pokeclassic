@@ -88,6 +88,7 @@ MtMoon_B2F_Text_Grunt4PostBattle::
 
 MtMoon_B2F_EventScript_MiguelTrigger::
 	lockall
+	callnative RemoveFollowingPokemon
 	applymovement LOCALID_MIGUEL, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 3
 	goto MtMoon_B2F_EventScript_BattleMiguel
@@ -102,12 +103,12 @@ MtMoon_B2F_EventScript_Miguel::
 	end
 
 MtMoon_B2F_EventScript_BattleMiguel::
-	msgbox MtMoon_B2F_Text_MiguelIntro, MSGBOX_DEFAULT
 	playbgm MUS_RG_ENCOUNTER_GYM_LEADER, 0
-	waitbuttonpress
+	msgbox MtMoon_B2F_Text_MiguelIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_SUPER_NERD_MIGUEL, MtMoon_B2F_Text_MiguelDefeat
 	setvar VAR_MT_MOON_STATE, 1
 	msgbox MtMoon_B2F_Text_WellEachTakeAFossil, MSGBOX_DEFAULT
+	callnative UpdateFollowingPokemon
 	release
 	end
 
@@ -146,6 +147,8 @@ MtMoon_B2F_EventScript_DomeFossil::
 	callnative RemoveFollowingPokemon
 	msgbox MtMoon_B2F_Text_YouWantDomeFossil, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, MtMoon_B2F_EventScript_DontTakeFossil
+	removeobject LOCALID_DOME_FOSSIL
+	setflag FLAG_HIDE_DOME_FOSSIL
 	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	message MtMoon_B2F_Text_ObtainedDomeFossil
 	waitmessage
@@ -185,6 +188,8 @@ MtMoon_B2F_EventScript_HelixFossil::
 	callnative RemoveFollowingPokemon
 	msgbox MtMoon_B2F_Text_YouWantHelixFossil, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, MtMoon_B2F_EventScript_DontTakeFossil
+	removeobject LOCALID_HELIX_FOSSIL
+	setflag FLAG_HIDE_HELIX_FOSSIL
 	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	message MtMoon_B2F_Text_ObtainedHelixFossil
 	waitmessage
@@ -248,7 +253,8 @@ MtMoon_B2F_EventScript_RocketDuoTrigger1::
 	msgbox MtMoon_B2F_Text_StopRightThere, MSGBOX_DEFAULT
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_FaceRockets1	
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_FaceRockets1
+	waitmovement 0	
 	goto MtMoon_B2F_EventScript_RocketDuo
 	end
 
@@ -264,12 +270,12 @@ MtMoon_B2F_EventScript_RocketDuoTrigger2::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_FaceRockets2
+	waitmovement 0
 	goto MtMoon_B2F_EventScript_RocketDuo
 	end
 
 Movement_FaceRockets2:
 	walk_up
-	face_right
 	step_end
 
 MtMoon_B2F_Text_StopRightThere::
@@ -282,6 +288,7 @@ MtMoon_B2F_EventScript_RocketDuo::
 	addobject LOCALID_JAMES
 	applymovement LOCALID_JESSIE, MtMoon_Movement_PrepareForTrouble
 	applymovement LOCALID_JAMES, MtMoon_Movement_AndMakeItDouble
+	waitmovement 13
 	trainerbattle_double TRAINER_ROCKET_DUO_1, MtMoon_B2F_Text_RocketDuoIntro, MtMoon_B2F_Text_RocketDuoDefeat, MtMoon_B2F_Text_RocketDuoNeedTwoMons, MtMoon_B2F_EventScript_RocketDuoDefeated, NO_MUSIC
 	fadescreen FADE_TO_BLACK
 	setflag FLAG_HIDE_MT_MOON_JESSIE_JAMES
