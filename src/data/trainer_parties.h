@@ -1224,6 +1224,26 @@ static const struct TrainerMonNoItemDefaultMoves sParty_LassRobin[] = {
     },
 };
 
+//Route 4
+static const struct TrainerMonNoItemDefaultMoves sParty_LassCrissy[] = {
+    {
+        .iv = 0,
+        .lvl = 31,
+        .species = SPECIES_PARAS,
+    },
+    {
+        .iv = 0,
+        .lvl = 31,
+        .species = SPECIES_PARAS,
+    },
+    {
+        .iv = 0,
+        .lvl = 31,
+        .species = SPECIES_PARASECT,
+    },
+};
+
+//Mt Moon
 
 
 

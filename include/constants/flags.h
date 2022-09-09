@@ -533,10 +533,10 @@
 #define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_ANTIDOTE       (FLAG_HIDDEN_ITEMS_START + 0x00)
 #define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_POTION         (FLAG_HIDDEN_ITEMS_START + 0x01)
 #define FLAG_HIDDEN_ITEM_PEWTER_CITY_POKE_BALL          (FLAG_HIDDEN_ITEMS_START + 0x02)
-#define HIDDEN_ITEM_ROUTE3_ORAN_BERRY                   (FLAG_HIDDEN_ITEMS_START + 0x03)
-#define FLAG_HIDDEN_ITEM_4              (FLAG_HIDDEN_ITEMS_START + 0x04)
-#define FLAG_HIDDEN_ITEM_5              (FLAG_HIDDEN_ITEMS_START + 0x05)
-#define FLAG_HIDDEN_ITEM_6              (FLAG_HIDDEN_ITEMS_START + 0x06)
+#define FLAG_HIDDEN_ITEM_ROUTE3_ORAN_BERRY              (FLAG_HIDDEN_ITEMS_START + 0x03)
+#define FLAG_HIDDEN_ITEM_ROUTE4_PERSIM_BERRY            (FLAG_HIDDEN_ITEMS_START + 0x04)
+#define FLAG_HIDDEN_ITEM_ROUTE4_GREAT_BALL              (FLAG_HIDDEN_ITEMS_START + 0x05)
+#define FLAG_HIDDEN_ITEM_ROUTE4_RAZZ_BERRY              (FLAG_HIDDEN_ITEMS_START + 0x06)
 #define FLAG_HIDDEN_ITEM_7              (FLAG_HIDDEN_ITEMS_START + 0x07)
 #define FLAG_HIDDEN_ITEM_8              (FLAG_HIDDEN_ITEMS_START + 0x08)
 #define FLAG_HIDDEN_ITEM_9          	(FLAG_HIDDEN_ITEMS_START + 0x09)
@@ -1044,7 +1044,7 @@
 #define FLAG_HIDE_VIRIDIAN_FOREST_POTION_2                          0x3EC
 #define FLAG_HIDE_VIRIDIAN_FOREST_ANTIDOTE                          0x3ED
 #define FLAG_HIDE_VIRIDIAN_FOREST_POKE_BALL                         0x3EE
-#define FLAG_UNUSED_ITEM_0x3EF                                		0x3EF
+#define FLAG_HIDE_ROUTE4_TM05                                		0x3EF
 #define FLAG_UNUSED_ITEM_0x3F0                                   	0x3F0
 #define FLAG_UNUSED_ITEM_0x3F1                                		0x3F1
 #define FLAG_UNUSED_ITEM_0x3F2                                   	0x3F2

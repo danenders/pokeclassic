@@ -360,6 +360,11 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldAmber;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spearow;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jigglypuff;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NidoranM;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreatBall;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UltraBall;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MasterBall;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PremierBall;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SafariBall;
 
 // Begin pokemon event objects
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AnimatedBall;
@@ -426,6 +431,11 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_CYCLING_TRIATHLETE_F] =     &gObjectEventGraphicsInfo_CyclingTriathleteF,
     [OBJ_EVENT_GFX_NURSE] =                    &gObjectEventGraphicsInfo_Nurse,
     [OBJ_EVENT_GFX_ITEM_BALL] =                &gObjectEventGraphicsInfo_ItemBall,
+    [OBJ_EVENT_GFX_GREAT_BALL] =               &gObjectEventGraphicsInfo_GreatBall,
+    [OBJ_EVENT_GFX_ULTRA_BALL] =               &gObjectEventGraphicsInfo_UltraBall,
+    [OBJ_EVENT_GFX_MASTER_BALL] =              &gObjectEventGraphicsInfo_MasterBall,
+    [OBJ_EVENT_GFX_PREMIER_BALL] =             &gObjectEventGraphicsInfo_PremierBall,
+    [OBJ_EVENT_GFX_SAFARI_BALL] =              &gObjectEventGraphicsInfo_SafariBall,
     [OBJ_EVENT_GFX_BERRY_TREE] =               &gObjectEventGraphicsInfo_BerryTree,
     [OBJ_EVENT_GFX_BERRY_TREE_EARLY_STAGES] =  &gObjectEventGraphicsInfo_BerryTreeEarlyStages,
     [OBJ_EVENT_GFX_BERRY_TREE_LATE_STAGES] =   &gObjectEventGraphicsInfo_BerryTreeLateStages,

@@ -219,10 +219,3 @@ Route3_Text_RobinDefeat::
 Route3_Text_RobinPostBattle::
     .string "Route 4 is at the foot of\n"
     .string "Mt. Moon.$"
-
-
-
-
-
-
-
