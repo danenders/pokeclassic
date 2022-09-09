@@ -335,7 +335,7 @@ const u8 gTrainerBackPic_Lucas[] = INCBIN_U8("graphics/trainers/back_pics/lucas_
 const u32 gTrainerBackPicPalette_Lucas[] = INCBIN_U32("graphics/trainers/palettes/lucas_back_pic.gbapal.lz");
 
 const u8 gTrainerBackPic_Dawn[] = INCBIN_U8("graphics/trainers/back_pics/dawn_back_pic.4bpp");
-const u32 gTrainerBackPicPalette_Dawn[] = INCBIN_U32("graphics/trainers/palettes/dawn_platinum_back_pic.gbapal.lz");
+const u32 gTrainerBackPicPalette_Dawn[] = INCBIN_U32("graphics/trainers/palettes/dawn_back_pic.gbapal.lz");
 
 const u8 gTrainerBackPic_LucasPlatinum[] = INCBIN_U8("graphics/trainers/back_pics/lucas_platinum_back_pic.4bpp");
 const u32 gTrainerBackPicPalette_LucasPlatinum[] = INCBIN_U32("graphics/trainers/palettes/lucas_platinum_back_pic.gbapal.lz");
