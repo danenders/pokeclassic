@@ -781,7 +781,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_TEAM_ROCKET_GRUNT] = {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_F,
         .trainerName = _("Grunt"),
         .items = {},
@@ -793,7 +793,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_TEAM_ROCKET_GRUNT_2] = {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("Grunt"),
         .items = {},
@@ -805,7 +805,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_TEAM_ROCKET_GRUNT_3] = {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_F,
         .trainerName = _("Grunt"),
         .items = {},
@@ -817,7 +817,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_TEAM_ROCKET_GRUNT_4] = {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("Grunt"),
         .items = {},
@@ -838,4 +838,17 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_SuperNerdMiguel),
         .party = {.NoItemDefaultMoves = sParty_SuperNerdMiguel}
     },
+    [TRAINER_ROCKET_DUO_1] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_ROCKET_DUO,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_DUO,
+        .trainerName = _("Duo"),
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE || AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_RocketDuo1),
+        .party = {.NoItemDefaultMoves = sParty_RocketDuo1}
+    },
+
 };

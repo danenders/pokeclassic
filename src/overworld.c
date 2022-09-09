@@ -376,6 +376,7 @@ void DoWhiteOut(void)
     SetMoney(&gSaveBlock1Ptr->money, GetMoney(&gSaveBlock1Ptr->money) / 2);
     #endif
     HealPlayerParty();
+    //UpdateFollowingPokemon(); //Since I call RemoveFollowingPokemon often, is this needed as a fallback?
     Overworld_ResetStateAfterWhiteOut();
     SetWarpDestinationToLastHealLocation();
     WarpIntoMap();

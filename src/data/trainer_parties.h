@@ -1419,3 +1419,21 @@ static const struct TrainerMonNoItemDefaultMoves sParty_SuperNerdMiguel[] = {
         .species = SPECIES_KOFFING,
     },
 };
+
+static const struct TrainerMonNoItemDefaultMoves sParty_RocketDuo1[] = {
+    {
+        .iv = 50,
+        .lvl = 14,
+        .species = SPECIES_EKANS,
+    },
+    {
+        .iv = 50,
+        .lvl = 14,
+        .species = SPECIES_MEOWTH,
+    },
+    {
+        .iv = 50,
+        .lvl = 14,
+        .species = SPECIES_KOFFING,
+    },
+};

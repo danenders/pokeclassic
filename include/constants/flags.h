@@ -790,7 +790,7 @@
 #define FLAG_HIDE_MT_MOON_ROCKETS                       			0x2F0
 #define FLAG_HIDE_DOME_FOSSIL            							0x2F1
 #define FLAG_HIDE_HELIX_FOSSIL         								0x2F2
-#define FLAG_HIDE_UNUSED_29        									0x2F3
+#define FLAG_HIDE_MT_MOON_JESSIE_JAMES        						0x2F3
 #define FLAG_HIDE_UNUSED_30        									0x2F4
 #define FLAG_HIDE_UNUSED_31               							0x2F5
 #define FLAG_HIDE_UNUSED_32                							0x2F6

@@ -1405,13 +1405,13 @@ void PlayTrainerEncounterMusic(void)
         switch (GetTrainerEncounterMusicId(trainerId))
         {
         case TRAINER_ENCOUNTER_MUSIC_MALE:
-            music = MUS_ENCOUNTER_MALE;
+            music = MUS_RG_ENCOUNTER_BOY;
             break;
         case TRAINER_ENCOUNTER_MUSIC_FEMALE:
-            music = MUS_ENCOUNTER_FEMALE;
+            music = MUS_RG_ENCOUNTER_GIRL;
             break;
         case TRAINER_ENCOUNTER_MUSIC_GIRL:
-            music = MUS_ENCOUNTER_GIRL;
+            music = MUS_RG_ENCOUNTER_GIRL;
             break;
         case TRAINER_ENCOUNTER_MUSIC_INTENSE:
             music = MUS_ENCOUNTER_INTENSE;
@@ -1445,6 +1445,9 @@ void PlayTrainerEncounterMusic(void)
             break;
         case TRAINER_ENCOUNTER_MUSIC_RIVAL:
             music = MUS_RG_ENCOUNTER_RIVAL;
+            break;
+         case TRAINER_ENCOUNTER_MUSIC_ROCKET:
+            music = MUS_RG_ENCOUNTER_ROCKET;
             break;
         default:
             music = MUS_ENCOUNTER_SUSPICIOUS;

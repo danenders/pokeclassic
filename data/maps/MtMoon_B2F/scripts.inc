@@ -1,6 +1,8 @@
 .set LOCALID_DOME_FOSSIL,  1
 .set LOCALID_HELIX_FOSSIL, 2
 .set LOCALID_MIGUEL,       3
+.set LOCALID_JESSIE,	   12
+.set LOCALID_JAMES,		   13
 
 MtMoon_B2F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MtMoon_B2F_OnTransition
@@ -104,7 +106,7 @@ MtMoon_B2F_EventScript_BattleMiguel::
 	playbgm MUS_RG_ENCOUNTER_GYM_LEADER, 0
 	waitbuttonpress
 	trainerbattle_no_intro TRAINER_SUPER_NERD_MIGUEL, MtMoon_B2F_Text_MiguelDefeat
-	setvar VAR_FOSSIL_SELECTION, 3
+	setvar VAR_MT_MOON_STATE, 1
 	msgbox MtMoon_B2F_Text_WellEachTakeAFossil, MSGBOX_DEFAULT
 	release
 	end
@@ -239,3 +241,97 @@ MtMoon_B2F_EventScript_ItemRevive::
 MtMoon_B2F_EventScript_ItemAntidote::
 	finditem ITEM_ANTIDOTE, 1
 	end
+
+MtMoon_B2F_EventScript_RocketDuoTrigger1::
+	lockall
+	callnative RemoveFollowingPokemon
+	msgbox MtMoon_B2F_Text_StopRightThere, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_FaceRockets1	
+	goto MtMoon_B2F_EventScript_RocketDuo
+	end
+
+Movement_FaceRockets1:
+	walk_up
+	walk_right
+	step_end
+
+MtMoon_B2F_EventScript_RocketDuoTrigger2::
+	lockall
+	callnative RemoveFollowingPokemon
+	msgbox MtMoon_B2F_Text_StopRightThere, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_FaceRockets2
+	goto MtMoon_B2F_EventScript_RocketDuo
+	end
+
+Movement_FaceRockets2:
+	walk_up
+	face_right
+	step_end
+
+MtMoon_B2F_Text_StopRightThere::
+	.string "???: Stop right there!$"
+
+MtMoon_B2F_EventScript_RocketDuo::
+	playbgm MUS_RG_ENCOUNTER_ROCKET, 0
+	clearflag FLAG_HIDE_MT_MOON_JESSIE_JAMES
+	addobject LOCALID_JESSIE
+	addobject LOCALID_JAMES
+	applymovement LOCALID_JESSIE, MtMoon_Movement_PrepareForTrouble
+	applymovement LOCALID_JAMES, MtMoon_Movement_AndMakeItDouble
+	trainerbattle_double TRAINER_ROCKET_DUO_1, MtMoon_B2F_Text_RocketDuoIntro, MtMoon_B2F_Text_RocketDuoDefeat, MtMoon_B2F_Text_RocketDuoNeedTwoMons, MtMoon_B2F_EventScript_RocketDuoDefeated, NO_MUSIC
+	fadescreen FADE_TO_BLACK
+	setflag FLAG_HIDE_MT_MOON_JESSIE_JAMES
+	setflag FLAG_HIDE_MT_MOON_ROCKETS
+	removeobject LOCALID_JESSIE
+	removeobject LOCALID_JAMES
+	playse SE_EXIT
+	waitse
+	fadescreen FADE_FROM_BLACK
+	callnative UpdateFollowingPokemon
+	releaseall
+	end
+
+MtMoon_Movement_PrepareForTrouble:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_faster_down
+	face_down
+	step_end
+
+MtMoon_Movement_AndMakeItDouble:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_faster_left
+	step_end
+
+MtMoon_B2F_Text_RocketDuoIntro::
+	.string "???: That fossil belongs\n"
+	.string "to Team Rocket!\p"
+	.string "Surrender now, or prepare\n"
+	.string "to fight!$"
+
+MtMoon_B2F_Text_RocketDuoDefeat::
+	.string "What, this brat beat us?$"
+
+MtMoon_B2F_EventScript_RocketDuoDefeated::
+	.string "Jessie: This isn't over, kid!\p"
+	.string "James: Team Rocket, blast off at\n"
+	.string "the speed of light!$"
+
+MtMoon_B2F_Text_RocketDuoNeedTwoMons::
+	.string "placeholder text$"

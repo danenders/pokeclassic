@@ -128,4 +128,5 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_AIDE_ROUTE16
 	setflag FLAG_HIDE_AIDE_ROUTE15
 	setflag FLAG_HIDE_RIVAL_ROUTE_22
+	setflag FLAG_HIDE_MT_MOON_JESSIE_JAMES
 	end

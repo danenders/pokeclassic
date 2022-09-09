@@ -156,6 +156,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_B2F_EventScript_ItemRevive",
       "flag": "FLAG_HIDE_MT_MOON_B2F_REVIVE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_JESSIE",
+      "x": 12,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_JAMES",
+      "x": 13,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_MT_MOON_JESSIE_JAMES"
     }
   ],
   "warp_events": [
@@ -194,36 +220,27 @@
       "x": 14,
       "y": 11,
       "elevation": 3,
-      "var": "VAR_FOSSIL_SELECTION",
+      "var": "VAR_MT_MOON_STATE",
       "var_value": "0",
       "script": "MtMoon_B2F_EventScript_MiguelTrigger"
     },
     {
       "type": "trigger",
-      "x": 2,
-      "y": 10,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
       "x": 3,
-      "y": 10,
+      "y": 7,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_MT_MOON_STATE",
+      "var_value": "1",
+      "script": "MtMoon_B2F_EventScript_RocketDuoTrigger1"
     },
     {
       "type": "trigger",
       "x": 4,
-      "y": 10,
+      "y": 7,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_MT_MOON_STATE",
+      "var_value": "1",
+      "script": "MtMoon_B2F_EventScript_RocketDuoTrigger2"
     }
   ],
   "bg_events": [

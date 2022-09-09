@@ -151,7 +151,7 @@
 #define VAR_PEWTER_CITY_STATE       		0x4084
 #define VAR_PEWTER_CITY_MUSEUM_STATE  		0x4085
 #define VAR_FOSSIL_SELECTION               	0x4086
-#define UNUSED_VARIABLE_12                 	0x4087
+#define VAR_MT_MOON_STATE                 	0x4087
 #define UNUSED_VARIABLE_13                  0x4088
 #define UNUSED_VARIABLE_14          		0x4089
 #define UNUSED_VARIABLE_15             		0x408A
