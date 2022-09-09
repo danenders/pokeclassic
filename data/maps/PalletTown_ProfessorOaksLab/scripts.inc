@@ -264,6 +264,7 @@ PalletTown_ProfessorOaksLab_EventScript_PostRivalBattle::
 	removeobject LOCALID_RIVAL
 	setflag FLAG_HIDE_RIVAL_IN_LAB
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_ReturnToPikachu
+	waitmovement 0
 	setvar VAR_ADVENTURE_BEGINS, 3
 	fadedefaultbgm
 	releaseall

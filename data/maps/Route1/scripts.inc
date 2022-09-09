@@ -141,8 +141,6 @@ Route1_EventScript_MartClerk::
 	checkitemspace ITEM_POTION, 1
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
 	giveitem ITEM_POTION, 1
-	waitmessage
-	msgbox Route1_Text_PutPotionAway, MSGBOX_DEFAULT
 	setflag FLAG_GOT_POTION_ON_ROUTE_1
 	release
 	end
@@ -164,10 +162,6 @@ Route1_EventScript_AlreadyGotPotion::
 Route1_Text_ComeSeeUsIfYouNeedPokeBalls::
     .string "Please come see us if you need\n"
     .string "Poké Balls for catching Pokémon.$"
-
-Route1_Text_PutPotionAway::
-    .string "{PLAYER} put the Potion away in\n"
-    .string "the Bag's Items Pocket.$"
 
 Route1_EventScript_Boy::
 	msgbox Route1_Text_CanJumpFromLedges, MSGBOX_NPC
