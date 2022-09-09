@@ -6,7 +6,7 @@
 #define MAX_MULTICHOICE_WIDTH 28
 
 // Multichoice Ids
-#define MULTI_B_PRESSED            		   0
+#define MULTI_NULL	            		   0
 #define MULTI_PC                           1 // Exit only, populated by CreatePCMultichoice
 #define MULTI_ENTERINFO                    2
 #define MULTI_CONTEST_INFO                 3
@@ -134,7 +134,7 @@
 #define MULTI_UNUSED_124             	   124
 #define MULTI_UNUSED_125             	   125
 #define MULTI_UNUSED_126             	   126
-#define MULTI_UNUSED_127                   127
+#define MULTI_B_PRESSED                    127
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0
