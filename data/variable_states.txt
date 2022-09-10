@@ -19,3 +19,13 @@ Variable States:
 6: Collected Oak's Parcel
 7: Received Pokedex
 8: Left Lab after getting Pokedex
+
+//Fossil Selections
+1: Took Dome Fossil first (get Helix Fossil from quest later)
+2: Took Helix Fossil first (get Dome Fossil from quest later)
+
+//Mt. Moon State
+0: Nothing yet
+1: Battled Miguel
+2: Battled Jessie & James
+3: Encountered Looker

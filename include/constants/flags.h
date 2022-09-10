@@ -76,8 +76,8 @@
 #define FLAG_RESSURECTED_AERODACTYL         0x3A 
 #define FLAG_GOT_AERODACTYL_REWARD          0x3B
 #define FLAG_GOT_BROCK_REWARD               0x3C 
-#define FLAG_GOT_FOSSIL_FROM_MT_MOON        0x3E 
-#define FLAG_UNUSED_0x03F                   0x3F 
+#define FLAG_BOUGHT_MAGIKARP                0x3E 
+#define FLAG_GOT_FOSSIL_FROM_MT_MOON        0x3F 
 #define FLAG_UNUSED_0x040    		0x40 
 #define FLAG_UNUSED_0x041    		0x41 
 #define FLAG_UNUSED_0x042    		0x42 
@@ -791,7 +791,7 @@
 #define FLAG_HIDE_DOME_FOSSIL            							0x2F1
 #define FLAG_HIDE_HELIX_FOSSIL         								0x2F2
 #define FLAG_HIDE_MT_MOON_JESSIE_JAMES        						0x2F3
-#define FLAG_HIDE_UNUSED_30        									0x2F4
+#define FLAG_HIDE_ROUTE4_POLICE        								0x2F4
 #define FLAG_HIDE_UNUSED_31               							0x2F5
 #define FLAG_HIDE_UNUSED_32                							0x2F6
 #define FLAG_HIDE_UNUSED_33                    						0x2F7

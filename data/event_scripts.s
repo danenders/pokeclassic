@@ -726,6 +726,10 @@ Common_EventScript_NameReceivedPartyMon::
 	waitstate
 	return
 
+Text_GiveNicknameToThisMon::
+	.string "Do you want to give a nickname to\n"
+	.string "this {STR_VAR_1}?$"
+
 Common_EventScript_PlayerHandedOverTheItem::
 	bufferitemname STR_VAR_1, VAR_0x8004
 	playfanfare MUS_OBTAIN_TMHM

@@ -1,3 +1,8 @@
+.set LOCALID_JENNY_1, 7
+.set LOCALID_JENNY_2, 8
+.set LOCALID_LOOKER, 9
+
+
 Route4_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route4_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, Route4_OnResume
@@ -68,3 +73,150 @@ Route4_Text_CrissyPostBattle::
 Route4_EventScript_ItemTM05::
 	finditem ITEM_TM05, 1
 	end
+
+Route4_EventScript_Captured1::
+	lockall
+	callnative RemoveFollowingPokemon
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_StepDownForLooker
+	waitmovement 0
+	goto Route4_EventScript_Captured
+	end
+
+Movement_StepDownForLooker:
+	walk_down
+	face_left
+	step_end
+
+Route4_EventScript_Captured2::
+	lockall
+	callnative RemoveFollowingPokemon
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_TurnAroundForLooker
+	waitmovement 0
+	goto Route4_EventScript_Captured
+	end
+
+Movement_TurnAroundForLooker:
+	face_left
+	step_end
+
+Route4_EventScript_Captured3::
+	lockall
+	callnative RemoveFollowingPokemon
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_StepUpForLooker
+	waitmovement 0
+	goto Route4_EventScript_Captured
+	end
+
+Movement_StepUpForLooker:
+	walk_up
+	face_left
+	step_end
+
+Movement_PoliceApproach:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+Route4_EventScript_Captured::
+	playbgm MUS_ENCOUNTER_CHAMPION, 0
+	clearflag FLAG_HIDE_ROUTE4_POLICE
+	addobject LOCALID_JENNY_1
+	addobject LOCALID_JENNY_2
+	addobject LOCALID_LOOKER
+	applymovement LOCALID_JENNY_1, Movement_PoliceApproach
+	applymovement LOCALID_JENNY_2, Movement_PoliceApproach
+	applymovement LOCALID_LOOKER, Movement_PoliceApproach
+	waitmovement 9
+	msgbox Route4_Text_StopRightThere, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox Route4_Text_TeamRocketFossils, MSGBOX_DEFAULT
+	applymovement LOCALID_JENNY_1, Movement_PoliceExit
+	applymovement LOCALID_JENNY_2, Movement_PoliceExit
+	applymovement LOCALID_LOOKER, Movement_LookerExit
+	waitmovement 9
+	setflag FLAG_HIDE_ROUTE4_POLICE
+	removeobject LOCALID_JENNY_1
+	removeobject LOCALID_JENNY_2
+	removeobject LOCALID_LOOKER
+	@setvar VAR_MT_MOON_STATE, 3
+	callnative UpdateFollowingPokemon
+	goto Event_EndDemo
+	end
+	
+Event_EndDemo::
+	fadeoutbgm 0
+	fadescreen FADE_TO_BLACK
+	message Text_EndofDemo
+	waitmessage
+	waitbuttonpress
+	delay 10
+	warp MAP_PALLET_TOWN_PLAYERS_HOUSE_2F, 6, 6
+	closemessage
+	fadescreen FADE_FROM_BLACK
+	releaseall
+	end
+
+Movement_PoliceExit:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+Movement_LookerExit:
+	delay_8
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+Route4_Text_StopRightThere::
+	.string "???: Stop right there!\p"
+	.string "You thought you could escape\n"
+	.string "the International Police?\p"
+	.string "Well, I'll always be one step\n"
+	.string "ahead of your plans, Team Rocket!$"
+
+Route4_Text_TeamRocketFossils::
+	.string "Ha! You're saying your not\n"
+	.string "with Team Rocket?\p"
+	.string "Then how do you explain that\n"
+	.string "fossil you're carrying?\p"
+	.string "We know Team Rocket is seeking\n"
+	.string "rare fossils to sell on the\l"
+	.string "black market!\p"
+	.string "...\n"
+	.string "......\l"
+	.string "...........oh.\p"
+	.string "So you're saying you stopped them?\n"
+	.string "And they already fled Mt. Moon?\p"
+	.string "Blast! How did we miss them!\p"
+	.string "I'm sorry for the misundersanding.\p"
+	.string "My name is Looker - since you already\n"
+	.string "stopped Team Rocket once, maybe we can\l"
+	.string "help each other out.\p"
+	.string "Here's my Cell Phone number - call me\n"
+	.string "if you learn anything about Team Rocket!$"
+
+Text_EndofDemo::
+	.string "THIS IS THE END OF THE DEMO.$"
