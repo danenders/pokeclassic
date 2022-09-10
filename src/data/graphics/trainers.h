@@ -253,6 +253,8 @@ const u32 gTrainerPalette_Looker[] = INCBIN_U32("graphics/trainers/palettes/look
 const u32 gTrainerFrontPic_Bill[] = INCBIN_U32("graphics/trainers/front_pics/bill_front_pic.4bpp.lz");
 const u32 gTrainerPalette_Bill[] = INCBIN_U32("graphics/trainers/palettes/bill.gbapal.lz");
 
+const u32 gTrainerFrontPic_Bill[] = INCBIN_U32("graphics/trainers/front_pics/scott_front_pic.4bpp.lz");
+const u32 gTrainerPalette_Bill[] = INCBIN_U32("graphics/trainers/palettes/scott.gbapal.lz");
 
 const u32 gTrainerFrontPic_Steven[] = INCBIN_U32("graphics/trainers/front_pics/steven_front_pic.4bpp.lz");
 const u32 gTrainerPalette_Steven[] = INCBIN_U32("graphics/trainers/palettes/steven.gbapal.lz");

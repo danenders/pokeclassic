@@ -419,6 +419,17 @@ static const struct MatchCallCheckPageOverride sCheckPageOverrides[] = {
         }
     },
     {
+        .idx = MC_HEADER_SCOTT,
+        .facilityClass = FACILITY_CLASS_SCOTT,
+        .flag = 0xFFFF,
+        .flavorTexts = {
+            [CHECK_PAGE_STRATEGY] = gText_MatchCallScott_Strategy,
+            [CHECK_PAGE_POKEMON]  = gText_MatchCallScott_Pokemon,
+            [CHECK_PAGE_INTRO_1]  = gText_MatchCallScott_Intro1,
+            [CHECK_PAGE_INTRO_2]  = gText_MatchCallScott_Intro2
+        }
+    },
+    {
         .idx = MC_HEADER_LOOKER,
         .facilityClass = FACILITY_CLASS_LOOKER,
         .flag = 0xFFFF,

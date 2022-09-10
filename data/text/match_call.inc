@@ -383,7 +383,7 @@ MatchCall_Text_RegisteredLooker:
 	.string "Registered Looker\n"
 	.string "in your Cell Phone.$"
 
-MatchCall_Text_Looker1::
+MatchCall_Text_LookerIntro::
 	.string "Looker: Team Rocket…\p"
 	.string "They don't care who they\n"
 	.string "hurt, as long as it makes\l"
@@ -393,6 +393,51 @@ MatchCall_Text_Looker1::
 	.string "We need to protect them!\p"
 	.string "That's why I vowed to stop\n"
 	.string "Team Rocket.$"
+
+MatchCall_Text_LookerCeladon::
+	.string "Looker: Hello, {PLAYER}!\p"
+	.string "With their recruiting\n"
+	.string "operation in Cerulean City\l"
+	.string "shut down, we need to find\l"
+	.string "out where Team Rocket is\l"
+	.string "hiding out.\p"
+	.string "My gut says its a nearby city,\n"
+	.string "but it could be anywhere.\p"
+	.string "Keep an eye out for anything\n"
+	.string "suspicious!$"
+
+MatchCall_Text_LookerRocketHideout::
+	.string "Looker: Oh, its you, {PLAYER}.\n"
+	.string "Thanks for the tip about Team\l"
+	.string "Rocket's hideout in Celadon.\p"
+	.string "That should certainly slow down\n"
+	.string "their operation for some time!$"
+
+MatchCall_Text_LookerSaffron::
+	.string "Looker: I'm sorry {PLAYER}, but\n"
+	.string "I don't have time to talk now!\p"
+	.string "We intercepted some of Team\n"
+	.string "Rocket's plans, and it looks like\l"
+	.string "they're going to make their next\l"
+	.string "move in Saffron City!\p"
+	.string "...what!?\p"
+	.string "You're saying they're already there?\n"
+	.string "We're too late, again!\p"
+	.string "Be careful, {PLAYER}!$"
+
+MatchCall_Text_LookerSilphCo::
+	.string "Looker: {PLAYER}, thanks again.\p"
+	.string "We didn't get their leader, but\l"
+	.string "we at least saved Saffron City.\p"
+	.string "We'll find whoever is giving the\n"
+	.string "orders, soon.\p"
+	.string "Team Rocket's days are numbered!$"
+
+MatchCall_Text_LookerGiovanni::
+	.string "Looker: Giovanni may have gotten\n"
+	.string "away, but this should be the end\l"
+	.string "of Team Rocket.\p"
+	.string "My team is in your debt!$"
 
 MatchCall_Text_RegisteredBill:
 	.string "Registered Bill\n"
