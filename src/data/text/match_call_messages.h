@@ -8,11 +8,6 @@ const u8 gText_MatchCallYoungster_Ben_Pokemon[] = _("Cool Pokémon are my faves!
 const u8 gText_MatchCallYoungster_Ben_Intro1[] = _("Shorts are the ultimate");
 const u8 gText_MatchCallYoungster_Ben_Intro2[] = _("expression of freedom.");
 
-const u8 gText_MatchCall_Rival_Strategy[] = _("I'm in the mood for battle!");
-const u8 gText_MatchCall_Rival_Pokemon[] = _("My Pokémon is the strongest!");
-const u8 gText_MatchCall_Rival_Intro1[] = _("Hey, {PLAYER}! Thanks for");
-const u8 gText_MatchCall_Rival_Intro2[] = _("coming to lose to me!");
-
 const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_COUNT] =
 {
 	[REMATCH_JANICE] = MCFLAVOR(Lass_Janice),

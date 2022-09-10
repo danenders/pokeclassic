@@ -1,5 +1,5 @@
 @UPDATED
-MatchCall_Text_OakRegisterCall: @ 82B5F52
+MatchCall_Text_OakRegisterCall:
 	.string "Oak: Oh, {PLAYER}{KUN}!\n"
 	.string "I see you have a Cell Phone!\p"
 	.string "Well, I should give you my number.\p"
@@ -7,7 +7,7 @@ MatchCall_Text_OakRegisterCall: @ 82B5F52
 	.string "your Pokédex even while you're\l"
 	.string "out in the field.$"
 
-MatchCall_Text_RegisteredOak: @ 82B603A
+MatchCall_Text_RegisteredOak: 
 	.string "Registered Professor Oak\n"
 	.string "in your Cell Phone.$"
 
@@ -231,7 +231,6 @@ MatchCall_Text_AideWatchingProgress::
 	.string "That's good!\p"
 	.string "I'll be watching your progress!$"
 
-
 MatchCall_EventScript_AideFlashReady::
 	lockall
 	pokenavcall MatchCall_Text_AideFlashReady
@@ -379,6 +378,34 @@ MatchCall_Text_AideGameClear::
 	.string "Congratulations on becoming\n"
 	.string "the champion!\p"
 	.string "I hope my rewards were helpful!$"
+
+MatchCall_Text_RegisteredLooker:
+	.string "Registered Looker\n"
+	.string "in your Cell Phone.$"
+
+MatchCall_Text_Looker1::
+	.string "Looker: Team Rocket…\p"
+	.string "They don't care who they\n"
+	.string "hurt, as long as it makes\l"
+	.string "them more money!\p"
+	.string "People…\n"
+	.string "Pokémon…\l"
+	.string "We need to protect them!\p"
+	.string "That's why I vowed to stop\n"
+	.string "Team Rocket.$"
+
+MatchCall_Text_RegisteredBill:
+	.string "Registered Bill\n"
+	.string "in your Cell Phone.$"
+
+MatchCall_Text_Bill1::
+	.string "Bill: Thanks again for\n"
+	.string "helping me out back there!\p"
+	.string "Becoming a Pokémon...\p"
+	.string "Man, what a trip!\p"
+	.string "But it's giving me some new\n"
+	.string "ideas for my inventions!\p"
+	.string "Gotta go!$"
 
 @UNUSED
 MatchCall_Text_Mom2::

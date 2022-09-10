@@ -2877,6 +2877,9 @@ extern const u32 gMonStillFrontPic_DoubleQuestionMark[];
 extern const u16 gMonIconPalettes[][16];
 
 // trainer sprites
+extern const u32 gTrainerFrontPic_Oak[];
+extern const u32 gTrainerFrontPic_Looker[];
+extern const u32 gTrainerFrontPic_Bill[];
 extern const u32 gTrainerFrontPic_SuperNerd[];
 extern const u32 gTrainerFrontPic_Hiker[];
 extern const u32 gTrainerFrontPic_AquaGruntM[];
@@ -2972,7 +2975,6 @@ extern const u32 gTrainerFrontPic_Leaf[];
 extern const u32 gTrainerFrontPic_RubySapphireBrendan[];
 extern const u32 gTrainerFrontPic_RubySapphireMay[];
 extern const u32 gTrainerFrontPic_Blue[];
-
 extern const u32 gTrainerFrontPic_Ethan[];
 extern const u32 gTrainerFrontPic_Lyra[];
 extern const u32 gTrainerFrontPic_Kris[];
@@ -2980,19 +2982,16 @@ extern const u32 gTrainerFrontPic_Lucas[];
 extern const u32 gTrainerFrontPic_Dawn[];
 extern const u32 gTrainerFrontPic_LucasPlatinum[];
 extern const u32 gTrainerFrontPic_DawnPlatinum[];
-
 extern const u32 gTrainerFrontPic_Lance[];
 extern const u32 gTrainerFrontPic_Lorelei[];
 extern const u32 gTrainerFrontPic_Bruno[];
 extern const u32 gTrainerFrontPic_Agatha[];
-
 extern const u32 gTrainerFrontPic_Giovanni[];
 extern const u32 gTrainerFrontPic_Jessie[];
 extern const u32 gTrainerFrontPic_James[];
 extern const u32 gTrainerFrontPic_RocketGruntF[];
 extern const u32 gTrainerFrontPic_RocketGruntM[];
 extern const u32 gTrainerFrontPic_RocketDuo[];
-
 extern const u32 gTrainerFrontPic_Brock[];
 extern const u32 gTrainerFrontPic_Misty[];
 extern const u32 gTrainerFrontPic_Surge[];
@@ -3001,6 +3000,9 @@ extern const u32 gTrainerFrontPic_Sabrina[];
 extern const u32 gTrainerFrontPic_Koga[];
 extern const u32 gTrainerFrontPic_Blaine[];
 
+extern const u32 gTrainerPalette_Oak[];
+extern const u32 gTrainerPalette_Looker[];
+extern const u32 gTrainerPalette_Bill[];
 extern const u32 gTrainerPalette_SuperNerd[];
 extern const u32 gTrainerPalette_Hiker[];
 extern const u32 gTrainerPalette_AquaGruntM[];

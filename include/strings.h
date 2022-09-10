@@ -2386,67 +2386,6 @@ extern const u8 MatchCall_BattlePyramidText12[];
 extern const u8 MatchCall_BattlePyramidText13[];
 extern const u8 MatchCall_BattlePyramidText14[];
 
-
-extern const u8 MatchCall_Text_MrStone2[];
-extern const u8 MatchCall_Text_MrStone3[];
-extern const u8 MatchCall_Text_MrStone4[];
-extern const u8 MatchCall_Text_MrStone5[];
-extern const u8 MatchCall_Text_MrStone6[];
-extern const u8 MatchCall_Text_MrStone7[];
-extern const u8 MatchCall_Text_MrStone8[];
-extern const u8 MatchCall_Text_MrStone9[];
-extern const u8 MatchCall_Text_MrStone10[];
-extern const u8 MatchCall_Text_MrStone11[];
-extern const u8 MatchCall_Text_Norman1[];
-extern const u8 MatchCall_Text_Norman2[];
-extern const u8 MatchCall_Text_Norman3[];
-extern const u8 MatchCall_Text_Norman4[];
-extern const u8 MatchCall_Text_Norman5[];
-extern const u8 MatchCall_Text_Norman6[];
-extern const u8 MatchCall_Text_Norman7[];
-extern const u8 MatchCall_Text_Norman8[];
-extern const u8 MatchCall_Text_Norman9[];
-extern const u8 MatchCall_Text_Steven1[];
-extern const u8 MatchCall_Text_Steven2[];
-extern const u8 MatchCall_Text_Steven3[];
-extern const u8 MatchCall_Text_Steven4[];
-extern const u8 MatchCall_Text_Steven5[];
-extern const u8 MatchCall_Text_Steven6[];
-extern const u8 MatchCall_Text_Steven7[];
-extern const u8 MatchCall_Text_Roxanne1[];
-extern const u8 MatchCall_Text_Roxanne2[];
-extern const u8 MatchCall_Text_Roxanne3[];
-extern const u8 MatchCall_Text_Roxanne4[];
-extern const u8 MatchCall_Text_Brawly1[];
-extern const u8 MatchCall_Text_Brawly2[];
-extern const u8 MatchCall_Text_Brawly3[];
-extern const u8 MatchCall_Text_Brawly4[];
-extern const u8 MatchCall_Text_Wattson1[];
-extern const u8 MatchCall_Text_Wattson2[];
-extern const u8 MatchCall_Text_Wattson3[];
-extern const u8 MatchCall_Text_Wattson4[];
-extern const u8 MatchCall_Text_Flannery1[];
-extern const u8 MatchCall_Text_Flannery2[];
-extern const u8 MatchCall_Text_Flannery3[];
-extern const u8 MatchCall_Text_Flannery4[];
-extern const u8 MatchCall_Text_Winona1[];
-extern const u8 MatchCall_Text_Winona2[];
-extern const u8 MatchCall_Text_Winona3[];
-extern const u8 MatchCall_Text_Winona4[];
-extern const u8 MatchCall_Text_TateLiza1[];
-extern const u8 MatchCall_Text_TateLiza2[];
-extern const u8 MatchCall_Text_TateLiza3[];
-extern const u8 MatchCall_Text_TateLiza4[];
-extern const u8 MatchCall_Text_Juan1[];
-extern const u8 MatchCall_Text_Juan2[];
-extern const u8 MatchCall_Text_Juan3[];
-extern const u8 MatchCall_Text_Juan4[];
-extern const u8 MatchCall_Text_Sidney[];
-extern const u8 MatchCall_Text_Phoebe[];
-extern const u8 MatchCall_Text_Glacia[];
-extern const u8 MatchCall_Text_Drake[];
-extern const u8 MatchCall_Text_Wallace[];
-
 //Updated Match Call Data
 extern const u8 gText_MomMatchCallDesc[];
 extern const u8 gText_MomMatchCallName[];
@@ -2455,9 +2394,33 @@ extern const u8 MatchCall_Text_MomGameClear[];
 
 extern const u8 gText_ProfOakMatchCallDesc[];
 extern const u8 gText_ProfOakMatchCallName[];
+extern const u8 gText_MatchCallOak_Strategy[];
+extern const u8 gText_MatchCallOak_Pokemon[];
+extern const u8 gText_MatchCallOak_Intro1[];
+extern const u8 gText_MatchCallOak_Intro2[];
+
+extern const u8 gText_LookerMatchCallDesc[];
+extern const u8 gText_LookerMatchCallName[];
+extern const u8 gText_MatchCallLooker_Strategy[];
+extern const u8 gText_MatchCallLooker_Pokemon[];
+extern const u8 gText_MatchCallLooker_Intro1[];
+extern const u8 gText_MatchCallLooker_Intro2[];
+extern const u8 MatchCall_Text_Looker1[];
+
+extern const u8 gText_BillMatchCallDesc[];
+extern const u8 gText_BillMatchCallName[];
+extern const u8 gText_MatchCallBill_Strategy[];
+extern const u8 gText_MatchCallBill_Pokemon[];
+extern const u8 gText_MatchCallBill_Intro1[];
+extern const u8 gText_MatchCallBill_Intro2[];
+extern const u8 MatchCall_Text_Bill1[];
 
 extern const u8 gText_ScottMatchCallDesc[];
 extern const u8 gText_ScottMatchCallName[];
+extern const u8 gText_MatchCallScott_Strategy[];
+extern const u8 gText_MatchCallScott_Pokemon[];
+extern const u8 gText_MatchCallScott_Intro1[];
+extern const u8 gText_MatchCallScott_Intro2[];
 extern const u8 MatchCall_Text_ScottBusy[];
 extern const u8 MatchCall_Text_ScottCerulean[];
 extern const u8 MatchCall_Text_ScottGotBadge2[];
@@ -2494,31 +2457,6 @@ extern const u8 gText_MatchCallRival_Intro1[];
 extern const u8 gText_MatchCallRival_Intro2[];
 extern const u8 MatchCall_Text_Rival1[];
 extern const u8 MatchCall_Text_RivalGameClear[];
-
-//Old Match Call Data
-extern const u8 gText_MrStoneMatchCallDesc[];
-extern const u8 gText_MrStoneMatchCallName[];
-extern const u8 gText_StevenMatchCallDesc[];
-extern const u8 gText_StevenMatchCallName[];
-
-extern const u8 gText_NormanMatchCallDesc[];
-extern const u8 gText_NormanMatchCallName[];
-extern const u8 gText_RoxanneMatchCallDesc[];
-extern const u8 gText_BrawlyMatchCallDesc[];
-extern const u8 gText_WattsonMatchCallDesc[];
-extern const u8 gText_FlanneryMatchCallDesc[];
-extern const u8 gText_WinonaMatchCallDesc[];
-extern const u8 gText_TateLizaMatchCallDesc[];
-extern const u8 gText_JuanMatchCallDesc[];
-extern const u8 gText_EliteFourMatchCallDesc[];
-extern const u8 gText_ChampionMatchCallDesc[];
-extern const u8 gText_MatchCallSteven_Strategy[];
-extern const u8 gText_MatchCallSteven_Pokemon[];
-extern const u8 gText_MatchCallSteven_Intro1_BeforeMeteorFallsBattle[];
-extern const u8 gText_MatchCallSteven_Intro2_BeforeMeteorFallsBattle[];
-extern const u8 gText_MatchCallSteven_Intro1_AfterMeteorFallsBattle[];
-extern const u8 gText_MatchCallSteven_Intro2_AfterMeteorFallsBattle[];
-
 
 // Contest Link
 extern const u8 gText_ColorDarkGray[];

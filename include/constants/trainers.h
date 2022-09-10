@@ -135,8 +135,10 @@
 #define TRAINER_PIC_ROCKET_GRUNT_M		  115
 #define TRAINER_PIC_ROCKET_GRUNT_F		  116
 #define TRAINER_PIC_ROCKET_DUO			  117
-
 #define TRAINER_PIC_SUPER_NERD			  118
+#define TRAINER_PIC_OAK			  	  	  119
+#define TRAINER_PIC_LOOKER			  	  120
+#define TRAINER_PIC_BILL			  	  121
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
@@ -245,8 +247,11 @@
 #define FACILITY_CLASS_DAWN                  0x57
 #define FACILITY_CLASS_LUCAS_PLATINUM        0x58
 #define FACILITY_CLASS_DAWN_PLATINUM         0x59
+#define FACILITY_CLASS_OAK         		 	 0x5A
+#define FACILITY_CLASS_LOOKER         		 0x5B
+#define FACILITY_CLASS_BILL         		 0x5C
 
-#define FACILITY_CLASSES_COUNT               0x5a
+#define FACILITY_CLASSES_COUNT               0x5D
 
 #define RS_FACILITY_CLASS_AQUA_LEADER_ARCHIE    0x0
 #define RS_FACILITY_CLASS_AQUA_GRUNT_M          0x1

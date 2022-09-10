@@ -471,7 +471,7 @@
 #define FLAG_AIDE_LOCATION_4               	 0x1BB // Aide moves to Route 4
 #define FLAG_AIDE_LOCATION_5                 0x1BC // Aide moves to Route 5
 #define FLAG_QUEUE_AIDE_CALL           		 0x1BD // Aide is prepped to call player about a new item
-#define FLAG_UNUSED_0x1BE                    0x1BE
+#define FLAG_GOT_SEVEN_BADGES                0x1BE // Used for Scott Match Call tracking
 #define FLAG_UNUSED_0x1BF           		 0x1BF
 #define FLAG_UNUSED_0x1C0               	 0x1C0
 #define FLAG_UNUSED_0x1C1 					 0x1C1
@@ -1296,8 +1296,8 @@
 #define FLAG_UNUSED_0x4E7                                           0x4E7 // Unused Flag
 #define FLAG_UNUSED_0x4E8                                           0x4E8 // Unused Flag
 #define FLAG_UNUSED_0x4E9                                           0x4E9 // Unused Flag
-#define FLAG_UNUSED_0x4EA                                           0x4EA // Unused Flag
-#define FLAG_GOT_SEVEN_BADGES                                       0x4EB // Used for Scott Match Call tracking
+#define FLAG_REGISTERED_BILL                                        0x4EA
+#define FLAG_REGISTERED_LOOKER                                      0x4EB
 #define FLAG_REGISTERED_SCOTT                                       0x4EC
 #define FLAG_REGISTERED_AIDE                                        0x4ED
 #define FLAG_REGISTERED_DAISY                                       0x4EE
@@ -1364,7 +1364,7 @@
 #define FLAG_VISITED_FUCHSIA_CITY                 	(SYSTEM_FLAGS + 0x17)
 #define FLAG_VISITED_CINNABAR_ISLAND                (SYSTEM_FLAGS + 0x18)
 #define FLAG_VISITED_INDIGO_PLATEAU                 (SYSTEM_FLAGS + 0x19)
-#define FLAG_VISITED_UNUSED_1                   	(SYSTEM_FLAGS + 0x1A)
+#define FLAG_VISITED_BATTLE_FRONTIER                (SYSTEM_FLAGS + 0x1A) // Might be unncessary
 #define FLAG_VISITED_UNUSED_2                  		(SYSTEM_FLAGS + 0x1B)
 #define FLAG_VISITED_UNUSED_3                  		(SYSTEM_FLAGS + 0x1C)
 #define FLAG_VISITED_UNUSED_4                		(SYSTEM_FLAGS + 0x1D)

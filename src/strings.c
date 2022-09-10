@@ -1784,6 +1784,10 @@ const u8 gText_Cancel4[] = _("Cancel");
 //Updated Match Call
 const u8 gText_ProfOakMatchCallDesc[] = _("{PKMN} Prof.");
 const u8 gText_ProfOakMatchCallName[] = _("Prof. Oak");
+const u8 gText_MatchCallOak_Strategy[] = _("I prefer studying.");
+const u8 gText_MatchCallOak_Pokemon[] = _("I respect all Pokémon.");
+const u8 gText_MatchCallOak_Intro1[] = _("Completing the PokéDex");
+const u8 gText_MatchCallOak_Intro2[] = _("is my lifelong dream!");
 
 const u8 gText_MomMatchCallDesc[] = _("Calm & kind");
 const u8 gText_MomMatchCallName[] = _("Mom");
@@ -1797,25 +1801,28 @@ const u8 gText_MatchCallRival_Pokemon[] = _("I'll use any Pokémon to win!");
 const u8 gText_MatchCallRival_Intro1[] = _("If I see a strong trainer,");
 const u8 gText_MatchCallRival_Intro2[] = _("I'm gonna want to fight!");
 
-//Old Match Call
-const u8 gText_ScottMatchCallDesc[] = _("Elusive eyes");
+const u8 gText_ScottMatchCallDesc[] = _("Gym Guy");
 const u8 gText_ScottMatchCallName[] = _("Scott");
-const u8 gText_MrStoneMatchCallDesc[] = _("Devon Pres");
-const u8 gText_MrStoneMatchCallName[] = _("Mr. Stone");
-const u8 gText_StevenMatchCallDesc[] = _("Hard as rock");
-const u8 gText_StevenMatchCallName[] = _("Steven");
-const u8 gText_NormanMatchCallDesc[] = _("Reliable one");
-const u8 gText_NormanMatchCallName[] = _("Dad");
-const u8 gText_RoxanneMatchCallDesc[] = _("Rockin' whiz");
-const u8 gText_BrawlyMatchCallDesc[] = _("The big hit");
-const u8 gText_WattsonMatchCallDesc[] = _("Swell shock");
-const u8 gText_FlanneryMatchCallDesc[] = _("Passion burn");
-const u8 gText_WinonaMatchCallDesc[] = _("Sky tamer");
-const u8 gText_TateLizaMatchCallDesc[] = _("Mystic duo");
-const u8 gText_JuanMatchCallDesc[] = _("Dandy charm");
-const u8 gText_EliteFourMatchCallDesc[] = _("Elite Four");
-const u8 gText_ChampionMatchCallDesc[] = _("Champion");
+const u8 gText_MatchCallScott_Strategy[] = _("Show me a good battle!");
+const u8 gText_MatchCallScott_Pokemon[] = _("I don't train Pokémon.");
+const u8 gText_MatchCallScott_Intro1[] = _("I'm searching Kanto for the");
+const u8 gText_MatchCallScott_Intro2[] = _("strongest trainers!");
 
+const u8 gText_LookerMatchCallDesc[] = _("Inspector");
+const u8 gText_LookerMatchCallName[] = _("Looker");
+const u8 gText_MatchCallLooker_Strategy[] = _("I'm hunting Team Rocket!");
+const u8 gText_MatchCallLooker_Pokemon[] = _("I like loyal Pokémon.");
+const u8 gText_MatchCallLooker_Intro1[] = _("I won't let Team Rocket");
+const u8 gText_MatchCallLooker_Intro2[] = _("escape justice!");
+
+const u8 gText_BillMatchCallDesc[] = _("PokéManiac");
+const u8 gText_BillMatchCallName[] = _("Bill");
+const u8 gText_MatchCallBill_Strategy[] = _("I'm a true Pokémaniac!");
+const u8 gText_MatchCallBill_Pokemon[] = _("I turned into a Pokémon.");
+const u8 gText_MatchCallBill_Intro1[] = _("I invent things to help");
+const u8 gText_MatchCallBill_Intro2[] = _("both Pokémon and People!");
+
+//
 const u8 gText_CommStandbyAwaitingOtherPlayer[] = _("Communication standby…\nAwaiting another player to choose.");
 const u8 gText_BattleWasRefused[] = _("The battle was refused.{PAUSE 60}");
 const u8 gText_RefusedBattle[] = _("Refused the battle.{PAUSE 60}");

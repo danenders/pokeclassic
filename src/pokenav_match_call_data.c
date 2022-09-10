@@ -244,6 +244,7 @@ static const struct MatchCallAide sAideMatchCallHeader =
     .locationData = sAideLocationData
 };
 
+//SCOTT
 static const match_call_text_data_t sScottTextScripts[] = {
     { MatchCall_Text_ScottBusy,         0xFFFF,                         0xFFFF },
     { MatchCall_Text_ScottCerulean,     FLAG_VISITED_CERULEAN_CITY,     0xFFFF },
@@ -265,44 +266,67 @@ static const match_call_text_data_t sScottTextScripts[] = {
     { NULL,                  0xFFFF,                                    0xFFFF }
 };
 
+static const struct MatchCallLocationOverride sScottLocationData[] = {
+    { FLAG_BADGE01_GET,             MAPSEC_CERULEAN_CITY  },
+    { FLAG_BADGE02_GET,             MAPSEC_VERMILION_CITY },
+    { FLAG_BADGE03_GET,             MAPSEC_CELADON_CITY },
+    { FLAG_BADGE04_GET,             MAPSEC_SAFFRON_CITY },
+    { FLAG_BADGE05_GET,             MAPSEC_FUCHSIA_CITY },
+    { FLAG_BADGE06_GET,             MAPSEC_CINNABAR_ISLAND },
+    { FLAG_GOT_SEVEN_BADGES,        MAPSEC_VIRIDIAN_CITY },
+    { FLAG_BADGE08_GET,             MAPSEC_INDIGO_PLATEAU },
+    { FLAG_SYS_GAME_CLEAR,          MAPSEC_NONE },
+    { FLAG_VISITED_BATTLE_FRONTIER, MAPSEC_BATTLE_FRONTIER },
+    { 0xFFFF,                       MAPSEC_NONE }
+};
 
-static const struct MatchCallStructNPC sScottMatchCallHeader =
+static const struct MatchCallAide sScottMatchCallHeader =
 {
-    .type = 0,
-    .mapSec = MAPSEC_NONE,
+    .type = MC_TYPE_AIDE,
+    .mapSec = 0,
     .flag = FLAG_REGISTERED_SCOTT,
     .desc = gText_ScottMatchCallDesc,
     .name = gText_ScottMatchCallName,
-    .textData = sScottTextScripts
+    .textData = sScottTextScripts,
+    .locationData = sScottLocationData
 };
 
-//UNUSED
-static const match_call_text_data_t sMrStoneTextScripts[] = {
-    { NULL,                     0xFFFF, 0xFFFF }
+//LOOKER
+static const match_call_text_data_t sLookerTextScripts[] = {
+    { MatchCall_Text_Looker1,   0xFFFF,                         0xFFFF },
+    { NULL,                     0xFFFF,                         0xFFFF }
 };
 
-static const struct MatchCallStructNPC sMrStoneMatchCallHeader =
+static const struct MatchCallLocationOverride sLookerLocationData[] = {
+    { FLAG_REGISTERED_LOOKER,       MAPSEC_CERULEAN_CITY  },
+    { 0xFFFF,                       MAPSEC_NONE }
+};
+
+static const struct MatchCallAide sLookerMatchCallHeader =
+{
+    .type = MC_TYPE_AIDE,
+    .mapSec = 0,
+    .flag = FLAG_REGISTERED_LOOKER,
+    .desc = gText_LookerMatchCallDesc,
+    .name = gText_LookerMatchCallName,
+    .textData = sLookerTextScripts,
+    .locationData = sLookerLocationData
+};
+
+//BILL
+static const match_call_text_data_t sBillTextScripts[] = {
+    { MatchCall_Text_Bill1,  0xFFFF,                      0xFFFF },
+    { NULL,                  0xFFFF,                      0xFFFF }
+};
+
+static const struct MatchCallStructNPC sBillMatchCallHeader =
 {
     .type = MC_TYPE_NPC,
-    .mapSec = MAPSEC_PALLET_TOWN,
-    .flag = FLAG_SYS_GAME_CLEAR, //PLACEHOLDER
-    .desc = gText_MrStoneMatchCallDesc,
-    .name = gText_MrStoneMatchCallName,
-    .textData = sMrStoneTextScripts
-};
-
-static const match_call_text_data_t sStevenTextScripts[] = {
-    { NULL,                   0xFFFF,                              0xFFFF },
-};
-
-static const struct MatchCallStructNPC sStevenMatchCallHeader =
-{
-    .type = MC_TYPE_NPC,
-    .mapSec = MAPSEC_NONE,
-    .flag = FLAG_SYS_GAME_CLEAR, //PLACEHOLDER
-    .desc = gText_StevenMatchCallDesc,
-    .name = gText_StevenMatchCallName,
-    .textData = sStevenTextScripts
+    .mapSec = MAPSEC_ROUTE_25,
+    .flag = FLAG_REGISTERED_BILL,
+    .desc = gText_BillMatchCallDesc,
+    .name = gText_BillMatchCallName,
+    .textData = sBillTextScripts
 };
 
 static const match_call_t sMatchCallHeaders[] = {
@@ -310,9 +334,9 @@ static const match_call_t sMatchCallHeaders[] = {
     [MC_HEADER_PROF_OAK]   = {.oak    = &sProfOakMatchCallHeader},
     [MC_HEADER_RIVAL]      = {.rival  = &sRivalMatchCallHeader},
     [MC_HEADER_AIDE]       = {.aide   = &sAideMatchCallHeader},
-    [MC_HEADER_SCOTT]      = {.npc    = &sScottMatchCallHeader},
-    [MC_HEADER_MR_STONE]   = {.npc    = &sMrStoneMatchCallHeader},
-    [MC_HEADER_STEVEN]     = {.npc    = &sStevenMatchCallHeader},
+    [MC_HEADER_SCOTT]      = {.aide   = &sScottMatchCallHeader},
+    [MC_HEADER_LOOKER]     = {.aide   = &sLookerMatchCallHeader},
+    [MC_HEADER_BILL]       = {.npc    = &sBillMatchCallHeader},
 };
 
 static bool32 (*const sMatchCallGetEnabledFuncs[])(match_call_t) = {
@@ -373,32 +397,48 @@ static void (*const sMatchCall_GetNameAndDescFunctions[])(match_call_t, const u8
 
 static const struct MatchCallCheckPageOverride sCheckPageOverrides[] = {
     {
-        .idx = MC_HEADER_STEVEN,
-        .facilityClass = FACILITY_CLASS_STEVEN,
-        .flag = 0xFFFF,
-        .flavorTexts = {
-            [CHECK_PAGE_STRATEGY] = gText_MatchCallSteven_Strategy,
-            [CHECK_PAGE_POKEMON]  = gText_MatchCallSteven_Pokemon,
-            [CHECK_PAGE_INTRO_1]  = gText_MatchCallSteven_Intro1_BeforeMeteorFallsBattle,
-            [CHECK_PAGE_INTRO_2]  = gText_MatchCallSteven_Intro2_BeforeMeteorFallsBattle
-        }
-    },
-    {
-        .idx = MC_HEADER_STEVEN,
-        .facilityClass = FACILITY_CLASS_STEVEN,
-        .flag = FLAG_DEFEATED_MOSSDEEP_GYM,
-        .flavorTexts = {
-            [CHECK_PAGE_STRATEGY] = gText_MatchCallSteven_Strategy,
-            [CHECK_PAGE_POKEMON]  = gText_MatchCallSteven_Pokemon,
-            [CHECK_PAGE_INTRO_1]  = gText_MatchCallSteven_Intro1_AfterMeteorFallsBattle,
-            [CHECK_PAGE_INTRO_2]  = gText_MatchCallSteven_Intro2_AfterMeteorFallsBattle
-        }
-    },
-    {
         .idx = MC_HEADER_RIVAL,
         .facilityClass = FACILITY_CLASS_BLUE,
         .flag = 0xFFFF,
-        .flavorTexts = MCFLAVOR(Rival)
+        .flavorTexts = {
+            [CHECK_PAGE_STRATEGY] = gText_MatchCallRival_Strategy,
+            [CHECK_PAGE_POKEMON]  = gText_MatchCallRival_Pokemon,
+            [CHECK_PAGE_INTRO_1]  = gText_MatchCallRival_Intro1,
+            [CHECK_PAGE_INTRO_2]  = gText_MatchCallRival_Intro2
+        }
+    },
+    {
+        .idx = MC_HEADER_PROF_OAK,
+        .facilityClass = FACILITY_CLASS_OAK,
+        .flag = 0xFFFF,
+        .flavorTexts = {
+            [CHECK_PAGE_STRATEGY] = gText_MatchCallOak_Strategy,
+            [CHECK_PAGE_POKEMON]  = gText_MatchCallOak_Pokemon,
+            [CHECK_PAGE_INTRO_1]  = gText_MatchCallOak_Intro1,
+            [CHECK_PAGE_INTRO_2]  = gText_MatchCallOak_Intro2
+        }
+    },
+    {
+        .idx = MC_HEADER_LOOKER,
+        .facilityClass = FACILITY_CLASS_LOOKER,
+        .flag = 0xFFFF,
+        .flavorTexts = {
+            [CHECK_PAGE_STRATEGY] = gText_MatchCallLooker_Strategy,
+            [CHECK_PAGE_POKEMON]  = gText_MatchCallLooker_Pokemon,
+            [CHECK_PAGE_INTRO_1]  = gText_MatchCallLooker_Intro1,
+            [CHECK_PAGE_INTRO_2]  = gText_MatchCallLooker_Intro2
+        }
+    },
+    {
+        .idx = MC_HEADER_BILL,
+        .facilityClass = FACILITY_CLASS_BILL,
+        .flag = 0xFFFF,
+        .flavorTexts = {
+            [CHECK_PAGE_STRATEGY] = gText_MatchCallBill_Strategy,
+            [CHECK_PAGE_POKEMON]  = gText_MatchCallBill_Pokemon,
+            [CHECK_PAGE_INTRO_1]  = gText_MatchCallBill_Intro1,
+            [CHECK_PAGE_INTRO_2]  = gText_MatchCallBill_Intro2
+        }
     }
 };
 

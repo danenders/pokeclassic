@@ -136,6 +136,12 @@ Route4_EventScript_Captured::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
 	msgbox Route4_Text_TeamRocketFossils, MSGBOX_DEFAULT
+	playfanfare MUS_REGISTER_MATCH_CALL
+	msgbox MatchCall_Text_RegisteredLooker, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	delay 30
+	setflag FLAG_REGISTERED_LOOKER
 	applymovement LOCALID_JENNY_1, Movement_PoliceExit
 	applymovement LOCALID_JENNY_2, Movement_PoliceExit
 	applymovement LOCALID_LOOKER, Movement_LookerExit
@@ -144,22 +150,8 @@ Route4_EventScript_Captured::
 	removeobject LOCALID_JENNY_1
 	removeobject LOCALID_JENNY_2
 	removeobject LOCALID_LOOKER
-	@setvar VAR_MT_MOON_STATE, 3
+	setvar VAR_MT_MOON_STATE, 3
 	callnative UpdateFollowingPokemon
-	goto Event_EndDemo
-	end
-	
-Event_EndDemo::
-	fadeoutbgm 0
-	fadescreen FADE_TO_BLACK
-	message Text_EndofDemo
-	waitmessage
-	waitbuttonpress
-	delay 10
-	warp MAP_PALLET_TOWN_PLAYERS_HOUSE_2F, 6, 6
-	closemessage
-	fadescreen FADE_FROM_BLACK
-	releaseall
 	end
 
 Movement_PoliceExit:
@@ -218,5 +210,4 @@ Route4_Text_TeamRocketFossils::
 	.string "Here's my Cell Phone number - call me\n"
 	.string "if you learn anything about Team Rocket!$"
 
-Text_EndofDemo::
-	.string "THIS IS THE END OF THE DEMO.$"
+

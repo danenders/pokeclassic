@@ -476,6 +476,18 @@ static const union AnimCmd *const sAnims_SuperNerd[] ={
     sAnim_GeneralFrame0,
 };
 
+static const union AnimCmd *const sAnims_Oak[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_Looker[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_Bill[] ={
+    sAnim_GeneralFrame0,
+};
+
 const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
 {
     [TRAINER_PIC_HIKER] = sAnims_Hiker,
@@ -579,7 +591,6 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_DAWN] = sAnims_Dawn,
     [TRAINER_PIC_LUCAS_PLATINUM] = sAnims_LucasPlatinum,
     [TRAINER_PIC_DAWN_PLATINUM] = sAnims_DawnPlatinum,
-
     [TRAINER_PIC_BROCK] = sAnims_Brock,
     [TRAINER_PIC_MISTY] = sAnims_Misty,
     [TRAINER_PIC_SURGE] = sAnims_Surge,
@@ -587,18 +598,18 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_SABRINA] = sAnims_Sabrina,
     [TRAINER_PIC_KOGA] = sAnims_Koga,
     [TRAINER_PIC_BLAINE] = sAnims_Blaine,
-
     [TRAINER_PIC_GIOVANNI] = sAnims_Giovanni,
     [TRAINER_PIC_JESSIE] = sAnims_Jessie,
     [TRAINER_PIC_JAMES] = sAnims_James,
     [TRAINER_PIC_ROCKET_GRUNT_M] = sAnims_RocketGruntM,
     [TRAINER_PIC_ROCKET_GRUNT_F] = sAnims_RocketGruntF,
     [TRAINER_PIC_ROCKET_DUO] = sAnims_RocketDuo,
-
     [TRAINER_PIC_LORELEI] = sAnims_Lorelei,
     [TRAINER_PIC_BRUNO] = sAnims_Bruno,
     [TRAINER_PIC_AGATHA] = sAnims_Agatha,
     [TRAINER_PIC_LANCE] = sAnims_Lance,
-
     [TRAINER_PIC_SUPER_NERD] = sAnims_SuperNerd,
+    [TRAINER_PIC_OAK] = sAnims_Oak,
+    [TRAINER_PIC_LOOKER] = sAnims_Looker,
+    [TRAINER_PIC_BILL] = sAnims_Bill,
 };

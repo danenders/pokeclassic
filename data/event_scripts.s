@@ -762,6 +762,22 @@ Common_EventScript_Day::
 	setvar VAR_DAYNIGHT, 0
 	end
 
+Event_EndDemo::
+	fadeoutbgm 0
+	fadescreen FADE_TO_BLACK
+	message Text_EndofDemo
+	waitmessage
+	waitbuttonpress
+	delay 10
+	warp MAP_PALLET_TOWN_PLAYERS_HOUSE_2F, 6, 6
+	closemessage
+	fadescreen FADE_FROM_BLACK
+	releaseall
+	end
+
+Text_EndofDemo::
+	.string "THIS IS THE END OF THE DEMO.$"
+
 @ The below and surf.inc could be split into some text/notices.inc
 gText_PokemartSign::
 	.string "“Selected items for your convenience!”\n"

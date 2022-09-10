@@ -244,6 +244,16 @@ const u32 gTrainerPalette_SisAndBro[] = INCBIN_U32("graphics/trainers/palettes/s
 const u32 gTrainerFrontPic_SuperNerd[] = INCBIN_U32("graphics/trainers/front_pics/super_nerd_front_pic.4bpp.lz");
 const u32 gTrainerPalette_SuperNerd[] = INCBIN_U32("graphics/trainers/palettes/super_nerd.gbapal.lz");
 
+const u32 gTrainerFrontPic_Oak[] = INCBIN_U32("graphics/trainers/front_pics/professor_oak_front_pic.4bpp.lz");
+const u32 gTrainerPalette_Oak[] = INCBIN_U32("graphics/trainers/palettes/professor_oak.gbapal.lz");
+
+const u32 gTrainerFrontPic_Looker[] = INCBIN_U32("graphics/trainers/front_pics/looker_front_pic.4bpp.lz");
+const u32 gTrainerPalette_Looker[] = INCBIN_U32("graphics/trainers/palettes/looker.gbapal.lz");
+
+const u32 gTrainerFrontPic_Bill[] = INCBIN_U32("graphics/trainers/front_pics/bill_front_pic.4bpp.lz");
+const u32 gTrainerPalette_Bill[] = INCBIN_U32("graphics/trainers/palettes/bill.gbapal.lz");
+
+
 const u32 gTrainerFrontPic_Steven[] = INCBIN_U32("graphics/trainers/front_pics/steven_front_pic.4bpp.lz");
 const u32 gTrainerPalette_Steven[] = INCBIN_U32("graphics/trainers/palettes/steven.gbapal.lz");
 
