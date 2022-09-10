@@ -293,7 +293,7 @@ static const struct MatchCallAide sScottMatchCallHeader =
 
 //LOOKER
 static const match_call_text_data_t sLookerTextScripts[] = {
-    { MatchCall_Text_Looker1,   0xFFFF,                         0xFFFF },
+    { MatchCall_Text_LookerIntro,   0xFFFF,                         0xFFFF },
     { NULL,                     0xFFFF,                         0xFFFF }
 };
 
