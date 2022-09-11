@@ -290,8 +290,12 @@ CeruleanCity_EventScript_Rival::
 	applymovement LOCALID_RIVAL, CeruleanCity_Movement_RivalEnter
 	waitmovement 10
 	msgbox CeruleanCity_Text_RivalAppears, MSGBOX_DEFAULT
-	trainerbattle_single TRAINER_RIVAL_CERULEAN_CITY, CeruleanCity_Text_RivalIntro, CeruleanCity_Text_RivalDefeat, NO_MUSIC
+	trainerbattle_single TRAINER_RIVAL_CERULEAN_CITY, CeruleanCity_Text_RivalIntro, CeruleanCity_Text_RivalDefeat, CeruleanCity_EventScript_RivalDefeated, NO_MUSIC
+	end
+
+CeruleanCity_EventScript_RivalDefeated::
 	msgbox CeruleanCity_Text_RivalPostBattle, MSGBOX_DEFAULT
+	closemessage
 	playbgm MUS_RG_RIVAL_EXIT, 0
 	call_if_eq VAR_TEMP_1, 0, CeruleanCity_EventScript_RivalStartExit
 	call_if_eq VAR_TEMP_1, 1, CeruleanCity_EventScript_RivalStartExit
@@ -304,7 +308,7 @@ CeruleanCity_EventScript_Rival::
 	additem ITEM_POKEBLOCK_CASE
 	waitfanfare
 	msgbox CeruleanCity_Text_ExplainPokeblockSmellYa, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	applymovement LOCALID_RIVAL, CeruleanCity_Movement_RivalExit
 	waitmovement 10
 	fadedefaultbgm
