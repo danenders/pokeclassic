@@ -95,19 +95,20 @@ PalletTown_ProfessorOaksLab_Text_OakBePatientRival::
 PalletTown_ProfessorOaksLab_EventScript_ApproachPokeBallBehindDesk::
 	lockall
 	turnobject LOCALID_RIVAL, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	playse SE_PIN
 	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 2
 	applymovement LOCALID_RIVAL, Movement_RivalMoveToDesk2
 	waitmovement 2
 	applymovement LOCALID_RIVAL, Movement_StealEeveeTooSlow
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
 	msgbox PalletTown_ProfessorOaksLab_Text_TooSlow, MSGBOX_DEFAULT
 	removeobject LOCALID_POKEBALL
 	setflag FLAG_HIDE_OAK_LAB_POKEBALL
 	msgbox PalletTown_ProfessorOaksLab_Text_WereGoingToGetOne, MSGBOX_DEFAULT
+	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_PlayerReturnToOakFar
 	waitmovement 0
 	goto PalletTown_ProfessorOaksLab_EventScript_GetPartnerPikachu
@@ -841,7 +842,8 @@ PalletTown_ProfessorOaksLab_EventScript_ProfOak::
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_GoTakePokeball::
-	msgbox PalletTown_ProfessorOaksLab_Text_TakeMyPokemon
+	msgbox PalletTown_ProfessorOaksLab_Text_TakeMyPokemon, MSGBOX_DEFAULT
+	turnobject LOCALID_OAK, DIR_SOUTH
 	release
 	end
 
@@ -852,7 +854,8 @@ PalletTown_ProfessorOaksLab_Text_TakeMyPokemon::
     .string "Please take good care of it!$"
 
 PalletTown_ProfessorOaksLab_EventScript_OakCanReachNextTownWithMon::
-	msgbox PalletTown_ProfessorOaksLab_Text_OakCanReachNextTownWithMon
+	msgbox PalletTown_ProfessorOaksLab_Text_OakCanReachNextTownWithMon, MSGBOX_DEFAULT
+	turnobject LOCALID_OAK, DIR_SOUTH
 	release
 	end
 
@@ -863,7 +866,8 @@ PalletTown_ProfessorOaksLab_Text_OakCanReachNextTownWithMon::
     .string "able to reach the next town.$"
 
 PalletTown_ProfessorOaksLab_EventScript_OakBattleMonForItToGrow::
-	msgbox PalletTown_ProfessorOaksLab_Text_OakBattleMonForItToGrow
+	msgbox PalletTown_ProfessorOaksLab_Text_OakBattleMonForItToGrow, MSGBOX_DEFAULT
+	turnobject LOCALID_OAK, DIR_SOUTH
 	release
 	end
 
@@ -873,7 +877,8 @@ PalletTown_ProfessorOaksLab_Text_OakBattleMonForItToGrow::
     .string "It has to battle for it to grow.$"
 
 PalletTown_ProfessorOaksLab_EventScript_OakMonsAroundWorldWait::
-	msgbox PalletTown_ProfessorOaksLab_Text_OakMonsAroundWorldWait
+	msgbox PalletTown_ProfessorOaksLab_Text_OakMonsAroundWorldWait, MSGBOX_DEFAULT
+	turnobject LOCALID_OAK, DIR_SOUTH
 	release
 	end
 
