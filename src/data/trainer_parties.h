@@ -1437,3 +1437,19 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RocketDuo1[] = {
         .species = SPECIES_KOFFING,
     },
 };
+
+//Cerulean City
+static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt5[] = {
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_MACHOP,
+    },
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_DROWZEE,
+    },
+};
+
+

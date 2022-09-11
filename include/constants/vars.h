@@ -152,8 +152,8 @@
 #define VAR_PEWTER_CITY_MUSEUM_STATE  		0x4085
 #define VAR_FOSSIL_SELECTION               	0x4086
 #define VAR_MT_MOON_STATE                 	0x4087
-#define UNUSED_VARIABLE_13                  0x4088
-#define UNUSED_VARIABLE_14          		0x4089
+#define VAR_RIVAL_CERULEAN_CITY             0x4088
+#define VAR_CERULEAN_CITY_ROCKETS          	0x4089
 #define UNUSED_VARIABLE_15             		0x408A
 #define UNUSED_VARIABLE_16                  0x408B
 #define UNUSED_VARIABLE_17  				0x408C

@@ -1196,6 +1196,11 @@ const u16 gObjectEventPal_Jigglypuff[] = INCBIN_U16("graphics/object_events/pale
 const u32 gObjectEventPic_NidoranMOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/nidoran_m_overworld.4bpp");
 const u16 gObjectEventPal_Nidoran[] = INCBIN_U16("graphics/object_events/palettes/nidoran.gbapal");
 
+const u32 gObjectEventPic_SlowpokeOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/slowpoke_overworld.4bpp");
+const u32 gObjectEventPic_SlowbroOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/slowbro_overworld.4bpp");
+const u16 gObjectEventPal_Slow[] = INCBIN_U16("graphics/object_events/palettes/slow.gbapal");
+
+
 
 //FRLG Objects
 const u16 gObjectEventPic_Pokedex[] = INCBIN_U16("graphics/object_events/pics/misc/pokedex.4bpp");

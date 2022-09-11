@@ -162,6 +162,8 @@
 	create_movement_action figure_8, MOVEMENT_ACTION_FIGURE_8
 	create_movement_action fly_up, MOVEMENT_ACTION_FLY_UP
 	create_movement_action fly_down, MOVEMENT_ACTION_FLY_DOWN
+	create_movement_action exit_pokeball, MOVEMENT_ACTION_EXIT_POKEBALL
+  	create_movement_action enter_pokeball, MOVEMENT_ACTION_ENTER_POKEBALL
 	create_movement_action spin_down, MOVEMENT_ACTION_SPIN_DOWN
 	create_movement_action spin_up, MOVEMENT_ACTION_SPIN_UP
 	create_movement_action spin_left, MOVEMENT_ACTION_SPIN_LEFT

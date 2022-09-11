@@ -72,7 +72,7 @@ EventScript_FollowerJump::
   return
 
 EnterPokeballMovement::
-  .byte 0x9F @ EnterPokeball
+  enter_pokeball
   step_end
 
 @ Movement scripts below, movements are defined in movement.inc

@@ -362,6 +362,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Clipboard;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spearow;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jigglypuff;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NidoranM;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Slowpoke;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Slowbro;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreatBall;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UltraBall;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MasterBall;
@@ -736,7 +738,9 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
 	[OBJ_EVENT_GFX_SABRINA] = 				 		 &gObjectEventGraphicsInfo_Sabrina,
 	[OBJ_EVENT_GFX_KOGA] = 				 	 		 &gObjectEventGraphicsInfo_Koga,
 	[OBJ_EVENT_GFX_BLAINE] = 				 		 &gObjectEventGraphicsInfo_Blaine,
-	[OBJ_EVENT_GFX_LOOKER] = 				 		 &gObjectEventGraphicsInfo_Looker
+	[OBJ_EVENT_GFX_LOOKER] = 				 		 &gObjectEventGraphicsInfo_Looker,
+	[OBJ_EVENT_GFX_SLOWPOKE] = 				 		 &gObjectEventGraphicsInfo_Slowpoke,
+	[OBJ_EVENT_GFX_SLOWBRO] = 				 		 &gObjectEventGraphicsInfo_Slowbro
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

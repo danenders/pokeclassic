@@ -78,8 +78,8 @@
 #define FLAG_GOT_BROCK_REWARD               0x3C 
 #define FLAG_BOUGHT_MAGIKARP                0x3E 
 #define FLAG_GOT_FOSSIL_FROM_MT_MOON        0x3F 
-#define FLAG_UNUSED_0x040    		0x40 
-#define FLAG_UNUSED_0x041    		0x41 
+#define FLAG_GOT_SS_TICKET    		        0x40 
+#define FLAG_RECOVERED_STOLEN_TM    		0x41 
 #define FLAG_UNUSED_0x042    		0x42 
 #define FLAG_UNUSED_0x043    		0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    		0x44 // Unused Flag
@@ -545,7 +545,7 @@
 #define FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM_3     (FLAG_HIDDEN_ITEMS_START + 0x0C)
 #define FLAG_HIDDEN_ITEM_MT_MOON_B2F_ETHER       		(FLAG_HIDDEN_ITEMS_START + 0x0D)
 #define FLAG_HIDDEN_ITEM_MT_MOON_B2F_MOON_STONE         (FLAG_HIDDEN_ITEMS_START + 0x0E)
-#define FLAG_HIDDEN_ITEM_15           	(FLAG_HIDDEN_ITEMS_START + 0x0F)
+#define FLAG_HIDDEN_ITEM_CERULEAN_CITY_RARE_CANDY       (FLAG_HIDDEN_ITEMS_START + 0x0F)
 #define FLAG_HIDDEN_ITEM_16             (FLAG_HIDDEN_ITEMS_START + 0x10)
 #define FLAG_HIDDEN_ITEM_17             (FLAG_HIDDEN_ITEMS_START + 0x11)
 #define FLAG_HIDDEN_ITEM_18         	(FLAG_HIDDEN_ITEMS_START + 0x12)
@@ -792,10 +792,10 @@
 #define FLAG_HIDE_HELIX_FOSSIL         								0x2F2
 #define FLAG_HIDE_MT_MOON_JESSIE_JAMES        						0x2F3
 #define FLAG_HIDE_ROUTE4_POLICE        								0x2F4
-#define FLAG_HIDE_UNUSED_31               							0x2F5
-#define FLAG_HIDE_UNUSED_32                							0x2F6
-#define FLAG_HIDE_UNUSED_33                    						0x2F7
-#define FLAG_HIDE_UNUSED_34    										0x2F8
+#define FLAG_HIDE_CERULEAN_RIVAL               						0x2F5
+#define FLAG_HIDE_CERULEAN_TM28                						0x2F6
+#define FLAG_HIDE_CERULEAN_ROCKET                    				0x2F7
+#define FLAG_HIDE_CERULEAN_CAVE_GUARD    							0x2F8
 #define FLAG_HIDE_UNUSED_35             							0x2F9
 #define FLAG_HIDE_UNUSED_36                 						0x2FA
 #define FLAG_HIDE_UNUSED_37                                         0x2FB
@@ -809,27 +809,27 @@
 #define FLAG_HIDE_UNUSED_45                        					0x303
 #define FLAG_HIDE_UNUSED_46                            				0x304
 #define FLAG_HIDE_UNUSED_47                           				0x305
-#define FLAG_HIDE_UNUSED_48         									0x306
+#define FLAG_HIDE_UNUSED_48         								0x306
 #define FLAG_HIDE_UNUSED_49                           				0x307
-#define FLAG_HIDE_UNUSED_50                          					0x308
-#define FLAG_HIDE_UNUSED_51                          					0x309
-#define FLAG_HIDE_UNUSED_52                          					0x30A
-#define FLAG_HIDE_UNUSED_53                          					0x30B
-#define FLAG_HIDE_UNUSED_54                          					0x30C
-#define FLAG_HIDE_UNUSED_55                             				0x30D
+#define FLAG_HIDE_UNUSED_50                          				0x308
+#define FLAG_HIDE_UNUSED_51                          				0x309
+#define FLAG_HIDE_UNUSED_52                          				0x30A
+#define FLAG_HIDE_UNUSED_53                          				0x30B
+#define FLAG_HIDE_UNUSED_54                        					0x30C
+#define FLAG_HIDE_UNUSED_55                            				0x30D
 #define FLAG_HIDE_UNUSED_56                                			0x30E
 #define FLAG_HIDE_UNUSED_57                                			0x30F
-#define FLAG_HIDE_UNUSED_58          									0x310
-#define FLAG_HIDE_UNUSED_59              								0x311
+#define FLAG_HIDE_UNUSED_58          								0x310
+#define FLAG_HIDE_UNUSED_59              							0x311
 #define FLAG_HIDE_UNUSED_60                                   		0x312
-#define FLAG_HIDE_UNUSED_61                              				0x313
+#define FLAG_HIDE_UNUSED_61                            				0x313
 #define FLAG_HIDE_UNUSED_62                               			0x314
-#define FLAG_HIDE_UNUSED_63                                  			0x315
+#define FLAG_HIDE_UNUSED_63                                			0x315
 #define FLAG_HIDE_UNUSED_64                                       	0x316
 #define FLAG_HIDE_UNUSED_65                                			0x317
-#define FLAG_HIDE_UNUSED_66                                      		0x318
+#define FLAG_HIDE_UNUSED_66                                    		0x318
 #define FLAG_HIDE_UNUSED_67               							0x319
-#define FLAG_HIDE_UNUSED_68                             				0x31A
+#define FLAG_HIDE_UNUSED_68                            				0x31A
 #define FLAG_HIDE_UNUSED_69                             				0x31B
 #define FLAG_HIDE_UNUSED_70                          					0x31C
 #define FLAG_HIDE_UNUSED_71                          					0x31D

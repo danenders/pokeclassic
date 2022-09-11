@@ -474,7 +474,6 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_DAWN                    0x1130
 #define OBJ_EVENT_PAL_TAG_LUCAS_PLATINUM          0x1131
 #define OBJ_EVENT_PAL_TAG_DAWN_PLATINUM           0x1132
-
 #define OBJ_EVENT_PAL_TAG_ANABEL                  0x1133
 #define OBJ_EVENT_PAL_TAG_TUCKER                  0x1134
 #define OBJ_EVENT_PAL_TAG_SPENSER                 0x1135
@@ -592,6 +591,8 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_SABRINA                 0x11A5
 #define OBJ_EVENT_PAL_TAG_KOGA                    0x11A6
 #define OBJ_EVENT_PAL_TAG_BLAINE                  0x11A7
+#define OBJ_EVENT_PAL_TAG_SLOW                    0x11A8
+
 
 #define OBJ_EVENT_PAL_TAG_NONE 0x128D
 
@@ -773,6 +774,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Sabrina,               OBJ_EVENT_PAL_TAG_SABRINA},
     {gObjectEventPal_Koga,                  OBJ_EVENT_PAL_TAG_KOGA},
     {gObjectEventPal_Lance,                 OBJ_EVENT_PAL_TAG_BLAINE},
+    {gObjectEventPal_Slow,                  OBJ_EVENT_PAL_TAG_SLOW},
     {NULL,                  0x0000},
 };
 
