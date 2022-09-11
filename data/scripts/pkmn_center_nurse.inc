@@ -43,7 +43,6 @@ EventScript_PkmnCenterNurse_HealPkmn::
 	incrementgamestat GAME_STAT_USED_POKECENTER
 	message gText_IllTakeYourPkmn
 	waitmessage
-	callnative RemoveFollowingPokemon
 	applymovement VAR_0x800B, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	dofieldeffect FLDEFF_POKECENTER_HEAL
@@ -51,7 +50,6 @@ EventScript_PkmnCenterNurse_HealPkmn::
 	applymovement VAR_0x800B, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	special HealPlayerParty
-  	callnative UpdateFollowingPokemon
 	call_if_unset FLAG_POKERUS_EXPLAINED, EventScript_PkmnCenterNurse_CheckPokerus
 	msgbox gText_RestoredPkmnToFullHealth, MSGBOX_DEFAULT
 	applymovement VAR_0x800B, Movement_PkmnCenterNurse_Bow

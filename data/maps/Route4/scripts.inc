@@ -76,7 +76,6 @@ Route4_EventScript_ItemTM05::
 
 Route4_EventScript_Captured1::
 	lockall
-	callnative RemoveFollowingPokemon
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_StepDownForLooker
 	waitmovement 0
 	goto Route4_EventScript_Captured
@@ -89,7 +88,6 @@ Movement_StepDownForLooker:
 
 Route4_EventScript_Captured2::
 	lockall
-	callnative RemoveFollowingPokemon
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_TurnAroundForLooker
 	waitmovement 0
 	goto Route4_EventScript_Captured
@@ -101,7 +99,6 @@ Movement_TurnAroundForLooker:
 
 Route4_EventScript_Captured3::
 	lockall
-	callnative RemoveFollowingPokemon
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_StepUpForLooker
 	waitmovement 0
 	goto Route4_EventScript_Captured
@@ -151,7 +148,8 @@ Route4_EventScript_Captured::
 	removeobject LOCALID_JENNY_2
 	removeobject LOCALID_LOOKER
 	setvar VAR_MT_MOON_STATE, 3
-	callnative UpdateFollowingPokemon
+	fadedefaultbgm
+	releaseall
 	end
 
 Movement_PoliceExit:

@@ -88,7 +88,6 @@ MtMoon_B2F_Text_Grunt4PostBattle::
 
 MtMoon_B2F_EventScript_MiguelTrigger::
 	lockall
-	callnative RemoveFollowingPokemon
 	applymovement LOCALID_MIGUEL, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 3
 	goto MtMoon_B2F_EventScript_BattleMiguel
@@ -108,7 +107,6 @@ MtMoon_B2F_EventScript_BattleMiguel::
 	trainerbattle_no_intro TRAINER_SUPER_NERD_MIGUEL, MtMoon_B2F_Text_MiguelDefeat
 	setvar VAR_MT_MOON_STATE, 1
 	msgbox MtMoon_B2F_Text_WellEachTakeAFossil, MSGBOX_DEFAULT
-	callnative UpdateFollowingPokemon
 	release
 	end
 
@@ -144,7 +142,6 @@ MtMoon_B2F_EventScript_MiguelGoPickFossil::
 MtMoon_B2F_EventScript_DomeFossil::
 	lock
 	faceplayer
-	callnative RemoveFollowingPokemon
 	msgbox MtMoon_B2F_Text_YouWantDomeFossil, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, MtMoon_B2F_EventScript_DontTakeFossil
 	removeobject LOCALID_DOME_FOSSIL
@@ -165,7 +162,6 @@ MtMoon_B2F_EventScript_DomeFossil::
 	removeobject LOCALID_HELIX_FOSSIL
 	setvar VAR_FOSSIL_SELECTION, 1
 	setflag FLAG_GOT_FOSSIL_FROM_MT_MOON
-	callnative UpdateFollowingPokemon
 	release
 	end
 
@@ -185,7 +181,6 @@ MtMoon_B2F_Movement_MiguelToHelixFossil::
 MtMoon_B2F_EventScript_HelixFossil::
 	lock
 	faceplayer
-	callnative RemoveFollowingPokemon
 	msgbox MtMoon_B2F_Text_YouWantHelixFossil, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, MtMoon_B2F_EventScript_DontTakeFossil
 	removeobject LOCALID_HELIX_FOSSIL
@@ -206,7 +201,6 @@ MtMoon_B2F_EventScript_HelixFossil::
 	removeobject LOCALID_DOME_FOSSIL
 	setvar VAR_FOSSIL_SELECTION, 2
 	setflag FLAG_GOT_FOSSIL_FROM_MT_MOON
-	callnative UpdateFollowingPokemon
 	release
 	end
 
@@ -227,7 +221,6 @@ MtMoon_B2F_Movement_MiguelToDomeFossil::
 	step_end
 
 MtMoon_B2F_EventScript_DontTakeFossil::
-	callnative UpdateFollowingPokemon
 	release
 	end
 
@@ -249,7 +242,6 @@ MtMoon_B2F_EventScript_ItemAntidote::
 
 MtMoon_B2F_EventScript_RocketDuoTrigger1::
 	lockall
-	callnative RemoveFollowingPokemon
 	msgbox MtMoon_B2F_Text_StopRightThere, MSGBOX_DEFAULT
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -265,7 +257,6 @@ Movement_FaceRockets1:
 
 MtMoon_B2F_EventScript_RocketDuoTrigger2::
 	lockall
-	callnative RemoveFollowingPokemon
 	msgbox MtMoon_B2F_Text_StopRightThere, MSGBOX_DEFAULT
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -307,7 +298,6 @@ MtMoon_B2F_EventScript_RocketDuoDefeated::
 	waitse
 	fadedefaultbgm
 	fadescreen FADE_FROM_BLACK
-	callnative UpdateFollowingPokemon
 	releaseall
 	end
 

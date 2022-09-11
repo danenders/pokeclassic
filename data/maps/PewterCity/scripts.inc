@@ -73,7 +73,6 @@ PewterCity_EventScript_MuseumGuide::
 	msgbox PewterCity_Text_ReallyYouHaveToGo, MSGBOX_DEFAULT
 	closemessage
 	delay 10
-	callnative RemoveFollowingPokemon
 	playbgm MUS_RG_FOLLOW_ME, 0
 	goto_if_eq VAR_FACING, DIR_NORTH, PewterCity_EventScript_LeadToMuseumNorth
 	goto_if_eq VAR_FACING, DIR_SOUTH, PewterCity_EventScript_LeadToMuseumSouth
@@ -357,7 +356,6 @@ PewterCity_EventScript_MuseumGuideFinished::
 	fadedefaultbgm
 	removeobject LOCALID_MUSEUM_GUIDE
 	clearflag FLAG_HIDE_PEWTER_MUSEUM_GUIDE
-	callnative UpdateFollowingPokemon
 	release
 	end
 
@@ -434,7 +432,6 @@ PewterCity_EventScript_GymGuide::
 	faceplayer
 	msgbox PewterCity_Text_BrocksLookingForChallengersFollowMe, MSGBOX_DEFAULT
 	closemessage
-	callnative RemoveFollowingPokemon
 	playbgm MUS_RG_FOLLOW_ME, 0
 	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Movement_PlayerWaitForGuideEast
 	applymovement LOCALID_GYM_GUIDE, PewterCity_Movement_GuideMoveToLeadEast
@@ -610,7 +607,6 @@ PewterCity_EventScript_GymGuideTriggerBottom::
 PewterCity_EventScript_GymGuideTrigger::
 	msgbox PewterCity_Text_BrocksLookingForChallengersFollowMe, MSGBOX_DEFAULT
 	closemessage
-	callnative RemoveFollowingPokemon
 	playbgm MUS_RG_FOLLOW_ME, 0
 	goto_if_eq VAR_TEMP_1, 0, PewterCity_EventScript_WalkToGymTop
 	goto_if_eq VAR_TEMP_1, 1, PewterCity_EventScript_WalkToGymMid
@@ -1066,7 +1062,6 @@ PewterCity_EventScript_GymGuideFinish::
 	fadedefaultbgm
 	removeobject LOCALID_GYM_GUIDE
 	clearflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
-	callnative UpdateFollowingPokemon
 	release
 	end
 

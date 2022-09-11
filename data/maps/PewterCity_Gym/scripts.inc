@@ -224,7 +224,6 @@ Movement_MoveToScott3:
 	step_end
 
 PewterCity_Gym_EventScript_ScottTriggered::
-	callnative RemoveFollowingPokemon
 	applymovement LOCALID_SCOTT, Common_Movement_ExclamationMark
 	waitmovement 3
 	msgbox PewterCity_Gym_Text_HeyWaitUp, MSGBOX_DEFAULT
@@ -301,7 +300,6 @@ PewterCity_Gym_EventScript_ThatWasReallySomething::
 	delay 30
 	setflag FLAG_REGISTERED_SCOTT
 	setvar VAR_PEWTER_CITY_STATE, 2
-	callnative UpdateFollowingPokemon
 	release
 	end
 

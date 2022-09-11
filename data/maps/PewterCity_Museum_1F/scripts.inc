@@ -7,7 +7,6 @@ PewterCity_Museum_1F_MapScripts::
 PewterCity_Museum_1F_EventScript_EntranceTriggerLeft::
 	lockall
 	setvar VAR_TEMP_1, 0
-	callnative RemoveFollowingPokemon
 	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Museum_1F_Movement_ApproachCounterLeft
 	waitmovement 0
 	goto PewterCity_Museum_1F_EventScript_EntranceTrigger
@@ -23,7 +22,6 @@ PewterCity_Museum_1F_Movement_ApproachCounterLeft::
 PewterCity_Museum_1F_EventScript_EntranceTriggerMid::
 	lockall
 	setvar VAR_TEMP_1, 1
-	callnative RemoveFollowingPokemon
 	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Museum_1F_Movement_ApproachCounterMid
 	waitmovement 0
 	goto PewterCity_Museum_1F_EventScript_EntranceTrigger
@@ -38,7 +36,6 @@ PewterCity_Museum_1F_Movement_ApproachCounterMid::
 PewterCity_Museum_1F_EventScript_EntranceTriggerRight::
 	lockall
 	setvar VAR_TEMP_1, 2
-	callnative RemoveFollowingPokemon
 	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Museum_1F_Movement_ApproachCounterRight
 	waitmovement 0
 	goto PewterCity_Museum_1F_EventScript_EntranceTrigger
@@ -57,7 +54,6 @@ PewterCity_Museum_1F_EventScript_EntranceTrigger::
 	hidemoneybox
 	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Museum_1F_Movement_ForcePlayerExit
 	waitmovement 0
-	callnative UpdateFollowingPokemon
 	releaseall
 	end
 
@@ -84,7 +80,6 @@ PewterCity_Museum_1F_EventScript_TryPayForTicket::
 	msgbox PewterCity_Museum_1F_Text_Right50YThankYou, MSGBOX_DEFAULT
 	setvar VAR_PEWTER_CITY_MUSEUM_STATE, 1
 	hidemoneybox
-	callnative UpdateFollowingPokemon
 	releaseall
 	end
 
@@ -97,7 +92,6 @@ PewterCity_Museum_1F_EventScript_NotEnoughMoney::
 	hidemoneybox
 	applymovement OBJ_EVENT_ID_PLAYER, PewterCity_Museum_1F_Movement_ForcePlayerExit
 	waitmovement 0
-	callnative UpdateFollowingPokemon
 	releaseall
 	end
 
