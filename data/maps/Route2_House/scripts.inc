@@ -6,9 +6,9 @@ Route2_House_EventScript_Scientist::
 	end
 
 Route2_House_Text_FaintedMonsCanUseFieldMoves::
-    .string "A fainted POKéMON just has no\n"
+    .string "A fainted Pokémon just has no\n"
     .string "energy left to battle.\p"
-    .string "It can still use moves like CUT\n"
+    .string "It can still use moves like Cut\n"
     .string "outside of battle.$"
 
 Route2_House_EventScript_Reyley::
@@ -43,7 +43,7 @@ Route2_House_Text_HeyThanks::
 	.string "Hey, thanks!$"
 
 Route2_House_Text_LookingForMonWannaTradeForMon::
-	.string "I'm looking for the POKéMON\n"
+	.string "I'm looking for the Pokémon\n"
 	.string "{STR_VAR_1}!\p"
 	.string "Wanna trade one for my\n"
 	.string "{STR_VAR_2}?$"

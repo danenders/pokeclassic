@@ -1451,5 +1451,38 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt5[] = {
         .species = SPECIES_DROWZEE,
     },
 };
+static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerDiana[] = {
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_GOLDEEN,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_SwimmerMaleLuis[] = {
+    {
+        .iv = 0,
+        .lvl = 16,
+        .species = SPECIES_HORSEA,
+    },
+    {
+        .iv = 0,
+        .lvl = 16,
+        .species = SPECIES_SHELLDER,
+    },
+};
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderMisty[] = {
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_STARYU,
+        .moves = {MOVE_TACKLE, MOVE_HARDEN, MOVE_RECOVER, MOVE_WATER_PULSE},
+    },
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_STARMIE,
+        .moves = {MOVE_SWIFT, MOVE_RECOVER, MOVE_RAPID_SPIN, MOVE_WATER_PULSE},
+    },
+};
 
 

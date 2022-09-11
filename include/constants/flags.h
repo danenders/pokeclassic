@@ -57,7 +57,7 @@
 
 //Key Items
 #define FLAG_RECEIVED_POKEBLOCK_CASE    0x2B
-#define FLAG_RECEIVED_WAILMER_PAIL    	0x2C 
+#define FLAG_RECEIVED_WATERING_CAN    	0x2C 
 #define FLAG_RECEIVED_OLD_ROD    		0x2D 
 #define FLAG_RECEIVED_GOOD_ROD    		0x2E 
 #define FLAG_RECEIVED_SUPER_ROD    		0x2F 
@@ -75,14 +75,14 @@
 #define FLAG_GOT_OLD_AMBER                  0x39
 #define FLAG_RESSURECTED_AERODACTYL         0x3A 
 #define FLAG_GOT_AERODACTYL_REWARD          0x3B
-#define FLAG_GOT_BROCK_REWARD               0x3C 
+#define FLAG_GOT_BROCK_REWARD               0x3C // Received TM39
 #define FLAG_BOUGHT_MAGIKARP                0x3E 
 #define FLAG_GOT_FOSSIL_FROM_MT_MOON        0x3F 
 #define FLAG_GOT_SS_TICKET    		        0x40 
 #define FLAG_RECOVERED_STOLEN_TM    		0x41 
 #define FLAG_GOT_BIKE_VOUCHER    		    0x42 // Out of order in story progression
 #define FLAG_GOT_BULBASAUR    		        0x43 // Received the Bulbasaur in Cerulean. Hides the Breeder and the Bulbasaur.
-#define FLAG_UNUSED_0x044    		0x44 // Unused Flag
+#define FLAG_GOT_MISTY_REWARD    		    0x44 // Received TM03
 #define FLAG_UNUSED_0x045    		0x45 // Unused Flag
 #define FLAG_UNUSED_0x046    		0x46 // Unused Flag
 #define FLAG_UNUSED_0x047    		0x47 // Unused Flag
@@ -455,7 +455,7 @@
 
 //More Unused Flags
 #define FLAG_IN_GAME_TRADE_MR_MIME           0x1AD
-#define FLAG_UNUSED_0x1AE                    0x1AE
+#define FLAG_IN_GAME_TRADE_JYNX              0x1AE
 #define FLAG_UNUSED_0x1AF                    0x1AF
 #define FLAG_UNUSED_0x1B0                    0x1B0
 #define FLAG_UNUSED_0x1B1                    0x1B1
@@ -1583,8 +1583,8 @@
 
 //Daily Events
 #define FLAG_DAILY_MT_MOON_MUSHROOMS        		(DAILY_FLAGS_START + 0xE)  // Hidden mushrooms in Mt. Moon reset each day
+#define FLAG_DAILY_CERULEAN_BERRY          			(DAILY_FLAGS_START + 0xF)  // The breeder in Cerulean gives a friendship berry once per day
 
-#define FLAG_UNUSED_0x92F          					(DAILY_FLAGS_START + 0xF)  // Unused Flag
 #define FLAG_UNUSED_0x930       					(DAILY_FLAGS_START + 0x10)  // Unused Flag
 #define FLAG_UNUSED_0x931               			(DAILY_FLAGS_START + 0x11)  // Unused Flag
 #define FLAG_UNUSED_0x932        					(DAILY_FLAGS_START + 0x12)  // Unused Flag

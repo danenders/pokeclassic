@@ -863,5 +863,40 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_TeamRocketGrunt5),
         .party = {.NoItemDefaultMoves = sParty_TeamRocketGrunt5}
     },
-
+    [TRAINER_PICNICKER_DIANA] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_PICNICKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GIRL | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_PICNICKER,
+        .trainerName = _("Diana"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_PicnickerDiana),
+        .party = {.NoItemDefaultMoves = sParty_PicnickerDiana}
+    },
+    [TRAINER_SWIMMER_MALE_LUIS] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SWIMMER_M,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SWIMMER,
+        .trainerPic = TRAINER_PIC_SWIMMER_M,
+        .trainerName = _("Luis"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SwimmerMaleLuis),
+        .party = {.NoItemDefaultMoves = sParty_SwimmerMaleLuis}
+    },
+    [TRAINER_LEADER_MISTY] = {
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_MISTY,
+        .trainerName = _("Misty"),
+        .items = {ITEM_SUPER_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_LeaderMisty),
+        .party = {.NoItemCustomMoves = sParty_LeaderMisty}
+    },
 };

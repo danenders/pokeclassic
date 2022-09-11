@@ -7,7 +7,7 @@ PewterCity_Gym_EventScript_Brock::
 	lock
 	faceplayer
 	goto_if_unset FLAG_BADGE01_GET, PewterCity_Gym_EventScript_ChallengeBrock
-	goto_if_unset FLAG_GOT_BROCK_REWARD, PewterCity_Gym_EventScript_GetTM39
+	goto_if_unset FLAG_GOT_BROCK_REWARD, PewterCity_Gym_EventScript_GetTM
 	goto_if_unset FLAG_DAILY_BROCK_REMATCH, PewterCity_Gym_EventScript_RematchBrock
 	goto PewterCity_Gym_EventScript_BrockPostBattle
 	end
@@ -40,30 +40,30 @@ PewterCity_Gym_Text_BrockDefeat::
     .string "I lost.$"
 
 PewterCity_Gym_EventScript_DefeatedBrockGetBadge::
-	msgbox PewterCity_Gym_Text_GetBoulderBadgeFromBrock, MSGBOX_DEFAULT
+	msgbox PewterCity_Gym_Text_GetBadgeFromBrock, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_BADGE
-	message PewterCity_Gym_Text_ReceivedBoulderBadge
+	message PewterCity_Gym_Text_ReceivedBadge
 	waitfanfare
 	waitmessage
-	msgbox PewterCity_Gym_Text_ExplainBoulderBadge, MSGBOX_DEFAULT
+	msgbox PewterCity_Gym_Text_ExplainBadge, MSGBOX_DEFAULT
 	setflag FLAG_BADGE01_GET
 	setflag FLAG_DAILY_BROCK_REMATCH
 	setflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
 	settrainerflag TRAINER_CAMPER_LIAM
 	setvar VAR_PEWTER_CITY_STATE, 1
-	goto PewterCity_Gym_EventScript_GetTM39
+	goto PewterCity_Gym_EventScript_GetTM
 	end
 
-PewterCity_Gym_Text_GetBoulderBadgeFromBrock::
+PewterCity_Gym_Text_GetBadgeFromBrock::
 	.string "As proof of your victory, I confer\n"
     .string "on you this…the official Pokémon\l"
     .string "League Boulder Badge.$"
 
-PewterCity_Gym_Text_ReceivedBoulderBadge::
+PewterCity_Gym_Text_ReceivedBadge::
 	.string "{PLAYER} received the Boulder\n"
     .string "Badge from Brock!$"
 
-PewterCity_Gym_Text_ExplainBoulderBadge::
+PewterCity_Gym_Text_ExplainBadge::
 	.string "Just having the Boulder Badge makes\n"
     .string "your Pokémon more powerful.\p"
     .string "It also enables the use of the\n"
@@ -71,16 +71,16 @@ PewterCity_Gym_Text_ExplainBoulderBadge::
     .string "Of course, a Pokémon must know the\n"
     .string "move Flash to use it.$"
 
-PewterCity_Gym_EventScript_GetTM39::
+PewterCity_Gym_EventScript_GetTM::
 	msgbox PewterCity_Gym_Text_TakeThisWithYou, MSGBOX_DEFAULT
 	checkitemspace ITEM_TM39, 1
-	goto_if_eq VAR_RESULT, FALSE, PewterCity_Gym_EventScript_NoRoomForTM39
+	goto_if_eq VAR_RESULT, FALSE, PewterCity_Gym_EventScript_NoRoomForTM
 	playfanfare MUS_OBTAIN_TMHM
-	msgbox PewterCity_Gym_Text_ReceivedTM39FromBrock, MSGBOX_DEFAULT
+	msgbox PewterCity_Gym_Text_ReceivedTMFromBrock, MSGBOX_DEFAULT
 	waitfanfare
 	additem ITEM_TM39, 1
 	setflag FLAG_GOT_BROCK_REWARD
-	msgbox PewterCity_Gym_Text_ExplainTM39, MSGBOX_DEFAULT
+	msgbox PewterCity_Gym_Text_ExplainTM, MSGBOX_DEFAULT
 	release
 	end
 
@@ -88,11 +88,11 @@ PewterCity_Gym_Text_TakeThisWithYou::
     .string "Wait!\n"
     .string "Take this with you.$"
 
-PewterCity_Gym_Text_ReceivedTM39FromBrock::
+PewterCity_Gym_Text_ReceivedTMFromBrock::
     .string "{PLAYER} received TM39\n"
     .string "from Brock.$"
 
-PewterCity_Gym_Text_ExplainTM39::
+PewterCity_Gym_Text_ExplainTM::
     .string "A TM, Technical Machine, contains a\n"
     .string "technique for Pokémon.\p"
     .string "Using a TM teaches the move it\n"
@@ -105,12 +105,12 @@ PewterCity_Gym_Text_ExplainTM39::
     .string "It hurls boulders at the foe and\n"
     .string "lowers its speed.$"
 
-PewterCity_Gym_EventScript_NoRoomForTM39::
-	msgbox PewterCity_Gym_Text_DontHaveRoomForThis, MSGBOX_DEFAULT
+PewterCity_Gym_EventScript_NoRoomForTM::
+	msgbox PewterCity_Gym_Text_NoRoomForTM, MSGBOX_DEFAULT
 	release
 	end
 
-PewterCity_Gym_Text_DontHaveRoomForThis::
+PewterCity_Gym_Text_NoRoomForTM::
     .string "You don't have room for this.$"
 
 PewterCity_Gym_EventScript_BrockPostBattle::
@@ -132,26 +132,21 @@ PewterCity_Gym_Text_BrockPostBattle::
     .string "your abilities.$"
 
 PewterCity_Gym_EventScript_BrockPostBattleCurrentChampion::
-	msgbox PewterCity_Gym_Text_BrockPostBattle, MSGBOX_DEFAULT
+	msgbox PewterCity_Gym_Text_PostBattleCurrentChampion, MSGBOX_DEFAULT
 	release
 	end
 
-PewterCity_Gym_Text_BrockPostBattleGameClear::
-	msgbox PewterCity_Gym_Text_NeverStopTraining, MSGBOX_DEFAULT
-	release
-	end
-
-PewterCity_Gym_Text_NeverStopTraining::
+PewterCity_Gym_Text_PostBattleCurrentChampion::
 	.string "You may be the current champion, {PLAYER},\n"
 	.string "but you should never stop training!\p"
 	.string "It's important to keep your skills sharp!$"
 
 PewterCity_Gym_EventScript_BrockPostBattleGameClear::
-	msgbox PewterCity_Gym_Text_YouveComeALongWay, MSGBOX_DEFAULT
+	msgbox PewterCity_Gym_Text_PostBattleGameClear, MSGBOX_DEFAULT
 	release
 	end
 
-PewterCity_Gym_Text_YouveComeALongWay::
+PewterCity_Gym_Text_PostBattleGameClear::
 	.string "You've come a long way since\n"
 	.string "you earned your Boulder Badge, {PLAYER}!$"
 

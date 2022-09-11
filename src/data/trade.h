@@ -1003,7 +1003,7 @@ static const union AffineAnimCmd *const sAffineAnims_CrossingMonPics[] =
 
 static const struct InGameTrade sIngameTrades[] =
 {
-[INGAME_TRADE_MR_MIME] = 
+    [INGAME_TRADE_MR_MIME] = 
     {
         .nickname = _("Mimien"),
         .species = SPECIES_MR_MIME,

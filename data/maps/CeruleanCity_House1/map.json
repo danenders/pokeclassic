@@ -15,7 +15,7 @@
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+      "graphics_id": "OBJ_EVENT_GFX_BREEDER_M",
       "x": 6,
       "y": 5,
       "elevation": 3,
@@ -24,7 +24,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "CeruleanCity_House1_EventScript_BadgeGuy",
+      "script": "CeruleanCity_House1_EventScript_BerryGuy",
       "flag": "0"
     },
     {
