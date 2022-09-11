@@ -6970,6 +6970,39 @@ static const struct SpriteFrameImage sPicTable_SlowbroOverworld[] = {
     overworld_frame(gObjectEventPic_SlowbroOverworld, 4, 4, 8),
 };
 
+static const struct SpriteFrameImage sPicTable_BulbasaurOverworld[] = {
+    overworld_frame(gObjectEventPic_BulbasaurOverworld, 4, 4, 0),
+    overworld_frame(gObjectEventPic_BulbasaurOverworld, 4, 4, 1),
+    overworld_frame(gObjectEventPic_BulbasaurOverworld, 4, 4, 2),
+    overworld_frame(gObjectEventPic_BulbasaurOverworld, 4, 4, 3),
+    overworld_frame(gObjectEventPic_BulbasaurOverworld, 4, 4, 4),
+    overworld_frame(gObjectEventPic_BulbasaurOverworld, 4, 4, 5),
+    overworld_frame(gObjectEventPic_BulbasaurOverworld, 4, 4, 6),
+    overworld_frame(gObjectEventPic_BulbasaurOverworld, 4, 4, 7),
+    overworld_frame(gObjectEventPic_BulbasaurOverworld, 4, 4, 8),
+};
+static const struct SpriteFrameImage sPicTable_CharmanderOverworld[] = {
+    overworld_frame(gObjectEventPic_CharmanderOverworld, 4, 4, 0),
+    overworld_frame(gObjectEventPic_CharmanderOverworld, 4, 4, 1),
+    overworld_frame(gObjectEventPic_CharmanderOverworld, 4, 4, 2),
+    overworld_frame(gObjectEventPic_CharmanderOverworld, 4, 4, 3),
+    overworld_frame(gObjectEventPic_CharmanderOverworld, 4, 4, 4),
+    overworld_frame(gObjectEventPic_CharmanderOverworld, 4, 4, 5),
+    overworld_frame(gObjectEventPic_CharmanderOverworld, 4, 4, 6),
+    overworld_frame(gObjectEventPic_CharmanderOverworld, 4, 4, 7),
+    overworld_frame(gObjectEventPic_CharmanderOverworld, 4, 4, 8),
+};
+static const struct SpriteFrameImage sPicTable_SquirtleOverworld[] = {
+    overworld_frame(gObjectEventPic_SquirtleOverworld, 4, 4, 0),
+    overworld_frame(gObjectEventPic_SquirtleOverworld, 4, 4, 1),
+    overworld_frame(gObjectEventPic_SquirtleOverworld, 4, 4, 2),
+    overworld_frame(gObjectEventPic_SquirtleOverworld, 4, 4, 3),
+    overworld_frame(gObjectEventPic_SquirtleOverworld, 4, 4, 4),
+    overworld_frame(gObjectEventPic_SquirtleOverworld, 4, 4, 5),
+    overworld_frame(gObjectEventPic_SquirtleOverworld, 4, 4, 6),
+    overworld_frame(gObjectEventPic_SquirtleOverworld, 4, 4, 7),
+    overworld_frame(gObjectEventPic_SquirtleOverworld, 4, 4, 8),
+};
 
 static const struct SpriteFrameImage sPicTable_Lorelei[] = {
     overworld_frame(gObjectEventPic_Lorelei, 4, 4, 0),

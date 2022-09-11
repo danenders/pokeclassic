@@ -1064,6 +1064,9 @@ extern const u8 gText_PokenavRibbons_RibbonListButtons[];
 extern const u8 gText_PokenavRibbons_RibbonCheckButtons[];
 extern const u8 gText_Number2[];
 
+extern const u8 gText_BikePrice[];
+extern const u8 gText_NoThanks[];
+
 extern const u8 gText_Petalburg[];
 extern const u8 gText_Slateport[];
 extern const u8 gText_Enter2[];
@@ -1075,8 +1078,6 @@ extern const u8 gText_Decoration2[];
 extern const u8 gText_PackUp[];
 extern const u8 gText_Registry[];
 extern const u8 gText_Information[];
-extern const u8 gText_Mach[];
-extern const u8 gText_Acro[];
 extern const u8 gText_Psn[];
 extern const u8 gText_Par[];
 extern const u8 gText_Slp[];

@@ -4,6 +4,8 @@
 .set LOCALID_RIVAL, 10
 .set LOCALID_TMBALL, 12
 .set LOCALID_GRUNT, 6
+.set LOCALID_BULBASAUR, 14
+.set LOCALID_BREEDER, 13
 
 CeruleanCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, CeruleanCity_OnTransition
@@ -12,8 +14,9 @@ CeruleanCity_MapScripts::
 
 CeruleanCity_OnTransition:
 	setflag FLAG_VISITED_CERULEAN_CITY
-	call Common_EventScript_GetDayOrNight
 	call_if_unset FLAG_GOT_SS_TICKET, CeruleanCity_EventScript_BlockExits
+	call_if_set FLAG_GOT_BULBASAUR,  CeruleanCity_EventScript_MoveBreederInside
+	call Common_EventScript_GetDayOrNight
 	end
 
 CeruleanCity_OnResume:
@@ -24,6 +27,10 @@ CeruleanCity_EventScript_BlockExits::
 	setobjectxyperm LOCALID_JENNY, 30, 12
 	setobjectxyperm LOCALID_SLOWBRO, 26, 31
 	setobjectxyperm LOCALID_LASS, 27, 31
+	return
+
+CeruleanCity_EventScript_MoveBreederInside::
+	clearflag FLAG_HIDE_CERULEAN_BREEDER
 	return
 
 CeruleanCity_EventScript_CitySign::
@@ -535,3 +542,169 @@ CeruleanCity_EventScript_GruntTriggerBottom::
 	waitmovement 0
 	goto CeruleanCity_EventScript_Grunt
 	end
+
+CeruleanCity_EventScript_Bulbasaur::
+	lock
+	specialvar VAR_RESULT, GetLeadMonFriendshipScore
+	goto_if_ge VAR_RESULT, 4, CeruleanCity_EventScript_BulbasaurHappy
+	turnobject LOCALID_BULBASAUR, DIR_NORTH
+	playmoncry SPECIES_BULBASAUR, CRY_MODE_NORMAL
+	msgbox CeruleanCity_Text_Bulbasaur, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+CeruleanCity_Text_Bulbasaur:
+	.string "Bulbasaur: ...grrr...$"
+
+CeruleanCity_EventScript_BulbasaurHappy::
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	delay 8
+	playse SE_PIN
+	applymovement LOCALID_BULBASAUR, Common_Movement_Heart
+	waitmovement 14
+	delay 8
+	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	release
+	end
+
+CeruleanCity_EventScript_BulbasaurBreeder::
+	lock
+	faceplayer
+	goto_if_set FLAG_GOT_BULBASAUR, CeruleanCity_EventScript_ProudOfBulbasaur
+	msgbox CeruleanCity_Text_BulbasaurDoesntTrustPeople, MSGBOX_DEFAULT
+	specialvar VAR_RESULT, GetLeadMonFriendshipScore
+	goto_if_lt VAR_RESULT, 4, CeruleanCity_EventScript_BulbasaurStillNeedsTime
+	call_if_eq VAR_FACING, DIR_NORTH, CeruleanCity_EventScript_BulbasaurApproachPlayerNear
+	call_if_eq VAR_FACING, DIR_WEST, CeruleanCity_EventScript_BulbasaurApproachPlayerFar
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	delay 8
+	playse SE_PIN
+	applymovement LOCALID_BULBASAUR, Common_Movement_Heart
+	waitmovement 14
+	delay 8
+	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	turnobject LOCALID_BREEDER, DIR_WEST
+	playse SE_PIN
+	applymovement LOCALID_BREEDER, Common_Movement_ExclamationMark
+	waitse
+	waitmovement 13
+	faceplayer
+	msgbox CeruleanCity_Text_BulbasaurTrustsYou, MSGBOX_DEFAULT
+	setvar VAR_TEMP_1, SPECIES_BULBASAUR
+	givemon SPECIES_BULBASAUR, 7, ITEM_NONE
+	goto_if_eq VAR_RESULT, 0, CeruleanCity_EventScript_BulbasaurParty
+	goto_if_eq VAR_RESULT, 1, CeruleanCity_EventScript_BulbasaurPC
+	goto_if_eq VAR_RESULT, 2, CeruleanCity_EventScript_NoRoomForBulbasaur
+	end
+
+CeruleanCity_EventScript_BulbasaurApproachPlayerNear::
+	applymovement LOCALID_BULBASAUR, Movement_BulbaNear
+	waitmovement 14
+	return
+
+Movement_BulbaNear:
+ 	walk_down
+ 	walk_in_place_faster_right
+ 	delay_16
+ 	step_end
+
+CeruleanCity_EventScript_BulbasaurApproachPlayerFar::
+	applymovement LOCALID_BULBASAUR,  Movement_BulbaFar
+	waitmovement 14
+	return
+
+Movement_BulbaFar:
+ 	walk_down
+ 	walk_right
+ 	walk_right
+ 	walk_in_place_faster_up
+ 	delay_16
+ 	step_end
+
+CeruleanCity_EventScript_BulbasaurParty::
+	call CeruleanCity_EventScript_GetBulbasaur
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CeruleanCity_EventScript_GotBulbasaur
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto CeruleanCity_EventScript_GotBulbasaur
+	end
+
+CeruleanCity_EventScript_GetBulbasaur::
+	playfanfare MUS_LEVEL_UP
+	message CeruleanCity_EventScript_Text_BefriendedBulbasaur
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_BULBASAUR
+	return
+
+CeruleanCity_EventScript_Text_BefriendedBulbasaur::
+	.string "{PLAYER} befriended the Bulbasaur!$"
+
+CeruleanCity_EventScript_GotBulbasaur::
+	setflag FLAG_GOT_BULBASAUR
+	removeobject LOCALID_BULBASAUR
+	release
+	end
+
+CeruleanCity_EventScript_BulbasaurPC::
+	call CeruleanCity_EventScript_GetBulbasaur
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CeruleanCity_EventScript_TransferBulbasaur
+	call Common_EventScript_NameReceivedBoxMon
+	goto CeruleanCity_EventScript_TransferBulbasaur
+	end
+
+CeruleanCity_EventScript_TransferBulbasaur::
+	bufferspeciesname STR_VAR_1, SPECIES_BULBASAUR
+	call Common_EventScript_TransferredToPC
+	goto CeruleanCity_EventScript_GotBulbasaur
+	end
+
+CeruleanCity_EventScript_NoRoomForBulbasaur::
+	msgbox CeruleanCity_Text_NoRoomForMorePokemon, MSGBOX_DEFAULT
+	release
+	end
+
+CeruleanCity_Text_NoRoomForMorePokemon::
+    .string "Oh! You don't have room\n"
+    .string "for any more Pokémon!$"
+
+CeruleanCity_Text_BulbasaurDoesntTrustPeople::
+	.string "This Bulbasaur's mother was killed\n"
+	.string "by Team Rocket...\p"
+	.string "I'm trying to get it to trust\n"
+	.string "people again.$"
+
+CeruleanCity_Text_BulbasaurTrustsYou::
+	.string "Amazing! Wonderful!\p"
+	.string "This Bulbasaur trusts you!\p"
+	.string "Its opened its heart to\n"
+	.string "people again...\p"
+	.string "I think it wants to go with you.\p"
+	.string "Alright! I trust you too!\p"
+	.string "Please take good care of it!$"
+
+CeruleanCity_EventScript_BulbasaurStillNeedsTime::
+	turnobject LOCALID_BREEDER, DIR_WEST
+	msgbox CeruleanCity_Text_BulbasaurNeedsTime, MSGBOX_DEFAULT
+	release
+	end
+
+CeruleanCity_Text_BulbasaurNeedsTime::
+	.string "It still needs time, though.\p"
+	.string "I don't blame it for holding\n"
+	.string "a grudge. What Team Rocket did\l"
+	.string "is unforgivable!$"
+
+CeruleanCity_EventScript_ProudOfBulbasaur::
+	msgbox CeruleanCity_Text_ProudOfBulbasaur, MSGBOX_DEFAULT
+	release
+	end
+
+CeruleanCity_Text_ProudOfBulbasaur::
+	.string "I'm very proud of Bulbasaur.\p"
+	.string "It takes a lot of courage to\n"
+	.string "trust others.$"
+

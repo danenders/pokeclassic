@@ -2283,4 +2283,12 @@ $(OBJEVENTGFXDIR)/pokemon/slowbro_overworld.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/pokemon/slowpoke_overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
+$(OBJEVENTGFXDIR)/pokemon/bulbasaur_overworld.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
+
+$(OBJEVENTGFXDIR)/pokemon/charmander_overworld.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
+
+$(OBJEVENTGFXDIR)/pokemon/squirtle_overworld.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
 

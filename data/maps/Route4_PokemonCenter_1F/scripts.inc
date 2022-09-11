@@ -74,6 +74,7 @@ Route4_PokemonCenter_1F_EventScript_MagikarpSalesman::
 	goto_if_eq VAR_RESULT, NO, Route4_PokemonCenter_1F_EventScript_DeclineMagikarp
 	checkmoney 500
 	goto_if_eq VAR_RESULT, FALSE, Route4_PokemonCenter_1F_EventScript_NotEnoughMoney
+	setvar VAR_TEMP_1, SPECIES_MAGIKARP
 	givemon SPECIES_MAGIKARP, 5, ITEM_NONE
 	goto_if_eq VAR_RESULT, 0, Route4_PokemonCenter_1F_EventScript_BuyMagikarpParty
 	goto_if_eq VAR_RESULT, 1, Route4_PokemonCenter_1F_EventScript_BuyMagikarpPC
@@ -93,9 +94,7 @@ Route4_PokemonCenter_1F_EventScript_BuyMagikarpParty::
 	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route4_PokemonCenter_1F_EventScript_BoughtMagikarp
 	call Common_EventScript_GetGiftMonPartySlot
-	fadescreen FADE_TO_BLACK
-	special ChangePokemonNickname
-	waitstate
+	call Common_EventScript_NameReceivedPartyMon
 	goto Route4_PokemonCenter_1F_EventScript_BoughtMagikarp
 	end
 
@@ -103,12 +102,7 @@ Route4_PokemonCenter_1F_EventScript_BuyMagikarpPC::
 	call Route4_PokemonCenter_1F_EventScript_PayForMagikarp
 	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route4_PokemonCenter_1F_EventScript_TransferMagikarp
-	fadescreen FADE_TO_BLACK
-	hidemoneybox
-	special ChangeBoxPokemonNickname
-	waitstate
-	lock
-	faceplayer
+	call Common_EventScript_NameReceivedBoxMon
 	goto Route4_PokemonCenter_1F_EventScript_TransferMagikarp
 	end
 

@@ -133,4 +133,5 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_ROUTE4_POLICE
 	setflag FLAG_HIDE_CERULEAN_RIVAL
 	setflag FLAG_HIDE_CERULEAN_TM28
+	setflag FLAG_HIDE_CERULEAN_BREEDER
 	end

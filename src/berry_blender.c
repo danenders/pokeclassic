@@ -1471,11 +1471,11 @@ static void CB2_StartBlenderLink(void)
         sBerryBlender->speed = MIN_ARROW_SPEED;
         sBerryBlender->gameFrameTime = 0;
         SetMainCallback2(CB2_PlayBlender);
-        if (GetCurrentMapMusic() != MUS_CYCLING)
+        if (GetCurrentMapMusic() != MUS_RG_CYCLING)
         {
             sBerryBlender->savedMusic = GetCurrentMapMusic();
         }
-        PlayBGM(MUS_CYCLING);
+        PlayBGM(MUS_RG_CYCLING);
         break;
     }
 

@@ -80,8 +80,8 @@
 #define FLAG_GOT_FOSSIL_FROM_MT_MOON        0x3F 
 #define FLAG_GOT_SS_TICKET    		        0x40 
 #define FLAG_RECOVERED_STOLEN_TM    		0x41 
-#define FLAG_UNUSED_0x042    		0x42 
-#define FLAG_UNUSED_0x043    		0x43 // Unused Flag
+#define FLAG_GOT_BIKE_VOUCHER    		    0x42 // Out of order in story progression
+#define FLAG_GOT_BULBASAUR    		        0x43 // Received the Bulbasaur in Cerulean. Hides the Breeder and the Bulbasaur.
 #define FLAG_UNUSED_0x044    		0x44 // Unused Flag
 #define FLAG_UNUSED_0x045    		0x45 // Unused Flag
 #define FLAG_UNUSED_0x046    		0x46 // Unused Flag
@@ -797,7 +797,7 @@
 #define FLAG_HIDE_CERULEAN_TM28                						0x2F7
 #define FLAG_HIDE_CERULEAN_ROCKET                    				0x2F8
 #define FLAG_HIDE_CERULEAN_CAVE_GUARD    							0x2F9
-#define FLAG_HIDE_UNUSED_36                 						0x2FA
+#define FLAG_HIDE_CERULEAN_BREEDER                 					0x2FA
 #define FLAG_HIDE_UNUSED_37                                         0x2FB
 #define FLAG_HIDE_UNUSED_38                      					0x2FC
 #define FLAG_HIDE_UNUSED_39                               			0x2FD

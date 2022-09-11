@@ -592,6 +592,9 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_KOGA                    0x11A6
 #define OBJ_EVENT_PAL_TAG_BLAINE                  0x11A7
 #define OBJ_EVENT_PAL_TAG_SLOW                    0x11A8
+#define OBJ_EVENT_PAL_TAG_BULBASAUR               0x11AC
+#define OBJ_EVENT_PAL_TAG_CHARMANDER              0x11AD
+#define OBJ_EVENT_PAL_TAG_SQUIRTLE                0x11AE
 
 
 #define OBJ_EVENT_PAL_TAG_NONE 0x128D
@@ -775,6 +778,9 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Koga,                  OBJ_EVENT_PAL_TAG_KOGA},
     {gObjectEventPal_Lance,                 OBJ_EVENT_PAL_TAG_BLAINE},
     {gObjectEventPal_Slow,                  OBJ_EVENT_PAL_TAG_SLOW},
+    {gObjectEventPal_Bulbasaur,             OBJ_EVENT_PAL_TAG_BULBASAUR},
+    {gObjectEventPal_Charmander,            OBJ_EVENT_PAL_TAG_CHARMANDER},
+    {gObjectEventPal_Squirtle,              OBJ_EVENT_PAL_TAG_SQUIRTLE},
     {NULL,                  0x0000},
 };
 

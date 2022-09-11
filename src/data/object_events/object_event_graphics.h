@@ -1200,6 +1200,15 @@ const u32 gObjectEventPic_SlowpokeOverworld[] = INCBIN_U32("graphics/object_even
 const u32 gObjectEventPic_SlowbroOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/slowbro_overworld.4bpp");
 const u16 gObjectEventPal_Slow[] = INCBIN_U16("graphics/object_events/palettes/slow.gbapal");
 
+const u32 gObjectEventPic_SquirtleOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/squirtle_overworld.4bpp");
+const u16 gObjectEventPal_Squirtle[] = INCBIN_U16("graphics/object_events/palettes/squirtle.gbapal");
+
+const u32 gObjectEventPic_CharmanderOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/charmander_overworld.4bpp");
+const u16 gObjectEventPal_Charmander[] = INCBIN_U16("graphics/object_events/palettes/charmander.gbapal");
+
+const u32 gObjectEventPic_BulbasaurOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/bulbasaur_overworld.4bpp");
+const u16 gObjectEventPal_Bulbasaur[] = INCBIN_U16("graphics/object_events/palettes/bulbasaur.gbapal");
+
 
 
 //FRLG Objects

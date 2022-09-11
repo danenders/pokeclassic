@@ -50,8 +50,8 @@ static const struct MenuAction MultichoiceList_RegisterMenu[] =
 
 static const struct MenuAction MultichoiceList_Bike[] =
 {
-    {gText_Mach},
-    {gText_Acro},
+    {gText_BikePrice},
+    {gText_NoThanks }
 };
 
 static const struct MenuAction MultichoiceList_StatusInfo[] =
