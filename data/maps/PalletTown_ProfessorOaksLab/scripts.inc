@@ -3,6 +3,7 @@
 .set LOCALID_POKEBALL, 3
 .set LOCALID_POKEDEX_L, 7
 .set LOCALID_POKEDEX_R, 8
+.set LOCALID_PIKACHU, 9
 
 @OAK LAB STATES:
 @ 0: Player hasn't met Oak yet
@@ -57,9 +58,9 @@ PalletTown_ProfessorOaksLab_EventScript_GetStarterScene::
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalFedUpWithWaiting, MSGBOX_DEFAULT
 	applymovement LOCALID_OAK, Common_Movement_QuestionMark
 	waitmovement 1
-	msgbox PalletTown_ProfessorOaksLab_Text_TakeStarter
-	msgbox PalletTown_ProfessorOaksLab_Text_RivalNoFairWhatAboutMe
-	msgbox PalletTown_ProfessorOaksLab_Text_OakBePatientRival
+	msgbox PalletTown_ProfessorOaksLab_Text_TakeStarter, MSGBOX_DEFAULT
+	msgbox PalletTown_ProfessorOaksLab_Text_RivalNoFairWhatAboutMe, MSGBOX_DEFAULT
+	msgbox PalletTown_ProfessorOaksLab_Text_OakBePatientRival, MSGBOX_DEFAULT
 	setvar VAR_OAK_LAB_STATE, 2
 	releaseall
 	end
@@ -87,105 +88,233 @@ PalletTown_ProfessorOaksLab_Text_RivalNoFairWhatAboutMe::
     .string "What about me?$"
 
 PalletTown_ProfessorOaksLab_Text_OakBePatientRival::
-    .string "Oak: Be patient, {RIVAL}.\n"
-    .string "You can have one, too!$"
+    .string "Oak: Be patient, {RIVAL}.\p"
+    .string "I'll take you to catch \n"
+    .string "your own Pokémon later.$"
 
-
-
-PalletTown_ProfessorOaksLab_EventScript_PikachuAppears1::
+PalletTown_ProfessorOaksLab_EventScript_ApproachPokeBallBehindDesk::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_MovetoPikachu1
 	turnobject LOCALID_RIVAL, DIR_EAST
-	setvar VAR_TEMP_1, 1
+	playse SE_PIN
+	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
+	waitmovement 2
+	applymovement LOCALID_RIVAL, Movement_RivalMoveToDesk2
+	waitmovement 2
+	applymovement LOCALID_RIVAL, Movement_StealEeveeTooSlow
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox PalletTown_ProfessorOaksLab_Text_TooSlow, MSGBOX_DEFAULT
+	removeobject LOCALID_POKEBALL
+	setflag FLAG_HIDE_OAK_LAB_POKEBALL
+	msgbox PalletTown_ProfessorOaksLab_Text_WereGoingToGetOne, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_PlayerReturnToOakFar
+	waitmovement 0
 	goto PalletTown_ProfessorOaksLab_EventScript_GetPartnerPikachu
-
-PalletTown_ProfessorOaksLab_EventScript_PikachuAppears2::
-	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_MovetoPikachu2
-	turnobject LOCALID_RIVAL, DIR_EAST
-	goto PalletTown_ProfessorOaksLab_EventScript_GetPartnerPikachu
-
-PalletTown_ProfessorOaksLab_EventScript_GetPartnerPikachu::
-	applymovement LOCALID_OAK, Movement_OakStepBack
-	waitmovement 1
-	playmoncry SPECIES_PIKACHU, CRY_MODE_NORMAL
-	msgbox PalletTown_ProfessorOaksLab_Text_PikachuBrokeFree, MSGBOX_DEFAULT
-	waitmessage
-	msgbox PalletTown_ProfessorOaksLab_Text_PikachuWantsToFollow, MSGBOX_DEFAULT
-	playfanfare MUS_OBTAIN_ITEM
-	waitfanfare
-	setflag FLAG_SYS_POKEMON_GET
-	msgbox PalletTown_ProfessorOaksLab_Text_WhyNotGiveNicknameToMon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, PalletTown_ProfessorOaksLab_EventScript_NicknameStarter
-	goto_if_eq VAR_RESULT, NO, PalletTown_ProfessorOaksLab_EventScript_RivalGetsEevee
 	end
 
-Movement_OakStepBack:
-	walk_up
-	face_down
-	emote_exclamation_mark
-	walk_in_place_faster_down
-	step_end
-
-Movement_MovetoPikachu1:
-	walk_up
+Movement_RivalMoveToDesk2::
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	face_up
 	step_end
 
-Movement_MovetoPikachu2:
+Movement_StealEeveeTooSlow::
+	walk_in_place_faster_up
+	delay_16
+	delay_16
+	delay_16
+	step_end
+
+PalletTown_ProfessorOaksLab_Text_TooSlow::
+	.string "{RIVAL}: Too slow, {PLAYER}!\p"
+	.string "This is what you get for\n"
+	.string "taking the long way around.$"
+
+Movement_PlayerReturnToOakFar::
+	walk_left
+	walk_left
+	walk_down
+	walk_down
 	walk_left
 	face_up
 	step_end
 
+PalletTown_ProfessorOaksLab_EventScript_RivalStealEevee::
+	lockall
+	turnobject LOCALID_RIVAL, DIR_EAST
+	playse SE_PIN
+	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
+	waitmovement 2
+	applymovement LOCALID_RIVAL, Movement_RivalMoveToDesk
+	waitmovement 2
+	playse SE_WALL_HIT
+	applymovement LOCALID_RIVAL, Movement_PushPlayer
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_GetPushed
+	waitse
+	applymovement LOCALID_RIVAL, Movement_TakeEevee
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitse
+	removeobject LOCALID_POKEBALL
+	setflag FLAG_HIDE_OAK_LAB_POKEBALL
+	msgbox PalletTown_ProfessorOaksLab_Text_WereGoingToGetOne, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_PlayerReturnToOak
+	waitmovement 0
+	goto PalletTown_ProfessorOaksLab_EventScript_GetPartnerPikachu
+	end
+
+Movement_RivalMoveToDesk::
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+Movement_PushPlayer::
+	walk_in_place_faster_right
+	step_end
+
+Movement_GetPushed::
+	walk_right
+	face_left
+	step_end
+
+Movement_TakeEevee::
+	walk_right
+	walk_in_place_faster_up
+	delay_16
+	step_end
+
+Movement_PlayerReturnToOak::
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	step_end
+
+PalletTown_ProfessorOaksLab_Text_WereGoingToGetOne::
+	.string "Oak: {RIVAL}!\p"
+	.string "Sigh...alright.\n"
+	.string "That Pokémon is yours.\p"
+	.string "{PLAYER}, come over here.$"
+
+PalletTown_ProfessorOaksLab_EventScript_PreventExit::
+	applymovement LOCALID_OAK, Movement_OakStopPlayer
+	waitmovement 1
+	playse SE_PIN
+	applymovement LOCALID_OAK, Common_Movement_QuestionMark
+	waitmovement 1
+	msgbox PalletTown_ProfessorOaksLab_Text_DontWantAPokemon, MSGBOX_DEFAULT
+	applymovement LOCALID_OAK, Movement_OakReturnToPosition
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_CantExitLab
+	waitmovement 0
+	release
+	end
+
+Movement_OakStopPlayer::
+	walk_down
+	walk_in_place_faster_down
+	delay_8
+	step_end
+
+Movement_OakReturnToPosition::
+	walk_up
+	face_down
+	step_end
+
+PalletTown_ProfessorOaksLab_Text_DontWantAPokemon::
+	.string "Oak: Do you not want a\n"
+	.string "Pokémon, {PLAYER}?$"
+
+Movement_CantExitLab::
+	walk_up
+	face_up
+	step_end
+
+PalletTown_ProfessorOaksLab_EventScript_GetPartnerPikachu::
+	msgbox PalletTown_ProfessorOaksLab_Text_PikachuFromEarlier, MSGBOX_DEFAULT
+	playse SE_BALL_OPEN
+	clearflag FLAG_HIDE_OAK_LAB_PIKACHU
+	addobject LOCALID_PIKACHU
+	playmoncry SPECIES_PIKACHU, CRY_MODE_NORMAL
+	waitmoncry
+	turnobject LOCALID_OAK, DIR_WEST
+	applymovement LOCALID_OAK, Common_Movement_ExclamationMark
+	msgbox PalletTown_ProfessorOaksLab_Text_PikachuBrokeFree, MSGBOX_DEFAULT
+	turnobject LOCALID_OAK, DIR_SOUTH
+	msgbox PalletTown_ProfessorOaksLab_Text_PikachuWantsToFollow, MSGBOX_DEFAULT
+	applymovement LOCALID_PIKACHU, Movement_PikachuJoinsParty
+	waitmovement 9
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	playse SE_PIN
+	applymovement LOCALID_PIKACHU, Common_Movement_Heart
+	waitmovement 9
+	waitse
+	givemon SPECIES_PIKACHU_PARTNER, 5
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox PalletTown_ProfessorOaksLab_Text_PikachuJoinedTeam, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	setflag FLAG_SYS_POKEMON_GET
+	msgbox PalletTown_ProfessorOaksLab_Text_WhyNotGiveNicknameToMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, PalletTown_ProfessorOaksLab_EventScript_NicknameStarter
+	goto_if_eq VAR_RESULT, NO, PalletTown_ProfessorOaksLab_EventScript_PikachuJoinsParty
+	end
+
+Movement_PikachuJoinsParty::
+	walk_down
+	face_right
+	walk_in_place_faster_right
+	delay_16
+	step_end
+
+PalletTown_ProfessorOaksLab_Text_PikachuFromEarlier:
+	.string "Oak: Technically, that was\n"
+	.string "not my last Pokémon.\p"
+	.string "I still have the Pikachu\n"
+	.string "I caught earlier...\p"
+	.string "I was going to return it to\n"
+	.string "its natural habitat, but\l"
+	.string "perhaps you should take it.$"
+	
 PalletTown_ProfessorOaksLab_Text_PikachuBrokeFree:
 	.string "Oak: Incredible!\p"
-	.string "The Pikachu from earlier broke\n"
-	.string "free of its Pokéball!$"
+	.string "It broke free of its Pokéball!$"
 
 PalletTown_ProfessorOaksLab_Text_PikachuWantsToFollow:
 	.string "Oak: It seems to have taken quite\n"
 	.string "an interest in you, {PLAYER}.\p"
-	.string "I know! Why don't you take this\n"
-	.string "Pokémon instead.\p"
-	.string "{PLAYER} received the Pikachu\n"
-    .string "from Prof. Oak!$"
+	.string "It looks like Pikachu has already\n"
+	.string "made its decision!\p"
+	.string "You should absolutely take this\n"
+	.string "Pokémon.$"
+
+PalletTown_ProfessorOaksLab_Text_PikachuJoinedTeam:
+	.string "Pikachu decided to stay by\n"
+	.string "{PLAYER}'s side!$"
 
 PalletTown_ProfessorOaksLab_Text_WhyNotGiveNicknameToMon:
 	.string "Oak: Say, why don't you give\n"
-	.string "a nickname to that Pikachu?$"
+	.string "a nickname to your new partner?$"
 
 PalletTown_ProfessorOaksLab_EventScript_NicknameStarter::
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
-	goto PalletTown_ProfessorOaksLab_EventScript_RivalGetsEevee
+	goto PalletTown_ProfessorOaksLab_EventScript_PikachuJoinsParty
 	end
 
-PalletTown_ProfessorOaksLab_EventScript_RivalGetsEevee::
-	applymovement LOCALID_RIVAL, Movement_RivalGoesToTable
-	waitmovement 2
-	turnobject LOCALID_RIVAL, DIR_NORTH
-	msgbox PalletTown_ProfessorOaksLab_Text_RivalIllTakeThisOneThen, MSGBOX_DEFAULT
-	waitmessage
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceFasterUp
-	removeobject LOCALID_POKEBALL
-	setflag FLAG_HIDE_OAK_LAB_POKEBALL
+PalletTown_ProfessorOaksLab_EventScript_PikachuJoinsParty::
+	removeobject LOCALID_PIKACHU
+	setflag FLAG_HIDE_OAK_LAB_PIKACHU
+	callnative UpdateFollowingPokemon
 	setvar VAR_OAK_LAB_STATE, 3
 	releaseall
 	end
-
-Movement_RivalGoesToTable:
-	walk_down
-	walk_down
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_up
-	walk_up
-	step_end
-
-PalletTown_ProfessorOaksLab_Text_RivalIllTakeThisOneThen::
-    .string "{RIVAL}: I'll take this one, then!$"
 
 PalletTown_ProfessorOaksLab_EventScript_RivalTrigger1::
 	setvar VAR_TEMP_1, 1
@@ -255,6 +384,7 @@ PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon::
     .string "Smell you later!$"
 
 PalletTown_ProfessorOaksLab_EventScript_PostRivalBattle::
+	closemessage
 	call_if_eq VAR_TEMP_1, 1, PalletTown_ProfessorOaksLab_EventScript_RivalLeavesAfterBattle1
 	call_if_eq VAR_TEMP_1, 2, PalletTown_ProfessorOaksLab_EventScript_RivalLeavesAfterBattle2
 	call_if_eq VAR_TEMP_1, 3, PalletTown_ProfessorOaksLab_EventScript_RivalLeavesAfterBattle3
@@ -263,16 +393,10 @@ PalletTown_ProfessorOaksLab_EventScript_PostRivalBattle::
 	playse SE_EXIT
 	removeobject LOCALID_RIVAL
 	setflag FLAG_HIDE_RIVAL_IN_LAB
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_ReturnToPikachu
-	waitmovement 0
 	setvar VAR_ADVENTURE_BEGINS, 3
 	fadedefaultbgm
 	releaseall
 	end
-
-Movement_ReturnToPikachu:
-	walk_up
-	step_end
 
 PalletTown_ProfessorOaksLab_EventScript_RivalApproach1::
 	applymovement LOCALID_RIVAL, Movement_RivalApproach1
@@ -418,7 +542,6 @@ PalletTown_ProfessorOaksLab_EventScript_GetPokedexScene::
 	giveitem ITEM_POKE_BALL, 5
 	@PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls 
 	msgbox PalletTown_ProfessorOaksLab_Text_OakExplainCatching
-	@TODO: Register Oak in Match Call
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalLeaveItToMeGramps
 	turnobject LOCALID_RIVAL, DIR_EAST
@@ -698,6 +821,14 @@ PalletTown_ProfessorOaksLab_Text_BlankEncyclopedia::
     .string "It's like an encyclopedia, but the\n"
     .string "pages are blank.$"
 
+PalletTown_ProfessorOaksLab_EventScript_LastPokeBall::
+	msgbox PalletTown_ProfessorOaksLab_Text_OaksLastMon, MSGBOX_DEFAULT
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_OaksLastMon::
+    .string "That's Prof. Oak's last Pokémon.$"
+
 PalletTown_ProfessorOaksLab_EventScript_ProfOak::
 	lock
 	faceplayer
@@ -793,3 +924,4 @@ ProfOak_EventScript_RatePokedex::
 	msgbox gOakDexRatingText_SoYouveSeenAndCaught, MSGBOX_DEFAULT
 	call ProfOak_EventScript_ShowRatingMessage
 	return
+

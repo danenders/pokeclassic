@@ -120,7 +120,6 @@ Route1_EventScript_PikachuEncounter::
 	setflag FLAG_HIDE_MAP_NAME_POPUP
 	clearflag FLAG_HIDE_OAK_IN_LAB
 	setvar VAR_OAK_LAB_STATE, 1
-	givemon SPECIES_PIKACHU_PARTNER, 5
 	warp MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6, 5
 	waitstate
 	releaseall
