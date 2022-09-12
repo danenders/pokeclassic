@@ -931,6 +931,9 @@ Follower_Show::
 	clearflag FLAG_HIDE_FOLLOWER
 	end
 
+Text_NeedTwoMons::
+	.string "PLACEHOLDER TEXT"
+
 @ Unused
 EventScript_CableClub_SetVarResult1::
 	setvar VAR_RESULT, 1

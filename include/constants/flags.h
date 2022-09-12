@@ -367,10 +367,10 @@
 #define NUM_WONDER_CARD_FLAGS                (1 + FLAG_WONDER_CARD_UNUSED_17 - FLAG_RECEIVED_AURORA_TICKET)
 
 // Trainer Rematch Flags
-#define FLAG_MATCH_CALL_REGISTERED              0x15C
+#define FLAG_MATCH_CALL_REGISTERED             0x15C
 #define FLAG_REMATCH_JANICE                    0x15D // Lass Janice on Route 3
 #define FLAG_REMATCH_BEN                       0x15E // Youngster Ben on Route 3
-#define FLAG_REMATCH_UNUSED_2                  0x15F
+#define FLAG_REMATCH_SHANE                     0x15F // Camper Shane on Route 24
 #define FLAG_REMATCH_UNUSED_3                  0x160
 #define FLAG_REMATCH_UNUSED_4                  0x161
 #define FLAG_REMATCH_UNUSED_5                  0x162
@@ -798,16 +798,16 @@
 #define FLAG_HIDE_CERULEAN_ROCKET                    				0x2F8
 #define FLAG_HIDE_CERULEAN_CAVE_GUARD    							0x2F9
 #define FLAG_HIDE_CERULEAN_BREEDER                 					0x2FA
-#define FLAG_HIDE_UNUSED_37                                         0x2FB
-#define FLAG_HIDE_UNUSED_38                      					0x2FC
-#define FLAG_HIDE_UNUSED_39                               			0x2FD
-#define FLAG_HIDE_UNUSED_40                            				0x2FE
-#define FLAG_HIDE_UNUSED_41                  						0x2FF
-#define FLAG_HIDE_UNUSED_42                        					0x300
-#define FLAG_HIDE_UNUSED_43                    						0x301
-#define FLAG_HIDE_UNUSED_44                        					0x302
-#define FLAG_HIDE_UNUSED_45                        					0x303
-#define FLAG_HIDE_UNUSED_46                            				0x304
+#define FLAG_HIDE_ROUTE24_JESSIE                                    0x2FB
+#define FLAG_HIDE_ROUTE24_JAMES                      				0x2FC
+#define FLAG_HIDE_ROUTE24_LOOKER                               		0x2FD
+#define FLAG_HIDE_ROUTE24_ROCKET                            		0x2FE
+#define FLAG_HIDE_ROUTE24_DISGUISED_ROCKET                  		0x2FF
+#define FLAG_HIDE_NUGGET_BRIDGE_CALE                       			0x300
+#define FLAG_HIDE_NUGGET_BRIDGE_ALI                    				0x301
+#define FLAG_HIDE_NUGGET_BRIDGE_TIMMY                        		0x302
+#define FLAG_HIDE_NUGGET_BRIDGE_RELI                        		0x303
+#define FLAG_HIDE_NUGGET_BRIDGE_ETHAN                            	0x304
 #define FLAG_HIDE_UNUSED_47                           				0x305
 #define FLAG_HIDE_UNUSED_48         								0x306
 #define FLAG_HIDE_UNUSED_49                           				0x307
@@ -1055,7 +1055,7 @@
 #define FLAG_HIDE_MT_MOON_B2F_STAR_PIECE                            0x3F7
 #define FLAG_HIDE_MT_MOON_B2F_REVIVE                           		0x3F8
 #define FLAG_HIDE_MT_MOON_B2F_TM46                                  0x3F9
-#define FLAG_UNUSED_ITEM_0x3FA                                    	0x3FA
+#define FLAG_HIDE_ROUTE24_TM45                                    	0x3FA
 #define FLAG_UNUSED_ITEM_0x3FB                                 		0x3FB
 #define FLAG_UNUSED_ITEM_0x3FC                                  	0x3FC
 #define FLAG_UNUSED_ITEM_0x3FD                                   	0x3FD

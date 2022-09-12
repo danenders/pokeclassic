@@ -281,7 +281,7 @@ MtMoon_B2F_EventScript_RocketDuo::
 	applymovement LOCALID_JESSIE, MtMoon_Movement_PrepareForTrouble
 	applymovement LOCALID_JAMES, MtMoon_Movement_AndMakeItDouble
 	waitmovement 13
-	trainerbattle_double TRAINER_ROCKET_DUO_1, MtMoon_B2F_Text_RocketDuoIntro, MtMoon_B2F_Text_RocketDuoDefeat, MtMoon_B2F_Text_RocketDuoNeedTwoMons, MtMoon_B2F_EventScript_RocketDuoDefeated, NO_MUSIC
+	trainerbattle_double TRAINER_ROCKET_DUO_1, MtMoon_B2F_Text_RocketDuoIntro, MtMoon_B2F_Text_RocketDuoDefeat, Text_NeedTwoMons, MtMoon_B2F_EventScript_RocketDuoDefeated, NO_MUSIC
 	end
 
 MtMoon_B2F_EventScript_RocketDuoDefeated::
@@ -338,6 +338,3 @@ MtMoon_B2F_Text_RocketDuoDefeated::
 	.string "Jessie: This isn't over, kid!\p"
 	.string "James: Team Rocket, blast off at\n"
 	.string "the speed of light!$"
-
-MtMoon_B2F_Text_RocketDuoNeedTwoMons::
-	.string "placeholder text$"
