@@ -13,9 +13,15 @@ const u8 gText_MatchCallCamper_Shane_Pokemon[] = _("Brave Pokémon are my faves!
 const u8 gText_MatchCallCamper_Shane_Intro1[] = _("I want to be brave enough");
 const u8 gText_MatchCallCamper_Shane_Intro2[] = _("to take on Nugget Bridge!");
 
+const u8 gText_MatchCallHiker_Franklin_Strategy[] = _("I train in Mt. Moon!");
+const u8 gText_MatchCallHiker_Franklin_Pokemon[] = _("Tough Pokémon are my faves!");
+const u8 gText_MatchCallHiker_Franklin_Intro1[] = _("I'm always up for a long");
+const u8 gText_MatchCallHiker_Franklin_Intro2[] = _("hike or a good battle!");
+
 const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_COUNT] =
 {
 	[REMATCH_JANICE] = MCFLAVOR(Lass_Janice),
 	[REMATCH_BEN] = MCFLAVOR(Youngster_Ben),
 	[REMATCH_SHANE] = MCFLAVOR(Camper_Shane),
+	[REMATCH_FRANKLIN] = MCFLAVOR(Hiker_Franklin),
 };

@@ -371,7 +371,7 @@
 #define FLAG_REMATCH_JANICE                    0x15D // Lass Janice on Route 3
 #define FLAG_REMATCH_BEN                       0x15E // Youngster Ben on Route 3
 #define FLAG_REMATCH_SHANE                     0x15F // Camper Shane on Route 24
-#define FLAG_REMATCH_UNUSED_3                  0x160
+#define FLAG_REMATCH_FRANKLIN                  0x160 // Hiker Franklin on Route 25
 #define FLAG_REMATCH_UNUSED_4                  0x161
 #define FLAG_REMATCH_UNUSED_5                  0x162
 #define FLAG_REMATCH_UNUSED_6                  0x163
@@ -546,10 +546,10 @@
 #define FLAG_HIDDEN_ITEM_MT_MOON_B2F_ETHER       		(FLAG_HIDDEN_ITEMS_START + 0x0D)
 #define FLAG_HIDDEN_ITEM_MT_MOON_B2F_MOON_STONE         (FLAG_HIDDEN_ITEMS_START + 0x0E)
 #define FLAG_HIDDEN_ITEM_CERULEAN_CITY_RARE_CANDY       (FLAG_HIDDEN_ITEMS_START + 0x0F)
-#define FLAG_HIDDEN_ITEM_16             (FLAG_HIDDEN_ITEMS_START + 0x10)
-#define FLAG_HIDDEN_ITEM_17             (FLAG_HIDDEN_ITEMS_START + 0x11)
-#define FLAG_HIDDEN_ITEM_18         	(FLAG_HIDDEN_ITEMS_START + 0x12)
-#define FLAG_HIDDEN_ITEM_19            	(FLAG_HIDDEN_ITEMS_START + 0x13)
+#define FLAG_HIDDEN_ITEM_ROUTE25_ELIXIR                 (FLAG_HIDDEN_ITEMS_START + 0x10)
+#define FLAG_HIDDEN_ITEM_ROUTE25_ORAN_BERRY             (FLAG_HIDDEN_ITEMS_START + 0x11)
+#define FLAG_HIDDEN_ITEM_ROUTE25_BLUK_BERRY         	(FLAG_HIDDEN_ITEMS_START + 0x12)
+#define FLAG_HIDDEN_ITEM_ROUTE25_ETHER            	    (FLAG_HIDDEN_ITEMS_START + 0x13)
 #define FLAG_HIDDEN_ITEM_20            	(FLAG_HIDDEN_ITEMS_START + 0x14)
 #define FLAG_HIDDEN_ITEM_21           	(FLAG_HIDDEN_ITEMS_START + 0x15)
 #define FLAG_HIDDEN_ITEM_22             (FLAG_HIDDEN_ITEMS_START + 0x16)
@@ -1379,7 +1379,7 @@
 
 #define FLAG_HIDE_FOLLOWER             				(SYSTEM_FLAGS + 0x23) 
 #define FLAG_SYS_GYM_LEADER_MATCH_CALL_ENABLED      (SYSTEM_FLAGS + 0x24) // Never set. Used to prevent Gym Leader match calls.
-#define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
+#define FLAG_SYS_FORCE_LOAD_OFFSCREEN_OBJ           (SYSTEM_FLAGS + 0x25) // Based on Lunos' offscreen obj event simplemod. Used in event_object_movement.c
 #define FLAG_UNUSED_0x886                           (SYSTEM_FLAGS + 0x26) // Unused Flag
 #define FLAG_UNUSED_0x887                  			(SYSTEM_FLAGS + 0x27) // Unused Flag
 

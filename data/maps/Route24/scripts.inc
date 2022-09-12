@@ -105,7 +105,6 @@ Route24_EventScript_DisguisedRocket::
 	waitse
 	addobject LOCALID_ROCKET
 	removeobject LOCALID_DISGUISED_ROCKET
-	setflag FLAG_HIDE_ROUTE24_DISGUISED_ROCKET
 	goto Route24_EventScript_DisguisedRocketBattle
 	end
 
@@ -181,24 +180,19 @@ Route24_EventScript_DisguisedRocketDefeated::
 	end
 
 Route24_Text_BossesAreGonnaKillMe::
-	.string "Aw, man. My bosses are\n"
-	.string "kill me! I gotta bail!$"
+	.string "My bosses are gonna kill me!\n"
+	.string "I gotta bail!$"
 
 Route24_EventScript_SecretPrize::
 	applymovement LOCALID_DISGUISED_ROCKET, Common_Movement_ExclamationMark
 	msgbox Route24_Text_OhWowThatsGreat, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_DISGUISED_ROCKET, Movement_GetJessieJames
 	fadescreen FADE_TO_BLACK
+	setflag FLAG_SYS_FORCE_LOAD_OFFSCREEN_OBJ
 	waitmovement 9
 	removeobject LOCALID_DISGUISED_ROCKET
-	setflag FLAG_HIDE_ROUTE24_DISGUISED_ROCKET
 	delay 10
-	clearflag FLAG_HIDE_ROUTE24_ROCKET
-	clearflag FLAG_HIDE_ROUTE24_JESSIE
-	clearflag  FLAG_HIDE_ROUTE24_JAMES
-	addobject LOCALID_JAMES
-	addobject LOCALID_JESSIE
-	addobject LOCALID_ROCKET
 	fadescreen FADE_FROM_BLACK
 	fadenewbgm MUS_RG_ENCOUNTER_ROCKET
 	applymovement LOCALID_ROCKET, Movement_RocketApproach
@@ -210,11 +204,13 @@ Route24_EventScript_SecretPrize::
 	applymovement LOCALID_JAMES, Movement_JamesAction
 	waitmovement 9
 	msgbox Route24_Text_YouFool, MSGBOX_DEFAULT
+	applymovement LOCALID_ROCKET, Common_Movement_ExclamationMark
+	waitmovement 11
+	msgbox Route24_Text_YourProblemNow, MSGBOX_DEFAULT
 	applymovement LOCALID_ROCKET, Movement_RocketBails
+	closemessage
 	waitmovement 11
-	setflag FLAG_HIDE_ROUTE24_ROCKET
 	removeobject LOCALID_ROCKET
-	waitmovement 11
 	applymovement LOCALID_JESSIE, Movement_JessieApproach
 	applymovement LOCALID_JAMES, Movement_JamesApproach
 	waitmovement 9
@@ -227,9 +223,11 @@ Movement_RocketApproach:
 	walk_down
 	walk_down
 	walk_down
+	walk_down
 	step_end
 
 Movement_JessieJamesEnter:
+	walk_down
 	walk_down
 	walk_down
 	walk_down
@@ -283,8 +281,6 @@ Movement_RocketBails:
 	walk_in_place_faster_left
 	delay_16
 	delay_16
-	emote_exclamation_mark
-	delay_16
 	walk_up
 	walk_up
 	walk_up
@@ -314,12 +310,16 @@ Movement_JamesApproach:
 Route24_Text_YouFool:
 	.string "Jessie: You fool!\p"
 	.string "James: You imbecile!\p"
-	.string "Jessie: This is the brat\n"
-	.string "that ruined our plans at\l"
-	.string "Mt. Moon!\p"
-	.string "James: They've probably led\n"
-	.string "the International Police\l"
-	.string "right to us!$"
+	.string "Jessie: This is the brat that\n"
+	.string "ruined our plans at Mt. Moon!\p"
+	.string "James: They've probably led the\n"
+	.string "International Police right to us!$"
+
+Route24_Text_YourProblemNow:
+	.string "Rocket: Yikes!\p"
+	.string "Well...erm...that means\n"
+	.string "you both want a rematch, right?\p"
+	.string "Yeah! Um, I'll go warn the others!$"
 
 Route24_EventScript_BattleJessieJames::
 	trainerbattle_double TRAINER_ROCKET_DUO_NB, Route24_Text_RocketDuoIntro, Route24_Text_RocketDuoDefeat, Text_NeedTwoMons, Route24_EventScript_RocketDuoDefeated, NO_MUSIC
@@ -344,10 +344,9 @@ Route24_EventScript_RocketDuoDefeated::
 	closemessage
 	playse SE_FLEE
 	waitse
-	setflag FLAG_HIDE_ROUTE24_JESSIE
 	removeobject LOCALID_JESSIE
-	setflag FLAG_HIDE_ROUTE24_JAMES
 	removeobject LOCALID_JAMES
+	clearflag FLAG_SYS_FORCE_LOAD_OFFSCREEN_OBJ
 	setvar VAR_CERULEAN_CITY_ROCKETS, 1
 	fadenewbgm MUS_ENCOUNTER_CHAMPION
 	fadescreen FADE_FROM_BLACK
@@ -376,9 +375,7 @@ Route24_EventScript_LookerConclusion::
 	applymovement LOCALID_LOOKER, Movement_LookerCaughtRocket
 	applymovement LOCALID_ROCKET, Movement_RocketGotCaught
 	waitmovement 12
-	setflag FLAG_HIDE_ROUTE24_LOOKER
 	removeobject LOCALID_LOOKER
-	setflag FLAG_HIDE_ROUTE24_ROCKET
 	removeobject LOCALID_ROCKET
 	fadedefaultbgm
 	releaseall
@@ -410,6 +407,7 @@ Movement_LookerCaughtRocket::
 	walk_down
 	walk_down
 	walk_down
+	walk_down
 	step_end
 
 Movement_RocketGotCaught::
@@ -418,6 +416,7 @@ Movement_RocketGotCaught::
 	delay_16
 	walk_down
 	walk_left
+	walk_down
 	walk_down
 	walk_down
 	walk_down
@@ -507,7 +506,6 @@ Route24_EventScript_CalePostBattle::
 	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	waitmovement 1
 	removeobject LOCALID_CALE
-	setflag FLAG_HIDE_NUGGET_BRIDGE_CALE
 	end
 
 Route24_Text_CaleIntro::
@@ -534,7 +532,6 @@ Route24_EventScript_AliPostBattle::
 	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	waitmovement 2
 	removeobject LOCALID_ALI
-	setflag FLAG_HIDE_NUGGET_BRIDGE_ALI
 	end
 
 Route24_Text_AliIntro::
@@ -558,7 +555,6 @@ Route24_EventSript_TimmyPostBattle::
 	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	waitmovement 3
 	removeobject LOCALID_TIMMY
-	setflag FLAG_HIDE_NUGGET_BRIDGE_TIMMY
 	end
 
 Route24_Text_TimmyIntro::
@@ -583,7 +579,6 @@ Route24_EventScript_ReliPostBattle::
 	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	waitmovement 4
 	removeobject LOCALID_RELI
-	setflag FLAG_HIDE_NUGGET_BRIDGE_RELI
 	end
 
 Route24_Text_ReliIntro::
@@ -607,7 +602,6 @@ Route24_EventScript_EthanPostBattle::
 	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	waitmovement 5
 	removeobject LOCALID_ETHAN
-	setflag FLAG_HIDE_NUGGET_BRIDGE_ETHAN
 	end
 
 Route24_Text_EthanIntro::

@@ -168,7 +168,7 @@ static void PopulateBattleFrontierStreak(int, u8 *);
 
 #define TEXT_ID(topic, id) (((topic) << 8) | ((id) & 0xFF))
 
-static const struct MatchCallTrainerTextInfo sMatchCallTrainers[] =
+static const struct MatchCallTrainerTextInfo sMatchCallTrainers[] = //TODO: Personalize these
 {
     {
         .trainerId = REMATCHABLE_TRAINER_LASS_JANICE_1,
@@ -190,6 +190,15 @@ static const struct MatchCallTrainerTextInfo sMatchCallTrainers[] =
     },
     {
         .trainerId = REMATCHABLE_TRAINER_CAMPER_SHANE_1,
+        .unused = 0,
+        .battleTopicTextIds = BATTLE_TEXT_IDS(2),
+        .generalTextId = TEXT_ID(GEN_TOPIC_PERSONAL, 55),
+        .battleFrontierRecordStreakTextIndex = 2,
+        .sameRouteMatchCallTextId = TEXT_ID(REQ_TOPIC_SAME_ROUTE, 2),
+        .differentRouteMatchCallTextId = TEXT_ID(REQ_TOPIC_DIFF_ROUTE, 2),
+    },
+    {
+        .trainerId = REMATCHABLE_TRAINER_HIKER_FRANKLIN_1,
         .unused = 0,
         .battleTopicTextIds = BATTLE_TEXT_IDS(2),
         .generalTextId = TEXT_ID(GEN_TOPIC_PERSONAL, 55),

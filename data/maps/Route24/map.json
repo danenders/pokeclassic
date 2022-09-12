@@ -132,7 +132,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_JESSIE",
       "x": 10,
-      "y": 10,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -145,7 +145,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_JAMES",
       "x": 12,
-      "y": 10,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -158,7 +158,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_F",
       "x": 11,
-      "y": 10,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
