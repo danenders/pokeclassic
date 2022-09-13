@@ -84,7 +84,7 @@
 #define FLAG_GOT_BULBASAUR    		        0x43 // Received the Bulbasaur in Cerulean. Hides the Breeder and the Bulbasaur.
 #define FLAG_GOT_MISTY_REWARD    		    0x44 // Received TM03
 #define FLAG_HELPED_BILL_IN_SEA_COTTAGE    	0x45 // Rescued Bill from the teleporter accident
-#define FLAG_UNUSED_0x046    		0x46 // Unused Flag
+#define FLAG_GOT_CHARMANDER    		        0x46 // Received the Charmander on Route 24
 #define FLAG_UNUSED_0x047    		0x47 // Unused Flag
 #define FLAG_UNUSED_0x048    		0x48 // Unused Flag
 #define FLAG_UNUSED_0x049    		0x49 // Unused Flag

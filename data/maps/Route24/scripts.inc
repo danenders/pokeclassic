@@ -8,6 +8,7 @@
 .set LOCALID_JAMES, 10
 .set LOCALID_ROCKET, 11
 .set LOCALID_LOOKER, 12
+.set LOCALID_CHARMANDER, 13
 
 
 Route24_MapScripts::
@@ -22,6 +23,110 @@ Route24_OnTransition:
 Route24_OnResume:
 	call Common_EventScript_GetDayOrNight
 	end
+
+@Charmander
+Route24_EventScript_Charmander::
+	call Route24_EventScript_CharmanderEmote
+	playmoncry SPECIES_CHARMANDER, CRY_MODE_NORMAL
+	msgbox Route24_Text_Charmander, MSGBOX_NPC
+	waitmoncry
+	release
+	end
+
+Route24_Text_Charmander:
+	.string "Charmander: Char!$"
+
+Route24_EventScript_CharmanderEmote::
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	applymovement LOCALID_CHARMANDER, Common_Movement_ExclamationMark
+	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	return
+
+Route24_EventScript_CharmanderGuy::
+	lock
+	faceplayer
+	goto_if_set FLAG_GOT_CHARMANDER, Route24_EventScript_HowsCharmander
+	msgbox Route24_Text_NotCutOutToBeATrainer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, FALSE, Route24_EventScript_BetterReleaseIt
+	setvar VAR_TEMP_1, SPECIES_CHARMANDER
+	givemon SPECIES_CHARMANDER, 7, ITEM_NONE
+	goto_if_eq VAR_RESULT, 0, Route24_EventScript_CharmanderParty
+	goto_if_eq VAR_RESULT, 1, Route24_EventScript_CharmanderPC
+	goto_if_eq VAR_RESULT, 2, Route24_EventScript_NoRoomForCharmander
+	end
+
+Route24_EventScript_HowsCharmander::
+	msgbox Route24_Text_HowsCharmander, MSGBOX_NPC
+	release
+	end
+
+Route24_Text_HowsCharmander::
+	.string "How's Charmander doing?$"
+
+Route24_Text_NotCutOutToBeATrainer::
+	.string "I'm not good at raising Pokémon.\p" 
+	.string "I should release my Charmander\n"
+	.string "because I haven't raised it well...\p" 
+	.string "If you promise me you'll take\n"
+	.string "good care of it, it's yours.$"
+
+Route24_EventScript_BetterReleaseIt::
+	msgbox Route24_Text_BetterReleaseIt, MSGBOX_NPC
+	release
+	end
+
+Route24_Text_BetterReleaseIt::
+	.string "Oh...I better release it then...$"
+
+
+Route24_EventScript_CharmanderParty::
+	call Route24_EventScript_GetCharmander
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route24_EventScript_GotCharmander
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Route24_EventScript_GotCharmander
+	end
+
+Route24_EventScript_GetCharmander::
+	playfanfare MUS_LEVEL_UP
+	message Route24_EventScript_Text_TakeCareOfCharmander
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_CHARMANDER
+	return
+
+Route24_EventScript_Text_TakeCareOfCharmander::
+	.string "{PLAYER} promised to take good care\n"
+	.string "of the trainer's Charmander!$"
+
+Route24_EventScript_GotCharmander::
+	setflag FLAG_GOT_CHARMANDER
+	removeobject LOCALID_CHARMANDER
+	release
+	end
+
+Route24_EventScript_CharmanderPC::
+	call Route24_EventScript_GetCharmander
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route24_EventScript_TransferCharmander
+	call Common_EventScript_NameReceivedBoxMon
+	goto Route24_EventScript_TransferCharmander
+	end
+
+Route24_EventScript_TransferCharmander::
+	call Common_EventScript_TransferredToPC
+	goto Route24_EventScript_GotCharmander
+	end
+
+Route24_EventScript_NoRoomForCharmander::
+	msgbox Route24_Text_NoRoomForMorePokemon, MSGBOX_DEFAULT
+	release
+	end
+
+Route24_Text_NoRoomForMorePokemon::
+    .string "Oh! You don't have room\n"
+    .string "for any more Pokémon!$"
 
 @Rocket Scene
 

@@ -155,7 +155,7 @@
 #define VAR_RIVAL_CERULEAN_CITY             0x4088
 #define VAR_CERULEAN_CITY_ROCKETS          	0x4089
 #define VAR_SEA_COTTAGE_STATE             	0x408A
-#define UNUSED_VARIABLE_16                  0x408B
+#define VAR_DAYCARE_EGG_PENDING             0x408B
 #define UNUSED_VARIABLE_17  				0x408C
 #define UNUSED_VARIABLE_18           		0x408D
 #define UNUSED_VARIABLE_19          		0x408E

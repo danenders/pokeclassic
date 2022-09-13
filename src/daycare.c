@@ -486,6 +486,7 @@ static void _TriggerPendingDaycareEgg(struct DayCare *daycare)
     }
 
     FlagSet(FLAG_PENDING_DAYCARE_EGG);
+    VarSet(VAR_DAYCARE_EGG_PENDING, 1);
 }
 
 // Functionally unused
