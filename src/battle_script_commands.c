@@ -13966,7 +13966,7 @@ static void Cmd_givecaughtmon(void)
         }
 
         // Change to B_MSG_SENT_LANETTES_PC or B_MSG_LANETTES_BOX_FULL
-        if (FlagGet(FLAG_SYS_PC_LANETTE))
+        if (FlagGet(FLAG_SYS_PC_BILL))
             gBattleCommunication[MULTISTRING_CHOOSER]++;
     }
 

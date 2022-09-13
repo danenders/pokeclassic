@@ -14,4 +14,4 @@ gText_AccessedPlayersPC::
 	.string "Accessed {PLAYER}'s PC.$"
 
 gText_AccessedLanettesPC::
-	.string "Accessed Lanette's PC.$"
+	.string "Accessed Bill's PC.$"

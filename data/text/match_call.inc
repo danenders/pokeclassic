@@ -8,11 +8,11 @@ MatchCall_Text_OakRegisterCall:
 	.string "out in the field.$"
 
 MatchCall_Text_RegisteredOak: 
-	.string "Registered Professor Oak\n"
-	.string "in your Cell Phone.$"
+	.string "Professor Oak registered their\n"
+	.string "info in your Cell Phone.$"
 
 MatchCall_Text_RegisteredScott:
-	.string "Registered Scott\n"
+	.string "Scott registered their info in\n"
 	.string "in your Cell Phone.$"
 
 MatchCall_Text_ScottBusy::
@@ -177,7 +177,7 @@ MatchCall_Text_MomGameClear::
 	.string "I'm so proud of you!$"
 
 MatchCall_Text_RegisteredRival:
-	.string "Registered {RIVAL}\n"
+	.string "Daisy registered {RIVAL}'s info\n"
 	.string "in your Cell Phone.$"
 
 MatchCall_Text_Rival1::
@@ -222,7 +222,7 @@ MatchCall_Text_AideIntro2::
 	.string "on you again soon. Goodbye!$"
 
 MatchCall_Text_RegisteredOaksAide:
-	.string "Registered Oak's Aide\n"
+	.string "Oak's Aide registered their info\n"
 	.string "in your Cell Phone.$"
 
 MatchCall_Text_AideWatchingProgress::
@@ -380,8 +380,8 @@ MatchCall_Text_AideGameClear::
 	.string "I hope my rewards were helpful!$"
 
 MatchCall_Text_RegisteredLooker:
-	.string "Registered Looker\n"
-	.string "in your Cell Phone.$"
+	.string "Looker registered their info in\n"
+	.string "your Cell Phone.$"
 
 MatchCall_Text_LookerIntro::
 	.string "Looker: Team Rocket…\p"
@@ -440,8 +440,8 @@ MatchCall_Text_LookerGiovanni::
 	.string "My team is in your debt!$"
 
 MatchCall_Text_RegisteredBill:
-	.string "Registered Bill\n"
-	.string "in your Cell Phone.$"
+	.string "Bill registered their info in\n"
+	.string "your Cell Phone.$"
 
 MatchCall_Text_Bill1::
 	.string "Bill: Thanks again for\n"
@@ -451,6 +451,46 @@ MatchCall_Text_Bill1::
 	.string "But it's giving me some new\n"
 	.string "ideas for my inventions!\p"
 	.string "Gotta go!$"
+
+MatchCall_Text_Bill2::
+	.string "Bill: Oh hey, {PLAYER}!\p"
+	.string "Did you ever end up using\n"
+	.string "the S.S. Ticket?\p"
+	.string "Oh yeah? How was it?\p"
+	.string "Ha! Well, why you were busy\n"
+	.string "getting your sea legs, I had\l"
+	.string "a few more ideas!\p"
+	.string "Swing by the lab the next time\n"
+	.string "you're in Cerulean and I'll show\l"
+	.string "them to you!$"
+
+MatchCall_Text_Bill3::
+	.string "Bill: Yo, {PLAYER}!\p"
+	.string "Whoa! Team Rocket's leader was\n"
+	.string "the Viridian Gym's leader, too?\p"
+	.string "The net was buzzing with theories,\n"
+	.string "but I don't think I saw anyone guess\l"
+	.string "that one!\p"
+	.string "Anyway, I guess you're heading to take\n"
+	.string "on the Elite Four next, huh?\p"
+	.string "Listen, I think I've finally got my \n"
+	.string "teleporter working.!\p"
+	.string "If my hunch is correct, you might be\n"
+	.string "interested in taking advantage of it\l"
+	.string "before you take on Kanto's top trainers!\p"
+	.string "I'll be at the lab if you're curious!$"
+
+MatchCall_Text_Bill4::
+	.string "Bill: Wow, {PLAYER}!\p"
+	.string "The footage from your battles are\n"
+	.string "all over the net!\p"
+	.string "People just can't get enough of you!\p"
+	.string "I hope my inventions were helpful\n"
+	.string "on your journey.\p"
+	.string "Oh, me?\p"
+	.string "I'll stick to the lab for now.\n"
+	.string "Maybe I'll think of something new!\p"
+	.string "Come visit sometime!$"
 
 @UNUSED
 MatchCall_Text_Mom2::

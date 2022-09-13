@@ -83,7 +83,7 @@
 #define FLAG_GOT_BIKE_VOUCHER    		    0x42 // Out of order in story progression
 #define FLAG_GOT_BULBASAUR    		        0x43 // Received the Bulbasaur in Cerulean. Hides the Breeder and the Bulbasaur.
 #define FLAG_GOT_MISTY_REWARD    		    0x44 // Received TM03
-#define FLAG_UNUSED_0x045    		0x45 // Unused Flag
+#define FLAG_HELPED_BILL_IN_SEA_COTTAGE    	0x45 // Rescued Bill from the teleporter accident
 #define FLAG_UNUSED_0x046    		0x46 // Unused Flag
 #define FLAG_UNUSED_0x047    		0x47 // Unused Flag
 #define FLAG_UNUSED_0x048    		0x48 // Unused Flag
@@ -464,7 +464,7 @@
 #define FLAG_UNUSED_0x1B4                    0x1B4
 #define FLAG_UNUSED_0x1B5                    0x1B5
 #define FLAG_UNUSED_0x1B6                    0x1B6
-#define FLAG_UNUSED_0x1B7                    0x1B7
+#define FLAG_BILL_IN_TELEPORTER              0x1B7
 #define FLAG_AIDE_LOCATION_1                 0x1B8 // Aide moves to Route 2
 #define FLAG_AIDE_LOCATION_2                 0x1B9 // Aide moves to Route 10
 #define FLAG_AIDE_LOCATION_3                 0x1BA // Aide moves to Route 11
@@ -808,9 +808,9 @@
 #define FLAG_HIDE_NUGGET_BRIDGE_TIMMY                        		0x302
 #define FLAG_HIDE_NUGGET_BRIDGE_RELI                        		0x303
 #define FLAG_HIDE_NUGGET_BRIDGE_ETHAN                            	0x304
-#define FLAG_HIDE_UNUSED_47                           				0x305
-#define FLAG_HIDE_UNUSED_48         								0x306
-#define FLAG_HIDE_UNUSED_49                           				0x307
+#define FLAG_HIDE_SEA_COTTAGE_BILL                          		0x305
+#define FLAG_HIDE_SEA_COTTAGE_PKMN_BILL         					0x306 //Bill transformed into a Clefairy
+#define FLAG_HIDE_SEA_COTTAGE_PIKACHU                           	0x307
 #define FLAG_HIDE_UNUSED_50                          				0x308
 #define FLAG_HIDE_UNUSED_51                          				0x309
 #define FLAG_HIDE_UNUSED_52                          				0x30A
@@ -1422,7 +1422,7 @@
 #define FLAG_LANDMARK_SOUTHERN_ISLAND               (SYSTEM_FLAGS + 0x49)
 #define FLAG_LANDMARK_FIERY_PATH                    (SYSTEM_FLAGS + 0x4A)
 
-#define FLAG_SYS_PC_LANETTE                         (SYSTEM_FLAGS + 0x4B)
+#define FLAG_SYS_PC_BILL                            (SYSTEM_FLAGS + 0x4B)
 #define FLAG_SYS_MYSTERY_EVENT_ENABLE               (SYSTEM_FLAGS + 0x4C)
 #define FLAG_SYS_ENC_UP_ITEM                        (SYSTEM_FLAGS + 0x4D)
 #define FLAG_SYS_ENC_DOWN_ITEM                      (SYSTEM_FLAGS + 0x4E)

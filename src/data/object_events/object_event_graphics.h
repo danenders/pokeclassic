@@ -1021,6 +1021,9 @@ const u16 gObjectEventPal_SchoolKidF[] = INCBIN_U16("graphics/object_events/pale
 const u32 gObjectEventPic_Lanette[] = INCBIN_U32("graphics/object_events/pics/people/lanette.4bpp");
 const u16 gObjectEventPal_Lanette[] = INCBIN_U16("graphics/object_events/palettes/lanette.gbapal");
 
+const u32 gObjectEventPic_Bill[] = INCBIN_U32("graphics/object_events/pics/people/bill.4bpp");
+const u16 gObjectEventPal_Bill[] = INCBIN_U16("graphics/object_events/palettes/bill.gbapal");
+
 const u32 gObjectEventPic_RunningTriathleteM[] = INCBIN_U32("graphics/object_events/pics/people/running_triathlete_m.4bpp");
 const u16 gObjectEventPal_AthleteM[] = INCBIN_U16("graphics/object_events/palettes/athlete_m.gbapal");
 
@@ -1208,6 +1211,9 @@ const u16 gObjectEventPal_Charmander[] = INCBIN_U16("graphics/object_events/pale
 
 const u32 gObjectEventPic_BulbasaurOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/bulbasaur_overworld.4bpp");
 const u16 gObjectEventPal_Bulbasaur[] = INCBIN_U16("graphics/object_events/palettes/bulbasaur.gbapal");
+
+const u32 gObjectEventPic_ClefairyOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/clefairy_overworld.4bpp");
+const u16 gObjectEventPal_Clefairy[] = INCBIN_U16("graphics/object_events/palettes/clefairy.gbapal");
 
 
 

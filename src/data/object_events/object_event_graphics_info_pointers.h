@@ -322,6 +322,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumFishin
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumWatering;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnPlatinumDecorating;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfOak;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bill;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lanette;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blue;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Zinnia;
@@ -367,6 +368,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Slowbro;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bulbasaur;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Charmander;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Squirtle;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Clefairy;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreatBall;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UltraBall;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MasterBall;
@@ -708,6 +710,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
 	[OBJ_EVENT_GFX_PROF_OAK] =           			 &gObjectEventGraphicsInfo_ProfOak,
     [OBJ_EVENT_GFX_ZINNIA] =           				 &gObjectEventGraphicsInfo_Zinnia,
     [OBJ_EVENT_GFX_BLUE] =           				 &gObjectEventGraphicsInfo_Blue,
+    [OBJ_EVENT_GFX_BILL] =           				 &gObjectEventGraphicsInfo_Bill,
     [OBJ_EVENT_GFX_LANETTE] =           			 &gObjectEventGraphicsInfo_Lanette,
     [OBJ_EVENT_GFX_GIOVANNI] =           			 &gObjectEventGraphicsInfo_Giovanni,
    	[OBJ_EVENT_GFX_JESSIE] =           			 	 &gObjectEventGraphicsInfo_Jessie,
@@ -746,7 +749,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
 	[OBJ_EVENT_GFX_SLOWBRO] = 				 		 &gObjectEventGraphicsInfo_Slowbro,
 	[OBJ_EVENT_GFX_BULBASAUR] = 				 	 &gObjectEventGraphicsInfo_Bulbasaur,
 	[OBJ_EVENT_GFX_CHARMANDER] = 				 	 &gObjectEventGraphicsInfo_Charmander,
-	[OBJ_EVENT_GFX_SQUIRTLE] = 				 		 &gObjectEventGraphicsInfo_Squirtle
+	[OBJ_EVENT_GFX_SQUIRTLE] = 				 		 &gObjectEventGraphicsInfo_Squirtle,
+	[OBJ_EVENT_GFX_CLEFAIRY] = 				 		 &gObjectEventGraphicsInfo_Clefairy
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

@@ -758,6 +758,15 @@ static const struct MenuAction MultichoiceList_TrainerSchool[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_BillsPokemon[] =
+{
+    {gText_Eevee},
+    {gText_Flareon},
+    {gText_Jolteon},
+    {gText_Vaporeon},
+    {gText_Exit},
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -868,6 +877,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_HOENN_COSTUMES]             = MULTICHOICE(MultichoiceList_HoennCostumes),
     [MULTI_SINNOH_COSTUMES]            = MULTICHOICE(MultichoiceList_SinnohCostumes),
     [MULTI_TRAINER_SCHOOL_WHITEBOARD]  = MULTICHOICE(MultichoiceList_TrainerSchool),
+    [MULTI_BILLS_POKEMON]              = MULTICHOICE(MultichoiceList_BillsPokemon),
 };
 
 const u8 *const gStdStrings[] =

@@ -543,4 +543,7 @@ gSpecials::
 	def_special DaisyMassageServices
 	def_special OpenMuseumFossilPic
 	def_special CloseMuseumFossilPic
-
+	def_special IsPartnerInParty
+	def_special AnimateTeleporterHousing
+	def_special AnimateTeleporterCable
+	def_special SetSeenMon

@@ -28,6 +28,7 @@
 #include "overworld.h"
 #include "party_menu.h"
 #include "pokeblock.h"
+#include "pokedex.h"
 #include "pokemon.h"
 #include "pokemon_storage_system.h"
 #include "random.h"
@@ -4162,4 +4163,25 @@ void RunAideCallStepCounter(void)
     u16 count = VarGet(VAR_AIDE_CALL_STEP_COUNTER);
     if (count < 200)
         VarSet(VAR_AIDE_CALL_STEP_COUNTER, count + 1);
+}
+
+void IsPartnerInParty(void)
+{
+    int i;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SANITY_HAS_SPECIES)
+            && GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2) == SPECIES_PIKACHU_PARTNER)
+        {
+            gSpecialVar_Result = TRUE;
+            return;
+        }
+    }
+
+    gSpecialVar_Result = FALSE;
+}
+
+void SetSeenMon(void)
+{
+    GetSetPokedexFlag(SpeciesToNationalPokedexNum(gSpecialVar_0x8004), 2);
 }

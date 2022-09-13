@@ -2420,6 +2420,9 @@ extern const u8 gText_MatchCallBill_Pokemon[];
 extern const u8 gText_MatchCallBill_Intro1[];
 extern const u8 gText_MatchCallBill_Intro2[];
 extern const u8 MatchCall_Text_Bill1[];
+extern const u8 MatchCall_Text_Bill2[];
+extern const u8 MatchCall_Text_Bill3[];
+extern const u8 MatchCall_Text_Bill4[];
 
 extern const u8 gText_ScottMatchCallDesc[];
 extern const u8 gText_ScottMatchCallName[];
@@ -2995,5 +2998,11 @@ extern const u8 gText_ReadSleep[];
 extern const u8 gText_ReadParalysis[];
 extern const u8 gText_ReadBurn[];
 extern const u8 gText_ReadFreeze[];
+
+//Bill's Favorite Pokemon
+extern const u8 gText_Eevee[];
+extern const u8 gText_Flareon[];
+extern const u8 gText_Jolteon[];
+extern const u8 gText_Vaporeon[];
 
 #endif // GUARD_STRINGS_H

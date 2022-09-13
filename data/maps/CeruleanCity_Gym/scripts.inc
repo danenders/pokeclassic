@@ -75,6 +75,7 @@ CeruleanCity_Gym_EventScript_GetTM::
 	additem ITEM_TM03, 1
 	setflag FLAG_GOT_MISTY_REWARD
 	msgbox CeruleanCity_Gym_Text_ExplainTM, MSGBOX_DEFAULT
+	call_if_eq VAR_SEA_COTTAGE_STATE, 3, CeruleanCity_Gym_EventScript_PrepDexNavCall
 	release
 	end
 
@@ -96,6 +97,10 @@ CeruleanCity_Gym_EventScript_NoRoomForTM::
 
 CeruleanCity_Gym_Text_NoRoomForTM::
     .string "You better make room for this!$"
+
+CeruleanCity_Gym_EventScript_PrepDexNavCall::
+	setvar VAR_SEA_COTTAGE_STATE, 4
+	return
 
 CeruleanCity_Gym_EventScript_MistyPostBattle::
 	lock

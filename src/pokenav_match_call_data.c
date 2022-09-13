@@ -316,6 +316,9 @@ static const struct MatchCallAide sLookerMatchCallHeader =
 //BILL
 static const match_call_text_data_t sBillTextScripts[] = {
     { MatchCall_Text_Bill1,  0xFFFF,                      0xFFFF },
+    { MatchCall_Text_Bill2,  FLAG_BADGE05_GET,            0xFFFF },
+    { MatchCall_Text_Bill3,  FLAG_BADGE08_GET,            0xFFFF },
+    { MatchCall_Text_Bill4,  FLAG_SYS_GAME_CLEAR,         0xFFFF },
     { NULL,                  0xFFFF,                      0xFFFF }
 };
 

@@ -716,7 +716,7 @@ const u8 gText_Poke_Balls[] = _("Poké Balls");
 const u8 gText_TMs_Hms[] = _("TMs & HMs");
 const u8 gText_Berries2[] = _("Berries");
 const u8 gText_SomeonesPC[] = _("Someone's PC");
-const u8 gText_LanettesPC[] = _("Lanette's PC");
+const u8 gText_LanettesPC[] = _("Bill's PC");
 const u8 gText_PlayersPC[] = _("{PLAYER}'s PC");
 const u8 gText_HallOfFame[] = _("Hall of Fame");
 const u8 gText_LogOff[] = _("Log off");
@@ -1875,3 +1875,7 @@ const u8 gText_ReadParalysis[] = _("Paralysis");
 const u8 gText_ReadBurn[] = _("Burn");
 const u8 gText_ReadFreeze[] = _("Ice");
 
+const u8 gText_Eevee[] = _("Eevee");
+const u8 gText_Flareon[] = _("Flareon");
+const u8 gText_Jolteon[] = _("Jolteon");
+const u8 gText_Vaporeon[] = _("Vaporeon");

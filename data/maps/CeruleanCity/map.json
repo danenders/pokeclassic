@@ -356,6 +356,51 @@
       "var": "VAR_RIVAL_CERULEAN_CITY",
       "var_value": "0",
       "script": "CeruleanCity_EventScript_RivalTriggerRight"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_SEA_COTTAGE_STATE",
+      "var_value": "4",
+      "script": "CeruleanCity_EventScript_BillCallsPlayer"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_SEA_COTTAGE_STATE",
+      "var_value": "4",
+      "script": "CeruleanCity_EventScript_BillCallsPlayer"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_SEA_COTTAGE_STATE",
+      "var_value": "4",
+      "script": "CeruleanCity_EventScript_BillCallsPlayer"
+    },
+    {
+      "type": "trigger",
+      "x": 37,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_SEA_COTTAGE_STATE",
+      "var_value": "4",
+      "script": "CeruleanCity_EventScript_BillCallsPlayer"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_SEA_COTTAGE_STATE",
+      "var_value": "4",
+      "script": "CeruleanCity_EventScript_BillCallsPlayer"
     }
   ],
   "bg_events": [

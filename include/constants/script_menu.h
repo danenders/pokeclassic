@@ -109,8 +109,8 @@
 #define MULTI_JOHTO_COSTUMES               100
 #define MULTI_HOENN_COSTUMES               101
 #define MULTI_SINNOH_COSTUMES              102
+#define MULTI_BILLS_POKEMON				   103
 
-#define MULTI_UNUSED_103				   103
 #define MULTI_UNUSED_104                   104
 #define MULTI_UNUSED_105                   105
 #define MULTI_UNUSED_106		           106

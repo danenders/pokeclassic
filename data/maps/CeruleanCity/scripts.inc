@@ -708,3 +708,21 @@ CeruleanCity_Text_ProudOfBulbasaur::
 	.string "It takes a lot of courage to\n"
 	.string "trust others.$"
 
+CeruleanCity_EventScript_BillCallsPlayer::
+	lockall
+	pokenavcall CeruleanCity_Text_DexNavCall
+	setvar VAR_SEA_COTTAGE_STATE, 5
+	release
+	end
+
+CeruleanCity_Text_DexNavCall::
+	.string "???: Hey, is this {PLAYER}?\p"
+	.string "Bill: Yeah, it's BilL!\p"
+	.string "I had to email Prof. Oak for your\n"
+	.string "number, I hope that's OK!\p"
+	.string "My brain must have been a little\n"
+	.string "scrambled from the teleporter\l"
+	.string "after you rescued me - I totally\l"
+	.string "forgot to show you something!\p"
+	.string "Come back to the Sea Cottage\n"
+	.string "sometime and I'll show you!$"
