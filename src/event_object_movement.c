@@ -598,6 +598,10 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_CLEFAIRY                0x11AF
 #define OBJ_EVENT_PAL_TAG_BILL                    0x11B0
 #define OBJ_EVENT_PAL_TAG_POLICE                  0x11B1
+#define OBJ_EVENT_PAL_TAG_MACHOP                  0x11B2
+#define OBJ_EVENT_PAL_TAG_MACHOKE                 0x11B3
+#define OBJ_EVENT_PAL_TAG_PIDGEY                  0x11B4
+#define OBJ_EVENT_PAL_TAG_SEEL                    0x11B5
 
 #define OBJ_EVENT_PAL_TAG_NONE 0x128D
 
@@ -786,6 +790,10 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Clefairy,              OBJ_EVENT_PAL_TAG_CLEFAIRY},
     {gObjectEventPal_Bill,                  OBJ_EVENT_PAL_TAG_BILL},
     {gObjectEventPal_Police,                OBJ_EVENT_PAL_TAG_POLICE},
+    {gObjectEventPal_Machop,                OBJ_EVENT_PAL_TAG_MACHOP},
+    {gObjectEventPal_Machoke,               OBJ_EVENT_PAL_TAG_MACHOKE},
+    {gObjectEventPal_Pidgey,                OBJ_EVENT_PAL_TAG_PIDGEY},
+    {gObjectEventPal_Seel,                  OBJ_EVENT_PAL_TAG_SEEL},
     {NULL,                  0x0000},
 };
 

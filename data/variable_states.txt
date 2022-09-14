@@ -19,6 +19,7 @@ Variable States:
 6: Collected Oak's Parcel
 7: Received Pokedex
 8: Left Lab after getting Pokedex
+9: Registered Oak in Cell Phone. If you don't return to Oak, this is forced in Vermilion.
 
 //Fossil Selections
 1: Took Dome Fossil first (get Helix Fossil from quest later)
@@ -29,3 +30,5 @@ Variable States:
 1: Battled Miguel
 2: Battled Jessie & James
 3: Encountered Looker
+
+//Vermilion City States

@@ -1218,6 +1218,17 @@ const u16 gObjectEventPal_Bulbasaur[] = INCBIN_U16("graphics/object_events/palet
 const u32 gObjectEventPic_ClefairyOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/clefairy_overworld.4bpp");
 const u16 gObjectEventPal_Clefairy[] = INCBIN_U16("graphics/object_events/palettes/clefairy.gbapal");
 
+const u32 gObjectEventPic_MachopOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/machop_overworld.4bpp");
+const u16 gObjectEventPal_Machop[] = INCBIN_U16("graphics/object_events/palettes/machop.gbapal");
+
+const u32 gObjectEventPic_MachokeOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/machoke_overworld.4bpp");
+const u16 gObjectEventPal_Machoke[] = INCBIN_U16("graphics/object_events/palettes/machoke.gbapal");
+
+const u32 gObjectEventPic_PidgeyOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/pidgey_overworld.4bpp");
+const u16 gObjectEventPal_Pidgey[] = INCBIN_U16("graphics/object_events/palettes/pidgey.gbapal");
+
+const u32 gObjectEventPic_SeelOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/seel_overworld.4bpp");
+const u16 gObjectEventPal_Seel[] = INCBIN_U16("graphics/object_events/palettes/seel.gbapal");
 
 
 //FRLG Objects

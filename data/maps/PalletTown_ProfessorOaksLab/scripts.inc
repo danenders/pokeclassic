@@ -15,6 +15,7 @@
 @ 6: Collected Oak's Parcel
 @ 7: Received Pokedex
 @ 8: Left Lab after getting Pokedex
+@ 9: Registered Oak in Cell Phone
 
 PalletTown_ProfessorOaksLab_MapScripts::
 	map_script MAP_SCRIPT_ON_RETURN_TO_FIELD, PalletTown_ProfessorOaksLab_OnReturnToField
@@ -896,6 +897,7 @@ EventScript_RegisterProfOak::
 	closemessage
 	delay 30
 	setflag FLAG_REGISTERED_PROF_OAK
+	setvar VAR_OAK_LAB_STATE, 9
 	release
 	end
 

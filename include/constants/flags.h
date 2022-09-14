@@ -456,8 +456,8 @@
 //More Unused Flags
 #define FLAG_IN_GAME_TRADE_MR_MIME           0x1AD
 #define FLAG_IN_GAME_TRADE_JYNX              0x1AE
-#define FLAG_UNUSED_0x1AF                    0x1AF
-#define FLAG_UNUSED_0x1B0                    0x1B0
+#define FLAG_IN_GAME_TRADE_NIDORAN           0x1AF
+#define FLAG_IN_GAME_TRADE_FARFETCHD         0x1B0
 #define FLAG_UNUSED_0x1B1                    0x1B1
 #define FLAG_UNUSED_0x1B2                    0x1B2
 #define FLAG_UNUSED_0x1B3                    0x1B3
@@ -529,37 +529,37 @@
 #define FLAG_MYSTERY_GIFT_15                 0x1F3
 
 // Hidden Items
-#define FLAG_HIDDEN_ITEMS_START                         0x1F4
-#define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_ANTIDOTE       (FLAG_HIDDEN_ITEMS_START + 0x00)
-#define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_POTION         (FLAG_HIDDEN_ITEMS_START + 0x01)
-#define FLAG_HIDDEN_ITEM_PEWTER_CITY_POKE_BALL          (FLAG_HIDDEN_ITEMS_START + 0x02)
-#define FLAG_HIDDEN_ITEM_ROUTE3_ORAN_BERRY              (FLAG_HIDDEN_ITEMS_START + 0x03)
-#define FLAG_HIDDEN_ITEM_ROUTE4_PERSIM_BERRY            (FLAG_HIDDEN_ITEMS_START + 0x04)
-#define FLAG_HIDDEN_ITEM_ROUTE4_GREAT_BALL              (FLAG_HIDDEN_ITEMS_START + 0x05)
-#define FLAG_HIDDEN_ITEM_ROUTE4_RAZZ_BERRY              (FLAG_HIDDEN_ITEMS_START + 0x06)
-#define FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM      (FLAG_HIDDEN_ITEMS_START + 0x07)
-#define FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM_2    (FLAG_HIDDEN_ITEMS_START + 0x08)
-#define FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM_3    (FLAG_HIDDEN_ITEMS_START + 0x09)
-#define FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM       (FLAG_HIDDEN_ITEMS_START + 0x0A)
-#define FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM_2     (FLAG_HIDDEN_ITEMS_START + 0x0B)
-#define FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM_3     (FLAG_HIDDEN_ITEMS_START + 0x0C)
-#define FLAG_HIDDEN_ITEM_MT_MOON_B2F_ETHER       		(FLAG_HIDDEN_ITEMS_START + 0x0D)
-#define FLAG_HIDDEN_ITEM_MT_MOON_B2F_MOON_STONE         (FLAG_HIDDEN_ITEMS_START + 0x0E)
-#define FLAG_HIDDEN_ITEM_CERULEAN_CITY_RARE_CANDY       (FLAG_HIDDEN_ITEMS_START + 0x0F)
-#define FLAG_HIDDEN_ITEM_ROUTE25_ELIXIR                 (FLAG_HIDDEN_ITEMS_START + 0x10)
-#define FLAG_HIDDEN_ITEM_ROUTE25_ORAN_BERRY             (FLAG_HIDDEN_ITEMS_START + 0x11)
-#define FLAG_HIDDEN_ITEM_ROUTE25_BLUK_BERRY         	(FLAG_HIDDEN_ITEMS_START + 0x12)
-#define FLAG_HIDDEN_ITEM_ROUTE25_ETHER            	    (FLAG_HIDDEN_ITEMS_START + 0x13)
-#define FLAG_HIDDEN_ITEM_ROUTE6_SITRUS_BERRY            (FLAG_HIDDEN_ITEMS_START + 0x14)
-#define FLAG_HIDDEN_ITEM_ROUTE6_RARE_CANDY           	(FLAG_HIDDEN_ITEMS_START + 0x15)
-#define FLAG_HIDDEN_ITEM_22             (FLAG_HIDDEN_ITEMS_START + 0x16)
-#define FLAG_HIDDEN_ITEM_23          	(FLAG_HIDDEN_ITEMS_START + 0x17)
-#define FLAG_HIDDEN_ITEM_24            	(FLAG_HIDDEN_ITEMS_START + 0x18)
-#define FLAG_HIDDEN_ITEM_25             (FLAG_HIDDEN_ITEMS_START + 0x19)
-#define FLAG_HIDDEN_ITEM_26             (FLAG_HIDDEN_ITEMS_START + 0x1A)
-#define FLAG_HIDDEN_ITEM_27           	(FLAG_HIDDEN_ITEMS_START + 0x1B)
-#define FLAG_HIDDEN_ITEM_28             (FLAG_HIDDEN_ITEMS_START + 0x1C)
-#define FLAG_HIDDEN_ITEM_29         	(FLAG_HIDDEN_ITEMS_START + 0x1D)
+#define FLAG_HIDDEN_ITEMS_START                                                   0x1F4
+#define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_ANTIDOTE                                 (FLAG_HIDDEN_ITEMS_START + 0x00)
+#define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_POTION                                   (FLAG_HIDDEN_ITEMS_START + 0x01)
+#define FLAG_HIDDEN_ITEM_PEWTER_CITY_POKE_BALL                                    (FLAG_HIDDEN_ITEMS_START + 0x02)
+#define FLAG_HIDDEN_ITEM_ROUTE3_ORAN_BERRY                                        (FLAG_HIDDEN_ITEMS_START + 0x03)
+#define FLAG_HIDDEN_ITEM_ROUTE4_PERSIM_BERRY                                      (FLAG_HIDDEN_ITEMS_START + 0x04)
+#define FLAG_HIDDEN_ITEM_ROUTE4_GREAT_BALL                                        (FLAG_HIDDEN_ITEMS_START + 0x05)
+#define FLAG_HIDDEN_ITEM_ROUTE4_RAZZ_BERRY                                        (FLAG_HIDDEN_ITEMS_START + 0x06)
+#define FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM                                (FLAG_HIDDEN_ITEMS_START + 0x07)
+#define FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM_2                              (FLAG_HIDDEN_ITEMS_START + 0x08)
+#define FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM_3                              (FLAG_HIDDEN_ITEMS_START + 0x09)
+#define FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM                                 (FLAG_HIDDEN_ITEMS_START + 0x0A)
+#define FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM_2                               (FLAG_HIDDEN_ITEMS_START + 0x0B)
+#define FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM_3                               (FLAG_HIDDEN_ITEMS_START + 0x0C)
+#define FLAG_HIDDEN_ITEM_MT_MOON_B2F_ETHER       		                          (FLAG_HIDDEN_ITEMS_START + 0x0D)
+#define FLAG_HIDDEN_ITEM_MT_MOON_B2F_MOON_STONE                                   (FLAG_HIDDEN_ITEMS_START + 0x0E)
+#define FLAG_HIDDEN_ITEM_CERULEAN_CITY_RARE_CANDY                                 (FLAG_HIDDEN_ITEMS_START + 0x0F)
+#define FLAG_HIDDEN_ITEM_ROUTE25_ELIXIR                                           (FLAG_HIDDEN_ITEMS_START + 0x10)
+#define FLAG_HIDDEN_ITEM_ROUTE25_ORAN_BERRY                                       (FLAG_HIDDEN_ITEMS_START + 0x11)
+#define FLAG_HIDDEN_ITEM_ROUTE25_BLUK_BERRY         	                          (FLAG_HIDDEN_ITEMS_START + 0x12)
+#define FLAG_HIDDEN_ITEM_ROUTE25_ETHER            	                              (FLAG_HIDDEN_ITEMS_START + 0x13)
+#define FLAG_HIDDEN_ITEM_ROUTE6_SITRUS_BERRY                                      (FLAG_HIDDEN_ITEMS_START + 0x14)
+#define FLAG_HIDDEN_ITEM_ROUTE6_RARE_CANDY           	                          (FLAG_HIDDEN_ITEMS_START + 0x15)
+#define FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_ANTIDOTE             (FLAG_HIDDEN_ITEMS_START + 0x16)
+#define FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_PARALYZE_HEAL        (FLAG_HIDDEN_ITEMS_START + 0x17)
+#define FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_AWAKENING            (FLAG_HIDDEN_ITEMS_START + 0x18)
+#define FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_POTION               (FLAG_HIDDEN_ITEMS_START + 0x19)
+#define FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_ETHER                (FLAG_HIDDEN_ITEMS_START + 0x1A)
+#define FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_ICE_HEAL             (FLAG_HIDDEN_ITEMS_START + 0x1B)
+#define FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_BURN_HEAL            (FLAG_HIDDEN_ITEMS_START + 0x1C)
+#define FLAG_HIDDEN_ITEM_VERMILION_CITY_MAX_ETHER         	                      (FLAG_HIDDEN_ITEMS_START + 0x1D)
 #define FLAG_HIDDEN_ITEM_30             (FLAG_HIDDEN_ITEMS_START + 0x1E)
 #define FLAG_HIDDEN_ITEM_31             (FLAG_HIDDEN_ITEMS_START + 0x1F)
 #define FLAG_HIDDEN_ITEM_32             (FLAG_HIDDEN_ITEMS_START + 0x20)
@@ -811,7 +811,7 @@
 #define FLAG_HIDE_SEA_COTTAGE_BILL                          		0x305
 #define FLAG_HIDE_SEA_COTTAGE_PKMN_BILL         					0x306 //Bill transformed into a Clefairy
 #define FLAG_HIDE_SEA_COTTAGE_PIKACHU                           	0x307
-#define FLAG_HIDE_UNUSED_50                          				0x308
+#define FLAG_HIDE_SS_TIDAL                          				0x308 //Hides the SS Tidal in Vermilion Harbor
 #define FLAG_HIDE_UNUSED_51                          				0x309
 #define FLAG_HIDE_UNUSED_52                          				0x30A
 #define FLAG_HIDE_UNUSED_53                          				0x30B
@@ -1586,8 +1586,8 @@
 #define FLAG_DAILY_CERULEAN_BERRY          			(DAILY_FLAGS_START + 0xF)  // The breeder in Cerulean gives a friendship berry once per day
 #define FLAG_DAILY_GOT_TEA       					(DAILY_FLAGS_START + 0x10)  // If you don't have one, you can get a Tea once per day.
 #define FLAG_DAILY_GUARD_TEA               			(DAILY_FLAGS_START + 0x11)  // Giving the guards tea once per day will unlock something. Reward tbd.
+#define FLAG_DAILY_FANCLUB_REWARD        			(DAILY_FLAGS_START + 0x12)  // Fanclub chairman gives 1 rare candy every day
 
-#define FLAG_UNUSED_0x932        					(DAILY_FLAGS_START + 0x12)  // Unused Flag
 #define FLAG_UNUSED_0x933                           (DAILY_FLAGS_START + 0x13)   // Unused Flag
 #define FLAG_UNUSED_0x934                			(DAILY_FLAGS_START + 0x14)  // Unused Flag
 #define FLAG_UNUSED_0x935                           (DAILY_FLAGS_START + 0x15) // Unused Flag

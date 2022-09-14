@@ -150,14 +150,14 @@
 #define VAR_ROUTE_22_RIVAL_STATE            0x4083
 #define VAR_PEWTER_CITY_STATE       		0x4084
 #define VAR_PEWTER_CITY_MUSEUM_STATE  		0x4085
-#define VAR_FOSSIL_SELECTION               	0x4086
+#define VAR_FOSSIL_SELECTION               	0x4086 //1 = Dome Fossil, 2 = Helix Fossil
 #define VAR_MT_MOON_STATE                 	0x4087
 #define VAR_RIVAL_CERULEAN_CITY             0x4088
 #define VAR_CERULEAN_CITY_ROCKETS          	0x4089
 #define VAR_SEA_COTTAGE_STATE             	0x408A
-#define VAR_DAYCARE_EGG_PENDING             0x408B
-#define UNUSED_VARIABLE_17  				0x408C
-#define UNUSED_VARIABLE_18           		0x408D
+#define VAR_DAYCARE_EGG_PENDING             0x408B //Used for flipping the DayCare volunteer
+#define VAR_VERMILION_CITY_STATE  			0x408C
+#define VAR_SS_TICKET_CHECK           		0x408D
 #define UNUSED_VARIABLE_19          		0x408E
 #define UNUSED_VARIABLE_20             		0x408F
 #define UNUSED_VARIABLE_21              	0x4090

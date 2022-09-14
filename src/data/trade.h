@@ -1067,7 +1067,7 @@ static const struct InGameTrade sIngameTrades[] =
         .sheen = 10,
         .requestedSpecies = SPECIES_SPEAROW
     }, 
-    [INGAME_TRADE_NIDORINOA] = 
+    [INGAME_TRADE_NIDORINA] = 
     {
         .nickname = _("Nina"),
         .species = SPECIES_NIDORINA,

@@ -136,4 +136,5 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_CERULEAN_BREEDER
 	setflag FLAG_HIDE_SEA_COTTAGE_BILL
 	setflag FLAG_HIDE_SEA_COTTAGE_PIKACHU
+	setflag FLAG_HIDE_SS_TIDAL
 	end
