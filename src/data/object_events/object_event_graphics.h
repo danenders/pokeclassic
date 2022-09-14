@@ -1151,6 +1151,9 @@ const u16 gObjectEventPal_James[] = INCBIN_U16("graphics/object_events/palettes/
 const u32 gObjectEventPic_OfficerJenny[] = INCBIN_U32("graphics/object_events/pics/people/officer_jenny.4bpp");
 const u16 gObjectEventPal_OfficerJenny[] = INCBIN_U16("graphics/object_events/palettes/jenny.gbapal");
 
+const u32 gObjectEventPic_Police[] = INCBIN_U32("graphics/object_events/pics/people/police.4bpp");
+const u16 gObjectEventPal_Police[] = INCBIN_U16("graphics/object_events/palettes/police.gbapal");
+
 const u32 gObjectEventPic_Brock[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/brock.4bpp");
 const u16 gObjectEventPal_Brock[] = INCBIN_U16("graphics/object_events/palettes/brock.gbapal");
 

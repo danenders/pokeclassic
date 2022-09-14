@@ -337,6 +337,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CoolTrainerF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jessie;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_James;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OfficerJenny;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Police;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Looker;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lorelei;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bruno;
@@ -725,6 +726,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BREEDER_M] =           	 	 	 &gObjectEventGraphicsInfo_BreederM,
     [OBJ_EVENT_GFX_BREEDER_F] =       		 	 	 &gObjectEventGraphicsInfo_BreederF,
     [OBJ_EVENT_GFX_OFFICER_JENNY] = 				 &gObjectEventGraphicsInfo_OfficerJenny,
+   	[OBJ_EVENT_GFX_POLICE] = 				 		 &gObjectEventGraphicsInfo_Police,
     [OBJ_EVENT_GFX_SNORLAX_SLEEPING] =           	 &gObjectEventGraphicsInfo_SnorlaxSleeping,
     [OBJ_EVENT_GFX_SS_ANNE]          = 				 &gObjectEventGraphicsInfo_SSAnne,
     [OBJ_EVENT_GFX_POKEDEX]          = 				 &gObjectEventGraphicsInfo_Pokedex,

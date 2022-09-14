@@ -4,6 +4,16 @@
 Route5_PokemonDayCare_MapScripts::
 	.byte 0
 
+Route5_PokemonDayCare_EventScript_Clefairy::
+	playmoncry SPECIES_CLEFAIRY, CRY_MODE_NORMAL
+	msgbox Route5_PokemonDayCare_Text_Clefairy, MSGBOX_NPC
+	waitmoncry
+	release
+	end
+
+Route5_PokemonDayCare_Text_Clefairy::
+    .string "Clefairy: Fiififiii!$"
+
 Route5_PokemonDayCare_EventScript_DaycareEmployee::
 	goto_if_eq VAR_RESULT, DAYCARE_EGG_WAITING, Route5_PokemonDayCare_EventScript_EggWaitingPartner
 	msgbox Route5_PokemonDayCare_Text_Volunteers, MSGBOX_NPC

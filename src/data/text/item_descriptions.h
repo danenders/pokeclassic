@@ -1017,10 +1017,10 @@ static const u8 sWailmerPailDesc[] = _(
     "watering Berries\n"
     "and plants.");
 
-static const u8 sDevonGoodsDesc[] = _(
-    "A package that\n"
-    "contains Devon's\n"
-    "machine parts.");
+static const u8 sRocketPlansDesc[] = _(
+    "A briefcase that\n"
+    "contains Team\n"
+    "Rocket's plans.");
 
 static const u8 sSootSackDesc[] = _(
     "A sack used to\n"

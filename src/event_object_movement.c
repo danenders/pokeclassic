@@ -597,6 +597,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_SQUIRTLE                0x11AE
 #define OBJ_EVENT_PAL_TAG_CLEFAIRY                0x11AF
 #define OBJ_EVENT_PAL_TAG_BILL                    0x11B0
+#define OBJ_EVENT_PAL_TAG_POLICE                  0x11B1
 
 #define OBJ_EVENT_PAL_TAG_NONE 0x128D
 
@@ -645,9 +646,9 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Lugia,                 OBJ_EVENT_PAL_TAG_LUGIA},
     {gObjectEventPal_RubySapphireBrendan,   OBJ_EVENT_PAL_TAG_RS_BRENDAN},
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
-    {gObjectEventPal_Npc1, OBJ_EVENT_PAL_TAG_DYNAMIC},
-    {gObjectEventPaletteLight, OBJ_EVENT_PAL_TAG_LIGHT},
-    {gObjectEventPaletteEmotes, OBJ_EVENT_PAL_TAG_EMOTES},
+    {gObjectEventPal_Npc1,                  OBJ_EVENT_PAL_TAG_DYNAMIC},
+    {gObjectEventPaletteLight,              OBJ_EVENT_PAL_TAG_LIGHT},
+    {gObjectEventPaletteEmotes,             OBJ_EVENT_PAL_TAG_EMOTES},
     {gObjectEventPal_GreatBall,             OBJ_EVENT_PAL_TAG_GREAT_BALL},
     {gObjectEventPal_UltraBall,             OBJ_EVENT_PAL_TAG_ULTRA_BALL},
     {gObjectEventPal_MasterBall,            OBJ_EVENT_PAL_TAG_MASTER_BALL},
@@ -784,6 +785,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Squirtle,              OBJ_EVENT_PAL_TAG_SQUIRTLE},
     {gObjectEventPal_Clefairy,              OBJ_EVENT_PAL_TAG_CLEFAIRY},
     {gObjectEventPal_Bill,                  OBJ_EVENT_PAL_TAG_BILL},
+    {gObjectEventPal_Police,                OBJ_EVENT_PAL_TAG_POLICE},
     {NULL,                  0x0000},
 };
 

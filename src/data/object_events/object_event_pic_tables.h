@@ -1873,6 +1873,18 @@ static const struct SpriteFrameImage sPicTable_OfficerJenny[] = {
     overworld_frame(gObjectEventPic_OfficerJenny, 4, 4, 8),
 };
 
+static const struct SpriteFrameImage sPicTable_Police[] = {
+    overworld_frame(gObjectEventPic_Police, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Police, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Police, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Police, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Police, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Police, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Police, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Police, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Police, 4, 4, 8),
+};
+
 static const struct SpriteFrameImage sPicTable_Looker[] = {
     overworld_frame(gObjectEventPic_Looker, 4, 4, 0),
     overworld_frame(gObjectEventPic_Looker, 4, 4, 1),

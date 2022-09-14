@@ -85,7 +85,7 @@
 #define FLAG_GOT_MISTY_REWARD    		    0x44 // Received TM03
 #define FLAG_HELPED_BILL_IN_SEA_COTTAGE    	0x45 // Rescued Bill from the teleporter accident
 #define FLAG_GOT_CHARMANDER    		        0x46 // Received the Charmander on Route 24
-#define FLAG_UNUSED_0x047    		0x47 // Unused Flag
+#define FLAG_DELIVERED_ROCKET_PLANS    		0x47 // Replaces "Tea" delivery to bypass Saffron guards.
 #define FLAG_UNUSED_0x048    		0x48 // Unused Flag
 #define FLAG_UNUSED_0x049    		0x49 // Unused Flag
 #define FLAG_UNUSED_0x04A    		0x4A // Unused Flag
@@ -372,7 +372,7 @@
 #define FLAG_REMATCH_BEN                       0x15E // Youngster Ben on Route 3
 #define FLAG_REMATCH_SHANE                     0x15F // Camper Shane on Route 24
 #define FLAG_REMATCH_FRANKLIN                  0x160 // Hiker Franklin on Route 25
-#define FLAG_REMATCH_UNUSED_4                  0x161
+#define FLAG_REMATCH_KEIGO                     0x161 // Bug Catcher Kegio on Route 6
 #define FLAG_REMATCH_UNUSED_5                  0x162
 #define FLAG_REMATCH_UNUSED_6                  0x163
 #define FLAG_REMATCH_UNUSED_7                  0x164
@@ -550,8 +550,8 @@
 #define FLAG_HIDDEN_ITEM_ROUTE25_ORAN_BERRY             (FLAG_HIDDEN_ITEMS_START + 0x11)
 #define FLAG_HIDDEN_ITEM_ROUTE25_BLUK_BERRY         	(FLAG_HIDDEN_ITEMS_START + 0x12)
 #define FLAG_HIDDEN_ITEM_ROUTE25_ETHER            	    (FLAG_HIDDEN_ITEMS_START + 0x13)
-#define FLAG_HIDDEN_ITEM_20            	(FLAG_HIDDEN_ITEMS_START + 0x14)
-#define FLAG_HIDDEN_ITEM_21           	(FLAG_HIDDEN_ITEMS_START + 0x15)
+#define FLAG_HIDDEN_ITEM_ROUTE6_SITRUS_BERRY            (FLAG_HIDDEN_ITEMS_START + 0x14)
+#define FLAG_HIDDEN_ITEM_ROUTE6_RARE_CANDY           	(FLAG_HIDDEN_ITEMS_START + 0x15)
 #define FLAG_HIDDEN_ITEM_22             (FLAG_HIDDEN_ITEMS_START + 0x16)
 #define FLAG_HIDDEN_ITEM_23          	(FLAG_HIDDEN_ITEMS_START + 0x17)
 #define FLAG_HIDDEN_ITEM_24            	(FLAG_HIDDEN_ITEMS_START + 0x18)
@@ -1584,9 +1584,9 @@
 //Daily Events
 #define FLAG_DAILY_MT_MOON_MUSHROOMS        		(DAILY_FLAGS_START + 0xE)  // Hidden mushrooms in Mt. Moon reset each day
 #define FLAG_DAILY_CERULEAN_BERRY          			(DAILY_FLAGS_START + 0xF)  // The breeder in Cerulean gives a friendship berry once per day
+#define FLAG_DAILY_GOT_TEA       					(DAILY_FLAGS_START + 0x10)  // If you don't have one, you can get a Tea once per day.
+#define FLAG_DAILY_GUARD_TEA               			(DAILY_FLAGS_START + 0x11)  // Giving the guards tea once per day will unlock something. Reward tbd.
 
-#define FLAG_UNUSED_0x930       					(DAILY_FLAGS_START + 0x10)  // Unused Flag
-#define FLAG_UNUSED_0x931               			(DAILY_FLAGS_START + 0x11)  // Unused Flag
 #define FLAG_UNUSED_0x932        					(DAILY_FLAGS_START + 0x12)  // Unused Flag
 #define FLAG_UNUSED_0x933                           (DAILY_FLAGS_START + 0x13)   // Unused Flag
 #define FLAG_UNUSED_0x934                			(DAILY_FLAGS_START + 0x14)  // Unused Flag

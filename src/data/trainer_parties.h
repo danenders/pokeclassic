@@ -1647,24 +1647,24 @@ static const struct TrainerMonNoItemDefaultMoves sParty_HikerFranklin1[] = {
 };
 static const struct TrainerMonNoItemDefaultMoves sParty_HikerFranklin2[] = {
     {
-        .iv = 0,
+        .iv = 20,
         .lvl = 30,
         .species = SPECIES_MACHOKE,
     },
     {
-        .iv = 0,
+        .iv = 20,
         .lvl = 30,
         .species = SPECIES_GRAVELER,
     },
 };
 static const struct TrainerMonNoItemDefaultMoves sParty_HikerFranklin3[] = {
     {
-        .iv = 0,
+        .iv = 60,
         .lvl = 45,
         .species = SPECIES_MACHAMP,
     },
     {
-        .iv = 0,
+        .iv = 60,
         .lvl = 45,
         .species = SPECIES_GOLEM,
     },
@@ -1770,3 +1770,117 @@ static const struct TrainerMonNoItemDefaultMoves sParty_LassHaley[] = {
         .species = SPECIES_ODDISH,
     },
 };
+
+//Route 6
+static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherKeigo1[] = {
+    {
+        .iv = 0,
+        .lvl = 16,
+        .species = SPECIES_WEEDLE,
+    },
+    {
+        .iv = 0,
+        .lvl = 16,
+        .species = SPECIES_CATERPIE,
+    },
+    {
+        .iv = 0,
+        .lvl = 16,
+        .species = SPECIES_VENONAT,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherKeigo2[] = {
+    {
+        .iv = 20,
+        .lvl = 32,
+        .species = SPECIES_KAKUNA,
+    },
+    {
+        .iv = 20,
+        .lvl = 32,
+        .species = SPECIES_METAPOD,
+    },
+    {
+        .iv = 20,
+        .lvl = 32,
+        .species = SPECIES_VENONAT,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherKeigo3[] = {
+    {
+        .iv = 60,
+        .lvl = 48,
+        .species = SPECIES_BEEDRILL,
+    },
+    {
+        .iv = 60,
+        .lvl = 48,
+        .species = SPECIES_BUTTERFREE,
+    },
+    {
+        .iv = 60,
+        .lvl = 48,
+        .species = SPECIES_VENOMOTH,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_CamperRicky[] = {
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_SQUIRTLE,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerNancy[] = {
+    {
+        .iv = 0,
+        .lvl = 16,
+        .species = SPECIES_RATTATA,
+    },
+    {
+        .iv = 0,
+        .lvl = 16,
+        .species = SPECIES_PIKACHU,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherElijah[] = {
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_BUTTERFREE,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerIsabelle[] = {
+    {
+        .iv = 0,
+        .lvl = 16,
+        .species = SPECIES_PIDGEY,
+    },
+    {
+        .iv = 0,
+        .lvl = 16,
+        .species = SPECIES_PIDGEY,
+    },
+    {
+        .iv = 0,
+        .lvl = 16,
+        .species = SPECIES_PIDGEY,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_CamperJeff[] = {
+    {
+        .iv = 0,
+        .lvl = 16,
+        .species = SPECIES_SPEAROW,
+    },
+    {
+        .iv = 0,
+        .lvl = 16,
+        .species = SPECIES_RATICATE,
+    },
+};
+
+
+
+
+
+

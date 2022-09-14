@@ -238,27 +238,28 @@
 #define OBJ_EVENT_GFX_BLUE                       	NPC_GFX + 55
 #define OBJ_EVENT_GFX_LEAF                       	NPC_GFX + 56
 #define OBJ_EVENT_GFX_OFFICER_JENNY                 NPC_GFX + 57
-#define OBJ_EVENT_GFX_LOOKER                 		NPC_GFX + 58
-#define OBJ_EVENT_GFX_BILL                 			NPC_GFX + 59
+#define OBJ_EVENT_GFX_POLICE                 		NPC_GFX + 58
+#define OBJ_EVENT_GFX_LOOKER                 		NPC_GFX + 59
+#define OBJ_EVENT_GFX_BILL                 			NPC_GFX + 60
 
 //Kanto Elite Four
-#define OBJ_EVENT_GFX_LORELEI                 		NPC_GFX + 60
-#define OBJ_EVENT_GFX_BRUNO                			NPC_GFX + 61
-#define OBJ_EVENT_GFX_AGATHA                 		NPC_GFX + 62
-#define OBJ_EVENT_GFX_LANCE                 		NPC_GFX + 63
+#define OBJ_EVENT_GFX_LORELEI                 		NPC_GFX + 61
+#define OBJ_EVENT_GFX_BRUNO                			NPC_GFX + 62
+#define OBJ_EVENT_GFX_AGATHA                 		NPC_GFX + 63
+#define OBJ_EVENT_GFX_LANCE                 		NPC_GFX + 64
 
 //Kanto Gym Leaders
-#define OBJ_EVENT_GFX_BROCK                 		NPC_GFX + 64
-#define OBJ_EVENT_GFX_MISTY                 		NPC_GFX + 65
-#define OBJ_EVENT_GFX_SURGE                 		NPC_GFX + 66
-#define OBJ_EVENT_GFX_ERIKA                 		NPC_GFX + 67
-#define OBJ_EVENT_GFX_SABRINA                 		NPC_GFX + 68
-#define OBJ_EVENT_GFX_KOGA                 			NPC_GFX + 69
-#define OBJ_EVENT_GFX_BLAINE                 		NPC_GFX + 70
+#define OBJ_EVENT_GFX_BROCK                 		NPC_GFX + 65
+#define OBJ_EVENT_GFX_MISTY                 		NPC_GFX + 66
+#define OBJ_EVENT_GFX_SURGE                 		NPC_GFX + 67
+#define OBJ_EVENT_GFX_ERIKA                 		NPC_GFX + 68
+#define OBJ_EVENT_GFX_SABRINA                 		NPC_GFX + 69
+#define OBJ_EVENT_GFX_KOGA                 			NPC_GFX + 70
+#define OBJ_EVENT_GFX_BLAINE                 		NPC_GFX + 71
 
 //MISC
-#define OBJ_EVENT_GFX_LITTLE_BOY_3               	NPC_GFX + 71 //UNUSED?
-#define OBJ_EVENT_GFX_QUINTY_PLUMP                 	NPC_GFX + 72
+#define OBJ_EVENT_GFX_LITTLE_BOY_3               	NPC_GFX + 72 //UNUSED?
+#define OBJ_EVENT_GFX_QUINTY_PLUMP                 	NPC_GFX + 73
 
 #define GENERIC_NPC_GFX								OBJ_EVENT_GFX_QUINTY_PLUMP
 

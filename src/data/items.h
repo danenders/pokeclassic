@@ -3267,12 +3267,12 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_WailmerPail,
     },
 
-    [ITEM_DEVON_GOODS] =
+    [ITEM_ROCKET_PLANS] =
     {
-        .name = _("Devon Goods"),
-        .itemId = ITEM_DEVON_GOODS,
+        .name = _("Rocket Plans"),
+        .itemId = ITEM_ROCKET_PLANS,
         .price = 0,
-        .description = sDevonGoodsDesc,
+        .description = sRocketPlansDesc,
         .importance = 2,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
