@@ -812,7 +812,7 @@
 #define FLAG_HIDE_SEA_COTTAGE_PKMN_BILL         					0x306 //Bill transformed into a Clefairy
 #define FLAG_HIDE_SEA_COTTAGE_PIKACHU                           	0x307
 #define FLAG_HIDE_SS_TIDAL                          				0x308 //Hides the SS Tidal in Vermilion Harbor
-#define FLAG_HIDE_UNUSED_51                          				0x309
+#define FLAG_HIDE_MEW_UNDER_TRUCK                          			0x309 //Easter Egg, hides the Mew in Vermilion Harbor
 #define FLAG_HIDE_UNUSED_52                          				0x30A
 #define FLAG_HIDE_UNUSED_53                          				0x30B
 #define FLAG_HIDE_UNUSED_54                        					0x30C
