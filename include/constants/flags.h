@@ -463,7 +463,7 @@
 #define FLAG_UNUSED_0x1B3                    0x1B3
 #define FLAG_UNUSED_0x1B4                    0x1B4
 #define FLAG_UNUSED_0x1B5                    0x1B5
-#define FLAG_UNUSED_0x1B6                    0x1B6
+#define FLAG_CHECKED_UNDER_TRUCK             0x1B6 // For the Mew Easter egg
 #define FLAG_BILL_IN_TELEPORTER              0x1B7
 #define FLAG_AIDE_LOCATION_1                 0x1B8 // Aide moves to Route 2
 #define FLAG_AIDE_LOCATION_2                 0x1B9 // Aide moves to Route 10
@@ -813,8 +813,8 @@
 #define FLAG_HIDE_SEA_COTTAGE_PIKACHU                           	0x307
 #define FLAG_HIDE_SS_TIDAL                          				0x308 //Hides the SS Tidal in Vermilion Harbor
 #define FLAG_HIDE_MEW_UNDER_TRUCK                          			0x309 //Easter Egg, hides the Mew in Vermilion Harbor
-#define FLAG_HIDE_UNUSED_52                          				0x30A
-#define FLAG_HIDE_UNUSED_53                          				0x30B
+#define FLAG_HIDE_VERMILION_HARBOR_SCOTT                         	0x30A
+#define FLAG_HIDE_VERMILION_HARBOR_SAILOR                          	0x30B
 #define FLAG_HIDE_UNUSED_54                        					0x30C
 #define FLAG_HIDE_UNUSED_55                            				0x30D
 #define FLAG_HIDE_UNUSED_56                                			0x30E
