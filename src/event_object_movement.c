@@ -613,6 +613,10 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_LADY                    0x11BE
 #define OBJ_EVENT_PAL_TAG_FUJI                    0x11BF
 #define OBJ_EVENT_PAL_TAG_CAPTAIN                 0x11C0
+#define OBJ_EVENT_PAL_TAG_WAITER                  0x11C1 //Can likely be consolidated
+#define OBJ_EVENT_PAL_TAG_WAITRESS                0x11C2
+#define OBJ_EVENT_PAL_TAG_CHEF                    0x11C3
+#define OBJ_EVENT_PAL_TAG_CHANNELER               0x11C4
 
 #define OBJ_EVENT_PAL_TAG_NONE 0x128D
 
@@ -817,6 +821,11 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Lady,                  OBJ_EVENT_PAL_TAG_LADY},
     {gObjectEventPal_MrFuji,                OBJ_EVENT_PAL_TAG_FUJI},
     {gObjectEventPal_SeaCaptain,            OBJ_EVENT_PAL_TAG_CAPTAIN},
+
+    {gObjectEventPal_Channeler,             OBJ_EVENT_PAL_TAG_CHANNELER},
+    {gObjectEventPal_Waiter,                OBJ_EVENT_PAL_TAG_WAITER},
+    {gObjectEventPal_Waitress,              OBJ_EVENT_PAL_TAG_WAITRESS},
+    {gObjectEventPal_Chef,                  OBJ_EVENT_PAL_TAG_CHEF},
     {NULL,                  0x0000},
 };
 

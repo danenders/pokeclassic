@@ -560,10 +560,10 @@
 #define FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_ICE_HEAL             (FLAG_HIDDEN_ITEMS_START + 0x1B)
 #define FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_BURN_HEAL            (FLAG_HIDDEN_ITEMS_START + 0x1C)
 #define FLAG_HIDDEN_ITEM_VERMILION_CITY_MAX_ETHER         	                      (FLAG_HIDDEN_ITEMS_START + 0x1D)
-#define FLAG_HIDDEN_ITEM_30             (FLAG_HIDDEN_ITEMS_START + 0x1E)
-#define FLAG_HIDDEN_ITEM_31             (FLAG_HIDDEN_ITEMS_START + 0x1F)
-#define FLAG_HIDDEN_ITEM_32             (FLAG_HIDDEN_ITEMS_START + 0x20)
-#define FLAG_HIDDEN_ITEM_33             (FLAG_HIDDEN_ITEMS_START + 0x21)
+#define FLAG_HIDDEN_ITEM_SSANNE_KITCHEN_PECHA_BERRY                               (FLAG_HIDDEN_ITEMS_START + 0x1E)
+#define FLAG_HIDDEN_ITEM_SSANNE_KITCHEN_CHERI_BERRY                               (FLAG_HIDDEN_ITEMS_START + 0x1F)
+#define FLAG_HIDDEN_ITEM_SSANNE_KITCHEN_CHESTO_BERRY                              (FLAG_HIDDEN_ITEMS_START + 0x20)
+#define FLAG_HIDDEN_ITEM_SSANNE_B1F_CORRIDOR_HYPER_POTION                         (FLAG_HIDDEN_ITEMS_START + 0x21)
 #define FLAG_HIDDEN_ITEM_34          	(FLAG_HIDDEN_ITEMS_START + 0x22)
 #define FLAG_HIDDEN_ITEM_35       		(FLAG_HIDDEN_ITEMS_START + 0x23)
 #define FLAG_HIDDEN_ITEM_36             (FLAG_HIDDEN_ITEMS_START + 0x24)
@@ -815,8 +815,8 @@
 #define FLAG_HIDE_MEW_UNDER_TRUCK                          			0x309 //Easter Egg, hides the Mew in Vermilion Harbor
 #define FLAG_HIDE_VERMILION_HARBOR_SCOTT                         	0x30A
 #define FLAG_HIDE_VERMILION_HARBOR_SAILOR                          	0x30B
-#define FLAG_HIDE_UNUSED_54                        					0x30C
-#define FLAG_HIDE_UNUSED_55                            				0x30D
+#define FLAG_HIDE_SS_ANNE_RIVAL                        				0x30C
+#define FLAG_HIDE_SS_ANNE                             				0x30D
 #define FLAG_HIDE_UNUSED_56                                			0x30E
 #define FLAG_HIDE_UNUSED_57                                			0x30F
 #define FLAG_HIDE_UNUSED_58          								0x310
@@ -1056,13 +1056,13 @@
 #define FLAG_HIDE_MT_MOON_B2F_REVIVE                           		0x3F8
 #define FLAG_HIDE_MT_MOON_B2F_TM46                                  0x3F9
 #define FLAG_HIDE_ROUTE24_TM45                                    	0x3FA
-#define FLAG_UNUSED_ITEM_0x3FB                                 		0x3FB
-#define FLAG_UNUSED_ITEM_0x3FC                                  	0x3FC
-#define FLAG_UNUSED_ITEM_0x3FD                                   	0x3FD
-#define FLAG_UNUSED_ITEM_0x3FE                              		0x3FE
-#define FLAG_UNUSED_ITEM_0x3FF                                  	0x3FF
-#define FLAG_UNUSED_ITEM_0x400                             			0x400
-#define FLAG_UNUSED_ITEM_0x401                                    	0x401
+#define FLAG_HIDE_SSANNE_KITCHEN_GREAT_BALL                         0x3FB
+#define FLAG_HIDE_SSANNE_1F_ROOM2_TM31                              0x3FC
+#define FLAG_HIDE_SSANNE_2F_ROOM2_STARDUST                          0x3FD
+#define FLAG_HIDE_SSANNE_2F_ROOM4_X_ATTACK                          0x3FE
+#define FLAG_HIDE_SSANNE_B1F_ROOM2_TM44                             0x3FF
+#define FLAG_HIDE_SSANNE_B1F_ROOM3_ETHER                            0x400
+#define FLAG_HIDE_SSANNE_B1F_ROOM5_SUPER_POTION                     0x401
 #define FLAG_UNUSED_ITEM_0x402                               		0x402
 #define FLAG_UNUSED_ITEM_0x403                              		0x403
 #define FLAG_UNUSED_ITEM_0x404                              		0x404

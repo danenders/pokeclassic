@@ -1222,6 +1222,19 @@ const u16 gObjectEventPal_MrFuji[] = INCBIN_U16("graphics/object_events/palettes
 const u32 gObjectEventPic_SeaCaptain[] = INCBIN_U32("graphics/object_events/pics/people/sea_captain.4bpp");
 const u16 gObjectEventPal_SeaCaptain[] = INCBIN_U16("graphics/object_events/palettes/sea_captain.gbapal");
 
+const u32 gObjectEventPic_Waiter[] = INCBIN_U32("graphics/object_events/pics/people/waiter.4bpp");
+const u16 gObjectEventPal_Waiter[] = INCBIN_U16("graphics/object_events/palettes/waiter.gbapal");
+
+const u32 gObjectEventPic_Waitress[] = INCBIN_U32("graphics/object_events/pics/people/waitress.4bpp");
+const u16 gObjectEventPal_Waitress[] = INCBIN_U16("graphics/object_events/palettes/waitress.gbapal");
+
+const u32 gObjectEventPic_Chef[] = INCBIN_U32("graphics/object_events/pics/people/chef.4bpp");
+const u16 gObjectEventPal_Chef[] = INCBIN_U16("graphics/object_events/palettes/chef.gbapal");
+
+const u32 gObjectEventPic_Channeler[] = INCBIN_U32("graphics/object_events/pics/people/channeler.4bpp");
+const u16 gObjectEventPal_Channeler[] = INCBIN_U16("graphics/object_events/palettes/channeler.gbapal");
+
+
 //Other Pokemon
 const u32 gObjectEventPic_SnorlaxSleeping[] = INCBIN_U32("graphics/object_events/pics/pokemon/snorlax_sleep.4bpp");
 const u16 gObjectEventPal_Snorlax[] = INCBIN_U16("graphics/object_events/palettes/snorlax.gbapal");

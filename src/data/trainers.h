@@ -1300,21 +1300,203 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_LeaderLtSurge),
         .party = {.NoItemCustomMoves = sParty_LeaderLtSurge}
     },
+//SS Anne - Deck
+    [TRAINER_SAILOR_EDMOND] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SAILOR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_SAILOR,
+        .trainerName = _("Edmond"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SailorEdmond),
+        .party = {.NoItemDefaultMoves = sParty_SailorEdmond}
+    },
+    [TRAINER_SAILOR_TREVOR] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SAILOR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_SAILOR,
+        .trainerName = _("Trevor"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SailorTrevor),
+        .party = {.NoItemDefaultMoves = sParty_SailorTrevor}
+    },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//SS Anne - First floor
+    [TRAINER_LASS_ANN] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_LASS,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_LASS,
+        .trainerName = _("Ann"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_LassAnn),
+        .party = {.NoItemDefaultMoves = sParty_LassAnn}
+    },
+    [TRAINER_YOUNGSTER_TYLER] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .trainerName = _("Tyler"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_YoungsterTyler),
+        .party = {.NoItemDefaultMoves = sParty_YoungsterTyler}
+    },
+    [TRAINER_GENTLEMAN_ARTHUR] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Arthur"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_GentlemanArthur),
+        .party = {.NoItemDefaultMoves = sParty_GentlemanArthur}
+    },
+    [TRAINER_GENTLEMAN_THOMAS] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Thomas"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_GentlemanThomas),
+        .party = {.NoItemDefaultMoves = sParty_GentlemanThomas}
+    },
+//SS Anne - Second Floor
+    [TRAINER_FISHERMAN_DALE] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_FISHERMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_FISHERMAN,
+        .trainerName = _("Dale"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_FishermanDale),
+        .party = {.NoItemDefaultMoves = sParty_FishermanDale}
+    },
+    [TRAINER_GENTLEMAN_BROOKS] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Brooks"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_GentlemanBrooks),
+        .party = {.NoItemDefaultMoves = sParty_GentlemanBrooks}
+    },
+    [TRAINER_LADY_DAWN] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_LADY,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_LADY,
+        .trainerName = _("Dawn"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_LadyDawn),
+        .party = {.NoItemDefaultMoves = sParty_LadyDawn}
+    },
+    [TRAINER_GENTLEMAN_LAMAR] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Lamar"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_GentlemanLamar),
+        .party = {.NoItemDefaultMoves = sParty_GentlemanLamar}
+    },
+//SS ANNE - B1F
+    [TRAINER_FISHERMAN_BARNY] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_FISHERMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_FISHERMAN,
+        .trainerName = _("Barny"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_FishermanBarny),
+        .party = {.NoItemDefaultMoves = sParty_FishermanBarny}
+    },
+    [TRAINER_SAILOR_PHILLIP] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SAILOR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_SAILOR,
+        .trainerName = _("Phillip"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SailorPhillip),
+        .party = {.NoItemDefaultMoves = sParty_SailorPhillip}
+    },
+    [TRAINER_SAILOR_HUEY] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SAILOR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_SAILOR,
+        .trainerName = _("Huey"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SailorHuey),
+        .party = {.NoItemDefaultMoves = sParty_SailorHuey}
+    },
+    [TRAINER_SAILOR_DYLAN] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SAILOR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_SAILOR,
+        .trainerName = _("Dylan"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SailorDylan),
+        .party = {.NoItemDefaultMoves = sParty_SailorDylan}
+    },
+    [TRAINER_SAILOR_LEONARD] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SAILOR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_SAILOR,
+        .trainerName = _("Leonard"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SailorLeonard),
+        .party = {.NoItemDefaultMoves = sParty_SailorLeonard}
+    },
+    [TRAINER_SAILOR_DUNCAN] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SAILOR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_SAILOR,
+        .trainerName = _("Duncan"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SailorDuncan),
+        .party = {.NoItemDefaultMoves = sParty_SailorDuncan}
+    },
 
 
 };

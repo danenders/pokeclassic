@@ -31,4 +31,10 @@ Variable States:
 2: Battled Jessie & James
 3: Encountered Looker
 
-//Vermilion City States
+//SS Anne State
+0: Nothing
+1: Battled Rival
+2: Ship ready to depart, collected cut
+3: Departed after collecting cut
+   -> Set the Ticket Check state to 2
+

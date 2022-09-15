@@ -1932,6 +1932,205 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderLtSurge[] = {
     },
 };
 
+//SS Anne - Deck
+static const struct TrainerMonNoItemDefaultMoves sParty_SailorEdmond[] = {
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_MACHOP,
+    },
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_SHELLDER,
+    },
+};
 
+static const struct TrainerMonNoItemDefaultMoves sParty_SailorTrevor[] = {
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_MACHOP,
+    },
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_TENTACOOL,
+    },
+};
+
+//SS Anne - First Floor
+static const struct TrainerMonNoItemDefaultMoves sParty_LassAnn[] = {
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_PIDGEY,
+    },
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_NIDORAN_F,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_YoungsterTyler[] = {
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_NIDORAN_M,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_GentlemanArthur[] = {
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_NIDORAN_M,
+    },
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_NIDORAN_F,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_GentlemanThomas[] = {
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_GROWLITHE,
+    },
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_GROWLITHE,
+    },
+};
+
+// SS Anne - Second Floor
+static const struct TrainerMonNoItemDefaultMoves sParty_FishermanDale[] = {
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_GOLDEEN,
+    },
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_TENTACOOL,
+    },
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_GOLDEEN,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_GentlemanBrooks[] = {
+    {
+        .iv = 0,
+        .lvl = 23,
+        .species = SPECIES_PIKACHU,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_GentlemanLamar[] = {
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_GROWLITHE,
+    },
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_PONYTA,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_LadyDawn[] = {
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_RATTATA,
+    },
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_PIKACHU,
+    },
+};
+// SS ANNE - B1F
+static const struct TrainerMonNoItemDefaultMoves sParty_SailorPhillip[] = {
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_MACHOP,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_FishermanBarny[] = {
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_TENTACOOL,
+    },
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_STARYU,
+    },
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_SHELLDER,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_SailorHuey[] = {
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_TENTACOOL,
+    },
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_STARYU,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_SailorDylan[] = {
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_HORSEA,
+    },
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_HORSEA,
+    },
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_HORSEA,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_SailorLeonard[] = {
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_SHELLDER,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_SailorDuncan[] = {
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_HORSEA,
+    },
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_SHELLDER,
+    },
+    {
+        .iv = 0,
+        .lvl = 17,
+        .species = SPECIES_TENTACOOL,
+    },
+};
 
 

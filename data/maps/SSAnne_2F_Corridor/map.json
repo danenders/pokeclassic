@@ -14,7 +14,32 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 2,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SSAnne_2F_Corridor_EventScript_Sailor",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BLUE",
+      "x": 30,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "FLAG_HIDE_SS_ANNE_RIVAL"
+    }
   ],
   "warp_events": [
     {
@@ -82,7 +107,33 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_SS_ANNE_STATE",
+      "var_value": "0",
+      "script": "SSAnne_2F_Corridor_EventScript_RivalTriggerLeft"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_SS_ANNE_STATE",
+      "var_value": "0",
+      "script": "SSAnne_2F_Corridor_EventScript_RivalTriggerMid"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_SS_ANNE_STATE",
+      "var_value": "0",
+      "script": "SSAnne_2F_Corridor_EventScript_RivalTriggerRight"
+    }
   ],
   "bg_events": [
 

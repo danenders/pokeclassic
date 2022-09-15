@@ -264,9 +264,12 @@
 #define OBJ_EVENT_GFX_MR_FUJI						NPC_GFX + 29
 #define OBJ_EVENT_GFX_DAISY							NPC_GFX + 30
 #define OBJ_EVENT_GFX_SEA_CAPTAIN					NPC_GFX + 31
+#define OBJ_EVENT_GFX_CHEF							NPC_GFX + 32
+#define OBJ_EVENT_GFX_WAITER						NPC_GFX + 33
+#define OBJ_EVENT_GFX_WAITRESS						NPC_GFX + 34
 
 //MISC
-#define OBJ_EVENT_GFX_QUINTY_PLUMP                 	NPC_GFX + 32
+#define OBJ_EVENT_GFX_QUINTY_PLUMP                 	NPC_GFX + 35
 #define GENERIC_NPC_GFX								OBJ_EVENT_GFX_QUINTY_PLUMP
 
 //Generic NPCs
@@ -356,8 +359,9 @@
 #define OBJ_EVENT_GFX_ENGINEER                   	TRAINER_NPC_GFX + 25
 #define OBJ_EVENT_GFX_JUGGLER                   	TRAINER_NPC_GFX + 26
 #define OBJ_EVENT_GFX_LADY                   		TRAINER_NPC_GFX + 27
+#define OBJ_EVENT_GFX_CHANNELER                   	TRAINER_NPC_GFX + 28
 
-#define OVERWORLD_POKEMON_GFX						OBJ_EVENT_GFX_LADY
+#define OVERWORLD_POKEMON_GFX						OBJ_EVENT_GFX_CHANNELER
 
 //Overworld Pokemon
 #define OBJ_EVENT_GFX_RAYQUAZA_STILL              	OVERWORLD_POKEMON_GFX + 1

@@ -156,7 +156,7 @@
 #define VAR_CERULEAN_CITY_ROCKETS          	0x4089
 #define VAR_SEA_COTTAGE_STATE             	0x408A
 #define VAR_DAYCARE_EGG_PENDING             0x408B //Used for flipping the DayCare volunteer
-#define VAR_VERMILION_CITY_STATE  			0x408C
+#define VAR_SS_ANNE_STATE  					0x408C
 #define VAR_SS_TICKET_CHECK           		0x408D
 #define UNUSED_VARIABLE_19          		0x408E
 #define UNUSED_VARIABLE_20             		0x408F

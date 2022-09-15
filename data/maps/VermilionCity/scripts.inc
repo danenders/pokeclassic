@@ -215,7 +215,7 @@ Movement_OakDockExitAlt::
 VermilionCity_EventScript_OldMan1::
 	lock
 	faceplayer
-	goto_if_eq VAR_VERMILION_CITY_STATE, 3, VermilionCity_EventScript_OldMan1SSAnneLeft
+	goto_if_eq VAR_SS_ANNE_STATE, 3, VermilionCity_EventScript_OldMan1SSAnneLeft
 	msgbox VermilionCity_Text_DidYouSeeSSAnneInHarbor
 	release
 	end
@@ -282,7 +282,7 @@ VermilionCity_Text_SSAnneVisitsOnceAYear::
 VermilionCity_EventScript_FerrySailor::
 	lock
 	faceplayer
-	goto_if_eq VAR_VERMILION_CITY_STATE, 3, VermilionCity_EventScript_CheckSSTidal
+	goto_if_eq VAR_SS_ANNE_STATE, 3, VermilionCity_EventScript_CheckSSTidal
 	msgbox VermilionCity_Text_WelcomeToTheSSAnne, MSGBOX_NPC
 	release
 	end

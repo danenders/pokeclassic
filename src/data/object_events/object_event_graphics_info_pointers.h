@@ -98,6 +98,10 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_VigorothFacingAway
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BirchsBag;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EnemyZigzagoon;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Artist;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Chef;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Channeler;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Waiter;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Waitress;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RivalBrendanNormal;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RivalBrendanMachBike;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RivalBrendanAcroBike;
@@ -737,8 +741,11 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
 	[OBJ_EVENT_GFX_JUGGLER] =           			 &gObjectEventGraphicsInfo_Juggler,
 	[OBJ_EVENT_GFX_LADY] =           				 &gObjectEventGraphicsInfo_Lady,
 	[OBJ_EVENT_GFX_MR_FUJI] =           			 &gObjectEventGraphicsInfo_MrFuji,
-	[OBJ_EVENT_GFX_SEA_CAPTAIN] =           		 &gObjectEventGraphicsInfo_SeaCaptain,    
-
+	[OBJ_EVENT_GFX_SEA_CAPTAIN] =           		 &gObjectEventGraphicsInfo_SeaCaptain,
+	[OBJ_EVENT_GFX_CHEF] =           				 &gObjectEventGraphicsInfo_Chef,
+	[OBJ_EVENT_GFX_CHANNELER] =          	 		 &gObjectEventGraphicsInfo_Channeler,
+	[OBJ_EVENT_GFX_WAITER] =           				 &gObjectEventGraphicsInfo_Waiter,
+	[OBJ_EVENT_GFX_WAITRESS] =         		  		 &gObjectEventGraphicsInfo_Waitress,    
     [OBJ_EVENT_GFX_ZINNIA] =           				 &gObjectEventGraphicsInfo_Zinnia,
     [OBJ_EVENT_GFX_BLUE] =           				 &gObjectEventGraphicsInfo_Blue,
     [OBJ_EVENT_GFX_BILL] =           				 &gObjectEventGraphicsInfo_Bill,

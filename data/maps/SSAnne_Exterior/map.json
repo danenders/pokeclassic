@@ -31,7 +31,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_SS_ANNE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
@@ -103,7 +103,15 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_SS_ANNE_STATE",
+      "var_value": "2",
+      "script": "SSAnne_Exterior_SSAnneDeparts"
+    }
   ],
   "bg_events": [
     {

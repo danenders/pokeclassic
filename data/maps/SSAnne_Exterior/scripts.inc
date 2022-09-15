@@ -17,6 +17,49 @@ SSAnne_Exterior_OnResume:
 	call Common_EventScript_GetDayOrNight
 	end
 
+SSAnne_Exterior_SSAnneDeparts::
+	lockall
+	fadenewbgm MUS_SURF
+	delay 50
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	@special DoSSAnneDepartureCutscene
+	waitstate
+	removeobject LOCALID_SS_ANNE
+	delay 10
+	setobjectxyperm LOCALID_SAILOR, 31,5
+	clearflag FLAG_HIDE_VERMILION_HARBOR_SAILOR
+	addobject LOCALID_SAILOR
+	applymovement LOACLID_SAILOR, Movement_MissedBoat
+	waitmovement 5
+	playse SE_PIN
+	applymovement LOACLID_SAILOR, Common_Movement_ExclamationMark
+	waitse
+	setvar VAR_SS_ANNE_STATE, 3
+	setvar VAR_SS_TICKET_CHECK, 2
+	fadedefaultbgm
+	waitstate
+	releaseall
+	end
+
+Movement_MissedBoat:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	delay_8
+	walk_in_place_faster_down
+	delay_16
+	step_end
+
+@This guy will be used later. This is mostly placeholder.
+SSAnne_Exterior_EventScript_Sailor::
+	msgbox SSAnne_Exterior_Text_MissedTheBoat, MSGBOX_NPC
+	release
+	end
+
+SSAnne_Exterior_Text_MissedTheBoat::
+	.string "Oh no! I missed the boat!$"
+
 SSAnne_Exterior_EventScript_MewUnderTruck::
 	goto_if_set FLAG_CHECKED_UNDER_TRUCK, SSAnne_Exterior_EventScript_MewNotUnderTruck
 	goto_if_set FLAG_CAUGHT_MEW, SSAnne_Exterior_EventScript_MewNotUnderTruck
