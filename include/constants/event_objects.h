@@ -170,97 +170,103 @@
 #define OBJ_EVENT_GFX_DAWN_PLATINUM_DECORATING  	COSTUME_GFX + 80
 #define OBJ_EVENT_GFX_DAWN_PLATINUM_UNDERWATER  	COSTUME_GFX + 81
 
-#define	NPC_GFX										OBJ_EVENT_GFX_DAWN_PLATINUM_UNDERWATER
+#define	LEADER_GFX									OBJ_EVENT_GFX_DAWN_PLATINUM_UNDERWATER
 
 //Frontier Brains
-#define OBJ_EVENT_GFX_ANABEL                      	NPC_GFX + 1
-#define OBJ_EVENT_GFX_TUCKER                      	NPC_GFX + 2
-#define OBJ_EVENT_GFX_GRETA                       	NPC_GFX + 3
-#define OBJ_EVENT_GFX_SPENSER                     	NPC_GFX + 4
-#define OBJ_EVENT_GFX_NOLAND                      	NPC_GFX + 5
-#define OBJ_EVENT_GFX_LUCY                        	NPC_GFX + 6
-#define OBJ_EVENT_GFX_BRANDON                    	NPC_GFX + 7
+#define OBJ_EVENT_GFX_ANABEL                      	LEADER_GFX + 1
+#define OBJ_EVENT_GFX_TUCKER                      	LEADER_GFX + 2
+#define OBJ_EVENT_GFX_GRETA                       	LEADER_GFX + 3
+#define OBJ_EVENT_GFX_SPENSER                     	LEADER_GFX + 4
+#define OBJ_EVENT_GFX_NOLAND                      	LEADER_GFX + 5
+#define OBJ_EVENT_GFX_LUCY                        	LEADER_GFX + 6
+#define OBJ_EVENT_GFX_BRANDON                    	LEADER_GFX + 7
 
 //Hoenn Gym Leaders
-#define OBJ_EVENT_GFX_ROXANNE                    	NPC_GFX + 8
-#define OBJ_EVENT_GFX_BRAWLY                     	NPC_GFX + 9
-#define OBJ_EVENT_GFX_WATTSON                    	NPC_GFX + 10
-#define OBJ_EVENT_GFX_FLANNERY                   	NPC_GFX + 11
-#define OBJ_EVENT_GFX_NORMAN                     	NPC_GFX + 12
-#define OBJ_EVENT_GFX_WINONA                     	NPC_GFX + 13
-#define OBJ_EVENT_GFX_LIZA                       	NPC_GFX + 14
-#define OBJ_EVENT_GFX_TATE                       	NPC_GFX + 15
-#define OBJ_EVENT_GFX_JUAN                       	NPC_GFX + 16
+#define OBJ_EVENT_GFX_ROXANNE                    	LEADER_GFX + 8
+#define OBJ_EVENT_GFX_BRAWLY                     	LEADER_GFX + 9
+#define OBJ_EVENT_GFX_WATTSON                    	LEADER_GFX + 10
+#define OBJ_EVENT_GFX_FLANNERY                   	LEADER_GFX + 11
+#define OBJ_EVENT_GFX_NORMAN                     	LEADER_GFX + 12
+#define OBJ_EVENT_GFX_WINONA                     	LEADER_GFX + 13
+#define OBJ_EVENT_GFX_LIZA                       	LEADER_GFX + 14
+#define OBJ_EVENT_GFX_TATE                       	LEADER_GFX + 15
+#define OBJ_EVENT_GFX_JUAN                       	LEADER_GFX + 16
 
 //Hoenn Elite 4 & Champions
-#define OBJ_EVENT_GFX_SIDNEY                     	NPC_GFX + 17
-#define OBJ_EVENT_GFX_PHOEBE                     	NPC_GFX + 18
-#define OBJ_EVENT_GFX_GLACIA                     	NPC_GFX + 19
-#define OBJ_EVENT_GFX_DRAKE                      	NPC_GFX + 20
-#define OBJ_EVENT_GFX_WALLACE                    	NPC_GFX + 21
-
-//Evil Teams
-#define OBJ_EVENT_GFX_ARCHIE                     	NPC_GFX + 22
-#define OBJ_EVENT_GFX_MAXIE                      	NPC_GFX + 23
-#define OBJ_EVENT_GFX_AQUA_MEMBER_M              	NPC_GFX + 24
-#define OBJ_EVENT_GFX_AQUA_MEMBER_F              	NPC_GFX + 25
-#define OBJ_EVENT_GFX_MAGMA_MEMBER_M             	NPC_GFX + 26
-#define OBJ_EVENT_GFX_MAGMA_MEMBER_F             	NPC_GFX + 27
-#define OBJ_EVENT_GFX_GIOVANNI             			NPC_GFX + 28 	
-#define OBJ_EVENT_GFX_ROCKET_ADMIN             		NPC_GFX + 29 	
-#define OBJ_EVENT_GFX_ROCKET_MEMBER_M             	NPC_GFX + 30 	
-#define OBJ_EVENT_GFX_ROCKET_MEMBER_F             	NPC_GFX + 31 	
-#define OBJ_EVENT_GFX_JESSIE              			NPC_GFX + 32	
-#define OBJ_EVENT_GFX_JAMES	             			NPC_GFX + 33
-
-//Unique NPCs
-#define OBJ_EVENT_GFX_MOM                        	NPC_GFX + 34
-#define OBJ_EVENT_GFX_PROF_BIRCH                  	NPC_GFX + 35
-#define OBJ_EVENT_GFX_PROF_OAK                  	NPC_GFX + 36 
-#define OBJ_EVENT_GFX_LANETTE                  		NPC_GFX + 37 
-#define OBJ_EVENT_GFX_ZINNIA                  		NPC_GFX + 38 
-#define OBJ_EVENT_GFX_SCOTT                      	NPC_GFX + 39
-#define OBJ_EVENT_GFX_STEVEN                     	NPC_GFX + 40
-#define OBJ_EVENT_GFX_WALLY                      	NPC_GFX + 41
-#define OBJ_EVENT_GFX_DEVON_EMPLOYEE             	NPC_GFX + 42
-#define OBJ_EVENT_GFX_NURSE                       	NPC_GFX + 43
-#define OBJ_EVENT_GFX_LINK_RECEPTIONIST           	NPC_GFX + 44
-#define OBJ_EVENT_GFX_MART_EMPLOYEE               	NPC_GFX + 45
-#define OBJ_EVENT_GFX_ROOFTOP_SALE_WOMAN          	NPC_GFX + 46
-#define OBJ_EVENT_GFX_TEALA                       	NPC_GFX + 47
-#define OBJ_EVENT_GFX_MYSTERY_GIFT_MAN           	NPC_GFX + 48
-#define OBJ_EVENT_GFX_UNION_ROOM_NURSE           	NPC_GFX + 49
-#define OBJ_EVENT_GFX_GAMEBOY_KID                	NPC_GFX + 50
-#define OBJ_EVENT_GFX_CONTEST_JUDGE              	NPC_GFX + 51
-#define OBJ_EVENT_GFX_HOT_SPRINGS_OLD_WOMAN      	NPC_GFX + 52
-#define OBJ_EVENT_GFX_BARD                        	NPC_GFX + 53
-#define OBJ_EVENT_GFX_RED                        	NPC_GFX + 54
-#define OBJ_EVENT_GFX_BLUE                       	NPC_GFX + 55
-#define OBJ_EVENT_GFX_LEAF                       	NPC_GFX + 56
-#define OBJ_EVENT_GFX_OFFICER_JENNY                 NPC_GFX + 57
-#define OBJ_EVENT_GFX_POLICE                 		NPC_GFX + 58
-#define OBJ_EVENT_GFX_LOOKER                 		NPC_GFX + 59
-#define OBJ_EVENT_GFX_BILL                 			NPC_GFX + 60
+#define OBJ_EVENT_GFX_SIDNEY                     	LEADER_GFX + 17
+#define OBJ_EVENT_GFX_PHOEBE                     	LEADER_GFX + 18
+#define OBJ_EVENT_GFX_GLACIA                     	LEADER_GFX + 19
+#define OBJ_EVENT_GFX_DRAKE                      	LEADER_GFX + 20
+#define OBJ_EVENT_GFX_WALLACE                    	LEADER_GFX + 21
 
 //Kanto Elite Four
-#define OBJ_EVENT_GFX_LORELEI                 		NPC_GFX + 61
-#define OBJ_EVENT_GFX_BRUNO                			NPC_GFX + 62
-#define OBJ_EVENT_GFX_AGATHA                 		NPC_GFX + 63
-#define OBJ_EVENT_GFX_LANCE                 		NPC_GFX + 64
+#define OBJ_EVENT_GFX_LORELEI                 		LEADER_GFX + 22
+#define OBJ_EVENT_GFX_BRUNO                			LEADER_GFX + 23
+#define OBJ_EVENT_GFX_AGATHA                 		LEADER_GFX + 24
+#define OBJ_EVENT_GFX_LANCE                 		LEADER_GFX + 25
 
 //Kanto Gym Leaders
-#define OBJ_EVENT_GFX_BROCK                 		NPC_GFX + 65
-#define OBJ_EVENT_GFX_MISTY                 		NPC_GFX + 66
-#define OBJ_EVENT_GFX_SURGE                 		NPC_GFX + 67
-#define OBJ_EVENT_GFX_ERIKA                 		NPC_GFX + 68
-#define OBJ_EVENT_GFX_SABRINA                 		NPC_GFX + 69
-#define OBJ_EVENT_GFX_KOGA                 			NPC_GFX + 70
-#define OBJ_EVENT_GFX_BLAINE                 		NPC_GFX + 71
+#define OBJ_EVENT_GFX_BROCK                 		LEADER_GFX + 26
+#define OBJ_EVENT_GFX_MISTY                 		LEADER_GFX + 27
+#define OBJ_EVENT_GFX_SURGE                 		LEADER_GFX + 28
+#define OBJ_EVENT_GFX_ERIKA                 		LEADER_GFX + 29
+#define OBJ_EVENT_GFX_SABRINA                 		LEADER_GFX + 30
+#define OBJ_EVENT_GFX_KOGA                 			LEADER_GFX + 31
+#define OBJ_EVENT_GFX_BLAINE                 		LEADER_GFX + 32
+
+#define	EVIL_TEAM_GFX								OBJ_EVENT_GFX_BLAINE
+
+//Evil Teams
+#define OBJ_EVENT_GFX_ARCHIE                     	EVIL_TEAM_GFX + 1
+#define OBJ_EVENT_GFX_MAXIE                      	EVIL_TEAM_GFX + 2
+#define OBJ_EVENT_GFX_AQUA_MEMBER_M              	EVIL_TEAM_GFX + 3
+#define OBJ_EVENT_GFX_AQUA_MEMBER_F              	EVIL_TEAM_GFX + 4
+#define OBJ_EVENT_GFX_MAGMA_MEMBER_M             	EVIL_TEAM_GFX + 5
+#define OBJ_EVENT_GFX_MAGMA_MEMBER_F             	EVIL_TEAM_GFX + 6
+#define OBJ_EVENT_GFX_GIOVANNI             			EVIL_TEAM_GFX + 7 	
+#define OBJ_EVENT_GFX_ROCKET_ADMIN             		EVIL_TEAM_GFX + 8 	
+#define OBJ_EVENT_GFX_ROCKET_MEMBER_M             	EVIL_TEAM_GFX + 9 	
+#define OBJ_EVENT_GFX_ROCKET_MEMBER_F             	EVIL_TEAM_GFX + 10 	
+#define OBJ_EVENT_GFX_JESSIE              			EVIL_TEAM_GFX + 11	
+#define OBJ_EVENT_GFX_JAMES	             			EVIL_TEAM_GFX + 12
+
+#define	NPC_GFX										OBJ_EVENT_GFX_JAMES
+
+//Unique NPCs
+#define OBJ_EVENT_GFX_MOM                        	NPC_GFX + 1
+#define OBJ_EVENT_GFX_PROF_BIRCH                  	NPC_GFX + 2
+#define OBJ_EVENT_GFX_PROF_OAK                  	NPC_GFX + 3 
+#define OBJ_EVENT_GFX_LANETTE                  		NPC_GFX + 4 
+#define OBJ_EVENT_GFX_ZINNIA                  		NPC_GFX + 5 
+#define OBJ_EVENT_GFX_SCOTT                      	NPC_GFX + 6
+#define OBJ_EVENT_GFX_STEVEN                     	NPC_GFX + 7
+#define OBJ_EVENT_GFX_WALLY                      	NPC_GFX + 8
+#define OBJ_EVENT_GFX_DEVON_EMPLOYEE             	NPC_GFX + 9
+#define OBJ_EVENT_GFX_NURSE                       	NPC_GFX + 10
+#define OBJ_EVENT_GFX_LINK_RECEPTIONIST           	NPC_GFX + 11
+#define OBJ_EVENT_GFX_MART_EMPLOYEE               	NPC_GFX + 12
+#define OBJ_EVENT_GFX_ROOFTOP_SALE_WOMAN          	NPC_GFX + 13
+#define OBJ_EVENT_GFX_TEALA                       	NPC_GFX + 14
+#define OBJ_EVENT_GFX_MYSTERY_GIFT_MAN           	NPC_GFX + 15
+#define OBJ_EVENT_GFX_UNION_ROOM_NURSE           	NPC_GFX + 16
+#define OBJ_EVENT_GFX_GAMEBOY_KID                	NPC_GFX + 17
+#define OBJ_EVENT_GFX_CONTEST_JUDGE              	NPC_GFX + 18
+#define OBJ_EVENT_GFX_HOT_SPRINGS_OLD_WOMAN      	NPC_GFX + 19
+#define OBJ_EVENT_GFX_BARD                        	NPC_GFX + 20
+#define OBJ_EVENT_GFX_RED                        	NPC_GFX + 21
+#define OBJ_EVENT_GFX_BLUE                       	NPC_GFX + 22
+#define OBJ_EVENT_GFX_LEAF                       	NPC_GFX + 23
+#define OBJ_EVENT_GFX_OFFICER_JENNY                 NPC_GFX + 24
+#define OBJ_EVENT_GFX_POLICE                 		NPC_GFX + 25
+#define OBJ_EVENT_GFX_LOOKER                 		NPC_GFX + 26
+#define OBJ_EVENT_GFX_BILL                 			NPC_GFX + 27
+#define OBJ_EVENT_GFX_MOM2							NPC_GFX + 28
+#define OBJ_EVENT_GFX_MR_FUJI						NPC_GFX + 29
+#define OBJ_EVENT_GFX_DAISY							NPC_GFX + 30
+#define OBJ_EVENT_GFX_SEA_CAPTAIN					NPC_GFX + 31
 
 //MISC
-#define OBJ_EVENT_GFX_LITTLE_BOY_3               	NPC_GFX + 72 //UNUSED?
-#define OBJ_EVENT_GFX_QUINTY_PLUMP                 	NPC_GFX + 73
-
+#define OBJ_EVENT_GFX_QUINTY_PLUMP                 	NPC_GFX + 32
 #define GENERIC_NPC_GFX								OBJ_EVENT_GFX_QUINTY_PLUMP
 
 //Generic NPCs
@@ -284,7 +290,9 @@
 #define OBJ_EVENT_GFX_MAN_4                       	GENERIC_NPC_GFX + 15
 #define OBJ_EVENT_GFX_MAN_5                       	GENERIC_NPC_GFX + 16
 
-#define GENDERED_NPC_GFX							OBJ_EVENT_GFX_MAN_5
+//MISC
+#define OBJ_EVENT_GFX_LITTLE_BOY_3               	GENERIC_NPC_GFX + 17 //UNUSED?
+#define GENDERED_NPC_GFX							OBJ_EVENT_GFX_LITTLE_BOY_3
 
 //Gendered Pairs
 #define OBJ_EVENT_GFX_EXPERT_M                    	GENDERED_NPC_GFX + 1
@@ -341,8 +349,15 @@
 #define OBJ_EVENT_GFX_HEX_MANIAC                  	TRAINER_NPC_GFX + 18
 #define OBJ_EVENT_GFX_CAMPER                      	TRAINER_NPC_GFX + 19
 #define OBJ_EVENT_GFX_PICNICKER                   	TRAINER_NPC_GFX + 20
+#define OBJ_EVENT_GFX_BIKER                   		TRAINER_NPC_GFX + 21
+#define OBJ_EVENT_GFX_BURGLAR                   	TRAINER_NPC_GFX + 22
+#define OBJ_EVENT_GFX_CUEBALL                   	TRAINER_NPC_GFX + 23
+#define OBJ_EVENT_GFX_DRAGON_TAMER                  TRAINER_NPC_GFX + 24
+#define OBJ_EVENT_GFX_ENGINEER                   	TRAINER_NPC_GFX + 25
+#define OBJ_EVENT_GFX_JUGGLER                   	TRAINER_NPC_GFX + 26
+#define OBJ_EVENT_GFX_LADY                   		TRAINER_NPC_GFX + 27
 
-#define OVERWORLD_POKEMON_GFX						OBJ_EVENT_GFX_PICNICKER
+#define OVERWORLD_POKEMON_GFX						OBJ_EVENT_GFX_LADY
 
 //Overworld Pokemon
 #define OBJ_EVENT_GFX_RAYQUAZA_STILL              	OVERWORLD_POKEMON_GFX + 1

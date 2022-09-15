@@ -350,6 +350,19 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Erika;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sabrina;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Koga;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blaine;
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Mom2;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Biker;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Burglar;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CueBall;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DragonTamer;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Daisy;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Engineer;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Juggler;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lady;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MrFuji;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SeaCaptain;
+
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bard;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hipster;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Trader;
@@ -713,6 +726,19 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DAWN_PLATINUM_WATERING] =         &gObjectEventGraphicsInfo_DawnPlatinumWatering,
     [OBJ_EVENT_GFX_DAWN_PLATINUM_DECORATING] =       &gObjectEventGraphicsInfo_DawnPlatinumDecorating,
 	[OBJ_EVENT_GFX_PROF_OAK] =           			 &gObjectEventGraphicsInfo_ProfOak,
+
+	[OBJ_EVENT_GFX_MOM2] =           			 	 &gObjectEventGraphicsInfo_Mom2,
+	[OBJ_EVENT_GFX_BIKER] =           			 	 &gObjectEventGraphicsInfo_Biker,
+	[OBJ_EVENT_GFX_BURGLAR] =           			 &gObjectEventGraphicsInfo_Burglar,
+	[OBJ_EVENT_GFX_CUEBALL] =           			 &gObjectEventGraphicsInfo_CueBall,
+	[OBJ_EVENT_GFX_DAISY] =           			 	 &gObjectEventGraphicsInfo_Daisy,
+	[OBJ_EVENT_GFX_DRAGON_TAMER] =           		 &gObjectEventGraphicsInfo_DragonTamer,
+	[OBJ_EVENT_GFX_ENGINEER] =           			 &gObjectEventGraphicsInfo_Engineer,
+	[OBJ_EVENT_GFX_JUGGLER] =           			 &gObjectEventGraphicsInfo_Juggler,
+	[OBJ_EVENT_GFX_LADY] =           				 &gObjectEventGraphicsInfo_Lady,
+	[OBJ_EVENT_GFX_MR_FUJI] =           			 &gObjectEventGraphicsInfo_MrFuji,
+	[OBJ_EVENT_GFX_SEA_CAPTAIN] =           		 &gObjectEventGraphicsInfo_SeaCaptain,    
+
     [OBJ_EVENT_GFX_ZINNIA] =           				 &gObjectEventGraphicsInfo_Zinnia,
     [OBJ_EVENT_GFX_BLUE] =           				 &gObjectEventGraphicsInfo_Blue,
     [OBJ_EVENT_GFX_BILL] =           				 &gObjectEventGraphicsInfo_Bill,

@@ -602,6 +602,17 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_MACHOKE                 0x11B3
 #define OBJ_EVENT_PAL_TAG_PIDGEY                  0x11B4
 #define OBJ_EVENT_PAL_TAG_SEEL                    0x11B5
+#define OBJ_EVENT_PAL_TAG_MOM2                    0x11B6
+#define OBJ_EVENT_PAL_TAG_BIKER                   0x11B7
+#define OBJ_EVENT_PAL_TAG_BURGLAR                 0x11B8 //This could probably be consolidated with Rocket or something else, I was just lazy
+#define OBJ_EVENT_PAL_TAG_CUEBALL                 0x11B9
+#define OBJ_EVENT_PAL_TAG_DAISY                   0x11BA
+#define OBJ_EVENT_PAL_TAG_DRAGON_TAMER            0x11BB //This could probably be consolidated with Rocket or something else, I was just lazy
+#define OBJ_EVENT_PAL_TAG_ENGINEER                0x11BC
+#define OBJ_EVENT_PAL_TAG_JUGGLER                 0x11BD
+#define OBJ_EVENT_PAL_TAG_LADY                    0x11BE
+#define OBJ_EVENT_PAL_TAG_FUJI                    0x11BF
+#define OBJ_EVENT_PAL_TAG_CAPTAIN                 0x11C0
 
 #define OBJ_EVENT_PAL_TAG_NONE 0x128D
 
@@ -794,6 +805,18 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Machoke,               OBJ_EVENT_PAL_TAG_MACHOKE},
     {gObjectEventPal_Pidgey,                OBJ_EVENT_PAL_TAG_PIDGEY},
     {gObjectEventPal_Seel,                  OBJ_EVENT_PAL_TAG_SEEL},
+
+    {gObjectEventPal_Mom2,                  OBJ_EVENT_PAL_TAG_MOM2},
+    {gObjectEventPal_Biker,                 OBJ_EVENT_PAL_TAG_BIKER},
+    {gObjectEventPal_Burglar,               OBJ_EVENT_PAL_TAG_BURGLAR},
+    {gObjectEventPal_CueBall,               OBJ_EVENT_PAL_TAG_CUEBALL},
+    {gObjectEventPal_Daisy,                 OBJ_EVENT_PAL_TAG_DAISY},
+    {gObjectEventPal_DragonTamer,           OBJ_EVENT_PAL_TAG_DRAGON_TAMER},
+    {gObjectEventPal_Engineer,              OBJ_EVENT_PAL_TAG_ENGINEER},
+    {gObjectEventPal_Juggler,               OBJ_EVENT_PAL_TAG_JUGGLER},
+    {gObjectEventPal_Lady,                  OBJ_EVENT_PAL_TAG_LADY},
+    {gObjectEventPal_MrFuji,                OBJ_EVENT_PAL_TAG_FUJI},
+    {gObjectEventPal_SeaCaptain,            OBJ_EVENT_PAL_TAG_CAPTAIN},
     {NULL,                  0x0000},
 };
 
