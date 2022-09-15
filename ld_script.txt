@@ -85,6 +85,7 @@ SECTIONS {
         src/battle_controllers.o(.text);
         src/decompress.o(.text);
         src/digit_obj_util.o(.text);
+	src/ss_anne.o(.text);
         src/battle_bg.o(.text);
         src/battle_main.o(.text);
         src/battle_util.o(.text);
@@ -477,6 +478,7 @@ SECTIONS {
         src/main_menu.o(.rodata);
         src/battle_controllers.o(.rodata);
         src/digit_obj_util.o(.rodata);
+	src/ss_anne.o(.rodata);
         src/data.o(.rodata);
         src/battle_bg.o(.rodata);
         src/battle_main.o(.rodata);

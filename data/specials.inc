@@ -548,3 +548,5 @@ gSpecials::
 	def_special AnimateTeleporterCable
 	def_special SetSeenMon
 	def_special SetVermilionTrashCans
+	def_special DoSSAnneDepartureCutscene
+

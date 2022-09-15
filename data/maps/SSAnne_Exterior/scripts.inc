@@ -5,6 +5,7 @@
 .set LOCALID_SAILOR, 5
 
 SSAnne_Exterior_MapScripts::
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, SSAnne_Exterior_OnWarp
 	map_script MAP_SCRIPT_ON_TRANSITION, SSAnne_Exterior_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, SSAnne_Exterior_OnResume
 	.byte 0
@@ -13,31 +14,41 @@ SSAnne_Exterior_OnTransition:
 	call Common_EventScript_GetDayOrNight
 	end
 
+SSAnne_Exterior_OnWarp::
+	map_script_2 VAR_SS_ANNE_STATE, 2, SSAnne_Exterior_BlockDock
+	map_script_2 VAR_SS_ANNE_STATE, 3, SSAnne_Exterior_BlockDock
+	.2byte 0
+
 SSAnne_Exterior_OnResume:
 	call Common_EventScript_GetDayOrNight
 	end
 
+SSAnne_Exterior_BlockDock::
+	setmetatile 32, 14, 0x31D, 1
+	special DrawWholeMapView
+	end
+
 SSAnne_Exterior_SSAnneDeparts::
 	lockall
+	applymovement OBJ_EVENT_ID_PLAYER Common_Movement_Delay48
+	setflag FLAG_SYS_FORCE_LOAD_OFFSCREEN_OBJ
 	fadenewbgm MUS_SURF
-	delay 50
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
-	@special DoSSAnneDepartureCutscene
+	special DoSSAnneDepartureCutscene
 	waitstate
-	removeobject LOCALID_SS_ANNE
 	delay 10
 	setobjectxyperm LOCALID_SAILOR, 31,5
 	clearflag FLAG_HIDE_VERMILION_HARBOR_SAILOR
 	addobject LOCALID_SAILOR
-	applymovement LOACLID_SAILOR, Movement_MissedBoat
+	applymovement LOCALID_SAILOR, Movement_MissedBoat
 	waitmovement 5
 	playse SE_PIN
-	applymovement LOACLID_SAILOR, Common_Movement_ExclamationMark
+	applymovement LOCALID_SAILOR, Common_Movement_ExclamationMark
 	waitse
+	removeobject LOCALID_SS_ANNE
 	setvar VAR_SS_ANNE_STATE, 3
 	setvar VAR_SS_TICKET_CHECK, 2
-	fadedefaultbgm
-	waitstate
+	clearflag FLAG_SYS_FORCE_LOAD_OFFSCREEN_OBJ
 	releaseall
 	end
 
