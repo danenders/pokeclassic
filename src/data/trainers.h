@@ -1251,10 +1251,55 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_CamperJeff}
     },
 
-
-
-
-
+//Vermilion City
+    [TRAINER_SAILOR_DWAYNE] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SAILOR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_SAILOR,
+        .trainerName = _("Dwayne"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SailorDwayne),
+        .party = {.NoItemDefaultMoves = sParty_SailorDwayne}
+    },
+    [TRAINER_ENGINEER_BAILY] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_ENGINEER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_ENGINEER,
+        .trainerName = _("Baily"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_EngineerBaily),
+        .party = {.NoItemDefaultMoves = sParty_EngineerBaily}
+    },
+    [TRAINER_GENTLEMAN_TUCKER] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Tucker"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_GentlemanTucker),
+        .party = {.NoItemDefaultMoves = sParty_GentlemanTucker}
+    },
+    [TRAINER_LEADER_SURGE] = {
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_SURGE,
+        .trainerName = _("LT. Surge"),
+        .items = {ITEM_SUPER_POTION, ITEM_FULL_HEAL},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_LeaderLtSurge),
+        .party = {.NoItemCustomMoves = sParty_LeaderLtSurge}
+    },
 
 
 

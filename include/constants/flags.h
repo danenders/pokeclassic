@@ -86,14 +86,14 @@
 #define FLAG_HELPED_BILL_IN_SEA_COTTAGE    	0x45 // Rescued Bill from the teleporter accident
 #define FLAG_GOT_CHARMANDER    		        0x46 // Received the Charmander on Route 24
 #define FLAG_DELIVERED_ROCKET_PLANS    		0x47 // Replaces "Tea" delivery to bypass Saffron guards.
-#define FLAG_UNUSED_0x048    		0x48 // Unused Flag
-#define FLAG_UNUSED_0x049    		0x49 // Unused Flag
-#define FLAG_UNUSED_0x04A    		0x4A // Unused Flag
-#define FLAG_UNUSED_0x04B    		0x4B // Unused Flag
-#define FLAG_UNUSED_0x04C    		0x4C // Unused Flag
-#define FLAG_UNUSED_0x04D    		0x4D // Unused Flag
-#define FLAG_UNUSED_0x04E    		0x4E // Unused Flag
-#define FLAG_UNUSED_0x04F    		0x4F // Unused Flag
+#define FLAG_FOUND_VERMILION_GYM_SWITCHES   0x48 // Completed Vermilion Gym Puzzle
+#define FLAG_GOT_SURGE_REWARD    		    0x49 // Received TM34
+#define FLAG_UNUSED_0x04A    		0x4A 
+#define FLAG_UNUSED_0x04B    		0x4B 
+#define FLAG_UNUSED_0x04C    		0x4C 
+#define FLAG_UNUSED_0x04D    		0x4D 
+#define FLAG_UNUSED_0x04E    		0x4E 
+#define FLAG_UNUSED_0x04F    		0x4F 
 #define FLAG_UNUSED_0x050    		0x50
 #define FLAG_UNUSED_0x051    		0x51
 #define FLAG_UNUSED_0x052    		0x52

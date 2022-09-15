@@ -98,10 +98,6 @@ CeruleanCity_Gym_EventScript_NoRoomForTM::
 CeruleanCity_Gym_Text_NoRoomForTM::
     .string "You better make room for this!$"
 
-CeruleanCity_Gym_EventScript_PrepDexNavCall::
-	setvar VAR_SEA_COTTAGE_STATE, 4
-	return
-
 CeruleanCity_Gym_EventScript_MistyPostBattle::
 	lock
 	faceplayer
@@ -147,6 +143,9 @@ CeruleanCity_Gym_Text_RematchMisty::
 	.string "Hey, {PLAYER}!\n"
 	.string "Are you looking for a rematch?$"
 
+CeruleanCity_Gym_EventScript_PrepDexNavCall::
+	setvar VAR_SEA_COTTAGE_STATE, 4
+	return
 
 CeruleanCity_Gym_EventScript_Diana::
 	trainerbattle_single TRAINER_PICNICKER_DIANA, CeruleanCity_Gym_Text_DianaIntro, CeruleanCity_Gym_Text_DianaDefeat

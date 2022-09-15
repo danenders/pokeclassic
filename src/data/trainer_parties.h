@@ -1879,7 +1879,58 @@ static const struct TrainerMonNoItemDefaultMoves sParty_CamperJeff[] = {
     },
 };
 
-
+//Vermilion City
+static const struct TrainerMonNoItemDefaultMoves sParty_SailorDwayne[] = {
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_PIKACHU,
+    },
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_PIKACHU,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_EngineerBaily[] = {
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_VOLTORB,
+    },
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_MAGNEMITE,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_GentlemanTucker[] = {
+    {
+        .iv = 0,
+        .lvl = 23,
+        .species = SPECIES_PIKACHU,
+    },
+};
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderLtSurge[] = {
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_VOLTORB,
+        .moves = {MOVE_SONIC_BOOM, MOVE_TACKLE, MOVE_SCREECH, MOVE_SHOCK_WAVE},
+    },
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_PIKACHU,
+        .moves = {MOVE_QUICK_ATTACK, MOVE_THUNDER_WAVE, MOVE_DOUBLE_TEAM, MOVE_SHOCK_WAVE},
+    },
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_RAICHU,
+        .moves = {MOVE_QUICK_ATTACK, MOVE_THUNDER_WAVE, MOVE_DOUBLE_TEAM, MOVE_SHOCK_WAVE},
+    },
+};
 
 
 

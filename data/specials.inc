@@ -547,3 +547,4 @@ gSpecials::
 	def_special AnimateTeleporterHousing
 	def_special AnimateTeleporterCable
 	def_special SetSeenMon
+	def_special SetVermilionTrashCans
