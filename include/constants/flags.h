@@ -378,7 +378,7 @@
 #define FLAG_REMATCH_BERNIE                    0x163 // Engineer Bernie on Route 11
 #define FLAG_REMATCH_NED                       0x164 // Fisherman Ned on Route 12
 #define FLAG_REMATCH_LUCA                      0x165 // Rocker Luca on Route 12
-#define FLAG_REMATCH_UNUSED_9                  0x166
+#define FLAG_REMATCH_ALICIA                    0x166 // Picnicker Alicia on Route 9
 #define FLAG_REMATCH_UNUSED_10                 0x167
 #define FLAG_REMATCH_UNUSED_11                 0x168
 #define FLAG_REMATCH_UNUSED_12                 0x169
@@ -568,9 +568,9 @@
 #define FLAG_HIDDEN_ITEM_ROUTE11_ESCAPE_ROPE          	                          (FLAG_HIDDEN_ITEMS_START + 0x22)
 #define FLAG_HIDDEN_ITEM_ROUTE12_RARE_CANDY       		                          (FLAG_HIDDEN_ITEMS_START + 0x23)
 #define FLAG_HIDDEN_ITEM_ROUTE12_HYPER_POTION                                     (FLAG_HIDDEN_ITEMS_START + 0x24)
-#define FLAG_HIDDEN_ITEM_37             (FLAG_HIDDEN_ITEMS_START + 0x25)
-#define FLAG_HIDDEN_ITEM_38       		(FLAG_HIDDEN_ITEMS_START + 0x26)
-#define FLAG_HIDDEN_ITEM_39             (FLAG_HIDDEN_ITEMS_START + 0x27)
+#define FLAG_HIDDEN_ITEM_ROUTE9_ETHER                                             (FLAG_HIDDEN_ITEMS_START + 0x25)
+#define FLAG_HIDDEN_ITEM_ROUTE9_CHESTO_BERRY       		                          (FLAG_HIDDEN_ITEMS_START + 0x26)
+#define FLAG_HIDDEN_ITEM_ROUTE9_RARE_CANDY                                        (FLAG_HIDDEN_ITEMS_START + 0x27)
 #define FLAG_HIDDEN_ITEM_40             (FLAG_HIDDEN_ITEMS_START + 0x28)
 #define FLAG_HIDDEN_ITEM_41             (FLAG_HIDDEN_ITEMS_START + 0x29)
 #define FLAG_HIDDEN_ITEM_42             (FLAG_HIDDEN_ITEMS_START + 0x2A)
@@ -1069,7 +1069,7 @@
 #define FLAG_HIDE_ROUTE11_AWAKENING                              	0x404
 #define FLAG_HIDE_ROUTE12_IRON                         				0x405
 #define FLAG_HIDE_ROUTE12_TM48                                		0x406
-#define FLAG_UNUSED_ITEM_0x407                               		0x407
+#define FLAG_HIDE_ROUTE9_BURN_HEAL                                  0x407
 #define FLAG_UNUSED_ITEM_0x408                                 		0x408
 #define FLAG_UNUSED_ITEM_0x409                              		0x409
 #define FLAG_UNUSED_ITEM_0x40A                                   	0x40A

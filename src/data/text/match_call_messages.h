@@ -43,6 +43,11 @@ const u8 gText_MatchCallRocker_Luca_Pokemon[] = _("Loud Pokémon are my faves.")
 const u8 gText_MatchCallRocker_Luca_Intro1[] = _("I'll fry you with my electric");
 const u8 gText_MatchCallRocker_Luca_Intro2[] = _("Pokémon!");
 
+const u8 gText_MatchCallPicnicker_Alicia_Strategy[] = _("You're mine!");
+const u8 gText_MatchCallPicnicker_Alicia_Pokemon[] = _("I like strong Pokémon.");
+const u8 gText_MatchCallPicnicker_Alicia_Intro1[] = _("I'll take anyone on.");
+const u8 gText_MatchCallPicnicker_Alicia_Intro2[] = _("Nobody gets past me!");
+
 const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_COUNT] =
 {
 	[REMATCH_JANICE] = MCFLAVOR(Lass_Janice),
@@ -54,4 +59,5 @@ const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_CO
 	[REMATCH_BERNIE] = MCFLAVOR(Engineer_Bernie),
 	[REMATCH_NED] = MCFLAVOR(Fisherman_Ned),
 	[REMATCH_LUCA] = MCFLAVOR(Rocker_Luca),
+	[REMATCH_ALICIA] = MCFLAVOR(Picnicker_Alicia),
 };

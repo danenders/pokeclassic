@@ -2481,3 +2481,230 @@ static const struct TrainerMonNoItemDefaultMoves sParty_FishermanAndrew[] = {
         .species = SPECIES_MAGIKARP,
     },
 };
+//Route 9
+static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerAlicia1[] = {
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_ODDISH,
+    },
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_BELLSPROUT,
+    },
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_ODDISH,
+    },
+    {
+        .iv = 0,
+        .lvl = 18,
+        .species = SPECIES_BELLSPROUT,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerAlicia2[] = {
+    {
+        .iv = 0,
+        .lvl = 36,
+        .species = SPECIES_GLOOM,
+    },
+    {
+        .iv = 0,
+        .lvl = 36,
+        .species = SPECIES_WEEPINBELL,
+    },
+    {
+        .iv = 0,
+        .lvl = 36,
+        .species = SPECIES_GLOOM,
+    },
+    {
+        .iv = 0,
+        .lvl = 36,
+        .species = SPECIES_WEEPINBELL,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerAlicia3[] = {
+    {
+        .iv = 0,
+        .lvl = 54,
+        .species = SPECIES_VILEPLUME,
+    },
+    {
+        .iv = 0,
+        .lvl = 54,
+        .species = SPECIES_VICTREEBEL,
+    },
+    {
+        .iv = 0,
+        .lvl = 54,
+        .species = SPECIES_VILEPLUME,
+    },
+    {
+        .iv = 0,
+        .lvl = 54,
+        .species = SPECIES_VICTREEBEL,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherBrent[] = {
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_BEEDRILL,
+    },
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_BEEDRILL,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherConner[] = {
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_CATERPIE,
+    },
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_WEEDLE,
+    },
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_VENONAT,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_CamperChris[] = {
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_GROWLITHE,
+    },
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_CHARMANDER,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_CamperDrew[] = {
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_RATTATA,
+    },
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_SANDSHREW,
+    },
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_EKANS,
+    },
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_SANDSHREW,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerCaitlin[] = {
+    {
+        .iv = 0,
+        .lvl = 23,
+        .species = SPECIES_MEOWTH,
+    },
+};
+static const struct TrainerMonNoItemCustomMoves sParty_HikerAlan[] = {
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL},
+    },
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_ONIX,
+        .moves = {MOVE_HARDEN, MOVE_ROCK_THROW, MOVE_BIND, MOVE_SCREECH},
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_HikerBrice[] = {
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_GEODUDE,
+    },
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_MACHOP,
+    },
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_GEODUDE,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_HikerJeremy[] = {
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_MACHOP,
+    },
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_ONIX,
+    },
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
