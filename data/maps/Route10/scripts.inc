@@ -168,3 +168,8 @@ Route10_Text_TrentDefeat::
 
 Route10_Text_TrentPostBattle::
     .string "I feel bloated on mountain air!$"
+
+Route10_EventScript_LightBall::
+	finditem ITEM_LIGHT_BALL, 1
+	release
+	end

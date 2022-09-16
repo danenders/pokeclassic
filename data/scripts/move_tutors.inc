@@ -181,6 +181,48 @@ MoveTutor_Text_MegaKickTaught::
     .string "by the deluded nitwit who trains\l"
     .string "only simple punching over there.$"
 
+MoveTutor_RockSlide::
+	lock
+	faceplayer
+	msgbox MoveTutor_Text_RockSlideTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_RockSlideDeclined
+	msgbox MoveTutor_Text_RockSlideWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_ROCK_SLIDE
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_RockSlideDeclined
+	goto MoveTutor_EventScript_RockSlideTaught
+	end
+
+MoveTutor_Text_RockSlideTeach::
+    .string "When you're up on a rocky mountain\n"
+    .string "like this, rockslides are a threat.\p"
+    .string "Can you imagine?\n"
+    .string "Boulders tumbling down on you?\p"
+    .string "That'd be, like, waaaaaaaaaaah!\n"
+    .string "Total terror!\p"
+    .string "You don't seem to be scared.\n"
+    .string "Want to try using Rock Slide?$"
+
+MoveTutor_EventScript_RockSlideDeclined::
+	msgbox MoveTutor_Text_RockSlideDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_RockSlideDeclined::
+    .string "Oh, so you are scared after all.$"
+
+MoveTutor_Text_RockSlideWhichMon::
+    .string "Which Pokémon should I teach\n"
+    .string "Rock Slide?$"
+
+MoveTutor_EventScript_RockSlideTaught::
+	msgbox MoveTutor_Text_RockSlideTaught, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_RockSlideTaught::
+    .string "It might be scary to use it in this\n"
+    .string "tunnel…$"
 
 
 

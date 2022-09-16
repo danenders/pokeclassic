@@ -2768,8 +2768,236 @@ static const struct TrainerMonNoItemDefaultMoves sParty_HikerTrent[] = {
     },
 };
 
+//Rock Tunnel 1F
+static const struct TrainerMonNoItemDefaultMoves sParty_HikerLenny[] = {
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_GEODUDE,
+    },
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_MACHOP,
+    },
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_GEODUDE,
+    },
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_GEODUDE,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_HikerOliver[] = {
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_ONIX,
+    },
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_ONIX,
+    },
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_GEODUDE,
+    },
+};
+static const struct TrainerMonNoItemCustomMoves sParty_HikerLucas[] = {
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL},
+    },
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_GRAVELER,
+        .moves = {MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL},
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_PokemaniacAshton[] = {
+    {
+        .iv = 30,
+        .lvl = 23,
+        .species = SPECIES_CUBONE,
+    },
+    {
+        .iv = 30,
+        .lvl = 23,
+        .species = SPECIES_SLOWPOKE,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerDana[] = {
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_MEOWTH,
+    },
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_ODDISH,
+    },
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_PIDGEY,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerAriana[] = {
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_PIDGEY,
+    },
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_RATTATA,
+    },
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_RATTATA,
+    },
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_BELLSPROUT,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerLeah[] = {
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_BELLSPROUT,
+    },
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_CLEFAIRY,
+    },
+};
 
+//Rock Tunnel B1
+static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerSofia[] = {
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_JIGGLYPUFF,
+    },
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_PIDGEY,
+    },
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_MEOWTH,
+    },
+};
 
+static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerMartha[] = {
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_ODDISH,
+    },
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_BULBASAUR,
+    },
+};
+static const struct TrainerMonNoItemCustomMoves sParty_HikerDudley[] = {
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL},
+    },
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL},
+    },
+    {
+        .iv = 0,
+        .lvl = 21,
+        .species = SPECIES_GRAVELER,
+        .moves = {MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL},
+    },
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_HikerAllen[] = {
+    {
+        .iv = 0,
+        .lvl = 25,
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_MAGNITUDE, MOVE_ROCK_THROW, MOVE_MUD_SPORT, MOVE_DEFENSE_CURL},
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_HikerEric[] = {
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_MACHOP,
+    },
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_ONIX,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_PokemaniacCooper[] = {
+    {
+        .iv = 30,
+        .lvl = 20,
+        .species = SPECIES_SLOWPOKE,
+    },
+    {
+        .iv = 30,
+        .lvl = 20,
+        .species = SPECIES_SLOWPOKE,
+    },
+    {
+        .iv = 30,
+        .lvl = 20,
+        .species = SPECIES_SLOWPOKE,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_PokemaniacSteve[] = {
+    {
+        .iv = 30,
+        .lvl = 22,
+        .species = SPECIES_CHARMANDER,
+    },
+    {
+        .iv = 30,
+        .lvl = 22,
+        .species = SPECIES_CUBONE,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_PokemaniacWinston[] = {
+    {
+        .iv = 30,
+        .lvl = 25,
+        .species = SPECIES_SLOWPOKE,
+    },
+};
+//
 
 
 
