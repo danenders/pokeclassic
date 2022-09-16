@@ -379,7 +379,7 @@
 #define FLAG_REMATCH_NED                       0x164 // Fisherman Ned on Route 12
 #define FLAG_REMATCH_LUCA                      0x165 // Rocker Luca on Route 12
 #define FLAG_REMATCH_ALICIA                    0x166 // Picnicker Alicia on Route 9
-#define FLAG_REMATCH_UNUSED_10                 0x167
+#define FLAG_REMATCH_MARK                      0x167 // Pokemaniac Mark on Route 10 (by the Power Plant)
 #define FLAG_REMATCH_UNUSED_11                 0x168
 #define FLAG_REMATCH_UNUSED_12                 0x169
 #define FLAG_REMATCH_UNUSED_13                 0x16A
@@ -571,11 +571,11 @@
 #define FLAG_HIDDEN_ITEM_ROUTE9_ETHER                                             (FLAG_HIDDEN_ITEMS_START + 0x25)
 #define FLAG_HIDDEN_ITEM_ROUTE9_CHESTO_BERRY       		                          (FLAG_HIDDEN_ITEMS_START + 0x26)
 #define FLAG_HIDDEN_ITEM_ROUTE9_RARE_CANDY                                        (FLAG_HIDDEN_ITEMS_START + 0x27)
-#define FLAG_HIDDEN_ITEM_40             (FLAG_HIDDEN_ITEMS_START + 0x28)
-#define FLAG_HIDDEN_ITEM_41             (FLAG_HIDDEN_ITEMS_START + 0x29)
-#define FLAG_HIDDEN_ITEM_42             (FLAG_HIDDEN_ITEMS_START + 0x2A)
-#define FLAG_HIDDEN_ITEM_43             (FLAG_HIDDEN_ITEMS_START + 0x2B)
-#define FLAG_HIDDEN_ITEM_44             (FLAG_HIDDEN_ITEMS_START + 0x2C)
+#define FLAG_HIDDEN_ITEM_ROUTE10_NANAB_BERRY                                      (FLAG_HIDDEN_ITEMS_START + 0x28)
+#define FLAG_HIDDEN_ITEM_ROUTE10_MAX_ETHER                                        (FLAG_HIDDEN_ITEMS_START + 0x29)
+#define FLAG_HIDDEN_ITEM_ROUTE10_PERSIM_BERRY                                     (FLAG_HIDDEN_ITEMS_START + 0x2A)
+#define FLAG_HIDDEN_ITEM_ROUTE10_CHERI_BERRY                                      (FLAG_HIDDEN_ITEMS_START + 0x2B)
+#define FLAG_HIDDEN_ITEM_ROUTE10_SUPER_POTION                                     (FLAG_HIDDEN_ITEMS_START + 0x2C)
 #define FLAG_HIDDEN_ITEM_45             (FLAG_HIDDEN_ITEMS_START + 0x2D)
 #define FLAG_HIDDEN_ITEM_46             (FLAG_HIDDEN_ITEMS_START + 0x2E)
 #define FLAG_HIDDEN_ITEM_47             (FLAG_HIDDEN_ITEMS_START + 0x2F)
