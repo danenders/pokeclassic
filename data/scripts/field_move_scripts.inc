@@ -60,7 +60,6 @@ Text_CantCut:
 @ Interact with smashable rock
 EventScript_RockSmash::
 	lockall
-	goto_if_unset FLAG_BADGE03_GET, EventScript_CantSmashRock
 	checkpartymove MOVE_ROCK_SMASH
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSmashRock
 	setfieldeffectargument 0, VAR_RESULT
@@ -84,18 +83,55 @@ EventScript_UseRockSmash::
 	end
 
 EventScript_SmashRock::
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	applymovement VAR_LAST_TALKED, Movement_SmashRock
 	waitmovement 0
 	removeobject VAR_LAST_TALKED
-	specialvar VAR_RESULT, TryUpdateRusturfTunnelState
-	goto_if_eq VAR_RESULT, TRUE, EventScript_EndSmash
+	call EventScript_CheckRockHasItem
+EventScript_SmashRockContinue::
 	special RockSmashWildEncounter
-	goto_if_eq VAR_RESULT, FALSE, EventScript_EndSmash
+	goto EventScript_EndSmash
 	waitstate
+	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	releaseall
 	end
 
+EventScript_CheckRockHasItem::
+	random 3
+	goto_if_eq VAR_RESULT, 2, EventScript_RockGiveItem
+	return
+
+EventScript_RockGiveItem::
+	random 5
+	goto_if_eq VAR_RESULT, 0, EventScript_RockItem_Pearl
+	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_Stardust
+	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_BigPearl
+	goto_if_eq VAR_RESULT, 3, EventScript_RockItem_StarPiece
+	goto_if_eq VAR_RESULT, 4, EventScript_RockItem_Nugget
+	end
+
+EventScript_RockItem_Pearl::
+	giveitem ITEM_PEARL, 1
+	goto EventScript_SmashRockContinue
+
+EventScript_RockItem_Stardust::
+	giveitem ITEM_STARDUST, 1
+	goto EventScript_SmashRockContinue
+
+EventScript_RockItem_BigPearl::
+	giveitem ITEM_BIG_PEARL, 1
+	goto EventScript_SmashRockContinue
+
+EventScript_RockItem_StarPiece::
+	giveitem ITEM_STAR_PIECE, 1
+	goto EventScript_SmashRockContinue
+
+EventScript_RockItem_Nugget::
+	giveitem ITEM_NUGGET, 1
+	goto EventScript_SmashRockContinue
+
 EventScript_EndSmash::
+	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	releaseall
 	end
 
