@@ -66,16 +66,17 @@
 #define FLAG_RECEIVED_EXP_SHARE    		0x32 
 #define FLAG_RECEIVED_POKENAV    		0x33
 #define FLAG_RECEIVED_BIKE    			0x34
+#define FLAG_RECEIVED_POKE_FLUTE        0x35 
 
 //Story Flags
-#define FLAG_SET_CLOCK                      0x35
-#define FLAG_MET_OAK_ROUTE_1                0x36 
-#define FLAG_GOT_POTION_ON_ROUTE_1          0x37
-#define FLAG_MET_CEDAR                      0x38 // Used for Optional Dialogue
-#define FLAG_GOT_OLD_AMBER                  0x39
-#define FLAG_RESSURECTED_AERODACTYL         0x3A 
-#define FLAG_GOT_AERODACTYL_REWARD          0x3B
-#define FLAG_GOT_BROCK_REWARD               0x3C // Received TM39
+#define FLAG_SET_CLOCK                      0x36
+#define FLAG_MET_OAK_ROUTE_1                0x37 
+#define FLAG_GOT_POTION_ON_ROUTE_1          0x38
+#define FLAG_MET_CEDAR                      0x39 // Used for Optional Dialogue
+#define FLAG_GOT_OLD_AMBER                  0x3A
+#define FLAG_RESSURECTED_AERODACTYL         0x3B 
+#define FLAG_GOT_AERODACTYL_REWARD          0x3C
+#define FLAG_GOT_BROCK_REWARD               0x3D // Received TM39
 #define FLAG_BOUGHT_MAGIKARP                0x3E 
 #define FLAG_GOT_FOSSIL_FROM_MT_MOON        0x3F 
 #define FLAG_GOT_SS_TICKET    		        0x40 
@@ -88,8 +89,8 @@
 #define FLAG_DELIVERED_ROCKET_PLANS    		0x47 // Replaces "Tea" delivery to bypass Saffron guards.
 #define FLAG_FOUND_VERMILION_GYM_SWITCHES   0x48 // Completed Vermilion Gym Puzzle
 #define FLAG_GOT_SURGE_REWARD    		    0x49 // Received TM34
-#define FLAG_UNUSED_0x04A    		0x4A 
-#define FLAG_UNUSED_0x04B    		0x4B 
+#define FLAG_WOKE_UP_ROUTE_12_SNORLAX    	0x4A 
+#define FLAG_UNUSED_0x04B           0x4B 
 #define FLAG_UNUSED_0x04C    		0x4C 
 #define FLAG_UNUSED_0x04D    		0x4D 
 #define FLAG_UNUSED_0x04E    		0x4E 
@@ -373,10 +374,10 @@
 #define FLAG_REMATCH_SHANE                     0x15F // Camper Shane on Route 24
 #define FLAG_REMATCH_FRANKLIN                  0x160 // Hiker Franklin on Route 25
 #define FLAG_REMATCH_KEIGO                     0x161 // Bug Catcher Kegio on Route 6
-#define FLAG_REMATCH_UNUSED_5                  0x162
-#define FLAG_REMATCH_UNUSED_6                  0x163
-#define FLAG_REMATCH_UNUSED_7                  0x164
-#define FLAG_REMATCH_UNUSED_8                  0x165
+#define FLAG_REMATCH_HUGO                      0x162 // Gambler Hugo on Route 11
+#define FLAG_REMATCH_BERNIE                    0x163 // Engineer Bernie on Route 11
+#define FLAG_REMATCH_NED                       0x164 // Fisherman Ned on Route 12
+#define FLAG_REMATCH_LUCA                      0x165 // Rocker Luca on Route 12
 #define FLAG_REMATCH_UNUSED_9                  0x166
 #define FLAG_REMATCH_UNUSED_10                 0x167
 #define FLAG_REMATCH_UNUSED_11                 0x168
@@ -458,7 +459,7 @@
 #define FLAG_IN_GAME_TRADE_JYNX              0x1AE
 #define FLAG_IN_GAME_TRADE_NIDORAN           0x1AF
 #define FLAG_IN_GAME_TRADE_FARFETCHD         0x1B0
-#define FLAG_UNUSED_0x1B1                    0x1B1
+#define FLAG_IN_GAME_TRADE_NIDORINA          0x1B1
 #define FLAG_UNUSED_0x1B2                    0x1B2
 #define FLAG_UNUSED_0x1B3                    0x1B3
 #define FLAG_UNUSED_0x1B4                    0x1B4
@@ -564,9 +565,9 @@
 #define FLAG_HIDDEN_ITEM_SSANNE_KITCHEN_CHERI_BERRY                               (FLAG_HIDDEN_ITEMS_START + 0x1F)
 #define FLAG_HIDDEN_ITEM_SSANNE_KITCHEN_CHESTO_BERRY                              (FLAG_HIDDEN_ITEMS_START + 0x20)
 #define FLAG_HIDDEN_ITEM_SSANNE_B1F_CORRIDOR_HYPER_POTION                         (FLAG_HIDDEN_ITEMS_START + 0x21)
-#define FLAG_HIDDEN_ITEM_34          	(FLAG_HIDDEN_ITEMS_START + 0x22)
-#define FLAG_HIDDEN_ITEM_35       		(FLAG_HIDDEN_ITEMS_START + 0x23)
-#define FLAG_HIDDEN_ITEM_36             (FLAG_HIDDEN_ITEMS_START + 0x24)
+#define FLAG_HIDDEN_ITEM_ROUTE11_ESCAPE_ROPE          	                          (FLAG_HIDDEN_ITEMS_START + 0x22)
+#define FLAG_HIDDEN_ITEM_ROUTE12_RARE_CANDY       		                          (FLAG_HIDDEN_ITEMS_START + 0x23)
+#define FLAG_HIDDEN_ITEM_ROUTE12_HYPER_POTION                                     (FLAG_HIDDEN_ITEMS_START + 0x24)
 #define FLAG_HIDDEN_ITEM_37             (FLAG_HIDDEN_ITEMS_START + 0x25)
 #define FLAG_HIDDEN_ITEM_38       		(FLAG_HIDDEN_ITEMS_START + 0x26)
 #define FLAG_HIDDEN_ITEM_39             (FLAG_HIDDEN_ITEMS_START + 0x27)
@@ -817,7 +818,7 @@
 #define FLAG_HIDE_VERMILION_HARBOR_SAILOR                          	0x30B
 #define FLAG_HIDE_SS_ANNE_RIVAL                        				0x30C
 #define FLAG_HIDE_SS_ANNE                             				0x30D
-#define FLAG_HIDE_UNUSED_56                                			0x30E
+#define FLAG_HIDE_ROUTE12_SNORLAX                                	0x30E
 #define FLAG_HIDE_UNUSED_57                                			0x30F
 #define FLAG_HIDE_UNUSED_58          								0x310
 #define FLAG_HIDE_UNUSED_59              							0x311
@@ -1063,11 +1064,11 @@
 #define FLAG_HIDE_SSANNE_B1F_ROOM2_TM44                             0x3FF
 #define FLAG_HIDE_SSANNE_B1F_ROOM3_ETHER                            0x400
 #define FLAG_HIDE_SSANNE_B1F_ROOM5_SUPER_POTION                     0x401
-#define FLAG_UNUSED_ITEM_0x402                               		0x402
-#define FLAG_UNUSED_ITEM_0x403                              		0x403
-#define FLAG_UNUSED_ITEM_0x404                              		0x404
-#define FLAG_UNUSED_ITEM_0x405                         				0x405
-#define FLAG_UNUSED_ITEM_0x406                                		0x406
+#define FLAG_HIDE_ROUTE11_GREAT_BALL                               	0x402
+#define FLAG_HIDE_ROUTE11_X_DEFEND                              	0x403
+#define FLAG_HIDE_ROUTE11_AWAKENING                              	0x404
+#define FLAG_HIDE_ROUTE12_IRON                         				0x405
+#define FLAG_HIDE_ROUTE12_TM48                                		0x406
 #define FLAG_UNUSED_ITEM_0x407                               		0x407
 #define FLAG_UNUSED_ITEM_0x408                                 		0x408
 #define FLAG_UNUSED_ITEM_0x409                              		0x409

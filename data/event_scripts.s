@@ -962,6 +962,26 @@ Common_EventScript_RemoveStaticPokemon::
 	release
 	end
 
+Common_EventScript_AwakenSnorlax::
+    message Text_PlayedPokeFlute
+    waitmessage
+    playfanfare MUS_RG_POKE_FLUTE
+    waitfanfare
+    msgbox Text_SnorlaxWokeUp
+    return
+
+Text_SnorlaxWokeUp::
+    .string "Snorlax woke up!\p"
+    .string "It attacked in a grumpy rage!$"
+
+Text_SnorlaxReturnedToMountains::
+    .string "Snorlax calmed down.\n"
+    .string "It gave a huge yawn…\l"
+    .string "And returned to the mountains.$"
+
+Text_WantToUsePokeFlute::
+    .string "Want to use the Poké Flute?$"
+
 Common_EventScript_LegendaryFlewAway::
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject VAR_LAST_TALKED

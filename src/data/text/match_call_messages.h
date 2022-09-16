@@ -23,6 +23,26 @@ const u8 gText_MatchCallBugCatcher_Keigo_Pokemon[] = _("Bug Pokémon are my fave
 const u8 gText_MatchCallBugCatcher_Keigo_Intro1[] = _("I'll go anywhere to find");
 const u8 gText_MatchCallBugCatcher_Keigo_Intro2[] = _("cool Bug Pokémon!");
 
+const u8 gText_MatchCallGambler_Hugo_Strategy[] = _("Win, Lose, or Draw!");
+const u8 gText_MatchCallGambler_Hugo_Pokemon[] = _("Lucky Pokémon are my faves!");
+const u8 gText_MatchCallGambler_Hugo_Intro1[] = _("Pokémon is life! And to");
+const u8 gText_MatchCallGambler_Hugo_Intro2[] = _("live is to play games!");
+
+const u8 gText_MatchCallEngineer_Bernie_Strategy[] = _("Safety first!");
+const u8 gText_MatchCallEngineer_Bernie_Pokemon[] = _("My Pokémon work hard.");
+const u8 gText_MatchCallEngineer_Bernie_Intro1[] = _("I work hard, too, and one");
+const u8 gText_MatchCallEngineer_Bernie_Intro2[] = _("day it will pay off.");
+
+const u8 gText_MatchCallFisherman_Ned_Strategy[] = _("I could fish all day.");
+const u8 gText_MatchCallFisherman_Ned_Pokemon[] = _("Fish Pokémon are my faves!");
+const u8 gText_MatchCallFisherman_Ned_Intro1[] = _("Fishing requires a lot of");
+const u8 gText_MatchCallFisherman_Ned_Intro2[] = _("patience, but it pays off.");
+
+const u8 gText_MatchCallRocker_Luca_Strategy[] = _("Rock Out!");
+const u8 gText_MatchCallRocker_Luca_Pokemon[] = _("Loud Pokémon are my faves.");
+const u8 gText_MatchCallRocker_Luca_Intro1[] = _("I'll fry you with my electric");
+const u8 gText_MatchCallRocker_Luca_Intro2[] = _("Pokémon!");
+
 const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_COUNT] =
 {
 	[REMATCH_JANICE] = MCFLAVOR(Lass_Janice),
@@ -30,4 +50,8 @@ const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_CO
 	[REMATCH_SHANE] = MCFLAVOR(Camper_Shane),
 	[REMATCH_FRANKLIN] = MCFLAVOR(Hiker_Franklin),
 	[REMATCH_KEIGO] = MCFLAVOR(BugCatcher_Keigo),
+	[REMATCH_HUGO] = MCFLAVOR(Gambler_Hugo),
+	[REMATCH_BERNIE] = MCFLAVOR(Engineer_Bernie),
+	[REMATCH_NED] = MCFLAVOR(Fisherman_Ned),
+	[REMATCH_LUCA] = MCFLAVOR(Rocker_Luca),
 };
