@@ -487,13 +487,27 @@ void ApplyNewEncryptionKeyToGameStats(u32 newKey)
 
 void LoadObjEventTemplatesFromHeader(void)
 {
-    // Clear map object templates
-    CpuFill32(0, gSaveBlock1Ptr->objectEventTemplates, sizeof(gSaveBlock1Ptr->objectEventTemplates));
+    u8 i;
 
-    // Copy map header events to save block
-    CpuCopy32(gMapHeader.events->objectEvents,
-              gSaveBlock1Ptr->objectEventTemplates,
-              gMapHeader.events->objectEventCount * sizeof(struct ObjectEventTemplate));
+    for (i = 0; i < gMapHeader.events->objectEventCount; i++)
+    {
+        if (gMapHeader.events->objectEvents[i].inConnection == 0xFF)
+        {
+            gSaveBlock1Ptr->objectEventTemplates[i] = Overworld_GetMapHeaderByGroupAndId(gMapHeader.events->objectEvents[i].trainerRange_berryTreeId, gMapHeader.events->objectEvents[i].trainerType)->events->objectEvents[gMapHeader.events->objectEvents[i].elevation - 1];
+            gSaveBlock1Ptr->objectEventTemplates[i].localId = gMapHeader.events->objectEvents[i].localId;
+            gSaveBlock1Ptr->objectEventTemplates[i].x = gMapHeader.events->objectEvents[i].x;
+            gSaveBlock1Ptr->objectEventTemplates[i].y = gMapHeader.events->objectEvents[i].y;
+            // set up object for seamless map transitions
+            gSaveBlock1Ptr->objectEventTemplates[i].elevation = gMapHeader.events->objectEvents[i].elevation;
+            gSaveBlock1Ptr->objectEventTemplates[i].trainerType = gMapHeader.events->objectEvents[i].trainerType;
+            gSaveBlock1Ptr->objectEventTemplates[i].trainerRange_berryTreeId = gMapHeader.events->objectEvents[i].trainerRange_berryTreeId;
+            gSaveBlock1Ptr->objectEventTemplates[i].inConnection = 0xFF;
+        }
+        else
+        {
+            gSaveBlock1Ptr->objectEventTemplates[i] = gMapHeader.events->objectEvents[i];
+        }
+    }
 }
 
 void LoadSaveblockObjEventScripts(void)
