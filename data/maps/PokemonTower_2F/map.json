@@ -14,7 +14,34 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BLUE",
+      "in_connection": false,
+      "x": 16,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "FLAG_HIDE_RIVAL_IN_POKEMON_TOWER"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
+      "in_connection": false,
+      "x": 3,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PokemonTower_2F_EventScript_Channeler",
+      "flag": "0"
+    }
   ],
   "warp_events": [
     {
@@ -33,7 +60,24 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 6,
+      "elevation": 3,
+      "var": "VAR_POKEMON_TOWER_STATE",
+      "var_value": "0",
+      "script": "PokemonTower_2F_EventScript_RivalTriggerDown"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 5,
+      "elevation": 3,
+      "var": "VAR_POKEMON_TOWER_STATE",
+      "var_value": "0",
+      "script": "PokemonTower_2F_EventScript_RivalTriggerRight"
+    }
   ],
   "bg_events": [
 

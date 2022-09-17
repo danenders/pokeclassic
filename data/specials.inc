@@ -554,4 +554,3 @@ gSpecials::
 	def_special CompareMagikarpSize
 	def_special NameRaterWasNicknameChanged
 	def_special IsMonOTNameNotPlayers
-

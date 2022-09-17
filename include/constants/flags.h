@@ -576,7 +576,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE10_PERSIM_BERRY                                     (FLAG_HIDDEN_ITEMS_START + 0x2A)
 #define FLAG_HIDDEN_ITEM_ROUTE10_CHERI_BERRY                                      (FLAG_HIDDEN_ITEMS_START + 0x2B)
 #define FLAG_HIDDEN_ITEM_ROUTE10_SUPER_POTION                                     (FLAG_HIDDEN_ITEMS_START + 0x2C)
-#define FLAG_HIDDEN_ITEM_45             (FLAG_HIDDEN_ITEMS_START + 0x2D)
+#define FLAG_HIDDEN_ITEM_POKEMON_TOWER_5F_BIG_MUSHROOM                            (FLAG_HIDDEN_ITEMS_START + 0x2D)
 #define FLAG_HIDDEN_ITEM_46             (FLAG_HIDDEN_ITEMS_START + 0x2E)
 #define FLAG_HIDDEN_ITEM_47             (FLAG_HIDDEN_ITEMS_START + 0x2F)
 #define FLAG_HIDDEN_ITEM_48        		(FLAG_HIDDEN_ITEMS_START + 0x30)
@@ -819,7 +819,7 @@
 #define FLAG_HIDE_SS_ANNE_RIVAL                        				0x30C
 #define FLAG_HIDE_SS_ANNE                             				0x30D
 #define FLAG_HIDE_ROUTE12_SNORLAX                                	0x30E
-#define FLAG_HIDE_UNUSED_57                                			0x30F
+#define FLAG_HIDE_RIVAL_IN_POKEMON_TOWER                            0x30F
 #define FLAG_HIDE_UNUSED_58          								0x310
 #define FLAG_HIDE_UNUSED_59              							0x311
 #define FLAG_HIDE_UNUSED_60                                   		0x312
@@ -1076,14 +1076,14 @@
 #define FLAG_HIDE_ROCK_TUNNEL_1F_REPEL                              0x40B
 #define FLAG_HIDE_ROCK_TUNNEL_B1F_REVIVE                            0x40C
 #define FLAG_HIDE_ROCK_TUNNEL_B1F_MAX_ETHER                         0x40D
-#define FLAG_UNUSED_ITEM_0x40E                              		0x40E
-#define FLAG_UNUSED_ITEM_0x40F                         				0x40F
-#define FLAG_UNUSED_ITEM_0x410                            	 		0x410
-#define FLAG_UNUSED_ITEM_0x411                            			0x411
-#define FLAG_UNUSED_ITEM_0x412                           			0x412
-#define FLAG_UNUSED_ITEM_0x413                            			0x413
-#define FLAG_UNUSED_ITEM_0x414                          			0x414
-#define FLAG_UNUSED_ITEM_0x415                     					0x415
+#define FLAG_HIDE_POKEMON_TOWER_3F_ESCAPE_ROPE                      0x40E
+#define FLAG_HIDE_POKEMON_TOWER_4F_AWAKENING                        0x40F
+#define FLAG_HIDE_POKEMON_TOWER_4F_ELIXIR                           0x410
+#define FLAG_HIDE_POKEMON_TOWER_4F_GREAT_BALL                       0x411
+#define FLAG_HIDE_POKEMON_TOWER_5F_CLEANSE_TAG                      0x412
+#define FLAG_HIDE_POKEMON_TOWER_5F_NUGGET                           0x413
+#define FLAG_HIDE_POKEMON_TOWER_6F_X_ACCURACY                       0x414
+#define FLAG_HIDE_POKEMON_TOWER_6F_RARE_CANDY                     	0x415
 #define FLAG_UNUSED_ITEM_0x416                     					0x416
 #define FLAG_UNUSED_ITEM_0x417                          			0x417
 #define FLAG_UNUSED_ITEM_0x418                          			0x418

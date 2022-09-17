@@ -2223,7 +2223,163 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_PokemaniacWinston),
         .party = {.NoItemDefaultMoves = sParty_PokemaniacWinston}
     },
-
+// Pokemon Tower
+[TRAINER_CHANNELER_PATRICIA] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_CHANNELER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_CHANNELER,
+        .trainerName = _("Patricia"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_ChannelerPatricia),
+        .party = {.NoItemDefaultMoves = sParty_ChannelerPatricia}
+    },
+    [TRAINER_CHANNELER_CARLY] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_CHANNELER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_CHANNELER,
+        .trainerName = _("Carly"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_ChannelerCarly),
+        .party = {.NoItemDefaultMoves = sParty_ChannelerCarly}
+    },
+    [TRAINER_CHANNELER_HOPE] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_CHANNELER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_CHANNELER,
+        .trainerName = _("Hope"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_ChannelerHope),
+        .party = {.NoItemDefaultMoves = sParty_ChannelerHope}
+    },
+    [TRAINER_CHANNELER_PAULA] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_CHANNELER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_CHANNELER,
+        .trainerName = _("Paula"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_ChannelerPaula),
+        .party = {.NoItemDefaultMoves = sParty_ChannelerPaula}
+    },
+    [TRAINER_CHANNELER_LAUREL] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_CHANNELER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_CHANNELER,
+        .trainerName = _("Laurel"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_ChannelerLaurel),
+        .party = {.NoItemDefaultMoves = sParty_ChannelerLaurel}
+    },
+    [TRAINER_CHANNELER_JODY] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_CHANNELER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_CHANNELER,
+        .trainerName = _("Jody"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_ChannelerJody),
+        .party = {.NoItemDefaultMoves = sParty_ChannelerJody}
+    },
+    [TRAINER_CHANNELER_TAMMY] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_CHANNELER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_CHANNELER,
+        .trainerName = _("Tammy"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_ChannelerTammy),
+        .party = {.NoItemDefaultMoves = sParty_ChannelerTammy}
+    },
+    [TRAINER_CHANNELER_RUTH] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_CHANNELER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_CHANNELER,
+        .trainerName = _("Ruth"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_ChannelerRuth),
+        .party = {.NoItemDefaultMoves = sParty_ChannelerRuth}
+    },
+    [TRAINER_CHANNELER_KARINA] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_CHANNELER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_CHANNELER,
+        .trainerName = _("Karina"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_ChannelerKarina),
+        .party = {.NoItemDefaultMoves = sParty_ChannelerKarina}
+    },
+    [TRAINER_CHANNELER_JANAE] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_CHANNELER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_CHANNELER,
+        .trainerName = _("Janae"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_ChannelerJanae),
+        .party = {.NoItemDefaultMoves = sParty_ChannelerJanae}
+    },
+    [TRAINER_CHANNELER_ANGELICA] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_CHANNELER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_CHANNELER,
+        .trainerName = _("Angelica"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_ChannelerAngelica),
+        .party = {.NoItemDefaultMoves = sParty_ChannelerAngelica}
+    },
+    [TRAINER_CHANNELER_EMILIA] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_CHANNELER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_CHANNELER,
+        .trainerName = _("Emilia"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_ChannelerEmilia),
+        .party = {.NoItemDefaultMoves = sParty_ChannelerEmilia}
+    },
+    [TRAINER_CHANNELER_JENNIFER] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_CHANNELER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_CHANNELER,
+        .trainerName = _("Jennifer"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_ChannelerJennifer),
+        .party = {.NoItemDefaultMoves = sParty_ChannelerJennifer}
+    },
 
 
 

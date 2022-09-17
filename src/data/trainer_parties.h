@@ -2997,6 +2997,125 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PokemaniacWinston[] = {
         .species = SPECIES_SLOWPOKE,
     },
 };
+//Pokemone Tower
+static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerPatricia[] = {
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_GASTLY,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerCarly[] = {
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_GASTLY,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerHope[] = {
+    {
+        .iv = 0,
+        .lvl = 23,
+        .species = SPECIES_GASTLY,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerPaula[] = {
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_GASTLY,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerLaurel[] = {
+    {
+        .iv = 0,
+        .lvl = 23,
+        .species = SPECIES_GASTLY,
+    },
+    {
+        .iv = 0,
+        .lvl = 23,
+        .species = SPECIES_GASTLY,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerJody[] = {
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_GASTLY,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerTammy[] = {
+    {
+        .iv = 0,
+        .lvl = 23,
+        .species = SPECIES_HAUNTER,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerRuth[] = {
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_GASTLY,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerKarina[] = {
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_GASTLY,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerJanae[] = {
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_GASTLY,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerAngelica[] = {
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_GASTLY,
+    },
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_GASTLY,
+    },
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_GASTLY,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerEmilia[] = {
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_GASTLY,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerJennifer[] = {
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_GASTLY,
+    },
+};
 //
 
 

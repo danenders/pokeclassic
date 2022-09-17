@@ -159,7 +159,7 @@
 #define VAR_SS_ANNE_STATE  					0x408C
 #define VAR_SS_TICKET_CHECK           		0x408D
 #define VAR_MAGIKARP_SIZE_RECORD          	0x408E
-#define UNUSED_VARIABLE_20             		0x408F
+#define VAR_POKEMON_TOWER_STATE             0x408F
 #define UNUSED_VARIABLE_21              	0x4090
 #define UNUSED_VARIABLE_22                  0x4091
 #define UNUSED_VARIABLE_23           		0x4092
