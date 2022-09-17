@@ -27,6 +27,11 @@
       "direction": "down",
       "offset": -48,
       "map": "MAP_ROUTE13"
+    },
+    {
+      "direction": "up",
+      "offset": 0,
+      "map": "MAP_LAVENDER_TOWN"
     }
   ],
   "object_events": [

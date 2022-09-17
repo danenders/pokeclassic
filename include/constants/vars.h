@@ -158,7 +158,7 @@
 #define VAR_DAYCARE_EGG_PENDING             0x408B //Used for flipping the DayCare volunteer
 #define VAR_SS_ANNE_STATE  					0x408C
 #define VAR_SS_TICKET_CHECK           		0x408D
-#define UNUSED_VARIABLE_19          		0x408E
+#define VAR_MAGIKARP_SIZE_RECORD          	0x408E
 #define UNUSED_VARIABLE_20             		0x408F
 #define UNUSED_VARIABLE_21              	0x4090
 #define UNUSED_VARIABLE_22                  0x4091

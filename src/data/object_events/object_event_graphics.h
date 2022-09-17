@@ -1246,7 +1246,7 @@ const u32 gObjectEventPic_JigglypuffOverworld[] = INCBIN_U32("graphics/object_ev
 const u16 gObjectEventPal_Jigglypuff[] = INCBIN_U16("graphics/object_events/palettes/jigglypuff.gbapal");
 
 const u32 gObjectEventPic_NidoranMOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/nidoran_m_overworld.4bpp");
-const u16 gObjectEventPal_Nidoran[] = INCBIN_U16("graphics/object_events/palettes/nidoran.gbapal");
+const u16 gObjectEventPal_NidoranM[] = INCBIN_U16("graphics/object_events/palettes/nidoran.gbapal");
 
 const u32 gObjectEventPic_SlowpokeOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/slowpoke_overworld.4bpp");
 const u32 gObjectEventPic_SlowbroOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/slowbro_overworld.4bpp");
@@ -1276,6 +1276,46 @@ const u16 gObjectEventPal_Pidgey[] = INCBIN_U16("graphics/object_events/palettes
 const u32 gObjectEventPic_SeelOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/seel_overworld.4bpp");
 const u16 gObjectEventPal_Seel[] = INCBIN_U16("graphics/object_events/palettes/seel.gbapal");
 
+const u32 gObjectEventPic_ArticunoOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/articuno_overworld.4bpp");
+const u16 gObjectEventPal_Articuno[] = INCBIN_U16("graphics/object_events/palettes/articuno.gbapal");
+const u32 gObjectEventPic_ChanseyOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/chansey_overworld.4bpp");
+const u16 gObjectEventPal_Chansey[] = INCBIN_U16("graphics/object_events/palettes/chansey.gbapal");
+const u32 gObjectEventPic_CuboneOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/cubone_overworld.4bpp");
+const u16 gObjectEventPal_Cubone[] = INCBIN_U16("graphics/object_events/palettes/cubone.gbapal");
+const u32 gObjectEventPic_DodrioOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/dodrio_overworld.4bpp");
+const u16 gObjectEventPal_Dodrio[] = INCBIN_U16("graphics/object_events/palettes/dodrio.gbapal");
+const u32 gObjectEventPic_KabutoOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/kabuto_overworld.4bpp");
+const u16 gObjectEventPal_Kabuto[] = INCBIN_U16("graphics/object_events/palettes/kabuto.gbapal");
+const u32 gObjectEventPic_KangaskhanOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/kangaskhan_overworld.4bpp");
+const u16 gObjectEventPal_Kangaskhan[] = INCBIN_U16("graphics/object_events/palettes/kangaskhan.gbapal");
+const u32 gObjectEventPic_LaprasOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/lapras_overworld.4bpp");
+const u16 gObjectEventPal_Lapras[] = INCBIN_U16("graphics/object_events/palettes/lapras.gbapal");
+const u32 gObjectEventPic_MeowthOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/meowth_overworld.4bpp");
+const u16 gObjectEventPal_Meowth[] = INCBIN_U16("graphics/object_events/palettes/meowth.gbapal");
+const u32 gObjectEventPic_MewOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/mew_overworld.4bpp");
+const u16 gObjectEventPal_Mew[] = INCBIN_U16("graphics/object_events/palettes/mew.gbapal");
+const u32 gObjectEventPic_MewtwoOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/mewtwo_overworld.4bpp");
+const u16 gObjectEventPal_Mewtwo[] = INCBIN_U16("graphics/object_events/palettes/mewtwo.gbapal");
+const u32 gObjectEventPic_MoltresOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/moltres_overworld.4bpp");
+const u16 gObjectEventPal_Moltres[] = INCBIN_U16("graphics/object_events/palettes/moltres.gbapal");
+const u32 gObjectEventPic_NidoranFOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/nidoran_f_overworld.4bpp");
+const u16 gObjectEventPal_NidoranF[] = INCBIN_U16("graphics/object_events/palettes/nidoran_f.gbapal");
+const u32 gObjectEventPic_NidorinoOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/nidorino_overworld.4bpp");
+const u16 gObjectEventPal_Nidorino[] = INCBIN_U16("graphics/object_events/palettes/nidorino.gbapal");
+const u32 gObjectEventPic_OmanyteOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/omanyte_overworld.4bpp");
+const u16 gObjectEventPal_Omanyte[] = INCBIN_U16("graphics/object_events/palettes/omanyte.gbapal");
+const u32 gObjectEventPic_PidgeotOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/pidgeot_overworld.4bpp");
+const u16 gObjectEventPal_Pidgeot[] = INCBIN_U16("graphics/object_events/palettes/pidgeot.gbapal");
+const u32 gObjectEventPic_PoliwrathOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/poliwrath_overworld.4bpp");
+const u16 gObjectEventPal_Poliwrath[] = INCBIN_U16("graphics/object_events/palettes/poliwrath.gbapal");
+const u32 gObjectEventPic_PsyduckOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/psyduck_overworld.4bpp");
+const u16 gObjectEventPal_Psyduck[] = INCBIN_U16("graphics/object_events/palettes/psyduck.gbapal");
+const u32 gObjectEventPic_VoltorbOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/voltorb_overworld.4bpp");
+const u16 gObjectEventPal_Voltorb[] = INCBIN_U16("graphics/object_events/palettes/voltorb.gbapal");
+const u32 gObjectEventPic_WigglytuffOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/wigglytuff_overworld.4bpp");
+const u16 gObjectEventPal_Wigglytuff[] = INCBIN_U16("graphics/object_events/palettes/wigglytuff.gbapal");
+const u32 gObjectEventPic_ZapdosOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/zapdos_overworld.4bpp");
+const u16 gObjectEventPal_Zapdos[] = INCBIN_U16("graphics/object_events/palettes/zapdos.gbapal");
 
 //FRLG Objects
 const u16 gObjectEventPic_Pokedex[] = INCBIN_U16("graphics/object_events/pics/misc/pokedex.4bpp");

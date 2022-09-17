@@ -4285,3 +4285,36 @@ void SetVermilionTrashCans(void)
             gSpecialVar_0x8005 = gSpecialVar_0x8004 + 1;
     }
 }
+
+bool8 DoesPlayerPartyContainSpecies(void)
+{
+    u8 partyCount = CalculatePlayerPartyCount();
+    u8 i;
+    for (i = 0; i < partyCount; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2, NULL) == gSpecialVar_0x8004)
+            return TRUE;
+    }
+    return FALSE;
+}
+
+bool8 NameRaterWasNicknameChanged(void)
+{
+    struct Pokemon * pokemon = &gPlayerParty[gSpecialVar_0x8004];
+    GetMonData(pokemon, MON_DATA_NICKNAME, gStringVar1);
+    if (StringCompare(gStringVar3, gStringVar1) == 0)
+        return FALSE;
+    else
+        return TRUE;
+}
+
+bool8 IsMonOTNameNotPlayers(void)
+{
+    GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_OT_NAME, gStringVar1);
+    
+    if (!StringCompare(gSaveBlock2Ptr->playerName, gStringVar1))
+        return FALSE;
+    else
+        return TRUE;
+}
+

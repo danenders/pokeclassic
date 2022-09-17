@@ -112,6 +112,7 @@ Route11_EastEntrance_2F_Text_IsntMyOldMonGreat::
 	.string "How is my old {STR_VAR_2}?\n"
 	.string "My {STR_VAR_1} is doing great!$"
 
+@Aide Gift 3
 Route11_EastEntrance_2F_EventScript_Aide::
     lock
     faceplayer

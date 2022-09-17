@@ -193,6 +193,25 @@ void CompareLotadSize(void)
     gSpecialVar_Result = CompareMonSize(SPECIES_LOTAD, sizeRecord);
 }
 
+void InitMagikarpSizeRecord(void)
+{
+    VarSet(VAR_MAGIKARP_SIZE_RECORD, DEFAULT_MAX_SIZE);
+}
+
+void GetMagikarpSizeRecordInfo(void)
+{
+    u16 *sizeRecord = GetVarPointer(VAR_MAGIKARP_SIZE_RECORD);
+
+    GetMonSizeRecordInfo(SPECIES_MAGIKARP, sizeRecord);
+}
+
+void CompareMagikarpSize(void)
+{
+    u16 *sizeRecord = GetVarPointer(VAR_MAGIKARP_SIZE_RECORD);
+
+    gSpecialVar_Result = CompareMonSize(SPECIES_MAGIKARP, sizeRecord);
+}
+
 void GiveGiftRibbonToParty(u8 index, u8 ribbonId)
 {
     s32 i;

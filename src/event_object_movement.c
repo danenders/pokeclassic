@@ -583,7 +583,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_JENNY                   0x1199
 #define OBJ_EVENT_PAL_TAG_SPEAROW                 0x119A
 #define OBJ_EVENT_PAL_TAG_JIGGLYPUFF              0x119B
-#define OBJ_EVENT_PAL_TAG_NIDORAN                 0x119C
+#define OBJ_EVENT_PAL_TAG_NIDORAN_M               0x119C
 #define OBJ_EVENT_PAL_TAG_LORELEI                 0x119D
 #define OBJ_EVENT_PAL_TAG_BRUNO                   0x119E
 #define OBJ_EVENT_PAL_TAG_AGATHA                  0x119F
@@ -596,31 +596,52 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_KOGA                    0x11A6
 #define OBJ_EVENT_PAL_TAG_BLAINE                  0x11A7
 #define OBJ_EVENT_PAL_TAG_SLOW                    0x11A8
-#define OBJ_EVENT_PAL_TAG_BULBASAUR               0x11AC
-#define OBJ_EVENT_PAL_TAG_CHARMANDER              0x11AD
-#define OBJ_EVENT_PAL_TAG_SQUIRTLE                0x11AE
-#define OBJ_EVENT_PAL_TAG_CLEFAIRY                0x11AF
-#define OBJ_EVENT_PAL_TAG_BILL                    0x11B0
-#define OBJ_EVENT_PAL_TAG_POLICE                  0x11B1
-#define OBJ_EVENT_PAL_TAG_MACHOP                  0x11B2
-#define OBJ_EVENT_PAL_TAG_MACHOKE                 0x11B3
-#define OBJ_EVENT_PAL_TAG_PIDGEY                  0x11B4
-#define OBJ_EVENT_PAL_TAG_SEEL                    0x11B5
-#define OBJ_EVENT_PAL_TAG_MOM2                    0x11B6
-#define OBJ_EVENT_PAL_TAG_BIKER                   0x11B7
-#define OBJ_EVENT_PAL_TAG_BURGLAR                 0x11B8 //This could probably be consolidated with Rocket or something else, I was just lazy
-#define OBJ_EVENT_PAL_TAG_CUEBALL                 0x11B9
-#define OBJ_EVENT_PAL_TAG_DAISY                   0x11BA
-#define OBJ_EVENT_PAL_TAG_DRAGON_TAMER            0x11BB //This could probably be consolidated with Rocket or something else, I was just lazy
-#define OBJ_EVENT_PAL_TAG_ENGINEER                0x11BC
-#define OBJ_EVENT_PAL_TAG_JUGGLER                 0x11BD
-#define OBJ_EVENT_PAL_TAG_LADY                    0x11BE
-#define OBJ_EVENT_PAL_TAG_FUJI                    0x11BF
-#define OBJ_EVENT_PAL_TAG_CAPTAIN                 0x11C0
-#define OBJ_EVENT_PAL_TAG_WAITER                  0x11C1 //Can likely be consolidated
-#define OBJ_EVENT_PAL_TAG_WAITRESS                0x11C2
-#define OBJ_EVENT_PAL_TAG_CHEF                    0x11C3
-#define OBJ_EVENT_PAL_TAG_CHANNELER               0x11C4
+#define OBJ_EVENT_PAL_TAG_BULBASAUR               0x11A9
+#define OBJ_EVENT_PAL_TAG_CHARMANDER              0x11AA
+#define OBJ_EVENT_PAL_TAG_SQUIRTLE                0x11AB
+#define OBJ_EVENT_PAL_TAG_CLEFAIRY                0x11AC
+#define OBJ_EVENT_PAL_TAG_BILL                    0x11AD
+#define OBJ_EVENT_PAL_TAG_POLICE                  0x11AE
+#define OBJ_EVENT_PAL_TAG_MACHOP                  0x11AF
+#define OBJ_EVENT_PAL_TAG_MACHOKE                 0x11B0
+#define OBJ_EVENT_PAL_TAG_PIDGEY                  0x11B1
+#define OBJ_EVENT_PAL_TAG_SEEL                    0x11B2
+#define OBJ_EVENT_PAL_TAG_MOM2                    0x11B3
+#define OBJ_EVENT_PAL_TAG_BIKER                   0x11B4
+#define OBJ_EVENT_PAL_TAG_BURGLAR                 0x11B5 //This could probably be consolidated with Rocket or something else, I was just lazy
+#define OBJ_EVENT_PAL_TAG_CUEBALL                 0x11B6
+#define OBJ_EVENT_PAL_TAG_DAISY                   0x11B7
+#define OBJ_EVENT_PAL_TAG_DRAGON_TAMER            0x11B8 //This could probably be consolidated with Rocket or something else, I was just lazy
+#define OBJ_EVENT_PAL_TAG_ENGINEER                0x11B9
+#define OBJ_EVENT_PAL_TAG_JUGGLER                 0x11BA
+#define OBJ_EVENT_PAL_TAG_LADY                    0x11BB
+#define OBJ_EVENT_PAL_TAG_FUJI                    0x11BC
+#define OBJ_EVENT_PAL_TAG_CAPTAIN                 0x11BD
+#define OBJ_EVENT_PAL_TAG_WAITER                  0x11BE //Can likely be consolidated
+#define OBJ_EVENT_PAL_TAG_WAITRESS                0x11BF
+#define OBJ_EVENT_PAL_TAG_CHEF                    0x11C0
+#define OBJ_EVENT_PAL_TAG_CHANNELER               0x11C1
+//The below overworld pokemon palettes can very likely be optimized/consolidated into existing palettes.
+#define OBJ_EVENT_PAL_TAG_ARTICUNO                0x11C2
+#define OBJ_EVENT_PAL_TAG_CHANSEY                 0x11C3
+#define OBJ_EVENT_PAL_TAG_CUBONE                  0x11C4
+#define OBJ_EVENT_PAL_TAG_DODRIO                  0x11C5
+#define OBJ_EVENT_PAL_TAG_KABUTO                  0x11C6
+#define OBJ_EVENT_PAL_TAG_KANGASKHAN              0x11C7
+#define OBJ_EVENT_PAL_TAG_LAPRAS                  0x11C8
+#define OBJ_EVENT_PAL_TAG_MEOWTH                  0x11C9
+#define OBJ_EVENT_PAL_TAG_MEW                     0x11CA
+#define OBJ_EVENT_PAL_TAG_MEWTWO                  0x11CB
+#define OBJ_EVENT_PAL_TAG_MOLTRES                 0x11CC
+#define OBJ_EVENT_PAL_TAG_NIDORAN_F               0x11CD
+#define OBJ_EVENT_PAL_TAG_NIDORINO                0x11CE
+#define OBJ_EVENT_PAL_TAG_OMANYTE                 0x11CF
+#define OBJ_EVENT_PAL_TAG_PIDGEOT                 0x11D0
+#define OBJ_EVENT_PAL_TAG_POLIWRATH               0x11D1
+#define OBJ_EVENT_PAL_TAG_PSYDUCK                 0x11D2
+#define OBJ_EVENT_PAL_TAG_VOLTORB                 0x11D3
+#define OBJ_EVENT_PAL_TAG_WIGGLYTUFF              0x11D4
+#define OBJ_EVENT_PAL_TAG_ZAPDOS                  0x11D5
 
 #define OBJ_EVENT_PAL_TAG_NONE 0x128D
 
@@ -790,7 +811,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_OfficerJenny,          OBJ_EVENT_PAL_TAG_JENNY},
     {gObjectEventPal_Spearow,               OBJ_EVENT_PAL_TAG_SPEAROW},
     {gObjectEventPal_Jigglypuff,            OBJ_EVENT_PAL_TAG_JIGGLYPUFF},
-    {gObjectEventPal_Nidoran,               OBJ_EVENT_PAL_TAG_NIDORAN},
+    {gObjectEventPal_NidoranM,               OBJ_EVENT_PAL_TAG_NIDORAN_M},
     {gObjectEventPal_Lorelei,               OBJ_EVENT_PAL_TAG_LORELEI},
     {gObjectEventPal_Bruno,                 OBJ_EVENT_PAL_TAG_BRUNO},
     {gObjectEventPal_Agatha,                OBJ_EVENT_PAL_TAG_AGATHA},
@@ -813,7 +834,6 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Machoke,               OBJ_EVENT_PAL_TAG_MACHOKE},
     {gObjectEventPal_Pidgey,                OBJ_EVENT_PAL_TAG_PIDGEY},
     {gObjectEventPal_Seel,                  OBJ_EVENT_PAL_TAG_SEEL},
-
     {gObjectEventPal_Mom2,                  OBJ_EVENT_PAL_TAG_MOM2},
     {gObjectEventPal_Biker,                 OBJ_EVENT_PAL_TAG_BIKER},
     {gObjectEventPal_Burglar,               OBJ_EVENT_PAL_TAG_BURGLAR},
@@ -825,11 +845,31 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Lady,                  OBJ_EVENT_PAL_TAG_LADY},
     {gObjectEventPal_MrFuji,                OBJ_EVENT_PAL_TAG_FUJI},
     {gObjectEventPal_SeaCaptain,            OBJ_EVENT_PAL_TAG_CAPTAIN},
-
     {gObjectEventPal_Channeler,             OBJ_EVENT_PAL_TAG_CHANNELER},
     {gObjectEventPal_Waiter,                OBJ_EVENT_PAL_TAG_WAITER},
     {gObjectEventPal_Waitress,              OBJ_EVENT_PAL_TAG_WAITRESS},
     {gObjectEventPal_Chef,                  OBJ_EVENT_PAL_TAG_CHEF},
+
+    {gObjectEventPal_Articuno,              OBJ_EVENT_PAL_TAG_ARTICUNO},
+    {gObjectEventPal_Chansey,               OBJ_EVENT_PAL_TAG_CHANSEY},
+    {gObjectEventPal_Cubone,                OBJ_EVENT_PAL_TAG_CUBONE},
+    {gObjectEventPal_Dodrio,                OBJ_EVENT_PAL_TAG_DODRIO},
+    {gObjectEventPal_Kabuto,                OBJ_EVENT_PAL_TAG_KABUTO},
+    {gObjectEventPal_Kangaskhan,            OBJ_EVENT_PAL_TAG_KANGASKHAN},
+    {gObjectEventPal_Lapras,                OBJ_EVENT_PAL_TAG_LAPRAS},
+    {gObjectEventPal_Meowth,                OBJ_EVENT_PAL_TAG_MEOWTH},
+    {gObjectEventPal_Mew,                   OBJ_EVENT_PAL_TAG_MEW},
+    {gObjectEventPal_Mewtwo,                OBJ_EVENT_PAL_TAG_MEWTWO},
+    {gObjectEventPal_Moltres,               OBJ_EVENT_PAL_TAG_MOLTRES},
+    {gObjectEventPal_NidoranF,              OBJ_EVENT_PAL_TAG_NIDORAN_F},
+    {gObjectEventPal_Nidorino,              OBJ_EVENT_PAL_TAG_NIDORINO},
+    {gObjectEventPal_Omanyte,               OBJ_EVENT_PAL_TAG_OMANYTE},
+    {gObjectEventPal_Pidgeot,               OBJ_EVENT_PAL_TAG_PIDGEOT},
+    {gObjectEventPal_Poliwrath,             OBJ_EVENT_PAL_TAG_POLIWRATH},
+    {gObjectEventPal_Psyduck,               OBJ_EVENT_PAL_TAG_PSYDUCK},
+    {gObjectEventPal_Voltorb,               OBJ_EVENT_PAL_TAG_VOLTORB},
+    {gObjectEventPal_Wigglytuff,            OBJ_EVENT_PAL_TAG_WIGGLYTUFF},
+    {gObjectEventPal_Zapdos,                OBJ_EVENT_PAL_TAG_ZAPDOS},
     {NULL,                  0x0000},
 };
 

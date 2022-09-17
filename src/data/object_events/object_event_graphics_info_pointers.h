@@ -387,6 +387,25 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bulbasaur;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Charmander;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Squirtle;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Seel;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Articuno;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Chansey;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cubone;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dodrio;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kangaskhan;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kabuto;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lapras;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Mewtwo;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Meowth;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Omanyte;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pidgeot;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NidoranF;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Nidorino;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Wigglytuff;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Moltres;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Poliwrath;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Psyduck;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Voltorb;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Zapdos;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Clefairy;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Machop;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Machoke;
@@ -730,7 +749,6 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DAWN_PLATINUM_WATERING] =         &gObjectEventGraphicsInfo_DawnPlatinumWatering,
     [OBJ_EVENT_GFX_DAWN_PLATINUM_DECORATING] =       &gObjectEventGraphicsInfo_DawnPlatinumDecorating,
 	[OBJ_EVENT_GFX_PROF_OAK] =           			 &gObjectEventGraphicsInfo_ProfOak,
-
 	[OBJ_EVENT_GFX_MOM2] =           			 	 &gObjectEventGraphicsInfo_Mom2,
 	[OBJ_EVENT_GFX_BIKER] =           			 	 &gObjectEventGraphicsInfo_Biker,
 	[OBJ_EVENT_GFX_BURGLAR] =           			 &gObjectEventGraphicsInfo_Burglar,
@@ -793,8 +811,37 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
 	[OBJ_EVENT_GFX_MACHOP] = 				 		 &gObjectEventGraphicsInfo_Machop,
 	[OBJ_EVENT_GFX_MACHOKE] = 				 		 &gObjectEventGraphicsInfo_Machoke,
 	[OBJ_EVENT_GFX_PIDGEY] = 				 		 &gObjectEventGraphicsInfo_Pidgey,
-	[OBJ_EVENT_GFX_SEEL] = 				 		 	 &gObjectEventGraphicsInfo_Seel
+	[OBJ_EVENT_GFX_SEEL] = 				 		 	 &gObjectEventGraphicsInfo_Seel,
+	[OBJ_EVENT_GFX_ARTICUNO] = 				 		 &gObjectEventGraphicsInfo_Articuno,
+	[OBJ_EVENT_GFX_CHANSEY] = 					 	 &gObjectEventGraphicsInfo_Chansey,
+	[OBJ_EVENT_GFX_CUBONE] = 			 		 	 &gObjectEventGraphicsInfo_Cubone,
+	[OBJ_EVENT_GFX_DODRIO] = 				 		 &gObjectEventGraphicsInfo_Dodrio,
+	[OBJ_EVENT_GFX_KANGASKHAN] = 		 		 	 &gObjectEventGraphicsInfo_Kangaskhan,
+	[OBJ_EVENT_GFX_KABUTO] = 				 	 	 &gObjectEventGraphicsInfo_Kabuto,
+	[OBJ_EVENT_GFX_LAPRAS] = 					 	 &gObjectEventGraphicsInfo_Lapras,
+	[OBJ_EVENT_GFX_MEWTWO] = 			 		 	 &gObjectEventGraphicsInfo_Mewtwo,
+	[OBJ_EVENT_GFX_MEOWTH] = 			 		 	 &gObjectEventGraphicsInfo_Meowth,
+	[OBJ_EVENT_GFX_OMANYTE] = 				 		 &gObjectEventGraphicsInfo_Omanyte,
+	[OBJ_EVENT_GFX_PIDGEOT] = 				 		 &gObjectEventGraphicsInfo_Pidgeot,
+	[OBJ_EVENT_GFX_NIDORAN_F] = 				 	 &gObjectEventGraphicsInfo_NidoranF,
+	[OBJ_EVENT_GFX_NIDORINO] = 			 		 	 &gObjectEventGraphicsInfo_Nidorino,
+	[OBJ_EVENT_GFX_WIGGLYTUFF] = 			 	 	 &gObjectEventGraphicsInfo_Wigglytuff,
+	[OBJ_EVENT_GFX_MOLTRES] = 				 		 &gObjectEventGraphicsInfo_Moltres,
+	[OBJ_EVENT_GFX_POLIWRATH] = 				 	 &gObjectEventGraphicsInfo_Poliwrath,
+	[OBJ_EVENT_GFX_PSYDUCK] = 				 		 &gObjectEventGraphicsInfo_Psyduck,
+	[OBJ_EVENT_GFX_VOLTORB] = 				 		 &gObjectEventGraphicsInfo_Voltorb,
+	[OBJ_EVENT_GFX_ZAPDOS] = 				 		 &gObjectEventGraphicsInfo_Zapdos
 };
+
+
+
+#define OBJ_EVENT_PAL_TAG_MOLTRES                 0x11CC
+
+#define OBJ_EVENT_PAL_TAG_POLIWRATH               0x11D1
+#define OBJ_EVENT_PAL_TAG_PSYDUCK                 0x11D2
+#define OBJ_EVENT_PAL_TAG_VOLTORB                 0x11D3
+
+#define OBJ_EVENT_PAL_TAG_ZAPDOS                  0x11D5
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
     [MAUVILLE_MAN_BARD]        = &gObjectEventGraphicsInfo_Bard,

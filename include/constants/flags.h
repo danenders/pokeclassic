@@ -71,13 +71,13 @@
 //Story Flags
 #define FLAG_SET_CLOCK                      0x36
 #define FLAG_MET_OAK_ROUTE_1                0x37 
-#define FLAG_GOT_POTION_ON_ROUTE_1          0x38
+#define FLAG_GOT_POTION_ON_ROUTE_1          0x38 // Not really "story" related
 #define FLAG_MET_CEDAR                      0x39 // Used for Optional Dialogue
 #define FLAG_GOT_OLD_AMBER                  0x3A
 #define FLAG_RESSURECTED_AERODACTYL         0x3B 
 #define FLAG_GOT_AERODACTYL_REWARD          0x3C
 #define FLAG_GOT_BROCK_REWARD               0x3D // Received TM39
-#define FLAG_BOUGHT_MAGIKARP                0x3E 
+#define FLAG_BOUGHT_MAGIKARP                0x3E // Not really "story" related
 #define FLAG_GOT_FOSSIL_FROM_MT_MOON        0x3F 
 #define FLAG_GOT_SS_TICKET    		        0x40 
 #define FLAG_RECOVERED_STOLEN_TM    		0x41 
@@ -90,8 +90,8 @@
 #define FLAG_FOUND_VERMILION_GYM_SWITCHES   0x48 // Completed Vermilion Gym Puzzle
 #define FLAG_GOT_SURGE_REWARD    		    0x49 // Received TM34
 #define FLAG_WOKE_UP_ROUTE_12_SNORLAX    	0x4A 
-#define FLAG_UNUSED_0x04B           0x4B 
-#define FLAG_UNUSED_0x04C    		0x4C 
+#define FLAG_GOT_TM27                       0x4B // Not really "story" related
+#define FLAG_RESCUED_MR_FUJI    		    0x4C 
 #define FLAG_UNUSED_0x04D    		0x4D 
 #define FLAG_UNUSED_0x04E    		0x4E 
 #define FLAG_UNUSED_0x04F    		0x4F 
@@ -463,7 +463,7 @@
 #define FLAG_UNUSED_0x1B2                    0x1B2
 #define FLAG_UNUSED_0x1B3                    0x1B3
 #define FLAG_UNUSED_0x1B4                    0x1B4
-#define FLAG_UNUSED_0x1B5                    0x1B5
+#define FLAG_GOT_RECORD_SETTING_MAGIKARP     0x1B5
 #define FLAG_CHECKED_UNDER_TRUCK             0x1B6 // For the Mew Easter egg
 #define FLAG_BILL_IN_TELEPORTER              0x1B7
 #define FLAG_AIDE_LOCATION_1                 0x1B8 // Aide moves to Route 2
@@ -472,8 +472,8 @@
 #define FLAG_AIDE_LOCATION_4               	 0x1BB // Aide moves to Route 4
 #define FLAG_AIDE_LOCATION_5                 0x1BC // Aide moves to Route 5
 #define FLAG_QUEUE_AIDE_CALL           		 0x1BD // Aide is prepped to call player about a new item
-#define FLAG_GOT_SEVEN_BADGES                0x1BE // Used for Scott Match Call tracking
-#define FLAG_UNUSED_0x1BF           		 0x1BF
+#define FLAG_RECEIVED_AIDE_EVERSTONE         0x1BE // Tracks the Everstone given by the Aide, since the others are Key Items
+#define FLAG_GOT_SEVEN_BADGES                0x1BF // Used for Scott Match Call tracking
 #define FLAG_UNUSED_0x1C0               	 0x1C0
 #define FLAG_UNUSED_0x1C1 					 0x1C1
 #define FLAG_UNUSED_0x1C2 					 0x1C2

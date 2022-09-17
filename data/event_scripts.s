@@ -631,6 +631,12 @@ Common_EventScript_BagIsFull::
 	msgbox gText_TooBadBagIsFull, MSGBOX_DEFAULT
 	return
 
+Common_EventScript_ChangePokemonNickname::
+	fadescreen FADE_TO_BLACK
+	special ChangePokemonNickname
+	waitstate
+	return
+
 Common_EventScript_ShowNoRoomForDecor::
 	msgbox gText_NoRoomLeftForAnother, MSGBOX_DEFAULT
 	release

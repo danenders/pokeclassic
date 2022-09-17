@@ -549,4 +549,9 @@ gSpecials::
 	def_special SetSeenMon
 	def_special SetVermilionTrashCans
 	def_special DoSSAnneDepartureCutscene
+	def_special DoesPlayerPartyContainSpecies
+	def_special GetMagikarpSizeRecordInfo
+	def_special CompareMagikarpSize
+	def_special NameRaterWasNicknameChanged
+	def_special IsMonOTNameNotPlayers
 
