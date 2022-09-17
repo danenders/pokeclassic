@@ -642,6 +642,8 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_VOLTORB                 0x11D3
 #define OBJ_EVENT_PAL_TAG_WIGGLYTUFF              0x11D4
 #define OBJ_EVENT_PAL_TAG_ZAPDOS                  0x11D5
+#define OBJ_EVENT_PAL_TAG_MAROWAK                 0x11D6
+#define OBJ_EVENT_PAL_TAG_MAROWAK_GHOST           0x11D7
 
 #define OBJ_EVENT_PAL_TAG_NONE 0x128D
 
@@ -870,6 +872,8 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Voltorb,               OBJ_EVENT_PAL_TAG_VOLTORB},
     {gObjectEventPal_Wigglytuff,            OBJ_EVENT_PAL_TAG_WIGGLYTUFF},
     {gObjectEventPal_Zapdos,                OBJ_EVENT_PAL_TAG_ZAPDOS},
+    {gObjectEventPal_Marowak,               OBJ_EVENT_PAL_TAG_MAROWAK},
+    {gObjectEventPal_MarowakGhost,          OBJ_EVENT_PAL_TAG_MAROWAK_GHOST},
     {NULL,                  0x0000},
 };
 

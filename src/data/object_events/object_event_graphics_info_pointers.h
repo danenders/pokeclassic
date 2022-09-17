@@ -389,6 +389,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Squirtle;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Seel;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Articuno;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Chansey;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Marowak;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MarowakGhost;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cubone;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dodrio;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kangaskhan;
@@ -814,6 +816,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
 	[OBJ_EVENT_GFX_SEEL] = 				 		 	 &gObjectEventGraphicsInfo_Seel,
 	[OBJ_EVENT_GFX_ARTICUNO] = 				 		 &gObjectEventGraphicsInfo_Articuno,
 	[OBJ_EVENT_GFX_CHANSEY] = 					 	 &gObjectEventGraphicsInfo_Chansey,
+	[OBJ_EVENT_GFX_MAROWAK] = 			 		 	 &gObjectEventGraphicsInfo_Marowak,
+	[OBJ_EVENT_GFX_MAROWAK_GHOST] = 			 	 &gObjectEventGraphicsInfo_MarowakGhost,
 	[OBJ_EVENT_GFX_CUBONE] = 			 		 	 &gObjectEventGraphicsInfo_Cubone,
 	[OBJ_EVENT_GFX_DODRIO] = 				 		 &gObjectEventGraphicsInfo_Dodrio,
 	[OBJ_EVENT_GFX_KANGASKHAN] = 		 		 	 &gObjectEventGraphicsInfo_Kangaskhan,

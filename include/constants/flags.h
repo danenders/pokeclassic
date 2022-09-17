@@ -91,8 +91,8 @@
 #define FLAG_GOT_SURGE_REWARD    		    0x49 // Received TM34
 #define FLAG_WOKE_UP_ROUTE_12_SNORLAX    	0x4A 
 #define FLAG_GOT_TM27                       0x4B // Not really "story" related
-#define FLAG_RESCUED_MR_FUJI    		    0x4C 
-#define FLAG_UNUSED_0x04D    		0x4D 
+#define FLAG_RESCUED_CUBONE                 0x4C // Replaced the need for SilphScope
+#define FLAG_RESCUED_MR_FUJI    		    0x4D 
 #define FLAG_UNUSED_0x04E    		0x4E 
 #define FLAG_UNUSED_0x04F    		0x4F 
 #define FLAG_UNUSED_0x050    		0x50
@@ -820,9 +820,9 @@
 #define FLAG_HIDE_SS_ANNE                             				0x30D
 #define FLAG_HIDE_ROUTE12_SNORLAX                                	0x30E
 #define FLAG_HIDE_RIVAL_IN_POKEMON_TOWER                            0x30F
-#define FLAG_HIDE_UNUSED_58          								0x310
-#define FLAG_HIDE_UNUSED_59              							0x311
-#define FLAG_HIDE_UNUSED_60                                   		0x312
+#define FLAG_HIDE_POKEMON_TOWER_CUBONE          					0x310
+#define FLAG_HIDE_POKEMON_TOWER_MAROWAK              				0x311
+#define FLAG_HIDE_LAVENDER_TOWN_CUBONE                              0x312
 #define FLAG_HIDE_UNUSED_61                            				0x313
 #define FLAG_HIDE_UNUSED_62                               			0x314
 #define FLAG_HIDE_UNUSED_63                                			0x315

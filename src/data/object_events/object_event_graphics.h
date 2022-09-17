@@ -1239,6 +1239,10 @@ const u16 gObjectEventPal_Channeler[] = INCBIN_U16("graphics/object_events/palet
 const u32 gObjectEventPic_SnorlaxSleeping[] = INCBIN_U32("graphics/object_events/pics/pokemon/snorlax_sleep.4bpp");
 const u16 gObjectEventPal_Snorlax[] = INCBIN_U16("graphics/object_events/palettes/snorlax.gbapal");
 
+const u32 gObjectEventPic_MarowakOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/marowak_overworld.4bpp");
+const u16 gObjectEventPal_MarowakGhost[] = INCBIN_U16("graphics/object_events/palettes/marowak_ghost.gbapal");
+const u16 gObjectEventPal_Marowak[] = INCBIN_U16("graphics/object_events/palettes/marowak.gbapal");
+
 const u32 gObjectEventPic_SpearowOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/spearow_overworld.4bpp");
 const u16 gObjectEventPal_Spearow[] = INCBIN_U16("graphics/object_events/palettes/spearow.gbapal");
 

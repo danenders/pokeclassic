@@ -5,6 +5,7 @@ LavenderTown_House1_EventScript_CooltrainerF::
 	lock
 	faceplayer
 	goto_if_set FLAG_RESCUED_MR_FUJI, LavenderTown_House1_EventScript_CooltrainerFGhostGone
+	goto_if_set FLAG_RESCUED_CUBONE, LavenderTown_House1_EventScript_CooltrainerSawCuboneReturn
 	msgbox LavenderTown_House1_Text_RocketsKilledCubonesMother
 	release
 	end
@@ -12,9 +13,18 @@ LavenderTown_House1_EventScript_CooltrainerF::
 LavenderTown_House1_Text_RocketsKilledCubonesMother::
     .string "Those horrible Rockets!\n"
     .string "They deserve no mercy!\p"
-    .string "That poor Cubone's mother…\p"
-    .string "It was killed trying to escape from\n"
-    .string "Team Rocket.$"
+    .string "They kidnapped that Cubone and\n"
+    .string "killed its poor mother…$"
+
+LavenderTown_House1_EventScript_CooltrainerSawCuboneReturn::
+	msgbox LavenderTown_House1_Text_CuboneReturnedToTower
+	release
+	end
+
+LavenderTown_House1_Text_CuboneReturnedToTower::
+	.string "I saw the Cubone return to Pokémon\n"
+	.string "Tower!\p"
+	.string "It looked very determined!$"
 
 LavenderTown_House1_EventScript_CooltrainerFGhostGone::
 	msgbox LavenderTown_House1_Text_GhostOfPokemonTowerIsGone
@@ -22,10 +32,10 @@ LavenderTown_House1_EventScript_CooltrainerFGhostGone::
 	end
 
 LavenderTown_House1_Text_GhostOfPokemonTowerIsGone::
-    .string "The ghost of Pokémon Tower is\n"
-    .string "gone!\p"
-    .string "Someone must have soothed its\n"
-    .string "restless spirit!$"
+    .string "So the ghost of Pokémon Tower was\n"
+    .string "Cubone's mother?\p"
+    .string "I'm glad this Cubone was able to\n"
+    .string "soothe her restless spirit!$"
 
 LavenderTown_House1_EventScript_Cubone::
 	lock

@@ -7280,6 +7280,17 @@ static const struct SpriteFrameImage sPicTable_ChanseyOverworld[] = {
     overworld_frame(gObjectEventPic_ChanseyOverworld, 4, 4, 7),
     overworld_frame(gObjectEventPic_ChanseyOverworld, 4, 4, 8),
 };
+static const struct SpriteFrameImage sPicTable_MarowakOverworld[] = {
+    overworld_frame(gObjectEventPic_MarowakOverworld, 4, 4, 0),
+    overworld_frame(gObjectEventPic_MarowakOverworld, 4, 4, 1),
+    overworld_frame(gObjectEventPic_MarowakOverworld, 4, 4, 2),
+    overworld_frame(gObjectEventPic_MarowakOverworld, 4, 4, 3),
+    overworld_frame(gObjectEventPic_MarowakOverworld, 4, 4, 4),
+    overworld_frame(gObjectEventPic_MarowakOverworld, 4, 4, 5),
+    overworld_frame(gObjectEventPic_MarowakOverworld, 4, 4, 6),
+    overworld_frame(gObjectEventPic_MarowakOverworld, 4, 4, 7),
+    overworld_frame(gObjectEventPic_MarowakOverworld, 4, 4, 8),
+};
 static const struct SpriteFrameImage sPicTable_CuboneOverworld[] = {
     overworld_frame(gObjectEventPic_CuboneOverworld, 4, 4, 0),
     overworld_frame(gObjectEventPic_CuboneOverworld, 4, 4, 1),
