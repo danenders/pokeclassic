@@ -3116,7 +3116,82 @@ static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerJennifer[] = {
         .species = SPECIES_GASTLY,
     },
 };
-//
+static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt19[] = {
+    {
+        .iv = 0,
+        .lvl = 25,
+        .species = SPECIES_ZUBAT,
+    },
+    {
+        .iv = 0,
+        .lvl = 25,
+        .species = SPECIES_ZUBAT,
+    },
+    {
+        .iv = 0,
+        .lvl = 25,
+        .species = SPECIES_GOLBAT,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt20[] = {
+    {
+        .iv = 0,
+        .lvl = 26,
+        .species = SPECIES_KOFFING,
+    },
+    {
+        .iv = 0,
+        .lvl = 26,
+        .species = SPECIES_DROWZEE,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt21[] = {
+    {
+        .iv = 0,
+        .lvl = 23,
+        .species = SPECIES_ZUBAT,
+    },
+    {
+        .iv = 0,
+        .lvl = 23,
+        .species = SPECIES_RATTATA,
+    },
+    {
+        .iv = 0,
+        .lvl = 23,
+        .species = SPECIES_RATICATE,
+    },
+    {
+        .iv = 0,
+        .lvl = 23,
+        .species = SPECIES_ZUBAT,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_PokemonTowerJessieJames[] = {
+    {
+        .iv = 100,
+        .lvl = 26,
+        .species = SPECIES_EKANS,
+    },
+    {
+        .iv = 100,
+        .lvl = 26,
+        .species = SPECIES_KOFFING,
+    },
+    {
+        .iv = 150,
+        .lvl = 28,
+        .species = SPECIES_LICKITUNG,
+    },
+    {
+        .iv = 150,
+        .lvl = 28,
+        .species = SPECIES_MEOWTH,
+    },
+};
+
 
 
 

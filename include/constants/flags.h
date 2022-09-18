@@ -577,7 +577,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE10_CHERI_BERRY                                      (FLAG_HIDDEN_ITEMS_START + 0x2B)
 #define FLAG_HIDDEN_ITEM_ROUTE10_SUPER_POTION                                     (FLAG_HIDDEN_ITEMS_START + 0x2C)
 #define FLAG_HIDDEN_ITEM_POKEMON_TOWER_5F_BIG_MUSHROOM                            (FLAG_HIDDEN_ITEMS_START + 0x2D)
-#define FLAG_HIDDEN_ITEM_46             (FLAG_HIDDEN_ITEMS_START + 0x2E)
+#define FLAG_HIDDEN_ITEM_POKEMON_TOWER_7F_SOOTHE_BELL                             (FLAG_HIDDEN_ITEMS_START + 0x2E)
 #define FLAG_HIDDEN_ITEM_47             (FLAG_HIDDEN_ITEMS_START + 0x2F)
 #define FLAG_HIDDEN_ITEM_48        		(FLAG_HIDDEN_ITEMS_START + 0x30)
 #define FLAG_HIDDEN_ITEM_49       		(FLAG_HIDDEN_ITEMS_START + 0x31)
@@ -800,7 +800,7 @@
 #define FLAG_HIDE_CERULEAN_CAVE_GUARD    							0x2F9
 #define FLAG_HIDE_CERULEAN_BREEDER                 					0x2FA
 #define FLAG_HIDE_ROUTE24_JESSIE                                    0x2FB
-#define FLAG_HIDE_ROUTE24_JAMES                      				0x2FC
+#define FLAG_HIDE_ROUTE24_JAMES                      				0x2FC //Can be optimized
 #define FLAG_HIDE_ROUTE24_LOOKER                               		0x2FD
 #define FLAG_HIDE_ROUTE24_ROCKET                            		0x2FE
 #define FLAG_HIDE_ROUTE24_DISGUISED_ROCKET                  		0x2FF
@@ -823,13 +823,13 @@
 #define FLAG_HIDE_POKEMON_TOWER_CUBONE          					0x310
 #define FLAG_HIDE_POKEMON_TOWER_MAROWAK              				0x311
 #define FLAG_HIDE_LAVENDER_TOWN_CUBONE                              0x312
-#define FLAG_HIDE_UNUSED_61                            				0x313
-#define FLAG_HIDE_UNUSED_62                               			0x314
-#define FLAG_HIDE_UNUSED_63                                			0x315
-#define FLAG_HIDE_UNUSED_64                                       	0x316
-#define FLAG_HIDE_UNUSED_65                                			0x317
-#define FLAG_HIDE_UNUSED_66                                    		0x318
-#define FLAG_HIDE_UNUSED_67               							0x319
+#define FLAG_HIDE_POKEMON_TOWER_ROCKET_1                           	0x313
+#define FLAG_HIDE_POKEMON_TOWER_ROCKET_2                            0x314
+#define FLAG_HIDE_POKEMON_TOWER_ROCKET_3                            0x315
+#define FLAG_HIDE_POKEMON_TOWER_JESSIE_JAMES                        0x316
+#define FLAG_HIDE_POKEMON_TOWER_FUJI                                0x317
+#define FLAG_HIDE_POKEHOUSE_FUJI                                    0x318
+#define FLAG_HIDE_UNUSED_67              						    0x319
 #define FLAG_HIDE_UNUSED_68                            				0x31A
 #define FLAG_HIDE_UNUSED_69                             				0x31B
 #define FLAG_HIDE_UNUSED_70                          					0x31C

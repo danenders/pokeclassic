@@ -673,7 +673,7 @@ CeruleanCity_Text_NoRoomForMorePokemon::
 
 CeruleanCity_Text_BulbasaurDoesntTrustPeople::
 	.string "This Bulbasaur was hurt trying\n"
-	.string "to stop Team Rocket from\l
+	.string "to stop Team Rocket from\l"
 	.string "kidnapping other Pokémon...\p"
 	.string "I'm trying to get it to trust\n"
 	.string "people again.$"

@@ -27,6 +27,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MOM",
+      "in_connection": false,
       "x": 6,
       "y": 8,
       "elevation": 3,
@@ -40,6 +41,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
+      "in_connection": false,
       "x": 3,
       "y": 10,
       "elevation": 3,
@@ -53,6 +55,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
+      "in_connection": false,
       "x": 13,
       "y": 17,
       "elevation": 3,

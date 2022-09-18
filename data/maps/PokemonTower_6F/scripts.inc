@@ -87,6 +87,7 @@ PokemonTower_6F_EventScript_MarowakGhost::
 	msgbox PokemonTower_6F_Text_TooScaredToGoOn, MSGBOX_AUTOCLOSE
 	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	applymovement OBJ_EVENT_ID_PLAYER, PokemonTower_6F_Movement_ForcePlayerUp
+	waitmovement 0
 	fadeinbgm 0
 	releaseall
 	end

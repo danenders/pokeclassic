@@ -854,7 +854,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_TEAM_ROCKET_GRUNT_5] = {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("Grunt"),
         .items = {},
@@ -2380,8 +2380,54 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_ChannelerJennifer),
         .party = {.NoItemDefaultMoves = sParty_ChannelerJennifer}
     },
-
-
+    [TRAINER_TEAM_ROCKET_GRUNT_19] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+        .trainerName = _("Grunt"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_TeamRocketGrunt19),
+        .party = {.NoItemDefaultMoves = sParty_TeamRocketGrunt19}
+    },
+    [TRAINER_TEAM_ROCKET_GRUNT_20] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_F,
+        .trainerName = _("Grunt"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_TeamRocketGrunt20),
+        .party = {.NoItemDefaultMoves = sParty_TeamRocketGrunt20}
+    },
+    [TRAINER_TEAM_ROCKET_GRUNT_21] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+        .trainerName = _("Grunt"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_TeamRocketGrunt21),
+        .party = {.NoItemDefaultMoves = sParty_TeamRocketGrunt21}
+    },
+    [TRAINER_POKEMON_TOWER_JESSIE_JAMES] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_ROCKET_DUO,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_DUO,
+        .trainerName = _("Duo"),
+        .items = {ITEM_FULL_RESTORE},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_PokemonTowerJessieJames),
+        .party = {.NoItemDefaultMoves = sParty_PokemonTowerJessieJames}
+    },
 
 
 
