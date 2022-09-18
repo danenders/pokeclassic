@@ -3191,14 +3191,251 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PokemonTowerJessieJames[
         .species = SPECIES_MEOWTH,
     },
 };
-
-
-
-
-
-
-
-
+// Route 8
+static const struct TrainerMonNoItemCustomMoves sParty_SuperNerdAidan1[] = {
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_VOLTORB,
+        .moves = {MOVE_SONIC_BOOM, MOVE_SCREECH, MOVE_TACKLE, MOVE_CHARGE},
+    },
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_KOFFING,
+        .moves = {MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE, MOVE_POISON_GAS},
+    },
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_VOLTORB,
+        .moves = {MOVE_SONIC_BOOM, MOVE_SCREECH, MOVE_TACKLE, MOVE_CHARGE},
+    },
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_MAGNEMITE,
+        .moves = {MOVE_SONIC_BOOM, MOVE_SUPERSONIC, MOVE_THUNDER_SHOCK, MOVE_TACKLE},
+    },
+};
+static const struct TrainerMonNoItemCustomMoves sParty_SuperNerdAidan2[] = {
+    {
+        .iv = 0,
+        .lvl = 35,
+        .species = SPECIES_VOLTORB,
+        .moves = {MOVE_SONIC_BOOM, MOVE_SCREECH, MOVE_TACKLE, MOVE_CHARGE},
+    },
+    {
+        .iv = 0,
+        .lvl = 35,
+        .species = SPECIES_WEEZING,
+        .moves = {MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE, MOVE_POISON_GAS},
+    },
+    {
+        .iv = 0,
+        .lvl = 35,
+        .species = SPECIES_ELECTRODE,
+        .moves = {MOVE_SONIC_BOOM, MOVE_SCREECH, MOVE_TACKLE, MOVE_CHARGE},
+    },
+    {
+        .iv = 0,
+        .lvl = 35,
+        .species = SPECIES_MAGNEMITE,
+        .moves = {MOVE_SONIC_BOOM, MOVE_SUPERSONIC, MOVE_THUNDER_SHOCK, MOVE_TACKLE},
+    },
+};
+static const struct TrainerMonNoItemCustomMoves sParty_SuperNerdAidan3[] = {
+    {
+        .iv = 0,
+        .lvl = 50,
+        .species = SPECIES_ELECTRODE,
+        .moves = {MOVE_SONIC_BOOM, MOVE_SCREECH, MOVE_TACKLE, MOVE_CHARGE},
+    },
+    {
+        .iv = 0,
+        .lvl = 50,
+        .species = SPECIES_WEEZING,
+        .moves = {MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE, MOVE_POISON_GAS},
+    },
+    {
+        .iv = 0,
+        .lvl = 50,
+        .species = SPECIES_ELECTRODE,
+        .moves = {MOVE_SONIC_BOOM, MOVE_SCREECH, MOVE_TACKLE, MOVE_CHARGE},
+    },
+    {
+        .iv = 0,
+        .lvl = 50,
+        .species = SPECIES_MAGNETON,
+        .moves = {MOVE_SONIC_BOOM, MOVE_SUPERSONIC, MOVE_THUNDER_SHOCK, MOVE_TACKLE},
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_LassJulia[] = {
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_CLEFAIRY,
+    },
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_CLEFAIRY,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_LassPaige[] = {
+    {
+        .iv = 0,
+        .lvl = 23,
+        .species = SPECIES_NIDORAN_F,
+    },
+    {
+        .iv = 0,
+        .lvl = 23,
+        .species = SPECIES_NIDORINA,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_LassAndrea[] = {
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_MEOWTH,
+    },
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_MEOWTH,
+    },
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_MEOWTH,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_LassMegan[] = {
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_PIDGEY,
+    },
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_RATTATA,
+    },
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_NIDORAN_M,
+    },
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_MEOWTH,
+    },
+    {
+        .iv = 0,
+        .lvl = 19,
+        .species = SPECIES_PIKACHU,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_SuperNerdGlenn[] = {
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_GRIMER,
+    },
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_MUK,
+    },
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_GRIMER,
+    },
+};
+static const struct TrainerMonNoItemCustomMoves sParty_SuperNerdLeslie[] = {
+    {
+        .iv = 0,
+        .lvl = 26,
+        .species = SPECIES_KOFFING,
+        .moves = {MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_SMOG, MOVE_SELF_DESTRUCT},
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_GamerStan[] = {
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_POLIWAG,
+    },
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_POLIWAG,
+    },
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_POLIWHIRL,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_GamerRich[] = {
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_GROWLITHE,
+    },
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_VULPIX,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_TwinsEliAnne[] = {
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_CLEFAIRY,
+    },
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_JIGGLYPUFF,
+    },
+};
+static const struct TrainerMonNoItemCustomMoves sParty_BikerRicardo[] = {
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_KOFFING,
+        .moves = {MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE, MOVE_POISON_GAS},
+    },
+    {
+        .iv = 0,
+        .lvl = 22,
+        .species = SPECIES_KOFFING,
+        .moves = {MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE, MOVE_POISON_GAS},
+    },
+    {
+        .iv = 0,
+        .lvl = 23,
+        .species = SPECIES_GRIMER,
+        .moves = {MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_DISABLE, MOVE_POUND},
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_BikerJaren[] = {
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_GRIMER,
+    },
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_GRIMER,
+    },
+};
 
 
 

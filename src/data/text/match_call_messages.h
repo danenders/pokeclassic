@@ -53,6 +53,11 @@ const u8 gText_MatchCallPokemaniac_Mark_Pokemon[] = _("I like rare Pokémon.");
 const u8 gText_MatchCallPokemaniac_Mark_Intro1[] = _("Let me see your Pokémon!");
 const u8 gText_MatchCallPokemaniac_Mark_Intro2[] = _("I need rare Pokémon!");
 
+const u8 gText_MatchCallSuperNerd_Aidan_Strategy[] = _("I'll get an A+!");
+const u8 gText_MatchCallSuperNerd_Aidan_Pokemon[] = _("Smart Pokémon are my faves.");
+const u8 gText_MatchCallSuperNerd_Aidan_Intro1[] = _("I'm not as good at battles");
+const u8 gText_MatchCallSuperNerd_Aidan_Intro2[] = _("as I am at school...");
+
 const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_COUNT] =
 {
 	[REMATCH_JANICE] = MCFLAVOR(Lass_Janice),
@@ -66,4 +71,5 @@ const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_CO
 	[REMATCH_LUCA] = MCFLAVOR(Rocker_Luca),
 	[REMATCH_ALICIA] = MCFLAVOR(Picnicker_Alicia),
 	[REMATCH_MARK] = MCFLAVOR(Pokemaniac_Mark),
+	[REMATCH_AIDAN] = MCFLAVOR(SuperNerd_Aidan),
 };
