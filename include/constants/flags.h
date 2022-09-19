@@ -101,9 +101,9 @@
 #define FLAG_GOT_TM20_FROM_THIRSTY_GIRL    	0x53 
 #define FLAG_GOT_TM33_FROM_THIRSTY_GIRL    	0x54
 #define FLAG_OPENED_ROCKET_HIDEOUT    		0x55  
-#define FLAG_GOT_10_COINS_FROM_GAMBLER      0x56  
-#define FLAG_GOT_20_COINS_FROM_GAMBLER      0x57
-#define FLAG_GOT_20_COINS_FROM_GAMBLER_2    0x58
+#define FLAG_UNUSED_0x56             0x56            
+#define FLAG_UNUSED_0x57             0x57        
+#define FLAG_UNUSED_0x58             0x58        
 #define FLAG_UNUSED_0x059           0x59
 #define FLAG_UNUSED_0x05A           0x5A
 #define FLAG_UNUSED_0x05B        	0x5B
@@ -475,21 +475,21 @@
 #define FLAG_RECEIVED_AIDE_EVERSTONE         0x1BE // Tracks the Everstone given by the Aide, since the others are Key Items
 #define FLAG_GOT_SEVEN_BADGES                0x1BF // Used for Scott Match Call tracking
 #define FLAG_GAME_CORNER_SERVICE_DAY         0x1C0 // Instead of PokeNews, the game corner will check if it's a Service Day and set this flag for better odds.
-#define FLAG_UNUSED_0x1C1 					 0x1C1
-#define FLAG_UNUSED_0x1C2 					 0x1C2
-#define FLAG_UNUSED_0x1C3 					 0x1C3
-#define FLAG_UNUSED_0x1C4 					 0x1C4
-#define FLAG_UNUSED_0x1C5 					 0x1C5
-#define FLAG_UNUSED_0x1C6               	 0x1C6
-#define FLAG_UNUSED_0x1C7                    0x1C7
-#define FLAG_UNUSED_0x1C8       			 0x1C8
-#define FLAG_UNUSED_0x1C9        			 0x1C9
-#define FLAG_UNUSED_0x1CA                    0x1CA
-#define FLAG_UNUSED_0x1CB 					 0x1CB
-#define FLAG_UNUSED_0x1CC         			 0x1CC
-#define FLAG_UNUSED_0x1CD          			 0x1CD
-#define FLAG_UNUSED_0x1CE           		 0x1CE
-#define FLAG_UNUSED_0x1CF         			 0x1CF
+#define FLAG_GOT_10_COINS_FROM_GAMBLER       0x1C1  
+#define FLAG_GOT_20_COINS_FROM_GAMBLER       0x1C2
+#define FLAG_GOT_20_COINS_FROM_GAMBLER_2     0x1C3
+#define FLAG_FOUND_10_COINS_1 			     0x1C4
+#define FLAG_FOUND_10_COINS_2 			     0x1C5
+#define FLAG_FOUND_10_COINS_3              	 0x1C6
+#define FLAG_FOUND_10_COINS_4                0x1C7  
+#define FLAG_FOUND_10_COINS_5       		 0x1C8
+#define FLAG_FOUND_10_COINS_6      			 0x1C9
+#define FLAG_FOUND_10_COINS_7                0x1CA
+#define FLAG_FOUND_10_COINS_8 				 0x1CB
+#define FLAG_FOUND_20_COINS_1         	     0x1CC
+#define FLAG_FOUND_20_COINS_2          		 0x1CD
+#define FLAG_FOUND_40_COINS           		 0x1CE
+#define FLAG_FOUND_100_COINS         		 0x1CF
 #define FLAG_UNUSED_0x1D0           		 0x1D0
 #define FLAG_UNUSED_0x1D1       			 0x1D1
 #define FLAG_UNUSED_0x1D2      				 0x1D2
@@ -1589,8 +1589,8 @@
 #define FLAG_DAILY_GUARD_TEA               			(DAILY_FLAGS_START + 0x11)  // Giving the guards tea once per day will unlock something. Reward tbd.
 #define FLAG_DAILY_FANCLUB_REWARD        			(DAILY_FLAGS_START + 0x12)  // Fanclub chairman gives 1 rare candy every day
 #define FLAG_DAILY_GAME_CORNER_SERVICE_DAY_CHECKED  (DAILY_FLAGS_START + 0x13)   
+#define FLAG_DAILY_COIN_REFRESH                		(DAILY_FLAGS_START + 0x14)  // Once per day, one of the 12 stashes of coins will refresh.
 
-#define FLAG_UNUSED_0x934                			(DAILY_FLAGS_START + 0x14)  // Unused Flag
 #define FLAG_UNUSED_0x935                           (DAILY_FLAGS_START + 0x15) // Unused Flag
 #define FLAG_UNUSED_0x936                           (DAILY_FLAGS_START + 0x16) // Unused Flag
 #define FLAG_UNUSED_0x937                           (DAILY_FLAGS_START + 0x17) // Unused Flag

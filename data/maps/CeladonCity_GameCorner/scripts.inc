@@ -674,3 +674,176 @@ Movement_GCGruntExit::
 	walk_right
 	walk_right
 	step_end
+
+HiddenCoins_1::
+	goto_if_set FLAG_FOUND_10_COINS_1, Common_EventScript_End
+	call HiddenCoins_Get10Coins
+	setflag FLAG_FOUND_10_COINS_1
+	waitfanfare
+	release
+	end
+
+HiddenCoins_2::
+	goto_if_set FLAG_FOUND_10_COINS_2, Common_EventScript_End
+	call HiddenCoins_Get10Coins
+	setflag FLAG_FOUND_10_COINS_2
+	waitfanfare
+	release
+	end
+
+HiddenCoins_3::
+	goto_if_set FLAG_FOUND_20_COINS_1, Common_EventScript_End
+	call HiddenCoins_Get20Coins
+	setflag FLAG_FOUND_20_COINS_1
+	waitfanfare
+	release
+	end
+
+HiddenCoins_4::
+	goto_if_set FLAG_FOUND_10_COINS_3, Common_EventScript_End
+	call HiddenCoins_Get10Coins
+	setflag FLAG_FOUND_10_COINS_3
+	waitfanfare
+	release
+	end
+
+HiddenCoins_5::
+	goto_if_set FLAG_FOUND_10_COINS_4, Common_EventScript_End
+	call HiddenCoins_Get10Coins
+	setflag FLAG_FOUND_10_COINS_4
+	waitfanfare
+	release
+	end
+
+HiddenCoins_6::
+	goto_if_set FLAG_FOUND_20_COINS_2, Common_EventScript_End
+	call HiddenCoins_Get20Coins
+	setflag FLAG_FOUND_20_COINS_2
+	waitfanfare
+	release
+	end
+
+HiddenCoins_7::
+	goto_if_set FLAG_FOUND_10_COINS_5, Common_EventScript_End
+	call HiddenCoins_Get10Coins
+	setflag FLAG_FOUND_10_COINS_5
+	waitfanfare
+	release
+	end
+
+HiddenCoins_8::
+	goto_if_set FLAG_FOUND_10_COINS_6, Common_EventScript_End
+	call HiddenCoins_Get10Coins
+	setflag FLAG_FOUND_10_COINS_6
+	waitfanfare
+	release
+	end
+
+HiddenCoins_9::
+	goto_if_set FLAG_FOUND_10_COINS_7, Common_EventScript_End
+	call HiddenCoins_Get10Coins
+	setflag FLAG_FOUND_10_COINS_7
+	waitfanfare
+	release
+	end
+
+HiddenCoins_10::
+	goto_if_set FLAG_FOUND_40_COINS, Common_EventScript_End
+	call HiddenCoins_Get40Coins
+	setflag FLAG_FOUND_40_COINS
+	waitfanfare
+	release
+	end
+
+HiddenCoins_11::
+	goto_if_set FLAG_FOUND_10_COINS_7, Common_EventScript_End
+	call HiddenCoins_Get10Coins
+	setflag FLAG_FOUND_10_COINS_7
+	waitfanfare
+	release
+	end
+
+HiddenCoins_12::
+	goto_if_set FLAG_FOUND_100_COINS, Common_EventScript_End
+	call HiddenCoins_Get100Coins
+	setflag FLAG_FOUND_100_COINS
+	waitfanfare
+	release
+	end
+
+HiddenCoins_Get10Coins::
+	checkitem ITEM_COIN_CASE
+	goto_if_eq VAR_RESULT, FALSE, HiddenCoins_NoCase
+	checkcoins VAR_TEMP_1
+	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1 - 10), HiddenCoins_NoSpace
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox HiddenCoins_Found10Coins, MSGBOX_AUTOCLOSE
+	addcoins 10
+	return
+
+HiddenCoins_Get20Coins::
+	checkitem ITEM_COIN_CASE
+	goto_if_eq VAR_RESULT, FALSE, HiddenCoins_NoCase
+	checkcoins VAR_TEMP_1
+	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1 - 20), HiddenCoins_NoSpace
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox HiddenCoins_Found20Coins, MSGBOX_AUTOCLOSE
+	addcoins 20
+	return
+
+HiddenCoins_Get40Coins::
+	checkitem ITEM_COIN_CASE
+	goto_if_eq VAR_RESULT, FALSE, HiddenCoins_NoCase
+	checkcoins VAR_TEMP_1
+	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1 - 40), HiddenCoins_NoSpace
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox HiddenCoins_Found40Coins, MSGBOX_AUTOCLOSE
+	addcoins 40
+	return
+
+HiddenCoins_Get100Coins::
+	checkitem ITEM_COIN_CASE
+	goto_if_eq VAR_RESULT, FALSE, HiddenCoins_NoCase
+	checkcoins VAR_TEMP_1
+	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1 - 100), HiddenCoins_NoSpace
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox HiddenCoins_Found100Coins, MSGBOX_AUTOCLOSE
+	addcoins 100
+	return
+
+HiddenCoins_NoSpace::
+	msgbox HiddenCoins_FoundCoinsNoSpace, MSGBOX_AUTOCLOSE
+	release
+	end
+
+HiddenCoins_FoundCoinsNoSpace::
+	.string "{PLAYER} found some coins scattered\n"
+	.string "on the floor...\p"
+	.string "Too bad your Coin Case is full!$"
+
+HiddenCoins_NoCase::
+	msgbox HiddenCoins_FoundCoinsNoCase, MSGBOX_AUTOCLOSE
+	release
+	end
+
+HiddenCoins_FoundCoinsNoCase::
+	.string "{PLAYER} found some coins scattered\n"
+	.string "on the floor...\p"
+	.string "Too bad you don't have a Coin Case!$"
+
+HiddenCoins_Found10Coins::
+	.string "{PLAYER} found 10 coins scattered\n"
+	.string "on the floor!$"
+
+HiddenCoins_Found20Coins::
+	.string "{PLAYER} found 20 coins scattered\n"
+	.string "on the floor!$"
+
+HiddenCoins_Found40Coins::
+	.string "{PLAYER} found 40 coins scattered\n"
+	.string "on the floor!$"
+
+HiddenCoins_Found100Coins::
+	.string "{PLAYER} found 100 coins scattered\n"
+	.string "on the floor!$"
+
