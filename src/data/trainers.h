@@ -2597,8 +2597,31 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_BikerJaren),
         .party = {.NoItemDefaultMoves = sParty_BikerJaren}
     },
-
-
+//Celadon Rooftops
+    [TRAINER_ROOFTOP_ROCKET_GRUNT] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_F,
+        .trainerName = _("Grunt"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT ,
+        .partySize = ARRAY_COUNT(sParty_RooftopRocketGrunt),
+        .party = {.NoItemDefaultMoves = sParty_RooftopRocketGrunt}
+    },
+    [TRAINER_ROOFTOP_JESSIE_JAMES] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_ROCKET_DUO,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_DUO,
+        .trainerName = _("Duo"),
+        .items = {ITEM_FULL_RESTORE},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_RooftopJessieJames),
+        .party = {.NoItemDefaultMoves = sParty_RooftopJessieJames}
+    },
 
 
 

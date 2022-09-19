@@ -224,6 +224,48 @@ MoveTutor_Text_RockSlideTaught::
     .string "It might be scary to use it in this\n"
     .string "tunnel…$"
 
+MoveTutor_SoftBoiled::
+	lock
+	faceplayer
+	msgbox MoveTutor_Text_SoftBoiledTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_SoftBoiledDeclined
+	msgbox MoveTutor_Text_SoftBoiledWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_SOFT_BOILED
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_SoftBoiledDeclined
+	goto MoveTutor_EventScript_SoftBoiledTaught
+	end
+
+MoveTutor_Text_SoftBoiledTeach::
+    .string "Hello, there!\p"
+    .string "I've seen you about, but I never\n"
+    .string "had a chance to chat.\p"
+    .string "It must be good luck that brought\n"
+    .string "us together finally.\p"
+    .string "I'd like to celebrate by teaching\n"
+    .string "you the move Soft Boiled.$"
+
+MoveTutor_EventScript_SoftBoiledDeclined::
+	msgbox MoveTutor_Text_SoftBoiledDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_SoftBoiledDeclined::
+    .string "I'll always be keeping an eye out\n"
+    .string "for you.\p"
+    .string "I hope we can chat again.$"
+
+MoveTutor_Text_SoftBoiledWhichMon::
+    .string "So, who's the Pokémon that gets\n"
+    .string "the chance to learn Soft Boiled?$"
+
+MoveTutor_EventScript_SoftBoiledTaught::
+	msgbox MoveTutor_Text_SoftBoiledTaught, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_SoftBoiledTaught::
+    .string "I wish you the best of luck!$"
 
 
 

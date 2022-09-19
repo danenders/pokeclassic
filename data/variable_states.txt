@@ -38,3 +38,8 @@ Variable States:
 3: Departed after collecting cut
    -> Set the Ticket Check state to 2
 
+//Rooftop Rockets
+0: Will trigger the Rocket Grunt Battle
+1: Stops the Rocket Trigger.
+2: Will trigger the secret Jessie/James battle. Only seen if you didn't pick up the plans before completing the Rocket Hideout. 
+

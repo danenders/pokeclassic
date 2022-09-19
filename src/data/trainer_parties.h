@@ -3436,9 +3436,51 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BikerJaren[] = {
         .species = SPECIES_GRIMER,
     },
 };
-
-
-
+//Celadon City Rooftop
+static const struct TrainerMonNoItemDefaultMoves sParty_RooftopRocketGrunt[] = {
+    {
+        .iv = 100,
+        .lvl = 20,
+        .species = SPECIES_RATICATE,
+    },
+    {
+        .iv = 100,
+        .lvl = 20,
+        .species = SPECIES_MAGNEMITE,
+    },
+    {
+        .iv = 150,
+        .lvl = 21,
+        .species = SPECIES_GOLBAT,
+    },
+    {
+        .iv = 150,
+        .lvl = 20,
+        .species = SPECIES_GRIMER,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_RooftopJessieJames[] = {
+    {
+        .iv = 100,
+        .lvl = 23,
+        .species = SPECIES_EKANS,
+    },
+    {
+        .iv = 100,
+        .lvl = 23,
+        .species = SPECIES_KOFFING,
+    },
+    {
+        .iv = 150,
+        .lvl = 25,
+        .species = SPECIES_LICKITUNG,
+    },
+    {
+        .iv = 150,
+        .lvl = 25,
+        .species = SPECIES_MEOWTH,
+    },
+};
 
 
 

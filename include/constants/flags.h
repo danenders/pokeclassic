@@ -86,17 +86,17 @@
 #define FLAG_GOT_MISTY_REWARD    		    0x44 // Received TM03
 #define FLAG_HELPED_BILL_IN_SEA_COTTAGE    	0x45 // Rescued Bill from the teleporter accident
 #define FLAG_GOT_CHARMANDER    		        0x46 // Received the Charmander on Route 24
-#define FLAG_DELIVERED_ROCKET_PLANS    		0x47 // Replaces "Tea" delivery to bypass Saffron guards.
-#define FLAG_FOUND_VERMILION_GYM_SWITCHES   0x48 // Completed Vermilion Gym Puzzle
-#define FLAG_GOT_SURGE_REWARD    		    0x49 // Received TM34
-#define FLAG_WOKE_UP_ROUTE_12_SNORLAX    	0x4A 
-#define FLAG_GOT_TM27                       0x4B // Not really "story" related
-#define FLAG_RESCUED_CUBONE                 0x4C // Replaced the need for SilphScope
-#define FLAG_RESCUED_MR_FUJI    		    0x4D 
-#define FLAG_UNUSED_0x04E    		0x4E 
-#define FLAG_UNUSED_0x04F    		0x4F 
-#define FLAG_UNUSED_0x050    		0x50
-#define FLAG_UNUSED_0x051    		0x51
+#define FLAG_GOT_ROCKET_PLANS               0x47
+#define FLAG_DELIVERED_ROCKET_PLANS    		0x48 // Replaces "Tea" delivery to bypass Saffron guards.
+#define FLAG_FOUND_VERMILION_GYM_SWITCHES   0x49 // Completed Vermilion Gym Puzzle
+#define FLAG_GOT_SURGE_REWARD    		    0x4A // Received TM34
+#define FLAG_WOKE_UP_ROUTE_12_SNORLAX    	0x4B 
+#define FLAG_GOT_TM27                       0x4C // Not really "story" related
+#define FLAG_RESCUED_CUBONE                 0x4D // Replaced the need for SilphScope
+#define FLAG_RESCUED_MR_FUJI    		    0x4E 
+#define FLAG_GOT_TEA                        0x4F 
+#define FLAG_TALKED_TO_TEA_LADY_POSTGAME    0x50 
+#define FLAG_GOT_PORYGON    		        0x51 // The rooftop Eevee is replaced with a Porygon. Not really "story" related though.
 #define FLAG_UNUSED_0x052    		0x52
 #define FLAG_UNUSED_0x053    		0x53 
 #define FLAG_UNUSED_0x054    		0x54
@@ -589,7 +589,7 @@
 #define FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_ANTIDOTE               (FLAG_HIDDEN_ITEMS_START + 0x37)
 #define FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_ICE_HEAL               (FLAG_HIDDEN_ITEMS_START + 0x38)
 #define FLAG_HIDDEN_ITEM_ROUTE7_WEPEAR_BERRY                                      (FLAG_HIDDEN_ITEMS_START + 0x39)
-#define FLAG_HIDDEN_ITEM_58      	    (FLAG_HIDDEN_ITEMS_START + 0x3A)
+#define FLAG_HIDDEN_ITEM_CELADON_CITY_PP_UP      	                              (FLAG_HIDDEN_ITEMS_START + 0x3A)
 #define FLAG_HIDDEN_ITEM_59     		(FLAG_HIDDEN_ITEMS_START + 0x3B)
 #define FLAG_HIDDEN_ITEM_60     		(FLAG_HIDDEN_ITEMS_START + 0x3C)
 #define FLAG_HIDDEN_ITEM_61           	(FLAG_HIDDEN_ITEMS_START + 0x3D)
@@ -829,11 +829,11 @@
 #define FLAG_HIDE_POKEMON_TOWER_JESSIE_JAMES                        0x316
 #define FLAG_HIDE_POKEMON_TOWER_FUJI                                0x317
 #define FLAG_HIDE_POKEHOUSE_FUJI                                    0x318
-#define FLAG_HIDE_UNUSED_67              						    0x319
-#define FLAG_HIDE_UNUSED_68                            				0x31A
-#define FLAG_HIDE_UNUSED_69                             				0x31B
-#define FLAG_HIDE_UNUSED_70                          					0x31C
-#define FLAG_HIDE_UNUSED_71                          					0x31D
+#define FLAG_HIDE_CELADON_ROCKETS              						0x319
+#define FLAG_HIDE_CELADON_POLICE                            		0x31A
+#define FLAG_HIDE_CELADON_ROOFTOP_JESSIE_JAMES                      0x31B //Jessie + James secret battle 2. 
+#define FLAG_HIDE_CELADON_ROOFTOP_ROCKET                          	0x31C //
+#define FLAG_HIDE_UNUSED_71                         				0x31D // Handles the story mode rocket plans. Postgame rocket plans handled elsewhere.
 #define FLAG_HIDE_UNUSED_72                          					0x31E
 #define FLAG_HIDE_UNUSED_73                          					0x31F
 #define FLAG_HIDE_UNUSED_74                                           0x320
@@ -1084,7 +1084,7 @@
 #define FLAG_HIDE_POKEMON_TOWER_5F_NUGGET                           0x413
 #define FLAG_HIDE_POKEMON_TOWER_6F_X_ACCURACY                       0x414
 #define FLAG_HIDE_POKEMON_TOWER_6F_RARE_CANDY                     	0x415
-#define FLAG_UNUSED_ITEM_0x416                     					0x416
+#define FLAG_HIDE_CELADON_CITY_ETHER                     			0x416
 #define FLAG_UNUSED_ITEM_0x417                          			0x417
 #define FLAG_UNUSED_ITEM_0x418                          			0x418
 #define FLAG_UNUSED_ITEM_0x419                         				0x419

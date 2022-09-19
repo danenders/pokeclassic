@@ -139,7 +139,7 @@ static void BufferFanClubTrainerName_(struct LinkBattleRecords *, u8, u8);
 static void BufferFanClubTrainerName_(u8 whichLinkTrainer, u8 whichNPCTrainer);
 #endif
 
-void Special_ShowDiploma(void)
+void ShowDiploma(void)
 {
     SetMainCallback2(CB2_ShowDiploma);
     ScriptContext2_Enable();
