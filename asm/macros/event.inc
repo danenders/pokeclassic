@@ -2028,3 +2028,12 @@
 	.macro totemboost_evas2 battler:req
 	settotemboost \battler, 0, 0, 0, 0, 0, 0, 2
 	.endm
+
+	@ Writes the name of the item at index item to the specified buffer. If the specified index is larger than the number of items in the game (0x176), the name of item 0 ("????????") is buffered instead.
+	.macro getitemname out:req, item:req
+	.byte 0x80
+	.byte \out
+	.2byte \item
+	.endm
+
+

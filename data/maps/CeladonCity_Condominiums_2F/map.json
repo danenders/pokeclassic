@@ -22,7 +22,7 @@
       "y": 2,
       "elevation": 3,
       "dest_map": "MAP_CELADON_CITY_CONDOMINIUMS_1F",
-      "dest_warp_id": 3
+      "dest_warp_id": 1
     },
     {
       "x": 2,
@@ -43,7 +43,7 @@
       "y": 2,
       "elevation": 3,
       "dest_map": "MAP_CELADON_CITY_CONDOMINIUMS_1F",
-      "dest_warp_id": 4
+      "dest_warp_id": 2
     }
   ],
   "coord_events": [

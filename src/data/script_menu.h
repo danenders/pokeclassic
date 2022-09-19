@@ -767,6 +767,47 @@ static const struct MenuAction MultichoiceList_BillsPokemon[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_FreshWater[] =
+{
+    {gText_FreshWater},
+    {gText_Cancel2},
+};
+static const struct MenuAction MultichoiceList_SodaPop[] =
+{
+    {gText_SodaPop},
+    {gText_Cancel2},
+};
+static const struct MenuAction MultichoiceList_FreshWaterSodaPop[] =
+{
+    {gText_FreshWater},
+    {gText_SodaPop},
+    {gText_Cancel2},
+};
+static const struct MenuAction MultichoiceList_Lemonade[] =
+{
+    {gText_Lemonade},
+    {gText_Cancel2},
+};
+static const struct MenuAction MultichoiceList_FreshWaterLemonade[] =
+{
+    {gText_FreshWater},
+    {gText_Lemonade},
+    {gText_Cancel2},
+};
+static const struct MenuAction MultichoiceList_SodaPopLemonade[] =
+{
+    {gText_SodaPop},
+    {gText_Lemonade},
+    {gText_Cancel2},
+};
+static const struct MenuAction MultichoiceList_AllDrinks[] =
+{
+    {gText_FreshWater},
+    {gText_SodaPop},
+    {gText_Lemonade},
+    {gText_Cancel2},
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -878,6 +919,13 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_SINNOH_COSTUMES]            = MULTICHOICE(MultichoiceList_SinnohCostumes),
     [MULTI_TRAINER_SCHOOL_WHITEBOARD]  = MULTICHOICE(MultichoiceList_TrainerSchool),
     [MULTI_BILLS_POKEMON]              = MULTICHOICE(MultichoiceList_BillsPokemon),
+    [MULTI_FRESH_WATER]                = MULTICHOICE(MultichoiceList_FreshWater),
+    [MULTI_SODA_POP]                   = MULTICHOICE(MultichoiceList_SodaPop),
+    [MULTI_FRESH_WATER_SODA_POP]       = MULTICHOICE(MultichoiceList_FreshWaterSodaPop),
+    [MULTI_LEMONADE]                   = MULTICHOICE(MultichoiceList_Lemonade),
+    [MULTI_FRESH_WATER_LEMONADE]       = MULTICHOICE(MultichoiceList_FreshWaterLemonade),
+    [MULTI_SODA_POP_LEMONADE]          = MULTICHOICE(MultichoiceList_SodaPopLemonade),
+    [MULTI_ALL_DRINKS]                 = MULTICHOICE(MultichoiceList_AllDrinks),
 };
 
 const u8 *const gStdStrings[] =

@@ -74,8 +74,8 @@ static EWRAM_DATA u32 sBikeCyclingTimer = 0;
 static EWRAM_DATA u8 sSlidingDoorNextFrameCounter = 0;
 static EWRAM_DATA u8 sSlidingDoorFrame = 0;
 static EWRAM_DATA u8 sTutorMoveAndElevatorWindowId = 0;
-static EWRAM_DATA u16 sLilycoveDeptStore_NeverRead = 0;
-static EWRAM_DATA u16 sLilycoveDeptStore_DefaultFloorChoice = 0;
+static EWRAM_DATA u16 sElevatorScroll = 0;
+static EWRAM_DATA u16 sElevatorCursorPos = 0;
 static EWRAM_DATA struct ListMenuItem *sScrollableMultichoice_ListMenuItem = NULL;
 static EWRAM_DATA u16 sScrollableMultichoice_ScrollOffset = 0;
 static EWRAM_DATA u16 sFrontierExchangeCorner_NeverRead = 0;
@@ -1599,69 +1599,235 @@ static const u16 sElevatorWindowTiles_Descending[][3] =
     },
 };
 
+static const u16 sElevatorWindowMetatilesGoingUp[][3] = {
+    {
+        METATILE_SilphCo_ElevatorWindow_Top0, 
+        METATILE_SilphCo_ElevatorWindow_Top1, 
+        METATILE_SilphCo_ElevatorWindow_Top2
+    },
+    {
+        METATILE_SilphCo_ElevatorWindow_Mid0, 
+        METATILE_SilphCo_ElevatorWindow_Mid1, 
+        METATILE_SilphCo_ElevatorWindow_Mid2
+    },
+    {
+        METATILE_SilphCo_ElevatorWindow_Bottom0, 
+        METATILE_SilphCo_ElevatorWindow_Bottom1, 
+        METATILE_SilphCo_ElevatorWindow_Bottom2
+    }
+};
+
+static const u16 sElevatorWindowMetatilesGoingDown[][3] = {
+    {
+        METATILE_SilphCo_ElevatorWindow_Top0, 
+        METATILE_SilphCo_ElevatorWindow_Top2, 
+        METATILE_SilphCo_ElevatorWindow_Top1
+    },
+    {
+        METATILE_SilphCo_ElevatorWindow_Mid0, 
+        METATILE_SilphCo_ElevatorWindow_Mid2, 
+        METATILE_SilphCo_ElevatorWindow_Mid1
+    },
+    {
+        METATILE_SilphCo_ElevatorWindow_Bottom0, 
+        METATILE_SilphCo_ElevatorWindow_Bottom2, 
+        METATILE_SilphCo_ElevatorWindow_Bottom1
+    }
+};
+
+static const u8 sElevatorAnimationDuration[] = {
+    8,
+    16,
+    24,
+    32,
+    38,
+    46,
+    53,
+    56,
+    57
+};
+
+static const u8 sElevatorWindowAnimDuration[] = {
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21,
+    24,
+    27
+};
+
 void SetDeptStoreFloor(void)
 {
-    u8 deptStoreFloor;
-    switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
+    u16 floor = 4;
+    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(ROCKET_HIDEOUT_B1F))
     {
-    case MAP_NUM(LILYCOVE_CITY_DEPARTMENT_STORE_1F):
-        deptStoreFloor = DEPT_STORE_FLOORNUM_1F;
-        break;
-    case MAP_NUM(LILYCOVE_CITY_DEPARTMENT_STORE_2F):
-        deptStoreFloor = DEPT_STORE_FLOORNUM_2F;
-        break;
-    case MAP_NUM(LILYCOVE_CITY_DEPARTMENT_STORE_3F):
-        deptStoreFloor = DEPT_STORE_FLOORNUM_3F;
-        break;
-    case MAP_NUM(LILYCOVE_CITY_DEPARTMENT_STORE_4F):
-        deptStoreFloor = DEPT_STORE_FLOORNUM_4F;
-        break;
-    case MAP_NUM(LILYCOVE_CITY_DEPARTMENT_STORE_5F):
-        deptStoreFloor = DEPT_STORE_FLOORNUM_5F;
-        break;
-    case MAP_NUM(LILYCOVE_CITY_DEPARTMENT_STORE_ROOFTOP):
-        deptStoreFloor = DEPT_STORE_FLOORNUM_ROOFTOP;
-        break;
-    default:
-        deptStoreFloor = DEPT_STORE_FLOORNUM_1F;
-        break;
+        switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
+        {
+        case MAP_NUM(SILPH_CO_1F):
+            floor = 4;
+            break;
+        case MAP_NUM(SILPH_CO_2F):
+            floor = 5;
+            break;
+        case MAP_NUM(SILPH_CO_3F):
+            floor = 6;
+            break;
+        case MAP_NUM(SILPH_CO_4F):
+            floor = 7;
+            break;
+        case MAP_NUM(SILPH_CO_5F):
+            floor = 8;
+            break;
+        case MAP_NUM(SILPH_CO_6F):
+            floor = 9;
+            break;
+        case MAP_NUM(SILPH_CO_7F):
+            floor = 10;
+            break;
+        case MAP_NUM(SILPH_CO_8F):
+            floor = 11;
+            break;
+        case MAP_NUM(SILPH_CO_9F):
+            floor = 12;
+            break;
+        case MAP_NUM(SILPH_CO_10F):
+            floor = 13;
+            break;
+        case MAP_NUM(SILPH_CO_11F):
+            floor = 14;
+            break;
+        case MAP_NUM(ROCKET_HIDEOUT_B1F):
+            floor = 3;
+            break;
+        case MAP_NUM(ROCKET_HIDEOUT_B2F):
+            floor = 2;
+            break;
+        case MAP_NUM(ROCKET_HIDEOUT_B4F):
+            floor = 0;
+            break;
+        }
     }
-    VarSet(VAR_DEPT_STORE_FLOOR, deptStoreFloor);
+    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(CELADON_CITY_DEPARTMENT_STORE_1F))
+    {
+        switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
+        {
+        case MAP_NUM(CELADON_CITY_DEPARTMENT_STORE_1F):
+            floor = 4;
+            break;
+        case MAP_NUM(CELADON_CITY_DEPARTMENT_STORE_2F):
+            floor = 5;
+            break;
+        case MAP_NUM(CELADON_CITY_DEPARTMENT_STORE_3F):
+            floor = 6;
+            break;
+        case MAP_NUM(CELADON_CITY_DEPARTMENT_STORE_4F):
+            floor = 7;
+            break;
+        case MAP_NUM(CELADON_CITY_DEPARTMENT_STORE_5F):
+            floor = 8;
+            break;
+        }
+    }
+    VarSet(VAR_DEPT_STORE_FLOOR, floor);
 }
 
 u16 GetDeptStoreDefaultFloorChoice(void)
 {
-    sLilycoveDeptStore_NeverRead = 0;
-    sLilycoveDeptStore_DefaultFloorChoice = 0;
+    sElevatorScroll = 0;
+    sElevatorCursorPos = 0;
 
-    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(LILYCOVE_CITY_DEPARTMENT_STORE_1F))
+    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(ROCKET_HIDEOUT_B1F))
     {
         switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
         {
-        case MAP_NUM(LILYCOVE_CITY_DEPARTMENT_STORE_5F):
-            sLilycoveDeptStore_NeverRead = 0;
-            sLilycoveDeptStore_DefaultFloorChoice = 0;
+        case MAP_NUM(SILPH_CO_11F):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 0;
             break;
-        case MAP_NUM(LILYCOVE_CITY_DEPARTMENT_STORE_4F):
-            sLilycoveDeptStore_NeverRead = 0;
-            sLilycoveDeptStore_DefaultFloorChoice = 1;
+        case MAP_NUM(SILPH_CO_10F):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 1;
             break;
-        case MAP_NUM(LILYCOVE_CITY_DEPARTMENT_STORE_3F):
-            sLilycoveDeptStore_NeverRead = 0;
-            sLilycoveDeptStore_DefaultFloorChoice = 2;
+        case MAP_NUM(SILPH_CO_9F):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 2;
             break;
-        case MAP_NUM(LILYCOVE_CITY_DEPARTMENT_STORE_2F):
-            sLilycoveDeptStore_NeverRead = 0;
-            sLilycoveDeptStore_DefaultFloorChoice = 3;
+        case MAP_NUM(SILPH_CO_8F):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 3;
             break;
-        case MAP_NUM(LILYCOVE_CITY_DEPARTMENT_STORE_1F):
-            sLilycoveDeptStore_NeverRead = 0;
-            sLilycoveDeptStore_DefaultFloorChoice = 4;
+        case MAP_NUM(SILPH_CO_7F):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 4;
+            break;
+        case MAP_NUM(SILPH_CO_6F):
+            sElevatorScroll = 1;
+            sElevatorCursorPos = 4;
+            break;
+        case MAP_NUM(SILPH_CO_5F):
+            sElevatorScroll = 2;
+            sElevatorCursorPos = 4;
+            break;
+        case MAP_NUM(SILPH_CO_4F):
+            sElevatorScroll = 3;
+            sElevatorCursorPos = 4;
+            break;
+        case MAP_NUM(SILPH_CO_3F):
+            sElevatorScroll = 4;
+            sElevatorCursorPos = 4;
+            break;
+        case MAP_NUM(SILPH_CO_2F):
+            sElevatorScroll = 5;
+            sElevatorCursorPos = 4;
+            break;
+        case MAP_NUM(SILPH_CO_1F):
+            sElevatorScroll = 5;
+            sElevatorCursorPos = 5;
+            break;
+        case MAP_NUM(ROCKET_HIDEOUT_B1F):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 0;
+            break;
+        case MAP_NUM(ROCKET_HIDEOUT_B2F):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 1;
+            break;
+        case MAP_NUM(ROCKET_HIDEOUT_B4F):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 2;
             break;
         }
     }
-
-    return sLilycoveDeptStore_DefaultFloorChoice;
+    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(CELADON_CITY_DEPARTMENT_STORE_1F))
+    {
+        switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
+        {
+        case MAP_NUM(CELADON_CITY_DEPARTMENT_STORE_5F):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 0;
+            break;
+        case MAP_NUM(CELADON_CITY_DEPARTMENT_STORE_4F):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 1;
+            break;
+        case MAP_NUM(CELADON_CITY_DEPARTMENT_STORE_3F):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 2;
+            break;
+        case MAP_NUM(CELADON_CITY_DEPARTMENT_STORE_2F):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 3;
+            break;
+        case MAP_NUM(CELADON_CITY_DEPARTMENT_STORE_1F):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 4;
+            break;
+        }
+    }
+    return sElevatorCursorPos;
 }
 
 void MoveElevator(void)
@@ -1771,7 +1937,7 @@ static void Task_MoveElevatorWindowLights(u8 taskId)
             for (y = 0; y < 3; y++)
             {
                 for (x = 0; x < 3; x++)
-                    MapGridSetMetatileIdAt(x + MAP_OFFSET + 1, y + MAP_OFFSET, sElevatorWindowTiles_Ascending[y][data[0] % 3] | MAPGRID_COLLISION_MASK);
+                    MapGridSetMetatileIdAt(x + MAP_OFFSET + 1, y + MAP_OFFSET, sElevatorWindowMetatilesGoingUp[y][data[0] % 3] | MAPGRID_COLLISION_MASK);
             }
         }
         // descending
@@ -1780,7 +1946,7 @@ static void Task_MoveElevatorWindowLights(u8 taskId)
             for (y = 0; y < 3; y++)
             {
                 for (x = 0; x < 3; x++)
-                    MapGridSetMetatileIdAt(x + MAP_OFFSET + 1, y + MAP_OFFSET, sElevatorWindowTiles_Descending[y][data[0] % 3] | MAPGRID_COLLISION_MASK);
+                    MapGridSetMetatileIdAt(x + MAP_OFFSET + 1, y + MAP_OFFSET, sElevatorWindowMetatilesGoingDown[y][data[0] % 3] | MAPGRID_COLLISION_MASK);
             }
         }
         DrawWholeMapView();

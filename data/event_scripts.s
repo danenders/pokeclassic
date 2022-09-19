@@ -799,7 +799,6 @@ gText_MomOrDadMightLikeThisProgram::
 	.string "Better get going!$"
 
 gText_WhichFloorWouldYouLike::
-	.string "Welcome to Lilycove Department Store.\p"
 	.string "Which floor would you like?$"
 
 gText_SandstormIsVicious::

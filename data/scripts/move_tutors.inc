@@ -269,6 +269,49 @@ MoveTutor_Text_SoftBoiledTaught::
 
 
 
+MoveTutor_Counter::
+    lock
+    faceplayer
+    msgbox MoveTutor_Text_CounterTeach, MSGBOX_YESNO
+    goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_CounterDeclined
+    msgbox MoveTutor_Text_CounterWhichMon, MSGBOX_DEFAULT
+    setvar VAR_0x8005, TUTOR_MOVE_COUNTER
+    call MoveTutor_EventScript_OpenPartyMenu
+    goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_CounterDeclined
+    goto MoveTutor_EventScript_CounterTaught
+    end
+
+MoveTutor_Text_CounterTeach::
+    .string "Oh, hi!\n"
+    .string "I finally finished that RomHack!\p"
+    .string "Not done yet? How about I teach\n"
+    .string "you a good move?\p"
+    .string "The move I have in mind is\n"
+    .string "Counter.\p"
+    .string "Not like the one I'm leaning on,\n"
+    .string "mind you!$"
+
+MoveTutor_EventScript_CounterDeclined::
+    msgbox MoveTutor_Text_CounterDeclined, MSGBOX_DEFAULT
+    release
+    end
+
+MoveTutor_Text_CounterDeclined::
+    .string "You're not interested? Come see\n"
+    .string "me if you change your mind.$"
+
+MoveTutor_Text_CounterWhichMon::
+    .string "Which Pokémon should I teach\n"
+    .string "Counter to?$"
+
+MoveTutor_EventScript_CounterTaught::
+    msgbox MoveTutor_Text_CounterTaught, MSGBOX_DEFAULT
+    release
+    end
+
+MoveTutor_Text_CounterTaught::
+   .string "Are you using that Counter move\n"
+    .string "I taught your Pokémon?$"
 
 
 

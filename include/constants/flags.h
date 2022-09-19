@@ -97,9 +97,9 @@
 #define FLAG_GOT_TEA                        0x4F 
 #define FLAG_TALKED_TO_TEA_LADY_POSTGAME    0x50 
 #define FLAG_GOT_PORYGON    		        0x51 // The rooftop Eevee is replaced with a Porygon. Not really "story" related though.
-#define FLAG_UNUSED_0x052    		0x52
-#define FLAG_UNUSED_0x053    		0x53 
-#define FLAG_UNUSED_0x054    		0x54
+#define FLAG_GOT_TM16_FROM_THIRSTY_GIRL    	0x52
+#define FLAG_GOT_TM20_FROM_THIRSTY_GIRL    	0x53 
+#define FLAG_GOT_TM33_FROM_THIRSTY_GIRL    	0x54
 #define FLAG_UNUSED_0x055    		0x55  
 #define FLAG_UNUSED_0x056         	0x56  
 #define FLAG_UNUSED_0x057         	0x57

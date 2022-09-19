@@ -110,8 +110,13 @@
 #define MULTI_HOENN_COSTUMES               101
 #define MULTI_SINNOH_COSTUMES              102
 #define MULTI_BILLS_POKEMON				   103
-
-#define MULTI_UNUSED_104                   104
+#define MULTI_FRESH_WATER                  104
+#define MULTI_SODA_POP                     105
+#define MULTI_FRESH_WATER_SODA_POP         106
+#define MULTI_LEMONADE                     107
+#define MULTI_FRESH_WATER_LEMONADE         108
+#define MULTI_SODA_POP_LEMONADE            109
+#define MULTI_ALL_DRINKS 				   110
 #define MULTI_UNUSED_105                   105
 #define MULTI_UNUSED_106		           106
 #define MULTI_UNUSED_107                   107
