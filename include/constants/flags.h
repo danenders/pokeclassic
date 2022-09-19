@@ -100,10 +100,10 @@
 #define FLAG_GOT_TM16_FROM_THIRSTY_GIRL    	0x52
 #define FLAG_GOT_TM20_FROM_THIRSTY_GIRL    	0x53 
 #define FLAG_GOT_TM33_FROM_THIRSTY_GIRL    	0x54
-#define FLAG_UNUSED_0x055    		0x55  
-#define FLAG_UNUSED_0x056         	0x56  
-#define FLAG_UNUSED_0x057         	0x57
-#define FLAG_UNUSED_0x058           0x58
+#define FLAG_OPENED_ROCKET_HIDEOUT    		0x55  
+#define FLAG_GOT_10_COINS_FROM_GAMBLER      0x56  
+#define FLAG_GOT_20_COINS_FROM_GAMBLER      0x57
+#define FLAG_GOT_20_COINS_FROM_GAMBLER_2    0x58
 #define FLAG_UNUSED_0x059           0x59
 #define FLAG_UNUSED_0x05A           0x5A
 #define FLAG_UNUSED_0x05B        	0x5B
@@ -474,7 +474,7 @@
 #define FLAG_QUEUE_AIDE_CALL           		 0x1BD // Aide is prepped to call player about a new item
 #define FLAG_RECEIVED_AIDE_EVERSTONE         0x1BE // Tracks the Everstone given by the Aide, since the others are Key Items
 #define FLAG_GOT_SEVEN_BADGES                0x1BF // Used for Scott Match Call tracking
-#define FLAG_UNUSED_0x1C0               	 0x1C0
+#define FLAG_GAME_CORNER_SERVICE_DAY         0x1C0 // Instead of PokeNews, the game corner will check if it's a Service Day and set this flag for better odds.
 #define FLAG_UNUSED_0x1C1 					 0x1C1
 #define FLAG_UNUSED_0x1C2 					 0x1C2
 #define FLAG_UNUSED_0x1C3 					 0x1C3
@@ -833,8 +833,8 @@
 #define FLAG_HIDE_CELADON_POLICE                            		0x31A
 #define FLAG_HIDE_CELADON_ROOFTOP_JESSIE_JAMES                      0x31B //Jessie + James secret battle 2. 
 #define FLAG_HIDE_CELADON_ROOFTOP_ROCKET                          	0x31C //
-#define FLAG_HIDE_UNUSED_71                         				0x31D // Handles the story mode rocket plans. Postgame rocket plans handled elsewhere.
-#define FLAG_HIDE_UNUSED_72                          					0x31E
+#define FLAG_HIDE_GAME_CORNER_ENGINEER                         		0x31D // Engineer only appears on service days.
+#define FLAG_HIDE_GAME_CORNER_ROCKET                          		0x31E
 #define FLAG_HIDE_UNUSED_73                          					0x31F
 #define FLAG_HIDE_UNUSED_74                                           0x320
 #define FLAG_HIDE_UNUSED_75                                           0x321
@@ -1588,8 +1588,8 @@
 #define FLAG_DAILY_GOT_TEA       					(DAILY_FLAGS_START + 0x10)  // If you don't have one, you can get a Tea once per day.
 #define FLAG_DAILY_GUARD_TEA               			(DAILY_FLAGS_START + 0x11)  // Giving the guards tea once per day will unlock something. Reward tbd.
 #define FLAG_DAILY_FANCLUB_REWARD        			(DAILY_FLAGS_START + 0x12)  // Fanclub chairman gives 1 rare candy every day
+#define FLAG_DAILY_GAME_CORNER_SERVICE_DAY_CHECKED  (DAILY_FLAGS_START + 0x13)   
 
-#define FLAG_UNUSED_0x933                           (DAILY_FLAGS_START + 0x13)   // Unused Flag
 #define FLAG_UNUSED_0x934                			(DAILY_FLAGS_START + 0x14)  // Unused Flag
 #define FLAG_UNUSED_0x935                           (DAILY_FLAGS_START + 0x15) // Unused Flag
 #define FLAG_UNUSED_0x936                           (DAILY_FLAGS_START + 0x16) // Unused Flag

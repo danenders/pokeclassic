@@ -3481,7 +3481,19 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RooftopJessieJames[] = {
         .species = SPECIES_MEOWTH,
     },
 };
-
+//Game Corner
+static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt7[] = {
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_RATICATE,
+    },
+    {
+        .iv = 0,
+        .lvl = 20,
+        .species = SPECIES_ZUBAT,
+    },
+};
 
 
 

@@ -2622,7 +2622,19 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_RooftopJessieJames),
         .party = {.NoItemDefaultMoves = sParty_RooftopJessieJames}
     },
-
+//Game Corner
+    [TRAINER_TEAM_ROCKET_GRUNT_7] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+        .trainerName = _("Grunt"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_TeamRocketGrunt7),
+        .party = {.NoItemDefaultMoves = sParty_TeamRocketGrunt7}
+    },
 
 
 

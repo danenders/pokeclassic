@@ -1,5 +1,15 @@
 CeladonCity_DepartmentStore_Roof_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, CeladonCity_DepartmentStore_Roof_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, CeladonCity_DepartmentStore_Roof_OnResume
 	.byte 0
+
+CeladonCity_DepartmentStore_Roof_OnTransition::
+	call Common_EventScript_GetDayOrNight
+	end
+
+CeladonCity_DepartmentStore_Roof_OnResume::
+	call Common_EventScript_GetDayOrNight
+	end
 
 CeladonCity_DepartmentStore_Roof_EventScript_ThirstyGirl::
 	lock
