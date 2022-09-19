@@ -1673,8 +1673,33 @@ static const u8 sElevatorWindowAnimDuration[] = {
 
 void SetDeptStoreFloor(void)
 {
-    u16 floor = 4;
+    u16 floor;
+
+    if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(ROCKET_HIDEOUT_B1F))
+        {
+            floor = 4;
+        }
+    else
+        {
+            floor = 3;
+        }
+
     if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(ROCKET_HIDEOUT_B1F))
+    {
+        switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
+        {
+        case MAP_NUM(ROCKET_HIDEOUT_B1F):
+            floor = 3;
+            break;
+        case MAP_NUM(ROCKET_HIDEOUT_B2F):
+            floor = 2;
+            break;
+        case MAP_NUM(ROCKET_HIDEOUT_B4F):
+            floor = 0;
+            break;
+        }
+    }
+    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(SILPH_CO_1F))
     {
         switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
         {
@@ -1711,19 +1736,11 @@ void SetDeptStoreFloor(void)
         case MAP_NUM(SILPH_CO_11F):
             floor = 14;
             break;
-        case MAP_NUM(ROCKET_HIDEOUT_B1F):
-            floor = 3;
-            break;
-        case MAP_NUM(ROCKET_HIDEOUT_B2F):
-            floor = 2;
-            break;
-        case MAP_NUM(ROCKET_HIDEOUT_B4F):
-            floor = 0;
-            break;
         }
     }
     if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(CELADON_CITY_DEPARTMENT_STORE_1F))
     {
+        u16 floor = 4;
         switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
         {
         case MAP_NUM(CELADON_CITY_DEPARTMENT_STORE_1F):
@@ -1752,6 +1769,24 @@ u16 GetDeptStoreDefaultFloorChoice(void)
     sElevatorCursorPos = 0;
 
     if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(ROCKET_HIDEOUT_B1F))
+    {
+        switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
+        {
+        case MAP_NUM(ROCKET_HIDEOUT_B1F):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 0;
+            break;
+        case MAP_NUM(ROCKET_HIDEOUT_B2F):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 1;
+            break;
+        case MAP_NUM(ROCKET_HIDEOUT_B4F):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 2;
+            break;
+        }
+    }
+    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(SILPH_CO_1F))
     {
         switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
         {
@@ -1798,18 +1833,6 @@ u16 GetDeptStoreDefaultFloorChoice(void)
         case MAP_NUM(SILPH_CO_1F):
             sElevatorScroll = 5;
             sElevatorCursorPos = 5;
-            break;
-        case MAP_NUM(ROCKET_HIDEOUT_B1F):
-            sElevatorScroll = 0;
-            sElevatorCursorPos = 0;
-            break;
-        case MAP_NUM(ROCKET_HIDEOUT_B2F):
-            sElevatorScroll = 0;
-            sElevatorCursorPos = 1;
-            break;
-        case MAP_NUM(ROCKET_HIDEOUT_B4F):
-            sElevatorScroll = 0;
-            sElevatorCursorPos = 2;
             break;
         }
     }

@@ -641,8 +641,7 @@ Movement_GCRocketAppears:
 	step_end
 
 GameCorner_EventScript_RocketBattle::
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_7, GameCorner_Text_GruntIntro, GameCorner_Text_GruntDefeat, GameCorner_Text_DefeatedGrunt
-	msgbox GameCorner_Text_GruntPostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_7, GameCorner_Text_GruntIntro, GameCorner_Text_GruntDefeat, GameCorner_EventScript_DefeatedGrunt
 	end
 
 GameCorner_Text_GruntIntro::
@@ -653,13 +652,12 @@ GameCorner_Text_GruntIntro::
 GameCorner_Text_GruntDefeat::
     .string "Dang!$"
 
-GameCorner_Text_DefeatedGrunt::
-	msgbox GameCorner_Text_GruntPostBattle
-	closemessage
-	applymovement LOCALID_GRUNT, Movement_GCGruntExit
+GameCorner_EventScript_DefeatedGrunt::
+	msgbox GameCorner_Text_GruntPostBattle, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_ROCKET, Movement_GCGruntExit
 	waitmovement 11
 	playse SE_EXIT
-	removeobject LOCALID_GRUNT
+	removeobject LOCALID_ROCKET
 	release
 	end
 

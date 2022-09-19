@@ -967,6 +967,16 @@ Common_EventScript_RemoveStaticPokemon::
 	release
 	end
 
+SpinTile_HideFollower::
+	setvar VAR_FOLLOWER_VISIBILITY, 1
+	setflag FLAG_HIDE_FOLLOWER
+	end
+
+SpinTile_ShowFollower::
+	setvar VAR_FOLLOWER_VISIBILITY, 0
+	clearflag FLAG_HIDE_FOLLOWER
+	end
+
 Common_EventScript_AwakenSnorlax::
     message Text_PlayedPokeFlute
     waitmessage

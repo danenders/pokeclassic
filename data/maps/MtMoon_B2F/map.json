@@ -16,6 +16,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
+      "in_connection": false,
       "x": 13,
       "y": 7,
       "elevation": 3,
@@ -29,6 +30,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
+      "in_connection": false,
       "x": 14,
       "y": 7,
       "elevation": 3,
@@ -42,6 +44,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+      "in_connection": false,
       "x": 13,
       "y": 11,
       "elevation": 3,
@@ -55,6 +58,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_M",
+      "in_connection": false,
       "x": 37,
       "y": 21,
       "elevation": 3,
@@ -68,6 +72,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_F",
+      "in_connection": false,
       "x": 12,
       "y": 20,
       "elevation": 3,
@@ -81,6 +86,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_F",
+      "in_connection": false,
       "x": 35,
       "y": 12,
       "elevation": 3,
@@ -94,6 +100,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_M",
+      "in_connection": false,
       "x": 18,
       "y": 27,
       "elevation": 3,
@@ -107,6 +114,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GREAT_BALL",
+      "in_connection": false,
       "x": 35,
       "y": 5,
       "elevation": 3,
@@ -120,6 +128,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "in_connection": false,
       "x": 30,
       "y": 26,
       "elevation": 3,
@@ -133,6 +142,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "in_connection": false,
       "x": 3,
       "y": 11,
       "elevation": 3,
@@ -146,6 +156,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "in_connection": false,
       "x": 24,
       "y": 6,
       "elevation": 3,
@@ -159,6 +170,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_JESSIE",
+      "in_connection": false,
       "x": 12,
       "y": 5,
       "elevation": 3,
@@ -172,6 +184,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_JAMES",
+      "in_connection": false,
       "x": 12,
       "y": 6,
       "elevation": 3,

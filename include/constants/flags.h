@@ -590,8 +590,8 @@
 #define FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_ICE_HEAL               (FLAG_HIDDEN_ITEMS_START + 0x38)
 #define FLAG_HIDDEN_ITEM_ROUTE7_WEPEAR_BERRY                                      (FLAG_HIDDEN_ITEMS_START + 0x39)
 #define FLAG_HIDDEN_ITEM_CELADON_CITY_PP_UP      	                              (FLAG_HIDDEN_ITEMS_START + 0x3A)
-#define FLAG_HIDDEN_ITEM_59     		(FLAG_HIDDEN_ITEMS_START + 0x3B)
-#define FLAG_HIDDEN_ITEM_60     		(FLAG_HIDDEN_ITEMS_START + 0x3C)
+#define FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B1F_PP_UP     		                      (FLAG_HIDDEN_ITEMS_START + 0x3B)
+#define FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B3F_NUGGET     		                      (FLAG_HIDDEN_ITEMS_START + 0x3C)
 #define FLAG_HIDDEN_ITEM_61           	(FLAG_HIDDEN_ITEMS_START + 0x3D)
 #define FLAG_HIDDEN_ITEM_62             (FLAG_HIDDEN_ITEMS_START + 0x3E)
 #define FLAG_HIDDEN_ITEM_63             (FLAG_HIDDEN_ITEMS_START + 0x3F)
@@ -835,9 +835,9 @@
 #define FLAG_HIDE_CELADON_ROOFTOP_ROCKET                          	0x31C //
 #define FLAG_HIDE_GAME_CORNER_ENGINEER                         		0x31D // Engineer only appears on service days.
 #define FLAG_HIDE_GAME_CORNER_ROCKET                          		0x31E
-#define FLAG_HIDE_UNUSED_73                          					0x31F
-#define FLAG_HIDE_UNUSED_74                                           0x320
-#define FLAG_HIDE_UNUSED_75                                           0x321
+#define FLAG_HIDE_HIDEOUT_CUBONE                          		    0x31F
+#define FLAG_HIDE_HIDEOUT_GIOVANNI                                  0x320
+#define FLAG_HIDE_UNUSED_75                                         0x321
 #define FLAG_HIDE_UNUSED_76                    						0x322
 #define FLAG_HIDE_UNUSED_77                   						0x323
 #define FLAG_HIDE_UNUSED_78                               			0x324
@@ -1085,19 +1085,19 @@
 #define FLAG_HIDE_POKEMON_TOWER_6F_X_ACCURACY                       0x414
 #define FLAG_HIDE_POKEMON_TOWER_6F_RARE_CANDY                     	0x415
 #define FLAG_HIDE_CELADON_CITY_ETHER                     			0x416
-#define FLAG_UNUSED_ITEM_0x417                          			0x417
-#define FLAG_UNUSED_ITEM_0x418                          			0x418
-#define FLAG_UNUSED_ITEM_0x419                         				0x419
-#define FLAG_UNUSED_ITEM_0x41A                      				0x41A
-#define FLAG_UNUSED_ITEM_0x41B                       				0x41B
-#define FLAG_UNUSED_ITEM_0x41C                            			0x41C
-#define FLAG_UNUSED_ITEM_0x41D                           			0x41D
-#define FLAG_UNUSED_ITEM_0x41E                       				0x41E
-#define FLAG_UNUSED_ITEM_0x41F                          			0x41F
-#define FLAG_UNUSED_ITEM_0x420                        				0x420
-#define FLAG_UNUSED_ITEM_0x421                               		0x421
-#define FLAG_UNUSED_ITEM_0x422                             			0x422
-#define FLAG_UNUSED_ITEM_0x423                    					0x423
+#define FLAG_HIDE_ROCKET_HIDEOUT_B1F_HYPER_POTION                   0x417
+#define FLAG_HIDE_ROCKET_HIDEOUT_B1F_ESCAPE_ROPE                    0x418
+#define FLAG_HIDE_ROCKET_HIDEOUT_B2F_X_SPEED                        0x419
+#define FLAG_HIDE_ROCKET_HIDEOUT_B2F_TM12                      		0x41A
+#define FLAG_HIDE_ROCKET_HIDEOUT_B2F_MOON_STONE                     0x41B
+#define FLAG_HIDE_ROCKET_HIDEOUT_B2F_SUPER_POTION                   0x41C
+#define FLAG_HIDE_ROCKET_HIDEOUT_B3F_RARE_CANDY                     0x41D
+#define FLAG_HIDE_ROCKET_HIDEOUT_B3F_TM21                       	0x41E
+#define FLAG_HIDE_ROCKET_HIDEOUT_B3F_BLACK_GLASSES                  0x41F
+#define FLAG_HIDE_LIFT_KEY                        				    0x420
+#define FLAG_HIDE_ROCKET_HIDEOUT_B4F_TM49                           0x421
+#define FLAG_HIDE_ROCKET_HIDEOUT_B4F_MAX_ETHER                      0x422
+#define FLAG_HIDE_ROCKET_HIDEOUT_B4F_CALCIUM                    	0x423
 #define FLAG_UNUSED_ITEM_0x424                 						0x424
 #define FLAG_UNUSED_ITEM_0x425                 						0x425
 #define FLAG_UNUSED_ITEM_0x426                  					0x426
