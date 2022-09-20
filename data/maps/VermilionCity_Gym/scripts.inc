@@ -282,8 +282,7 @@ VermilionCity_Gym_Text_ExplainBadge::
     .string "Pokémon to use Fly out of battle.\p"
     .string "If they know the move, they can get\n" 
     .string "around lightning-quick anytime!\p"
-    .string "You're special, kid!\n"
-    .string "Take this!$"
+    .string "You're special, kid!$"
 
 VermilionCity_Gym_EventScript_GetTM::
 	msgbox VermilionCity_Gym_Text_TakeThisWithYou, MSGBOX_DEFAULT
@@ -299,7 +298,7 @@ VermilionCity_Gym_EventScript_GetTM::
 	end
 
 VermilionCity_Gym_Text_TakeThisWithYou::
-	 .string "You can also have my favorite TM.$"
+    .string "Take this!$"
 
 VermilionCity_Gym_Text_ReceivedTM::
     .string "{PLAYER} received TM34\n"

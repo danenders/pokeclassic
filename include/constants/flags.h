@@ -101,7 +101,7 @@
 #define FLAG_GOT_TM20_FROM_THIRSTY_GIRL    	0x53 
 #define FLAG_GOT_TM33_FROM_THIRSTY_GIRL    	0x54
 #define FLAG_OPENED_ROCKET_HIDEOUT    		0x55  
-#define FLAG_UNUSED_0x56             0x56            
+#define FLAG_GOT_ERIKA_REWARD               0x56            
 #define FLAG_UNUSED_0x57             0x57        
 #define FLAG_UNUSED_0x58             0x58        
 #define FLAG_UNUSED_0x059           0x59
