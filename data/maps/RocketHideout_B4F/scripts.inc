@@ -1,6 +1,10 @@
-.set LOCALID_GIOVANNI,    1
-.set LOCALID_CUBONE, 	  2
-.set LOCALID_LIFT_KEY,    8
+.set LOCALID_GIOVANNI,  1
+.set LOCALID_CUBONE, 	2
+.set LOCALID_JAMES,		3
+.set LOCALID_ROCKET2,	4
+.set LOCALID_ROCKET3,  	5
+.set LOCALID_JESSIE,	6
+.set LOCALID_LIFT_KEY,  7
 
 .set NUM_DOOR_GRUNTS_DEFEATED, VAR_TEMP_1
 
@@ -42,6 +46,10 @@ RocketHideout_B4F_EventScript_Giovanni::
 	closemessage
 	removeobject LOCALID_GIOVANNI
 	setflag FLAG_HIDE_CELADON_ROCKETS
+	removeobject LOCALID_JESSIE
+	removeobject LOCALID_JAMES
+	removeobject LOCALID_ROCKET2
+	removeobject LOCALID_ROCKET3
 	fadescreen FADE_FROM_BLACK
 	goto RocketHideout_B4F_EventScript_Cubone
 	end
@@ -66,7 +74,7 @@ RocketHideout_B4F_Text_GiovanniPostBattle::
     .string "Pokémon with utmost care.\p"
     .string "A child like you would never\n"
     .string "understand what I hope to achieve.\p"
-    .string "I shall step aside this time, and"
+    .string "I shall step aside this time, and\n"
     .string "release this Cubone back to you.$"
 
 RocketHideout_B4F_Text_MeetAgain::
@@ -106,6 +114,8 @@ RocketHideout_B4F_EventScript_LiftKey::
 	end
 
 RocketHideout_B4F_EventScript_Grunt2::
+	lock
+	faceplayer
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_16, RocketHideout_B4F_Text_Grunt2Intro, RocketHideout_B4F_Text_Grunt2Defeat, RocketHideout_B4F_EventScript_DefeatedGrunt2
 	msgbox RocketHideout_B4F_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -133,6 +143,8 @@ RocketHideout_B4F_EventScript_DefeatedGrunt2::
 	end
 
 RocketHideout_B4F_EventScript_Grunt3::
+	lock
+	faceplayer
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_17, RocketHideout_B4F_Text_Grunt3Intro, RocketHideout_B4F_Text_Grunt3Defeat, RocketHideout_B4F_EventScript_DefeatedGrunt3
 	msgbox RocketHideout_B4F_Text_Grunt3PostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -236,7 +248,7 @@ RocketHideout_B4F_EventScript_ItemCalcium::
 	end
 
 RocketHideout_B4F_EventScript_Cubone::
-	delay 10
+	delay 30
 	playse SE_PIN
 	applymovement LOCALID_CUBONE, Common_Movement_ExclamationMark
 	waitmovement 2
