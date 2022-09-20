@@ -226,22 +226,32 @@ static const struct MenuAction MultichoiceList_Satisfaction[] =
     {gText_Dissatisfied},
 };
 
-static const struct MenuAction MultichoiceList_GameCornerDolls[] =
+static const struct MenuAction MultichoiceList_GameCornerBigDolls[] =
 {
-    {gText_TreeckoDollAndPrice},
-    {gText_TorchicDollAndPrice},
-    {gText_MudkipDollAndPrice},
-    {gText_Exit},
+    {gText_LaprasDollAndPrice},
+    {gText_SnorlaxDollAndPrice},
+    {gText_RhydonDollAndPrice},
+    {gText_VenusaurDollAndPrice},
+    {gText_CharizardDollAndPrice},
+    {gText_BlastoiseDollAndPrice},
 };
 
-static const struct MenuAction MultichoiceList_GameCornerTMs[] =
+static const struct MenuAction MultichoiceList_GameCornerDolls[] =
 {
-    {gText_TM32AndPrice},
-    {gText_TM29AndPrice},
-    {gText_TM35AndPrice},
-    {gText_TM24AndPrice},
-    {gText_TM13AndPrice},
-    {gText_Exit},
+    {gText_MeowthDollAndPrice},
+    {gText_ClefairyDollAndPrice},
+    {gText_JigglypuffDollAndPrice},
+    {gText_DittoDollAndPrice},
+    {gText_PikachuDollAndPrice},
+};
+
+static const struct MenuAction MultichoiceList_GameCornerCushions[] =
+{
+    {gText_PokeballCushionAndPrice},
+    {gText_LeafCushionAndPrice},
+    {gText_FireCushionAndPrice},
+    {gText_WaterCushionAndPrice},
+    {gText_PikachuCushionAndPrice},
 };
 
 static const struct MenuAction MultichoiceList_GameCornerCoins[] =
@@ -861,12 +871,13 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_ACRO_BIKE_INFO]             = MULTICHOICE(MultichoiceList_AcroBikeInfo),
     [MULTI_SATISFACTION]               = MULTICHOICE(MultichoiceList_Satisfaction),
     [MULTI_GAME_CORNER_DOLLS]          = MULTICHOICE(MultichoiceList_GameCornerDolls),
+    [MULTI_GAME_CORNER_BIG_DOLLS]      = MULTICHOICE(MultichoiceList_GameCornerBigDolls),
+    [MULTI_GAME_CORNER_CUSHIONS]       = MULTICHOICE(MultichoiceList_GameCornerCushions),
     [MULTI_GAME_CORNER_COINS]          = MULTICHOICE(MultichoiceList_GameCornerCoins),
     [MULTI_HOWS_FISHING]               = MULTICHOICE(MultichoiceList_HowsFishing),
     [MULTI_SSTIDAL_SLATEPORT_WITH_BF]  = MULTICHOICE(MultichoiceList_SSTidalSlateportWithBF),
     [MULTI_SSTIDAL_BATTLE_FRONTIER]    = MULTICHOICE(MultichoiceList_SSTidalBattleFrontier),
     [MULTI_RIGHTLEFT]                  = MULTICHOICE(MultichoiceList_RightLeft),
-    [MULTI_GAME_CORNER_TMS]            = MULTICHOICE(MultichoiceList_GameCornerTMs),
     [MULTI_SSTIDAL_SLATEPORT_NO_BF]    = MULTICHOICE(MultichoiceList_SSTidalSlateportNoBF),
     [MULTI_FLOORS]                     = MULTICHOICE(MultichoiceList_Floors),
     [MULTI_SHARDS_R]                   = MULTICHOICE(MultichoiceList_ShardsR),

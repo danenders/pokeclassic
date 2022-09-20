@@ -685,18 +685,28 @@ extern const u8 gText_KissPoster16BP[];
 extern const u8 gText_KissCushion32BP[];
 extern const u8 gText_SmoochumDoll32BP[];
 extern const u8 gText_TogepiDoll48BP[];
-extern const u8 gText_MeowthDoll48BP[];
-extern const u8 gText_ClefairyDoll48BP[];
-extern const u8 gText_DittoDoll48BP[];
 extern const u8 gText_CyndaquilDoll80BP[];
 extern const u8 gText_ChikoritaDoll80BP[];
 extern const u8 gText_TotodileDoll80BP[];
 
-extern const u8 gText_LaprasDoll128BP[];
-extern const u8 gText_SnorlaxDoll128BP[];
-extern const u8 gText_VenusaurDoll256BP[];
-extern const u8 gText_CharizardDoll256BP[];
-extern const u8 gText_BlastoiseDoll256BP[];
+extern const u8 gText_MeowthDollAndPrice[];
+extern const u8 gText_ClefairyDollAndPrice[];
+extern const u8 gText_DittoDollAndPrice[];
+extern const u8 gText_PikachuDollAndPrice[];
+extern const u8 gText_JigglypuffDollAndPrice[];
+
+extern const u8 gText_PokeballCushionAndPrice[];
+extern const u8 gText_PikachuCushionAndPrice[];
+extern const u8 gText_WaterCushionAndPrice[];
+extern const u8 gText_FireCushionAndPrice[];
+extern const u8 gText_LeafCushionAndPrice[];
+
+extern const u8 gText_RhydonDollAndPrice[];
+extern const u8 gText_LaprasDollAndPrice[];
+extern const u8 gText_SnorlaxDollAndPrice[];
+extern const u8 gText_VenusaurDollAndPrice[];
+extern const u8 gText_CharizardDollAndPrice[];
+extern const u8 gText_BlastoiseDollAndPrice[];
 
 extern const u8 gText_Protein1BP[];
 extern const u8 gText_Calcium1BP[];

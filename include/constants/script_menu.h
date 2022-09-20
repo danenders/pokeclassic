@@ -46,11 +46,11 @@
 #define MULTI_TRAINER_SCHOOL_WHITEBOARD    37
 #define MULTI_GAME_CORNER_DOLLS            38
 #define MULTI_GAME_CORNER_COINS            39
-#define MULTI_HOWS_FISHING                 40
-#define MULTI_SSTIDAL_SLATEPORT_WITH_BF    41
-#define MULTI_SSTIDAL_BATTLE_FRONTIER      42
-#define MULTI_RIGHTLEFT                    43
-#define MULTI_GAME_CORNER_TMS              44
+#define MULTI_GAME_CORNER_CUSHIONS         40
+#define MULTI_HOWS_FISHING                 41
+#define MULTI_SSTIDAL_SLATEPORT_WITH_BF    42
+#define MULTI_SSTIDAL_BATTLE_FRONTIER      43
+#define MULTI_RIGHTLEFT                    44
 #define MULTI_SSTIDAL_SLATEPORT_NO_BF      45
 #define MULTI_FLOORS                       46
 #define MULTI_SHARDS_R                     47
@@ -118,7 +118,7 @@
 #define MULTI_SODA_POP_LEMONADE            109
 #define MULTI_ALL_DRINKS 				   110
 #define MULTI_HIDEOUT_FLOORS               111
-#define MULTI_UNUSED_112		           112
+#define MULTI_GAME_CORNER_BIG_DOLLS		   112
 #define MULTI_UNUSED_113                   113
 #define MULTI_UNUSED_114                   114
 #define MULTI_UNUSED_115                   115
