@@ -23,10 +23,12 @@ GameCorner_EventScript_HideRocketHideout::
 	return
 
 GameCorner_OnTransition::
+	call_if_unset FLAG_DAILY_COIN_REFRESH, GameCorner_RefreshCoins
 	call_if_unset FLAG_DAILY_GAME_CORNER_SERVICE_DAY_CHECKED, GameCorner_CheckServiceDay
 	end
 
 GameCorner_OnResume::
+	call_if_unset FLAG_DAILY_COIN_REFRESH, GameCorner_RefreshCoins
 	call_if_unset FLAG_DAILY_GAME_CORNER_SERVICE_DAY_CHECKED, GameCorner_CheckServiceDay
 	end
 
@@ -47,6 +49,73 @@ GameCorner_EventScript_Engineer::
 
 GameCorner_Text_ServiceDay::
 	.string "I'm servicing the machines today!$"
+
+
+GameCorner_RefreshCoins::
+	setflag FLAG_DAILY_COIN_REFRESH
+	random 12
+	switch VAR_RESULT
+	case 0 GameCorner_RefreshCoins_1
+	case 1 GameCorner_RefreshCoins_2
+	case 2 GameCorner_RefreshCoins_3
+	case 3 GameCorner_RefreshCoins_4
+	case 4 GameCorner_RefreshCoins_5
+	case 5 GameCorner_RefreshCoins_6
+	case 6 GameCorner_RefreshCoins_7
+	case 7 GameCorner_RefreshCoins_8
+	case 8 GameCorner_RefreshCoins_9
+	case 9 GameCorner_RefreshCoins_10
+	case 10 GameCorner_RefreshCoins_11
+	case 11 GameCorner_RefreshCoins_12
+	end
+
+GameCorner_RefreshCoins_1::
+	clearflag FLAG_FOUND_10_COINS_1
+	end
+
+GameCorner_RefreshCoins_2::
+	clearflag FLAG_FOUND_10_COINS_2
+	end
+
+GameCorner_RefreshCoins_3::
+	clearflag FLAG_FOUND_10_COINS_3
+	end
+
+GameCorner_RefreshCoins_4::
+	clearflag FLAG_FOUND_10_COINS_4
+	end
+
+GameCorner_RefreshCoins_5::
+	clearflag FLAG_FOUND_10_COINS_5
+	end
+
+GameCorner_RefreshCoins_6::
+	clearflag FLAG_FOUND_10_COINS_6
+	end
+
+GameCorner_RefreshCoins_7::
+	clearflag FLAG_FOUND_10_COINS_7
+	end
+
+GameCorner_RefreshCoins_8::
+	clearflag FLAG_FOUND_10_COINS_8
+	end
+
+GameCorner_RefreshCoins_9::
+	clearflag FLAG_FOUND_20_COINS_1
+	end
+
+GameCorner_RefreshCoins_10::
+	clearflag FLAG_FOUND_20_COINS_2
+	end
+
+GameCorner_RefreshCoins_11::
+	clearflag FLAG_FOUND_40_COINS
+	end
+
+GameCorner_RefreshCoins_12::
+	clearflag FLAG_FOUND_100_COINS
+	end
 
 GameCorner_EventScript_CoinsClerk::
 	lock
