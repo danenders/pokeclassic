@@ -5,13 +5,13 @@ Route10_PokemonCenter_1F_MapScripts::
 	.byte 0
 
 Route10_PokemonCenter_1F_OnTransition::
-	call_if_unset FLAG_RECEIVED_ITEMFINDER, Route10_PokemonCenter_1F_EventScript_CheckAideAppearance
+	call_if_unset FLAG_RECEIVED_AIDE_EVERSTONE, Route10_PokemonCenter_1F_EventScript_CheckAideAppearance
 	setrespawn HEAL_LOCATION_ROUTE_10
 	end
 
 @Check if you've completed the requirement and Cedar has called you
 Route10_PokemonCenter_1F_EventScript_CheckAideAppearance::
-	goto_if_unset FLAG_BADGE03_GET, Common_EventScript_Return
+	goto_if_unset FLAG_BADGE02_GET, Common_EventScript_Return
 	goto_if_unset FLAG_AIDE_LOCATION_2, Common_EventScript_Return
 	goto_if_lt VAR_AIDE_CALL_STEP_COUNTER, 200, Common_EventScript_Return
 	clearflag FLAG_HIDE_AIDE_ROUTE10

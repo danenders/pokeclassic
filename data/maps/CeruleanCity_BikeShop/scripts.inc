@@ -70,7 +70,7 @@ CeruleanCity_BikeShop_EventScript_ExchangeBikeVoucher::
 	waitfanfare
 	closemessage
 	setflag FLAG_RECEIVED_BIKE
-	additem ITEM_ACRO_BIKE, 1
+	additem ITEM_MACH_BIKE, 1
 	removeitem ITEM_BIKE_VOUCHER
 	msgbox CeruleanCity_BikeShop_Text_ThankYouComeAgain, MSGBOX_DEFAULT
 	release

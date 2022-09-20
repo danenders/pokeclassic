@@ -2903,15 +2903,139 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_CooltrainerMary),
         .party = {.NoItemCustomMoves = sParty_CooltrainerMary}
     },
-
-
-
-
-
-
-
-
-
+//Route 16
+    [REMATCHABLE_TRAINER_BIKER_HIDEO_1] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_BIKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BIKER,
+        .trainerName = _("Hideo"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BikerHideo1),
+        .party = {.NoItemDefaultMoves = sParty_BikerHideo1}
+    },
+    [REMATCHABLE_TRAINER_BIKER_HIDEO_2] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_BIKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BIKER,
+        .trainerName = _("Hideo"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BikerHideo2),
+        .party = {.NoItemDefaultMoves = sParty_BikerHideo2}
+    },
+    [REMATCHABLE_TRAINER_BIKER_HIDEO_3] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_BIKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BIKER,
+        .trainerName = _("Hideo"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BikerHideo3),
+        .party = {.NoItemDefaultMoves = sParty_BikerHideo3}
+    },
+    [REMATCHABLE_TRAINER_CUE_BALL_KOJI_1] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_CUE_BALL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CUE_BALL,
+        .trainerName = _("Koji"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_CueBallKoji1),
+        .party = {.NoItemDefaultMoves = sParty_CueBallKoji1}
+    },
+    [REMATCHABLE_TRAINER_CUE_BALL_KOJI_2] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_CUE_BALL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CUE_BALL,
+        .trainerName = _("Koji"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_CueBallKoji2),
+        .party = {.NoItemDefaultMoves = sParty_CueBallKoji2}
+    },
+    [REMATCHABLE_TRAINER_CUE_BALL_KOJI_3] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_CUE_BALL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CUE_BALL,
+        .trainerName = _("Koji"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_CueBallKoji3),
+        .party = {.NoItemDefaultMoves = sParty_CueBallKoji3}
+    },
+    [TRAINER_BIKER_LAO] = {
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_BIKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BIKER,
+        .trainerName = _("Lao"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BikerLao),
+        .party = {.NoItemCustomMoves = sParty_BikerLao}
+    },
+    [TRAINER_BIKER_RUBEN] = {
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_BIKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BIKER,
+        .trainerName = _("Ruben"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BikerRuben),
+        .party = {.NoItemCustomMoves = sParty_BikerRuben}
+    },
+    [TRAINER_CUE_BALL_LUKE] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_CUE_BALL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CUE_BALL,
+        .trainerName = _("Luke"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_CueBallLuke),
+        .party = {.NoItemDefaultMoves = sParty_CueBallLuke}
+    },
+    [TRAINER_CUE_BALL_CAMRON] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_CUE_BALL,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CUE_BALL,
+        .trainerName = _("Camron"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_CueBallCamron),
+        .party = {.NoItemDefaultMoves = sParty_CueBallCamron}
+    },
+    [TRAINER_YOUNG_COUPLE_LEA_JED] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_YOUNG_COUPLE,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GIRL,
+        .trainerPic = TRAINER_PIC_YOUNG_COUPLE,
+        .trainerName = _("LEA & JED"),
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_YoungCoupleLeaJed),
+        .party = {.NoItemDefaultMoves = sParty_YoungCoupleLeaJed}
+    },
 
 
 

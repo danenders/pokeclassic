@@ -100,7 +100,7 @@
 #define VAR_CABLE_CLUB_STATE             	0x4053
 #define VAR_SECRET_BASE_INITIALIZED         0x4054 
 #define VAR_LILYCOVE_FAN_CLUB_STATE        	0x4055 
-#define VAR_BRINEY_LOCATION            		0x4056 
+#define VAR_CYCLING_ROAD            		0x4056 
 #define VAR_INIT_SECRET_BASE             	0x4057
 #define VAR_ELITE_4_STATE             		0x4058
 #define VAR_SAFARI_ZONE_STATE              	0x4059 

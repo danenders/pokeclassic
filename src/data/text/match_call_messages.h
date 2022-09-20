@@ -58,6 +58,16 @@ const u8 gText_MatchCallSuperNerd_Aidan_Pokemon[] = _("Smart Pokémon are my fav
 const u8 gText_MatchCallSuperNerd_Aidan_Intro1[] = _("I'm not as good at battles");
 const u8 gText_MatchCallSuperNerd_Aidan_Intro2[] = _("as I am at school...");
 
+const u8 gText_MatchCallBiker_Hideo_Strategy[] = _("Kept you waiting, huh?");
+const u8 gText_MatchCallBiker_Hideo_Pokemon[] = _("Snake Pokémon are my faves.");
+const u8 gText_MatchCallBiker_Hideo_Intro1[] = _("I'm no hero, I'm just an old");
+const u8 gText_MatchCallBiker_Hideo_Intro2[] = _("Pokémon trainer...");
+
+const u8 gText_MatchCallCueBall_Koji_Strategy[] = _("Gimme yer bike!");
+const u8 gText_MatchCallCueBall_Koji_Pokemon[] = _("Fast Pokémon are my faves.");
+const u8 gText_MatchCallCueBall_Koji_Intro1[] = _("Buy my own bike?");
+const u8 gText_MatchCallCueBall_Koji_Intro2[] = _("In this economy?");
+
 const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_COUNT] =
 {
 	[REMATCH_JANICE] = MCFLAVOR(Lass_Janice),
@@ -72,4 +82,6 @@ const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_CO
 	[REMATCH_ALICIA] = MCFLAVOR(Picnicker_Alicia),
 	[REMATCH_MARK] = MCFLAVOR(Pokemaniac_Mark),
 	[REMATCH_AIDAN] = MCFLAVOR(SuperNerd_Aidan),
+	[REMATCH_HIDEO] = MCFLAVOR(Biker_Hideo),
+	[REMATCH_KOJI] = MCFLAVOR(CueBall_Koji),
 };

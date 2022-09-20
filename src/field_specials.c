@@ -4511,3 +4511,11 @@ bool8 IsMonOTNameNotPlayers(void)
         return TRUE;
 }
 
+void ForcePlayerOntoBike(void)
+{
+    if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ON_FOOT)
+        SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_MACH_BIKE);
+    Overworld_SetSavedMusic(MUS_RG_CYCLING);
+    Overworld_ChangeMusicTo(MUS_RG_CYCLING);
+}
+

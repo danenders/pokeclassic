@@ -784,6 +784,20 @@ Event_EndDemo::
 Text_EndofDemo::
 	.string "THIS IS THE END OF THE DEMO.$"
 
+EventScript_SetExitingCyclingRoad::
+	lockall
+	clearflag FLAG_SYS_CYCLING_ROAD
+	setvar VAR_CYCLING_ROAD, 0
+	releaseall
+	end
+
+EventScript_SetEnteringCyclingRoad::
+	lockall
+	setvar VAR_CYCLING_ROAD, 1
+	releaseall
+	end
+
+
 @ The below and surf.inc could be split into some text/notices.inc
 gText_PokemartSign::
 	.string "“Selected items for your convenience!”\n"

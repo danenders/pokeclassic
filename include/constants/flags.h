@@ -102,7 +102,7 @@
 #define FLAG_GOT_TM33_FROM_THIRSTY_GIRL    	0x54
 #define FLAG_OPENED_ROCKET_HIDEOUT    		0x55  
 #define FLAG_GOT_ERIKA_REWARD               0x56            
-#define FLAG_UNUSED_0x57             0x57        
+#define FLAG_WOKE_UP_ROUTE_16_SNORLAX       0x57        
 #define FLAG_UNUSED_0x58             0x58        
 #define FLAG_UNUSED_0x059           0x59
 #define FLAG_UNUSED_0x05A           0x5A
@@ -381,8 +381,8 @@
 #define FLAG_REMATCH_ALICIA                    0x166 // Picnicker Alicia on Route 9
 #define FLAG_REMATCH_MARK                      0x167 // Pokemaniac Mark on Route 10 (by the Power Plant)
 #define FLAG_REMATCH_AIDAN                     0x168 // Super Nerd Aidan on Route 8
-#define FLAG_REMATCH_UNUSED_12                 0x169
-#define FLAG_REMATCH_UNUSED_13                 0x16A
+#define FLAG_REMATCH_HIDEO                     0x169 // Biker Hideo on Route 16
+#define FLAG_REMATCH_KOJI                      0x16A // Cue Ball Koji on Route 16
 #define FLAG_REMATCH_UNUSED_14                 0x16B
 #define FLAG_REMATCH_UNUSED_15                 0x16C
 #define FLAG_REMATCH_UNUSED_16                 0x16D
@@ -473,24 +473,24 @@
 #define FLAG_AIDE_LOCATION_5                 0x1BC // Aide moves to Route 5
 #define FLAG_QUEUE_AIDE_CALL           		 0x1BD // Aide is prepped to call player about a new item
 #define FLAG_RECEIVED_AIDE_EVERSTONE         0x1BE // Tracks the Everstone given by the Aide, since the others are Key Items
-#define FLAG_GOT_SEVEN_BADGES                0x1BF // Used for Scott Match Call tracking
-#define FLAG_GAME_CORNER_SERVICE_DAY         0x1C0 // Instead of PokeNews, the game corner will check if it's a Service Day and set this flag for better odds.
-#define FLAG_GOT_10_COINS_FROM_GAMBLER       0x1C1  
-#define FLAG_GOT_20_COINS_FROM_GAMBLER       0x1C2
-#define FLAG_GOT_20_COINS_FROM_GAMBLER_2     0x1C3
-#define FLAG_FOUND_10_COINS_1 			     0x1C4
-#define FLAG_FOUND_10_COINS_2 			     0x1C5
-#define FLAG_FOUND_10_COINS_3              	 0x1C6
-#define FLAG_FOUND_10_COINS_4                0x1C7  
-#define FLAG_FOUND_10_COINS_5       		 0x1C8
-#define FLAG_FOUND_10_COINS_6      			 0x1C9
-#define FLAG_FOUND_10_COINS_7                0x1CA
-#define FLAG_FOUND_10_COINS_8 				 0x1CB
-#define FLAG_FOUND_20_COINS_1         	     0x1CC
-#define FLAG_FOUND_20_COINS_2          		 0x1CD
-#define FLAG_FOUND_40_COINS           		 0x1CE
-#define FLAG_FOUND_100_COINS         		 0x1CF
-#define FLAG_UNUSED_0x1D0           		 0x1D0
+#define FLAG_RECEIVED_AIDE_AMULET_COIN       0x1BF // Tracks the Amulet Coin given by the Aide, since the others are Key Items
+#define FLAG_GOT_SEVEN_BADGES                0x1C0 // Used for Scott Match Call tracking
+#define FLAG_GAME_CORNER_SERVICE_DAY         0x1C1 // Instead of PokeNews, the game corner will check if it's a Service Day and set this flag for better odds.
+#define FLAG_GOT_10_COINS_FROM_GAMBLER       0x1C2  
+#define FLAG_GOT_20_COINS_FROM_GAMBLER       0x1C3
+#define FLAG_GOT_20_COINS_FROM_GAMBLER_2     0x1C4
+#define FLAG_FOUND_10_COINS_1 			     0x1C5
+#define FLAG_FOUND_10_COINS_2 			     0x1C6
+#define FLAG_FOUND_10_COINS_3              	 0x1C7
+#define FLAG_FOUND_10_COINS_4                0x1C8  
+#define FLAG_FOUND_10_COINS_5       		 0x1C9
+#define FLAG_FOUND_10_COINS_6      			 0x1CA
+#define FLAG_FOUND_10_COINS_7                0x1CB
+#define FLAG_FOUND_10_COINS_8 				 0x1CC
+#define FLAG_FOUND_20_COINS_1         	     0x1CD
+#define FLAG_FOUND_20_COINS_2          		 0x1CE
+#define FLAG_FOUND_40_COINS           		 0x1CF
+#define FLAG_FOUND_100_COINS         		 0x1D0
 #define FLAG_UNUSED_0x1D1       			 0x1D1
 #define FLAG_UNUSED_0x1D2      				 0x1D2
 #define FLAG_UNUSED_0x1D3       			 0x1D3
@@ -837,7 +837,7 @@
 #define FLAG_HIDE_GAME_CORNER_ROCKET                          		0x31E
 #define FLAG_HIDE_HIDEOUT_CUBONE                          		    0x31F
 #define FLAG_HIDE_HIDEOUT_GIOVANNI                                  0x320
-#define FLAG_HIDE_UNUSED_75                                         0x321
+#define FLAG_HIDE_ROUTE16_SNORLAX                                   0x321
 #define FLAG_HIDE_UNUSED_76                    						0x322
 #define FLAG_HIDE_UNUSED_77                   						0x323
 #define FLAG_HIDE_UNUSED_78                               			0x324
