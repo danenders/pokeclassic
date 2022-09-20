@@ -87,18 +87,30 @@ CeladonCity_Text_GetLostOrIllPunchYou::
     .string "What are you staring at?\n"
     .string "Get lost, or I'll punch you.$"
 
-CeladonCity_EventScript_SilphCoScientist::
-	msgbox CeladonCity_Text_SomeoneStolePrototype, MSGBOX_NPC
+CeladonCity_EventScript_Breeder::
+	goto_if_set FLAG_RESCUED_CUBONE, CeladonCity_EventScript_BreederRescuedCubone 
+	msgbox CeladonCity_Text_KidnappedPokemon, MSGBOX_NPC
 	end
 
-CeladonCity_Text_SomeoneStolePrototype::
+CeladonCity_Text_KidnappedPokemon::
     .string "Oh, what am I to do…\p"
-    .string "Someone stole Silph's Prototype\n" 
-    .string "Pokéball.\p"
-    .string "The thief came running this way,\n"
+    .string "Team Rocket has been kidnapping\n" 
+    .string "Pokémon.\p"
+    .string "I chased a Rocket Grunt with a\n"
+    .string "Cubone all the way from Lavender!\p"
+    .string "They came running this way,\n"
     .string "I'm sure of it.\p"
     .string "But I lost sight of him!\n"
-    .string "Where'd he go?$"
+    .string "Where are they hiding?$"
+
+CeladonCity_EventScript_BreederRescuedCubone::
+	msgbox CeladonCity_Text_RescuedCubone, MSGBOX_NPC
+	end
+
+CeladonCity_Text_RescuedCubone::
+    .string "Oh! You rescued the Cubone from\n"
+    .string "Team Rocket?\p" 
+    .string "That's wonderul!$"
 
 CeladonCity_EventScript_OldMan::
 	msgbox CeladonCity_Text_BlewItAllAtSlots, MSGBOX_NPC

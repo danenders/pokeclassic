@@ -17,8 +17,10 @@ CeladonCity_House1_EventScript_Rocket1::
 CeladonCity_House1_Text_ShippedMonsAsSlotPrizes::
     .string "Chief!\p"
     .string "We just shipped two thousand\n"
-    .string "more Pokémon as slot prizes\l"
-    .string "again today!$"
+    .string "more Pokémon Dolls as slot prizes\l"
+    .string "again today!\p"
+    .string "And we're arranging buyers for the\n"
+    .string "Pokémon we kidnapped, too.$"
 
 CeladonCity_House1_EventScript_Rocket2::
 	msgbox CeladonCity_House1_Text_DontTouchGameCornerPoster, MSGBOX_NPC
@@ -50,5 +52,5 @@ CeladonCity_House1_EventScript_Police2::
     end
 
 CeladonCity_House1_Text_WhoDoesThat::
-    .string "Selling Pokémon as prizes?\n"
+    .string "Kidnapping and selling Pokémon?\n"
     .string "What kind of menace does that!$"

@@ -46,6 +46,7 @@ RocketHideout_B4F_EventScript_Giovanni::
 	closemessage
 	removeobject LOCALID_GIOVANNI
 	setflag FLAG_HIDE_CELADON_ROCKETS
+	setflag FLAG_RESCUED_CUBONE
 	removeobject LOCALID_JESSIE
 	removeobject LOCALID_JAMES
 	removeobject LOCALID_ROCKET2
