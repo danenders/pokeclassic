@@ -296,6 +296,15 @@ static const struct MatchCallTrainerTextInfo sMatchCallTrainers[] = //TODO: Pers
         .sameRouteMatchCallTextId = TEXT_ID(REQ_TOPIC_SAME_ROUTE, 2),
         .differentRouteMatchCallTextId = TEXT_ID(REQ_TOPIC_DIFF_ROUTE, 2),
     },
+    {
+        .trainerId = REMATCHABLE_TRAINER_BIRD_KEEPER_WILTON_1,
+        .unused = 0,
+        .battleTopicTextIds = BATTLE_TEXT_IDS(2),
+        .generalTextId = TEXT_ID(GEN_TOPIC_PERSONAL, 55),
+        .battleFrontierRecordStreakTextIndex = 2,
+        .sameRouteMatchCallTextId = TEXT_ID(REQ_TOPIC_SAME_ROUTE, 2),
+        .differentRouteMatchCallTextId = TEXT_ID(REQ_TOPIC_DIFF_ROUTE, 2),
+    },
 };
 
 static const struct MatchCallText sMatchCallWildBattleTexts[] =

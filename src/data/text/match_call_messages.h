@@ -68,6 +68,11 @@ const u8 gText_MatchCallCueBall_Koji_Pokemon[] = _("Fast Pokémon are my faves."
 const u8 gText_MatchCallCueBall_Koji_Intro1[] = _("Buy my own bike?");
 const u8 gText_MatchCallCueBall_Koji_Intro2[] = _("In this economy?");
 
+const u8 gText_MatchCallBirdKeeper_Wilton_Strategy[] = _("Strike from above!");
+const u8 gText_MatchCallBirdKeeper_Wilton_Pokemon[] = _("Bird Pokémon are my faves.");
+const u8 gText_MatchCallBirdKeeper_Wilton_Intro1[] = _("You need to be patient to");
+const u8 gText_MatchCallBirdKeeper_Wilton_Intro2[] = _("catch rare Pokémon!");
+
 const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_COUNT] =
 {
 	[REMATCH_JANICE] = MCFLAVOR(Lass_Janice),
@@ -84,4 +89,5 @@ const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_CO
 	[REMATCH_AIDAN] = MCFLAVOR(SuperNerd_Aidan),
 	[REMATCH_HIDEO] = MCFLAVOR(Biker_Hideo),
 	[REMATCH_KOJI] = MCFLAVOR(CueBall_Koji),
+	[REMATCH_WILTON] = MCFLAVOR(BirdKeeper_Wilton),
 };

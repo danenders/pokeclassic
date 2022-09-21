@@ -383,7 +383,7 @@
 #define FLAG_REMATCH_AIDAN                     0x168 // Super Nerd Aidan on Route 8
 #define FLAG_REMATCH_HIDEO                     0x169 // Biker Hideo on Route 16
 #define FLAG_REMATCH_KOJI                      0x16A // Cue Ball Koji on Route 16
-#define FLAG_REMATCH_UNUSED_14                 0x16B
+#define FLAG_REMATCH_WILTON                    0x16B // Bird Keeper Wilton on Route 18
 #define FLAG_REMATCH_UNUSED_15                 0x16C
 #define FLAG_REMATCH_UNUSED_16                 0x16D
 #define FLAG_REMATCH_UNUSED_17                 0x16E
@@ -592,11 +592,11 @@
 #define FLAG_HIDDEN_ITEM_CELADON_CITY_PP_UP      	                              (FLAG_HIDDEN_ITEMS_START + 0x3A)
 #define FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B1F_PP_UP     		                      (FLAG_HIDDEN_ITEMS_START + 0x3B)
 #define FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B3F_NUGGET     		                      (FLAG_HIDDEN_ITEMS_START + 0x3C)
-#define FLAG_HIDDEN_ITEM_61           	(FLAG_HIDDEN_ITEMS_START + 0x3D)
-#define FLAG_HIDDEN_ITEM_62             (FLAG_HIDDEN_ITEMS_START + 0x3E)
-#define FLAG_HIDDEN_ITEM_63             (FLAG_HIDDEN_ITEMS_START + 0x3F)
-#define FLAG_HIDDEN_ITEM_64             (FLAG_HIDDEN_ITEMS_START + 0x40)
-#define FLAG_HIDDEN_ITEM_65             (FLAG_HIDDEN_ITEMS_START + 0x41)
+#define FLAG_HIDDEN_ITEM_ROUTE17_MAX_REVIVE           	                          (FLAG_HIDDEN_ITEMS_START + 0x3D)
+#define FLAG_HIDDEN_ITEM_ROUTE17_RARE_CANDY                                       (FLAG_HIDDEN_ITEMS_START + 0x3E)
+#define FLAG_HIDDEN_ITEM_ROUTE17_PP_UP                                            (FLAG_HIDDEN_ITEMS_START + 0x3F)
+#define FLAG_HIDDEN_ITEM_ROUTE17_FULL_RESTORE                                     (FLAG_HIDDEN_ITEMS_START + 0x40)
+#define FLAG_HIDDEN_ITEM_ROUTE17_MAX_ELIXIR                                       (FLAG_HIDDEN_ITEMS_START + 0x41)
 #define FLAG_HIDDEN_ITEM_66             (FLAG_HIDDEN_ITEMS_START + 0x42)
 #define FLAG_HIDDEN_ITEM_67            	(FLAG_HIDDEN_ITEMS_START + 0x43)
 #define FLAG_HIDDEN_ITEM_68             (FLAG_HIDDEN_ITEMS_START + 0x44)
