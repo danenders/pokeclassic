@@ -23,6 +23,21 @@ static void CreateBattlerSprite(u8 battlerId);
 static void CreateHealthboxSprite(u8 battlerId);
 static void ClearBattleBgCntBaseBlocks(void);
 
+static const u8 sCostumeBackPics[COSTUME_COUNT][GENDER_COUNT] = 
+{
+    [RED_COSTUME]               = {TRAINER_BACK_PIC_RED, TRAINER_BACK_PIC_RED},
+    [LEAF_COSTUME]              = {TRAINER_BACK_PIC_LEAF, TRAINER_BACK_PIC_LEAF},
+    [BRENDAN_COSTUME]           = {TRAINER_BACK_PIC_BRENDAN, TRAINER_BACK_PIC_BRENDAN},
+    [MAY_COSTUME]               = {TRAINER_BACK_PIC_MAY, TRAINER_BACK_PIC_MAY},
+    [ETHAN_COSTUME]             = {TRAINER_BACK_PIC_ETHAN, TRAINER_BACK_PIC_ETHAN},
+    [LYRA_COSTUME]              = {TRAINER_BACK_PIC_LYRA, TRAINER_BACK_PIC_LYRA},
+    [KRIS_COSTUME]              = {TRAINER_BACK_PIC_KRIS, TRAINER_BACK_PIC_KRIS},
+    [LUCAS_COSTUME]             = {TRAINER_BACK_PIC_LUCAS, TRAINER_BACK_PIC_LUCAS},
+    [DAWN_COSTUME]              = {TRAINER_BACK_PIC_DAWN, TRAINER_BACK_PIC_DAWN},
+    [LUCAS_PLATINUM_COSTUME]    = {TRAINER_BACK_PIC_LUCAS_PLATINUM, TRAINER_BACK_PIC_LUCAS_PLATINUM},
+    [DAWN_PLATINUM_COSTUME]     = {TRAINER_BACK_PIC_DAWN_PLATINUM, TRAINER_BACK_PIC_DAWN_PLATINUM},
+};
+
 void ReshowBattleScreenDummy(void)
 {
 
@@ -207,6 +222,8 @@ static bool8 LoadBattlerSpriteGfx(u8 battler)
 
 static void CreateBattlerSprite(u8 battler)
 {
+    u32 trainerPicId;
+
     if (battler < gBattlersCount)
     {
         u8 posY;
@@ -236,10 +253,10 @@ static void CreateBattlerSprite(u8 battler)
         }
         else if (gBattleTypeFlags & BATTLE_TYPE_SAFARI && battler == B_POSITION_PLAYER_LEFT)
         {
-            SetMultiuseSpriteTemplateToTrainerBack(gSaveBlock2Ptr->playerGender, GetBattlerPosition(B_POSITION_PLAYER_LEFT));
-            gBattlerSpriteIds[battler] = CreateSprite(&gMultiuseSpriteTemplate, 0x50,
-                                                (8 - gTrainerBackPicCoords[gSaveBlock2Ptr->playerGender].size) * 4 + 80,
-                                                 GetBattlerSpriteSubpriority(0));
+            trainerPicId = sCostumeBackPics[gSaveBlock2Ptr->costumeId][gSaveBlock2Ptr->playerGender];
+            DecompressTrainerBackPic(trainerPicId, battler);
+            SetMultiuseSpriteTemplateToTrainerBack(trainerPicId, GetBattlerPosition(B_POSITION_PLAYER_LEFT));
+            gBattlerSpriteIds[battler] = CreateSprite(&gMultiuseSpriteTemplate, 0x50, (8 - gTrainerBackPicCoords[trainerPicId].size) * 4 + 80, GetBattlerSpriteSubpriority(0));
             gSprites[gBattlerSpriteIds[battler]].oam.paletteNum = battler;
             gSprites[gBattlerSpriteIds[battler]].callback = SpriteCallbackDummy;
             gSprites[gBattlerSpriteIds[battler]].data[0] = battler;
