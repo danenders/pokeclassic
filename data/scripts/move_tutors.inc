@@ -1,5 +1,51 @@
 @KANTO, Updated
 
+MoveTutor_Substitute::
+	lock
+	faceplayer
+	msgbox MoveTutor_Text_SubstituteTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_SubstituteDeclined
+	msgbox MoveTutor_Text_SubstituteWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_SUBSTITUTE
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_SubstituteDeclined
+	goto MoveTutor_EventScript_SubstituteTaught
+	end
+
+MoveTutor_Text_SubstituteTeach::
+    .string "Aww, I wish I was a Kangaskhan\n"
+    .string "baby.\p"
+    .string "I'd love to be a substitute for the\n"
+    .string "baby…\p"
+    .string "And snuggle in the mother\n"
+    .string "Kangaskhan's belly pouch.\p"
+    .string "But only Pokémon can use the\n"
+    .string "technique Substitute…\p"
+    .string "Want me to teach Substitute to\n"
+    .string "one of your Pokémon?$"
+
+MoveTutor_EventScript_SubstituteDeclined::
+	msgbox MoveTutor_Text_SubstituteDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_SubstituteDeclined::
+    .string "Oh, really?\n"
+    .string "Substitute seems so fun…$"
+
+MoveTutor_Text_SubstituteWhichMon::
+    .string "Which Pokémon wants to learn\n"
+    .string "Substitute$"
+
+MoveTutor_EventScript_SubstituteTaught::
+	msgbox MoveTutor_Text_SubstituteTaught, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_SubstituteTaught::
+    .string "Boy, what I'd give to crawl inside\n"
+    .string "a Kangaskhan belly pouch…$"
+
 MoveTutor_DreamEater::
 	lock
 	faceplayer
@@ -470,32 +516,6 @@ MoveTutor_EventScript_SleepTalkDeclined::
 
 MoveTutor_EventScript_SleepTalkTaught::
 	msgbox MoveTutor_Text_SleepTalkTaught, MSGBOX_DEFAULT
-	release
-	end
-
-LilycoveCity_DepartmentStoreRooftop_EventScript_SubstituteTutor::
-	lock
-	faceplayer
-	goto_if_set FLAG_MOVE_TUTOR_TAUGHT_SUBSTITUTE, MoveTutor_EventScript_SubstituteTaught
-	msgbox MoveTutor_Text_SubstituteTeach, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_SubstituteDeclined
-	call MoveTutor_EventScript_CanOnlyBeLearnedOnce
-	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_SubstituteDeclined
-	msgbox MoveTutor_Text_SubstituteWhichMon, MSGBOX_DEFAULT
-	setvar VAR_0x8005, TUTOR_MOVE_SUBSTITUTE
-	call MoveTutor_EventScript_OpenPartyMenu
-	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_SubstituteDeclined
-	setflag FLAG_MOVE_TUTOR_TAUGHT_SUBSTITUTE
-	goto MoveTutor_EventScript_SubstituteTaught
-	end
-
-MoveTutor_EventScript_SubstituteDeclined::
-	msgbox MoveTutor_Text_SubstituteDeclined, MSGBOX_DEFAULT
-	release
-	end
-
-MoveTutor_EventScript_SubstituteTaught::
-	msgbox MoveTutor_Text_SubstituteTaught, MSGBOX_DEFAULT
 	release
 	end
 

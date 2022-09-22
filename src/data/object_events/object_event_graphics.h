@@ -1187,6 +1187,9 @@ const u16 gObjectEventPal_Agatha[] = INCBIN_U16("graphics/object_events/palettes
 const u32 gObjectEventPic_Lance[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/lance.4bpp");
 const u16 gObjectEventPal_Lance[] = INCBIN_U16("graphics/object_events/palettes/lance.gbapal");
 
+const u32 gObjectEventPic_Janine[] = INCBIN_U32("graphics/object_events/pics/people/janine.4bpp");
+const u16 gObjectEventPal_Janine[] = INCBIN_U16("graphics/object_events/palettes/janine.gbapal");
+
 const u32 gObjectEventPic_Looker[] = INCBIN_U32("graphics/object_events/pics/people/looker.4bpp");
 
 const u32 gObjectEventPic_Mom2[] = INCBIN_U32("graphics/object_events/pics/people/mom_2.4bpp");
@@ -1233,6 +1236,12 @@ const u16 gObjectEventPal_Chef[] = INCBIN_U16("graphics/object_events/palettes/c
 
 const u32 gObjectEventPic_Channeler[] = INCBIN_U32("graphics/object_events/pics/people/channeler.4bpp");
 const u16 gObjectEventPal_Channeler[] = INCBIN_U16("graphics/object_events/palettes/channeler.gbapal");
+
+const u32 gObjectEventPic_RangerM[] = INCBIN_U32("graphics/object_events/pics/people/ranger_m.4bpp");
+const u16 gObjectEventPal_RangerM[] = INCBIN_U16("graphics/object_events/palettes/ranger_m.gbapal");
+
+const u32 gObjectEventPic_RangerF[] = INCBIN_U32("graphics/object_events/pics/people/ranger_f.4bpp");
+const u16 gObjectEventPal_RangerF[] = INCBIN_U16("graphics/object_events/palettes/ranger_f.gbapal");
 
 
 //Other Pokemon

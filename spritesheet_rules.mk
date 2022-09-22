@@ -588,6 +588,12 @@ $(OBJEVENTGFXDIR)/people/waiter.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/channeler.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/ranger_m.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
+
+$(OBJEVENTGFXDIR)/people/ranger_f.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
+
 $(OBJEVENTGFXDIR)/people/chef.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
@@ -792,7 +798,8 @@ $(OBJEVENTGFXDIR)/people/elite_four/agatha.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/elite_four/lance.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-
+$(OBJEVENTGFXDIR)/people/janine.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
 
 
 $(OBJEVENTGFXDIR)/pokemon/azumarill_old.4bpp: %.4bpp: %.png

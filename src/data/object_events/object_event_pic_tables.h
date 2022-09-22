@@ -1251,6 +1251,30 @@ static const struct SpriteFrameImage sPicTable_Channeler[] = {
     overworld_frame(gObjectEventPic_Channeler, 4, 4, 8),
 };
 
+static const struct SpriteFrameImage sPicTable_RangerM[] = {
+    overworld_frame(gObjectEventPic_RangerM, 4, 4, 0),
+    overworld_frame(gObjectEventPic_RangerM, 4, 4, 1),
+    overworld_frame(gObjectEventPic_RangerM, 4, 4, 2),
+    overworld_frame(gObjectEventPic_RangerM, 4, 4, 3),
+    overworld_frame(gObjectEventPic_RangerM, 4, 4, 4),
+    overworld_frame(gObjectEventPic_RangerM, 4, 4, 5),
+    overworld_frame(gObjectEventPic_RangerM, 4, 4, 6),
+    overworld_frame(gObjectEventPic_RangerM, 4, 4, 7),
+    overworld_frame(gObjectEventPic_RangerM, 4, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_RangerF[] = {
+    overworld_frame(gObjectEventPic_RangerF, 4, 4, 0),
+    overworld_frame(gObjectEventPic_RangerF, 4, 4, 1),
+    overworld_frame(gObjectEventPic_RangerF, 4, 4, 2),
+    overworld_frame(gObjectEventPic_RangerF, 4, 4, 3),
+    overworld_frame(gObjectEventPic_RangerF, 4, 4, 4),
+    overworld_frame(gObjectEventPic_RangerF, 4, 4, 5),
+    overworld_frame(gObjectEventPic_RangerF, 4, 4, 6),
+    overworld_frame(gObjectEventPic_RangerF, 4, 4, 7),
+    overworld_frame(gObjectEventPic_RangerF, 4, 4, 8),
+};
+
 static const struct SpriteFrameImage sPicTable_MayNormal[] = {
     overworld_frame(gObjectEventPic_MayNormal, 4, 4, 0),
     overworld_frame(gObjectEventPic_MayNormal, 4, 4, 1),
@@ -7621,4 +7645,16 @@ static const struct SpriteFrameImage sPicTable_Blaine[] = {
     overworld_frame(gObjectEventPic_Blaine, 4, 4, 6),
     overworld_frame(gObjectEventPic_Blaine, 4, 4, 7),
     overworld_frame(gObjectEventPic_Blaine, 4, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_Janine[] = {
+    overworld_frame(gObjectEventPic_Janine, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Janine, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Janine, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Janine, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Janine, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Janine, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Janine, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Janine, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Janine, 4, 4, 8),
 };

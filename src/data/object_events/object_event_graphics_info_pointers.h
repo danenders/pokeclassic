@@ -100,6 +100,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EnemyZigzagoon;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Artist;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Chef;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Channeler;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RangerM;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RangerF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Waiter;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Waitress;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RivalBrendanNormal;
@@ -354,6 +356,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Erika;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sabrina;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Koga;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blaine;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Janine;
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Mom2;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Biker;
@@ -764,6 +767,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
 	[OBJ_EVENT_GFX_SEA_CAPTAIN] =           		 &gObjectEventGraphicsInfo_SeaCaptain,
 	[OBJ_EVENT_GFX_CHEF] =           				 &gObjectEventGraphicsInfo_Chef,
 	[OBJ_EVENT_GFX_CHANNELER] =          	 		 &gObjectEventGraphicsInfo_Channeler,
+	[OBJ_EVENT_GFX_RANGER_F] =          	 		 &gObjectEventGraphicsInfo_RangerF,
+	[OBJ_EVENT_GFX_RANGER_M] =          	 		 &gObjectEventGraphicsInfo_RangerM,
 	[OBJ_EVENT_GFX_WAITER] =           				 &gObjectEventGraphicsInfo_Waiter,
 	[OBJ_EVENT_GFX_WAITRESS] =         		  		 &gObjectEventGraphicsInfo_Waitress,    
     [OBJ_EVENT_GFX_ZINNIA] =           				 &gObjectEventGraphicsInfo_Zinnia,
@@ -804,6 +809,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
 	[OBJ_EVENT_GFX_KOGA] = 				 	 		 &gObjectEventGraphicsInfo_Koga,
 	[OBJ_EVENT_GFX_BLAINE] = 				 		 &gObjectEventGraphicsInfo_Blaine,
 	[OBJ_EVENT_GFX_LOOKER] = 				 		 &gObjectEventGraphicsInfo_Looker,
+	[OBJ_EVENT_GFX_JANINE] = 				 	 	 &gObjectEventGraphicsInfo_Janine,
 	[OBJ_EVENT_GFX_SLOWPOKE] = 				 		 &gObjectEventGraphicsInfo_Slowpoke,
 	[OBJ_EVENT_GFX_SLOWBRO] = 				 		 &gObjectEventGraphicsInfo_Slowbro,
 	[OBJ_EVENT_GFX_BULBASAUR] = 				 	 &gObjectEventGraphicsInfo_Bulbasaur,

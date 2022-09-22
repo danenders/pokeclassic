@@ -597,7 +597,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE17_PP_UP                                            (FLAG_HIDDEN_ITEMS_START + 0x3F)
 #define FLAG_HIDDEN_ITEM_ROUTE17_FULL_RESTORE                                     (FLAG_HIDDEN_ITEMS_START + 0x40)
 #define FLAG_HIDDEN_ITEM_ROUTE17_MAX_ELIXIR                                       (FLAG_HIDDEN_ITEMS_START + 0x41)
-#define FLAG_HIDDEN_ITEM_66             (FLAG_HIDDEN_ITEMS_START + 0x42)
+#define FLAG_HIDDEN_ITEM_FUCHSIA_CITY_MAX_REVIVE                                  (FLAG_HIDDEN_ITEMS_START + 0x42)
 #define FLAG_HIDDEN_ITEM_67            	(FLAG_HIDDEN_ITEMS_START + 0x43)
 #define FLAG_HIDDEN_ITEM_68             (FLAG_HIDDEN_ITEMS_START + 0x44)
 #define FLAG_HIDDEN_ITEM_69             (FLAG_HIDDEN_ITEMS_START + 0x45)
@@ -1098,8 +1098,8 @@
 #define FLAG_HIDE_ROCKET_HIDEOUT_B4F_TM49                           0x421
 #define FLAG_HIDE_ROCKET_HIDEOUT_B4F_MAX_ETHER                      0x422
 #define FLAG_HIDE_ROCKET_HIDEOUT_B4F_CALCIUM                    	0x423
-#define FLAG_UNUSED_ITEM_0x424                 						0x424
-#define FLAG_UNUSED_ITEM_0x425                 						0x425
+#define FLAG_HIDE_FUCHSIA_CITY_WARDENS_HOUSE_RARE_CANDY             0x424
+#define FLAG_HIDE_SAFARI_ZONE_WEST_GOLD_TEETH                 		0x425
 #define FLAG_UNUSED_ITEM_0x426                  					0x426
 #define FLAG_UNUSED_ITEM_0x427                 						0x427
 #define FLAG_UNUSED_ITEM_0x428                  					0x428

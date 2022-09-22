@@ -209,7 +209,6 @@ PewterCity_Museum_1F_Text_ObtainedDomeFossil::
     .string "Obtained the Dome Fossil!$"
 
 PewterCity_Museum_1F_EventScript_GaveReward::
-	setvar VAR_FOSSIL_SELECTION, 3
 	setflag FLAG_GOT_AERODACTYL_REWARD
 	release
 	end

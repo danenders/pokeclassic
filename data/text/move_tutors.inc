@@ -137,32 +137,6 @@ MoveTutor_Text_SleepTalkTaught:
 	.string "I would be happy if I got it right\n"
 	.string "even as I Sleep Talk…$"
 
-MoveTutor_Text_SubstituteTeach:
-	.string "When I see the wide world from up\n"
-	.string "here on the roof…\p"
-	.string "I think about how nice it would be\n"
-	.string "if there were more than just one me\l"
-	.string "so I could enjoy all sorts of lives.\p"
-	.string "Of course it's not possible.\n"
-	.string "Giggle…\p"
-	.string "I know! Would you be interested in\n"
-	.string "having a Pokémon learn Substitute?$"
-
-MoveTutor_Text_SubstituteDeclined:
-	.string "Oh, no?\p"
-	.string "A Pokémon can make a copy of\n"
-	.string "itself using it, you know.$"
-
-MoveTutor_Text_SubstituteWhichMon:
-	.string "Giggle…\n"
-	.string "Which Pokémon do you want me to\l"
-	.string "teach Substitute?$"
-
-MoveTutor_Text_SubstituteTaught:
-	.string "We human beings should enjoy our\n"
-	.string "own lives to the utmost!\p"
-	.string "I hope you'll get that way, too!$"
-
 MoveTutor_Text_DynamicPunchTeach:
 	.string "I can't do this anymore!\p"
 	.string "It's utterly hopeless!\p"
