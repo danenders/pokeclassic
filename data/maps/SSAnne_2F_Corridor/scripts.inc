@@ -108,7 +108,9 @@ SSAnne_2F_Corridor_Movement_RivalApproachMid::
 	walk_down
 	walk_down
 	walk_down
-	walk_in_place_faster_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
 	step_end
 
 SSAnne_2F_Corridor_Movement_PlayerFaceRivalMid::
@@ -116,7 +118,9 @@ SSAnne_2F_Corridor_Movement_PlayerFaceRivalMid::
 	delay_16
 	delay_16
 	delay_16
-	walk_in_place_faster_left
+	walk_in_place_fast_left
+	walk_in_place_fast_left
+	walk_in_place_fast_left
 	step_end
 
 SSAnne_2F_Corridor_EventScript_RivalApproachRight::
@@ -139,7 +143,9 @@ SSAnne_2F_Corridor_Movement_PlayerFaceRivalRight::
 	delay_16
 	delay_16
 	delay_16
-	walk_in_place_faster_left
+	walk_in_place_fast_left
+	walk_in_place_fast_left
+	walk_in_place_fast_left
 	step_end
 
 SSAnne_2F_Corridor_EventScript_RivalExitLeft::

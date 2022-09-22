@@ -29,19 +29,31 @@ Common_Movement_FaceOriginalDirection:
 	step_end
 
 Common_Movement_WalkInPlaceFasterLeft:
-	walk_in_place_faster_left
+	walk_in_place_fast_left
+	walk_in_place_fast_left
+	walk_in_place_fast_left
+	walk_in_place_fast_left
 	step_end
 
 Common_Movement_WalkInPlaceFasterUp:
-	walk_in_place_faster_up
+	walk_in_place_fast_up
+	walk_in_place_fast_up
+	walk_in_place_fast_up
+	walk_in_place_fast_up
 	step_end
 
 Common_Movement_WalkInPlaceFasterRight:
-	walk_in_place_faster_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
 	step_end
 
 Common_Movement_WalkInPlaceFasterDown:
-	walk_in_place_faster_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
 	step_end
 
 Common_Movement_FaceRight:

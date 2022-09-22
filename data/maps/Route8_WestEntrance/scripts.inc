@@ -110,7 +110,8 @@ Route8_WestEntrance_Text_DeliverRocketPlans::
 
 Route8_WestEntrance_Movement_JennyExit:
 	face_left
-	walk_in_place_faster_left
+	walk_in_place_fast_left
+	walk_in_place_fast_left
 	delay_8
 	step_end
 

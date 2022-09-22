@@ -74,13 +74,17 @@ Movement_PikachuScopesOutLab::
 	emote_question_mark
 	delay_16
 	delay_16
-	walk_in_place_faster_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
 	delay_16
-	walk_in_place_faster_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
 	delay_16
-	walk_in_place_faster_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
 	delay_16
-	walk_in_place_faster_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
 	step_end
 
 Movement_ReturnToPlayer::
@@ -169,7 +173,8 @@ Route25_SeaCottage_Movement_BillWalkToTeleporterSouth::
 	walk_up
 	walk_up
 	walk_left
-	walk_in_place_faster_up
+	walk_in_place_fast_up
+	walk_in_place_fast_up
 	step_end
 
 Route25_SeaCottage_EventScript_BillWalkToTeleporter::

@@ -75,6 +75,8 @@ BerryHouse_NoOneVisiting::
     return
 
 FuchsiaCity_House3_EventScript_Grandfather::
+    lock
+    faceplayer
     goto_if_eq VAR_BERRY_HOUSE_VISITORS, 4, FuchsiaCity_House3_EventScript_DaisyVisits
     goto_if_eq VAR_BERRY_HOUSE_VISITORS, 3, FuchsiaCity_House3_EventScript_WholeFamily
     goto_if_eq VAR_BERRY_HOUSE_VISITORS, 2, FuchsiaCity_House3_EventScript_OldestGrandhchild

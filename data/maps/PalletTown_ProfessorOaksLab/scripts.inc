@@ -124,7 +124,10 @@ Movement_RivalMoveToDesk2::
 	step_end
 
 Movement_StealEeveeTooSlow::
-	walk_in_place_faster_up
+	walk_in_place_fast_up
+	walk_in_place_fast_up
+	walk_in_place_fast_up
+	walk_in_place_fast_up
 	delay_16
 	delay_16
 	delay_16
@@ -176,7 +179,10 @@ Movement_RivalMoveToDesk::
 	step_end
 
 Movement_PushPlayer::
-	walk_in_place_faster_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
 	step_end
 
 Movement_GetPushed::
@@ -186,7 +192,10 @@ Movement_GetPushed::
 
 Movement_TakeEevee::
 	walk_right
-	walk_in_place_faster_up
+	walk_in_place_fast_up
+	walk_in_place_fast_up
+	walk_in_place_fast_up
+	walk_in_place_fast_up
 	delay_16
 	step_end
 
@@ -220,7 +229,8 @@ PalletTown_ProfessorOaksLab_EventScript_PreventExit::
 
 Movement_OakStopPlayer::
 	walk_down
-	walk_in_place_faster_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
 	delay_8
 	step_end
 
@@ -271,7 +281,8 @@ PalletTown_ProfessorOaksLab_EventScript_GetPartnerPikachu::
 Movement_PikachuJoinsParty::
 	walk_down
 	face_right
-	walk_in_place_faster_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
 	delay_16
 	step_end
 

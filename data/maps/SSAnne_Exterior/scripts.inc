@@ -58,7 +58,10 @@ Movement_MissedBoat:
 	walk_down
 	walk_down
 	delay_8
-	walk_in_place_faster_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
 	delay_16
 	step_end
 

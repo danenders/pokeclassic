@@ -394,17 +394,21 @@ CeruleanCity_EventScript_RivalStartExitRight::
 CeruleanCity_Movement_PlayerWatchRivalExit::
 	delay_16
 	delay_8
-	walk_in_place_faster_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
 	delay_16
-	walk_in_place_faster_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
 	step_end
 
 CeruleanCity_Movement_PlayerWatchRivalExitRight::
 	delay_16
 	delay_8
-	walk_in_place_faster_left
+	walk_in_place_fast_left
+	walk_in_place_fast_left
 	delay_16
-	walk_in_place_faster_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
 	step_end
 
 CeruleanCity_Movement_RivalEnter::
@@ -605,7 +609,10 @@ CeruleanCity_EventScript_BulbasaurApproachPlayerNear::
 
 Movement_BulbaNear:
  	walk_down
- 	walk_in_place_faster_right
+ 	walk_in_place_fast_right
+ 	walk_in_place_fast_right
+ 	walk_in_place_fast_right
+ 	walk_in_place_fast_right
  	delay_16
  	step_end
 
@@ -618,7 +625,10 @@ Movement_BulbaFar:
  	walk_down
  	walk_right
  	walk_right
- 	walk_in_place_faster_up
+ 	walk_in_place_fast_up
+ 	walk_in_place_fast_up
+ 	walk_in_place_fast_up
+ 	walk_in_place_fast_up
  	delay_16
  	step_end
 

@@ -146,7 +146,10 @@ Movement_StopPlayerLeft:
 	face_left
 	emote_question_mark
 	delay_16
-	walk_in_place_faster_left
+	walk_in_place_fast_left
+	walk_in_place_fast_left
+	walk_in_place_fast_left
+	walk_in_place_fast_left
 	delay_16
 	delay_16
 	step_end
@@ -174,7 +177,10 @@ Movement_StopPlayerRight:
 	emote_question_mark
 	delay_16
 	delay_16
-	walk_in_place_faster_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
 	delay_16
 	delay_16
 	step_end
@@ -250,7 +256,10 @@ Route24_Text_WasntReallyAQuestion::
 	.string "by none other than Team Rocket!$"
 
 Movement_RocketReveal::
-	walk_in_place_faster_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
 	delay_16
 	step_end
 
@@ -368,7 +377,10 @@ Movement_GetJessieJames::
 	step_end
 
 Movement_JessieAction:
-	walk_in_place_faster_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
 	delay_16
 	delay_16
 	step_end
@@ -376,14 +388,19 @@ Movement_JessieAction:
 Movement_JamesAction:
 	delay_16
 	delay_16
-	walk_in_place_faster_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
 	step_end
 
 Movement_RocketBails:
-	walk_in_place_faster_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
 	delay_16
 	delay_16
-	walk_in_place_faster_left
+	walk_in_place_fast_left
+	walk_in_place_fast_left
 	delay_16
 	delay_16
 	walk_up
@@ -398,7 +415,9 @@ Movement_JessieApproach:
 	walk_down
 	face_right
 	emote_exclamation_mark
-	walk_in_place_faster_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
+	walk_in_place_fast_right
 	delay_16
 	delay_16
 	step_end
@@ -409,7 +428,9 @@ Movement_JamesApproach:
 	walk_down
 	face_left
 	emote_exclamation_mark
-	walk_in_place_faster_left
+	walk_in_place_fast_left
+	walk_in_place_fast_left
+	walk_in_place_fast_left
 	step_end
 
 Route24_Text_YouFool:
@@ -516,7 +537,10 @@ Movement_LookerCaughtRocket::
 	step_end
 
 Movement_RocketGotCaught::
-	walk_in_place_faster_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
 	delay_16
 	delay_16
 	walk_down
