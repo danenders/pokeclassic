@@ -598,8 +598,8 @@
 #define FLAG_HIDDEN_ITEM_ROUTE17_FULL_RESTORE                                     (FLAG_HIDDEN_ITEMS_START + 0x40)
 #define FLAG_HIDDEN_ITEM_ROUTE17_MAX_ELIXIR                                       (FLAG_HIDDEN_ITEMS_START + 0x41)
 #define FLAG_HIDDEN_ITEM_FUCHSIA_CITY_MAX_REVIVE                                  (FLAG_HIDDEN_ITEMS_START + 0x42)
-#define FLAG_HIDDEN_ITEM_67            	(FLAG_HIDDEN_ITEMS_START + 0x43)
-#define FLAG_HIDDEN_ITEM_68             (FLAG_HIDDEN_ITEMS_START + 0x44)
+#define FLAG_HIDDEN_ITEM_SAFARI_ZONE_CENTER_LEAF_STONE            	              (FLAG_HIDDEN_ITEMS_START + 0x43)
+#define FLAG_HIDDEN_ITEM_SAFARI_ZONE_WEST_REVIVE                                  (FLAG_HIDDEN_ITEMS_START + 0x44)
 #define FLAG_HIDDEN_ITEM_69             (FLAG_HIDDEN_ITEMS_START + 0x45)
 #define FLAG_HIDDEN_ITEM_70             (FLAG_HIDDEN_ITEMS_START + 0x46)
 #define FLAG_HIDDEN_ITEM_71             (FLAG_HIDDEN_ITEMS_START + 0x47)
@@ -1099,17 +1099,17 @@
 #define FLAG_HIDE_ROCKET_HIDEOUT_B4F_MAX_ETHER                      0x422
 #define FLAG_HIDE_ROCKET_HIDEOUT_B4F_CALCIUM                    	0x423
 #define FLAG_HIDE_FUCHSIA_CITY_WARDENS_HOUSE_RARE_CANDY             0x424
-#define FLAG_HIDE_SAFARI_ZONE_WEST_GOLD_TEETH                 		0x425
-#define FLAG_UNUSED_ITEM_0x426                  					0x426
-#define FLAG_UNUSED_ITEM_0x427                 						0x427
-#define FLAG_UNUSED_ITEM_0x428                  					0x428
-#define FLAG_UNUSED_ITEM_0x429                  					0x429
-#define FLAG_UNUSED_ITEM_0x42A                            			0x42A
-#define FLAG_UNUSED_ITEM_0x42B                						0x42B
-#define FLAG_UNUSED_ITEM_0x42C                  					0x42C
-#define FLAG_UNUSED_ITEM_0x42D                    					0x42D
-#define FLAG_UNUSED_ITEM_0x42E                             			0x42E
-#define FLAG_UNUSED_ITEM_0x42F                       				0x42F
+#define FLAG_HIDE_SAFARI_ZONE_CENTER_NUGGET                  		0x425
+#define FLAG_HIDE_SAFARI_ZONE_EAST_TM11                 			0x426
+#define FLAG_HIDE_SAFARI_ZONE_EAST_MAX_POTION                  		0x427
+#define FLAG_HIDE_SAFARI_ZONE_EAST_FULL_RESTORE                     0x428
+#define FLAG_HIDE_SAFARI_ZONE_EAST_LEAF_STONE                       0x429
+#define FLAG_HIDE_SAFARI_ZONE_NORTH_QUICK_CLAW                		0x42A
+#define FLAG_HIDE_SAFARI_ZONE_NORTH_TM47                  			0x42B
+#define FLAG_HIDE_SAFARI_ZONE_NORTH_PROTEIN                    		0x42C
+#define FLAG_HIDE_SAFARI_ZONE_WEST_TM32                             0x42D
+#define FLAG_HIDE_SAFARI_ZONE_WEST_MAX_REVIVE                       0x42E
+#define FLAG_HIDE_SAFARI_ZONE_WEST_GOLD_TEETH                       0x42F 
 #define FLAG_UNUSED_ITEM_0x430                        				0x430
 #define FLAG_UNUSED_ITEM_0x431                      				0x431
 #define FLAG_UNUSED_ITEM_0x432                            			0x432
@@ -1583,15 +1583,15 @@
 #define FLAG_DAILY_TITLE_MATCH     					(DAILY_FLAGS_START + 0xD)  // You only get one shot to retain the title every day.
 
 //Daily Events
-#define FLAG_DAILY_MT_MOON_MUSHROOMS        		(DAILY_FLAGS_START + 0xE)  // Hidden mushrooms in Mt. Moon reset each day
-#define FLAG_DAILY_CERULEAN_BERRY          			(DAILY_FLAGS_START + 0xF)  // The breeder in Cerulean gives a friendship berry once per day
+#define FLAG_DAILY_MT_MOON_MUSHROOMS        		(DAILY_FLAGS_START + 0xE)   // Hidden mushrooms in Mt. Moon reset each day
+#define FLAG_DAILY_CERULEAN_BERRY          			(DAILY_FLAGS_START + 0xF)   // The breeder in Cerulean gives a friendship berry once per day
 #define FLAG_DAILY_GOT_TEA       					(DAILY_FLAGS_START + 0x10)  // If you don't have one, you can get a Tea once per day.
 #define FLAG_DAILY_GUARD_TEA               			(DAILY_FLAGS_START + 0x11)  // Giving the guards tea once per day will unlock something. Reward tbd.
 #define FLAG_DAILY_FANCLUB_REWARD        			(DAILY_FLAGS_START + 0x12)  // Fanclub chairman gives 1 rare candy every day
-#define FLAG_DAILY_GAME_CORNER_SERVICE_DAY_CHECKED  (DAILY_FLAGS_START + 0x13)   
+#define FLAG_DAILY_GAME_CORNER_SERVICE_DAY_CHECKED  (DAILY_FLAGS_START + 0x13)  // Checks if its a Service Day at the game corner 
 #define FLAG_DAILY_COIN_REFRESH                		(DAILY_FLAGS_START + 0x14)  // Once per day, one of the 12 stashes of coins will refresh.
+#define FLAG_DAILY_SAFARI_GAME_PRIZE                (DAILY_FLAGS_START + 0x15)  // Getting to the secret house gives a prize each time AFTER getting Surf
 
-#define FLAG_UNUSED_0x935                           (DAILY_FLAGS_START + 0x15) // Unused Flag
 #define FLAG_UNUSED_0x936                           (DAILY_FLAGS_START + 0x16) // Unused Flag
 #define FLAG_UNUSED_0x937                           (DAILY_FLAGS_START + 0x17) // Unused Flag
 #define FLAG_UNUSED_0x938                           (DAILY_FLAGS_START + 0x18) // Unused Flag

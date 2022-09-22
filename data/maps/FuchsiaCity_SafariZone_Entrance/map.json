@@ -14,26 +14,120 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_RANGER_F",
+      "in_connection": false,
+      "x": 7,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_RANGER_M",
+      "in_connection": false,
+      "x": 7,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FuchsiaCity_SafariZone_Entrance_EventScript_WelcomeAttendant",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BREEDER_M",
+      "in_connection": false,
+      "x": 1,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FuchsiaCity_SafariZone_Entrance_EventScript_InfoAttendant",
+      "flag": "0"
+    }
   ],
   "warp_events": [
-    {
-      "x": 4,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_SAFARI_ZONE_CENTER",
-      "dest_warp_id": 1
-    },
     {
       "x": 4,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_FUCHSIA_CITY",
       "dest_warp_id": 3
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_SAFARI_ZONE_CENTER",
+      "dest_warp_id": 1
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_SAFARI_ZONE_STATE",
+      "var_value": "0",
+      "script": "FuchsiaCity_SafariZone_Entrance_EventScript_EntranceCounterTriggerLeft"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_SAFARI_ZONE_STATE",
+      "var_value": "0",
+      "script": "FuchsiaCity_SafariZone_Entrance_EventScript_EntranceCounterTriggerMid"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_SAFARI_ZONE_STATE",
+      "var_value": "0",
+      "script": "FuchsiaCity_SafariZone_Entrance_EventScript_EntranceCounter"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_SAFARI_ZONE_STATE",
+      "var_value": "2",
+      "script": "FuchsiaCity_SafariZone_Entrance_EventScript_ExitCounterTriggerLeft"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_SAFARI_ZONE_STATE",
+      "var_value": "2",
+      "script": "FuchsiaCity_SafariZone_Entrance_EventScript_ExitCounterTriggerMid"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_SAFARI_ZONE_STATE",
+      "var_value": "2",
+      "script": "FuchsiaCity_SafariZone_Entrance_EventScript_ExitCounter"
+    }
   ],
   "bg_events": [
 

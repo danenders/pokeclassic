@@ -23,6 +23,7 @@
 #include "constants/battle_anim.h"
 #include "constants/songs.h"
 #include "constants/rgb.h"
+#include "constants/trainers.h"
 
 static void SafariHandleGetMonData(void);
 static void SafariHandleGetRawMonData(void);
@@ -147,6 +148,21 @@ static void (*const sSafariBufferCommands[CONTROLLER_CMDS_COUNT])(void) =
     [CONTROLLER_ENDLINKBATTLE]            = SafariHandleEndLinkBattle,
     [CONTROLLER_DEBUGMENU]                = SafariHandleBattleDebug,
     [CONTROLLER_TERMINATOR_NOP]           = SafariCmdEnd
+};
+
+static const u8 sCostumeBackPics[COSTUME_COUNT][GENDER_COUNT] = 
+{
+    [RED_COSTUME]               = {TRAINER_BACK_PIC_RED, TRAINER_BACK_PIC_RED},
+    [LEAF_COSTUME]              = {TRAINER_BACK_PIC_LEAF, TRAINER_BACK_PIC_LEAF},
+    [BRENDAN_COSTUME]           = {TRAINER_BACK_PIC_BRENDAN, TRAINER_BACK_PIC_BRENDAN},
+    [MAY_COSTUME]               = {TRAINER_BACK_PIC_MAY, TRAINER_BACK_PIC_MAY},
+    [ETHAN_COSTUME]             = {TRAINER_BACK_PIC_ETHAN, TRAINER_BACK_PIC_ETHAN},
+    [LYRA_COSTUME]              = {TRAINER_BACK_PIC_LYRA, TRAINER_BACK_PIC_LYRA},
+    [KRIS_COSTUME]              = {TRAINER_BACK_PIC_KRIS, TRAINER_BACK_PIC_KRIS},
+    [LUCAS_COSTUME]             = {TRAINER_BACK_PIC_LUCAS, TRAINER_BACK_PIC_LUCAS},
+    [DAWN_COSTUME]              = {TRAINER_BACK_PIC_DAWN, TRAINER_BACK_PIC_DAWN},
+    [LUCAS_PLATINUM_COSTUME]    = {TRAINER_BACK_PIC_LUCAS_PLATINUM, TRAINER_BACK_PIC_LUCAS_PLATINUM},
+    [DAWN_PLATINUM_COSTUME]     = {TRAINER_BACK_PIC_DAWN_PLATINUM, TRAINER_BACK_PIC_DAWN_PLATINUM},
 };
 
 static void SpriteCB_Null4(void)
@@ -354,13 +370,13 @@ static void SafariHandleReturnMonToBall(void)
 
 static void SafariHandleDrawTrainerPic(void)
 {
-    DecompressTrainerBackPic(gSaveBlock2Ptr->playerGender, gActiveBattler);
-    SetMultiuseSpriteTemplateToTrainerBack(gSaveBlock2Ptr->playerGender, GetBattlerPosition(gActiveBattler));
-    gBattlerSpriteIds[gActiveBattler] = CreateSprite(
-      &gMultiuseSpriteTemplate,
-      80,
-      (8 - gTrainerBackPicCoords[gSaveBlock2Ptr->playerGender].size) * 4 + 80,
-      30);
+    s16 xPos, yPos;
+    u32 trainerPicId;
+
+    trainerPicId = sCostumeBackPics[gSaveBlock2Ptr->costumeId][gSaveBlock2Ptr->playerGender];
+    DecompressTrainerBackPic(trainerPicId, gActiveBattler);
+    SetMultiuseSpriteTemplateToTrainerBack(trainerPicId, GetBattlerPosition(gActiveBattler));
+    gBattlerSpriteIds[gActiveBattler] = CreateSprite(&gMultiuseSpriteTemplate, 80, (8 - gTrainerBackPicCoords[trainerPicId].size) * 4 + 80, 30);
     gSprites[gBattlerSpriteIds[gActiveBattler]].oam.paletteNum = gActiveBattler;
     gSprites[gBattlerSpriteIds[gActiveBattler]].x2 = DISPLAY_WIDTH;
     gSprites[gBattlerSpriteIds[gActiveBattler]].sSpeedX = -2;
