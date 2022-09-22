@@ -68,12 +68,10 @@ enum {
 };
 
 enum {
-    BLENDER_MISTER,
-    BLENDER_LADDIE,
-    BLENDER_LASSIE,
-    BLENDER_MASTER,
-    BLENDER_DUDE,
-    BLENDER_MISS
+    BLENDER_EXPERT,
+    BLENDER_YOUNGSTER,
+    BLENDER_LASS,
+    BLENDER_DAISY
 };
 
 #define BLENDER_MAX_PLAYERS MAX_LINK_PLAYERS
@@ -258,21 +256,17 @@ static const u8 sUnusedText_LinkPartnerNotFound[] = _("Link partner(s) not found
 static const u8 sText_BerryBlenderStart[] = _("Starting up the Berry Blender.\pPlease select a Berry from your Bag\nto put in the Berry Blender.\p");
 static const u8 sText_NewParagraph[] = _("\p");
 static const u8 sText_WasMade[] = _(" was made!");
-static const u8 sText_Mister[] = _("Mister");
-static const u8 sText_Laddie[] = _("Laddie");
-static const u8 sText_Lassie[] = _("Lassie");
-static const u8 sText_Master[] = _("Master");
-static const u8 sText_Dude[] = _("Dude");
-static const u8 sText_Miss[] = _("Miss");
+static const u8 sText_Expert[] = _("Expert");
+static const u8 sText_Youngster[] = _("Youngster");
+static const u8 sText_Lass[] = _("Lass");
+static const u8 sText_Daisy[] = _("Daisy");
 
 static const u8* const sBlenderOpponentsNames[] =
 {
-    [BLENDER_MISTER] = sText_Mister,
-    [BLENDER_LADDIE] = sText_Laddie,
-    [BLENDER_LASSIE] = sText_Lassie,
-    [BLENDER_MASTER] = sText_Master,
-    [BLENDER_DUDE]   = sText_Dude,
-    [BLENDER_MISS]   = sText_Miss
+    [BLENDER_EXPERT] = sText_Expert,
+    [BLENDER_YOUNGSTER] = sText_Youngster,
+    [BLENDER_LASS] = sText_Lass,
+    [BLENDER_DAISY] = sText_Daisy
 };
 
 static const u8 sText_PressAToStart[] = _("Press the A Button to start.");
@@ -1225,10 +1219,10 @@ static void InitLocalPlayers(u8 opponentsNum)
         sBerryBlender->numPlayers = 2;
         StringCopy(gLinkPlayers[0].name, gSaveBlock2Ptr->playerName);
 
-        if (!FlagGet(FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER))
-            StringCopy(gLinkPlayers[1].name, sBlenderOpponentsNames[BLENDER_MASTER]);
+        if (!FlagGet(FLAG_HIDE_BERRY_HOUSE_DAISY))
+            StringCopy(gLinkPlayers[1].name, sBlenderOpponentsNames[BLENDER_DAISY]);
         else
-            StringCopy(gLinkPlayers[1].name, sBlenderOpponentsNames[BLENDER_MISTER]);
+            StringCopy(gLinkPlayers[1].name, sBlenderOpponentsNames[BLENDER_EXPERT]);
 
         gLinkPlayers[0].language = GAME_LANGUAGE;
         gLinkPlayers[1].language = GAME_LANGUAGE;
@@ -1237,8 +1231,8 @@ static void InitLocalPlayers(u8 opponentsNum)
         gInGameOpponentsNo = 2;
         sBerryBlender->numPlayers = 3;
         StringCopy(gLinkPlayers[0].name, gSaveBlock2Ptr->playerName);
-        StringCopy(gLinkPlayers[1].name, sBlenderOpponentsNames[BLENDER_DUDE]);
-        StringCopy(gLinkPlayers[2].name, sBlenderOpponentsNames[BLENDER_LASSIE]);
+        StringCopy(gLinkPlayers[1].name, sBlenderOpponentsNames[BLENDER_EXPERT]);
+        StringCopy(gLinkPlayers[2].name, sBlenderOpponentsNames[BLENDER_LASS]);
 
         gLinkPlayers[0].language = GAME_LANGUAGE;
         gLinkPlayers[1].language = GAME_LANGUAGE;
@@ -1248,9 +1242,9 @@ static void InitLocalPlayers(u8 opponentsNum)
         gInGameOpponentsNo = 3;
         sBerryBlender->numPlayers = 4;
         StringCopy(gLinkPlayers[0].name, gSaveBlock2Ptr->playerName);
-        StringCopy(gLinkPlayers[1].name, sBlenderOpponentsNames[BLENDER_MISS]);
-        StringCopy(gLinkPlayers[2].name, sBlenderOpponentsNames[BLENDER_LADDIE]);
-        StringCopy(gLinkPlayers[3].name, sBlenderOpponentsNames[BLENDER_LASSIE]);
+        StringCopy(gLinkPlayers[1].name, sBlenderOpponentsNames[BLENDER_EXPERT]);
+        StringCopy(gLinkPlayers[2].name, sBlenderOpponentsNames[BLENDER_YOUNGSTER]);
+        StringCopy(gLinkPlayers[3].name, sBlenderOpponentsNames[BLENDER_LASS]);
 
         gLinkPlayers[0].language = GAME_LANGUAGE;
         gLinkPlayers[1].language = GAME_LANGUAGE;
@@ -1557,7 +1551,7 @@ static void SetOpponentsBerryData(u16 playerBerryItemId, u8 playersNum, struct B
     {
         opponentBerryId = sOpponentBerrySets[opponentSetId][i];
         berryMasterDiff = ITEM_TO_BERRY(playerBerryItemId) - ITEM_TO_BERRY(ITEM_SPELON_BERRY);
-        if (!FlagGet(FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER) && gSpecialVar_0x8004 == 1)
+        if (!FlagGet(FLAG_HIDE_BERRY_HOUSE_DAISY) && gSpecialVar_0x8004 == 1)
         {
             opponentSetId %= ARRAY_COUNT(sBerryMasterBerries);
             opponentBerryId = sBerryMasterBerries[opponentSetId];
@@ -1767,7 +1761,7 @@ static void CB2_StartBlenderLocal(void)
 
         if (gSpecialVar_0x8004 == 1)
         {
-            if (!FlagGet(FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER))
+            if (!FlagGet(FLAG_HIDE_BERRY_HOUSE_DAISY))
                 sBerryBlender->opponentTaskIds[0] = CreateTask(Task_HandleBerryMaster, 10);
             else
                 sBerryBlender->opponentTaskIds[0] = CreateTask(sLocalOpponentTasks[0], 10);

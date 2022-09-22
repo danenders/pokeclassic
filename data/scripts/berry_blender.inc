@@ -261,7 +261,7 @@ BerryBlender_EventScript_DeclineBlender1:
 BerryBlender_EventScript_Blender1NoBerries:
 	msgbox BerryBlender_Text_DontHaveAnyBerries, MSGBOX_DEFAULT
 	dotimebasedevents
-	goto_if_set FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY, BerryBlender_EventScript_Blender1NoSpareBerries
+	goto_if_set FLAG_DAILY_BERRY_HOUSE_RECEIVED_BERRY, BerryBlender_EventScript_Blender1NoSpareBerries
 	goto BerryBlender_EventScript_Blender1GiveSpareBerry
 	end
 
@@ -273,7 +273,7 @@ BerryBlender_EventScript_Blender1NoSpareBerries:
 BerryBlender_EventScript_Blender1GiveSpareBerry:
 	msgbox BerryBlender_Text_CanHaveOneOfMyBerries, MSGBOX_DEFAULT
 	giveitem ITEM_PECHA_BERRY
-	setflag FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY
+	setflag FLAG_DAILY_BERRY_HOUSE_RECEIVED_BERRY
 	goto BerryBlender_EventScript_UseBerryBlender1
 	end
 
@@ -522,7 +522,7 @@ BerryBlender_EventScript_ExpertMNoBerries:
 	specialvar VAR_RESULT, GetFirstFreePokeblockSlot
 	goto_if_eq VAR_RESULT, 65535, BerryBlender_EventScript_ExpertMNoSpareBerries
 	dotimebasedevents
-	goto_if_set FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY, BerryBlender_EventScript_ExpertMNoSpareBerries
+	goto_if_set FLAG_DAILY_BERRY_HOUSE_RECEIVED_BERRY, BerryBlender_EventScript_ExpertMNoSpareBerries
 	goto BerryBlender_EventScript_ExpertMGiveBerry
 	end
 
@@ -534,7 +534,7 @@ BerryBlender_EventScript_ExpertMNoSpareBerries:
 BerryBlender_EventScript_ExpertMGiveBerry:
 	msgbox BerryBlender_Text_DontHaveAnyBerriesHaveOne, MSGBOX_DEFAULT
 	giveitem ITEM_PECHA_BERRY
-	setflag FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY
+	setflag FLAG_DAILY_BERRY_HOUSE_RECEIVED_BERRY
 	msgbox BerryBlender_Text_UseItToMakePokeblocksTogether, MSGBOX_DEFAULT
 	release
 	end

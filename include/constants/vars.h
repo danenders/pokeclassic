@@ -161,7 +161,7 @@
 #define VAR_MAGIKARP_SIZE_RECORD          	0x408E
 #define VAR_POKEMON_TOWER_STATE             0x408F
 #define VAR_ROOFTOP_ROCKET_PLANS            0x4090 //Tracks the Rocket Plans dropoff on the Celadon Roof. 
-#define UNUSED_VARIABLE_22	    			0x4091
+#define VAR_BERRY_HOUSE_VISITORS	    	0x4091 //The number of Berry Blend opponents available in Fuschia's Berry House.
 #define UNUSED_VARIABLE_23           		0x4092
 #define UNUSED_VARIABLE_24               	0x4093
 #define UNUSED_VARIABLE_25         			0x4094

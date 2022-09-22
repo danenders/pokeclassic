@@ -1,7 +1,7 @@
 {
   "id": "MAP_FUCHSIA_CITY_HOUSE3",
   "name": "FuchsiaCity_House3",
-  "layout": "LAYOUT_HOUSE1",
+  "layout": "LAYOUT_FUCHSIA_CITY_HOUSE3",
   "music": "MUS_RG_FUCHSIA",
   "region_map_section": "MAPSEC_FUCHSIA_CITY",
   "requires_flash": false,
@@ -15,17 +15,73 @@
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
       "in_connection": false,
-      "x": 4,
-      "y": 4,
+      "x": 8,
+      "y": 3,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "FuchsiaCity_House3_EventScript_MoveDeleter",
+      "script": "FuchsiaCity_House3_EventScript_Expert",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "in_connection": false,
+      "x": 7,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FuchsiaCity_House3_EventScript_Lass",
+      "flag": "FLAG_HIDE_BERRY_HOUSE_LASS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "in_connection": false,
+      "x": 9,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FuchsiaCity_House3_EventScript_Youngster",
+      "flag": "FLAG_HIDE_BERRY_HOUSE_YOUNGSTER"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_DAISY",
+      "in_connection": false,
+      "x": 8,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FuchsiaCity_House3_EventScript_Daisy",
+      "flag": "FLAG_HIDE_BERRY_HOUSE_DAISY"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "in_connection": false,
+      "x": 2,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 2,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FuchsiaCity_House3_EventScript_Grandfather",
       "flag": "0"
     }
   ],
@@ -42,6 +98,37 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "FuchsiaCity_House3_EventScript_BerryBlenderSpeedRecords"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "FuchsiaCity_House3_EventScript_Picture"
+    },
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "FuchsiaCity_House3_EventScript_Picture"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BerryHouse_EventScript_BerryBlender"
+    }
   ]
 }

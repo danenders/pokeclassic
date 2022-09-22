@@ -838,9 +838,9 @@
 #define FLAG_HIDE_HIDEOUT_CUBONE                          		    0x31F
 #define FLAG_HIDE_HIDEOUT_GIOVANNI                                  0x320
 #define FLAG_HIDE_ROUTE16_SNORLAX                                   0x321
-#define FLAG_HIDE_UNUSED_76                    						0x322
-#define FLAG_HIDE_UNUSED_77                   						0x323
-#define FLAG_HIDE_UNUSED_78                               			0x324
+#define FLAG_HIDE_BERRY_HOUSE_DAISY                    				0x322
+#define FLAG_HIDE_BERRY_HOUSE_YOUNGSTER                   			0x323
+#define FLAG_HIDE_BERRY_HOUSE_LASS                               	0x324
 #define FLAG_HIDE_UNUSED_79                        					0x325
 #define FLAG_HIDE_UNUSED_80                							0x326
 #define FLAG_HIDE_UNUSED_81                   						0x327
@@ -1566,7 +1566,7 @@
 #define FLAG_DAILY_APPRENTICE_LEAVES                (DAILY_FLAGS_START + 0x0)  
 #define FLAG_DAILY_PICKED_LOTO_TICKET     			(DAILY_FLAGS_START + 0x1)
 #define FLAG_DAILY_SECRET_BASE                      (DAILY_FLAGS_START + 0x2)
-#define FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY     (DAILY_FLAGS_START + 0x3)
+#define FLAG_DAILY_BERRY_HOUSE_RECEIVED_BERRY       (DAILY_FLAGS_START + 0x3)
 
 //Gym Leader Daily Rematches
 #define FLAG_DAILY_BROCK_REMATCH                    (DAILY_FLAGS_START + 0x4)
@@ -1591,8 +1591,8 @@
 #define FLAG_DAILY_GAME_CORNER_SERVICE_DAY_CHECKED  (DAILY_FLAGS_START + 0x13)  // Checks if its a Service Day at the game corner 
 #define FLAG_DAILY_COIN_REFRESH                		(DAILY_FLAGS_START + 0x14)  // Once per day, one of the 12 stashes of coins will refresh.
 #define FLAG_DAILY_SAFARI_GAME_PRIZE                (DAILY_FLAGS_START + 0x15)  // Getting to the secret house gives a prize each time AFTER getting Surf
+#define FLAG_DAILY_BERRY_BLEND_OPPONENTS            (DAILY_FLAGS_START + 0x16)  // The number of opponents for Berry Blend is random every day.
 
-#define FLAG_UNUSED_0x936                           (DAILY_FLAGS_START + 0x16) // Unused Flag
 #define FLAG_UNUSED_0x937                           (DAILY_FLAGS_START + 0x17) // Unused Flag
 #define FLAG_UNUSED_0x938                           (DAILY_FLAGS_START + 0x18) // Unused Flag
 #define FLAG_UNUSED_0x939                           (DAILY_FLAGS_START + 0x19) // Unused Flag
