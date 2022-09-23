@@ -4371,8 +4371,200 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderKoga[] = {
         .moves = {MOVE_TACKLE, MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_TOXIC},
     },
 };
+//Route 13
+static const struct TrainerMonNoItemDefaultMoves sParty_BeautyLola[] = {
+    {
+        .iv = 0,
+        .lvl = 27,
+        .species = SPECIES_RATTATA,
+    },
+    {
+        .iv = 0,
+        .lvl = 27,
+        .species = SPECIES_PIKACHU,
+    },
+    {
+        .iv = 0,
+        .lvl = 27,
+        .species = SPECIES_RATTATA,
+    },
+};
 
+static const struct TrainerMonNoItemDefaultMoves sParty_BeautySheila[] = {
+    {
+        .iv = 0,
+        .lvl = 29,
+        .species = SPECIES_CLEFAIRY,
+    },
+    {
+        .iv = 0,
+        .lvl = 29,
+        .species = SPECIES_MEOWTH,
+    },
+};
+static const struct TrainerMonNoItemCustomMoves sParty_BikerJared[] = {
+    {
+        .iv = 0,
+        .lvl = 28,
+        .species = SPECIES_KOFFING,
+        .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_POISON_GAS},
+    },
+    {
+        .iv = 0,
+        .lvl = 28,
+        .species = SPECIES_KOFFING,
+        .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
+    },
+    {
+        .iv = 0,
+        .lvl = 28,
+        .species = SPECIES_KOFFING,
+        .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_BirdKeeperSebastian[] = {
+    {
+        .iv = 0,
+        .lvl = 29,
+        .species = SPECIES_PIDGEY,
+    },
+    {
+        .iv = 0,
+        .lvl = 29,
+        .species = SPECIES_PIDGEOTTO,
+    },
+};
 
+static const struct TrainerMonNoItemDefaultMoves sParty_BirdKeeperPerry[] = {
+    {
+        .iv = 0,
+        .lvl = 25,
+        .species = SPECIES_SPEAROW,
+    },
+    {
+        .iv = 0,
+        .lvl = 25,
+        .species = SPECIES_PIDGEY,
+    },
+    {
+        .iv = 0,
+        .lvl = 25,
+        .species = SPECIES_PIDGEY,
+    },
+    {
+        .iv = 0,
+        .lvl = 25,
+        .species = SPECIES_SPEAROW,
+    },
+    {
+        .iv = 0,
+        .lvl = 25,
+        .species = SPECIES_SPEAROW,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_BirdKeeperRobert[] = {
+    {
+        .iv = 0,
+        .lvl = 26,
+        .species = SPECIES_PIDGEY,
+    },
+    {
+        .iv = 0,
+        .lvl = 26,
+        .species = SPECIES_PIDGEOTTO,
+    },
+    {
+        .iv = 0,
+        .lvl = 26,
+        .species = SPECIES_SPEAROW,
+    },
+    {
+        .iv = 0,
+        .lvl = 26,
+        .species = SPECIES_FEAROW,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerAlma[] = {
+    {
+        .iv = 0,
+        .lvl = 28,
+        .species = SPECIES_GOLDEEN,
+    },
+    {
+        .iv = 0,
+        .lvl = 28,
+        .species = SPECIES_POLIWAG,
+    },
+    {
+        .iv = 0,
+        .lvl = 28,
+        .species = SPECIES_HORSEA,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerSusie[] = {
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_PIDGEY,
+    },
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_MEOWTH,
+    },
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_RATTATA,
+    },
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_PIKACHU,
+    },
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_MEOWTH,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerValerie[] = {
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_POLIWAG,
+    },
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_POLIWAG,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerGwen[] = {
+    {
+        .iv = 0,
+        .lvl = 27,
+        .species = SPECIES_PIDGEY,
+    },
+    {
+        .iv = 0,
+        .lvl = 27,
+        .species = SPECIES_MEOWTH,
+    },
+    {
+        .iv = 0,
+        .lvl = 27,
+        .species = SPECIES_PIDGEY,
+    },
+    {
+        .iv = 0,
+        .lvl = 27,
+        .species = SPECIES_PIDGEOTTO,
+    },
+};
 
 
 

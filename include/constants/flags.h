@@ -600,7 +600,7 @@
 #define FLAG_HIDDEN_ITEM_FUCHSIA_CITY_MAX_REVIVE                                  (FLAG_HIDDEN_ITEMS_START + 0x42)
 #define FLAG_HIDDEN_ITEM_SAFARI_ZONE_CENTER_LEAF_STONE            	              (FLAG_HIDDEN_ITEMS_START + 0x43)
 #define FLAG_HIDDEN_ITEM_SAFARI_ZONE_WEST_REVIVE                                  (FLAG_HIDDEN_ITEMS_START + 0x44)
-#define FLAG_HIDDEN_ITEM_69             (FLAG_HIDDEN_ITEMS_START + 0x45)
+#define FLAG_HIDDEN_ITEM_ROUTE13_PP_UP                                            (FLAG_HIDDEN_ITEMS_START + 0x45)
 #define FLAG_HIDDEN_ITEM_70             (FLAG_HIDDEN_ITEMS_START + 0x46)
 #define FLAG_HIDDEN_ITEM_71             (FLAG_HIDDEN_ITEMS_START + 0x47)
 #define FLAG_HIDDEN_ITEM_72             (FLAG_HIDDEN_ITEMS_START + 0x48)
