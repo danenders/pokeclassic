@@ -3219,8 +3219,91 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_BirdKeeperJacob}
     },
 
-
-
+//Fuchsia Gym
+    [TRAINER_LEADER_KOGA] = {
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_KOGA,
+        .trainerName = _("KOGA"),
+        .items = {ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_FULL_HEAL},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_LeaderKoga),
+        .party = {.NoItemCustomMoves = sParty_LeaderKoga}
+    },
+    [TRAINER_JUGGLER_KAYDEN] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_JUGGLER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_JUGGLER,
+        .trainerName = _("KAYDEN"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_JugglerKayden),
+        .party = {.NoItemDefaultMoves = sParty_JugglerKayden}
+    },
+    [TRAINER_JUGGLER_NATE] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_JUGGLER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_JUGGLER,
+        .trainerName = _("NATE"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_JugglerNate),
+        .party = {.NoItemDefaultMoves = sParty_JugglerNate}
+    },
+    [TRAINER_TAMER_PHIL] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TAMER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_TAMER,
+        .trainerName = _("PHIL"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_TamerPhil),
+        .party = {.NoItemDefaultMoves = sParty_TamerPhil}
+    },
+    [TRAINER_TAMER_EDGAR] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TAMER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_TAMER,
+        .trainerName = _("EDGAR"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_TamerEdgar),
+        .party = {.NoItemDefaultMoves = sParty_TamerEdgar}
+    },
+    [TRAINER_JUGGLER_KIRK] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_JUGGLER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_JUGGLER,
+        .trainerName = _("KIRK"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_JugglerKirk),
+        .party = {.NoItemDefaultMoves = sParty_JugglerKirk}
+    },
+    [TRAINER_JUGGLER_SHAWN] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_JUGGLER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_JUGGLER,
+        .trainerName = _("SHAWN"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_JugglerShawn),
+        .party = {.NoItemDefaultMoves = sParty_JugglerShawn}
+    },
 
 
 

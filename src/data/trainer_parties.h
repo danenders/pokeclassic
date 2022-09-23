@@ -4257,8 +4257,120 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BirdKeeperJacob[] = {
         .species = SPECIES_SPEAROW,
     },
 };
+//Fuchsia Gym
 
+static const struct TrainerMonNoItemDefaultMoves sParty_TamerPhil[] = {
+    {
+        .iv = 40,
+        .lvl = 34,
+        .species = SPECIES_SANDSLASH,
+    },
+    {
+        .iv = 40,
+        .lvl = 34,
+        .species = SPECIES_ARBOK,
+    },
+};
 
+static const struct TrainerMonNoItemDefaultMoves sParty_TamerEdgar[] = {
+    {
+        .iv = 40,
+        .lvl = 33,
+        .species = SPECIES_ARBOK,
+    },
+    {
+        .iv = 40,
+        .lvl = 33,
+        .species = SPECIES_SANDSLASH,
+    },
+    {
+        .iv = 40,
+        .lvl = 33,
+        .species = SPECIES_ARBOK,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_JugglerKayden[] = {
+    {
+        .iv = 0,
+        .lvl = 38,
+        .species = SPECIES_HYPNO,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_JugglerNate[] = {
+    {
+        .iv = 0,
+        .lvl = 34,
+        .species = SPECIES_DROWZEE,
+    },
+    {
+        .iv = 0,
+        .lvl = 34,
+        .species = SPECIES_KADABRA,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_JugglerKirk[] = {
+    {
+        .iv = 0,
+        .lvl = 31,
+        .species = SPECIES_DROWZEE,
+    },
+    {
+        .iv = 0,
+        .lvl = 31,
+        .species = SPECIES_DROWZEE,
+    },
+    {
+        .iv = 0,
+        .lvl = 31,
+        .species = SPECIES_KADABRA,
+    },
+    {
+        .iv = 0,
+        .lvl = 31,
+        .species = SPECIES_DROWZEE,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_JugglerShawn[] = {
+    {
+        .iv = 0,
+        .lvl = 34,
+        .species = SPECIES_DROWZEE,
+    },
+    {
+        .iv = 0,
+        .lvl = 34,
+        .species = SPECIES_HYPNO,
+    },
+};
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderKoga[] = {
+    {
+        .iv = 0,
+        .lvl = 37,
+        .species = SPECIES_KOFFING,
+        .moves = {MOVE_SELF_DESTRUCT, MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_TOXIC},
+    },
+    {
+        .iv = 0,
+        .lvl = 39,
+        .species = SPECIES_MUK,
+        .moves = {MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_ACID_ARMOR, MOVE_TOXIC},
+    },
+    {
+        .iv = 0,
+        .lvl = 37,
+        .species = SPECIES_KOFFING,
+        .moves = {MOVE_SELF_DESTRUCT, MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_TOXIC},
+    },
+    {
+        .iv = 0,
+        .lvl = 43,
+        .species = SPECIES_WEEZING,
+        .moves = {MOVE_TACKLE, MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_TOXIC},
+    },
+};
 
 
 

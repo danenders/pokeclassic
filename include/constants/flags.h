@@ -103,7 +103,7 @@
 #define FLAG_OPENED_ROCKET_HIDEOUT    		0x55  
 #define FLAG_GOT_ERIKA_REWARD               0x56            
 #define FLAG_WOKE_UP_ROUTE_16_SNORLAX       0x57        
-#define FLAG_UNUSED_0x58             0x58        
+#define FLAG_GOT_KOGA_REWARD                0x58        
 #define FLAG_UNUSED_0x059           0x59
 #define FLAG_UNUSED_0x05A           0x5A
 #define FLAG_UNUSED_0x05B        	0x5B
