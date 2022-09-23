@@ -73,6 +73,11 @@ const u8 gText_MatchCallBirdKeeper_Wilton_Pokemon[] = _("Bird Pokémon are my fa
 const u8 gText_MatchCallBirdKeeper_Wilton_Intro1[] = _("You need to be patient to");
 const u8 gText_MatchCallBirdKeeper_Wilton_Intro2[] = _("catch rare Pokémon!");
 
+const u8 gText_MatchCallBeauty_Olivia_Strategy[] = _("My Pokémon protect me.");
+const u8 gText_MatchCallBeauty_Olivia_Pokemon[] = _("Pokémon make me feel safe.");
+const u8 gText_MatchCallBeauty_Olivia_Intro1[] = _("Battling isn't about winning");
+const u8 gText_MatchCallBeauty_Olivia_Intro2[] = _("or losing for me!");
+
 const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_COUNT] =
 {
 	[REMATCH_JANICE] = MCFLAVOR(Lass_Janice),
@@ -90,4 +95,5 @@ const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_CO
 	[REMATCH_HIDEO] = MCFLAVOR(Biker_Hideo),
 	[REMATCH_KOJI] = MCFLAVOR(CueBall_Koji),
 	[REMATCH_WILTON] = MCFLAVOR(BirdKeeper_Wilton),
+	[REMATCH_OLIVIA] = MCFLAVOR(Beauty_Olivia),
 };

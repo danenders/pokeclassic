@@ -384,7 +384,7 @@
 #define FLAG_REMATCH_HIDEO                     0x169 // Biker Hideo on Route 16
 #define FLAG_REMATCH_KOJI                      0x16A // Cue Ball Koji on Route 16
 #define FLAG_REMATCH_WILTON                    0x16B // Bird Keeper Wilton on Route 18
-#define FLAG_REMATCH_UNUSED_15                 0x16C
+#define FLAG_REMATCH_OLIVIA                    0x16C // Beauty Olivia on Route 15
 #define FLAG_REMATCH_UNUSED_16                 0x16D
 #define FLAG_REMATCH_UNUSED_17                 0x16E
 #define FLAG_REMATCH_UNUSED_18                 0x16F
@@ -601,8 +601,8 @@
 #define FLAG_HIDDEN_ITEM_SAFARI_ZONE_CENTER_LEAF_STONE            	              (FLAG_HIDDEN_ITEMS_START + 0x43)
 #define FLAG_HIDDEN_ITEM_SAFARI_ZONE_WEST_REVIVE                                  (FLAG_HIDDEN_ITEMS_START + 0x44)
 #define FLAG_HIDDEN_ITEM_ROUTE13_PP_UP                                            (FLAG_HIDDEN_ITEMS_START + 0x45)
-#define FLAG_HIDDEN_ITEM_70             (FLAG_HIDDEN_ITEMS_START + 0x46)
-#define FLAG_HIDDEN_ITEM_71             (FLAG_HIDDEN_ITEMS_START + 0x47)
+#define FLAG_HIDDEN_ITEM_ROUTE14_ZINC                                             (FLAG_HIDDEN_ITEMS_START + 0x46)
+#define FLAG_HIDDEN_ITEM_ROUTE14_PINAP_BERRY                                      (FLAG_HIDDEN_ITEMS_START + 0x47)
 #define FLAG_HIDDEN_ITEM_72             (FLAG_HIDDEN_ITEMS_START + 0x48)
 #define FLAG_HIDDEN_ITEM_73             (FLAG_HIDDEN_ITEMS_START + 0x49)
 #define FLAG_HIDDEN_ITEM_74             (FLAG_HIDDEN_ITEMS_START + 0x4A)
@@ -1110,7 +1110,7 @@
 #define FLAG_HIDE_SAFARI_ZONE_WEST_TM32                             0x42D
 #define FLAG_HIDE_SAFARI_ZONE_WEST_MAX_REVIVE                       0x42E
 #define FLAG_HIDE_SAFARI_ZONE_WEST_GOLD_TEETH                       0x42F 
-#define FLAG_UNUSED_ITEM_0x430                        				0x430
+#define FLAG_HIDE_ROUTE15_TM18                        				0x430
 #define FLAG_UNUSED_ITEM_0x431                      				0x431
 #define FLAG_UNUSED_ITEM_0x432                            			0x432
 #define FLAG_UNUSED_ITEM_0x433                           			0x433
