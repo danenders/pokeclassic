@@ -311,6 +311,22 @@ static const struct MenuAction MultichoiceList_HideoutFloors[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_SilphFloors[] =
+{
+    {gText_11F},
+    {gText_10F},
+    {gText_9F},
+    {gText_8F},
+    {gText_7F},
+    {gText_6F},
+    {gText_5F},
+    {gText_4F},
+    {gText_3F},
+    {gText_2F},
+    {gText_1F},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_ShardsR[] =
 {
     {gText_RedShard},
@@ -946,6 +962,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_SODA_POP_LEMONADE]          = MULTICHOICE(MultichoiceList_SodaPopLemonade),
     [MULTI_ALL_DRINKS]                 = MULTICHOICE(MultichoiceList_AllDrinks),
     [MULTI_HIDEOUT_FLOORS]             = MULTICHOICE(MultichoiceList_HideoutFloors),
+    [MULTI_SILPH_FLOORS]               = MULTICHOICE(MultichoiceList_SilphFloors),
 };
 
 const u8 *const gStdStrings[] =

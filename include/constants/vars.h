@@ -162,9 +162,9 @@
 #define VAR_POKEMON_TOWER_STATE             0x408F
 #define VAR_ROOFTOP_ROCKET_PLANS            0x4090 //Tracks the Rocket Plans dropoff on the Celadon Roof. 
 #define VAR_BERRY_HOUSE_VISITORS	    	0x4091 //The number of Berry Blend opponents available in Fuschia's Berry House.
-#define UNUSED_VARIABLE_23           		0x4092
-#define UNUSED_VARIABLE_24               	0x4093
-#define UNUSED_VARIABLE_25         			0x4094
+#define VAR_DOJO_OFFENSE           			0x4092 //The number of Offense Pupils you've defeated to earn Hitmonchan
+#define VAR_DOJO_DEFENSE               		0x4093 //The number of Defense Pupils you've defeated to earn Hitmonlee
+#define VAR_SILPH_STATE         			0x4094
 #define UNUSED_VARIABLE_26          		0x4095
 #define UNUSED_VARIABLE_27                  0x4096
 #define UNUSED_VARIABLE_28                 	0x4097

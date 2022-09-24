@@ -17,13 +17,26 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 2,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_NONE",
+      "dest_warp_id": 127
+    }
   ],
   "coord_events": [
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 0,
+      "y": 2,
+      "elevation": 3,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SilphCo_Elevator_EventScript_FloorSelect"
+    }
   ],
   "floor_number": ""
 }

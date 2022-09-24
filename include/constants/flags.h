@@ -104,33 +104,33 @@
 #define FLAG_GOT_ERIKA_REWARD               0x56            
 #define FLAG_WOKE_UP_ROUTE_16_SNORLAX       0x57        
 #define FLAG_GOT_KOGA_REWARD                0x58        
-#define FLAG_UNUSED_0x059           0x59
-#define FLAG_UNUSED_0x05A           0x5A
-#define FLAG_UNUSED_0x05B        	0x5B
-#define FLAG_UNUSED_0x05C    		0x5C
-#define FLAG_UNUSED_0x05D           0x5D 
-#define FLAG_UNUSED_0x05E           0x5E
-#define FLAG_UNUSED_0x05F         	0x5F
-#define FLAG_UNUSED_0x060          	0x60
-#define FLAG_UNUSED_0x061           0x61
-#define FLAG_UNUSED_0x062           0x62
-#define FLAG_UNUSED_0x063			0x63
-#define FLAG_UNUSED_0x064           0x64 // 
-#define FLAG_UNUSED_0x065           0x65 //
-#define FLAG_UNUSED_0x066           0x66 //
-#define FLAG_UNUSED_0x067           0x67 //
-#define FLAG_UNUSED_0x068           0x68 
-#define FLAG_UNUSED_0x069     		0x69
-#define FLAG_UNUSED_0x06A           0x6A
-#define FLAG_UNUSED_0x06B           0x6B
-#define FLAG_UNUSED_0x06C           0x6C // 
-#define FLAG_UNUSED_0x06D           0x6D
-#define FLAG_UNUSED_0x06E           0x6E
-#define FLAG_UNUSED_0x06F  			0x6F
-#define FLAG_UNUSED_0x070  			0x70
-#define FLAG_UNUSED_0x071 			0x71 
-#define FLAG_UNUSED_0x072      		0x72 
-#define FLAG_UNUSED_0x073           0x73
+#define FLAG_GOT_TM29_FROM_MR_PSYCHIC       0x59
+#define FLAG_RECEIVED_HITMONCHAN            0x5A
+#define FLAG_RECEIVED_HITMONLEE        	    0x5B
+#define FLAG_RECEIVED_BLACK_BELT    		0x5C
+#define FLAG_GOT_SABRINA_REWARD             0x5D 
+#define FLAG_SILPH_2F_DOOR_1                0x5E
+#define FLAG_SILPH_2F_DOOR_2             	0x5F
+#define FLAG_SILPH_3F_DOOR_1              	0x60
+#define FLAG_SILPH_3F_DOOR_2                0x61
+#define FLAG_SILPH_4F_DOOR_1                0x62
+#define FLAG_SILPH_4F_DOOR_2    			0x63
+#define FLAG_SILPH_5F_DOOR_1                0x64
+#define FLAG_SILPH_5F_DOOR_2                0x65
+#define FLAG_SILPH_5F_DOOR_3                0x66
+#define FLAG_SILPH_6F_DOOR                  0x67
+#define FLAG_SILPH_7F_DOOR_1                0x68 
+#define FLAG_SILPH_7F_DOOR_2         		0x69
+#define FLAG_SILPH_7F_DOOR_3                0x6A
+#define FLAG_SILPH_8F_DOOR                  0x6B
+#define FLAG_SILPH_9F_DOOR_1                0x6C
+#define FLAG_SILPH_9F_DOOR_2                0x6D
+#define FLAG_SILPH_9F_DOOR_3                0x6E
+#define FLAG_SILPH_9F_DOOR_4      			0x6F
+#define FLAG_SILPH_10F_DOOR       			0x70
+#define FLAG_SILPH_11F_DOOR      			0x71 
+#define FLAG_GOT_MASTER_BALL_FROM_SILPH     0x72 
+#define FLAG_GOT_LAPRAS_FROM_SILPH          0x73
 #define FLAG_UNUSED_0x074           0x74
 #define FLAG_UNUSED_0x075     		0x75 
 #define FLAG_UNUSED_0x076         	0x76
@@ -491,12 +491,12 @@
 #define FLAG_FOUND_20_COINS_2          		 0x1CE
 #define FLAG_FOUND_40_COINS           		 0x1CF
 #define FLAG_FOUND_100_COINS         		 0x1D0
-#define FLAG_UNUSED_0x1D1       			 0x1D1
-#define FLAG_UNUSED_0x1D2      				 0x1D2
-#define FLAG_UNUSED_0x1D3       			 0x1D3
-#define FLAG_UNUSED_0x1D4        			 0x1D4
-#define FLAG_UNUSED_0x1D5       			 0x1D5
-#define FLAG_UNUSED_0x1D6      				 0x1D6
+#define FLAG_DOJO_ATTACK       			     0x1D1 
+#define FLAG_DOJO_DEFENSE      				 0x1D2
+#define FLAG_DOJO_SPATTACK       			 0x1D3
+#define FLAG_DOJO_SPDEFENSE        			 0x1D4
+#define FLAG_DOJO_SPEED       			     0x1D5
+#define FLAG_DOJO_HP          				 0x1D6
 #define FLAG_UNUSED_0x1D7        			 0x1D7
 #define FLAG_UNUSED_0x1D8 					 0x1D8
 #define FLAG_UNUSED_0x1D9        			 0x1D9
@@ -603,18 +603,18 @@
 #define FLAG_HIDDEN_ITEM_ROUTE13_PP_UP                                            (FLAG_HIDDEN_ITEMS_START + 0x45)
 #define FLAG_HIDDEN_ITEM_ROUTE14_ZINC                                             (FLAG_HIDDEN_ITEMS_START + 0x46)
 #define FLAG_HIDDEN_ITEM_ROUTE14_PINAP_BERRY                                      (FLAG_HIDDEN_ITEMS_START + 0x47)
-#define FLAG_HIDDEN_ITEM_72             (FLAG_HIDDEN_ITEMS_START + 0x48)
-#define FLAG_HIDDEN_ITEM_73             (FLAG_HIDDEN_ITEMS_START + 0x49)
-#define FLAG_HIDDEN_ITEM_74             (FLAG_HIDDEN_ITEMS_START + 0x4A)
-#define FLAG_HIDDEN_ITEM_75             (FLAG_HIDDEN_ITEMS_START + 0x4B)
-#define FLAG_HIDDEN_ITEM_76             (FLAG_HIDDEN_ITEMS_START + 0x4C)
-#define FLAG_HIDDEN_ITEM_77             (FLAG_HIDDEN_ITEMS_START + 0x4D)
-#define FLAG_HIDDEN_ITEM_78          	(FLAG_HIDDEN_ITEMS_START + 0x4E)
-#define FLAG_HIDDEN_ITEM_79             (FLAG_HIDDEN_ITEMS_START + 0x4F)
-#define FLAG_HIDDEN_ITEM_80          	(FLAG_HIDDEN_ITEMS_START + 0x50)
-#define FLAG_HIDDEN_ITEM_81          	(FLAG_HIDDEN_ITEMS_START + 0x51)
-#define FLAG_HIDDEN_ITEM_82         	(FLAG_HIDDEN_ITEMS_START + 0x52)
-#define FLAG_HIDDEN_ITEM_83          	(FLAG_HIDDEN_ITEMS_START + 0x53)
+#define FLAG_HIDDEN_ITEM_SILPH_CO_2F_ULTRA_BALL                                   (FLAG_HIDDEN_ITEMS_START + 0x48)
+#define FLAG_HIDDEN_ITEM_SILPH_CO_3F_PROTEIN                                      (FLAG_HIDDEN_ITEMS_START + 0x49)
+#define FLAG_HIDDEN_ITEM_SILPH_CO_4F_IRON                                         (FLAG_HIDDEN_ITEMS_START + 0x4A)
+#define FLAG_HIDDEN_ITEM_SILPH_CO_5F_PP_UP                                        (FLAG_HIDDEN_ITEMS_START + 0x4B)
+#define FLAG_HIDDEN_ITEM_SILPH_CO_5F_ELIXIR                                       (FLAG_HIDDEN_ITEMS_START + 0x4C)
+#define FLAG_HIDDEN_ITEM_SILPH_CO_6F_CARBOS                                       (FLAG_HIDDEN_ITEMS_START + 0x4D)
+#define FLAG_HIDDEN_ITEM_SILPH_CO_7F_ZINC                                         (FLAG_HIDDEN_ITEMS_START + 0x4E)
+#define FLAG_HIDDEN_ITEM_SILPH_CO_8F_NUGGET                                       (FLAG_HIDDEN_ITEMS_START + 0x4F)
+#define FLAG_HIDDEN_ITEM_SILPH_CO_9F_CALCIUM          	                          (FLAG_HIDDEN_ITEMS_START + 0x50)
+#define FLAG_HIDDEN_ITEM_SILPH_CO_9F_MAX_POTION          	                      (FLAG_HIDDEN_ITEMS_START + 0x51)
+#define FLAG_HIDDEN_ITEM_SILPH_CO_10F_HP_UP                                       (FLAG_HIDDEN_ITEMS_START + 0x52)
+#define FLAG_HIDDEN_ITEM_SILPH_CO_11F_REVIVE                                      (FLAG_HIDDEN_ITEMS_START + 0x53)      	                           	
 #define FLAG_HIDDEN_ITEM_84             (FLAG_HIDDEN_ITEMS_START + 0x54)
 #define FLAG_HIDDEN_ITEM_85             (FLAG_HIDDEN_ITEMS_START + 0x55)
 #define FLAG_HIDDEN_ITEM_86             (FLAG_HIDDEN_ITEMS_START + 0x56)
@@ -841,45 +841,45 @@
 #define FLAG_HIDE_BERRY_HOUSE_DAISY                    				0x322
 #define FLAG_HIDE_BERRY_HOUSE_YOUNGSTER                   			0x323
 #define FLAG_HIDE_BERRY_HOUSE_LASS                               	0x324
-#define FLAG_HIDE_UNUSED_79                        					0x325
-#define FLAG_HIDE_UNUSED_80                							0x326
-#define FLAG_HIDE_UNUSED_81                   						0x327
-#define FLAG_HIDE_UNUSED_82     										0x328
-#define FLAG_HIDE_UNUSED_83         									0x329
+#define FLAG_HIDE_SAFFRON_ROCKETS                                   0x325
+#define FLAG_HIDE_SAFFRON_CIVILIANS                                 0x326
+#define FLAG_HIDE_SILPH_RIVAL                                       0x327
+#define FLAG_HIDE_UNUSED_82     									0x328
+#define FLAG_HIDE_UNUSED_83         								0x329
 #define FLAG_HIDE_UNUSED_84                           				0x32A
-#define FLAG_HIDE_UNUSED_85     										0x32B
-#define FLAG_HIDE_UNUSED_86      										0x32C
-#define FLAG_HIDE_UNUSED_87                     						0x32D
+#define FLAG_HIDE_UNUSED_85     									0x32B
+#define FLAG_HIDE_UNUSED_86      									0x32C
+#define FLAG_HIDE_UNUSED_87                     					0x32D
 #define FLAG_HIDE_UNUSED_88                               			0x32E
-#define FLAG_HIDE_UNUSED_89     										0x32F
+#define FLAG_HIDE_UNUSED_89     									0x32F
 #define FLAG_HIDE_UNUSED_90                           				0x330
 #define FLAG_HIDE_UNUSED_91       									0x331
 #define FLAG_HIDE_UNUSED_92           								0x332
-#define FLAG_HIDE_UNUSED_93                              				0x333
+#define FLAG_HIDE_UNUSED_93                            				0x333
 #define FLAG_HIDE_UNUSED_94                        					0x334
-#define FLAG_HIDE_UNUSED_95         									0x335
-#define FLAG_HIDE_UNUSED_96         									0x336
-#define FLAG_HIDE_UNUSED_97                          					0x337
-#define FLAG_HIDE_UNUSED_98                          					0x338
-#define FLAG_HIDE_UNUSED_99                         					0x339
-#define FLAG_HIDE_UNUSED_100                            				0x33A
-#define FLAG_HIDE_UNUSED_101                             				0x33B
-#define FLAG_HIDE_UNUSED_102                     						0x33C
-#define FLAG_HIDE_UNUSED_103                      						0x33D
-#define FLAG_HIDE_UNUSED_104                         					0x33E
+#define FLAG_HIDE_UNUSED_95         								0x335
+#define FLAG_HIDE_UNUSED_96         								0x336
+#define FLAG_HIDE_UNUSED_97                         				0x337
+#define FLAG_HIDE_UNUSED_98                          				0x338
+#define FLAG_HIDE_UNUSED_99                         				0x339
+#define FLAG_HIDE_UNUSED_100                            			0x33A
+#define FLAG_HIDE_UNUSED_101                           				0x33B
+#define FLAG_HIDE_UNUSED_102                     					0x33C
+#define FLAG_HIDE_UNUSED_103                  						0x33D
+#define FLAG_HIDE_UNUSED_104                       					0x33E
 #define FLAG_HIDE_UNUSED_105               							0x33F
-#define FLAG_HIDE_UNUSED_106                							0x340
-#define FLAG_HIDE_UNUSED_107                               			0x341
-#define FLAG_HIDE_UNUSED_108                                  			0x342
+#define FLAG_HIDE_UNUSED_106                						0x340
+#define FLAG_HIDE_UNUSED_107                               	    	0x341
+#define FLAG_HIDE_UNUSED_108                                  		0x342
 #define FLAG_HIDE_UNUSED_109                       					0x343
-#define FLAG_HIDE_UNUSED_110              								0x344
+#define FLAG_HIDE_UNUSED_110              							0x344
 #define FLAG_HIDE_UNUSED_111                                   		0x345
-#define FLAG_HIDE_UNUSED_112     										0x346
-#define FLAG_HIDE_UNUSED_113                             				0x347
-#define FLAG_HIDE_UNUSED_114                      						0x348
+#define FLAG_HIDE_UNUSED_112     									0x346
+#define FLAG_HIDE_UNUSED_113                           				0x347
+#define FLAG_HIDE_UNUSED_114                      					0x348
 #define FLAG_HIDE_UNUSED_115               							0x349
-#define FLAG_HIDE_UNUSED_116                         					0x34A
-#define FLAG_HIDE_UNUSED_117                      						0x34B
+#define FLAG_HIDE_UNUSED_116                       					0x34A
+#define FLAG_HIDE_UNUSED_117                   						0x34B
 #define FLAG_HIDE_UNUSED_118                           				0x34C
 #define FLAG_HIDE_UNUSED_119                  							0x34D
 #define FLAG_HIDE_UNUSED_120                      						0x34E
@@ -937,10 +937,10 @@
 #define FLAG_HIDE_UNUSED_172                                   		0x382
 #define FLAG_HIDE_UNUSED_173                               			0x383
 #define FLAG_HIDE_UNUSED_174                               			0x384
-#define FLAG_HIDE_UNUSED_175                           0x385
-#define FLAG_HIDE_UNUSED_176                           0x386
-#define FLAG_HIDE_UNUSED_177                           0x387
-#define FLAG_HIDE_UNUSED_178                           0x388
+#define FLAG_HIDE_UNUSED_175                                        0x385
+#define FLAG_HIDE_UNUSED_176                                        0x386
+#define FLAG_HIDE_UNUSED_177                                        0x387
+#define FLAG_HIDE_UNUSED_178                                        0x388
 #define FLAG_HIDE_UNUSED_179                     						0x389
 #define FLAG_HIDE_UNUSED_180                      						0x38A
 #define FLAG_HIDE_UNUSED_181                                 			0x38B
@@ -1111,25 +1111,25 @@
 #define FLAG_HIDE_SAFARI_ZONE_WEST_MAX_REVIVE                       0x42E
 #define FLAG_HIDE_SAFARI_ZONE_WEST_GOLD_TEETH                       0x42F 
 #define FLAG_HIDE_ROUTE15_TM18                        				0x430
-#define FLAG_UNUSED_ITEM_0x431                      				0x431
-#define FLAG_UNUSED_ITEM_0x432                            			0x432
-#define FLAG_UNUSED_ITEM_0x433                           			0x433
-#define FLAG_UNUSED_ITEM_0x434                         				0x434
-#define FLAG_UNUSED_ITEM_0x435    									0x435
-#define FLAG_UNUSED_ITEM_0x436       								0x436
-#define FLAG_UNUSED_ITEM_0x437                               		0x437
-#define FLAG_UNUSED_ITEM_0x438                         				0x438
-#define FLAG_UNUSED_ITEM_0x439                     					0x439
-#define FLAG_UNUSED_ITEM_0x43A                  					0x43A
-#define FLAG_UNUSED_ITEM_0x43B                  					0x43B
-#define FLAG_UNUSED_ITEM_0x43C                        				0x43C
-#define FLAG_UNUSED_ITEM_0x43D                             			0x43D
-#define FLAG_UNUSED_ITEM_0x43E                            			0x43E
-#define FLAG_UNUSED_ITEM_0x43F                   			 		0x43F
-#define FLAG_UNUSED_ITEM_0x440                        				0x440
-#define FLAG_UNUSED_ITEM_0x441                                  	0x441
-#define FLAG_UNUSED_ITEM_0x442                      				0x442
-#define FLAG_UNUSED_ITEM_0x443                                  	0x443
+#define FLAG_HIDE_SILPH_CO_CARD_KEY                           		0x431
+#define FLAG_HIDE_SILPH_CO_3F_HYPER_POTION                         	0x432
+#define FLAG_HIDE_SILPH_CO_4F_FULL_HEAL    							0x433
+#define FLAG_HIDE_SILPH_CO_4F_ESCAPE_ROPE       					0x434
+#define FLAG_HIDE_SILPH_CO_4F_MAX_REVIVE                      		0x435
+#define FLAG_HIDE_SILPH_CO_4F_TM41                    				0x436
+#define FLAG_HIDE_SILPH_CO_5F_PROTEIN                     			0x437
+#define FLAG_HIDE_SILPH_CO_5F_TM01                  				0x438
+#define FLAG_HIDE_SILPH_CO_5F_CARD_KEY                  			0x439
+#define FLAG_HIDE_SILPH_CO_6F_HP_UP                        			0x43A
+#define FLAG_HIDE_SILPH_CO_6F_X_SPECIAL                             0x43B
+#define FLAG_HIDE_SILPH_CO_8F_IRON                            		0x43C
+#define FLAG_HIDE_SILPH_CO_10F_ULTRA_BALL                   		0x43D
+#define FLAG_HIDE_SILPH_CO_10F_CARBOS                        		0x43E
+#define FLAG_HIDE_SILPH_CO_10F_RARE_CANDY                           0x43F
+#define FLAG_HIDE_SILPH_CO_11F_ZINC                      			0x440
+#define FLAG_HIDE_SILPH_CO_7F_CALCIUM                               0x441
+#define FLAG_UNUSED_ITEM_0x442                                      0x442
+#define FLAG_UNUSED_ITEM_0x443                                      0x443
 #define FLAG_UNUSED_ITEM_0x444                               		0x444
 #define FLAG_UNUSED_ITEM_0x445                              		0x445
 #define FLAG_UNUSED_ITEM_0x446                      				0x446
@@ -1592,8 +1592,8 @@
 #define FLAG_DAILY_COIN_REFRESH                		(DAILY_FLAGS_START + 0x14)  // Once per day, one of the 12 stashes of coins will refresh.
 #define FLAG_DAILY_SAFARI_GAME_PRIZE                (DAILY_FLAGS_START + 0x15)  // Getting to the secret house gives a prize each time AFTER getting Surf
 #define FLAG_DAILY_BERRY_BLEND_OPPONENTS            (DAILY_FLAGS_START + 0x16)  // The number of opponents for Berry Blend is random every day.
+#define FLAG_DAILY_DOJO_RESET                       (DAILY_FLAGS_START + 0x17)  // The Dojo resets its trainers for free once per day.
 
-#define FLAG_UNUSED_0x937                           (DAILY_FLAGS_START + 0x17) // Unused Flag
 #define FLAG_UNUSED_0x938                           (DAILY_FLAGS_START + 0x18) // Unused Flag
 #define FLAG_UNUSED_0x939                           (DAILY_FLAGS_START + 0x19) // Unused Flag
 #define FLAG_UNUSED_0x93A                           (DAILY_FLAGS_START + 0x1A) // Unused Flag

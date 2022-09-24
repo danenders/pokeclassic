@@ -14,7 +14,76 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "in_connection": false,
+      "x": 5,
+      "y": 19,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SilphCo_2F_EventScript_Connor",
+      "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_M",
+      "in_connection": false,
+      "x": 20,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SilphCo_2F_EventScript_Grunt1",
+      "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "in_connection": false,
+      "x": 28,
+      "y": 18,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_LEFT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "SilphCo_2F_EventScript_Jerry",
+      "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_F",
+      "in_connection": false,
+      "x": 29,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "SilphCo_2F_EventScript_Grunt2",
+      "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "in_connection": false,
+      "x": 10,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MoveTutor_ThunderWave",
+      "flag": "0"
+    }
   ],
   "warp_events": [
     {
@@ -71,6 +140,85 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 29,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SilphCo_2F_EventScript_FloorSign"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SilphCo_2F_EventScript_Door1"
+    },
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SilphCo_2F_EventScript_Door1"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SilphCo_2F_EventScript_Door1"
+    },
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SilphCo_2F_EventScript_Door1"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SilphCo_2F_EventScript_Door2"
+    },
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SilphCo_2F_EventScript_Door2"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 16,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SilphCo_2F_EventScript_Door2"
+    },
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 16,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SilphCo_2F_EventScript_Door2"
+    },
+    {
+      "type": "hidden_item",
+      "x": 11,
+      "y": 21,
+      "elevation": 0,
+      "item": "ITEM_ULTRA_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_SILPH_CO_2F_ULTRA_BALL"
+    }
   ]
 }

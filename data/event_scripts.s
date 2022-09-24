@@ -873,6 +873,9 @@ gText_DoorOpenedFarAway::
 	.string "It sounded as if a door opened\n"
 	.string "somewhere far away.$"
 
+Text_TheDoorIsOpen::
+	.string "The door is open…$"
+
 gText_BigHoleInTheWall::
 	.string "There is a big hole in the wall.$"
 
@@ -1333,4 +1336,5 @@ Common_EventScript_LegendaryFlewAway::
 	
     .include "data/scripts/dexnav.inc"
     .include "data/scripts/costume_swap.inc"
+    .include "data/scripts/silphco_doors.inc"
     

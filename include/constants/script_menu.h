@@ -119,7 +119,7 @@
 #define MULTI_ALL_DRINKS 				   110
 #define MULTI_HIDEOUT_FLOORS               111
 #define MULTI_GAME_CORNER_BIG_DOLLS		   112
-#define MULTI_UNUSED_113                   113
+#define MULTI_SILPH_FLOORS                 113
 #define MULTI_UNUSED_114                   114
 #define MULTI_UNUSED_115                   115
 #define MULTI_UNUSED_116                   116

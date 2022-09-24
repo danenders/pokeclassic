@@ -66,29 +66,6 @@ MoveTutor_Text_FuryCutterTaught:
 	.string "I get a thrill watching to see if\n"
 	.string "the move keeps hitting in succession!$"
 
-MoveTutor_MimicTeach:
-	.string "Ah, young one!\p"
-	.string "I am also a young one, but I mimic\n"
-	.string "the styles and speech of the elderly\l"
-	.string "folks of this town.\p"
-	.string "What do you say, young one?\n"
-	.string "Would you agree to it if I were to\l"
-	.string "offer to teach the move Mimic?$"
-
-MoveTutor_MimicDeclined:
-	.string "Oh, boo! I wanted to teach Mimic\n"
-	.string "to your Pokémon!$"
-
-MoveTutor_Text_MimicWhichMon:
-	.string "Fwofwo! And so I shall!\n"
-	.string "Let me see the Pokémon\l"
-	.string "you wish me to teach.$"
-
-MoveTutor_Text_MimicTaught:
-	.string "Mimic is a move of great depth.\p"
-	.string "Could you execute it to perfection\n"
-	.string "as well as me…?$"
-
 MoveTutor_Text_MetronomeTeach:
 	.string "I want all sorts of things!\n"
 	.string "But I used up my allowance…\p"

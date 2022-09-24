@@ -1,5 +1,97 @@
 @KANTO, Updated
 
+MoveTutor_ThunderWave::
+	lock
+	faceplayer
+	msgbox MoveTutor_Text_ThunderWaveTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_ThunderWaveDeclined
+	msgbox MoveTutor_Text_ThunderWaveWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_THUNDER_WAVE
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_ThunderWaveDeclined
+	goto MoveTutor_EventScript_ThunderWaveTaught
+	end
+
+MoveTutor_Text_ThunderWaveTeach::
+    .string "Eeek!\n"
+    .string "No! Stop! Help!\p"
+    .string "Oh, you're not with Team Rocket.\n"
+    .string "I'm sorry, I thought…\p"
+    .string "Will you forgive me if I teach\n"
+    .string "you the Thunder Wave technique?$"
+
+MoveTutor_EventScript_ThunderWaveDeclined::
+	msgbox MoveTutor_Text_ThunderWaveDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_ThunderWaveDeclined::
+    .string "Oh…\n"
+    .string "But Thunder Wave is convenient…$"
+
+MoveTutor_Text_ThunderWaveWhichMon::
+    .string "I really love Thunder Wave!\n"
+    .string "Who's going to learn it?$"
+
+MoveTutor_EventScript_ThunderWaveTaught::
+	msgbox MoveTutor_Text_ThunderWaveTaught, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_ThunderWaveTaught::
+    .string "Thunder Wave causes paralysis in\n"
+    .string "the target Pokémon.\p"
+    .string "A paralyzed Pokémon may be unable\n"
+    .string "to move in battle.\p"
+    .string "It's an Electric type move, so it\n"
+    .string "won't work on some Pokémon.$"
+
+MoveTutor_Mimic::
+	lock
+	faceplayer
+	msgbox MoveTutor_Text_MimicTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_MimicDeclined
+	msgbox MoveTutor_Text_MimicWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_MIMIC
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_MimicDeclined
+	goto MoveTutor_EventScript_MimicTaught
+	end
+
+MoveTutor_Text_MimicTeach::
+    .string "Oh wow!\n"
+    .string "A Poké Doll!\p"
+    .string "For me?\n"
+    .string "Thank you!\p"
+    .string "You know what?\n"
+    .string "I can teach the move Mimic.$"
+
+MoveTutor_EventScript_MimicDeclined::
+	msgbox MoveTutor_Text_MimicDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_MimicDeclined::
+    .string "Don't you like Mimic?$"
+
+MoveTutor_Text_MimicWhichMon::
+    .string "I really love Mimic!\n"
+    .string "Who's going to learn it?$"
+
+MoveTutor_EventScript_MimicTaught::
+	msgbox MoveTutor_Text_MimicTaught, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_MimicTaught::
+    .string "{PLAYER}: Hi!\n"
+    .string "Thanks for earlier!\p"
+    .string "{PLAYER}: Pardon?\p"
+    .string "{PLAYER}: Is it that fun to mimic my\n"
+    .string "every move?\p"
+    .string "COPYCAT: You bet!\n"
+    .string "It's a scream!$"
+
 MoveTutor_Substitute::
 	lock
 	faceplayer
@@ -438,32 +530,6 @@ MoveTutor_EventScript_FuryCutterDeclined::
 
 MoveTutor_EventScript_FuryCutterTaught::
 	msgbox MoveTutor_Text_FuryCutterTaught, MSGBOX_DEFAULT
-	release
-	end
-
-LavaridgeTown_House_EventScript_MimicTutor::
-	lock
-	faceplayer
-	goto_if_set FLAG_MOVE_TUTOR_TAUGHT_MIMIC, MoveTutor_EventScript_MimicTaught
-	msgbox MoveTutor_MimicTeach, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_MimicDeclined
-	call MoveTutor_EventScript_CanOnlyBeLearnedOnce
-	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_MimicDeclined
-	msgbox MoveTutor_Text_MimicWhichMon, MSGBOX_DEFAULT
-	setvar VAR_0x8005, TUTOR_MOVE_MIMIC
-	call MoveTutor_EventScript_OpenPartyMenu
-	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_MimicDeclined
-	setflag FLAG_MOVE_TUTOR_TAUGHT_MIMIC
-	goto MoveTutor_EventScript_MimicTaught
-	end
-
-MoveTutor_EventScript_MimicDeclined::
-	msgbox MoveTutor_MimicDeclined, MSGBOX_DEFAULT
-	release
-	end
-
-MoveTutor_EventScript_MimicTaught::
-	msgbox MoveTutor_Text_MimicTaught, MSGBOX_DEFAULT
 	release
 	end
 
