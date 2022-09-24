@@ -334,15 +334,15 @@
 #define FLAG_UNUSED_0x13C               	 0x13C
 #define FLAG_UNUSED_0x13D             		 0x13D
 #define FLAG_UNUSED_0x13E 					 0x13E
-#define FLAG_UNUSED_0x13F   	 			 0x13F
-#define FLAG_UNUSED_0x140      				 0x140
-#define FLAG_UNUSED_0x141                 	 0x141
-#define FLAG_UNUSED_0x142  					 0x142
-#define FLAG_UNUSED_0x143     				 0x143
-#define FLAG_UNUSED_0x144         			 0x144
-#define FLAG_UNUSED_0x145        			 0x145
-#define FLAG_UNUSED_0x146  					 0x146
-#define FLAG_UNUSED_0x147 					 0x147
+#define FLAG_CAUGHT_ARTICUNO   	 			 0x13F
+#define FLAG_DEFEATED_ARTICUNO      		 0x140
+#define FLAG_HIDE_ARTICUNO                 	 0x141
+#define FLAG_CAUGHT_ZAPDOS  				 0x142
+#define FLAG_DEFEATED_ZAPDOS     	      	 0x143
+#define FLAG_HIDE_ZAPDOS         			 0x144
+#define FLAG_CAUGHT_MOLTRES        			 0x145
+#define FLAG_DEFEATED_MOLTRES  			     0x146
+#define FLAG_HIDE_MOLTRES 					 0x147
 
 //Mystery Gifts
 #define FLAG_RECEIVED_AURORA_TICKET          0x148
@@ -385,7 +385,7 @@
 #define FLAG_REMATCH_KOJI                      0x16A // Cue Ball Koji on Route 16
 #define FLAG_REMATCH_WILTON                    0x16B // Bird Keeper Wilton on Route 18
 #define FLAG_REMATCH_OLIVIA                    0x16C // Beauty Olivia on Route 15
-#define FLAG_REMATCH_UNUSED_16                 0x16D
+#define FLAG_REMATCH_RICHIE                    0x16D // Tuber Richie on Route 19
 #define FLAG_REMATCH_UNUSED_17                 0x16E
 #define FLAG_REMATCH_UNUSED_18                 0x16F
 #define FLAG_REMATCH_UNUSED_19                 0x170

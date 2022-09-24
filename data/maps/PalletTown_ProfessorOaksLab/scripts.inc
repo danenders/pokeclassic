@@ -815,6 +815,7 @@ PalletTown_ProfessorOaksLab_Text_CedarRunsErrands::
 PalletTown_ProfessorOaksLab_EventScript_Cedar::
 	lock
 	faceplayer
+	goto_if_set FLAG_RECEIVED_EXP_SHARE, PalletTown_ProfessorOaksLab_EventScript_CedarAllItems
 	msgbox PalletTown_ProfessorOaksLab_Text_JustJoined
 	setflag FLAG_MET_CEDAR
 	release
@@ -825,6 +826,28 @@ PalletTown_ProfessorOaksLab_Text_JustJoined::
     .string "I recently joined Professor Oak's\l"
     .string "team.\p"
     .string "I'm excited to work with everyone.$"
+
+PalletTown_ProfessorOaksLab_EventScript_CedarAllItems::
+	msgbox PalletTown_ProfessorOaksLab_Text_WhatAJourney
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_WhatAJourney::
+	.string "Cedar: Oh, {PLAYER}!\n"
+	.string "It's so nice to see you.\p"
+	.string "I don't have any new items for you\n"
+	.string "this time, though. Ha!\p"
+	.string "You know, when I joined Prof. Oak's\n"
+	.string "Lab, I wasn't happy that I'd spend so\l"
+	.string "much time travelling away from it!\p"
+	.string "But, following your journey was also\n"
+	.string "an adventure for me!\p"
+	.string "I saw so much of Kanto, and got to\n"
+	.string "what life as a Trainer must be like.\p"
+	.string "I see now why Prof. Oak gave me that\n"
+	.string "assignment.\p"
+	.string "So, thanks for the adventure!$"
+
 
 PalletTown_ProfessorOaksLab_EventScript_Pokedex::
 	msgbox PalletTown_ProfessorOaksLab_Text_BlankEncyclopedia, MSGBOX_NPC

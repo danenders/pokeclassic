@@ -78,6 +78,11 @@ const u8 gText_MatchCallBeauty_Olivia_Pokemon[] = _("Pokémon make me feel safe.
 const u8 gText_MatchCallBeauty_Olivia_Intro1[] = _("Battling isn't about winning");
 const u8 gText_MatchCallBeauty_Olivia_Intro2[] = _("or losing for me!");
 
+const u8 gText_MatchCallTuber_Richie_Strategy[] = _("I love the beach!");
+const u8 gText_MatchCallTuber_Richie_Pokemon[] = _("Water Pokémon are my faves.");
+const u8 gText_MatchCallTuber_Richie_Intro1[] = _("Swimming is so fun that it");
+const u8 gText_MatchCallTuber_Richie_Intro2[] = _("doesn't feel like exercise!");
+
 const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_COUNT] =
 {
 	[REMATCH_JANICE] = MCFLAVOR(Lass_Janice),
@@ -96,4 +101,5 @@ const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_CO
 	[REMATCH_KOJI] = MCFLAVOR(CueBall_Koji),
 	[REMATCH_WILTON] = MCFLAVOR(BirdKeeper_Wilton),
 	[REMATCH_OLIVIA] = MCFLAVOR(Beauty_Olivia),
+	[REMATCH_RICHIE] = MCFLAVOR(Tuber_Richie),
 };
