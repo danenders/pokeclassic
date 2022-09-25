@@ -220,7 +220,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "in_connection": false,
-      "x": 37,
+      "x": 43,
       "y": 32,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -244,6 +244,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SaffronCity_EventScript_Lass",
       "flag": "FLAG_HIDE_SAFFRON_CIVILIANS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LOOKER",
+      "in_connection": false,
+      "x": 33,
+      "y": 33,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_SAFFRON_CITY_LOOKER"
     }
   ],
   "warp_events": [
@@ -354,7 +368,231 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 44,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 44,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 44,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 44,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 39,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 39,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_SkippedLookerScene"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_LookerTriggerR1"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_LookerTriggerR2"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 34,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_LookerTriggerR3"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 34,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_LookerTriggerL3"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_LookerTriggerL2"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 32,
+      "elevation": 0,
+      "var": "VAR_SILPH_STATE",
+      "var_value": "3",
+      "script": "SaffronCity_EventScript_LookerTriggerL1"
+    }
   ],
   "bg_events": [
     {
@@ -367,7 +605,7 @@
     },
     {
       "type": "sign",
-      "x": 29,
+      "x": 37,
       "y": 31,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -412,6 +650,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "SaffronCity_EventScript_GymSign"
+    },
+    {
+      "type": "sign",
+      "x": 29,
+      "y": 31,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SaffronCity_EventScript_SilphCoSign"
     }
   ]
 }

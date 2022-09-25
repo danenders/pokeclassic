@@ -1,4 +1,5 @@
 .set LOCALID_DOOR_GUARD, 1
+.set LOCALID_LOOKER, 16
 
 SaffronCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, SaffronCity_OnTransition
@@ -243,11 +244,110 @@ SaffronCity_Text_SilphsLatestProduct::
     .string "Silph's latest product!\n"
     .string "Release to be determined…$"
 
+SaffronCity_EventScript_SkippedLookerScene::
+	setvar VAR_SILPH_STATE, 4
+	end
 
+SaffronCity_EventScript_LookerTriggerL1::
+	setobjectxyperm LOCALID_LOOKER, 24, 32
+	setvar VAR_TEMP_1, 1
+	goto SaffronCity_EventScript_Looker
 
+SaffronCity_EventScript_LookerTriggerL2::
+	setobjectxyperm LOCALID_LOOKER, 24, 33
+	setvar VAR_TEMP_1, 1
+	goto SaffronCity_EventScript_Looker
 
+SaffronCity_EventScript_LookerTriggerL3::
+	setobjectxyperm LOCALID_LOOKER, 24, 34
+	setvar VAR_TEMP_1, 1
+	goto SaffronCity_EventScript_Looker
 
+SaffronCity_EventScript_LookerTriggerR1::
+	setobjectxyperm LOCALID_LOOKER, 42, 32
+	setvar VAR_TEMP_1, 2
+	goto SaffronCity_EventScript_Looker
 
+SaffronCity_EventScript_LookerTriggerR2::
+	setobjectxyperm LOCALID_LOOKER, 42, 33
+	setvar VAR_TEMP_1, 2
+	goto SaffronCity_EventScript_Looker
 
+SaffronCity_EventScript_LookerTriggerR3::
+	setobjectxyperm LOCALID_LOOKER, 42, 34
+	setvar VAR_TEMP_1, 2
+	goto SaffronCity_EventScript_Looker
 
+SaffronCity_EventScript_Looker::
+	lockall
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	playbgm MUS_ENCOUNTER_CHAMPION, 0
+	clearflag FLAG_HIDE_SAFFRON_CITY_LOOKER
+	addobject LOCALID_LOOKER
+	call_if_eq VAR_TEMP_1, 1, SaffronCity_EventScript_MoveLookerLeft
+	call_if_eq VAR_TEMP_1, 2, SaffronCity_EventScript_MoveLookerRight
+	waitmovement 16
+	playse SE_PIN
+	applymovement LOCALID_LOOKER, Common_Movement_ExclamationMark
+	waitse
+	waitmovement 16
+	msgbox SaffronCity_Text_ShouldntBeSurprised, MSGBOX_DEFAULT
+	waitmessage
+	call_if_eq VAR_TEMP_1, 1, SaffronCity_EventScript_MoveLookerRight
+	call_if_eq VAR_TEMP_1, 2, SaffronCity_EventScript_MoveLookerLeft
+	waitmovement 16
+	removeobject LOCALID_LOOKER
+	fadedefaultbgm
+	setvar VAR_SILPH_STATE, 4
+	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	release
+	end
 
+SaffronCity_EventScript_MoveLookerLeft::
+	applymovement LOCALID_LOOKER, Movement_LookerWalksRight
+	return
+
+Movement_LookerWalksRight::
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+SaffronCity_EventScript_MoveLookerRight::
+	applymovement LOCALID_LOOKER, Movement_LookerWalksLeft
+	return
+
+Movement_LookerWalksLeft::
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+SaffronCity_Text_ShouldntBeSurprised::
+	.string "Looker: Alright, let's start setting\n"
+	.string "up a perimeter...Oh! {PLAYER}!\p"
+	.string "We just finished rounding up the Team\n"
+	.string "Rocket Grunts that were terrorizing the\l"
+	.string "Citizens. We're ready to make our assault\l"
+	.string "on Silph Co and take down their Boss!\p"
+	.string "Those Rocket Plans you delivered were\n"
+	.string "very helpful, but I'll need you to step\l"
+	.string "aside for this one and let the adults take\l"
+	.string "care of it now!\p"
+	.string "...\p"
+	.string "You what?!\p"
+	.string "You already took out the Rockets inside Silph\n"
+	.string "Co and rescued their President?\p"
+	.string "That's incredible, but very reckless!\p"
+	.string "Wait...\n"
+	.string "What about the Rocket Boss?\p"
+	.string "He got away? Again? Blast!\p"
+	.string "We've busted every Rocket Base we could\n"
+	.string "find, and we've chased him all across Kanto.\p"
+	.string "There can't be many places left for him to hide.\p"
+	.string "But we have no leads!\n"
+	.string "I'll have to continue my investigation...$"
