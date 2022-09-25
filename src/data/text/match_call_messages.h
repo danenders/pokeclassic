@@ -83,6 +83,21 @@ const u8 gText_MatchCallTuber_Richie_Pokemon[] = _("Water Pokémon are my faves.
 const u8 gText_MatchCallTuber_Richie_Intro1[] = _("Swimming is so fun that it");
 const u8 gText_MatchCallTuber_Richie_Intro2[] = _("doesn't feel like exercise!");
 
+const u8 gText_MatchCallDragonTamer_Roger_Strategy[] = _("I'll surpass Lance!");
+const u8 gText_MatchCallDragonTamer_Roger_Pokemon[] = _("Dragon Pokémon are my faves.");
+const u8 gText_MatchCallDragonTamer_Roger_Intro1[] = _("Dragon Pokémon are the most");
+const u8 gText_MatchCallDragonTamer_Roger_Intro2[] = _("powerful Pokémon in the world!");
+
+const u8 gText_MatchCallJuggler_Johan_Strategy[] = _("Keep on Jugglin'!");
+const u8 gText_MatchCallJuggler_Johan_Pokemon[] = _("Weird Pokémon are my faves.");
+const u8 gText_MatchCallJuggler_Johan_Intro1[] = _("I dropped out of school to");
+const u8 gText_MatchCallJuggler_Johan_Intro2[] = _("pursue my juggling dreams!");
+
+const u8 gText_MatchCallCoolTrainer_Anri_Strategy[] = _("I'm on my way to the top!");
+const u8 gText_MatchCallCoolTrainer_Anri_Pokemon[] = _("Skilled Pokémon are my faves.");
+const u8 gText_MatchCallCoolTrainer_Anri_Intro1[] = _("Only the best trainers can make");
+const u8 gText_MatchCallCoolTrainer_Anri_Intro2[] = _("it to Indigo Plateau.");
+
 const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_COUNT] =
 {
 	[REMATCH_JANICE] = MCFLAVOR(Lass_Janice),
@@ -102,4 +117,7 @@ const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_CO
 	[REMATCH_WILTON] = MCFLAVOR(BirdKeeper_Wilton),
 	[REMATCH_OLIVIA] = MCFLAVOR(Beauty_Olivia),
 	[REMATCH_RICHIE] = MCFLAVOR(Tuber_Richie),
+	[REMATCH_ROGER] = MCFLAVOR(DragonTamer_Roger),
+	[REMATCH_JOHAN] = MCFLAVOR(Juggler_Johan),
+	[REMATCH_ANRI] = MCFLAVOR(CoolTrainer_Anri),
 };

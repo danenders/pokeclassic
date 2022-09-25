@@ -4439,6 +4439,312 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_SisAndBroLiaLuc),
         .party = {.NoItemDefaultMoves = sParty_SisAndBroLiaLuc}
     },
+//Route 20
+    [REMATCHABLE_TRAINER_DRAGON_TAMER_ROGER_1] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_DRAGON_TAMER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_DRAGON_TAMER,
+        .trainerName = _("Roger"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_DragonTamerRoger1),
+        .party = {.NoItemDefaultMoves = sParty_DragonTamerRoger1}
+    },
+    [REMATCHABLE_TRAINER_DRAGON_TAMER_ROGER_2] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_DRAGON_TAMER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_DRAGON_TAMER,
+        .trainerName = _("Roger"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_DragonTamerRoger2),
+        .party = {.NoItemDefaultMoves = sParty_DragonTamerRoger2}
+    },
+    [REMATCHABLE_TRAINER_DRAGON_TAMER_ROGER_3] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_DRAGON_TAMER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_DRAGON_TAMER,
+        .trainerName = _("Roger"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_DragonTamerRoger3),
+        .party = {.NoItemDefaultMoves = sParty_DragonTamerRoger3}
+    },
+    [TRAINER_SWIMMER_FEMALE_TIFFANY] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SWIMMER_F,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_SWIMMER_F,
+        .trainerName = _("Tiffany"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SwimmerFemaleTiffany),
+        .party = {.NoItemDefaultMoves = sParty_SwimmerFemaleTiffany}
+    },
+    [TRAINER_SWIMMER_FEMALE_NORA] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SWIMMER_F,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_SWIMMER_F,
+        .trainerName = _("Nora"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SwimmerFemaleNora),
+        .party = {.NoItemDefaultMoves = sParty_SwimmerFemaleNora}
+    },
+    [TRAINER_SWIMMER_FEMALE_MELISSA] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SWIMMER_F,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_SWIMMER_F,
+        .trainerName = _("Melissa"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SwimmerFemaleMelissa),
+        .party = {.NoItemDefaultMoves = sParty_SwimmerFemaleMelissa}
+    },
+    [TRAINER_SWIMMER_FEMALE_SHIRLEY] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SWIMMER_F,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_SWIMMER_F,
+        .trainerName = _("Shirley"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SwimmerFemaleShirley),
+        .party = {.NoItemDefaultMoves = sParty_SwimmerFemaleShirley}
+    },
+    [TRAINER_PICNICKER_MISSY] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_PICNICKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GIRL | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_PICNICKER,
+        .trainerName = _("Missy"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_PicnickerMissy),
+        .party = {.NoItemDefaultMoves = sParty_PicnickerMissy}
+    },
+    [TRAINER_PICNICKER_IRENE] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_PICNICKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GIRL | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_PICNICKER,
+        .trainerName = _("Irene"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_PicnickerIrene),
+        .party = {.NoItemDefaultMoves = sParty_PicnickerIrene}
+    },
+    [TRAINER_SWIMMER_MALE_BARRY] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SWIMMER_M,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SWIMMER,
+        .trainerPic = TRAINER_PIC_SWIMMER_M,
+        .trainerName = _("Barry"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SwimmerMaleBarry),
+        .party = {.NoItemDefaultMoves = sParty_SwimmerMaleBarry}
+    },
+    [TRAINER_SWIMMER_MALE_DEAN] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SWIMMER_M,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SWIMMER,
+        .trainerPic = TRAINER_PIC_SWIMMER_M,
+        .trainerName = _("Dean"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SwimmerMaleDean),
+        .party = {.NoItemDefaultMoves = sParty_SwimmerMaleDean}
+    },
+    [TRAINER_SWIMMER_MALE_DARRIN] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SWIMMER_M,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SWIMMER,
+        .trainerPic = TRAINER_PIC_SWIMMER_M,
+        .trainerName = _("Darrin"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SwimmerMaleDarrin),
+        .party = {.NoItemDefaultMoves = sParty_SwimmerMaleDarrin}
+    },
+//Route 21
+    [TRAINER_FISHERMAN_RONALD] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_FISHERMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_FISHERMAN,
+        .trainerName = _("Ronald"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_FishermanRonald),
+        .party = {.NoItemDefaultMoves = sParty_FishermanRonald}
+    },
+    [TRAINER_FISHERMAN_CLAUDE] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_FISHERMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_FISHERMAN,
+        .trainerName = _("Claude"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_FishermanClaude),
+        .party = {.NoItemDefaultMoves = sParty_FishermanClaude}
+    },
+    [TRAINER_FISHERMAN_WADE] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_FISHERMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_FISHERMAN,
+        .trainerName = _("Wade"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_FishermanWade),
+        .party = {.NoItemDefaultMoves = sParty_FishermanWade}
+    },
+    [TRAINER_FISHERMAN_NOLAN] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_FISHERMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_FISHERMAN,
+        .trainerName = _("Nolan"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_FishermanNolan),
+        .party = {.NoItemDefaultMoves = sParty_FishermanNolan}
+    },
+    [TRAINER_SWIMMER_MALE_SPENCER] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SWIMMER_M,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SWIMMER,
+        .trainerPic = TRAINER_PIC_SWIMMER_M,
+        .trainerName = _("Spencer"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SwimmerMaleSpencer),
+        .party = {.NoItemDefaultMoves = sParty_SwimmerMaleSpencer}
+    },
+    [TRAINER_SWIMMER_MALE_JACK] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SWIMMER_M,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SWIMMER,
+        .trainerPic = TRAINER_PIC_SWIMMER_M,
+        .trainerName = _("Jack"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SwimmerMaleJack),
+        .party = {.NoItemDefaultMoves = sParty_SwimmerMaleJack}
+    },
+    [TRAINER_SWIMMER_MALE_JEROME] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SWIMMER_M,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SWIMMER,
+        .trainerPic = TRAINER_PIC_SWIMMER_M,
+        .trainerName = _("Jerome"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SwimmerMaleJerome),
+        .party = {.NoItemDefaultMoves = sParty_SwimmerMaleJerome}
+    },
+    [TRAINER_SWIMMER_MALE_ROLAND] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SWIMMER_M,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SWIMMER,
+        .trainerPic = TRAINER_PIC_SWIMMER_M,
+        .trainerName = _("Roland"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SwimmerMaleRoland),
+        .party = {.NoItemDefaultMoves = sParty_SwimmerMaleRoland}
+    },
+    [TRAINER_SIS_AND_BRO_LIL_IAN] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_SIS_AND_BRO,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SWIMMER,
+        .trainerPic = TRAINER_PIC_SIS_AND_BRO,
+        .trainerName = _("Lil & Ian"),
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_SisAndBroLilIan),
+        .party = {.NoItemDefaultMoves = sParty_SisAndBroLilIan}
+    },
+    [REMATCHABLE_TRAINER_COOLTRAINER_ANRI_1] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_COOLTRAINER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_COOLTRAINER_F,
+        .trainerName = _("Anri"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_CoolTrainerAnri1),
+        .party = {.NoItemDefaultMoves = sParty_CoolTrainerAnri1}
+    },
+    [REMATCHABLE_TRAINER_COOLTRAINER_ANRI_2] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_COOLTRAINER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_COOLTRAINER_F,
+        .trainerName = _("Anri"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_CoolTrainerAnri2),
+        .party = {.NoItemDefaultMoves = sParty_CoolTrainerAnri2}
+    },
+    [REMATCHABLE_TRAINER_COOLTRAINER_ANRI_3] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_COOLTRAINER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_COOLTRAINER_F,
+        .trainerName = _("Anri"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_CoolTrainerAnri3),
+        .party = {.NoItemDefaultMoves = sParty_CoolTrainerAnri3}
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
