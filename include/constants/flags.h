@@ -619,8 +619,8 @@
 #define FLAG_HIDDEN_ITEM_SILPH_CO_11F_REVIVE                                      (FLAG_HIDDEN_ITEMS_START + 0x53)      	                           	
 #define FLAG_HIDDEN_ITEM_ROUTE20_STARDUST                                         (FLAG_HIDDEN_ITEMS_START + 0x54)
 #define FLAG_HIDDEN_ITEM_ROUTE21_NORTH_PEARL                                      (FLAG_HIDDEN_ITEMS_START + 0x55)
-#define FLAG_HIDDEN_ITEM_86             (FLAG_HIDDEN_ITEMS_START + 0x56)
-#define FLAG_HIDDEN_ITEM_87             (FLAG_HIDDEN_ITEMS_START + 0x57)
+#define FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_B3F_NUGGET                               (FLAG_HIDDEN_ITEMS_START + 0x56)
+#define FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_B4F_WATER_STONE                          (FLAG_HIDDEN_ITEMS_START + 0x57)
 #define FLAG_HIDDEN_ITEM_88             (FLAG_HIDDEN_ITEMS_START + 0x58)
 #define FLAG_HIDDEN_ITEM_89             (FLAG_HIDDEN_ITEMS_START + 0x59)
 #define FLAG_HIDDEN_ITEM_90           	(FLAG_HIDDEN_ITEMS_START + 0x5A)
@@ -1130,11 +1130,11 @@
 #define FLAG_HIDE_SILPH_CO_10F_RARE_CANDY                           0x43F
 #define FLAG_HIDE_SILPH_CO_11F_ZINC                      			0x440
 #define FLAG_HIDE_SILPH_CO_7F_CALCIUM                               0x441
-#define FLAG_UNUSED_ITEM_0x442                                      0x442
-#define FLAG_UNUSED_ITEM_0x443                                      0x443
-#define FLAG_UNUSED_ITEM_0x444                               		0x444
-#define FLAG_UNUSED_ITEM_0x445                              		0x445
-#define FLAG_UNUSED_ITEM_0x446                      				0x446
+#define FLAG_HIDE_SEAFOAM_ISLANDS_1F_ICE_HEAL                       0x442
+#define FLAG_HIDE_SEAFOAM_ISLANDS_B1F_WATER_STONE                   0x443
+#define FLAG_HIDE_SEAFOAM_ISLANDS_B1F_REVIVE                        0x444
+#define FLAG_HIDE_SEAFOAM_ISLANDS_B2F_BIG_PEARL                     0x445
+#define FLAG_HIDE_SEAFOAM_ISLANDS_B4F_ULTRA_BALL                    0x446
 #define FLAG_UNUSED_ITEM_0x447              					 	0x447
 #define FLAG_UNUSED_ITEM_0x448              						0x448
 #define FLAG_UNUSED_ITEM_0x449              						0x449

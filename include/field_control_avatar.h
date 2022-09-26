@@ -36,5 +36,7 @@ u8 TrySetDiveWarp(void);
 const u8 *GetInteractedLinkPlayerScript(struct MapPosition *position, u8 metatileBehavior, u8 direction);
 u8 *GetCoordEventScriptAtMapPosition(struct MapPosition *position);
 void ClearPoisonStepCounter(void);
+void HandleBoulderFallThroughHole(struct ObjectEvent *);
+void HandleBoulderActivateVictoryRoadSwitch(u16 x, u16 y);
 
 #endif // GUARD_FIELDCONTROLAVATAR_H

@@ -4519,3 +4519,7 @@ void ForcePlayerOntoBike(void)
     Overworld_ChangeMusicTo(MUS_RG_CYCLING);
 }
 
+void ForcePlayerToStartSurfing(void)
+{
+    SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_SURFING);
+}

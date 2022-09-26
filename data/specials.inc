@@ -555,4 +555,6 @@ gSpecials::
 	def_special NameRaterWasNicknameChanged
 	def_special IsMonOTNameNotPlayers
 	def_special ForcePlayerOntoBike
+	def_special SeafoamIslandsB4F_CurrentDumpsPlayerOnLand
+	def_special ForcePlayerToStartSurfing
 	

@@ -165,7 +165,7 @@
 #define VAR_DOJO_OFFENSE           			0x4092 //The number of Offense Pupils you've defeated to earn Hitmonchan
 #define VAR_DOJO_DEFENSE               		0x4093 //The number of Defense Pupils you've defeated to earn Hitmonlee
 #define VAR_SILPH_STATE         			0x4094
-#define UNUSED_VARIABLE_26          		0x4095
+#define VAR_SEAFOAM_ISLANDS_STATE          	0x4095
 #define UNUSED_VARIABLE_27                  0x4096
 #define UNUSED_VARIABLE_28                 	0x4097
 #define UNUSED_VARIABLE_29            		0x4098

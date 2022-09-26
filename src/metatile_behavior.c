@@ -125,6 +125,8 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_ISOLATED_HORIZONTAL_RAIL]        = TILE_FLAG_UNUSED,
     [MB_VERTICAL_RAIL]                   = TILE_FLAG_UNUSED,
     [MB_HORIZONTAL_RAIL]                 = TILE_FLAG_UNUSED,
+    [MB_STRENGTH_BUTTON]                 = TILE_FLAG_UNUSED,
+    [MB_FALL_WARP]                       = TILE_FLAG_UNUSED,
     
     [MB_VIDEO_GAME] = TILE_FLAG_UNUSED,
     [MB_BURGLARY] = TILE_FLAG_UNUSED,
@@ -1478,4 +1480,12 @@ bool8 MetatileBehavior_IsDirectionalStairWarp(u8 metatileBehavior)
     else
         return FALSE;
 
+}
+
+bool8 MetatileBehavior_IsFallWarp(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_FALL_WARP)
+        return TRUE;
+    else
+        return FALSE;
 }

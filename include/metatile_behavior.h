@@ -162,4 +162,6 @@ bool8 MetatileBehavior_IsDirectionalDownRightStairWarp(u8);
 bool8 MetatileBehavior_IsDirectionalDownLeftStairWarp(u8);
 bool8 MetatileBehavior_IsDirectionalStairWarp(u8);
 
+bool8 MetatileBehavior_IsFallWarp(u8 metatileBehavior);
+
 #endif // GUARD_METATILE_BEHAVIOR_H
