@@ -4358,6 +4358,13 @@ void RunAideCallStepCounter(void)
         VarSet(VAR_AIDE_CALL_STEP_COUNTER, count + 1);
 }
 
+void RunFossilStepCounter(void)
+{
+    u16 count = VarGet(VAR_FOSSIL_STEP_COUNTER);
+    if (count < 500)
+        VarSet(VAR_FOSSIL_STEP_COUNTER, count + 1);
+}
+
 void IsPartnerInParty(void)
 {
     int i;

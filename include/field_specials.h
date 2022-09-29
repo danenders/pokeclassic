@@ -34,5 +34,6 @@ u8 GetPlayerCostumeId(void);
 void RunMassageCooldownStepCounter(void);
 void RunAideCallStepCounter(void);
 bool32 ShouldDoAideCall(void);
+void RunFossilStepCounter(void);
 
 #endif // GUARD_FIELD_SPECIALS_H

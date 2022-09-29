@@ -166,8 +166,8 @@
 #define VAR_DOJO_DEFENSE               		0x4093 //The number of Defense Pupils you've defeated to earn Hitmonlee
 #define VAR_SILPH_STATE         			0x4094
 #define VAR_SEAFOAM_ISLANDS_STATE          	0x4095
-#define UNUSED_VARIABLE_27                  0x4096
-#define UNUSED_VARIABLE_28                 	0x4097
+#define VAR_FOSSIL_STEP_COUNTER             0x4096
+#define VAR_RESURRECTION_FOSSIL             0x4097 //Which Fossil is being revived
 #define UNUSED_VARIABLE_29            		0x4098
 #define UNUSED_VARIABLE_30     				0x4099
 #define UNUSED_VARIABLE_31             		0x409A

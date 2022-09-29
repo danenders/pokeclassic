@@ -1,5 +1,48 @@
 @KANTO, Updated
 
+MoveTutor_Metronome::
+	lock
+	faceplayer
+	msgbox MoveTutor_Text_MetronomeTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_MetronomeDeclined
+	msgbox MoveTutor_Text_MetronomeWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_METRONOME
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_MetronomeDeclined
+	goto MoveTutor_EventScript_MetronomeTaught
+	end
+
+MoveTutor_Text_MetronomeTeach::
+    .string "Tch-tch-tch!\n"
+    .string "I'll teach you a nifty move.\p"
+    .string "Teach it to a Pokémon, and watch\n"
+    .string "the fun unfold!\p"
+    .string "It's a move called Metronome.\n"
+    .string "Does it strike your fancy?$"
+
+MoveTutor_EventScript_MetronomeDeclined::
+	msgbox MoveTutor_Text_MetronomeDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_MetronomeDeclined::
+    .string "I tell you, it's a lot of fun!$"
+
+MoveTutor_Text_MetronomeWhichMon::
+    .string "Okay!\n"
+    .string "Which Pokémon should I teach?$"
+
+MoveTutor_EventScript_MetronomeTaught::
+	msgbox MoveTutor_Text_MetronomeTaught, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_MetronomeTaught::
+    .string "Tch-tch-tch!\n"
+    .string "That's the sound of a Metronome.\p"
+    .string "It tweaks your Pokémon's brain into\n"
+    .string "using moves it doesn't even know.$"
+
 MoveTutor_ThunderWave::
 	lock
 	faceplayer
@@ -530,32 +573,6 @@ MoveTutor_EventScript_FuryCutterDeclined::
 
 MoveTutor_EventScript_FuryCutterTaught::
 	msgbox MoveTutor_Text_FuryCutterTaught, MSGBOX_DEFAULT
-	release
-	end
-
-FallarborTown_Mart_EventScript_MetronomeTutor::
-	lock
-	faceplayer
-	goto_if_set FLAG_MOVE_TUTOR_TAUGHT_METRONOME, MoveTutor_EventScript_MetronomeTaught
-	msgbox MoveTutor_Text_MetronomeTeach, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_MetronomeDeclined
-	call MoveTutor_EventScript_CanOnlyBeLearnedOnce
-	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_MetronomeDeclined
-	msgbox MoveTutor_Text_MetronomeWhichMon, MSGBOX_DEFAULT
-	setvar VAR_0x8005, TUTOR_MOVE_METRONOME
-	call MoveTutor_EventScript_OpenPartyMenu
-	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_MetronomeDeclined
-	setflag FLAG_MOVE_TUTOR_TAUGHT_METRONOME
-	goto MoveTutor_EventScript_MetronomeTaught
-	end
-
-MoveTutor_EventScript_MetronomeDeclined::
-	msgbox MoveTutor_Text_MetronomeDeclined, MSGBOX_DEFAULT
-	release
-	end
-
-MoveTutor_EventScript_MetronomeTaught::
-	msgbox MoveTutor_Text_MetronomeTaught, MSGBOX_DEFAULT
 	release
 	end
 

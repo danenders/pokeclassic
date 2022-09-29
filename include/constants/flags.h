@@ -462,10 +462,10 @@
 #define FLAG_IN_GAME_TRADE_NIDORAN           0x1AF
 #define FLAG_IN_GAME_TRADE_FARFETCHD         0x1B0
 #define FLAG_IN_GAME_TRADE_NIDORINA          0x1B1
-#define FLAG_UNUSED_0x1B2                    0x1B2
-#define FLAG_UNUSED_0x1B3                    0x1B3
-#define FLAG_UNUSED_0x1B4                    0x1B4
-#define FLAG_GOT_RECORD_SETTING_MAGIKARP     0x1B5
+#define FLAG_IN_GAME_TRADE_ELECTRODE         0x1B2
+#define FLAG_IN_GAME_TRADE_TANGELA           0x1B3
+#define FLAG_IN_GAME_TRADE_SEEL              0x1B4
+#define FLAG_IN_GAME_TRADE_LICKITUNG         0x1B5
 #define FLAG_CHECKED_UNDER_TRUCK             0x1B6 // For the Mew Easter egg
 #define FLAG_BILL_IN_TELEPORTER              0x1B7
 #define FLAG_AIDE_LOCATION_1                 0x1B8 // Aide moves to Route 2
@@ -499,8 +499,8 @@
 #define FLAG_DOJO_SPDEFENSE        			 0x1D4
 #define FLAG_DOJO_SPEED       			     0x1D5
 #define FLAG_DOJO_HP          				 0x1D6
-#define FLAG_UNUSED_0x1D7        			 0x1D7
-#define FLAG_UNUSED_0x1D8 					 0x1D8
+#define FLAG_GOT_RECORD_SETTING_MAGIKARP     0x1D7
+#define FLAG_QUEUE_FOSSIL_RESURRECTION 	     0x1D8
 #define FLAG_UNUSED_0x1D9        			 0x1D9
 #define FLAG_UNUSED_0x1DA                    0x1DA
 #define FLAG_UNUSED_0x1DB		             0x1DB

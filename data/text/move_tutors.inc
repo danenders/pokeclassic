@@ -66,32 +66,6 @@ MoveTutor_Text_FuryCutterTaught:
 	.string "I get a thrill watching to see if\n"
 	.string "the move keeps hitting in succession!$"
 
-MoveTutor_Text_MetronomeTeach:
-	.string "I want all sorts of things!\n"
-	.string "But I used up my allowance…\p"
-	.string "Wouldn't it be nice if there were\n"
-	.string "a spell that made money appear when\l"
-	.string "you waggle a finger?\p"
-	.string "If you want, I can teach your Pokémon\n"
-	.string "the move Metronome.\p"
-	.string "Money won't appear, but your Pokémon\n"
-	.string "will waggle a finger. Yes?$"
-
-MoveTutor_Text_MetronomeDeclined:
-	.string "Okay. I'll be here if you change\n"
-	.string "your mind.$"
-
-MoveTutor_Text_MetronomeWhichMon:
-	.string "Okay! I'll teach it!\n"
-	.string "Which Pokémon should I teach?$"
-
-MoveTutor_Text_MetronomeTaught:
-	.string "When a Pokémon waggles its finger\n"
-	.string "like a Metronome, all sorts of nice\l"
-	.string "things happen.\p"
-	.string "Wouldn't it be nice if we could\n"
-	.string "use it, too?$"
-
 MoveTutor_Text_SleepTalkTeach:
 	.string "Humph! My wife relies on Hidden\n"
 	.string "Power to stay awake.\p"

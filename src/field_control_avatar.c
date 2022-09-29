@@ -198,6 +198,8 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
         RunMassageCooldownStepCounter();
         if (FlagGet(FLAG_QUEUE_AIDE_CALL) == TRUE)
             RunAideCallStepCounter();
+        if (FlagGet(FLAG_QUEUE_FOSSIL_RESURRECTION) == TRUE)
+            RunFossilStepCounter();
         IncrementBirthIslandRockStepCount();
         if (TryStartStepBasedScript(&position, metatileBehavior, playerDirection) == TRUE)
             return TRUE;

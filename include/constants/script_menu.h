@@ -47,11 +47,11 @@
 #define MULTI_GAME_CORNER_DOLLS            38
 #define MULTI_GAME_CORNER_COINS            39
 #define MULTI_GAME_CORNER_CUSHIONS         40
-#define MULTI_HOWS_FISHING                 41
-#define MULTI_SSTIDAL_SLATEPORT_WITH_BF    42
+#define MULTI_HOWS_FISHING                 41 // Can probably be removed
+#define MULTI_SSTIDAL_SLATEPORT_WITH_BF    42 // Can probably be removed
 #define MULTI_SSTIDAL_BATTLE_FRONTIER      43
 #define MULTI_RIGHTLEFT                    44
-#define MULTI_SSTIDAL_SLATEPORT_NO_BF      45
+#define MULTI_SSTIDAL_SLATEPORT_NO_BF      45 // Can probably be removed
 #define MULTI_FLOORS                       46
 #define MULTI_SHARDS_R                     47
 #define MULTI_SHARDS_Y                     48
@@ -83,8 +83,8 @@
 #define MULTI_LINK_CONTEST_MODE            74
 #define MULTI_FORCED_START_MENU            75
 #define MULTI_FRONTIER_GAMBLER_BET         76
-#define MULTI_TENT                         77
-#define MULTI_FOSSIL                       78
+#define MULTI_TENT                         77 // Can probably be removed
+#define MULTI_FOSSIL                       78 // Can probably be removed
 #define MULTI_YESNO                        79
 #define MULTI_FRONTIER_RULES               80
 #define MULTI_BATTLE_ARENA_RULES           81
@@ -99,7 +99,7 @@
 #define MULTI_GO_ON_RECORD_RETIRE          90
 #define MULTI_GO_ON_RETIRE                 91
 #define MULTI_TOURNEY_NO_RECORD            92
-#define MULTI_TV_LATI                      93
+#define MULTI_TV_LATI                      93 // Can probably be removed
 #define MULTI_BATTLE_TOWER_FEELINGS        94
 #define MULTI_SLATEPORT_TENT_RULES         95
 #define MULTI_FALLARBOR_TENT_RULES         96
@@ -120,10 +120,10 @@
 #define MULTI_HIDEOUT_FLOORS               111
 #define MULTI_GAME_CORNER_BIG_DOLLS		   112
 #define MULTI_SILPH_FLOORS                 113
-#define MULTI_UNUSED_114                   114
-#define MULTI_UNUSED_115                   115
-#define MULTI_UNUSED_116                   116
-#define MULTI_UNUSED_117             	   117
+#define MULTI_FOSSIL_AMBERDOME             114
+#define MULTI_FOSSIL_AMBERHELIX            115
+#define MULTI_FOSSIL_DOMEHELIX             116
+#define MULTI_FOSSIL_ALL                   117
 #define MULTI_UNUSED_118                   118
 #define MULTI_UNUSED_119                   119
 #define MULTI_UNUSED_120                   120

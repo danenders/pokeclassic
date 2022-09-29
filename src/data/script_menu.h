@@ -579,6 +579,35 @@ static const struct MenuAction MultichoiceList_Fossil[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_AllFossils[] =
+{
+    {gText_OldAmber},
+    {gText_DomeFossil},
+    {gText_HelixFossil},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_DomeHelix[] =
+{
+    {gText_DomeFossil},
+    {gText_HelixFossil},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_AmberDome[] =
+{
+    {gText_OldAmber},
+    {gText_DomeFossil},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_AmberHelix[] =
+{
+    {gText_OldAmber},
+    {gText_HelixFossil},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_YesNo[] =
 {
     {gText_Yes},
@@ -963,6 +992,10 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_ALL_DRINKS]                 = MULTICHOICE(MultichoiceList_AllDrinks),
     [MULTI_HIDEOUT_FLOORS]             = MULTICHOICE(MultichoiceList_HideoutFloors),
     [MULTI_SILPH_FLOORS]               = MULTICHOICE(MultichoiceList_SilphFloors),
+    [MULTI_FOSSIL_ALL]                 = MULTICHOICE(MultichoiceList_AllFossils),
+    [MULTI_FOSSIL_DOMEHELIX]           = MULTICHOICE(MultichoiceList_DomeHelix),
+    [MULTI_FOSSIL_AMBERHELIX]          = MULTICHOICE(MultichoiceList_AmberHelix),
+    [MULTI_FOSSIL_AMBERDOME]           = MULTICHOICE(MultichoiceList_AmberDome),
 };
 
 const u8 *const gStdStrings[] =
