@@ -271,12 +271,16 @@ SaffronCity_Gym_EventScript_RematchLeader::
 	end
 
 SaffronCity_Gym_Text_RematchLeader::
-	.string "Fwahahaha! If it isn't the child.\n" 
-	.string "It seems we are fated to meet once again.\p" 
-	.string "You have come at a truly opportune time.\n" 
-	.string "I was just thinking that I wanted to test\l"
-	.string "my newly refined sinister techniques...\l" 
-	.string "in a battle that will end in your utter defeat!$"
+	.string "...It's true that psychic power\n"
+	.string "is a potent ability.\p"
+	.string "However, there are things that cannot\n"
+	.string "be overcome with that power alone.\p"
+	.string "I finally understand that now, after "
+	.string "losing to you in our last battle.\p"
+	.string "I won't be relying on just psychic power\n"
+	.string "this time.\p"
+	.string "My true strength...my true self...\p"
+	.string "Allow me to test them against you!$"
 
 
 SaffronCity_Gym_EventScript_GymGuy::

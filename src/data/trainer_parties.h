@@ -6464,11 +6464,227 @@ static const struct TrainerMonNoItemDefaultMoves sParty_SwimmerMaleSpencer[] = {
     },
 };
 
+// Pokemon Mansion
+static const struct TrainerMonNoItemDefaultMoves sParty_ScientistTed[] = {
+    {
+        .iv = 0,
+        .lvl = 29,
+        .species = SPECIES_ELECTRODE,
+    },
+    {
+        .iv = 0,
+        .lvl = 29,
+        .species = SPECIES_WEEZING,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_ScientistBraydon[] = {
+    {
+        .iv = 0,
+        .lvl = 33,
+        .species = SPECIES_MAGNEMITE,
+    },
+    {
+        .iv = 0,
+        .lvl = 33,
+        .species = SPECIES_MAGNETON,
+    },
+    {
+        .iv = 0,
+        .lvl = 33,
+        .species = SPECIES_VOLTORB,
+    },
+};
 
+static const struct TrainerMonNoItemDefaultMoves sParty_ScientistIvan[] = {
+    {
+        .iv = 0,
+        .lvl = 34,
+        .species = SPECIES_MAGNEMITE,
+    },
+    {
+        .iv = 0,
+        .lvl = 34,
+        .species = SPECIES_ELECTRODE,
+    },
+};
 
+static const struct TrainerMonNoItemDefaultMoves sParty_YoungsterJohnson[] = {
+    {
+        .iv = 0,
+        .lvl = 33,
+        .species = SPECIES_EKANS,
+    },
+    {
+        .iv = 0,
+        .lvl = 33,
+        .species = SPECIES_EKANS,
+    },
+    {
+        .iv = 0,
+        .lvl = 34,
+        .species = SPECIES_RATICATE,
+    },
+};
 
+static const struct TrainerMonNoItemDefaultMoves sParty_BurglarArnie[] = {
+    {
+        .iv = 0,
+        .lvl = 34,
+        .species = SPECIES_CHARMANDER,
+    },
+    {
+        .iv = 0,
+        .lvl = 34,
+        .species = SPECIES_CHARMELEON,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_BurglarSimon[] = {
+    {
+        .iv = 0,
+        .lvl = 38,
+        .species = SPECIES_NINETALES,
+    },
+};
 
+static const struct TrainerMonNoItemDefaultMoves sParty_BurglarLewis[] = {
+    {
+        .iv = 0,
+        .lvl = 34,
+        .species = SPECIES_GROWLITHE,
+    },
+    {
+        .iv = 0,
+        .lvl = 34,
+        .species = SPECIES_PONYTA,
+    },
+};
 
+// Cinnabar Gym
+static const struct TrainerMonNoItemDefaultMoves sParty_SuperNerdErik[] = {
+    {
+        .iv = 0,
+        .lvl = 36,
+        .species = SPECIES_VULPIX,
+    },
+    {
+        .iv = 0,
+        .lvl = 36,
+        .species = SPECIES_VULPIX,
+    },
+    {
+        .iv = 0,
+        .lvl = 36,
+        .species = SPECIES_NINETALES,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_SuperNerdAvery[] = {
+    {
+        .iv = 0,
+        .lvl = 34,
+        .species = SPECIES_PONYTA,
+    },
+    {
+        .iv = 0,
+        .lvl = 34,
+        .species = SPECIES_CHARMANDER,
+    },
+    {
+        .iv = 0,
+        .lvl = 34,
+        .species = SPECIES_VULPIX,
+    },
+    {
+        .iv = 0,
+        .lvl = 34,
+        .species = SPECIES_GROWLITHE,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_SuperNerdDerek[] = {
+    {
+        .iv = 0,
+        .lvl = 41,
+        .species = SPECIES_RAPIDASH,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_SuperNerdZac[] = {
+    {
+        .iv = 0,
+        .lvl = 37,
+        .species = SPECIES_GROWLITHE,
+    },
+    {
+        .iv = 0,
+        .lvl = 37,
+        .species = SPECIES_VULPIX,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_BurglarQuinn[] = {
+    {
+        .iv = 0,
+        .lvl = 36,
+        .species = SPECIES_GROWLITHE,
+    },
+    {
+        .iv = 0,
+        .lvl = 36,
+        .species = SPECIES_VULPIX,
+    },
+    {
+        .iv = 0,
+        .lvl = 36,
+        .species = SPECIES_NINETALES,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_BurglarRamon[] = {
+    {
+        .iv = 0,
+        .lvl = 41,
+        .species = SPECIES_PONYTA,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_BurglarDusty[] = {
+    {
+        .iv = 0,
+        .lvl = 37,
+        .species = SPECIES_VULPIX,
+    },
+    {
+        .iv = 0,
+        .lvl = 37,
+        .species = SPECIES_GROWLITHE,
+    },
+};
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderBlaine[] = {
+    {
+        .iv = 0,
+        .lvl = 42,
+        .species = SPECIES_GROWLITHE,
+        .moves = {MOVE_BITE, MOVE_ROAR, MOVE_TAKE_DOWN, MOVE_FIRE_BLAST},
+    },
+    {
+        .iv = 0,
+        .lvl = 40,
+        .species = SPECIES_PONYTA,
+        .moves = {MOVE_STOMP, MOVE_BOUNCE, MOVE_FIRE_SPIN, MOVE_FIRE_BLAST},
+    },
+    {
+        .iv = 0,
+        .lvl = 42,
+        .species = SPECIES_RAPIDASH,
+        .moves = {MOVE_STOMP, MOVE_BOUNCE, MOVE_FIRE_SPIN, MOVE_FIRE_BLAST},
+    },
+    {
+        .iv = 0,
+        .lvl = 47,
+        .species = SPECIES_ARCANINE,
+        .moves = {MOVE_BITE, MOVE_ROAR, MOVE_TAKE_DOWN, MOVE_FIRE_BLAST},
+    },
+};
 
 
 

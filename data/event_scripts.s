@@ -1337,4 +1337,5 @@ Common_EventScript_LegendaryFlewAway::
     .include "data/scripts/dexnav.inc"
     .include "data/scripts/costume_swap.inc"
     .include "data/scripts/silphco_doors.inc"
+    .include "data/scripts/pokemon_mansion.inc"
     

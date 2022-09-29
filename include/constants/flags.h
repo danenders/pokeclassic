@@ -133,14 +133,14 @@
 #define FLAG_GOT_LAPRAS_FROM_SILPH          0x73
 #define FLAG_STOPPED_SEAFOAM_B3F_CURRENT    0x74
 #define FLAG_STOPPED_SEAFOAM_B4F_CURRENT    0x75 
-#define FLAG_UNUSED_0x076         	        0x76
-#define FLAG_UNUSED_0x077     		        0x77
-#define FLAG_UNUSED_0x078                   0x78
-#define FLAG_UNUSED_0x079                   0x79
-#define FLAG_UNUSED_0x07A                   0x7A
-#define FLAG_UNUSED_0x07B                   0x7B
-#define FLAG_UNUSED_0x07C                   0x7C
-#define FLAG_UNUSED_0x07D        	        0x7D
+#define FLAG_POKEMON_MANSION_SWITCH_STATE   0x76
+#define FLAG_CINNABAR_GYM_QUIZ_1     		0x77
+#define FLAG_CINNABAR_GYM_QUIZ_2            0x78
+#define FLAG_CINNABAR_GYM_QUIZ_3            0x79
+#define FLAG_CINNABAR_GYM_QUIZ_4            0x7A
+#define FLAG_CINNABAR_GYM_QUIZ_5            0x7B
+#define FLAG_CINNABAR_GYM_QUIZ_6            0x7C
+#define FLAG_GOT_BLAINE_REWARD        	    0x7D
 #define FLAG_UNUSED_0x07E     		        0x7E
 #define FLAG_UNUSED_0x07F     		        0x7F
 #define FLAG_UNUSED_0x080       	        0x80 
@@ -621,8 +621,8 @@
 #define FLAG_HIDDEN_ITEM_ROUTE21_NORTH_PEARL                                      (FLAG_HIDDEN_ITEMS_START + 0x55)
 #define FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_B3F_NUGGET                               (FLAG_HIDDEN_ITEMS_START + 0x56)
 #define FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_B4F_WATER_STONE                          (FLAG_HIDDEN_ITEMS_START + 0x57)
-#define FLAG_HIDDEN_ITEM_88             (FLAG_HIDDEN_ITEMS_START + 0x58)
-#define FLAG_HIDDEN_ITEM_89             (FLAG_HIDDEN_ITEMS_START + 0x59)
+#define FLAG_HIDDEN_ITEM_POKEMON_MANSION_3F_RARE_CANDY                            (FLAG_HIDDEN_ITEMS_START + 0x58)
+#define FLAG_HIDDEN_ITEM_POKEMON_MANSION_B1F_ELIXIR                               (FLAG_HIDDEN_ITEMS_START + 0x59)
 #define FLAG_HIDDEN_ITEM_90           	(FLAG_HIDDEN_ITEMS_START + 0x5A)
 #define FLAG_HIDDEN_ITEM_91             (FLAG_HIDDEN_ITEMS_START + 0x5B)
 #define FLAG_HIDDEN_ITEM_92             (FLAG_HIDDEN_ITEMS_START + 0x5C)
@@ -1135,18 +1135,18 @@
 #define FLAG_HIDE_SEAFOAM_ISLANDS_B1F_REVIVE                        0x444
 #define FLAG_HIDE_SEAFOAM_ISLANDS_B2F_BIG_PEARL                     0x445
 #define FLAG_HIDE_SEAFOAM_ISLANDS_B4F_ULTRA_BALL                    0x446
-#define FLAG_UNUSED_ITEM_0x447              					 	0x447
-#define FLAG_UNUSED_ITEM_0x448              						0x448
-#define FLAG_UNUSED_ITEM_0x449              						0x449
-#define FLAG_UNUSED_ITEM_0x44A                   					0x44A
-#define FLAG_UNUSED_ITEM_0x44B                  					0x44B
-#define FLAG_UNUSED_ITEM_0x44C        								0x44C
-#define FLAG_UNUSED_ITEM_0x44D    									0x44D
-#define FLAG_UNUSED_ITEM_0x44E          							0x44E
-#define FLAG_UNUSED_ITEM_0x44F                                		0x44F
-#define FLAG_UNUSED_ITEM_0x450                             			0x450
-#define FLAG_UNUSED_ITEM_0x451                             			0x451
-#define FLAG_UNUSED_ITEM_0x452                          			0x452
+#define FLAG_HIDE_POKEMON_MANSION_1F_ESCAPE_ROPE              		0x447
+#define FLAG_HIDE_POKEMON_MANSION_1F_PROTEIN              			0x448
+#define FLAG_HIDE_POKEMON_MANSION_1F_CARBOS              			0x449
+#define FLAG_HIDE_POKEMON_MANSION_2F_ZINC                   		0x44A
+#define FLAG_HIDE_POKEMON_MANSION_2F_HP_UP                  		0x44B
+#define FLAG_HIDE_POKEMON_MANSION_2F_CALCIUM        				0x44C
+#define FLAG_HIDE_POKEMON_MANSION_3F_IRON    						0x44D
+#define FLAG_HIDE_POKEMON_MANSION_3F_MAX_POTION          			0x44E
+#define FLAG_HIDE_POKEMON_MANSION_B1F_SECRET_KEY                    0x44F
+#define FLAG_HIDE_POKEMON_MANSION_B1F_TM22                          0x450
+#define FLAG_HIDE_POKEMON_MANSION_B1F_FULL_RESTORE                  0x451
+#define FLAG_HIDE_POKEMON_MANSION_B1F_TM14                          0x452
 #define FLAG_UNUSED_ITEM_0x453                            			0x453
 #define FLAG_UNUSED_ITEM_0x454                               		0x454
 #define FLAG_UNUSED_ITEM_0x455                                  	0x455
