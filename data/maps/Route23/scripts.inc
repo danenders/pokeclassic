@@ -4,6 +4,12 @@ Route23_MapScripts::
 	.byte 0
 
 Route23_OnTransition:
+	clearflag FLAG_HIDE_VICTORY_ROAD_3F_BOULDER
+	setflag FLAG_HIDE_VICTORY_ROAD_2F_BOULDER
+	setvar VAR_VICTORY_ROAD_1F_STATE, 0
+	setvar VAR_VICTORY_ROAD_2F_BOULDER1, 0
+	setvar VAR_VICTORY_ROAD_2F_BOULDER2, 0
+	setvar VAR_VICTORY_ROAD_3F_STATE, 0
 	call Common_EventScript_GetDayOrNight
 	end
 

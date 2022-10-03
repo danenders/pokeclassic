@@ -168,10 +168,10 @@
 #define VAR_SEAFOAM_ISLANDS_STATE          	0x4095
 #define VAR_FOSSIL_STEP_COUNTER             0x4096
 #define VAR_RESURRECTION_FOSSIL             0x4097 //Which Fossil is being revived
-#define UNUSED_VARIABLE_29            		0x4098
-#define UNUSED_VARIABLE_30     				0x4099
-#define UNUSED_VARIABLE_31             		0x409A
-#define UNUSED_VARIABLE_32                  0x409B 
+#define VAR_VICTORY_ROAD_1F_STATE           0x4098
+#define VAR_VICTORY_ROAD_2F_BOULDER1     	0x4099
+#define VAR_VICTORY_ROAD_2F_BOULDER2        0x409A
+#define VAR_VICTORY_ROAD_3F_STATE           0x409B 
 #define UNUSED_VARIABLE_33                  0x409C
 #define UNUSED_VARIABLE_34                  0x409D 
 #define UNUSED_VARIABLE_35    				0x409E

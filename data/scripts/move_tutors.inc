@@ -1,5 +1,50 @@
 @KANTO, Updated
 
+MoveTutor_DoubleEdge::
+	lock
+	faceplayer
+	msgbox MoveTutor_Text_DoubleEdgeTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_DoubleEdgeDeclined
+	msgbox MoveTutor_Text_DoubleEdgeWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_DOUBLE_EDGE
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_DoubleEdgeDeclined
+	goto MoveTutor_EventScript_DoubleEdgeTaught
+	end
+
+MoveTutor_Text_DoubleEdgeTeach::
+    .string "You should be proud of yourself,\n"
+    .string "having battled your way through\l"
+    .string "Victory Road so courageously.\p"
+    .string "In recognition of your feat,\n"
+    .string "I'll teach you Double-Edge.\p"
+    .string "Would you like me to teach that\n"
+    .string "technique?$"
+
+MoveTutor_EventScript_DoubleEdgeDeclined::
+	msgbox MoveTutor_Text_DoubleEdgeDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_DoubleEdgeDeclined::
+    .string "I'll teach you the technique\n"
+    .string "anytime.$"
+
+MoveTutor_Text_DoubleEdgeWhichMon::
+    .string "Which Pokémon should I teach\n"
+    .string "Double-Edge?$"
+
+MoveTutor_EventScript_DoubleEdgeTaught::
+	msgbox MoveTutor_Text_DoubleEdgeTaught, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_Text_DoubleEdgeTaught::
+    .string "Keep that drive going for the\n"
+    .string "Pokémon League!\p"
+    .string "Take a run at them and knock 'em\n"
+    .string "out!$"
+
 MoveTutor_Metronome::
 	lock
 	faceplayer
@@ -625,32 +670,6 @@ MoveTutor_EventScript_DynamicPunchDeclined::
 
 MoveTutor_EventScript_DynamicPunchTaught::
 	msgbox MoveTutor_Text_DynamicPunchTaught, MSGBOX_DEFAULT
-	release
-	end
-
-SootopolisCity_PokemonCenter_1F_EventScript_DoubleEdgeTutor::
-	lock
-	faceplayer
-	goto_if_set FLAG_MOVE_TUTOR_TAUGHT_DOUBLE_EDGE, MoveTutor_EventScript_DoubleEdgeTaught
-	msgbox MoveTutor_Text_DoubleEdgeTeach, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_DoubleEdgeDeclined
-	call MoveTutor_EventScript_CanOnlyBeLearnedOnce
-	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_DoubleEdgeDeclined
-	msgbox MoveTutor_Text_DoubleEdgeWhichMon, MSGBOX_DEFAULT
-	setvar VAR_0x8005, TUTOR_MOVE_DOUBLE_EDGE
-	call MoveTutor_EventScript_OpenPartyMenu
-	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_DoubleEdgeDeclined
-	setflag FLAG_MOVE_TUTOR_TAUGHT_DOUBLE_EDGE
-	goto MoveTutor_EventScript_DoubleEdgeTaught
-	end
-
-MoveTutor_EventScript_DoubleEdgeDeclined::
-	msgbox MoveTutor_Text_DoubleEdgeDeclined, MSGBOX_DEFAULT
-	release
-	end
-
-MoveTutor_EventScript_DoubleEdgeTaught::
-	msgbox MoveTutor_Text_DoubleEdgeTaught, MSGBOX_DEFAULT
 	release
 	end
 

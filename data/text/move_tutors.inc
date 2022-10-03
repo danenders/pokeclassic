@@ -113,29 +113,6 @@ MoveTutor_Text_DynamicPunchTaught:
 	.string "I want you to win at the Mossdeep Gym\n"
 	.string "using that DynamicPunch!$"
 
-MoveTutor_Text_DoubleEdgeTeach:
-	.string "Sigh…\p"
-	.string "Sootopolis's Gym Leader is really\n"
-	.string "lovably admirable.\p"
-	.string "But that also means I have many\n"
-	.string "rivals for his attention.\p"
-	.string "He's got appeal with a Double-Edge.\n"
-	.string "I couldn't even catch his eye.\p"
-	.string "Please, let me teach your Pokémon\n"
-	.string "the move Double-Edge!$"
-
-MoveTutor_Text_DoubleEdgeDeclined:
-	.string "Oh…\n"
-	.string "Even you rejected me…$"
-
-MoveTutor_Text_DoubleEdgeWhichMon:
-	.string "Okay, which Pokémon should I teach\n"
-	.string "Double-Edge?$"
-
-MoveTutor_Text_DoubleEdgeTaught:
-	.string "I won't live for love anymore!\n"
-	.string "I'll become tough!$"
-
 MoveTutor_Text_ExplosionTeach:
 	.string "I don't intend to be going nowhere\n"
 	.string "fast in the sticks like this forever.\p"

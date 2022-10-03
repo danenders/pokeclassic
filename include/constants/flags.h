@@ -632,8 +632,8 @@
 #define FLAG_HIDDEN_ITEM_ROUTE23_MAX_ELIXIR            	                          (FLAG_HIDDEN_ITEMS_START + 0x60)
 #define FLAG_HIDDEN_ITEM_ROUTE23_LUM_BERRY                                        (FLAG_HIDDEN_ITEMS_START + 0x61)
 #define FLAG_HIDDEN_ITEM_ROUTE23_LEPPA_BERRY                                      (FLAG_HIDDEN_ITEMS_START + 0x62)
-#define FLAG_HIDDEN_ITEM_99             (FLAG_HIDDEN_ITEMS_START + 0x63)
-#define FLAG_HIDDEN_ITEM_100            (FLAG_HIDDEN_ITEMS_START + 0x64)
+#define FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_FULL_RESTORE                             (FLAG_HIDDEN_ITEMS_START + 0x63)
+#define FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_ULTRA_BALL                               (FLAG_HIDDEN_ITEMS_START + 0x64)
 #define FLAG_HIDDEN_ITEM_101           	(FLAG_HIDDEN_ITEMS_START + 0x65)
 #define FLAG_HIDDEN_ITEM_102            (FLAG_HIDDEN_ITEMS_START + 0x66)
 #define FLAG_HIDDEN_ITEM_103           	(FLAG_HIDDEN_ITEMS_START + 0x67)
@@ -862,8 +862,8 @@
 #define FLAG_HIDE_SEAFOAM_B4F_BOULDER_1                        		0x335
 #define FLAG_HIDE_SEAFOAM_B4F_BOULDER_2         					0x336
 #define FLAG_HIDE_VIRIDIAN_GYM_RIVAL                         	    0x337
-#define FLAG_HIDE_UNUSED_98                          				0x338
-#define FLAG_HIDE_UNUSED_99                         				0x339
+#define FLAG_HIDE_VICTORY_ROAD_2F_BOULDER                          	0x338
+#define FLAG_HIDE_VICTORY_ROAD_3F_BOULDER                         	0x339
 #define FLAG_HIDE_UNUSED_100                            			0x33A
 #define FLAG_HIDE_UNUSED_101                           				0x33B
 #define FLAG_HIDE_UNUSED_102                     					0x33C
@@ -1147,14 +1147,14 @@
 #define FLAG_HIDE_POKEMON_MANSION_B1F_TM22                          0x450
 #define FLAG_HIDE_POKEMON_MANSION_B1F_FULL_RESTORE                  0x451
 #define FLAG_HIDE_POKEMON_MANSION_B1F_TM14                          0x452
-#define FLAG_UNUSED_ITEM_0x453                            			0x453
-#define FLAG_UNUSED_ITEM_0x454                               		0x454
-#define FLAG_UNUSED_ITEM_0x455                                  	0x455
-#define FLAG_UNUSED_ITEM_0x456                      				0x456
-#define FLAG_UNUSED_ITEM_0x457                            			0x457
-#define FLAG_UNUSED_ITEM_0x458                        				0x458
-#define FLAG_UNUSED_ITEM_0x459               						0x459
-#define FLAG_UNUSED_ITEM_0x45A                              		0x45A
+#define FLAG_HIDE_VICTORY_ROAD_1F_RARE_CANDY                        0x453
+#define FLAG_HIDE_VICTORY_ROAD_1F_TM02                              0x454
+#define FLAG_HIDE_VICTORY_ROAD_2F_TM37                              0x455
+#define FLAG_HIDE_VICTORY_ROAD_2F_GUARD_SPEC                      	0x456
+#define FLAG_HIDE_VICTORY_ROAD_2F_FULL_HEAL                         0x457
+#define FLAG_HIDE_VICTORY_ROAD_2F_TM07                        		0x458
+#define FLAG_HIDE_VICTORY_ROAD_3F_TM50               				0x459
+#define FLAG_HIDE_VICTORY_ROAD_3F_MAX_REVIVE                        0x45A
 #define FLAG_UNUSED_ITEM_0x45B                              		0x45B
 #define FLAG_UNUSED_ITEM_0x45C                             			0x45C
 #define FLAG_UNUSED_ITEM_0x45D                     					0x45D
