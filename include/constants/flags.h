@@ -141,7 +141,7 @@
 #define FLAG_CINNABAR_GYM_QUIZ_5            0x7B
 #define FLAG_CINNABAR_GYM_QUIZ_6            0x7C
 #define FLAG_GOT_BLAINE_REWARD        	    0x7D
-#define FLAG_UNUSED_0x07E     		        0x7E
+#define FLAG_GOT_GIOVANNI_REWARD     		0x7E
 #define FLAG_UNUSED_0x07F     		        0x7F
 #define FLAG_UNUSED_0x080       	        0x80 
 #define FLAG_UNUSED_0x081  			        0x81
@@ -623,7 +623,7 @@
 #define FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_B4F_WATER_STONE                          (FLAG_HIDDEN_ITEMS_START + 0x57)
 #define FLAG_HIDDEN_ITEM_POKEMON_MANSION_3F_RARE_CANDY                            (FLAG_HIDDEN_ITEMS_START + 0x58)
 #define FLAG_HIDDEN_ITEM_POKEMON_MANSION_B1F_ELIXIR                               (FLAG_HIDDEN_ITEMS_START + 0x59)
-#define FLAG_HIDDEN_ITEM_90           	(FLAG_HIDDEN_ITEMS_START + 0x5A)
+#define FLAG_HIDDEN_ITEM_VIRIDIAN_CITY_GYM_MACHO_BRACE           	              (FLAG_HIDDEN_ITEMS_START + 0x5A)
 #define FLAG_HIDDEN_ITEM_91             (FLAG_HIDDEN_ITEMS_START + 0x5B)
 #define FLAG_HIDDEN_ITEM_92             (FLAG_HIDDEN_ITEMS_START + 0x5C)
 #define FLAG_HIDDEN_ITEM_93             (FLAG_HIDDEN_ITEMS_START + 0x5D)
@@ -861,7 +861,7 @@
 #define FLAG_HIDE_SEAFOAM_B3F_BOULDER_6                            	0x334
 #define FLAG_HIDE_SEAFOAM_B4F_BOULDER_1                        		0x335
 #define FLAG_HIDE_SEAFOAM_B4F_BOULDER_2         					0x336
-#define FLAG_HIDE_UNUSED_97                         				0x337
+#define FLAG_HIDE_VIRIDIAN_GYM_RIVAL                         	    0x337
 #define FLAG_HIDE_UNUSED_98                          				0x338
 #define FLAG_HIDE_UNUSED_99                         				0x339
 #define FLAG_HIDE_UNUSED_100                            			0x33A

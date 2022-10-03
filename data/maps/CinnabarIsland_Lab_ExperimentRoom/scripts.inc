@@ -79,7 +79,7 @@ FossilResurrection_HasAmber::
 FossilResurrection_Text_WantToTryOldAmber::
 	.string "You have some Old Amber!\p"
 	.string "Would you like to try and resurrect\n"
-	.string "a Pokémon from the DNA contained inside?"
+	.string "a Pokémon from the DNA contained inside?$"
 
 FossilResurrection_HasHelix::
 	checkitem ITEM_DOME_FOSSIL
@@ -93,7 +93,7 @@ FossilResurrection_HasHelix::
 FossilResurrection_Text_WantToTryHelixFossil::
 	.string "You have a Helix Fossil!\p"
 	.string "Would you like to try and resurrect\n"
-	.string "a Pokémon from the fossilized bones?"
+	.string "a Pokémon from the fossilized bones?$"
 
 FossilResurrection_HasDome::
 	msgbox FossilResurrection_Text_WantToTryDomeFossil, MSGBOX_YESNO
@@ -104,7 +104,7 @@ FossilResurrection_HasDome::
 FossilResurrection_Text_WantToTryDomeFossil::
 	.string "You have a Dome Fossil!\p"
 	.string "Would you like to try and resurrect\n"
-	.string "a Pokémon from the fossilized bones?"
+	.string "a Pokémon from the fossilized bones?$"
 
 FossilResurrection_HasAmberHelix::
 	checkitem ITEM_DOME_FOSSIL
@@ -156,7 +156,7 @@ FossilResurrection_HasAmberHelixDome::
 	end
 
 FossilResurrection_Text_WhichFossil::
-	.string "Oh! You actually have a multiple\n"
+	.string "Oh! You actually have multiple\n"
 	.string "fossils!\p"
 	.string "Which Fossil would you like to\n"
 	.string "resurrect?$"
@@ -182,9 +182,6 @@ FossilResurrection_ChooseDomeFossil::
 FossilResurrection_Begin::
 	msgbox FossilResurrection_Text_LetsGetStarted, MSGBOX_NPC
 	setflag FLAG_QUEUE_FOSSIL_RESURRECTION
-	applymovement LOCALID_SCIENTIST, FossilResurrection_Movement_AnimateScientist
-	waitmovement 1
-	turnobject LOCALID_SCIENTIST, DIR_SOUTH
 	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	release
 	end
@@ -195,16 +192,6 @@ FossilResurrection_Text_LetsGetStarted::
 	.string "some time, so I'll get started right\l"
 	.string "away!\p"
 	.string "You should come back again later.$"
-
-FossilResurrection_Movement_AnimateScientist::
-	face_up
-	walk_in_place_faster_up
-	walk_in_place_faster_up
-	walk_in_place_faster_up
-	walk_in_place_faster_up
-	delay_16
-	delay_16
-	step_end
 
 FossilResurrection_AnotherTime::
 	msgbox FossilResurrection_Text_AnotherTime
@@ -361,7 +348,7 @@ Text_FossilMonBackToLife::
     .string "There you are!\n"
     .string "The experiment is complete, and\p"
     .string "your fossil came back to life!\n"
-    .string "We successfully revived {STR_VAR_1}!$"
+    .string "We successfully revived {STR_VAR_2}!$"
 
 Text_ReceivedMonFromResearcher:
 	.string "{PLAYER} received {STR_VAR_2} from\n"

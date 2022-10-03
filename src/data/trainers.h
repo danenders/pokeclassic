@@ -4911,12 +4911,117 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_BurglarDusty),
         .party = {.NoItemDefaultMoves = sParty_BurglarDusty}
     },
+//Viridian Gym
+    [TRAINER_LEADER_GIOVANNI] = {
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_GIOVANNI,
+        .trainerName = _("Giovanni"),
+        .items = {ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_FULL_HEAL},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_LeaderGiovanni),
+        .party = {.NoItemCustomMoves = sParty_LeaderGiovanni}
+    },
+    [TRAINER_TAMER_JASON] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TAMER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_TAMER,
+        .trainerName = _("Jason"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_TamerJason),
+        .party = {.NoItemDefaultMoves = sParty_TamerJason}
+    },
+    [TRAINER_TAMER_COLE] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TAMER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_TAMER,
+        .trainerName = _("Cole"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_TamerCole),
+        .party = {.NoItemDefaultMoves = sParty_TamerCole}
+    },
+    [TRAINER_BLACK_BELT_ATSUSHI] = {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM,
+        .trainerClass = TRAINER_CLASS_BLACK_BELT,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_BLACK_BELT,
+        .trainerName = _("Atsushi"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BlackBeltAtsushi),
+        .party = {.ItemDefaultMoves = sParty_BlackBeltAtsushi}
+    },
+    [TRAINER_BLACK_BELT_KIYO] = {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM,
+        .trainerClass = TRAINER_CLASS_BLACK_BELT,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_BLACK_BELT,
+        .trainerName = _("Kiyo"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BlackBeltKiyo),
+        .party = {.ItemDefaultMoves = sParty_BlackBeltKiyo}
+    },
+    [TRAINER_BLACK_BELT_TAKASHI] = {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM,
+        .trainerClass = TRAINER_CLASS_BLACK_BELT,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_BLACK_BELT,
+        .trainerName = _("Takashi"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BlackBeltTakashi),
+        .party = {.ItemDefaultMoves = sParty_BlackBeltTakashi}
+    },
+    [TRAINER_COOLTRAINER_SAMUEL] = {
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_COOLTRAINER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
+        .trainerName = _("Samuel"),
+        .items = {ITEM_SUPER_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_CooltrainerSamuel),
+        .party = {.NoItemCustomMoves = sParty_CooltrainerSamuel}
+    },
+    [TRAINER_COOLTRAINER_YUJI] = {
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_COOLTRAINER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
+        .trainerName = _("Yuji"),
+        .items = {ITEM_HYPER_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_CooltrainerYuji),
+        .party = {.NoItemCustomMoves = sParty_CooltrainerYuji}
+    },
+    [TRAINER_COOLTRAINER_WARREN] = {
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_COOLTRAINER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
+        .trainerName = _("Warren"),
+        .items = {ITEM_HYPER_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_CooltrainerWarren),
+        .party = {.NoItemCustomMoves = sParty_CooltrainerWarren}
+    },
 
-
-
-
-
-
+//
 
 
 
