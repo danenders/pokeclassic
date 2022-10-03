@@ -10,3 +10,11 @@ Route23_OnTransition:
 Route23_OnResume:
 	call Common_EventScript_GetDayOrNight
 	end
+
+Route23_EventScript_VictoryRoadGateSign::
+	msgbox Route23_Text_VictoryRoadGateSign, MSGBOX_SIGN
+	end
+
+Route23_Text_VictoryRoadGateSign::
+    .string "Victory Road Gate -\n"
+    .string "Pokémon League$"
