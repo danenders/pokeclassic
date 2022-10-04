@@ -14,10 +14,10 @@
 #define	TRAINER_BRANDON							8
 
 //Elite Four
-#define	TRAINER_LORELEI							9
-#define	TRAINER_BRUNO							10
-#define	TRAINER_AGATHA							11
-#define	TRAINER_LANCE							12
+#define	TRAINER_ELITE_FOUR_LORELEI				9
+#define	TRAINER_ELITE_FOUR_BRUNO				10
+#define	TRAINER_ELITE_FOUR_AGATHA				11
+#define	TRAINER_ELITE_FOUR_LANCE				12
 
 //Rival
 #define	TRAINER_RIVAL_FIRST_BATTLE				13

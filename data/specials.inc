@@ -557,4 +557,5 @@ gSpecials::
 	def_special ForcePlayerOntoBike
 	def_special SeafoamIslandsB4F_CurrentDumpsPlayerOnLand
 	def_special ForcePlayerToStartSurfing
+	def_special DoPokemonLeagueLightingEffect
 	

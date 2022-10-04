@@ -128,7 +128,7 @@ const struct Trainer gTrainers[] = {
     },
 
 //Elite Four
-[TRAINER_LORELEI] = {
+    [TRAINER_ELITE_FOUR_LORELEI] = {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM,
         .trainerClass = TRAINER_CLASS_ELITE_FOUR,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR | F_TRAINER_FEMALE,
@@ -140,7 +140,7 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_EliteFourLorelei),
         .party = {.ItemCustomMoves = sParty_EliteFourLorelei}
     },
-    [TRAINER_BRUNO] = {
+    [TRAINER_ELITE_FOUR_BRUNO] = {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM,
         .trainerClass = TRAINER_CLASS_ELITE_FOUR,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
@@ -152,7 +152,7 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_EliteFourBruno),
         .party = {.ItemCustomMoves = sParty_EliteFourBruno}
     },
-    [TRAINER_AGATHA] = {
+    [TRAINER_ELITE_FOUR_AGATHA] = {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM,
         .trainerClass = TRAINER_CLASS_ELITE_FOUR,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR | F_TRAINER_FEMALE,
@@ -164,7 +164,7 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_EliteFourAgatha),
         .party = {.ItemCustomMoves = sParty_EliteFourAgatha}
     },
-    [TRAINER_LANCE] = {
+    [TRAINER_ELITE_FOUR_LANCE] = {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM,
         .trainerClass = TRAINER_CLASS_ELITE_FOUR,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
@@ -5166,6 +5166,7 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_CoolCoupleRayTyra),
         .party = {.NoItemCustomMoves = sParty_CoolCoupleRayTyra}
     },
+
 
 
 

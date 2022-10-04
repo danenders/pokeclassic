@@ -582,10 +582,10 @@ EventScript_WhiteOut::
 	end
 
 EverGrandeCity_HallOfFame_EventScript_ResetEliteFour::
-	clearflag FLAG_DEFEATED_ELITE_4_SIDNEY
-	clearflag FLAG_DEFEATED_ELITE_4_PHOEBE
-	clearflag FLAG_DEFEATED_ELITE_4_GLACIA
-	clearflag FLAG_DEFEATED_ELITE_4_DRAKE
+	clearflag FLAG_DEFEATED_LORELEI
+	clearflag FLAG_DEFEATED_BRUNO
+	clearflag FLAG_DEFEATED_AGATHA
+	clearflag FLAG_DEFEATED_LANCE
 	setvar VAR_ELITE_4_STATE, 0
 	return
 
@@ -1023,6 +1023,10 @@ Common_EventScript_LegendaryFlewAway::
 	release
 	end
 
+Text_VoiceRangOutDontRunAway::
+	.string "Someone's voice rang out,\n"
+	.string "“Don't run away!”$"
+
 	.include "data/scripts/pc_transfer.inc"
 	.include "data/scripts/questionnaire.inc"
 	.include "data/scripts/abnormal_weather.inc"
@@ -1338,4 +1342,6 @@ Common_EventScript_LegendaryFlewAway::
     .include "data/scripts/costume_swap.inc"
     .include "data/scripts/silphco_doors.inc"
     .include "data/scripts/pokemon_mansion.inc"
-    
+    .include "data/scripts/pokemon_league.inc"
+
+

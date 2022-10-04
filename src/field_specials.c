@@ -67,6 +67,7 @@
 #include "constants/metatile_labels.h"
 #include "palette.h"
 #include "field_player_avatar.h"
+#include "constants/rgb.h"
 
 EWRAM_DATA bool8 gBikeCyclingChallenge = FALSE;
 EWRAM_DATA u8 gBikeCollisions = 0;
@@ -132,6 +133,8 @@ static void Task_CloseBattlePikeCurtain(u8);
 static u8 DidPlayerGetFirstFans(void);
 static void SetInitialFansOfPlayer(void);
 static u16 PlayerGainRandomTrainerFan(void);
+static void Task_RunPokemonLeagueLightingEffect(u8 taskId);
+static void Task_CancelPokemonLeagueLightingEffect(u8 taskId);
 #ifndef FREE_LINK_BATTLE_RECORDS
 static void BufferFanClubTrainerName_(struct LinkBattleRecords *, u8, u8);
 //static void BufferFanClubTrainerName_(struct LinkBattleRecords *linkRecords, u8 a, u8 b);
@@ -4530,3 +4533,139 @@ void ForcePlayerToStartSurfing(void)
 {
     SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_SURFING);
 }
+
+static const u16 sEliteFourLightingPalettes[][16] = {
+    INCBIN_U16("graphics/field_specials/unk_83F5F50.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F5F70.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F5F90.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F5FB0.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F5FD0.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F5FF0.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F6010.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F6030.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F6050.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F6070.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F6090.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F60B0.gbapal")
+};
+
+static const u16 sChampionRoomLightingPalettes[][16] = {
+    INCBIN_U16("graphics/field_specials/unk_83F60D0.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F60F0.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F6110.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F6130.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F6150.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F6170.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F6190.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F61B0.gbapal"),
+    INCBIN_U16("graphics/field_specials/unk_83F61D0.gbapal")
+};
+
+static const u8 sEliteFourLightingTimers[] = {
+    40,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12
+};
+
+static const u8 sChampionRoomLightingTimers[] = {
+    20,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8
+};
+
+void DoPokemonLeagueLightingEffect(void)
+{
+    u8 taskId = CreateTask(Task_RunPokemonLeagueLightingEffect, 8);
+    s16 *data = gTasks[taskId].data;
+    if (FlagGet(FLAG_TEMP_3) == TRUE)
+    {
+        gTasks[taskId].func = Task_CancelPokemonLeagueLightingEffect;
+    }
+    else
+    {
+        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(POKEMON_LEAGUE_CHAMPIONS_ROOM) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(POKEMON_LEAGUE_CHAMPIONS_ROOM))
+        {
+            data[0] = sChampionRoomLightingTimers[0];
+            data[2] = 8;
+            LoadPalette(sChampionRoomLightingPalettes[0], 0x70, 0x20);
+        }
+        else
+        {
+            data[0] = sEliteFourLightingTimers[0];
+            data[2] = 11;
+            LoadPalette(sEliteFourLightingPalettes[0], 0x70, 0x20);
+        }
+        data[1] = 0;
+        //Fieldmap_ApplyGlobalTintToPaletteSlot(7, 1);
+    }
+}
+
+static void Task_RunPokemonLeagueLightingEffect(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+    if (!gPaletteFade.active
+     && FlagGet(FLAG_TEMP_2) != FALSE
+     && FlagGet(FLAG_TEMP_5) != TRUE
+     && --data[0] == 0
+    )
+    {
+        if (++data[1] == data[2])
+            data[1] = 0;
+
+        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(POKEMON_LEAGUE_CHAMPIONS_ROOM) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(POKEMON_LEAGUE_CHAMPIONS_ROOM))
+        {
+            data[0] = sChampionRoomLightingTimers[data[1]];
+            LoadPalette(sChampionRoomLightingPalettes[data[1]], 0x70, 0x20);
+        }
+        else
+        {
+            data[0] = sEliteFourLightingTimers[data[1]];
+            LoadPalette(sEliteFourLightingPalettes[data[1]], 0x70, 0x20);
+        }
+        //Fieldmap_ApplyGlobalTintToPaletteSlot(7, 1);
+    }
+}
+
+static void Task_CancelPokemonLeagueLightingEffect(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+    if (FlagGet(FLAG_TEMP_4) != FALSE)
+    {
+        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(POKEMON_LEAGUE_CHAMPIONS_ROOM) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(POKEMON_LEAGUE_CHAMPIONS_ROOM))
+        {
+            LoadPalette(sChampionRoomLightingPalettes[8], 0x70, 0x20);
+        }
+        else
+        {
+            LoadPalette(sEliteFourLightingPalettes[11], 0x70, 0x20);
+        }
+        //Fieldmap_ApplyGlobalTintToPaletteSlot(7, 1);
+        if (gPaletteFade.active)
+        {
+            BlendPalettes(0x00000080, 16, RGB_BLACK);
+        }
+        DestroyTask(taskId);
+    }
+}
+
+void StopPokemonLeagueLightingEffectTask(void)
+{
+    if (FuncIsActiveTask(Task_RunPokemonLeagueLightingEffect) == TRUE)
+    {
+        DestroyTask(FindTaskIdByFunc(Task_RunPokemonLeagueLightingEffect));
+    }
+}
+

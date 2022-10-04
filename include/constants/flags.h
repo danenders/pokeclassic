@@ -864,10 +864,10 @@
 #define FLAG_HIDE_VIRIDIAN_GYM_RIVAL                         	    0x337
 #define FLAG_HIDE_VICTORY_ROAD_2F_BOULDER                          	0x338
 #define FLAG_HIDE_VICTORY_ROAD_3F_BOULDER                         	0x339
-#define FLAG_HIDE_UNUSED_100                            			0x33A
-#define FLAG_HIDE_UNUSED_101                           				0x33B
-#define FLAG_HIDE_UNUSED_102                     					0x33C
-#define FLAG_HIDE_UNUSED_103                  						0x33D
+#define FLAG_DEFEATED_LORELEI                            			0x33A
+#define FLAG_DEFEATED_BRUNO                           				0x33B
+#define FLAG_DEFEATED_AGATHA                     					0x33C
+#define FLAG_DEFEATED_LANCE                  						0x33D
 #define FLAG_HIDE_UNUSED_104                       					0x33E
 #define FLAG_HIDE_UNUSED_105               							0x33F
 #define FLAG_HIDE_UNUSED_106                						0x340
@@ -1308,21 +1308,19 @@
 #define FLAG_REGISTERED_PROF_OAK                         			0x4F9
 #define FLAG_HAS_MATCH_CALL                                         0x4FA
 
-#define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F2
-#define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F3
-#define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F4
-#define FLAG_DEFEATED_LAVARIDGE_GYM                                 0x4F5
-#define FLAG_DEFEATED_PETALBURG_GYM                                 0x4F6
-#define FLAG_DEFEATED_FORTREE_GYM                                   0x4F7
-#define FLAG_DEFEATED_MOSSDEEP_GYM                                  0x4F8
-#define FLAG_DEFEATED_SOOTOPOLIS_GYM                                0x4F9
-#define FLAG_DEFEATED_METEOR_FALLS_STEVEN                           0x4FA
-
-#define FLAG_DEFEATED_ELITE_4_SIDNEY                                0x4FB
-#define FLAG_DEFEATED_ELITE_4_PHOEBE                                0x4FC
-#define FLAG_DEFEATED_ELITE_4_GLACIA                                0x4FD
-#define FLAG_DEFEATED_ELITE_4_DRAKE                                 0x4FE
-
+#define FLAG_UNUSED_0x4F2                                           0x4F2
+#define FLAG_UNUSED_0x4F3                                           0x4F3
+#define FLAG_UNUSED_0x4F4                                           0x4F4
+#define FLAG_UNUSED_0x4F5                                           0x4F5
+#define FLAG_UNUSED_0x4F6                                           0x4F6
+#define FLAG_UNUSED_0x4F7                                           0x4F7
+#define FLAG_UNUSED_0x4F8                                           0x4F8
+#define FLAG_UNUSED_0x4F9                                           0x4F9
+#define FLAG_UNUSED_0x4FA                                           0x4FA
+#define FLAG_UNUSED_0x4FB                                           0x4FB
+#define FLAG_UNUSED_0x4FC                                           0x4FC
+#define FLAG_UNUSED_0x4FD                                           0x4FD
+#define FLAG_UNUSED_0x4FE                                           0x4FE
 #define FLAG_UNUSED_0x4FF                                           0x4FF // Unused Flag
 
 // Trainer Flags
@@ -1334,7 +1332,7 @@
 
 // System Flags
 
-#define SYSTEM_FLAGS                                   (TRAINER_FLAGS_END + 1) // 0x860
+#define SYSTEM_FLAGS                                 (TRAINER_FLAGS_END + 1) // 0x860
 
 #define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x860
 #define FLAG_SYS_POKEDEX_GET                         (SYSTEM_FLAGS + 0x1)
