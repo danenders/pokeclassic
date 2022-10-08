@@ -51,7 +51,6 @@ PokemonLeague_HallOfFame_Movement_EnterRoom::
 	walk_up
 	walk_up
 	walk_up
-	walk_up
 	step_end
 
 
