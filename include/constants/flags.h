@@ -331,9 +331,9 @@
 #define FLAG_UNUSED_0x139    				 0x139
 #define FLAG_UNUSED_0x13A            		 0x13A
 #define FLAG_UNUSED_0x13B               	 0x13B
-#define FLAG_UNUSED_0x13C               	 0x13C
-#define FLAG_UNUSED_0x13D             		 0x13D
-#define FLAG_UNUSED_0x13E 					 0x13E
+#define FLAG_CAUGHT_MEWTWO               	 0x13C
+#define FLAG_DEFEATED_MEWTWO             	 0x13D
+#define FLAG_HIDE_MEWTWO 					 0x13E
 #define FLAG_CAUGHT_ARTICUNO   	 			 0x13F
 #define FLAG_DEFEATED_ARTICUNO      		 0x140
 #define FLAG_HIDE_ARTICUNO                 	 0x141
