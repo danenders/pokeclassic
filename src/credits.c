@@ -406,6 +406,13 @@ static void PrintCreditsText(const u8 *string, u8 y, bool8 isTitle)
 
 #define tMainTaskId data[1]
 
+static void SkipCreditsSequence(void)
+{
+    SetVBlankCallback(VBlankCB_Credits);
+    SetMainCallback2(CB2_Credits);
+    CreateTask(Task_CreditsTheEnd3, 0);
+}
+
 void CB2_StartCreditsSequence(void)
 {
     u8 taskId;
@@ -417,7 +424,8 @@ void CB2_StartCreditsSequence(void)
     InitHeap(gHeap, HEAP_SIZE);
     ResetPaletteFade();
     ResetTasks();
-    InitCreditsBgsAndWindows();
+    SkipCreditsSequence();
+    return;
 
     taskId = CreateTask(Task_WaitPaletteFade, 0);
 
@@ -639,7 +647,7 @@ static void Task_CreditsTheEnd3(u8 taskId)
                                 | DISPCNT_OBJ_1D_MAP
                                 | DISPCNT_BG0_ON);
 
-    gTasks[taskId].tDelay = 235; //set this to 215 to actually show "THE END" in time to the last song beat
+    gTasks[taskId].tDelay = 0; //set this to 215 to actually show "THE END" in time to the last song beat
     gTasks[taskId].func = Task_CreditsTheEnd4;
 }
 
