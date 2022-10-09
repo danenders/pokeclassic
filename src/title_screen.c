@@ -608,7 +608,7 @@ void CB2_InitTitleScreen(void)
                                     | DISPCNT_OBJ_ON
                                     | DISPCNT_WIN0_ON
                                     | DISPCNT_OBJWIN_ON);
-        m4aSongNumStart(MUS_TITLE);
+        m4aSongNumStart(MUS_RG_TITLE);
         gMain.state = 5;
         break;
     case 5:
@@ -778,7 +778,7 @@ static void CB2_GoToMainMenu(void)
 static void CB2_GoToCopyrightScreen(void)
 {
     if (!UpdatePaletteFade())
-        SetMainCallback2(CB2_InitCopyrightScreenAfterTitleScreen);
+        SetMainCallback2(CB2_CopyrightScreen);
 }
 
 static void CB2_GoToClearSaveDataScreen(void)

@@ -1763,3 +1763,11 @@ bool8 AddSubspritesToOamBuffer(struct Sprite *sprite, struct OamData *destOam, u
 
     return 0;
 }
+
+
+void obj_pos2_update_enable(struct Sprite* sprite, s16 xmod, s16 ymod)
+{
+    sprite->data[6] = xmod;
+    sprite->data[7] = ymod;
+    sprite->anchored = 1;
+}
