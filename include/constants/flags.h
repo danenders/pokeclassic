@@ -636,7 +636,7 @@
 #define FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_ULTRA_BALL                               (FLAG_HIDDEN_ITEMS_START + 0x64)
 #define FLAG_HIDDEN_ITEM_POWER_PLANT_THUNDER_STONE           	                  (FLAG_HIDDEN_ITEMS_START + 0x65)
 #define FLAG_HIDDEN_ITEM_POWER_PLANT_MAX_ELIXIR                                   (FLAG_HIDDEN_ITEMS_START + 0x66)
-#define FLAG_HIDDEN_ITEM_103           	(FLAG_HIDDEN_ITEMS_START + 0x67)
+#define FLAG_HIDDEN_ITEM_CERULEAN_CAVE_1F_ULTRA_BALL           	                  (FLAG_HIDDEN_ITEMS_START + 0x67)
 #define FLAG_HIDDEN_ITEM_104            (FLAG_HIDDEN_ITEMS_START + 0x68)
 #define FLAG_HIDDEN_ITEM_105 			(FLAG_HIDDEN_ITEMS_START + 0x69)
 #define FLAG_HIDDEN_ITEM_106   			(FLAG_HIDDEN_ITEMS_START + 0x6A)
@@ -1160,14 +1160,14 @@
 #define FLAG_HIDE_POWER_PLANT_TM17                     				0x45D
 #define FLAG_HIDE_POWER_PLANT_ELIXIR                              	0x45E
 #define FLAG_HIDE_POWER_PLANT_THUNDER_STONE                         0x45F
-#define FLAG_UNUSED_ITEM_0x460                            			0x460
-#define FLAG_UNUSED_ITEM_0x461                            			0x461
-#define FLAG_UNUSED_ITEM_0x462                            			0x462
-#define FLAG_UNUSED_ITEM_0x463                        				0x463
-#define FLAG_UNUSED_ITEM_0x464                      				0x464
-#define FLAG_UNUSED_ITEM_0x465                 						0x465
-#define FLAG_UNUSED_ITEM_0x466                 						0x466
-#define FLAG_UNUSED_ITEM_0x467                   					0x467
+#define FLAG_HIDE_CERULEAN_CAVE_1F_NUGGET                           0x460
+#define FLAG_HIDE_CERULEAN_CAVE_1F_MAX_ELIXIR                       0x461
+#define FLAG_HIDE_CERULEAN_CAVE_1F_FULL_RESTORE                     0x462
+#define FLAG_HIDE_CERULEAN_CAVE_2F_PP_UP                        	0x463
+#define FLAG_HIDE_CERULEAN_CAVE_2F_ULTRA_BALL                      	0x464
+#define FLAG_HIDE_CERULEAN_CAVE_2F_FULL_RESTORE                 	0x465
+#define FLAG_HIDE_CERULEAN_CAVE_B1F_MAX_REVIVE                 		0x466
+#define FLAG_HIDE_CERULEAN_CAVE_B1F_ULTRA_BALL                   	0x467
 #define FLAG_UNUSED_ITEM_0x468                                      0x468
 #define FLAG_UNUSED_ITEM_0x469                             			0x469
 #define FLAG_UNUSED_ITEM_0x46A                           			0x46A
