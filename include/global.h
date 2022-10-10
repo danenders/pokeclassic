@@ -535,6 +535,7 @@ struct SaveBlock2
     /*0x64C*/ struct BattleFrontier frontier;
     /*0xF2C*/ u8 rivalName[PLAYER_NAME_LENGTH + 1];
               u8 costumeId;
+              u16 optionsFollowerType:3; //Follower Type: 0= Pikachu, 1=Any, 2=Off
 }; // sizeof=0xF2C
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;
