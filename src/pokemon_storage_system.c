@@ -6568,9 +6568,17 @@ static void InitCanReleaseMonVars(void)
     }
     else
     {
+        if (GetMonData(&sStorage->tempMon, MON_DATA_SPECIES, NULL) == SPECIES_PIKACHU_PARTNER)
+        {
+            sStorage->releaseStatusResolved = TRUE;
+            sStorage->canReleaseMon = FALSE; 
+        }
+        else
+        {
         // Pokémon knows no restricted moves, can be released
         sStorage->releaseStatusResolved = TRUE;
         sStorage->canReleaseMon = TRUE;
+        }
     }
 
     sStorage->releaseCheckState = 0;
