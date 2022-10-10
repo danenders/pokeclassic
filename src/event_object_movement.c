@@ -2169,14 +2169,14 @@ struct Pokemon * GetFirstLiveMon(void) { // Return address of first conscious pa
   u8 i;
   for (i=0; i<PARTY_SIZE;i++) 
   {
-    if (gSaveBlock2Ptr->optionsFollowerType == (0))
+    if (gSaveBlock2Ptr->optionsFollowerType == (1) && (FlagGet(FLAG_SYS_GAME_CLEAR) == TRUE))
     {
-        if (gPlayerParty[i].hp > 0 && (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL) == SPECIES_PIKACHU_PARTNER) && !(gPlayerParty[i].box.isEgg || gPlayerParty[i].box.isBadEgg))
+        if (gPlayerParty[i].hp > 0 && !(gPlayerParty[i].box.isEgg || gPlayerParty[i].box.isBadEgg))
             return &gPlayerParty[i];
     }
     else
     {
-        if (gPlayerParty[i].hp > 0 && !(gPlayerParty[i].box.isEgg || gPlayerParty[i].box.isBadEgg))
+        if (gPlayerParty[i].hp > 0 && (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL) == SPECIES_PIKACHU_PARTNER) && !(gPlayerParty[i].box.isEgg || gPlayerParty[i].box.isBadEgg))
             return &gPlayerParty[i];
     }
   }

@@ -15,6 +15,7 @@
 #include "strings.h"
 #include "gba/m4a_internal.h"
 #include "constants/rgb.h"
+#include "event_data.h"
 
 // Task data
 enum
@@ -521,48 +522,75 @@ static void Sound_DrawChoices(u8 selection)
 
 static u8 FollowerType_ProcessInput(u8 selection)
 {
-    if (JOY_NEW(DPAD_RIGHT))
-    {
-        if (selection <= 1)
-            selection++;
-        else
-            selection = 0;
+    if (FlagGet(FLAG_SYS_GAME_CLEAR) == TRUE)
+    {    
+        if (JOY_NEW(DPAD_RIGHT))
+        {
+            if (selection <= 1)
+                selection++;
+            else
+                selection = 0;
 
-        sArrowPressed = TRUE;
-    }
-    if (JOY_NEW(DPAD_LEFT))
-    {
-        if (selection != 0)
-            selection--;
-        else
-            selection = 2;
+            sArrowPressed = TRUE;
+        }
+        if (JOY_NEW(DPAD_LEFT))
+        {
+            if (selection != 0)
+                selection--;
+            else
+                selection = 2;
 
-        sArrowPressed = TRUE;
+            sArrowPressed = TRUE;
+        }
+        return selection;
     }
-    return selection;
+    else
+    {    
+        if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
+        {
+            selection ^= 2;
+            sArrowPressed = TRUE;
+        }
+
+        return selection;
+    }
 }
 
 static void FollowerType_DrawChoices(u8 selection)
 {
-    s32 widthPartner, widthAny, widthNone, xFollower;
-    u8 styles[3];
+    if (FlagGet(FLAG_SYS_GAME_CLEAR) == TRUE)
+    {
+        s32 widthPartner, widthAny, widthNone, xFollower;
+        u8 styles[3];
+    
+        styles[0] = 0;
+        styles[1] = 0;
+        styles[2] = 0;
+        styles[selection] = 1;
+    
+        DrawOptionMenuChoice(gText_FollowerPika, 104, YPOS_FOLLOWER, styles[0]);
+    
+        widthPartner = GetStringWidth(FONT_NORMAL, gText_FollowerPika, 0);
+        widthAny = GetStringWidth(FONT_NORMAL, gText_FollowerAny, 0);
+        widthNone = GetStringWidth(FONT_NORMAL, gText_FollowerNone, 0);
+    
+        widthAny -= 94;
+        xFollower = (widthPartner - widthAny - widthNone) / 2 + 104;
+        DrawOptionMenuChoice(gText_FollowerAny, xFollower, YPOS_FOLLOWER, styles[1]);
+    
+        DrawOptionMenuChoice(gText_FollowerNone, GetStringRightAlignXOffset(FONT_NORMAL, gText_FollowerNone, 198), YPOS_FOLLOWER, styles[2]);
+    }
+    else
+    {
+        u8 styles[2];
 
-    styles[0] = 0;
-    styles[1] = 0;
-    styles[2] = 0;
-    styles[selection] = 1;
+        styles[0] = 0;
+        styles[2] = 0;
+        styles[selection] = 1;
 
-    DrawOptionMenuChoice(gText_FollowerPika, 104, YPOS_FOLLOWER, styles[0]);
-
-    widthPartner = GetStringWidth(FONT_NORMAL, gText_FollowerPika, 0);
-    widthAny = GetStringWidth(FONT_NORMAL, gText_FollowerAny, 0);
-    widthNone = GetStringWidth(FONT_NORMAL, gText_FollowerNone, 0);
-
-    widthAny -= 94;
-    xFollower = (widthPartner - widthAny - widthNone) / 2 + 104;
-    DrawOptionMenuChoice(gText_FollowerAny, xFollower, YPOS_FOLLOWER, styles[1]);
-
-    DrawOptionMenuChoice(gText_FollowerNone, GetStringRightAlignXOffset(FONT_NORMAL, gText_FollowerNone, 198), YPOS_FOLLOWER, styles[2]);
+        DrawOptionMenuChoice(gText_FollowerPika, 104, YPOS_FOLLOWER, styles[0]);
+        DrawOptionMenuChoice(gText_FollowerNone, GetStringRightAlignXOffset(FONT_NORMAL, gText_FollowerNone, 198), YPOS_FOLLOWER, styles[2]);
+    }
 }
 
 static u8 ButtonMode_ProcessInput(u8 selection)
