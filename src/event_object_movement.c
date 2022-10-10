@@ -2306,7 +2306,7 @@ void RemoveFollowingPokemon(void) { // Remove follower object. Idempotent.
 }
 
 static bool8 IsFollowerVisible(void) { // Determine whether follower *should* be visible
-    if (gSaveBlock2Ptr->optionsFollowerType != (2))
+    if (gSaveBlock2Ptr->optionsFollowerType == (2))
     { 
         return;
     }
