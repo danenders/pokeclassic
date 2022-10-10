@@ -329,8 +329,8 @@
 #define FLAG_UNUSED_0x137      				 0x137 
 #define FLAG_UNUSED_0x138                    0x138
 #define FLAG_UNUSED_0x139    				 0x139
-#define FLAG_UNUSED_0x13A            		 0x13A
-#define FLAG_UNUSED_0x13B               	 0x13B
+#define FLAG_DEFEATED_POWER_PLANT_ELECTRODE_1  0x13A
+#define FLAG_DEFEATED_POWER_PLANT_ELECTRODE_2  0x13B
 #define FLAG_CAUGHT_MEWTWO               	 0x13C
 #define FLAG_DEFEATED_MEWTWO             	 0x13D
 #define FLAG_HIDE_MEWTWO 					 0x13E
@@ -634,8 +634,8 @@
 #define FLAG_HIDDEN_ITEM_ROUTE23_LEPPA_BERRY                                      (FLAG_HIDDEN_ITEMS_START + 0x62)
 #define FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_FULL_RESTORE                             (FLAG_HIDDEN_ITEMS_START + 0x63)
 #define FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_ULTRA_BALL                               (FLAG_HIDDEN_ITEMS_START + 0x64)
-#define FLAG_HIDDEN_ITEM_101           	(FLAG_HIDDEN_ITEMS_START + 0x65)
-#define FLAG_HIDDEN_ITEM_102            (FLAG_HIDDEN_ITEMS_START + 0x66)
+#define FLAG_HIDDEN_ITEM_POWER_PLANT_THUNDER_STONE           	                  (FLAG_HIDDEN_ITEMS_START + 0x65)
+#define FLAG_HIDDEN_ITEM_POWER_PLANT_MAX_ELIXIR                                   (FLAG_HIDDEN_ITEMS_START + 0x66)
 #define FLAG_HIDDEN_ITEM_103           	(FLAG_HIDDEN_ITEMS_START + 0x67)
 #define FLAG_HIDDEN_ITEM_104            (FLAG_HIDDEN_ITEMS_START + 0x68)
 #define FLAG_HIDDEN_ITEM_105 			(FLAG_HIDDEN_ITEMS_START + 0x69)
@@ -865,8 +865,8 @@
 #define FLAG_HIDE_VICTORY_ROAD_2F_BOULDER                          	0x338
 #define FLAG_HIDE_VICTORY_ROAD_3F_BOULDER                         	0x339
 #define FLAG_HIDE_OAK_IN_CHAMP_ROOM                           		0x33A
-#define FLAG_HIDE_UNUSED_101                           				0x33B
-#define FLAG_HIDE_UNUSED_102                     					0x33C
+#define FLAG_HIDE_POWER_PLANT_ELECTRODE_1                           0x33B
+#define FLAG_HIDE_POWER_PLANT_ELECTRODE_2                     		0x33C
 #define FLAG_HIDE_UNUSED_103                 						0x33D
 #define FLAG_HIDE_UNUSED_104                       					0x33E
 #define FLAG_HIDE_UNUSED_105               							0x33F
@@ -1155,11 +1155,11 @@
 #define FLAG_HIDE_VICTORY_ROAD_2F_TM07                        		0x458
 #define FLAG_HIDE_VICTORY_ROAD_3F_TM50               				0x459
 #define FLAG_HIDE_VICTORY_ROAD_3F_MAX_REVIVE                        0x45A
-#define FLAG_UNUSED_ITEM_0x45B                              		0x45B
-#define FLAG_UNUSED_ITEM_0x45C                             			0x45C
-#define FLAG_UNUSED_ITEM_0x45D                     					0x45D
-#define FLAG_UNUSED_ITEM_0x45E                              		0x45E
-#define FLAG_UNUSED_ITEM_0x45F                         				0x45F
+#define FLAG_HIDE_POWER_PLANT_MAX_POTION                            0x45B
+#define FLAG_HIDE_POWER_PLANT_TM25                             		0x45C
+#define FLAG_HIDE_POWER_PLANT_TM17                     				0x45D
+#define FLAG_HIDE_POWER_PLANT_ELIXIR                              	0x45E
+#define FLAG_HIDE_POWER_PLANT_THUNDER_STONE                         0x45F
 #define FLAG_UNUSED_ITEM_0x460                            			0x460
 #define FLAG_UNUSED_ITEM_0x461                            			0x461
 #define FLAG_UNUSED_ITEM_0x462                            			0x462

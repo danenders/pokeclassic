@@ -16,6 +16,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+      "in_connection": false,
       "x": 2,
       "y": 6,
       "elevation": 3,
