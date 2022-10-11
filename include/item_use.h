@@ -33,6 +33,9 @@ void ItemUseInBattle_EnigmaBerry(u8);
 void Task_UseDigEscapeRopeOnField(u8 taskId);
 u8 CanUseDigOrEscapeRopeOnCurMap(void);
 u8 CheckIfItemIsTMHMOrEvolutionStone(u16 itemId);
+void ItemUseOutOfBattle_ReduceIV(u8);
+void ItemUseOutOfBattle_IncreaseIV(u8);
+void ItemUseOutOfBattle_Mints(u8 taskId);
 
 enum {
     BALL_THROW_UNABLE_TWO_MONS,

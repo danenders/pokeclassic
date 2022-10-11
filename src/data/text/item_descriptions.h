@@ -1549,3 +1549,109 @@ static const u8 sOldSeaMapDesc[] = _(
     "A faded sea chart\n"
     "that shows the way\n"
     "to a certain island.");
+
+//Nature Mints
+static const u8 sAdamantMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has an\n"
+    "Adamant flavor.");
+
+static const u8 sBoldMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Bold flavor.");
+
+static const u8 sBraveMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Brave flavor.");
+
+static const u8 sCalmMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Calm flavor.");
+
+static const u8 sCarefulMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Careful flavor.");
+
+static const u8 sGentleMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Gentle flavor.");
+
+static const u8 sHastyMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Hasty flavor.");
+
+static const u8 sImpishMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has an\n"
+    "Impish flavor.");
+
+static const u8 sJollyMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Jolly flavor.");
+
+static const u8 sLaxMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Lax flavor.");
+
+static const u8 sLonelyMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Lonely flavor.");
+
+static const u8 sMildMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Mild flavor.");
+
+static const u8 sModestMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Modest flavor.");
+
+static const u8 sNaiveMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Naive flavor.");
+
+static const u8 sNaughtyMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Naughty flavor.");
+
+static const u8 sQuietMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Quiet flavor.");
+
+static const u8 sRashMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Rash flavor.");
+
+static const u8 sRelaxedMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Relaxed flavor.");
+
+static const u8 sSassyMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Sassy flavor.");
+
+static const u8 sSeriousMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Serious flavor.");
+
+static const u8 sTimidMintDesc[] = _(
+    "Loved by Pokémon!\n"
+    "This mint has a\n"
+    "Timid flavor.");
