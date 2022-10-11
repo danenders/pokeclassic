@@ -21,6 +21,16 @@ SaffronCity_PokemonCenter_1F_EventScript_Gentleman::
 	end
 
 SaffronCity_PokemonCenter_1F_EventScript_Woman::
+	goto_if_set FLAG_HIDE_SAFFRON_ROCKETS, SaffronCity_PokemonCenter_1F_EventScript_Woman2
+	msgbox SaffronCity_PokemonCenter_1F_Text_RocketsUpstairs, MSGBOX_NPC
+	end
+
+SaffronCity_PokemonCenter_1F_Text_RocketsUpstairs::
+	.string "Team Rocket is so shady!\p"
+	.string "They left us alone down here while they\n"
+	.string "were looting the second floor!$"
+
+SaffronCity_PokemonCenter_1F_EventScript_Woman2::
 	msgbox SaffronCity_PokemonCenter_1F_Text_GrowthRatesDifferBySpecies, MSGBOX_NPC
 	end
 

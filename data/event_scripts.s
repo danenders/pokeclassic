@@ -1343,5 +1343,4 @@ Text_VoiceRangOutDontRunAway::
     .include "data/scripts/silphco_doors.inc"
     .include "data/scripts/pokemon_mansion.inc"
     .include "data/scripts/pokemon_league.inc"
-
-
+    .include "data/scripts/pokemon_league_services.inc"
