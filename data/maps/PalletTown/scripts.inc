@@ -21,43 +21,33 @@ EventScript_UpdateOakLabState::
 
 PalletTown_EventScript_PokenavSceneStart1::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER PlayerMovement_StepAsideRight
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	setvar VAR_TEMP_1, 1
 	goto PalletTown_EventScript_PokenavScene
 
 PalletTown_EventScript_PokenavSceneStart2::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER PlayerMovement_StepAsideLeft
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	setvar VAR_TEMP_1, 2
 	goto PalletTown_EventScript_PokenavScene
 
 PalletTown_EventScript_PokenavSceneStart3::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER PlayerMovement_StepAsideLeft
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	setvar VAR_TEMP_1, 3
 	goto PalletTown_EventScript_PokenavScene
 
 PalletTown_EventScript_PokenavSceneStart4::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER PlayerMovement_StepAsideRight
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	setvar VAR_TEMP_1, 4
 	goto PalletTown_EventScript_PokenavSceneStartFar
 
 PalletTown_EventScript_PokenavSceneStart5::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER PlayerMovement_StepAsideLeft
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	setvar VAR_TEMP_1, 5
 	goto PalletTown_EventScript_PokenavSceneStartFar
-
-PlayerMovement_StepAsideRight:
-	walk_right
-	face_down
-	step_end
-
-PlayerMovement_StepAsideLeft:
-	walk_left
-	face_down
-	step_end
 
 PalletTown_EventScript_MomEntersFromDoor::
 	opendoor 6,7
@@ -79,8 +69,6 @@ PalletTown_EventScript_PokenavScene::
 	call_if_le VAR_TEMP_1, 3, PalletTown_EventScript_MomEntersFromDoor
 	call_if_eq VAR_TEMP_1, 4, PalletTown_EventScript_PokenavMomApproach4
 	call_if_eq VAR_TEMP_1, 5, PalletTown_EventScript_PokenavMomApproach5
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
-	waitmovement 1
 	msgbox PalletTown_Text_DidYouMeetOak, MSGBOX_DEFAULT
 	applymovement LOCALID_MOM, Common_Movement_Heart
 	playse SE_PIN
@@ -106,6 +94,7 @@ PalletTown_EventScript_PokenavScene::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setvar VAR_ADVENTURE_BEGINS, 4
+	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	releaseall
 	end
 
@@ -148,19 +137,26 @@ Movement_MomExitDoor:
 
 PalletTown_EventScript_PokenavMomApproach1::
 	applymovement LOCALID_MOM, Movement_MomApproachPokenav1
+	waitmovement 1
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	return
 
 Movement_MomApproachPokenav1:
 	walk_right
 	walk_right
 	walk_right
+	walk_down
 	walk_right
 	walk_right
-	face_up
+	walk_up
+	walk_up
+	face_left
 	step_end
 
 PalletTown_EventScript_PokenavMomApproach2::
 	applymovement LOCALID_MOM, Movement_MomApproachPokenav2
+	waitmovement 1
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	return
 
 Movement_MomApproachPokenav2:
@@ -168,11 +164,14 @@ Movement_MomApproachPokenav2:
 	walk_right
 	walk_right
 	walk_right
-	face_up
+	walk_up
+	face_right
 	step_end
 
 PalletTown_EventScript_PokenavMomApproach3::
 	applymovement LOCALID_MOM, Movement_MomApproachPokenav3
+	waitmovement 1
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	return
 
 Movement_MomApproachPokenav3:
@@ -181,13 +180,16 @@ Movement_MomApproachPokenav3:
 	walk_right
 	walk_right
 	walk_right
-	face_up
+	walk_up
+	face_right
 	step_end
 
 PalletTown_EventScript_PokenavMomApproach4::
 	clearflag FLAG_HIDE_MOM_PALLET_TOWN
 	addobject LOCALID_MOM
 	applymovement LOCALID_MOM, Movement_MomApproachPokenav4
+	waitmovement 1
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	return
 
 Movement_MomApproachPokenav4:
@@ -195,16 +197,19 @@ Movement_MomApproachPokenav4:
 	walk_up
 	walk_up
 	walk_up
+	walk_right
+	walk_right
 	walk_up
-	walk_right
-	walk_right
-	face_up
+	walk_up
+	face_left
 	step_end
 
 PalletTown_EventScript_PokenavMomApproach5::
 	clearflag FLAG_HIDE_MOM_PALLET_TOWN
 	addobject LOCALID_MOM
 	applymovement LOCALID_MOM, Movement_MomApproachPokenav5
+	waitmovement 1
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	return
 
 Movement_MomApproachPokenav5:
@@ -212,9 +217,10 @@ Movement_MomApproachPokenav5:
 	walk_up
 	walk_up
 	walk_up
-	walk_up
 	walk_right
-	face_up
+	walk_up
+	walk_up
+	face_right
 	step_end
 
 PalletTown_EventScript_PokenavMomExit1::
@@ -225,8 +231,11 @@ PalletTown_EventScript_PokenavMomExit1::
 	return
 
 Movement_MomExitPokenav1:
+	walk_down
+	walk_down
 	walk_left
 	walk_left
+	walk_up
 	walk_left
 	walk_left
 	walk_left
@@ -238,6 +247,7 @@ PalletTown_EventScript_PokenavMomExit2::
 	return
 
 Movement_MomExitPokenav2:
+	walk_down
 	walk_left
 	walk_left
 	walk_left
@@ -250,6 +260,7 @@ PalletTown_EventScript_PokenavMomExit3::
 	return
 
 Movement_MomExitPokenav3:
+	walk_down
 	walk_left
 	walk_left
 	walk_left
@@ -263,6 +274,8 @@ PalletTown_EventScript_PokenavMomExit4::
 	return
 
 Movement_MomExitPokenav4:
+	walk_down
+	walk_down
 	walk_left
 	walk_left
 	walk_down
@@ -277,6 +290,7 @@ PalletTown_EventScript_PokenavMomExit5::
 	return
 
 Movement_MomExitPokenav5:
+	walk_down
 	walk_left
 	walk_down
 	walk_down

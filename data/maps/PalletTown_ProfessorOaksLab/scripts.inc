@@ -159,10 +159,12 @@ PalletTown_ProfessorOaksLab_EventScript_RivalStealEevee::
 	applymovement LOCALID_RIVAL, Movement_PushPlayer
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_GetPushed
 	waitse
+	waitmovement 2
 	applymovement LOCALID_RIVAL, Movement_TakeEevee
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitse
+	waitmovement 0
 	removeobject LOCALID_POKEBALL
 	setflag FLAG_HIDE_OAK_LAB_POKEBALL
 	msgbox PalletTown_ProfessorOaksLab_Text_WereGoingToGetOne, MSGBOX_DEFAULT
@@ -361,13 +363,13 @@ PalletTown_ProfessorOaksLab_Text_RivalLetsCheckOutMons::
     .string "{RIVAL}: Wait, {PLAYER}!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalBattleIntro::
-    .string "Let's check out our POKéMON!\p"
+    .string "Let's check out our Pokémon!\p"
     .string "Come on, I'll take you on!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalDefeated::
     .string "{RIVAL}: WHAT?\n"
     .string "Unbelievable!\l"
-    .string "I picked the wrong POKéMON!$"
+    .string "I picked the wrong Pokémon!$"
 
 PalletTown_ProfessorOaksLab_EventScript_RivalBattleOutcome::
 	specialvar VAR_RESULT, GetBattleOutcome
@@ -392,7 +394,7 @@ PalletTown_ProfessorOaksLab_EventScript_RivalBattleWon::
 
 PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon::
     .string "{RIVAL}: Okay! I'll make my\n"
-    .string "POKéMON battle to toughen it up!\p"
+    .string "Pokémon battle to toughen it up!\p"
     .string "{PLAYER}! Gramps!\n"
     .string "Smell you later!$"
 
@@ -804,6 +806,7 @@ PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide::
 PalletTown_ProfessorOaksLab_EventScript_Aide2::
 	lock
 	faceplayer
+	goto_if_set FLAG_REGISTERED_AIDE, PalletTown_ProfessorOaksLab_EventScript_JealousAide
 	msgbox PalletTown_ProfessorOaksLab_Text_CedarRunsErrands
 	release
 	end
@@ -811,6 +814,18 @@ PalletTown_ProfessorOaksLab_EventScript_Aide2::
 PalletTown_ProfessorOaksLab_Text_CedarRunsErrands::
     .string "Cedar is the newest aide in the lab,\n"
     .string "so she is always out running errands.$"
+
+PalletTown_ProfessorOaksLab_EventScript_JealousAide::
+	msgbox PalletTown_ProfessorOaksLab_Text_Jealous
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_Jealous::
+    .string "If I'm being honest, lab work can\n"
+    .string "get a little boring.\p"
+    .string "I teased her in the beginning, but\n"
+    .string "now I'm a little jealous that Cedar\l"
+    .string "had the chance to travel so often!$"
 
 PalletTown_ProfessorOaksLab_EventScript_Cedar::
 	lock
