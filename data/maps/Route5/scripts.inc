@@ -154,3 +154,13 @@ Route5_Text_YourMonsAreDoingFine:
 	.string "Oh, it's you! Your {STR_VAR_1} and\n"
 	.string "{STR_VAR_2} are doing fine.$"
 
+Route5_EventScript_BerryGuy::
+	lock
+	faceplayer
+	msgbox Route5_Text_FriendshipBerries MSGBOX_DEFAULT
+	release
+	end
+
+Route5_Text_FriendshipBerries:
+	.string "I've heard there are berries that\n"
+	.string "make a Pokémon more friendly.$"
