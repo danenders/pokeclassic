@@ -384,3 +384,58 @@ EventScript_EggHatch::
 
 Text_EggHatchHuh:
 	.string "Huh?$"
+
+
+Route5_PokemonDayCare_EventScript_GetDailyBerry::
+	lock
+	faceplayer
+	goto_if_set FLAG_DAILY_STATUS_BERRY, Route5_PokemonDayCare_EventScript_PlantBerries
+	msgbox Route5_PokemonDayCare_Text_PokemonLoveBerries, MSGBOX_DEFAULT
+	random 6
+	call_if_eq VAR_RESULT, 0, Route5_PokemonDayCare_EventScript_GiveCheriBerry
+	call_if_eq VAR_RESULT, 1, Route5_PokemonDayCare_EventScript_GiveChestoBerry
+	call_if_eq VAR_RESULT, 2, Route5_PokemonDayCare_EventScript_GivePechaBerry
+	call_if_eq VAR_RESULT, 3, Route5_PokemonDayCare_EventScript_GiveRawstBerry
+	call_if_eq VAR_RESULT, 4, Route5_PokemonDayCare_EventScript_GiveAspearBerry
+	call_if_eq VAR_RESULT, 5, Route5_PokemonDayCare_EventScript_GivePersimBerry
+	setflag FLAG_DAILY_STATUS_BERRY
+	goto Route5_PokemonDayCare_EventScript_PlantBerries
+	end
+
+Route5_PokemonDayCare_Text_PokemonLoveBerries::
+	.string "Pokémon love berries!\p"
+	.string "I found this while I was exploring\n"
+	.string "with my Pokémon.$"
+
+Route5_PokemonDayCare_EventScript_GiveCheriBerry::
+	giveitem ITEM_CHERI_BERRY, 1
+	return
+
+Route5_PokemonDayCare_EventScript_GiveChestoBerry::
+	giveitem ITEM_CHESTO_BERRY, 1
+	return
+
+Route5_PokemonDayCare_EventScript_GivePechaBerry::
+	giveitem ITEM_PECHA_BERRY, 1
+	return
+
+Route5_PokemonDayCare_EventScript_GiveRawstBerry::
+	giveitem ITEM_RAWST_BERRY, 1
+	return
+
+Route5_PokemonDayCare_EventScript_GiveAspearBerry::
+	giveitem ITEM_ASPEAR_BERRY, 1
+	return
+
+Route5_PokemonDayCare_EventScript_GivePersimBerry::
+	giveitem ITEM_PERSIM_BERRY, 1
+	return
+
+Route5_PokemonDayCare_EventScript_PlantBerries::
+	msgbox Route5_PokemonDayCare_Text_SoftSoil MSGBOX_NPC
+	release
+	end
+
+Route5_PokemonDayCare_Text_SoftSoil::
+	.string "If you stick it in some soft soil,\n"
+	.string "it might grow!$"

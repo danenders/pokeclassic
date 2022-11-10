@@ -173,3 +173,66 @@ Route10_EventScript_LightBall::
 	finditem ITEM_LIGHT_BALL, 1
 	release
 	end
+
+Route10_EventScript_BerryLass::
+	lock
+	faceplayer
+	goto_if_set FLAG_DAILY_HEALING_BERRY, Route10_EventScript_GotDailyBerry
+	msgbox Route10_Text_BerryLass, MSGBOX_DEFAULT
+	random 7
+	call_if_eq VAR_RESULT, 0, Route10_EventScript_GiveOranBerry
+	call_if_eq VAR_RESULT, 1, Route10_EventScript_GiveSitrusBerry
+	call_if_eq VAR_RESULT, 2, Route10_EventScript_GiveFigyBerry
+	call_if_eq VAR_RESULT, 3, Route10_EventScript_GiveWikiBerry
+	call_if_eq VAR_RESULT, 4, Route10_EventScript_GiveMagoBerry
+	call_if_eq VAR_RESULT, 5, Route10_EventScript_GiveAguavBerry
+	call_if_eq VAR_RESULT, 6, Route10_EventScript_GiveIapapaBerry
+	setflag FLAG_DAILY_HEALING_BERRY
+	goto Route10_EventScript_GotDailyBerry
+	end
+
+Route10_EventScript_GiveOranBerry::
+	giveitem ITEM_ORAN_BERRY, 1
+	return
+
+Route10_EventScript_GiveSitrusBerry::
+	giveitem ITEM_SITRUS_BERRY, 1
+	return
+
+Route10_EventScript_GiveFigyBerry::
+	giveitem ITEM_FIGY_BERRY, 1
+	return
+
+Route10_EventScript_GiveWikiBerry::
+	giveitem ITEM_WIKI_BERRY, 1
+	return
+
+Route10_EventScript_GiveMagoBerry::
+	giveitem ITEM_MAGO_BERRY, 1
+	return
+
+Route10_EventScript_GiveAguavBerry::
+	giveitem ITEM_AGUAV_BERRY, 1
+	return
+
+Route10_EventScript_GiveIapapaBerry::
+	giveitem ITEM_IAPAPA_BERRY, 1
+	return
+
+Route10_Text_BerryLass::
+	.string "You never know how long it may\n"
+	.string "be before you find the next Pokémon\l"
+	.string "Center.\p"
+	.string "Berries can help you out in a pinch.$"
+
+Route10_EventScript_GotDailyBerry::
+	msgbox Route10_Text_BerryPrepared, MSGBOX_NPC
+	release
+	end
+
+Route10_Text_BerryPrepared::
+	.string "I always make sure to have some\n"
+	.string "Berries with me when I go out.\p"
+	.string "You could say I'm berry prepared.\p"
+	.string "...\p"
+	.string "Get it?$"

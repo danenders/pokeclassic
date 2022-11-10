@@ -112,3 +112,46 @@ IndigoPlateau_PokemonCenter_1F_Pokemart::
 	.2byte ITEM_NONE
 	release
 	end
+
+
+IndigoPlateau_PokemonCenter_1F_EventScript_BattleGirl::
+	lock
+	faceplayer
+	goto_if_set FLAG_DAILY_BATTLE_BERRY, IndigoPlateau_PokemonCenter_1F_EventScript_Determination
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_NoPokeCenters MSGBOX_NPC
+	random 3
+	call_if_eq VAR_RESULT, 0, IndigoPlateau_PokemonCenter_1F_EventScript_GiveSitrusBerry
+	call_if_eq VAR_RESULT, 1, IndigoPlateau_PokemonCenter_1F_EventScript_GiveLumBerry
+	call_if_eq VAR_RESULT, 2, IndigoPlateau_PokemonCenter_1F_EventScript_GiveLeppaBerry
+	setflag FLAG_DAILY_BATTLE_BERRY
+	goto IndigoPlateau_PokemonCenter_1F_EventScript_Determination
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_GiveSitrusBerry::
+	giveitem ITEM_SITRUS_BERRY, 1
+	return
+
+IndigoPlateau_PokemonCenter_1F_EventScript_GiveLumBerry::
+	giveitem ITEM_LUM_BERRY, 1
+	return
+
+IndigoPlateau_PokemonCenter_1F_EventScript_GiveLeppaBerry::
+	giveitem ITEM_LEPPA_BERRY, 1
+	return
+
+IndigoPlateau_PokemonCenter_1F_Text_NoPokeCenters::
+	.string "When you take on the Elite Four, you\n"
+	.string "won't be able to return to the Pokémon\l"
+	.string "Center to heal!\p"
+	.string "A berry like this could make all the\n"
+	.string "difference!$"
+
+IndigoPlateau_PokemonCenter_1F_EventScript_Determination::
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_Determination, MSGBOX_NPC
+	release
+	end
+
+IndigoPlateau_PokemonCenter_1F_Text_Determination::
+	.string "It takes every thing you have to\n"
+	.string "to take on the Elite Four!\p"
+	.string "I hope you're filled with determination!$"

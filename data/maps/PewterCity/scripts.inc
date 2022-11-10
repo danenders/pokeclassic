@@ -1,5 +1,7 @@
 .set LOCALID_MUSEUM_GUIDE, 2
 .set LOCALID_GYM_GUIDE, 5
+.set LOCALID_LADY, 14
+.set LOCALID_SLOWPOKE, 13
 
 @VAR_PEWTER_CITY_STATE
 @0 = Brock Undefeated
@@ -1182,3 +1184,245 @@ PewterCity_Text_GymSign::
     .string "Pewter City Pokémon GYM\n"
     .string "Leader: Brock\l"
     .string "The Rock-Solid Pokémon Trainer!$"
+
+
+PewterCity_EventScript_SlowpokeLady::
+	lock
+	faceplayer
+	goto_if_set FLAG_DAILY_MIXING_BERRY, PewterCity_EventScript_WatchedSlowpoke
+	msgbox PewterCity_Text_RunAnErrand, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, PewterCity_EventScript_WatchSlowpoke
+	msgbox PewterCity_Text_MaybeLater, MSGBOX_NPC
+	release
+	end
+
+PewterCity_Text_RunAnErrand::
+	.string "Oh, hello there.\p"
+	.string "My Slowpoke likes to come here and\n"
+	.string "look at the berries with me.\p"
+	.string "It's usually quite nice, but I need\n"
+	.string "to run an errand today...\p"
+	.string "Could you stay here with Slowpoke for\n"
+	.string "a moment so I could run my errand?$"
+
+PewterCity_Text_MaybeLater::
+	.string "Oh, I guess I could run my errand\n"
+	.string "later then...$"
+
+
+PewterCity_EventScript_WatchSlowpoke::
+	msgbox PewterCity_Text_WatchSlowpoke, MSGBOX_NPC
+	call_if_eq VAR_FACING, DIR_SOUTH, PewterCity_EventScript_LadyLeave1
+	call_if_eq VAR_FACING, DIR_EAST, PewterCity_EventScript_LadyLeave2
+	call_if_eq VAR_FACING, DIR_NORTH, PewterCity_EventScript_LadyLeave3
+	waitmovement 14
+	playse SE_PIN
+	applymovement LOCALID_SLOWPOKE, Common_Movement_QuestionMark
+	waitse
+	waitmovement 13
+	fadescreen FADE_TO_BLACK
+	delay 48
+	delay 48
+	playmoncry SPECIES_SLOWPOKE, CRY_MODE_NORMAL
+	waitmoncry
+	delay 48
+	delay 48
+	fadescreen FADE_FROM_BLACK
+	playse SE_PIN
+	applymovement LOCALID_SLOWPOKE, Common_Movement_QuestionMark
+	waitse
+	waitmovement 13
+	call_if_eq VAR_FACING, DIR_SOUTH, PewterCity_EventScript_LadyReturn1
+	call_if_eq VAR_FACING, DIR_EAST,	PewterCity_EventScript_LadyReturn2
+	call_if_eq VAR_FACING, DIR_NORTH, PewterCity_EventScript_LadyReturn3
+	waitmovement 14
+	msgbox PewterCity_Text_ThankYouForWatchingSlowpoke, MSGBOX_NPC
+	random 14
+	call_if_eq VAR_RESULT, 0, PewterCity_EventScript_GiveBelueBerry
+	call_if_eq VAR_RESULT, 1, PewterCity_EventScript_GiveDurinBerry
+	call_if_eq VAR_RESULT, 2, PewterCity_EventScript_GiveWatmelBerry
+	call_if_eq VAR_RESULT, 3, PewterCity_EventScript_GivePamtreBerry
+	call_if_eq VAR_RESULT, 4, PewterCity_EventScript_GiveSpelonBerry
+	call_if_eq VAR_RESULT, 5, PewterCity_EventScript_GiveNomelBerry
+	call_if_eq VAR_RESULT, 6, PewterCity_EventScript_GiveRabutaBerry
+	call_if_eq VAR_RESULT, 7, PewterCity_EventScript_GiveMagostBerry
+	call_if_eq VAR_RESULT, 8, PewterCity_EventScript_GiveCornnBerry
+	call_if_eq VAR_RESULT, 9, PewterCity_EventScript_GivePinapBerry
+	call_if_eq VAR_RESULT, 10, PewterCity_EventScript_GiveWepearBerry
+	call_if_eq VAR_RESULT, 11, PewterCity_EventScript_GiveNanabBerry
+	call_if_eq VAR_RESULT, 12, PewterCity_EventScript_GiveBlukBerry
+	call_if_eq VAR_RESULT, 13, PewterCity_EventScript_GiveRazzBerry
+	setflag FLAG_DAILY_MIXING_BERRY
+	goto PewterCity_EventScript_WatchedSlowpoke
+	end
+
+PewterCity_EventScript_WatchedSlowpoke::
+	msgbox PewterCity_Text_SlowpokeLovesPokeblocks, MSGBOX_NPC
+	release
+	end
+
+PewterCity_Text_SlowpokeLovesPokeblocks::
+	.string "My Slowpoke here loves the\n"
+	.string "PokéBlocks that are made with\l"
+	.string "those berries.\p"
+	.string "If only I had a way to make my\n"
+	.string "my own at home!$"
+
+PewterCity_EventScript_GiveBelueBerry::
+	giveitem ITEM_BELUE_BERRY, 1
+	return
+
+PewterCity_EventScript_GiveDurinBerry::
+	giveitem ITEM_DURIN_BERRY, 1
+	return
+
+PewterCity_EventScript_GiveWatmelBerry::
+	giveitem ITEM_WATMEL_BERRY, 1
+	return
+
+PewterCity_EventScript_GivePamtreBerry::
+	giveitem ITEM_PAMTRE_BERRY, 1
+	return
+
+PewterCity_EventScript_GiveSpelonBerry::
+	giveitem ITEM_SPELON_BERRY, 1
+	return
+
+PewterCity_EventScript_GiveNomelBerry::
+	giveitem ITEM_NOMEL_BERRY, 1
+	return
+
+PewterCity_EventScript_GiveRabutaBerry::
+	giveitem ITEM_RABUTA_BERRY, 1
+	return
+
+PewterCity_EventScript_GiveMagostBerry::
+	giveitem ITEM_MAGOST_BERRY, 1
+	return
+
+PewterCity_EventScript_GiveCornnBerry::
+	giveitem ITEM_CORNN_BERRY, 1
+	return
+
+PewterCity_EventScript_GivePinapBerry::
+	giveitem ITEM_PINAP_BERRY, 1
+	return
+
+PewterCity_EventScript_GiveWepearBerry::
+	giveitem ITEM_WEPEAR_BERRY, 1
+	return
+
+PewterCity_EventScript_GiveNanabBerry::
+	giveitem ITEM_NANAB_BERRY, 1
+	return
+
+PewterCity_EventScript_GiveBlukBerry::
+	giveitem ITEM_BLUK_BERRY, 1
+	return
+
+PewterCity_EventScript_GiveRazzBerry::
+	giveitem ITEM_RAZZ_BERRY, 1
+	return
+
+PewterCity_Text_ThankYouForWatchingSlowpoke::
+	.string "Sorry that took so long!\p"
+	.string "Let me give you something\n"
+	.string "for your trouble.$"
+
+PewterCity_Text_WatchSlowpoke::
+	.string "Oh, thank you!\n"
+	.string "This won't take long at all!$"
+
+
+PewterCity_EventScript_LadyLeave1:
+	applymovement LOCALID_LADY, Movement_LadyLeave1
+	return
+
+PewterCity_EventScript_LadyLeave2:
+	applymovement LOCALID_LADY, Movement_LadyLeave2
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	return
+
+PewterCity_EventScript_LadyLeave3:
+	applymovement LOCALID_LADY, Movement_LadyLeave1
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	return
+
+Movement_LadyLeave1:
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Movement_LadyLeave2:
+	walk_down
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+PewterCity_EventScript_LadyReturn1::
+	applymovement LOCALID_LADY, Movement_LadyReturn1
+	return
+
+PewterCity_EventScript_LadyReturn2::
+	applymovement LOCALID_LADY, Movement_LadyReturn2
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	return
+
+PewterCity_EventScript_LadyReturn3::
+	applymovement LOCALID_LADY, Movement_LadyReturn1
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	return
+
+Movement_LadyReturn1:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	step_end
+
+Movement_LadyReturn2:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	step_end
+
+PewterCity_EventScript_Slowpoke::
+	lock
+	faceplayer
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	playse SE_PIN
+	applymovement LOCALID_SLOWPOKE, Common_Movement_QuestionMark
+	waitse
+	waitmovement 13
+	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	release
+	end
+	end

@@ -230,6 +230,20 @@
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route12_EventScript_Andrew",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
+      "in_connection": false,
+      "x": 17,
+      "y": 85,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_12_LUM",
+      "script": "BerryTreeScript",
+      "flag": "0"
     }
   ],
   "warp_events": [

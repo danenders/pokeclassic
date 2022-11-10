@@ -1593,11 +1593,11 @@
 #define FLAG_DAILY_SAFARI_GAME_PRIZE                (DAILY_FLAGS_START + 0x15)  // Getting to the secret house gives a prize each time AFTER getting Surf
 #define FLAG_DAILY_BERRY_BLEND_OPPONENTS            (DAILY_FLAGS_START + 0x16)  // The number of opponents for Berry Blend is random every day.
 #define FLAG_DAILY_DOJO_RESET                       (DAILY_FLAGS_START + 0x17)  // The Dojo resets its trainers for free once per day.
+#define FLAG_DAILY_STATUS_BERRY                     (DAILY_FLAGS_START + 0x18) // The little girl in the day care gives a status berry once per day.
+#define FLAG_DAILY_HEALING_BERRY                    (DAILY_FLAGS_START + 0x19) // Lass on Route10 will give a healing berry once per day.
+#define FLAG_DAILY_MIXING_BERRY                     (DAILY_FLAGS_START + 0x1A) // The slowpoke lady in Pewter will reward you with a mixing berry once per day.
+#define FLAG_DAILY_BATTLE_BERRY                     (DAILY_FLAGS_START + 0x1B) // Battle girl in Indingo Plateau gives a battle berry (Sitrus, Lum, or Leppa) once per day.
 
-#define FLAG_UNUSED_0x938                           (DAILY_FLAGS_START + 0x18) // Unused Flag
-#define FLAG_UNUSED_0x939                           (DAILY_FLAGS_START + 0x19) // Unused Flag
-#define FLAG_UNUSED_0x93A                           (DAILY_FLAGS_START + 0x1A) // Unused Flag
-#define FLAG_UNUSED_0x93B                           (DAILY_FLAGS_START + 0x1B) // Unused Flag
 #define FLAG_UNUSED_0x93C                           (DAILY_FLAGS_START + 0x1C) // Unused Flag
 #define FLAG_UNUSED_0x93D                           (DAILY_FLAGS_START + 0x1D) // Unused Flag
 #define FLAG_UNUSED_0x93E                           (DAILY_FLAGS_START + 0x1E) // Unused Flag

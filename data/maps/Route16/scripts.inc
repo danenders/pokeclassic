@@ -291,8 +291,20 @@ Route16_Text_LeaNotEnoughMons::
     .string "your Pokémon?$"
 
 
+@TODO: Change based on if a new snorlax is here
+Route16_EventScript_BerryMan::
+	lock
+	faceplayer
+	msgbox Route16_Text_SnorlaxEatsBerries, MSGBOX_NPC
+	release
+	end
 
-
+Route16_Text_SnorlaxEatsBerries:
+	.string "Sometimes Snorlax wanders into our\n"
+	.string "Berry Grove and eats our whole crop!\p"
+	.string "Afterwards, it takes a long nap.\p"
+	.string "Even the noise from Cycling Road can't\n"
+	.string "wake it up.$"
 
 
 

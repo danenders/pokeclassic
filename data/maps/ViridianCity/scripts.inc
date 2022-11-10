@@ -274,3 +274,17 @@ ViridianCity_Text_OhOkayThen::
 ViridianCity_FindItem_Potion::
 	finditem ITEM_POTION, 1
 	end
+
+ViridianCity_EventScript_BerryTreeGuy::
+	lock
+	faceplayer
+	msgbox ViridianCity_Text_PlantingBerries, MSGBOX_DEFAULT
+	release
+	end
+
+ViridianCity_Text_PlantingBerries::
+	.string "It looks like a Pokémon was digging\n"
+	.string "in the ground over here.\p"
+	.string "The soil is nice and soft...\n"
+	.string "I should plant something there!$"
+
