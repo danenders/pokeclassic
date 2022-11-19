@@ -412,23 +412,23 @@ BattleFrontier_BattleTowerBattleRoom_EventScript_WarpToLobby::
 	goto_if_eq VAR_RESULT, FRONTIER_MODE_DOUBLES, BattleFrontier_BattleTowerBattleRoom_EventScript_WarpToLobbyDoubles
 	goto_if_eq VAR_RESULT, FRONTIER_MODE_MULTIS, BattleFrontier_BattleTowerBattleRoom_EventScript_WarpToLobbyMultis
 	goto_if_eq VAR_RESULT, FRONTIER_MODE_LINK_MULTIS, BattleFrontier_BattleTowerBattleRoom_EventScript_WarpToLobbyLinkMultis
-	warp MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY, 6, 6
+	warp MAP_INDIGO_PLATEAU_BATTLE_TOWER_LOBBY, 3, 4
 	waitstate
 	end
 
 BattleFrontier_BattleTowerBattleRoom_EventScript_WarpToLobbyDoubles::
-	warp MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY, 10, 6
+	warp MAP_INDIGO_PLATEAU_BATTLE_TOWER_LOBBY, 3, 4
 	waitstate
 	end
 
 BattleFrontier_BattleTowerBattleRoom_EventScript_WarpToLobbyMultis::
-	warp MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY, 14, 6
+	warp MAP_INDIGO_PLATEAU_BATTLE_TOWER_LOBBY, 3, 4
 	waitstate
 	end
 
 BattleFrontier_BattleTowerBattleRoom_EventScript_WarpToLobbyLinkMultis::
 	tower_closelink
-	warp MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY, 18, 6
+	warp MAP_INDIGO_PLATEAU_BATTLE_TOWER_LOBBY, 3, 4
 	waitstate
 	end
 

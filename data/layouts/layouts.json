@@ -3177,7 +3177,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BattleFrontier",
+      "secondary_tileset": "gTileset_SilphCo",
       "border_filepath": "data/layouts/BattleElevator/border.bin",
       "blockdata_filepath": "data/layouts/BattleElevator/map.bin"
     },
@@ -3197,11 +3197,11 @@
       "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_TOWER_BATTLE_ROOM",
       "name": "BattleFrontier_BattleTowerBattleRoom_Layout",
       "width": 10,
-      "height": 9,
+      "height": 10,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BattleFrontier",
+      "secondary_tileset": "gTileset_SilphCo",
       "border_filepath": "data/layouts/BattleFrontier_BattleTowerBattleRoom/border.bin",
       "blockdata_filepath": "data/layouts/BattleFrontier_BattleTowerBattleRoom/map.bin"
     },
@@ -8088,6 +8088,42 @@
       "secondary_tileset": "gTileset_SafariZoneBuilding",
       "border_filepath": "data/layouts/SafariZone_RestHouse/border.bin",
       "blockdata_filepath": "data/layouts/SafariZone_RestHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_INDIGO_PLATEAU_BATTLE_TOWER_HALLWAY",
+      "name": "IndigoPlateau_BattleTowerHallway_Layout",
+      "width": 9,
+      "height": 31,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SilphCo",
+      "border_filepath": "data/layouts/IndigoPlateau_BattleTowerHallway/border.bin",
+      "blockdata_filepath": "data/layouts/IndigoPlateau_BattleTowerHallway/map.bin"
+    },
+    {
+      "id": "LAYOUT_INDIGO_PLATEAU_BATTLE_TOWER_ELEVATOR",
+      "name": "IndigoPlateau_BattleTowerElevator_Layout",
+      "width": 5,
+      "height": 7,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SilphCo",
+      "border_filepath": "data/layouts/IndigoPlateau_BattleTowerElevator/border.bin",
+      "blockdata_filepath": "data/layouts/IndigoPlateau_BattleTowerElevator/map.bin"
+    },
+    {
+      "id": "LAYOUT_INDIGO_PLATEAU_BATTLE_TOWER_LOBBY",
+      "name": "IndigoPlateau_BattleTower_Lobby_Layout",
+      "width": 23,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SilphCo",
+      "border_filepath": "data/layouts/IndigoPlateau_BattleTower_Lobby/border.bin",
+      "blockdata_filepath": "data/layouts/IndigoPlateau_BattleTower_Lobby/map.bin"
     }
   ]
 }

@@ -776,14 +776,17 @@
 #define MAP_SAFFRON_CITY_HOUSE                    (9 | (18 << 8))
 
 // gMapGroup_IndoorIndigoPlateau
-#define MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F (0 | (19 << 8))
-#define MAP_INDIGO_PLATEAU_POKEMON_CENTER_2F (1 | (19 << 8))
-#define MAP_POKEMON_LEAGUE_LORELEIS_ROOM     (2 | (19 << 8))
-#define MAP_POKEMON_LEAGUE_BRUNOS_ROOM       (3 | (19 << 8))
-#define MAP_POKEMON_LEAGUE_AGATHAS_ROOM      (4 | (19 << 8))
-#define MAP_POKEMON_LEAGUE_LANCES_ROOM       (5 | (19 << 8))
-#define MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM    (6 | (19 << 8))
-#define MAP_POKEMON_LEAGUE_HALL_OF_FAME      (7 | (19 << 8))
+#define MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F     (0 | (19 << 8))
+#define MAP_INDIGO_PLATEAU_POKEMON_CENTER_2F     (1 | (19 << 8))
+#define MAP_POKEMON_LEAGUE_LORELEIS_ROOM         (2 | (19 << 8))
+#define MAP_POKEMON_LEAGUE_BRUNOS_ROOM           (3 | (19 << 8))
+#define MAP_POKEMON_LEAGUE_AGATHAS_ROOM          (4 | (19 << 8))
+#define MAP_POKEMON_LEAGUE_LANCES_ROOM           (5 | (19 << 8))
+#define MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM        (6 | (19 << 8))
+#define MAP_POKEMON_LEAGUE_HALL_OF_FAME          (7 | (19 << 8))
+#define MAP_INDIGO_PLATEAU_BATTLE_TOWER_HALLWAY  (8 | (19 << 8))
+#define MAP_INDIGO_PLATEAU_BATTLE_TOWER_ELEVATOR (9 | (19 << 8))
+#define MAP_INDIGO_PLATEAU_BATTLE_TOWER_LOBBY    (10 | (19 << 8))
 
 // gMapGroup_IndoorRoute2
 #define MAP_VIRIDIAN_FOREST_NORTH_ENTRANCE (0 | (20 << 8))
@@ -842,6 +845,6 @@
 
 #define MAP_GROUPS_COUNT 34
 
-// static const u8 MAP_GROUP_COUNT[] = {57, 107, 103, 100, 38, 61, 37, 81, 58, 4, 6, 8, 10, 6, 8, 20, 10, 8, 10, 8, 4, 2, 2, 1, 1, 1, 2, 2, 3, 2, 3, 2, 1, 1, 0};
+// static const u8 MAP_GROUP_COUNT[] = {57, 107, 103, 100, 38, 61, 37, 81, 58, 4, 6, 8, 10, 6, 8, 20, 10, 8, 10, 11, 4, 2, 2, 1, 1, 1, 2, 2, 3, 2, 3, 2, 1, 1, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

@@ -1344,3 +1344,9 @@ Text_VoiceRangOutDontRunAway::
     .include "data/scripts/pokemon_mansion.inc"
     .include "data/scripts/pokemon_league.inc"
     .include "data/scripts/pokemon_league_services.inc"
+
+	.include "data/maps/IndigoPlateau_BattleTowerHallway/scripts.inc"
+
+	.include "data/maps/IndigoPlateau_BattleTowerElevator/scripts.inc"
+
+	.include "data/maps/IndigoPlateau_BattleTower_Lobby/scripts.inc"

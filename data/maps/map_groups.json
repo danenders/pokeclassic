@@ -814,7 +814,10 @@
     "PokemonLeague_AgathasRoom",
     "PokemonLeague_LancesRoom",
     "PokemonLeague_ChampionsRoom",
-    "PokemonLeague_HallOfFame"
+    "PokemonLeague_HallOfFame",
+    "IndigoPlateau_BattleTowerHallway",
+    "IndigoPlateau_BattleTowerElevator",
+    "IndigoPlateau_BattleTower_Lobby"
   ],
   "gMapGroup_IndoorRoute2": [
     "ViridianForest_NorthEntrance",
