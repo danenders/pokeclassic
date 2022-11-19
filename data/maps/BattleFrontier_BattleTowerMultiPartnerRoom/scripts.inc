@@ -107,7 +107,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_EventScript_EnterElevator::
 	call BattleFrontier_BattleTowerMultiPartnerRoom_EventScript_MoveToElevator
 	closedoor 10, 1
 	waitdooranim
-	warp MAP_BATTLE_FRONTIER_BATTLE_TOWER_ELEVATOR, 1, 6
+	warp MAP_BATTLE_FRONTIER_BATTLE_TOWER_ELEVATOR, 2, 5
 	waitstate
 	releaseall
 	end
