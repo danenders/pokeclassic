@@ -50,26 +50,11 @@ static const u16 sFrontierExchangeCorner_HoldItems[] =
 
 static const u8 *const sFrontierExchangeCorner_Decor1Descriptions[] =
 {
-    BattleFrontier_ExchangeServiceCorner_Text_KissPosterDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_KissCushionDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_SmoochumDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_TogepiDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_MeowthDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_ClefairyDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_DittoDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc,
     gText_Exit,
 };
 
 static const u8 *const sFrontierExchangeCorner_Decor2Descriptions[] =
 {
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
     gText_Exit
 };
 
