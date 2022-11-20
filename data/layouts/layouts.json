@@ -4133,11 +4133,11 @@
       "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_FACTORY_PRE_BATTLE_ROOM",
       "name": "BattleFrontier_BattleFactoryPreBattleRoom_Layout",
       "width": 17,
-      "height": 14,
+      "height": 15,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BattleFactory",
+      "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/BattleFrontier_BattleFactoryPreBattleRoom/border.bin",
       "blockdata_filepath": "data/layouts/BattleFrontier_BattleFactoryPreBattleRoom/map.bin"
     },
@@ -4149,7 +4149,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BattleFactory",
+      "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/BattleFrontier_BattleFactoryBattleRoom/border.bin",
       "blockdata_filepath": "data/layouts/BattleFrontier_BattleFactoryBattleRoom/map.bin"
     },
@@ -8124,6 +8124,18 @@
       "secondary_tileset": "gTileset_SilphCo",
       "border_filepath": "data/layouts/IndigoPlateau_BattleTower_Lobby/border.bin",
       "blockdata_filepath": "data/layouts/IndigoPlateau_BattleTower_Lobby/map.bin"
+    },
+    {
+      "id": "LAYOUT_INDIGO_PLATEAU_BATTLE_FACTORY_LOBBY",
+      "name": "IndigoPlateau_BattleFactory_Lobby_Layout",
+      "width": 23,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SilphCo",
+      "border_filepath": "data/layouts/IndigoPlateau_BattleFactory_Lobby/border.bin",
+      "blockdata_filepath": "data/layouts/IndigoPlateau_BattleFactory_Lobby/map.bin"
     }
   ]
 }

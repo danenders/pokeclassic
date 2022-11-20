@@ -287,16 +287,18 @@ static const struct MenuAction MultichoiceList_RightLeft[] =
     {gText_Left},
 };
 
-static const struct MenuAction MultichoiceList_SSTidalSlateportNoBF[] =
-{
-    {gText_LilycoveCity},
-    {gText_Exit},
-};
-
 static const struct MenuAction MultichoiceList_Floors[] =
 {
     {gText_5F},
     {gText_4F},
+    {gText_3F},
+    {gText_2F},
+    {gText_1F},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_FrontierFloors[] =
+{
     {gText_3F},
     {gText_2F},
     {gText_1F},
@@ -483,6 +485,14 @@ static const struct MenuAction MultichoiceList_BattleMode[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_BattleMode2[] =
+{
+    {gText_SingleBattle},
+    {gText_DoubleBattle},
+    {gText_Info2},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_LinkServicesNoRecord[] =
 {
     {gText_TradeCenter},
@@ -646,7 +656,6 @@ static const struct MenuAction MultichoiceList_BattleTowerRules[] =
     {gText_TowerInfo},
     {gText_BattleMon},
     {gText_BattleSalon},
-    {gText_MultiLink2},
     {gText_Exit},
 };
 
@@ -923,7 +932,6 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_SSTIDAL_SLATEPORT_WITH_BF]  = MULTICHOICE(MultichoiceList_SSTidalSlateportWithBF),
     [MULTI_SSTIDAL_BATTLE_FRONTIER]    = MULTICHOICE(MultichoiceList_SSTidalBattleFrontier),
     [MULTI_RIGHTLEFT]                  = MULTICHOICE(MultichoiceList_RightLeft),
-    [MULTI_SSTIDAL_SLATEPORT_NO_BF]    = MULTICHOICE(MultichoiceList_SSTidalSlateportNoBF),
     [MULTI_FLOORS]                     = MULTICHOICE(MultichoiceList_Floors),
     [MULTI_SHARDS_R]                   = MULTICHOICE(MultichoiceList_ShardsR),
     [MULTI_SHARDS_Y]                   = MULTICHOICE(MultichoiceList_ShardsY),
@@ -991,11 +999,13 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_SODA_POP_LEMONADE]          = MULTICHOICE(MultichoiceList_SodaPopLemonade),
     [MULTI_ALL_DRINKS]                 = MULTICHOICE(MultichoiceList_AllDrinks),
     [MULTI_HIDEOUT_FLOORS]             = MULTICHOICE(MultichoiceList_HideoutFloors),
+    [MULTI_FRONTIER_FLOORS]            = MULTICHOICE(MultichoiceList_FrontierFloors),
     [MULTI_SILPH_FLOORS]               = MULTICHOICE(MultichoiceList_SilphFloors),
     [MULTI_FOSSIL_ALL]                 = MULTICHOICE(MultichoiceList_AllFossils),
     [MULTI_FOSSIL_DOMEHELIX]           = MULTICHOICE(MultichoiceList_DomeHelix),
     [MULTI_FOSSIL_AMBERHELIX]          = MULTICHOICE(MultichoiceList_AmberHelix),
     [MULTI_FOSSIL_AMBERDOME]           = MULTICHOICE(MultichoiceList_AmberDome),
+    [MULTI_BATTLE_MODE_2]              = MULTICHOICE(MultichoiceList_BattleMode2),
 };
 
 const u8 *const gStdStrings[] =

@@ -1763,6 +1763,21 @@ void SetDeptStoreFloor(void)
             break;
         }
     }
+    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(INDIGO_PLATEAU_BATTLE_TOWER_HALLWAY))
+    {
+        switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
+        {
+        case MAP_NUM(INDIGO_PLATEAU_BATTLE_TOWER_HALLWAY):
+            floor = 4;
+            break;
+        case MAP_NUM(INDIGO_PLATEAU_BATTLE_TOWER_LOBBY):
+            floor = 5;
+            break;
+        case MAP_NUM(INDIGO_PLATEAU_BATTLE_FACTORY_LOBBY):
+            floor = 6;
+            break;
+        }
+    }
     VarSet(VAR_DEPT_STORE_FLOOR, floor);
 }
 
@@ -1862,6 +1877,24 @@ u16 GetDeptStoreDefaultFloorChoice(void)
         case MAP_NUM(CELADON_CITY_DEPARTMENT_STORE_1F):
             sElevatorScroll = 0;
             sElevatorCursorPos = 4;
+            break;
+        }
+    }
+    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(INDIGO_PLATEAU_BATTLE_TOWER_HALLWAY))
+    {
+        switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
+        {
+        case MAP_NUM(INDIGO_PLATEAU_BATTLE_FACTORY_LOBBY):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 0;
+            break;
+        case MAP_NUM(INDIGO_PLATEAU_BATTLE_TOWER_LOBBY):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 1;
+            break;
+        case MAP_NUM(INDIGO_PLATEAU_BATTLE_TOWER_HALLWAY):
+            sElevatorScroll = 0;
+            sElevatorCursorPos = 2;
             break;
         }
     }

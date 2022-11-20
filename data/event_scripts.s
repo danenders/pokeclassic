@@ -1350,3 +1350,5 @@ Text_VoiceRangOutDontRunAway::
 	.include "data/maps/IndigoPlateau_BattleTowerElevator/scripts.inc"
 
 	.include "data/maps/IndigoPlateau_BattleTower_Lobby/scripts.inc"
+
+	.include "data/maps/IndigoPlateau_BattleFactory_Lobby/scripts.inc"

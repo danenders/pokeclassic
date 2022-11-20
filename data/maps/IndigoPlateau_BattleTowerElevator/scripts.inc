@@ -1,2 +1,94 @@
 IndigoPlateau_BattleTowerElevator_MapScripts::
 	.byte 0
+
+IndigoPlateau_BattleTowerElevator_EventScript_FloorSelect::
+	lock
+	faceplayer
+	setvar VAR_0x8004, 0
+	call_if_unset FLAG_TEMP_2, IndigoPlateau_BattleTowerElevator_EventScript_SetFloor
+	copyvar VAR_0x8005, VAR_DEPT_STORE_FLOOR
+	special ShowDeptStoreElevatorFloorSelect
+	message gText_WhichFloorWouldYouLike
+	waitmessage
+	setvar VAR_0x8004, 0
+	specialvar VAR_RESULT, GetDeptStoreDefaultFloorChoice
+	switch VAR_RESULT
+	case 0, IndigoPlateau_BattleTowerElevator_EventScript_ChooseFloorFrom3rd
+	case 1, IndigoPlateau_BattleTowerElevator_EventScript_ChooseFloorFrom2nd
+	case 2, IndigoPlateau_BattleTowerElevator_EventScript_ChooseFloorFrom1st
+	end
+
+@ Below scripts ensure the cursor for floor select always starts on the current floor
+
+IndigoPlateau_BattleTowerElevator_EventScript_ChooseFloorFrom3rd::
+	multichoicedefault 0, 0, MULTI_FRONTIER_FLOORS, 0, FALSE
+	goto IndigoPlateau_BattleTowerElevator_EventScript_ChooseFloor
+	end
+
+IndigoPlateau_BattleTowerElevator_EventScript_ChooseFloorFrom2nd::
+	multichoicedefault 0, 0, MULTI_FRONTIER_FLOORS, 1, FALSE
+	goto IndigoPlateau_BattleTowerElevator_EventScript_ChooseFloor
+	end
+
+IndigoPlateau_BattleTowerElevator_EventScript_ChooseFloorFrom1st::
+	multichoicedefault 0, 0, MULTI_FRONTIER_FLOORS, 2, FALSE
+	goto IndigoPlateau_BattleTowerElevator_EventScript_ChooseFloor
+	end
+
+IndigoPlateau_BattleTowerElevator_EventScript_ChooseFloor::
+	switch VAR_RESULT
+	case 0, IndigoPlateau_BattleTowerElevator_EventScript_3rdFloor
+	case 1, IndigoPlateau_BattleTowerElevator_EventScript_2ndFloor
+	case 2, IndigoPlateau_BattleTowerElevator_EventScript_1stFloor
+	case 3, IndigoPlateau_BattleTowerElevator_EventScript_ExitFloorSelect
+	case MULTI_B_PRESSED, IndigoPlateau_BattleTowerElevator_EventScript_ExitFloorSelect
+	end
+
+IndigoPlateau_BattleTowerElevator_EventScript_1stFloor::
+	setvar VAR_0x8006, DEPT_STORE_FLOORNUM_1F
+	setdynamicwarp MAP_INDIGO_PLATEAU_BATTLE_TOWER_HALLWAY, 4, 1
+	goto_if_eq VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_1F, IndigoPlateau_BattleTowerElevator_EventScript_ExitFloorSelect
+	call IndigoPlateau_BattleTowerElevator_EventScript_MoveElevator
+	setvar VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_1F
+	goto IndigoPlateau_BattleTowerElevator_EventScript_ExitFloorSelect
+	end
+
+IndigoPlateau_BattleTowerElevator_EventScript_2ndFloor::
+	setvar VAR_0x8006, DEPT_STORE_FLOORNUM_2F
+	setdynamicwarp MAP_INDIGO_PLATEAU_BATTLE_TOWER_LOBBY, 11, 1
+	goto_if_eq VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_2F, IndigoPlateau_BattleTowerElevator_EventScript_ExitFloorSelect
+	call IndigoPlateau_BattleTowerElevator_EventScript_MoveElevator
+	setvar VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_2F
+	goto IndigoPlateau_BattleTowerElevator_EventScript_ExitFloorSelect
+	end
+
+IndigoPlateau_BattleTowerElevator_EventScript_3rdFloor::
+	setvar VAR_0x8006, DEPT_STORE_FLOORNUM_3F
+	setdynamicwarp MAP_INDIGO_PLATEAU_BATTLE_FACTORY_LOBBY, 11, 1
+	goto_if_eq VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_3F, IndigoPlateau_BattleTowerElevator_EventScript_ExitFloorSelect
+	call IndigoPlateau_BattleTowerElevator_EventScript_MoveElevator
+	setvar VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_3F
+	goto IndigoPlateau_BattleTowerElevator_EventScript_ExitFloorSelect
+	end
+
+IndigoPlateau_BattleTowerElevator_EventScript_ExitFloorSelect::
+	special CloseDeptStoreElevatorWindow
+	release
+	end
+
+IndigoPlateau_BattleTowerElevator_EventScript_MoveElevator::
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	special CloseDeptStoreElevatorWindow
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	waitse
+	special MoveElevator
+	waitstate
+	setflag FLAG_TEMP_2
+	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	return
+
+IndigoPlateau_BattleTowerElevator_EventScript_SetFloor::
+	special SetDeptStoreFloor
+	return

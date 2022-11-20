@@ -389,10 +389,15 @@ BattleFrontier_BattleFactoryPreBattleRoom_EventScript_WalkToBattleRoomLvOpen::
 
 BattleFrontier_BattleFactoryPreBattleRoom_Movement_PlayerEnterRoom:
 	walk_up
+	walk_left
+	walk_left
 	walk_up
 	walk_up
 	walk_up
 	walk_up
+	walk_right
+	walk_right
+	face_up
 	step_end
 
 BattleFrontier_BattleFactoryPreBattleRoom_Movement_PlayerWalkToBattleRoomLv50:
@@ -413,10 +418,14 @@ BattleFrontier_BattleFactoryPreBattleRoom_Movement_PlayerWalkToBattleRoomLvOpen:
 
 BattleFrontier_BattleFactoryPreBattleRoom_Movement_AttendantEnterRoom:
 	walk_up
+	walk_left
+	walk_left
 	walk_up
 	walk_up
 	walk_up
 	walk_up
+	walk_right
+	walk_right
 	face_down
 	step_end
 

@@ -51,7 +51,7 @@
 #define MULTI_SSTIDAL_SLATEPORT_WITH_BF    42 // Can probably be removed
 #define MULTI_SSTIDAL_BATTLE_FRONTIER      43
 #define MULTI_RIGHTLEFT                    44
-#define MULTI_SSTIDAL_SLATEPORT_NO_BF      45 // Can probably be removed
+#define MULTI_FRONTIER_FLOORS       	   45
 #define MULTI_FLOORS                       46
 #define MULTI_SHARDS_R                     47
 #define MULTI_SHARDS_Y                     48
@@ -124,7 +124,7 @@
 #define MULTI_FOSSIL_AMBERHELIX            115
 #define MULTI_FOSSIL_DOMEHELIX             116
 #define MULTI_FOSSIL_ALL                   117
-#define MULTI_UNUSED_118                   118
+#define MULTI_BATTLE_MODE_2                118
 #define MULTI_UNUSED_119                   119
 #define MULTI_UNUSED_120                   120
 #define MULTI_UNUSED_121                   121

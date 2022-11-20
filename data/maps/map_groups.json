@@ -817,7 +817,8 @@
     "PokemonLeague_HallOfFame",
     "IndigoPlateau_BattleTowerHallway",
     "IndigoPlateau_BattleTowerElevator",
-    "IndigoPlateau_BattleTower_Lobby"
+    "IndigoPlateau_BattleTower_Lobby",
+    "IndigoPlateau_BattleFactory_Lobby"
   ],
   "gMapGroup_IndoorRoute2": [
     "ViridianForest_NorthEntrance",
