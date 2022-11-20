@@ -5609,5 +5609,10 @@ extern const u32 gItemIconPalette_PinkMint[];
 extern const u32 gItemIconPalette_GreenMint[];
 extern const u32 gItemIconPalette_LightBlueMint[];
 extern const u32 gItemIconPalette_YellowMint[];
+// Ability Modifiers
+extern const u32 gItemIcon_AbilityCapsule[];
+extern const u32 gItemIconPalette_AbilityCapsule[];
+extern const u32 gItemIcon_AbilityPatch[];
+extern const u32 gItemIconPalette_AbilityPatch[];
 
 #endif //GUARD_GRAPHICS_H

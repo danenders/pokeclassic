@@ -65,8 +65,6 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_03A] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_03B] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_03C] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_03D] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_03E] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // Vitamins
     [ITEM_HP_UP] = {gItemIcon_HPUp, gItemIconPalette_HPUp},
     [ITEM_PROTEIN] = {gItemIcon_Vitamin, gItemIconPalette_Protein},
@@ -426,6 +424,9 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_SASSY_MINT] = {gItemIcon_Mint, gItemIconPalette_PinkMint},
     [ITEM_SERIOUS_MINT] = {gItemIcon_Mint, gItemIconPalette_YellowMint},
     [ITEM_TIMID_MINT] = {gItemIcon_Mint, gItemIconPalette_GreenMint},
+    //Ability Items
+    [ITEM_ABILITY_CAPSULE] = {gItemIcon_AbilityCapsule, gItemIconPalette_AbilityCapsule},
+    [ITEM_ABILITY_PATCH] = {gItemIcon_AbilityPatch, gItemIconPalette_AbilityPatch},
 };
 
 #ifdef ITEM_EXPANSION

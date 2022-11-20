@@ -1181,4 +1181,17 @@ void ItemUseOutOfBattle_Mints(u8 taskId)
     SetUpItemUseCallback(taskId);
 }
 
+void ItemUseOutOfBattle_AbilityPatch(u8 taskId)
+{
+    gItemUseCB = ItemUseCB_AbilityPatch;
+    SetUpItemUseCallback(taskId);
+}
+
+void ItemUseOutOfBattle_AbilityCapsule(u8 taskId)
+{
+    gItemUseCB = ItemUseCB_AbilityCapsule;
+    SetUpItemUseCallback(taskId);
+}
+
+
 #undef tUsingRegisteredKeyItem

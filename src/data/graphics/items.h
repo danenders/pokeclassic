@@ -800,3 +800,10 @@ const u32 gItemIconPalette_GreenMint[] = INCBIN_U32("graphics/items/icon_palette
 const u32 gItemIconPalette_LightBlueMint[] = INCBIN_U32("graphics/items/icon_palettes/light_blue_mint.gbapal.lz");
 const u32 gItemIconPalette_YellowMint[] = INCBIN_U32("graphics/items/icon_palettes/yellow_mint.gbapal.lz");
 
+// Ability Modifiers
+
+const u32 gItemIcon_AbilityCapsule[] = INCBIN_U32("graphics/items/icons/ability_capsule.4bpp.lz");
+const u32 gItemIconPalette_AbilityCapsule[] = INCBIN_U32("graphics/items/icon_palettes/ability_capsule.gbapal.lz");
+const u32 gItemIcon_AbilityPatch[] = INCBIN_U32("graphics/items/icons/ability_patch.4bpp.lz");
+const u32 gItemIconPalette_AbilityPatch[] = INCBIN_U32("graphics/items/icon_palettes/ability_patch.gbapal.lz");
+

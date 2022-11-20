@@ -778,28 +778,6 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
-    [ITEM_03D] =
-    {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-    },
-
-    [ITEM_03E] =
-    {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-    },
-
 // Vitamins
 
     [ITEM_HP_UP] =
@@ -4770,7 +4748,29 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Mints,
         .secondaryId = NATURE_TIMID,
     },
+    [ITEM_ABILITY_CAPSULE] =
+    {
+        .name = _("AbilityCapsle"),
+        .itemId = ITEM_ABILITY_CAPSULE,
+        .price = 25000,
+        .holdEffectParam = 0,
+        .description = sAbilityCapsuleDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_AbilityCapsule,
+    },
 
+    [ITEM_ABILITY_PATCH] =
+    {
+        .name = _("AbilityPatch"),
+        .itemId = ITEM_ABILITY_PATCH,
+        .price = 50000,
+        .holdEffectParam = 0,
+        .description = sAbilityPatchDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_AbilityPatch,
+    },
 
 
 

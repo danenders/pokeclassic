@@ -1655,3 +1655,12 @@ static const u8 sTimidMintDesc[] = _(
     "Loved by Pokémon!\n"
     "This mint has a\n"
     "Timid flavor.");
+
+static const u8 sAbilityCapsuleDesc[] = _(
+    "Switches a Poké-\n"
+    "mon's ability.");
+
+static const u8 sAbilityPatchDesc[] = _(
+    "Turns the ability\n"
+    "of a Pokémon into\n"
+    "a rare ability.");
