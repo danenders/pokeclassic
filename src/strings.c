@@ -1901,3 +1901,7 @@ const u8 gText_Eevee[] = _("Eevee");
 const u8 gText_Flareon[] = _("Flareon");
 const u8 gText_Jolteon[] = _("Jolteon");
 const u8 gText_Vaporeon[] = _("Vaporeon");
+
+const u8 gText_AbilityCapsuleBP[] = _("Ability Capsule{CLEAR_TO 0x64}50BP");
+const u8 gText_AbilityPatchBP[] = _("Ability Patch{CLEAR_TO 0x64}200BP");
+

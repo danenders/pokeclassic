@@ -16,6 +16,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize::
 	specialvar VAR_TEMP_1, GetFrontierBattlePoints
 	goto_if_ge VAR_TEMP_1, VAR_0x8008, BattleFrontier_ExchangeServiceCorner_EventScript_TryGivePrize
 	msgbox BattleFrontier_ExchangeServiceCorner_Text_DontHaveEnoughPoints, MSGBOX_DEFAULT
+	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_ABILITY_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseAbilityItem
 	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_VITAMIN_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
 	end
@@ -33,6 +34,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_TryGiveItem::
 	special UpdateBattlePointsWindow
 	playse SE_SHOP
 	msgbox BattleFrontier_ExchangeServiceCorner_Text_HereIsYourPrize, MSGBOX_DEFAULT
+	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_ABILITY_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseAbilityItem
 	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_VITAMIN_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
 	end
@@ -42,6 +44,52 @@ BattleFrontier_ExchangeServiceCorner_EventScript_BagFull::
 	special CloseBattlePointsWindow
 	release
 	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_AbilityClerk::
+	lock
+	faceplayer
+	setvar VAR_TEMP_2, EXCHANGE_CORNER_ABILITY_CLERK
+	call BattleFrontier_ExchangeServiceCorner_EventScript_ClerkWelcome
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_ChooseAbilityItem
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_ChooseAbilityItem::
+	setvar VAR_0x8004, SCROLL_MULTI_BF_EXCHANGE_CORNER_ABILITY_VENDOR
+	special ShowFrontierExchangeCornerItemIconWindow
+	special ShowScrollableMultichoice
+	waitstate
+	special CloseFrontierExchangeCornerItemIconWindow
+	switch VAR_RESULT
+	case 0, BattleFrontier_ExchangeServiceCorner_EventScript_AbilityCapsule
+	case 1, BattleFrontier_ExchangeServiceCorner_EventScript_AbilityPatch
+	case 2, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
+	case MULTI_B_PRESSED, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_AbilityCapsule::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmAbilityCapsule, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseAbilityItem
+	setvar VAR_0x8008, 50
+	setvar VAR_0x8009, ITEM_ABILITY_CAPSULE
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmAbilityCapsule:
+	.string "You've chosen the Ability Capsule.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_EventScript_AbilityPatch::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmAbilityPatch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseAbilityItem
+	setvar VAR_0x8008, 200
+	setvar VAR_0x8009, ITEM_ABILITY_PATCH
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmAbilityPatch:
+	.string "You've chosen the Ability Patch.\n"
+	.string "Is that correct?$"
+
 
 BattleFrontier_ExchangeServiceCorner_EventScript_VitaminClerk::
 	lock
@@ -385,3 +433,11 @@ BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc::
 BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc::
 	.string "A hold item that raises the\n"
 	.string "critical-hit rate.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_AbilityCapsuleDesc::
+	.string "Switches a Pokémon's ability.$"
+	.string "critical-hit rate.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_AbilityPatchDesc::
+	.string "Turns the ability of a Pokémon into\n"
+	.string "a rare ability.$"

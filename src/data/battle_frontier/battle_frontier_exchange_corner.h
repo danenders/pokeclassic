@@ -13,13 +13,10 @@ static const u16 sFrontierExchangeCorner_Decor1[] =
     0xFFFF
 };
 
-static const u16 sFrontierExchangeCorner_Decor2[] =
+static const u16 sFrontierExchangeCorner_Ability[] =
 {
-    DECOR_LAPRAS_DOLL,
-    DECOR_SNORLAX_DOLL,
-    DECOR_VENUSAUR_DOLL,
-    DECOR_CHARIZARD_DOLL,
-    DECOR_BLASTOISE_DOLL,
+    ITEM_ABILITY_CAPSULE,
+    ITEM_ABILITY_PATCH,
     0xFFFF
 };
 
@@ -53,8 +50,10 @@ static const u8 *const sFrontierExchangeCorner_Decor1Descriptions[] =
     gText_Exit,
 };
 
-static const u8 *const sFrontierExchangeCorner_Decor2Descriptions[] =
+static const u8 *const sFrontierExchangeCorner_AbilityDescriptions[] =
 {
+    BattleFrontier_ExchangeServiceCorner_Text_AbilityCapsuleDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_AbilityPatchDesc,
     gText_Exit
 };
 

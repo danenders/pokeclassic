@@ -720,6 +720,9 @@ extern const u8 gText_Zinc1BP[];
 extern const u8 gText_Carbos1BP[];
 extern const u8 gText_HpUp1BP[];
 
+extern const u8 gText_AbilityCapsuleBP[];
+extern const u8 gText_AbilityPatchBP[];
+
 extern const u8 gText_Leftovers48BP[];
 extern const u8 gText_WhiteHerb48BP[];
 extern const u8 gText_QuickClaw48BP[];
@@ -895,6 +898,9 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc[];
+
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_AbilityCapsuleDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_AbilityPatchDesc[];
 
 // Battle Frontier Move Tutors
 extern const u8 BattleFrontier_Lounge7_Text_SoftboiledDesc[];
