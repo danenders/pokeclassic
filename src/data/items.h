@@ -4748,6 +4748,8 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Mints,
         .secondaryId = NATURE_TIMID,
     },
+    
+//Ability Items
     [ITEM_ABILITY_CAPSULE] =
     {
         .name = _("AbilityCapsle"),

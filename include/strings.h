@@ -3032,4 +3032,49 @@ extern const u8 gText_Flareon[];
 extern const u8 gText_Jolteon[];
 extern const u8 gText_Vaporeon[];
 
+//Mint BP
+extern const u8 gText_AdamantMintBP[];
+extern const u8 gText_BoldMintBP[];
+extern const u8 gText_BraveMintBP[];
+extern const u8 gText_CalmMintBP[];
+extern const u8 gText_CarefulMintBP[];
+extern const u8 gText_GentleMintBP[];
+extern const u8 gText_HastyMintBP[];
+extern const u8 gText_ImpishMintBP[];
+extern const u8 gText_JollyMintBP[];
+extern const u8 gText_LaxMintBP[];
+extern const u8 gText_LonelyMintBP[];
+extern const u8 gText_MildMintBP[];
+extern const u8 gText_ModestMintBP[];
+extern const u8 gText_NaiveMintBP[];
+extern const u8 gText_NaughtyMintBP[];
+extern const u8 gText_QuietMintBP[];
+extern const u8 gText_RashMintBP[];
+extern const u8 gText_RelaxedMintBP[];
+extern const u8 gText_SassyMintBP[];
+extern const u8 gText_SeriousMintBP[];
+extern const u8 gText_TimidMintBP[];
+
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_AdamantMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_BoldMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_BraveMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CalmMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CarefulMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_GentleMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_HastyMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ImpishMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_JollyMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_LaxMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_LonelyMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MildMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ModestMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_NaiveMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_NaughtyMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_QuietMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_RashMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_RelaxedMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_SassyMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_SeriousMintDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TimidMintDesc[];
+
 #endif // GUARD_STRINGS_H

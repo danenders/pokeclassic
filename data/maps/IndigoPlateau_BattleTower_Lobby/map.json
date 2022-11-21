@@ -29,9 +29,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
+      "graphics_id": "OBJ_EVENT_GFX_ROOFTOP_SALE_WOMAN",
       "in_connection": false,
-      "x": 18,
+      "x": 19,
       "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -39,13 +39,13 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "BattleFrontier_ExchangeServiceCorner_EventScript_MintLady",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ROOFTOP_SALE_WOMAN",
+      "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
       "in_connection": false,
-      "x": 20,
+      "x": 17,
       "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -110,6 +110,20 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BattleFrontier_ExchangeServiceCorner_EventScript_Girl",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROOFTOP_SALE_WOMAN",
+      "in_connection": false,
+      "x": 21,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BattleFrontier_ExchangeServiceCorner_EventScript_MintLady2",
       "flag": "0"
     }
   ],

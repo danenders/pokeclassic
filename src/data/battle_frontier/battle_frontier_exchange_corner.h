@@ -1,15 +1,26 @@
-static const u16 sFrontierExchangeCorner_Decor1[] =
+static const u16 sFrontierExchangeCorner_Mints[] =
 {
-    DECOR_KISS_POSTER,
-    DECOR_KISS_CUSHION,
-    DECOR_SMOOCHUM_DOLL,
-    DECOR_TOGEPI_DOLL,
-    DECOR_MEOWTH_DOLL,
-    DECOR_CLEFAIRY_DOLL,
-    DECOR_DITTO_DOLL,
-    DECOR_CYNDAQUIL_DOLL,
-    DECOR_CHIKORITA_DOLL,
-    DECOR_TOTODILE_DOLL,
+    ITEM_ADAMANT_MINT,
+    ITEM_BOLD_MINT,
+    ITEM_BRAVE_MINT,
+    ITEM_CALM_MINT,
+    ITEM_CAREFUL_MINT,
+    ITEM_GENTLE_MINT,
+    ITEM_HASTY_MINT,
+    ITEM_IMPISH_MINT,
+    ITEM_JOLLY_MINT,
+    ITEM_LAX_MINT,
+    ITEM_LONELY_MINT,
+    ITEM_MILD_MINT,
+    ITEM_MODEST_MINT,
+    ITEM_NAIVE_MINT,
+    ITEM_NAUGHTY_MINT,
+    ITEM_QUIET_MINT,
+    ITEM_RASH_MINT,
+    ITEM_RELAXED_MINT,
+    ITEM_SASSY_MINT,
+    ITEM_SERIOUS_MINT,
+    ITEM_TIMID_MINT,
     0xFFFF
 };
 
@@ -45,8 +56,29 @@ static const u16 sFrontierExchangeCorner_HoldItems[] =
     0xFFFF
 };
 
-static const u8 *const sFrontierExchangeCorner_Decor1Descriptions[] =
+static const u8 *const sFrontierExchangeCorner_MintsDescriptions[] =
 {
+    BattleFrontier_ExchangeServiceCorner_Text_AdamantMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_BoldMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_BraveMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_CalmMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_CarefulMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_GentleMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_HastyMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ImpishMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_JollyMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_LaxMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_LonelyMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_MildMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ModestMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_NaiveMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_NaughtyMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_QuietMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_RashMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_RelaxedMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_SassyMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_SeriousMintDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_TimidMintDesc,
     gText_Exit,
 };
 
