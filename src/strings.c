@@ -1926,3 +1926,9 @@ const u8 gText_RelaxedMintBP[] = _("Relaxed Mint{CLEAR_TO 0x64}50BP");
 const u8 gText_SassyMintBP[] = _("Sassy Mint{CLEAR_TO 0x64}50BP");
 const u8 gText_SeriousMintBP[] = _("Serious Mint{CLEAR_TO 0x64}50BP");
 const u8 gText_TimidMintBP[] = _("Timid Mint{CLEAR_TO 0x64}50BP");
+
+//Infinite TMs
+const u8 gText_SoldOut[] = _("I'm sorry, but that item is sold out.\p");
+const u8 gText_SoldOut2[] = _("SOLD OUT");
+
+

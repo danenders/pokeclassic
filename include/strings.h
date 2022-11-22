@@ -3077,4 +3077,7 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_SassyMintDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_SeriousMintDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TimidMintDesc[];
 
+extern const u8 gText_SoldOut[];
+extern const u8 gText_SoldOut2[];
+
 #endif // GUARD_STRINGS_H
