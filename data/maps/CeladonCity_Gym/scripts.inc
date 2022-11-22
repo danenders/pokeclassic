@@ -144,15 +144,67 @@ CeladonCity_Gym_Text_PostBattleGameClear::
 	.string "It's so pleasant...\p" 
 	.string "I'm afraid I might doze off...$"
 
-@TODO: Leader Rematches
 CeladonCity_Gym_EventScript_RematchLeader::
 	msgbox CeladonCity_Gym_Text_RematchLeader, MSGBOX_YESNO
-	release
+	goto_if_eq VAR_RESULT, FALSE, CeladonCity_Gym_EventScript_DeclineRematch
+	goto_if_set FLAG_SYS_GAME_CLEAR, CeladonCity_Gym_EventScript_PostgameRematch
+	goto CeladonCity_Gym_EventScript_LeaderRematch_OriginalTeam
 	end
 
 CeladonCity_Gym_Text_RematchLeader::
-	.string "Hey, {PLAYER}!\n"
-	.string "Are you looking for a rematch?$"
+	.string "Oh, if it isn't the one who's \n"
+	.string "been trying to fill the Pokédex.\p" 
+	.string "I do hope things have been going well\n"
+	.string "for you since our last encounter.\p"
+	.string "...I see. You certainly have been busy.\p" 
+	.string "I'm not particularly fond of those kinds\n"
+	.string "of public things...\p" 
+	.string "However, battles are different.\n" 
+	.string "That's what you came for, isn't it?$"
+
+CeladonCity_Gym_EventScript_DeclineRematch::
+	msgbox CeladonCity_Gym_Text_DeclineRematch, MSGBOX_DEFAULT
+	release
+	end
+
+CeladonCity_Gym_Text_DeclineRematch::
+	.string "Oh well...perhapse another time.$"
+
+CeladonCity_Gym_EventScript_PostgameRematch::
+	msgbox CeladonCity_Gym_Text_RematchMode, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, CeladonCity_Gym_EventScript_LeaderRematch_PostGameTeam
+	goto CeladonCity_Gym_EventScript_LeaderRematch_OriginalTeam
+	end
+
+CeladonCity_Gym_Text_RematchMode::
+	.string "Now that you're the champion,\n"
+	.string "would you like to go all out?$"
+
+CeladonCity_Gym_EventScript_LeaderRematch_OriginalTeam::
+	trainerbattle_single LEADER_REMATCH_ERIKA_ORIGINAL, CeladonCity_Gym_Text_RematchOriginal, CeladonCity_Gym_Text_RematchDefeat, CeladonCity_Gym_EventScript_DefeatedLeaderRematch
+	end
+
+CeladonCity_Gym_Text_RematchOriginal::
+	.string "Lovely, {PLAYER}!\n"
+	.string "Let's cherish this memory!$"
+
+CeladonCity_Gym_EventScript_LeaderRematch_PostGameTeam::
+	trainerbattle_single LEADER_REMATCH_ERIKA_POSTGAME, CeladonCity_Gym_Text_RematchPostgame, CeladonCity_Gym_Text_RematchDefeat, CeladonCity_Gym_EventScript_DefeatedLeaderRematch
+	end
+
+CeladonCity_Gym_Text_RematchPostgame::
+	.string "Very well, {PLAYER}!\n"
+	.string "Prepare for an all out battle!$"
+
+CeladonCity_Gym_EventScript_DefeatedLeaderRematch::
+	setflag FLAG_DAILY_ERIKA_REMATCH
+	goto CeladonCity_Gym_EventScript_LeaderPostBattle
+	end
+
+CeladonCity_Gym_Text_RematchDefeat::
+	.string "Simply marvelous.\p" 
+	.string "That was an effort worthy at\n" 
+	.string "least 10 Rainbow Badges.$"
 
 CeladonCity_Gym_EventScript_Kay::
 	trainerbattle_single TRAINER_LASS_KAY, CeladonCity_Gym_Text_KayIntro, CeladonCity_Gym_Text_KayDefeat

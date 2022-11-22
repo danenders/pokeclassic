@@ -914,3 +914,17 @@ HiddenCoins_Found100Coins::
 	.string "{PLAYER} found 100 coins scattered\n"
 	.string "on the floor!$"
 
+GameCorner_EventScript_Scott::
+	lock
+	faceplayer
+	msgbox GameCorner_Text_GymGuide
+	goto GameCorner_EventScript_FaceSlotMachine
+	end
+
+GameCorner_Text_GymGuide::
+	.string "Hey! You have better things to do,\n" 
+	.string "champ in making!\p" 
+	.string "Celadon Gym's Leader is Erika!\n"
+	.string "She uses grass-type Pokémon!\p" 
+	.string "She might appear docile, but don't\n" 
+	.string "be fooled!$"
