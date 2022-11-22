@@ -781,13 +781,13 @@ u8 GetTrainerBattleTransition(void)
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_ELITE_FOUR)
     {
         if (gTrainerBattleOpponent_A == TRAINER_ELITE_FOUR_LORELEI)
-            return B_TRANSITION_SIDNEY;
+            return B_TRANSITION_LORELEI;
         if (gTrainerBattleOpponent_A == TRAINER_ELITE_FOUR_BRUNO)
-            return B_TRANSITION_PHOEBE;
+            return B_TRANSITION_BRUNO;
         if (gTrainerBattleOpponent_A == TRAINER_ELITE_FOUR_AGATHA)
-            return B_TRANSITION_GLACIA;
+            return B_TRANSITION_AGATHA;
         if (gTrainerBattleOpponent_A == TRAINER_ELITE_FOUR_LANCE)
-            return B_TRANSITION_DRAKE;
+            return B_TRANSITION_LANCE;
         return B_TRANSITION_CHAMPION;
     }
 
