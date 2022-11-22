@@ -1,5 +1,15 @@
 FuchsiaCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, FuchsiaCity_Gym__OnTransition
 	.byte 0
+
+FuchsiaCity_Gym__OnTransition::
+	call_if_unset FLAG_DAILY_KOGA_REMATCH, FuchsiaCity_Gym_ResetRematchFlags
+	end
+
+FuchsiaCity_Gym_ResetRematchFlags::
+	cleartrainerflag LEADER_REMATCH_KOGA_ORIGINAL
+	cleartrainerflag LEADER_REMATCH_KOGA_POSTGAME
+	return
 
 FuchsiaCity_Gym_EventScript_Koga::
 	lock
@@ -140,19 +150,68 @@ FuchsiaCity_Gym_Text_PostBattleGameClear::
 	.string "can only train further.\p" 
 	.string "Continue testing your skill!$"
 
-@TODO: Leader Rematches
 FuchsiaCity_Gym_EventScript_RematchLeader::
 	msgbox FuchsiaCity_Gym_Text_RematchLeader, MSGBOX_YESNO
-	release
+	goto_if_eq VAR_RESULT, FALSE, FuchsiaCity_Gym_EventScript_DeclineRematch
+	goto_if_set FLAG_SYS_GAME_CLEAR, FuchsiaCity_Gym_EventScript_PostgameRematch
+	goto FuchsiaCity_Gym_EventScript_LeaderRematch_OriginalTeam
 	end
 
 FuchsiaCity_Gym_Text_RematchLeader::
 	.string "Fwahahaha! If it isn't the child.\n" 
-	.string "It seems we are fated to meet once again.\p" 
-	.string "You have come at a truly opportune time.\n" 
-	.string "I was just thinking that I wanted to test\l"
+	.string "It seems we are fated to meet once again.\p"
+	.string "You have come at a truly opportune time.\p"
+	.string "I was just thinking that I wanted to test\n"
 	.string "my newly refined sinister techniques...\l" 
-	.string "in a battle that will end in your utter defeat!$"
+	.string "...in a battle that will end in your utter defeat!\p"
+	.string "Will you accept my challenge?$"
+
+FuchsiaCity_Gym_EventScript_DeclineRematch::
+	msgbox FuchsiaCity_Gym_Text_DeclineRematch, MSGBOX_DEFAULT
+	release
+	end
+
+FuchsiaCity_Gym_Text_DeclineRematch::
+	.string "You have already lost!$"
+
+FuchsiaCity_Gym_EventScript_PostgameRematch::
+	msgbox FuchsiaCity_Gym_Text_RematchMode, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, FuchsiaCity_Gym_EventScript_LeaderRematch_PostGameTeam
+	goto FuchsiaCity_Gym_EventScript_LeaderRematch_OriginalTeam
+	end
+
+FuchsiaCity_Gym_Text_RematchMode::
+	.string "Now that you're the champion,\n"
+	.string "would you like to go all out?$"
+
+FuchsiaCity_Gym_EventScript_LeaderRematch_OriginalTeam::
+	trainerbattle_single LEADER_REMATCH_KOGA_ORIGINAL, FuchsiaCity_Gym_Text_RematchOriginal, FuchsiaCity_Gym_Text_RematchDefeat, FuchsiaCity_Gym_EventScript_DefeatedLeaderRematch
+	end
+
+FuchsiaCity_Gym_Text_RematchOriginal::
+	.string "Fwahahaha!\n" 
+	.string "Let us relive our past battles!$" 
+
+FuchsiaCity_Gym_EventScript_LeaderRematch_PostGameTeam::
+	trainerbattle_single LEADER_REMATCH_KOGA_POSTGAME, FuchsiaCity_Gym_Text_RematchPostgame, FuchsiaCity_Gym_Text_RematchDefeat, FuchsiaCity_Gym_EventScript_DefeatedLeaderRematch
+	end
+
+FuchsiaCity_Gym_Text_RematchPostgame::
+	.string "Fwahahaha!\p" 
+	.string "Today I'll not only defeat you, but I\n" 
+	.string "will also demonstrate my fatherly dignity\l" 
+	.string "to my daughter!$"
+
+FuchsiaCity_Gym_EventScript_DefeatedLeaderRematch::
+	setflag FLAG_DAILY_KOGA_REMATCH
+	goto FuchsiaCity_Gym_EventScript_LeaderPostBattle
+	end
+
+FuchsiaCity_Gym_Text_RematchDefeat::
+	.string "...If I am not strong enough to defeat\n" 
+	.string "you now, there is but one thing to do.\p" 
+	.string "I must hone my skills.$"
+
 
 @Check if you've haven't collected the previous reward
 FuchsiaCity_Gym_EventScript_QueueNextAideCall::

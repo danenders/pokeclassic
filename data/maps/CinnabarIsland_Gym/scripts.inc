@@ -6,6 +6,7 @@
 .set LOCALID_ZAC,   7
 
 CinnabarIsland_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, CinnabarIsland_Gym__OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, CinnabarIsland_Gym_OnLoad
 	.byte 0
 
@@ -27,6 +28,15 @@ CinnabarIsland_Gym_OnLoadOpenAllDoors::
 	call CinnabarIsland_Gym_EventScript_OpenDoor5
 	call CinnabarIsland_Gym_EventScript_OpenDoor6
 	end
+
+CinnabarIsland_Gym__OnTransition::
+	call_if_unset FLAG_DAILY_BLAINE_REMATCH, CinnabarIsland_Gym_ResetRematchFlags
+	end
+
+CinnabarIsland_Gym_ResetRematchFlags::
+	cleartrainerflag LEADER_REMATCH_BLAINE_ORIGINAL
+	cleartrainerflag LEADER_REMATCH_BLAINE_POSTGAME
+	return
 
 CinnabarIsland_Gym_EventScript_BlaineFujiPhoto::
 	lockall
@@ -898,16 +908,66 @@ CinnabarIsland_Gym_EventScript_LeaderPostBattleGameClear::
 CinnabarIsland_Gym_Text_PostBattleGameClear::
 	.string "Hah! I'm all fired up!$"
 
-@TODO: Leader Rematches
 CinnabarIsland_Gym_EventScript_RematchLeader::
 	msgbox CinnabarIsland_Gym_Text_RematchLeader, MSGBOX_YESNO
-	release
+	goto_if_eq VAR_RESULT, FALSE, CinnabarIsland_Gym_EventScript_DeclineRematch
+	goto_if_set FLAG_SYS_GAME_CLEAR, CinnabarIsland_Gym_EventScript_PostgameRematch
+	goto CinnabarIsland_Gym_EventScript_LeaderRematch_OriginalTeam
 	end
 
 CinnabarIsland_Gym_Text_RematchLeader::
-	.string "Hah! Well done, returning to my Gym!\p"
-	.string "Since you came all this way, we\n"
-	.string "should have a battle! Hah!$"
+	.string "Hah! Well done, returning here to my Gym!\p" 
+	.string "Have you explored Pokémon Mansion?\p"
+	.string "Did you see anything interesting while\n" 
+	.string "you were in there?\p" 
+	.string "That place still holds the remnants of my\n" 
+	.string "old friend's research!\p" 
+	.string "More importantly, since you came all this\n"
+	.string "way, we should have a battle! Hah!$"
+
+CinnabarIsland_Gym_EventScript_DeclineRematch::
+	msgbox CinnabarIsland_Gym_Text_DeclineRematch, MSGBOX_DEFAULT
+	release
+	end
+
+CinnabarIsland_Gym_Text_DeclineRematch::
+	.string "Disappointing!$"
+
+CinnabarIsland_Gym_EventScript_PostgameRematch::
+	msgbox CinnabarIsland_Gym_Text_RematchMode, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, CinnabarIsland_Gym_EventScript_LeaderRematch_PostGameTeam
+	goto CinnabarIsland_Gym_EventScript_LeaderRematch_OriginalTeam
+	end
+
+CinnabarIsland_Gym_Text_RematchMode::
+	.string "Now that you're the champion,\n"
+	.string "would you like to go all out?$"
+
+CinnabarIsland_Gym_EventScript_LeaderRematch_OriginalTeam::
+	trainerbattle_single LEADER_REMATCH_BLAINE_ORIGINAL, CinnabarIsland_Gym_Text_RematchOriginal, CinnabarIsland_Gym_Text_RematchDefeat, CinnabarIsland_Gym_EventScript_DefeatedLeaderRematch
+	end
+
+CinnabarIsland_Gym_Text_RematchOriginal::
+	.string "Our first battle is burned into my\n" 
+	.string "memory! Let's go!$" 
+
+CinnabarIsland_Gym_EventScript_LeaderRematch_PostGameTeam::
+	trainerbattle_single LEADER_REMATCH_BLAINE_POSTGAME, CinnabarIsland_Gym_Text_RematchPostgame, CinnabarIsland_Gym_Text_RematchDefeat, CinnabarIsland_Gym_EventScript_DefeatedLeaderRematch
+	end
+
+CinnabarIsland_Gym_Text_RematchPostgame::
+	.string "The Cinnabar Island volcano seems quite\n"
+	.string "active today!\p" 
+	.string "Which means that my Fire-type Pokémon will\n"
+	.string "be in top shape today, too! Let's go! Hah!$"
+
+CinnabarIsland_Gym_EventScript_DefeatedLeaderRematch::
+	setflag FLAG_DAILY_BLAINE_REMATCH
+	goto CinnabarIsland_Gym_EventScript_LeaderPostBattle
+	end
+
+CinnabarIsland_Gym_Text_RematchDefeat::
+	.string "Hah! I'm all fired up!$"
 
 CinnabarIsland_Gym_Text_GymGuyAdvice::
     .string "Yo!\n"

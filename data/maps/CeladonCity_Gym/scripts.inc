@@ -1,5 +1,15 @@
 CeladonCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, CeladonCity_Gym__OnTransition
 	.byte 0
+
+CeladonCity_Gym__OnTransition::
+	call_if_unset FLAG_DAILY_ERIKA_REMATCH, CeladonCity_Gym_ResetRematchFlags
+	end
+
+CeladonCity_Gym_ResetRematchFlags::
+	cleartrainerflag LEADER_REMATCH_ERIKA_ORIGINAL
+	cleartrainerflag LEADER_REMATCH_ERIKA_POSTGAME
+	return
 
 CeladonCity_Gym_EventScript_Erika::
 	lock

@@ -1,5 +1,15 @@
 SaffronCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SaffronCity_Gym__OnTransition
 	.byte 0
+
+SaffronCity_Gym__OnTransition::
+	call_if_unset FLAG_DAILY_SABRINA_REMATCH, SaffronCity_Gym_ResetRematchFlags
+	end
+
+SaffronCity_Gym_ResetRematchFlags::
+	cleartrainerflag LEADER_REMATCH_SABRINA_ORIGINAL
+	cleartrainerflag LEADER_REMATCH_SABRINA_POSTGAME
+	return
 
 SaffronCity_Gym_EventScript_Johan::
 	trainerbattle_single TRAINER_PSYCHIC_JOHANNA, SaffronCity_Gym_Text_JohanIntro, SaffronCity_Gym_Text_JohanDefeat
@@ -264,23 +274,70 @@ SaffronCity_Gym_Text_PostBattleGameClear::
 	.string "can only train further.\p" 
 	.string "Continue testing your skill!$"
 
-@TODO: Leader Rematches
 SaffronCity_Gym_EventScript_RematchLeader::
 	msgbox SaffronCity_Gym_Text_RematchLeader, MSGBOX_YESNO
-	release
+	goto_if_eq VAR_RESULT, FALSE, SaffronCity_Gym_EventScript_DeclineRematch
+	goto_if_set FLAG_SYS_GAME_CLEAR, SaffronCity_Gym_EventScript_PostgameRematch
+	goto SaffronCity_Gym_EventScript_LeaderRematch_OriginalTeam
 	end
 
 SaffronCity_Gym_Text_RematchLeader::
-	.string "...It's true that psychic power\n"
-	.string "is a potent ability.\p"
-	.string "However, there are things that cannot\n"
-	.string "be overcome with that power alone.\p"
-	.string "I finally understand that now, after "
-	.string "losing to you in our last battle.\p"
-	.string "I won't be relying on just psychic power\n"
-	.string "this time.\p"
+	.string "...It's true that psychic power is a\n" 
+	.string "potent ability.\p" 
+	.string "However, there are things that cannot\n" 
+	.string "be overcome with that power alone.\p" 
+	.string "I finally understand that now, after\n" 
+	.string "losing to you in our last battle.\p" 
+	.string " I won't be relying on just psychic power\n"
+	.string "this time.\p" 
 	.string "My true strength...my true self...\p"
 	.string "Allow me to test them against you!$"
+
+SaffronCity_Gym_EventScript_DeclineRematch::
+	msgbox SaffronCity_Gym_Text_DeclineRematch, MSGBOX_DEFAULT
+	release
+	end
+
+SaffronCity_Gym_Text_DeclineRematch::
+	.string "I foresaw this possibility...$"
+
+SaffronCity_Gym_EventScript_PostgameRematch::
+	msgbox SaffronCity_Gym_Text_RematchMode, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, SaffronCity_Gym_EventScript_LeaderRematch_PostGameTeam
+	goto SaffronCity_Gym_EventScript_LeaderRematch_OriginalTeam
+	end
+
+SaffronCity_Gym_Text_RematchMode::
+	.string "Now that you're the champion,\n"
+	.string "would you like to go all out?$"
+
+SaffronCity_Gym_EventScript_LeaderRematch_OriginalTeam::
+	trainerbattle_single LEADER_REMATCH_SABRINA_ORIGINAL, SaffronCity_Gym_Text_RematchOriginal, SaffronCity_Gym_Text_RematchDefeat, SaffronCity_Gym_EventScript_DefeatedLeaderRematch
+	end
+
+SaffronCity_Gym_Text_RematchOriginal::
+	.string "Let us look into our pasts to discover\n" 
+	.string "what our future holds!$" 
+
+SaffronCity_Gym_EventScript_LeaderRematch_PostGameTeam::
+	trainerbattle_single LEADER_REMATCH_SABRINA_POSTGAME, SaffronCity_Gym_Text_RematchPostgame, SaffronCity_Gym_Text_RematchDefeat, SaffronCity_Gym_EventScript_DefeatedLeaderRematch
+	end
+
+SaffronCity_Gym_Text_RematchPostgame::
+	.string "I foresaw that you would come here by\n" 
+	.string "looking into the future.\p" 
+	.string "But I intentionally didn't look to see\n" 
+	.string "who will win out battle.\p" 
+	.string "Let's find out together!$"
+
+SaffronCity_Gym_EventScript_DefeatedLeaderRematch::
+	setflag FLAG_DAILY_SABRINA_REMATCH
+	goto SaffronCity_Gym_EventScript_LeaderPostBattle
+	end
+
+SaffronCity_Gym_Text_RematchDefeat::
+	.string "I won't encounter a Trainer like you for\n" 
+	.string "around another three years.$"
 
 
 SaffronCity_Gym_EventScript_GymGuy::

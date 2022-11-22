@@ -1,14 +1,24 @@
 .set LOCALID_SCOTT, 3
 
 PewterCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PewterCity_Gym__OnTransition
 	.byte 0
+
+PewterCity_Gym__OnTransition::
+	call_if_unset FLAG_DAILY_BROCK_REMATCH, PewterCity_Gym_ResetRematchFlags
+	end
+
+PewterCity_Gym_ResetRematchFlags::
+	cleartrainerflag LEADER_REMATCH_BROCK_ORIGINAL
+	cleartrainerflag LEADER_REMATCH_BROCK_POSTGAME
+	return
 
 PewterCity_Gym_EventScript_Brock::
 	lock
 	faceplayer
 	goto_if_unset FLAG_BADGE01_GET, PewterCity_Gym_EventScript_ChallengeBrock
 	goto_if_unset FLAG_GOT_BROCK_REWARD, PewterCity_Gym_EventScript_GetTM
-	goto_if_unset FLAG_DAILY_BROCK_REMATCH, PewterCity_Gym_EventScript_RematchBrock
+	goto_if_unset FLAG_DAILY_BROCK_REMATCH, PewterCity_Gym_EventScript_RematchLeader
 	goto PewterCity_Gym_EventScript_BrockPostBattle
 	end
 
@@ -150,16 +160,60 @@ PewterCity_Gym_Text_PostBattleGameClear::
 	.string "You've come a long way since\n"
 	.string "you earned your Boulder Badge, {PLAYER}!$"
 
-@TODO: Leader Rematches
-PewterCity_Gym_EventScript_RematchBrock::
-	msgbox PewterCity_Gym_Text_RematchBrock, MSGBOX_YESNO
+PewterCity_Gym_EventScript_RematchLeader::
+	msgbox PewterCity_Gym_Text_RematchLeader, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, FALSE, PewterCity_Gym_EventScript_DeclineRematch
+	goto_if_set FLAG_SYS_GAME_CLEAR, PewterCity_Gym_EventScript_PostgameRematch
+	goto PewterCity_Gym_EventScript_LeaderRematch_OriginalTeam
+	end
+
+PewterCity_Gym_Text_RematchLeader::
+	.string "...You sure look different from when we\n" 
+	.string "first met!\p" 
+	.string "...Please allow me the privilege of facing\n" 
+	.string "you in battle once again!$" 
+
+PewterCity_Gym_EventScript_DeclineRematch::
+	msgbox PewterCity_Gym_Text_DeclineRematch, MSGBOX_DEFAULT
 	release
 	end
 
-PewterCity_Gym_Text_RematchBrock::
-	.string "Hey, {PLAYER}!\n"
-	.string "Are you looking for a rematch?$"
+PewterCity_Gym_Text_DeclineRematch::
+	.string "I see...$"
 
+PewterCity_Gym_EventScript_PostgameRematch::
+	msgbox PewterCity_Gym_Text_RematchMode, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, PewterCity_Gym_EventScript_LeaderRematch_PostGameTeam
+	goto PewterCity_Gym_EventScript_LeaderRematch_OriginalTeam
+	end
+
+PewterCity_Gym_Text_RematchMode::
+	.string "Now that you're the champion,\n"
+	.string "would you like to go all out?$"
+
+PewterCity_Gym_EventScript_LeaderRematch_OriginalTeam::
+	trainerbattle_single LEADER_REMATCH_BROCK_ORIGINAL, PewterCity_Gym_Text_RematchOriginal, PewterCity_Gym_Text_RematchDefeat, PewterCity_Gym_EventScript_DefeatedLeaderRematch
+	end
+
+PewterCity_Gym_Text_RematchOriginal::
+	.string "Alright, {PLAYER}!\n"
+	.string "Let's relive our first battle!$"
+
+PewterCity_Gym_EventScript_LeaderRematch_PostGameTeam::
+	trainerbattle_single LEADER_REMATCH_BROCK_POSTGAME, PewterCity_Gym_Text_RematchPostgame, PewterCity_Gym_Text_RematchDefeat, PewterCity_Gym_EventScript_DefeatedLeaderRematch
+	end
+
+PewterCity_Gym_Text_RematchPostgame::
+	.string "Allow me to show you the true rock-hard\n" 
+	.string "strength of my Pokémon!$"
+
+PewterCity_Gym_EventScript_DefeatedLeaderRematch::
+	setflag FLAG_DAILY_BROCK_REMATCH
+	goto PewterCity_Gym_EventScript_LeaderPostBattle
+	end
+
+PewterCity_Gym_Text_RematchDefeat::
+	.string "I knew you were strong, but this...$"
 
 PewterCity_Gym_EventScript_Liam::
 	trainerbattle_single TRAINER_CAMPER_LIAM, PewterCity_Gym_Text_LiamIntro, PewterCity_Gym_Text_LiamDefeat

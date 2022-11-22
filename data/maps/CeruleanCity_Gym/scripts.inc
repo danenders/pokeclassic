@@ -1,12 +1,22 @@
 CeruleanCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, CeruleanCity_Gym__OnTransition
 	.byte 0
+
+CeruleanCity_Gym__OnTransition::
+	call_if_unset FLAG_DAILY_MISTY_REMATCH, CeruleanCity_Gym_ResetRematchFlags
+	end
+
+CeruleanCity_Gym_ResetRematchFlags::
+	cleartrainerflag LEADER_REMATCH_MISTY_ORIGINAL
+	cleartrainerflag LEADER_REMATCH_MISTY_POSTGAME
+	return
 
 CeruleanCity_Gym_EventScript_Misty::
 	lock
 	faceplayer
 	goto_if_unset FLAG_BADGE02_GET, CeruleanCity_Gym_EventScript_ChallengeMisty
 	goto_if_unset FLAG_GOT_MISTY_REWARD, CeruleanCity_Gym_EventScript_GetTM
-	goto_if_unset FLAG_DAILY_MISTY_REMATCH, CeruleanCity_Gym_EventScript_RematchMisty
+	goto_if_unset FLAG_DAILY_MISTY_REMATCH, CeruleanCity_Gym_EventScript_RematchLeader
 	goto CeruleanCity_Gym_EventScript_MistyPostBattle
 	end
 
@@ -133,15 +143,67 @@ CeruleanCity_Gym_Text_PostBattleGameClear::
     .string "I made my dream come true, and now \n"
     .string "my next dream is to defeat you!$"
 
-@TODO: Leader Rematches
-CeruleanCity_Gym_EventScript_RematchMisty::
-	msgbox CeruleanCity_Gym_Text_RematchMisty, MSGBOX_YESNO
+CeruleanCity_Gym_EventScript_RematchLeader::
+	msgbox CeruleanCity_Gym_Text_RematchLeader, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, FALSE, CeruleanCity_Gym_EventScript_DeclineRematch
+	goto_if_set FLAG_SYS_GAME_CLEAR, CeruleanCity_Gym_EventScript_PostgameRematch
+	goto CeruleanCity_Gym_EventScript_LeaderRematch_OriginalTeam
+	end
+
+CeruleanCity_Gym_Text_RematchLeader::
+	.string "I heard an interesting rumor!\p" 
+	.string "You and that other kid have been\n" 
+	.string "taking on those Team Rocket guys.\p" 
+	.string "Is that true?\p" 
+	.string "Argh! I just can't take it anymore!\p" 
+	.string "You've gotten so strong that I just absolutely\n" 
+	.string "have to battle you again!\p" 
+	.string "You got that? No refusing!$"
+
+CeruleanCity_Gym_EventScript_DeclineRematch::
+	msgbox CeruleanCity_Gym_Text_DeclineRematch, MSGBOX_DEFAULT
 	release
 	end
 
-CeruleanCity_Gym_Text_RematchMisty::
-	.string "Hey, {PLAYER}!\n"
-	.string "Are you looking for a rematch?$"
+CeruleanCity_Gym_Text_DeclineRematch::
+	.string "Argh! C'mon! Battle me!$"
+
+CeruleanCity_Gym_EventScript_PostgameRematch::
+	msgbox CeruleanCity_Gym_Text_RematchMode, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, CeruleanCity_Gym_EventScript_LeaderRematch_PostGameTeam
+	goto CeruleanCity_Gym_EventScript_LeaderRematch_OriginalTeam
+	end
+
+CeruleanCity_Gym_Text_RematchMode::
+	.string "Now that you're the champion,\n"
+	.string "would you like to go all out?$"
+
+CeruleanCity_Gym_EventScript_LeaderRematch_OriginalTeam::
+	trainerbattle_single LEADER_REMATCH_MISTY_ORIGINAL, CeruleanCity_Gym_Text_RematchOriginal, CeruleanCity_Gym_Text_RematchDefeat, CeruleanCity_Gym_EventScript_DefeatedLeaderRematch
+	end
+
+CeruleanCity_Gym_Text_RematchOriginal::
+	.string "Okay, {PLAYER}!\n"
+	.string "Let's go!$"
+
+CeruleanCity_Gym_EventScript_LeaderRematch_PostGameTeam::
+	trainerbattle_single LEADER_REMATCH_MISTY_POSTGAME, CeruleanCity_Gym_Text_RematchPostgame, CeruleanCity_Gym_Text_RematchDefeat, CeruleanCity_Gym_EventScript_DefeatedLeaderRematch
+	end
+
+CeruleanCity_Gym_Text_RematchPostgame::
+	.string "My adorable Pokémon are ready to take\n" 
+	.string "you on!\p" 
+	.string "The ultimate offense of Water-type Pokémon!\n" 
+	.string "I hope you're ready!$
+
+CeruleanCity_Gym_EventScript_DefeatedLeaderRematch::
+	setflag FLAG_DAILY_MISTY_REMATCH
+	goto CeruleanCity_Gym_EventScript_LeaderPostBattle
+	end
+
+CeruleanCity_Gym_Text_RematchDefeat::
+	.string "Hmph! How annoying!$"
+
 
 CeruleanCity_Gym_EventScript_PrepDexNavCall::
 	setvar VAR_SEA_COTTAGE_STATE, 4
