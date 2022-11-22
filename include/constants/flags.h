@@ -147,7 +147,7 @@
 #define FLAG_DEFEATED_AGATHA  			    0x81
 #define FLAG_DEFEATED_LANCE         		0x82
 #define FLAG_DEFEATED_RIVAL_CHAMPION        0x83
-#define FLAG_UNUSED_0x084          			0x84
+#define FLAG_RIVAL_REMATCHED          		0x84 //Found post-game rival for Rematch in Viridian Gym
 #define FLAG_UNUSED_0x085            		0x85
 #define FLAG_UNUSED_0x086             		0x86
 #define FLAG_UNUSED_0x087  					0x87

@@ -2,7 +2,18 @@
 .set LOCALID_RIVAL, 2
 
 ViridianCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, ViridianCity_Gym_OnTransition
 	.byte 0
+
+ViridianCity_Gym_OnTransition::
+	call_if_unset FLAG_DAILY_RIVAL_REMATCH, ViridianCity_Gym_ResetRematchFlags
+	end
+
+ViridianCity_Gym_ResetRematchFlags::
+	cleartrainerflag TRAINER_RIVAL_POSTGAME_JOLTEON
+	cleartrainerflag TRAINER_RIVAL_POSTGAME_FLAREON
+	cleartrainerflag TRAINER_RIVAL_POSTGAME_VAPOREON
+	return
 
 ViridianCity_Gym_EventScript_Giovanni::
 	msgbox ViridianCity_Gym_Text_GiovanniSpeech, MSGBOX_NPC
@@ -303,4 +314,116 @@ ViridianCity_Gym_Text_GymStatuePlayerWon::
     .string "Winning Trainers:\n"
     .string "{RIVAL}, {PLAYER}$"
 
-@TODO: Rival Rematch Location, also TM26 if player didn't get it from Giovanni
+ViridianCity_Gym_EventScript_Rival::
+	lock
+	faceplayer
+	goto_if_set FLAG_DAILY_RIVAL_REMATCH, ViridianCity_Gym_EventScript_RivalPostBattle
+	goto_if_set FLAG_RIVAL_REMATCHED, ViridianCity_Gym_EventScript_SkipRivalSpeech
+	playse SE_PIN
+	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
+	waitmovement 2
+	msgbox ViridianCity_Gym_Text_RivalSpeech, MSGBOX_NPC
+	setflag FLAG_RIVAL_REMATCHED
+ViridianCity_Gym_EventScript_SkipRivalSpeech::
+	msgbox ViridianCity_Gym_Text_RematchLeader, MSGBOX_DEFAULT
+	goto_if_eq VAR_RIVAL_WINRATE, 2, ViridianCity_Gym_EventScript_RivalJolteon
+	goto_if_eq VAR_RIVAL_WINRATE, 1, ViridianCity_Gym_EventScript_RivalFlareon
+	goto ViridianCity_Gym_EventScript_RivalVaporeon
+	end
+
+ViridianCity_Gym_Text_RivalSpeech::
+	.string "{RIVAL}: ...{PLAYER}?\n"
+	.string "I've just been thinking...\p"
+	.string "Back when I started this journey,\n"
+	.string "I really thought I was the best\l"
+	.string "there ever was...\p"
+	.string "But you were always there, right\n"
+	.string "behind me...and I got careless.\p"
+	.string "I need to take some time to reflect.\n"
+	.string "Who knows...\p"
+	.string "I may not be the champion, but maybe\n"
+	.string "one day, I could be a Gym Leader...\p"
+	.string "...\p"
+	.string "Eh, whatever! No time to get all\n"
+	.string "sentimental!$"
+
+ViridianCity_Gym_Text_RematchLeader::
+	.string "So what are you doing here?\n"
+	.string "Come here to rub it in?\p"
+	.string "Well, you made a mistake!\p"
+	.string "Don't think I'll just let you show\n"
+	.string "up without challenging you to a battle!$"
+
+ViridianCity_Gym_EventScript_RivalJolteon::
+	trainerbattle_single TRAINER_RIVAL_POSTGAME_JOLTEON, ViridianCity_Gym_Text_RivalIntro, ViridianCity_Gym_Text_RivalDefeat, ViridianCity_Gym_EventScript_DefeatedRival
+	end
+
+ViridianCity_Gym_EventScript_RivalFlareon::
+	trainerbattle_single TRAINER_RIVAL_POSTGAME_FLAREON, ViridianCity_Gym_Text_RivalIntro, ViridianCity_Gym_Text_RivalDefeat, ViridianCity_Gym_EventScript_DefeatedRival
+	end
+
+ViridianCity_Gym_EventScript_RivalVaporeon::
+	trainerbattle_single TRAINER_RIVAL_POSTGAME_VAPOREON, ViridianCity_Gym_Text_RivalIntro, ViridianCity_Gym_Text_RivalDefeat, ViridianCity_Gym_EventScript_DefeatedRival
+	end
+
+ViridianCity_Gym_Text_RivalIntro::
+	.string "All right!\n"
+	.string "It's been a while since I've gone all out.\p"
+	.string "I'll prove I'm still the best there is!$"
+
+ViridianCity_Gym_Text_RivalDefeat::
+	.string "Aw man, what was I doing?$"
+
+ViridianCity_Gym_EventScript_DefeatedRival::
+	setflag FLAG_DAILY_RIVAL_REMATCH
+ViridianCity_Gym_EventScript_RivalPostBattle::
+	msgbox ViridianCity_Gym_Text_RivalPostBattle, MSGBOX_DEFAULT
+	call_if_unset FLAG_GOT_GIOVANNI_REWARD, ViridianCity_Gym_EventScript_RivalFoundTM
+	turnobject LOCALID_RIVAL, DIR_NORTH
+	release
+	end
+
+ViridianCity_Gym_Text_RivalPostBattle::
+	.string "I don't like to admit it, but I'm\n"
+	.string "still not at your level.\p"
+	.string "But next time, I'll beat you!$"
+
+ViridianCity_Gym_EventScript_RivalFoundTM::
+	msgbox ViridianCity_Gym_Text_FoundThis, MSGBOX_DEFAULT
+	checkitemspace ITEM_TM26, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq ViridianCity_Gym_EventScript_NoRoomForTM262
+	playfanfare MUS_OBTAIN_TMHM
+	message ViridianCity_Gym_Text_ReceivedTM26FromRival
+	waitmessage
+	waitfanfare
+	additem ITEM_TM26, 1
+	setflag FLAG_GOT_GIOVANNI_REWARD
+	msgbox ViridianCity_Gym_Text_RivalExplainTM26	
+	return
+
+ViridianCity_Gym_Text_FoundThis::
+	.string "Oh, I almost forgot!\p"
+	.string "I found this when I was scoping this\n" 
+	.string "place out.\p"
+	.string "As much as I hate rewarding you, I\n"
+	.string "already have this TM.\p" 
+	.string "You should take it.$"
+
+ViridianCity_Gym_Text_ReceivedTM26FromRival::
+    .string "{PLAYER} received TM26\n"
+    .string "from {RIVAL}.$"
+
+ViridianCity_Gym_EventScript_NoRoomForTM262::
+	msgbox ViridianCity_Gym_Text_YouDoNotHaveSpace2
+	release
+	end
+
+ViridianCity_Gym_Text_RivalExplainTM26::
+    .string "TM26 contains Earthquake.\p"
+    .string "It is a powerful attack that causes\n"
+    .string "a massive tremor.$"
+
+ViridianCity_Gym_Text_YouDoNotHaveSpace2::
+    .string "Oh, you don't have space for this?\p"
+    .string "Too bad! Guess I'll keep it. Ha!$"

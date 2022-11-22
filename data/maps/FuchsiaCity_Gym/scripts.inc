@@ -1,8 +1,8 @@
 FuchsiaCity_Gym_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, FuchsiaCity_Gym__OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, FuchsiaCity_Gym_OnTransition
 	.byte 0
 
-FuchsiaCity_Gym__OnTransition::
+FuchsiaCity_Gym_OnTransition::
 	call_if_unset FLAG_DAILY_KOGA_REMATCH, FuchsiaCity_Gym_ResetRematchFlags
 	end
 

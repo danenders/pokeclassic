@@ -6,7 +6,7 @@
 .set LOCALID_ZAC,   7
 
 CinnabarIsland_Gym_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, CinnabarIsland_Gym__OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, CinnabarIsland_Gym_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, CinnabarIsland_Gym_OnLoad
 	.byte 0
 
@@ -29,7 +29,7 @@ CinnabarIsland_Gym_OnLoadOpenAllDoors::
 	call CinnabarIsland_Gym_EventScript_OpenDoor6
 	end
 
-CinnabarIsland_Gym__OnTransition::
+CinnabarIsland_Gym_OnTransition::
 	call_if_unset FLAG_DAILY_BLAINE_REMATCH, CinnabarIsland_Gym_ResetRematchFlags
 	end
 

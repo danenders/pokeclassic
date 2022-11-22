@@ -1,10 +1,10 @@
 .set LOCALID_SCOTT, 3
 
 PewterCity_Gym_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, PewterCity_Gym__OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, PewterCity_Gym_OnTransition
 	.byte 0
 
-PewterCity_Gym__OnTransition::
+PewterCity_Gym_OnTransition::
 	call_if_unset FLAG_DAILY_BROCK_REMATCH, PewterCity_Gym_ResetRematchFlags
 	end
 
@@ -19,7 +19,7 @@ PewterCity_Gym_EventScript_Brock::
 	goto_if_unset FLAG_BADGE01_GET, PewterCity_Gym_EventScript_ChallengeBrock
 	goto_if_unset FLAG_GOT_BROCK_REWARD, PewterCity_Gym_EventScript_GetTM
 	goto_if_unset FLAG_DAILY_BROCK_REMATCH, PewterCity_Gym_EventScript_RematchLeader
-	goto PewterCity_Gym_EventScript_BrockPostBattle
+	goto PewterCity_Gym_EventScript_LeaderPostBattle
 	end
 
 PewterCity_Gym_EventScript_ChallengeBrock::
@@ -123,16 +123,16 @@ PewterCity_Gym_EventScript_NoRoomForTM::
 PewterCity_Gym_Text_NoRoomForTM::
     .string "You don't have room for this.$"
 
-PewterCity_Gym_EventScript_BrockPostBattle::
+PewterCity_Gym_EventScript_LeaderPostBattle::
 	lock
 	faceplayer
-	goto_if_set FLAG_DAILY_IS_CURRENTLY_CHAMPION, PewterCity_Gym_EventScript_BrockPostBattleCurrentChampion
-	goto_if_set FLAG_SYS_GAME_CLEAR, PewterCity_Gym_EventScript_BrockPostBattleGameClear
-	msgbox PewterCity_Gym_Text_BrockPostBattle, MSGBOX_DEFAULT
+	goto_if_set FLAG_DAILY_IS_CURRENTLY_CHAMPION, PewterCity_Gym_EventScript_LeaderPostBattleCurrentChampion
+	goto_if_set FLAG_SYS_GAME_CLEAR, PewterCity_Gym_EventScript_LeaderPostBattleGameClear
+	msgbox PewterCity_Gym_Text_LeaderPostBattle, MSGBOX_DEFAULT
 	release
 	end
 
-PewterCity_Gym_Text_BrockPostBattle::
+PewterCity_Gym_Text_LeaderPostBattle::
     .string "There are all kinds of trainers in\n"
     .string "this huge world of ours.\p"
     .string "You appear to be very gifted as a\n"
@@ -141,7 +141,7 @@ PewterCity_Gym_Text_BrockPostBattle::
     .string "Go to the Gym in Cerulean and test\n"
     .string "your abilities.$"
 
-PewterCity_Gym_EventScript_BrockPostBattleCurrentChampion::
+PewterCity_Gym_EventScript_LeaderPostBattleCurrentChampion::
 	msgbox PewterCity_Gym_Text_PostBattleCurrentChampion, MSGBOX_DEFAULT
 	release
 	end
@@ -151,7 +151,7 @@ PewterCity_Gym_Text_PostBattleCurrentChampion::
 	.string "but you should never stop training!\p"
 	.string "It's important to keep your skills sharp!$"
 
-PewterCity_Gym_EventScript_BrockPostBattleGameClear::
+PewterCity_Gym_EventScript_LeaderPostBattleGameClear::
 	msgbox PewterCity_Gym_Text_PostBattleGameClear, MSGBOX_DEFAULT
 	release
 	end

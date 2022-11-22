@@ -827,42 +827,42 @@ static const struct TrainerMonItemCustomMoves sParty_RivalChampionVaporeon[] = {
 static const struct TrainerMonItemCustomMoves sParty_RivalPostGameJolteon[] = {
     {
     .iv = 220,
-    .lvl = 61,
+    .lvl = 65,
     .species = SPECIES_SANDSLASH,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_EARTHQUAKE, MOVE_SLASH, MOVE_POISON_STING, MOVE_FURY_SWIPES}
     },
     {
     .iv = 200,
-    .lvl = 61,
+    .lvl = 65,
     .species = SPECIES_EXEGGUTOR,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_LEECH_SEED, MOVE_HYPNOSIS, MOVE_PSYCHIC, MOVE_BARRAGE}
     },
     {
     .iv = 200,
-    .lvl = 59,
+    .lvl = 65,
     .species = SPECIES_ALAKAZAM,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_PSYCHIC, MOVE_REFLECT, MOVE_KINESIS, MOVE_RECOVER}
     },
     {
     .iv = 200,
-    .lvl = 63,
+    .lvl = 65,
     .species = SPECIES_NINETALES,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_FLAMETHROWER, MOVE_WILL_O_WISP, MOVE_CONFUSE_RAY, MOVE_ROAR}
     },
     {
     .iv = 200,
-    .lvl = 61,
+    .lvl = 65,
     .species = SPECIES_CLOYSTER,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SHELL_SMASH, MOVE_HYDRO_PUMP, MOVE_SPIKE_CANNON, MOVE_ICE_BEAM}
     },
     {
     .iv = 250,
-    .lvl = 65,
+    .lvl = 70,
     .species = SPECIES_JOLTEON,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_THUNDER, MOVE_THUNDER_WAVE, MOVE_PIN_MISSILE, MOVE_AGILITY}
@@ -872,42 +872,42 @@ static const struct TrainerMonItemCustomMoves sParty_RivalPostGameJolteon[] = {
 static const struct TrainerMonItemCustomMoves sParty_RivalPostGameFlareon[] = {
     {
     .iv = 220,
-    .lvl = 61,
+    .lvl = 65,
     .species = SPECIES_SANDSLASH,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_EARTHQUAKE, MOVE_SLASH, MOVE_POISON_STING, MOVE_FURY_SWIPES}
     },
     {
     .iv = 200,
-    .lvl = 61,
+    .lvl = 65,
     .species = SPECIES_EXEGGUTOR,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_LEECH_SEED, MOVE_HYPNOSIS, MOVE_PSYCHIC, MOVE_BARRAGE}
     },
     {
     .iv = 200,
-    .lvl = 59,
+    .lvl = 65,
     .species = SPECIES_ALAKAZAM,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_PSYCHIC, MOVE_REFLECT, MOVE_KINESIS, MOVE_RECOVER}
     },
     {
     .iv = 200,
-    .lvl = 61,
+    .lvl = 65,
     .species = SPECIES_MAGNETON,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE, MOVE_SCREECH, MOVE_FLASH_CANNON}
     },
     {
     .iv = 200,
-    .lvl = 63,
+    .lvl = 65,
     .species = SPECIES_CLOYSTER,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SHELL_SMASH, MOVE_HYDRO_PUMP, MOVE_SPIKE_CANNON, MOVE_ICE_BEAM}
     },
     {
     .iv = 250,
-    .lvl = 65,
+    .lvl = 70,
     .species = SPECIES_FLAREON,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_FLAMETHROWER, MOVE_WILL_O_WISP, MOVE_BODY_SLAM, MOVE_FIRE_SPIN}
@@ -917,42 +917,42 @@ static const struct TrainerMonItemCustomMoves sParty_RivalPostGameFlareon[] = {
 static const struct TrainerMonItemCustomMoves sParty_RivalPostGameVaporeon[] = {
     {
     .iv = 220,
-    .lvl = 61,
+    .lvl = 65,
     .species = SPECIES_SANDSLASH,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_EARTHQUAKE, MOVE_SLASH, MOVE_POISON_STING, MOVE_FURY_SWIPES}
     },
     {
     .iv = 200,
-    .lvl = 61,
+    .lvl = 65,
     .species = SPECIES_EXEGGUTOR,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_LEECH_SEED, MOVE_HYPNOSIS, MOVE_PSYCHIC, MOVE_BARRAGE}
     },
     {
     .iv = 200,
-    .lvl = 59,
+    .lvl = 65,
     .species = SPECIES_ALAKAZAM,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_PSYCHIC, MOVE_REFLECT, MOVE_KINESIS, MOVE_RECOVER}
     },
     {
     .iv = 200,
-    .lvl = 63,
+    .lvl = 65,
     .species = SPECIES_MAGNETON,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE, MOVE_SCREECH, MOVE_FLASH_CANNON}
     },
     {
     .iv = 200,
-    .lvl = 61,
+    .lvl = 65,
     .species = SPECIES_NINETALES,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_FLAMETHROWER, MOVE_WILL_O_WISP, MOVE_CONFUSE_RAY, MOVE_ROAR}
     },
     {
     .iv = 250,
-    .lvl = 65,
+    .lvl = 70,
     .species = SPECIES_VAPOREON,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_HYDRO_PUMP, MOVE_ICE_BEAM, MOVE_MIST, MOVE_HAZE}

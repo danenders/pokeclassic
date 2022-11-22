@@ -1,8 +1,8 @@
 SaffronCity_Gym_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, SaffronCity_Gym__OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, SaffronCity_Gym_OnTransition
 	.byte 0
 
-SaffronCity_Gym__OnTransition::
+SaffronCity_Gym_OnTransition::
 	call_if_unset FLAG_DAILY_SABRINA_REMATCH, SaffronCity_Gym_ResetRematchFlags
 	end
 

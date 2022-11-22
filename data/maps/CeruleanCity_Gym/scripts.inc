@@ -1,8 +1,8 @@
 CeruleanCity_Gym_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, CeruleanCity_Gym__OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, CeruleanCity_Gym_OnTransition
 	.byte 0
 
-CeruleanCity_Gym__OnTransition::
+CeruleanCity_Gym_OnTransition::
 	call_if_unset FLAG_DAILY_MISTY_REMATCH, CeruleanCity_Gym_ResetRematchFlags
 	end
 
@@ -17,7 +17,7 @@ CeruleanCity_Gym_EventScript_Misty::
 	goto_if_unset FLAG_BADGE02_GET, CeruleanCity_Gym_EventScript_ChallengeMisty
 	goto_if_unset FLAG_GOT_MISTY_REWARD, CeruleanCity_Gym_EventScript_GetTM
 	goto_if_unset FLAG_DAILY_MISTY_REMATCH, CeruleanCity_Gym_EventScript_RematchLeader
-	goto CeruleanCity_Gym_EventScript_MistyPostBattle
+	goto CeruleanCity_Gym_EventScript_LeaderPostBattle
 	end
 
 CeruleanCity_Gym_EventScript_ChallengeMisty::
@@ -108,21 +108,21 @@ CeruleanCity_Gym_EventScript_NoRoomForTM::
 CeruleanCity_Gym_Text_NoRoomForTM::
     .string "You better make room for this!$"
 
-CeruleanCity_Gym_EventScript_MistyPostBattle::
+CeruleanCity_Gym_EventScript_LeaderPostBattle::
 	lock
 	faceplayer
-	goto_if_set FLAG_DAILY_IS_CURRENTLY_CHAMPION, CeruleanCity_Gym_EventScript_MistyPostBattleCurrentChampion
-	goto_if_set FLAG_SYS_GAME_CLEAR, CeruleanCity_Gym_EventScript_MistyPostBattleGameClear
-	msgbox CeruleanCity_Gym_Text_MistyPostBattle, MSGBOX_DEFAULT
+	goto_if_set FLAG_DAILY_IS_CURRENTLY_CHAMPION, CeruleanCity_Gym_EventScript_LeaderPostBattleCurrentChampion
+	goto_if_set FLAG_SYS_GAME_CLEAR, CeruleanCity_Gym_EventScript_LeaderPostBattleGameClear
+	msgbox CeruleanCity_Gym_Text_LeaderPostBattle, MSGBOX_DEFAULT
 	release
 	end
 
-CeruleanCity_Gym_Text_MistyPostBattle::
+CeruleanCity_Gym_Text_LeaderPostBattle::
 	.string "Misty: There are times when I want\n"
 	.string "to just break free from a puny\l" 
 	.string "little pool and swim in the big blue!$"
 
-CeruleanCity_Gym_EventScript_MistyPostBattleCurrentChampion::
+CeruleanCity_Gym_EventScript_LeaderPostBattleCurrentChampion::
 	msgbox CeruleanCity_Gym_Text_PostBattleCurrentChampion, MSGBOX_DEFAULT
 	release
 	end
@@ -131,7 +131,7 @@ CeruleanCity_Gym_Text_PostBattleCurrentChampion::
 	.string "You may be the current champion, {PLAYER},\n"
 	.string "but you're still a pest!$"
 
-CeruleanCity_Gym_EventScript_MistyPostBattleGameClear::
+CeruleanCity_Gym_EventScript_LeaderPostBattleGameClear::
 	msgbox CeruleanCity_Gym_Text_PostBattleGameClear, MSGBOX_DEFAULT
 	release
 	end
@@ -194,7 +194,7 @@ CeruleanCity_Gym_Text_RematchPostgame::
 	.string "My adorable Pokémon are ready to take\n" 
 	.string "you on!\p" 
 	.string "The ultimate offense of Water-type Pokémon!\n" 
-	.string "I hope you're ready!$
+	.string "I hope you're ready!$"
 
 CeruleanCity_Gym_EventScript_DefeatedLeaderRematch::
 	setflag FLAG_DAILY_MISTY_REMATCH
@@ -297,6 +297,3 @@ CeruleanCity_Gym_Text_GymStatuePlayerWon::
     .string "Leader: Misty\p"
     .string "Winning Trainers:\n"
     .string "{RIVAL}, {PLAYER}$"
-
-
-
