@@ -121,7 +121,6 @@ CeladonCity_Gym_Text_NoRoomForTM::
 CeladonCity_Gym_EventScript_LeaderPostBattle::
 	lock
 	faceplayer
-	goto_if_set FLAG_DAILY_IS_CURRENTLY_CHAMPION, CeladonCity_Gym_EventScript_LeaderPostBattleCurrentChampion
 	goto_if_set FLAG_SYS_GAME_CLEAR, CeladonCity_Gym_EventScript_LeaderPostBattleGameClear
 	msgbox CeladonCity_Gym_Text_LeaderPostBattle, MSGBOX_DEFAULT
 	release
@@ -132,17 +131,6 @@ CeladonCity_Gym_Text_LeaderPostBattle::
     .string "I must say I'm impressed.\p"
     .string "I would never collect Pokémon if\n"
     .string "they were unattractive.$"
-
-CeladonCity_Gym_EventScript_LeaderPostBattleCurrentChampion::
-	msgbox CeladonCity_Gym_Text_PostBattleCurrentChampion, MSGBOX_DEFAULT
-	release
-	end
-
-CeladonCity_Gym_Text_PostBattleCurrentChampion::
-	.string "I feel inspired by our battle.\p" 
-	.string "Fighting alongside your beloved\n" 
-	.string "Pokémon. This is the joy of being\l" 
-	.string "a Pokémon Trainer.$"
 
 CeladonCity_Gym_EventScript_LeaderPostBattleGameClear::
 	msgbox CeladonCity_Gym_Text_PostBattleGameClear, MSGBOX_DEFAULT

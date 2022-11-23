@@ -45,6 +45,8 @@ PokemonLeague_HallOfFame_EventScript_EnterRoom::
 
 PokemonLeague_HallOfFame_Movement_EnterRoom::
 	walk_up
+	walk_left
+	walk_up
 	walk_up
 	walk_up
 	walk_up
@@ -73,7 +75,7 @@ PokemonLeague_HallOfFame_Text_OakCongratulations::
 PokemonLeague_HallOfFame_EventScript_SetGameClearFlags::
 	special SetChampionSaveWarp
 	setflag FLAG_IS_CHAMPION
-	setflag FLAG_DAILY_IS_CURRENTLY_CHAMPION
+	setflag FLAG_DAILY_TITLE_MATCH
 	call PokemonLeague_HallOfFame_EventScript_ResetDefeatedEventLegendaries
 	call PokemonLeague_HallOfFame_EventScript_ResetEliteFour
 	special UpdateTrainerFanClubGameClear
@@ -93,6 +95,7 @@ PokemonLeague_HallOfFame_EventScript_ResetEliteFour::
 	clearflag FLAG_DEFEATED_AGATHA
 	clearflag FLAG_DEFEATED_LANCE
 	clearflag FLAG_DEFEATED_RIVAL_CHAMPION
+	clearflag FLAG_DEFEATED_SECRET_BATTLE
 	cleartrainerflag TRAINER_ELITE_FOUR_LORELEI
 	cleartrainerflag TRAINER_ELITE_FOUR_BRUNO
 	cleartrainerflag TRAINER_ELITE_FOUR_AGATHA
@@ -100,5 +103,11 @@ PokemonLeague_HallOfFame_EventScript_ResetEliteFour::
 	cleartrainerflag TRAINER_RIVAL_CHAMPION_JOLTEON
 	cleartrainerflag TRAINER_RIVAL_CHAMPION_FLAREON
 	cleartrainerflag TRAINER_RIVAL_CHAMPION_VAPOREON
+	cleartrainerflag POSTGAME_ELITE_FOUR_LORELEI
+	cleartrainerflag POSTGAME_ELITE_FOUR_BRUNO
+	cleartrainerflag POSTGAME_ELITE_FOUR_AGATHA
+	cleartrainerflag POSTGAME_ELITE_FOUR_LANCE
+	cleartrainerflag SECRET_BATTLE_OAK
 	setvar VAR_ELITE_4_STATE, 0
+	setvar VAR_ELITE_4_MODE, 0
 	return

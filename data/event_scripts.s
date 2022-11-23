@@ -578,16 +578,8 @@ gStdScripts_End::
 	.include "data/scripts/debug.inc"
 
 EventScript_WhiteOut::
-	call EverGrandeCity_HallOfFame_EventScript_ResetEliteFour
+	call PokemonLeague_HallOfFame_EventScript_ResetEliteFour
 	end
-
-EverGrandeCity_HallOfFame_EventScript_ResetEliteFour::
-	clearflag FLAG_DEFEATED_LORELEI
-	clearflag FLAG_DEFEATED_BRUNO
-	clearflag FLAG_DEFEATED_AGATHA
-	clearflag FLAG_DEFEATED_LANCE
-	setvar VAR_ELITE_4_STATE, 0
-	return
 
 	.include "data/scripts/pkmn_center_nurse.inc"
 	.include "data/scripts/obtain_item.inc"
@@ -1352,3 +1344,7 @@ Text_VoiceRangOutDontRunAway::
 	.include "data/maps/IndigoPlateau_BattleTower_Lobby/scripts.inc"
 
 	.include "data/maps/IndigoPlateau_BattleFactory_Lobby/scripts.inc"
+
+	.include "data/maps/PokemonLeague_ChallengerRoom/scripts.inc"
+
+	.include "data/maps/PokemonLeague_SecretBattle/scripts.inc"

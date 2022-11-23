@@ -83,4 +83,5 @@ const u8 gTrainerClassNames[][13] = {
     [TRAINER_CLASS_TAMER]           = _("Tamer"),
     [TRAINER_CLASS_ENGINEER]        = _("Engineer"),
     [TRAINER_CLASS_COOL_COUPLE]     = _("Cool Couple"),
+    [TRAINER_CLASS_OAK]             = _("PKMN Prof."),
 };

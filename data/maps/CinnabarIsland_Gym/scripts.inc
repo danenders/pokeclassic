@@ -877,7 +877,6 @@ CinnabarIsland_Gym_Text_NoRoomForTM::
 CinnabarIsland_Gym_EventScript_LeaderPostBattle::
 	lock
 	faceplayer
-	goto_if_set FLAG_DAILY_IS_CURRENTLY_CHAMPION, CinnabarIsland_Gym_EventScript_LeaderPostBattleCurrentChampion
 	goto_if_set FLAG_SYS_GAME_CLEAR, CinnabarIsland_Gym_EventScript_LeaderPostBattleGameClear
 	msgbox CinnabarIsland_Gym_Text_LeaderPostBattle, MSGBOX_DEFAULT
 	release
@@ -887,18 +886,6 @@ CinnabarIsland_Gym_Text_LeaderPostBattle::
     .string "Fire Blast is the ultimate fire\n"
     .string "technique.\p"
     .string "Don't waste it on Water Pokémon.$"
-
-CinnabarIsland_Gym_EventScript_LeaderPostBattleCurrentChampion::
-	msgbox CinnabarIsland_Gym_Text_PostBattleCurrentChampion, MSGBOX_DEFAULT
-	release
-	end
-
-CinnabarIsland_Gym_Text_PostBattleCurrentChampion::
-    .string "Didn't I stoke the flames high enough?\p"
-    .string "I'll go back and work on my basic skills\n"
-    .string "again.\p"
-    .string "I burnt out...\n" 
-    .string "There's nothing but ashes left...$"
 
 CinnabarIsland_Gym_EventScript_LeaderPostBattleGameClear::
 	msgbox CinnabarIsland_Gym_Text_PostBattleGameClear, MSGBOX_DEFAULT

@@ -112,6 +112,7 @@ static void Task_Bruno(u8);
 static void Task_Agatha(u8);
 static void Task_Lance(u8);
 static void Task_Champion(u8);
+static void Task_Oak(u8);
 static void Task_Aqua(u8);
 static void Task_Magma(u8);
 static void Task_Regice(u8);
@@ -363,6 +364,7 @@ static const TaskFunc sTasks_Main[B_TRANSITION_COUNT] =
     [B_TRANSITION_AGATHA] = Task_Agatha,
     [B_TRANSITION_LANCE] = Task_Lance,
     [B_TRANSITION_CHAMPION] = Task_Champion,
+    [B_TRANSITION_OAK] = Task_Oak,
     [B_TRANSITION_AQUA] = Task_Aqua,
     [B_TRANSITION_MAGMA] = Task_Magma,
     [B_TRANSITION_REGICE] = Task_Regice,
@@ -548,22 +550,25 @@ static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
     [MUGSHOT_AGATHA]    = TRAINER_PIC_AGATHA,
     [MUGSHOT_LANCE]     = TRAINER_PIC_LANCE,
     [MUGSHOT_CHAMPION]  = TRAINER_PIC_RIVAL_CHAMPION,
+    [MUGSHOT_OAK]       = TRAINER_PIC_OAK,
 };
 static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
 {
-    [MUGSHOT_LORELEI]   =   {0x200, 0x200},
-    [MUGSHOT_BRUNO]     =   {0x200, 0x200},
+    [MUGSHOT_LORELEI]   =   {0x1B0, 0x1B0},
+    [MUGSHOT_BRUNO]     =   {0x1B0, 0x1B0},
     [MUGSHOT_AGATHA]    =   {0x1B0, 0x1B0},
-    [MUGSHOT_LANCE]     =   {0x1A0, 0x1A0},
-    [MUGSHOT_CHAMPION]  =   {0x188, 0x188},
+    [MUGSHOT_LANCE]     =   {0x1B0, 0x1B0},
+    [MUGSHOT_CHAMPION]  =   {0x1B0, 0x1B0},
+    [MUGSHOT_OAK]       =   {0x1B0, 0x1B0},
 };
 static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
 {
-    [MUGSHOT_LORELEI]   =   { 0,  0},
-    [MUGSHOT_BRUNO]     =   { 0,  0},
-    [MUGSHOT_AGATHA]    =   {-4,  4},
-    [MUGSHOT_LANCE]     =   { 0,  5},
-    [MUGSHOT_CHAMPION]  =   {-8,  7},
+    [MUGSHOT_LORELEI]   =   { -4,  4},
+    [MUGSHOT_BRUNO]     =   { -4,  4},
+    [MUGSHOT_AGATHA]    =   { -4,  4},
+    [MUGSHOT_LANCE]     =   { -4,  4},
+    [MUGSHOT_CHAMPION]  =   { 0,  0},
+    [MUGSHOT_OAK]       =   { 0,  0},
 };
 
 static const TransitionSpriteCallback sMugshotTrainerPicFuncs[] =
@@ -896,11 +901,12 @@ static const u16 sMugshotPal_May[] = INCBIN_U16("graphics/battle_transitions/may
 
 static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
 {
-    [MUGSHOT_LORELEI] = sMugshotPal_Lorelei,
-    [MUGSHOT_BRUNO] = sMugshotPal_Bruno,
-    [MUGSHOT_AGATHA] = sMugshotPal_Agatha,
-    [MUGSHOT_LANCE] = sMugshotPal_Lance,
-    [MUGSHOT_CHAMPION] = sMugshotPal_Champion
+    [MUGSHOT_LORELEI]   = sMugshotPal_Lorelei,
+    [MUGSHOT_BRUNO]     = sMugshotPal_Bruno,
+    [MUGSHOT_AGATHA]    = sMugshotPal_Agatha,
+    [MUGSHOT_LANCE]     = sMugshotPal_Lance,
+    [MUGSHOT_CHAMPION]  = sMugshotPal_Champion,
+    [MUGSHOT_OAK]       = sMugshotPal_Champion
 };
 
 static const u16 *const sPlayerMugshotsPals[GENDER_COUNT] =
@@ -2287,6 +2293,12 @@ static void Task_Lance(u8 taskId)
 static void Task_Champion(u8 taskId)
 {
     gTasks[taskId].tMugshotId = MUGSHOT_CHAMPION;
+    DoMugshotTransition(taskId);
+}
+
+static void Task_Oak(u8 taskId)
+{
+    gTasks[taskId].tMugshotId = MUGSHOT_OAK;
     DoMugshotTransition(taskId);
 }
 

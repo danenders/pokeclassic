@@ -254,6 +254,58 @@ static const struct TrainerMonItemCustomMoves sParty_EliteFourLance[] = {
     },
 };
 
+//Elite Four Postgame
+static const struct TrainerMonItemCustomMoves sParty_EliteFourLoreleiPostgame[] = {
+    {
+        .iv = 250,
+        .lvl = 1,
+        .species = SPECIES_DEWGONG,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_ICE_BEAM, MOVE_SURF, MOVE_HAIL, MOVE_SAFEGUARD},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_EliteFourBrunoPostgame[] = {
+    {
+        .iv = 250,
+        .lvl = 1,
+        .species = SPECIES_ONIX,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_TOMB, MOVE_IRON_TAIL, MOVE_ROAR},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_EliteFourAgathaPostgame[] = {
+    {
+        .iv = 250,
+        .lvl = 4,
+        .species = SPECIES_GENGAR,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_SHADOW_PUNCH, MOVE_CONFUSE_RAY, MOVE_TOXIC, MOVE_DOUBLE_TEAM},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_EliteFourLancePostgame[] = {
+    {
+        .iv = 250,
+        .lvl = 6,
+        .species = SPECIES_GYARADOS,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_HYPER_BEAM, MOVE_DRAGON_RAGE, MOVE_TWISTER, MOVE_BITE},
+    },
+};
+
+//Secret Battle
+static const struct TrainerMonItemCustomMoves sParty_SecretBattleOak[] = {
+    {
+        .iv = 250,
+        .lvl = 1,
+        .species = SPECIES_DITTO,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+    },
+};
+
 //Rival Battles
 static const struct TrainerMonNoItemDefaultMoves sParty_RivalFirstBattle[] = {
     {

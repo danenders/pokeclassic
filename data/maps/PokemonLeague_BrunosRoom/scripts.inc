@@ -49,6 +49,7 @@ PokemonLeague_BrunosRoom_EventScript_Bruno::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_BRUNO, PokemonLeague_BrunosRoom_EventScript_PostBattle
+	goto_if_ge VAR_ELITE_4_MODE, 2, PokemonLeague_BrunosRoom_EventScript_BrunoPostgame
 	msgbox PokemonLeague_BrunosRoom_Text_Intro
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
@@ -57,21 +58,38 @@ PokemonLeague_BrunosRoom_EventScript_Bruno::
 	goto PokemonLeague_BrunosRoom_EventScript_DefeatedBruno
 	end
 
-PokemonLeague_BrunosRoom_EventScript_PostBattle::
-	msgbox PokemonLeague_BrunosRoom_Text_PostBattle
-	closemessage
-	call_if_eq VAR_FACING, DIR_NORTH, PokemonLeague_BrunosRoom_EventScript_BrunoLookAwayRight
-	call_if_eq VAR_FACING, DIR_SOUTH, PokemonLeague_BrunosRoom_EventScript_BrunoLookAwayLeft
-	call_if_eq VAR_FACING, DIR_WEST, PokemonLeague_BrunosRoom_EventScript_BrunoLookAwayDown
-	call_if_eq VAR_FACING, DIR_EAST, PokemonLeague_BrunosRoom_EventScript_BrunoLookAwayDown
-	release
+PokemonLeague_BrunosRoom_EventScript_BrunoPostgame::
+	msgbox PokemonLeague_BrunosRoom_Text_Intro2
+	setflag FLAG_TEMP_3
+	setflag FLAG_TEMP_5
+	trainerbattle_no_intro POSTGAME_ELITE_FOUR_BRUNO, PokemonLeague_BrunosRoom_Text_Defeat2
+	clearflag FLAG_TEMP_5
+	goto PokemonLeague_BrunosRoom_EventScript_DefeatedBruno
 	end
 
 PokemonLeague_BrunosRoom_EventScript_DefeatedBruno::
 	setflag FLAG_DEFEATED_BRUNO
 	call PokemonLeague_EventScript_OpenDoor
+	goto_if_ge VAR_ELITE_4_MODE, 2, PokemonLeague_BrunosRoom_EventScript_PostBattle2
 	msgbox PokemonLeague_BrunosRoom_Text_PostBattle
 	closemessage
+	goto PokemonLeague_BrunosRoom_EventScript_BrunoLookAway
+	end
+
+PokemonLeague_BrunosRoom_EventScript_PostBattle::
+	goto_if_ge VAR_ELITE_4_MODE, 2, PokemonLeague_BrunosRoom_EventScript_PostBattle2
+	msgbox PokemonLeague_BrunosRoom_Text_PostBattle
+	closemessage
+	goto PokemonLeague_BrunosRoom_EventScript_BrunoLookAway
+	end
+
+PokemonLeague_BrunosRoom_EventScript_PostBattle2::
+	msgbox PokemonLeague_BrunosRoom_Text_PostBattle2
+	closemessage
+	goto PokemonLeague_BrunosRoom_EventScript_BrunoLookAway
+	end
+
+PokemonLeague_BrunosRoom_EventScript_BrunoLookAway::
 	call_if_eq VAR_FACING, DIR_NORTH, PokemonLeague_BrunosRoom_EventScript_BrunoLookAwayRight
 	call_if_eq VAR_FACING, DIR_SOUTH, PokemonLeague_BrunosRoom_EventScript_BrunoLookAwayLeft
 	call_if_eq VAR_FACING, DIR_WEST, PokemonLeague_BrunosRoom_EventScript_BrunoLookAwayDown
@@ -107,10 +125,29 @@ PokemonLeague_BrunosRoom_Text_Intro::
     .string "superior power!\p"
     .string "Hoo hah!$"
 
+PokemonLeague_BrunosRoom_Text_Intro2::
+    .string "I could feel the intensity of your\n"
+    .string "battle with Lorelei, even from here!\p" 
+    .string "Now it's time to show you the power\n" 
+    .string "of my Fighting-type Pokémon, who I've\l" 
+    .string "been training just as hard as you've\l" 
+    .string "trained your team, surely!\p" 
+    .string "Hoo hah! Hoo! HAH!!!$"
+
 PokemonLeague_BrunosRoom_Text_Defeat::
     .string "Why?\n"
     .string "How could I lose?$"
 
+PokemonLeague_BrunosRoom_Text_Defeat2::
+    .string "I have regrets!$"
+
 PokemonLeague_BrunosRoom_Text_PostBattle::
     .string "My job is done.\n"
     .string "Go face your next challenge.$"
+
+PokemonLeague_BrunosRoom_Text_PostBattle2::
+    .string "Ugh! No! So my training is still\n" 
+    .string "lacking, is that it?\p"
+    .string "...Go.\p"
+    .string "Do not trouble yourself on my behalf.\n" 
+    .string "Continue to move forward!$"

@@ -17,8 +17,7 @@ PkmnLeague_Services_RankBoard::
 	waitmessage
 	playse SE_RG_HELP_OPEN
 	waitse
-	goto_if_set FLAG_DAILY_IS_CURRENTLY_CHAMPION, PkmnLeague_Services_Ranking_Champion
-	goto_if_set FLAG_SYS_GAME_CLEAR, PkmnLeague_Services_Ranking_FormerChampion
+	goto_if_set FLAG_SYS_GAME_CLEAR, PkmnLeague_Services_Ranking_Champion
 	call PkmnLeague_Services_CalculateBadges
 	goto_if_eq  VAR_TEMP_1, 8, PkmnLeague_Services_Ranking_Elite
 	goto_if_ge  VAR_TEMP_1, 6, PkmnLeague_Services_Ranking_Veteran
@@ -95,6 +94,7 @@ PkmnLeague_Services_Ranking_Text_Elite:
 
 PkmnLeague_Services_Ranking_Champion::
 	msgbox PkmnLeague_Services_Ranking_Text_Champion, MSGBOX_DEFAULT
+	goto_if_unset FLAG_DAILY_TITLE_MATCH, PkmnLeague_Services_Ranking_TitleMatch
 	release
 	end
 
@@ -108,26 +108,16 @@ PkmnLeague_Services_Text_Searching:
 	.string "Found trainer....\p"
 	.string "{PLAYER} from Pallet Town.$"
 
-PkmnLeague_Services_Ranking_FormerChampion::
-	msgbox PkmnLeague_Services_Ranking_Text_FormerChampion, MSGBOX_DEFAULT
-	goto_if_unset FLAG_DAILY_TITLE_MATCH, PkmnLeague_Services_Ranking_ReclaimTitle
-	release
-	end
-
-PkmnLeague_Services_Ranking_Text_FormerChampion:
-	.string "Your current rank is:\p"
-	.string "Former Champion!$"
-
-PkmnLeague_Services_Ranking_ReclaimTitle::
+PkmnLeague_Services_Ranking_TitleMatch::
 	msgbox PkmnLeague_Services_Ranking_Text_TitleMatch, MSGBOX_DEFAULT
 	release
 	end
 
 PkmnLeague_Services_Ranking_Text_TitleMatch:
-	.string "As the Former Champion, you are entitled\n"
-	.string "to defend your Rank!\p"
-	.string "Visit the Pokémon League to challenge\n"
-	.string "the lastet champion in a Title Match!$"
+	.string "Someone is challenging your status as\n"
+	.string "the champion!\p"
+	.string "Visit the Pokémon League to face your\n"
+	.string "challenger in a Title Match!$"
 
 @BADGE CHECKS
 PkmnLeague_Services_MustBeBeginner::
@@ -336,19 +326,12 @@ PkmnLeague_Services_EliteShop::
 	goto_if_lt VAR_TEMP_1, 8, PkmnLeague_Services_MustBeElite
 	message gText_HowMayIServeYou
 	waitmessage
-	goto_if_set FLAG_DAILY_IS_CURRENTLY_CHAMPION, PkmnLeague_Services_EliteShop_Champion
 	goto_if_set FLAG_SYS_GAME_CLEAR, PkmnLeague_Services_EliteShop_PostGameShop
 	goto PkmnLeague_Services_EliteShop_Elite
 	end
 
 PkmnLeague_Services_EliteShop_PostGameShop::
 	pokemart PkmnLeague_Services_Mart_EliteShop_Postgame
-	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
-	release
-	end
-
-PkmnLeague_Services_EliteShop_Champion::
-	pokemart PkmnLeague_Services_Mart_EliteShop_Champion
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
@@ -370,27 +353,14 @@ PkmnLeague_Services_Mart_EliteShop_Elite:
 	release
 	end
 
+	.align 2
 PkmnLeague_Services_Mart_EliteShop_Postgame:
 	.2byte ITEM_PP_UP
 	.2byte ITEM_PP_MAX
-	.2byte ITEM_MAX_POTION
+	.2byte ITEM_FULL_RESTORE
 	.2byte ITEM_MAX_REVIVE
 	.2byte ITEM_MAX_ETHER
 	.2byte ITEM_MAX_ELIXIR
 	.2byte ITEM_NONE
 	release
 	end
-
-	.align 2
-PkmnLeague_Services_Mart_EliteShop_Champion:
-	.2byte ITEM_PP_UP
-	.2byte ITEM_PP_MAX
-	.2byte ITEM_MAX_POTION
-	.2byte ITEM_MAX_REVIVE
-	.2byte ITEM_MAX_ETHER
-	.2byte ITEM_MAX_ELIXIR
-	.2byte ITEM_NONE
-	release
-	end
-
-@REPLACE THESE REWARDS WITH NATURE MINTS AND ABILITY CAPSULES

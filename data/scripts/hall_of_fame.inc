@@ -1,11 +1,1 @@
-EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags::
-	special SetChampionSaveWarp
-	setflag FLAG_IS_CHAMPION
-	call EverGrandeCity_HallOfFame_EventScript_ResetDefeatedEventLegendaries
-	call EverGrandeCity_HallOfFame_EventScript_ResetEliteFour
-	special UpdateTrainerFanClubGameClear
-	return
-
-EverGrandeCity_HallOfFame_EventScript_ResetDefeatedEventLegendaries::
-	clearflag FLAG_DEFEATED_MEW
-	return
+@emptied

@@ -111,7 +111,6 @@ CeruleanCity_Gym_Text_NoRoomForTM::
 CeruleanCity_Gym_EventScript_LeaderPostBattle::
 	lock
 	faceplayer
-	goto_if_set FLAG_DAILY_IS_CURRENTLY_CHAMPION, CeruleanCity_Gym_EventScript_LeaderPostBattleCurrentChampion
 	goto_if_set FLAG_SYS_GAME_CLEAR, CeruleanCity_Gym_EventScript_LeaderPostBattleGameClear
 	msgbox CeruleanCity_Gym_Text_LeaderPostBattle, MSGBOX_DEFAULT
 	release
@@ -121,15 +120,6 @@ CeruleanCity_Gym_Text_LeaderPostBattle::
 	.string "Misty: There are times when I want\n"
 	.string "to just break free from a puny\l" 
 	.string "little pool and swim in the big blue!$"
-
-CeruleanCity_Gym_EventScript_LeaderPostBattleCurrentChampion::
-	msgbox CeruleanCity_Gym_Text_PostBattleCurrentChampion, MSGBOX_DEFAULT
-	release
-	end
-
-CeruleanCity_Gym_Text_PostBattleCurrentChampion::
-	.string "You may be the current champion, {PLAYER},\n"
-	.string "but you're still a pest!$"
 
 CeruleanCity_Gym_EventScript_LeaderPostBattleGameClear::
 	msgbox CeruleanCity_Gym_Text_PostBattleGameClear, MSGBOX_DEFAULT

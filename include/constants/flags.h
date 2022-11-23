@@ -147,8 +147,8 @@
 #define FLAG_DEFEATED_AGATHA  			    0x81
 #define FLAG_DEFEATED_LANCE         		0x82
 #define FLAG_DEFEATED_RIVAL_CHAMPION        0x83
-#define FLAG_RIVAL_REMATCHED          		0x84 //Found post-game rival for Rematch in Viridian Gym
-#define FLAG_UNUSED_0x085            		0x85
+#define FLAG_DEFEATED_SECRET_BATTLE         0x84
+#define FLAG_RIVAL_REMATCHED          		0x85 //Found post-game rival for Rematch in Viridian Gym
 #define FLAG_UNUSED_0x086             		0x86
 #define FLAG_UNUSED_0x087  					0x87
 #define FLAG_UNUSED_0x088 					0x88 
@@ -1579,25 +1579,25 @@
 #define FLAG_DAILY_RIVAL_REMATCH        			(DAILY_FLAGS_START + 0xB)
 
 //Title Match Flags
-#define FLAG_DAILY_IS_CURRENTLY_CHAMPION            (DAILY_FLAGS_START + 0xC)  // Champion status resets every day. Used for post-game content and dialogue differences
-#define FLAG_DAILY_TITLE_MATCH     					(DAILY_FLAGS_START + 0xD)  // You only get one shot to retain the title every day.
+#define FLAG_DAILY_TITLE_MATCH     					(DAILY_FLAGS_START + 0xC)  // You only get one shot to retain the title every day.
 
 //Daily Events
-#define FLAG_DAILY_MT_MOON_MUSHROOMS        		(DAILY_FLAGS_START + 0xE)   // Hidden mushrooms in Mt. Moon reset each day
-#define FLAG_DAILY_CERULEAN_BERRY          			(DAILY_FLAGS_START + 0xF)   // The breeder in Cerulean gives a friendship berry once per day
-#define FLAG_DAILY_GOT_TEA       					(DAILY_FLAGS_START + 0x10)  // If you don't have one, you can get a Tea once per day.
-#define FLAG_DAILY_GUARD_TEA               			(DAILY_FLAGS_START + 0x11)  // Giving the guards tea once per day will unlock something. Reward tbd.
-#define FLAG_DAILY_FANCLUB_REWARD        			(DAILY_FLAGS_START + 0x12)  // Fanclub chairman gives 1 rare candy every day
-#define FLAG_DAILY_GAME_CORNER_SERVICE_DAY_CHECKED  (DAILY_FLAGS_START + 0x13)  // Checks if its a Service Day at the game corner 
-#define FLAG_DAILY_COIN_REFRESH                		(DAILY_FLAGS_START + 0x14)  // Once per day, one of the 12 stashes of coins will refresh.
-#define FLAG_DAILY_SAFARI_GAME_PRIZE                (DAILY_FLAGS_START + 0x15)  // Getting to the secret house gives a prize each time AFTER getting Surf
-#define FLAG_DAILY_BERRY_BLEND_OPPONENTS            (DAILY_FLAGS_START + 0x16)  // The number of opponents for Berry Blend is random every day.
-#define FLAG_DAILY_DOJO_RESET                       (DAILY_FLAGS_START + 0x17)  // The Dojo resets its trainers for free once per day.
-#define FLAG_DAILY_STATUS_BERRY                     (DAILY_FLAGS_START + 0x18) // The little girl in the day care gives a status berry once per day.
-#define FLAG_DAILY_HEALING_BERRY                    (DAILY_FLAGS_START + 0x19) // Lass on Route10 will give a healing berry once per day.
-#define FLAG_DAILY_MIXING_BERRY                     (DAILY_FLAGS_START + 0x1A) // The slowpoke lady in Pewter will reward you with a mixing berry once per day.
-#define FLAG_DAILY_BATTLE_BERRY                     (DAILY_FLAGS_START + 0x1B) // Battle girl in Indingo Plateau gives a battle berry (Sitrus, Lum, or Leppa) once per day.
+#define FLAG_DAILY_MT_MOON_MUSHROOMS        		(DAILY_FLAGS_START + 0xD)   // Hidden mushrooms in Mt. Moon reset each day
+#define FLAG_DAILY_CERULEAN_BERRY          			(DAILY_FLAGS_START + 0xE)   // The breeder in Cerulean gives a friendship berry once per day
+#define FLAG_DAILY_GOT_TEA       					(DAILY_FLAGS_START + 0xF)   // If you don't have one, you can get a Tea once per day.
+#define FLAG_DAILY_GUARD_TEA               			(DAILY_FLAGS_START + 0x10)  // Giving the guards tea once per day will unlock something. Reward tbd.
+#define FLAG_DAILY_FANCLUB_REWARD        			(DAILY_FLAGS_START + 0x11)  // Fanclub chairman gives 1 rare candy every day
+#define FLAG_DAILY_GAME_CORNER_SERVICE_DAY_CHECKED  (DAILY_FLAGS_START + 0x12)  // Checks if its a Service Day at the game corner 
+#define FLAG_DAILY_COIN_REFRESH                		(DAILY_FLAGS_START + 0x13)  // Once per day, one of the 12 stashes of coins will refresh.
+#define FLAG_DAILY_SAFARI_GAME_PRIZE                (DAILY_FLAGS_START + 0x14)  // Getting to the secret house gives a prize each time AFTER getting Surf
+#define FLAG_DAILY_BERRY_BLEND_OPPONENTS            (DAILY_FLAGS_START + 0x15)  // The number of opponents for Berry Blend is random every day.
+#define FLAG_DAILY_DOJO_RESET                       (DAILY_FLAGS_START + 0x16)  // The Dojo resets its trainers for free once per day.
+#define FLAG_DAILY_STATUS_BERRY                     (DAILY_FLAGS_START + 0x17)  // The little girl in the day care gives a status berry once per day.
+#define FLAG_DAILY_HEALING_BERRY                    (DAILY_FLAGS_START + 0x18)  // Lass on Route10 will give a healing berry once per day.
+#define FLAG_DAILY_MIXING_BERRY                     (DAILY_FLAGS_START + 0x19)  // The slowpoke lady in Pewter will reward you with a mixing berry once per day.
+#define FLAG_DAILY_BATTLE_BERRY                     (DAILY_FLAGS_START + 0x1A)  // Battle girl in Indingo Plateau gives a battle berry (Sitrus, Lum, or Leppa) once per day.
 
+#define FLAG_UNUSED_0x93B                           (DAILY_FLAGS_START + 0x1B) // Unused Flag
 #define FLAG_UNUSED_0x93C                           (DAILY_FLAGS_START + 0x1C) // Unused Flag
 #define FLAG_UNUSED_0x93D                           (DAILY_FLAGS_START + 0x1D) // Unused Flag
 #define FLAG_UNUSED_0x93E                           (DAILY_FLAGS_START + 0x1E) // Unused Flag

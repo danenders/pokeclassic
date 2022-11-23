@@ -103,17 +103,25 @@ PokemonLeague_LancesRoom_EventScript_Lance::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_LANCE, PokemonLeague_LancesRoom_EventScript_PostBattle
+	goto_if_ge VAR_ELITE_4_MODE, 2, PokemonLeague_LancesRoom_EventScript_LancePostgame
 	msgbox PokemonLeague_LancesRoom_Text_Intro
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
 	trainerbattle_no_intro TRAINER_ELITE_FOUR_LANCE, PokemonLeague_LancesRoom_Text_Defeat
+	setdynamicwarp MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM, 6, 19
 	clearflag FLAG_TEMP_5
 	goto PokemonLeague_LancesRoom_EventScript_DefeatedLance
 	end
 
-PokemonLeague_LancesRoom_EventScript_PostBattle::
-	msgbox PokemonLeague_LancesRoom_Text_PostBattle
-	release
+PokemonLeague_LancesRoom_EventScript_LancePostgame::
+	msgbox PokemonLeague_LancesRoom_Text_Intro2
+
+	setflag FLAG_TEMP_3
+	setflag FLAG_TEMP_5
+	trainerbattle_no_intro POSTGAME_ELITE_FOUR_LANCE, PokemonLeague_LancesRoom_Text_Defeat2
+	clearflag FLAG_TEMP_5
+	setdynamicwarp MAP_POKEMON_LEAGUE_SECRET_BATTLE, 6, 19
+	goto PokemonLeague_LancesRoom_EventScript_DefeatedLance
 	end
 
 PokemonLeague_LancesRoom_EventScript_DefeatedLance::
@@ -121,30 +129,22 @@ PokemonLeague_LancesRoom_EventScript_DefeatedLance::
 	special Script_TryGainNewFanFromCounter
 	setflag FLAG_DEFEATED_LANCE
 	call PokemonLeague_EventScript_OpenDoorLance
+	goto_if_ge VAR_ELITE_4_MODE, 2, PokemonLeague_LancesRoom_EventScript_PostBattle2
 	msgbox PokemonLeague_LancesRoom_Text_PostBattle
 	closemessage
 	release
 	end
 
-PokemonLeague_LancesRoom_EventScript_LanceMoveOutOfWayLeft::
-	applymovement LOCALID_LANCE, PokemonLeague_LancesRoom_Movement_LanceMoveOutOfWayLeft
-	waitmovement 1
-	return
+PokemonLeague_LancesRoom_EventScript_PostBattle::
+	goto_if_ge VAR_ELITE_4_MODE, 2, PokemonLeague_LancesRoom_EventScript_PostBattle2
+	msgbox PokemonLeague_LancesRoom_Text_PostBattle
+	release
+	end
 
-PokemonLeague_LancesRoom_EventScript_LanceMoveOutOfWayRight::
-	applymovement LOCALID_LANCE, PokemonLeague_LancesRoom_Movement_LanceMoveOutOfWayRight
-	waitmovement 1
-	return
-
-PokemonLeague_LancesRoom_Movement_LanceMoveOutOfWayLeft::
-	walk_left
-	walk_in_place_faster_right
-	step_end
-
-PokemonLeague_LancesRoom_Movement_LanceMoveOutOfWayRight::
-	walk_right
-	walk_in_place_faster_left
-	step_end
+PokemonLeague_LancesRoom_EventScript_PostBattle2::
+	msgbox PokemonLeague_LancesRoom_Text_PostBattle2
+	release
+	end
 
 PokemonLeague_LancesRoom_Text_Intro::
     .string "Ah! I've heard about you,\n"
@@ -162,10 +162,23 @@ PokemonLeague_LancesRoom_Text_Intro::
     .string "Your League challenge ends with\n"
     .string "me, {PLAYER}!$"
 
+PokemonLeague_LancesRoom_Text_Intro2::
+    .string "I'm glad you've come.\p" 
+    .string "The Pokémon League's reputation has\n" 
+    .string "really taken off!\p" 
+    .string "It's all thanks to you.\p" 
+    .string "I'd feel ashamed to call myself Lance\n" 
+    .string "the Dragon Trainer if I didn't challenge\l" 
+    .string "you to a battle!$"
+
 PokemonLeague_LancesRoom_Text_Defeat::
     .string "That's it!\p"
     .string "I hate to admit it, but you are a\n"
     .string "Pokémon master!$"
+
+PokemonLeague_LancesRoom_Text_Defeat2::
+    .string "How could I be pushed to\n" 
+    .string "such a point?$"
 
 PokemonLeague_LancesRoom_Text_PostBattle::
     .string "I still can't believe my dragons\n"
@@ -181,3 +194,13 @@ PokemonLeague_LancesRoom_Text_PostBattle::
     .string "you.\p"
     .string "He is the real Pokémon League\n"
     .string "Champion.$"
+
+PokemonLeague_LancesRoom_Text_PostBattle2::
+    .string "My dragon brigade is not weak.\p" 
+    .string "...What I'm saying is that means your\n" 
+    .string "strength is truly incredible!\p" 
+    .string "Now then, {PLAYER}!\p" 
+    .string "You have defeated the Elite Four once\n"
+    .string "again, but one last challenge awaits!\p"
+    .string "We've arranged a special challenge\n"
+    .string "for you, Champion!$"

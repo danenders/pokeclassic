@@ -325,7 +325,6 @@ VermilionCity_Gym_Text_NoRoomForTM::
 VermilionCity_Gym_EventScript_LeaderPostBattle::
 	lock
 	faceplayer
-	goto_if_set FLAG_DAILY_IS_CURRENTLY_CHAMPION, VermilionCity_Gym_EventScript_LeaderPostBattleCurrentChampion
 	goto_if_set FLAG_SYS_GAME_CLEAR, VermilionCity_Gym_EventScript_LeaderPostBattleGameClear
 	msgbox VermilionCity_Gym_Text_LeaderPostBattle, MSGBOX_DEFAULT
 	release
@@ -336,18 +335,6 @@ VermilionCity_Gym_Text_LeaderPostBattle::
     .string "Electricity is sure powerful!\p"
     .string "But, it's useless against Ground-\n"
     .string "type Pokémon!$"
-
-VermilionCity_Gym_EventScript_LeaderPostBattleCurrentChampion::
-	msgbox VermilionCity_Gym_Text_PostBattleCurrentChampion, MSGBOX_DEFAULT
-	release
-	end
-
-VermilionCity_Gym_Text_PostBattleCurrentChampion::
-	.string "You are very strong!\n" 
-	.string "You're the victor, again!\p" 
-	.string "Next time, I'm not gonna lose!\p" 
-	.string "I'll train hard and be number one\n"
-	.string "in Pokémon battling!$"
 
 VermilionCity_Gym_EventScript_LeaderPostBattleGameClear::
 	msgbox VermilionCity_Gym_Text_PostBattleGameClear, MSGBOX_DEFAULT

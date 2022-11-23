@@ -1,9 +1,9 @@
 {
-  "id": "MAP_POKEMON_LEAGUE_LANCES_ROOM",
-  "name": "PokemonLeague_LancesRoom",
-  "layout": "LAYOUT_POKEMON_LEAGUE_LANCES_ROOM",
+  "id": "MAP_POKEMON_LEAGUE_SECRET_BATTLE",
+  "name": "PokemonLeague_SecretBattle",
+  "layout": "LAYOUT_POKEMON_LEAGUE_SECRET_BATTLE",
   "music": "MUS_RG_VICTORY_ROAD",
-  "region_map_section": "MAPSEC_POKEMON_LEAGUE",
+  "region_map_section": "MAPSEC_INDIGO_PLATEAU",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -15,33 +15,26 @@
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_LANCE",
+      "graphics_id": "OBJ_EVENT_GFX_PROF_OAK",
       "in_connection": false,
       "x": 6,
       "y": 8,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PokemonLeague_LancesRoom_EventScript_Lance",
+      "script": "NULL",
       "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 23,
-      "y": 13,
-      "elevation": 3,
-      "dest_map": "MAP_POKEMON_LEAGUE_AGATHAS_ROOM",
-      "dest_warp_id": 1
-    },
-    {
       "x": 6,
-      "y": 5,
-      "elevation": 0,
-      "dest_map": "MAP_NONE",
+      "y": 2,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_LEAGUE_HALL_OF_FAME",
       "dest_warp_id": 0
     }
   ],
@@ -50,6 +43,5 @@
   ],
   "bg_events": [
 
-  ],
-  "floor_number": ""
+  ]
 }

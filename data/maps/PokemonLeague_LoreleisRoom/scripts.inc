@@ -51,6 +51,7 @@ PokemonLeague_LoreleisRoom_EventScript_Lorelei::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_LORELEI, PokemonLeague_LoreleisRoom_EventScript_PostBattle
+	goto_if_ge VAR_ELITE_4_MODE, 2, PokemonLeague_LoreleisRoom_EventScript_LoreleiPostgame
 	msgbox PokemonLeague_LoreleisRoom_Text_Intro
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
@@ -73,14 +74,34 @@ PokemonLeague_LoreleisRoom_Text_Intro::
 PokemonLeague_LoreleisRoom_Text_Defeat::
     .string "…Things shouldn't be this way!$"
 
+PokemonLeague_LoreleisRoom_EventScript_LoreleiPostgame::
+	msgbox PokemonLeague_LoreleisRoom_Text_Intro2
+	setflag FLAG_TEMP_3
+	setflag FLAG_TEMP_5
+	trainerbattle_no_intro POSTGAME_ELITE_FOUR_LORELEI, PokemonLeague_LoreleisRoom_Text_Defeat2
+	clearflag FLAG_TEMP_5
+	goto PokemonLeague_LoreleisRoom_EventScript_DefeatedLorelei
+	end
+
+PokemonLeague_LoreleisRoom_Text_Intro2::
+    .string "Welcome to the Pokémon League!\p" 
+    .string "Hey, fantastic timing!\p" 
+    .string "I was just thinking how I'd like to\n"
+    .string "battle you. I hope you're ready.$"
+
+PokemonLeague_LoreleisRoom_Text_Defeat2::
+	.string "Argh! How?!$"
+
 PokemonLeague_LoreleisRoom_EventScript_DefeatedLorelei::
 	setflag FLAG_DEFEATED_LORELEI
 	call PokemonLeague_EventScript_OpenDoor
+	goto_if_ge VAR_ELITE_4_MODE, 2, PokemonLeague_LoreleisRoom_EventScript_PostBattle2
 	msgbox PokemonLeague_LoreleisRoom_Text_PostBattle
 	release
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_PostBattle::
+	goto_if_ge VAR_ELITE_4_MODE, 2, PokemonLeague_LoreleisRoom_EventScript_PostBattle2
 	msgbox PokemonLeague_LoreleisRoom_Text_PostBattle
 	release
 	end
@@ -90,3 +111,14 @@ PokemonLeague_LoreleisRoom_Text_PostBattle::
     .string "Go on ahead.\p"
     .string "You only got a taste of the\n"
     .string "Pokémon League's power.$"
+
+PokemonLeague_LoreleisRoom_EventScript_PostBattle2::
+	msgbox PokemonLeague_LoreleisRoom_Text_PostBattle2
+	release
+	end
+
+PokemonLeague_LoreleisRoom_Text_PostBattle2::
+    .string "I may have lost, but I'll never\n" 
+    .string "give up on my Ice-type Pokémon!\p" 
+    .string "You should aim to win using\n"
+    .string "Pokémon you like best, too!$"

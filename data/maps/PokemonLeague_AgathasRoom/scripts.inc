@@ -47,6 +47,7 @@ PokemonLeague_AgathasRoom_EventScript_Agatha::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_AGATHA, PokemonLeague_AgathasRoom_EventScript_PostBattle
+	goto_if_ge VAR_ELITE_4_MODE, 2, PokemonLeague_AgathasRoom_EventScript_AgathaPostgame
 	msgbox PokemonLeague_AgathasRoom_Text_Intro
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
@@ -55,15 +56,31 @@ PokemonLeague_AgathasRoom_EventScript_Agatha::
 	goto PokemonLeague_AgathasRoom_EventScript_DefeatedAgatha
 	end
 
-PokemonLeague_AgathasRoom_EventScript_PostBattle::
-	msgbox PokemonLeague_AgathasRoom_Text_PostBattle
-	release
+PokemonLeague_AgathasRoom_EventScript_AgathaPostgame::
+	msgbox PokemonLeague_AgathasRoom_Text_Intro2
+	setflag FLAG_TEMP_3
+	setflag FLAG_TEMP_5
+	trainerbattle_no_intro POSTGAME_ELITE_FOUR_AGATHA, PokemonLeague_AgathasRoom_Text_Defeat2
+	clearflag FLAG_TEMP_5
+	goto PokemonLeague_AgathasRoom_EventScript_DefeatedAgatha
 	end
 
 PokemonLeague_AgathasRoom_EventScript_DefeatedAgatha::
 	setflag FLAG_DEFEATED_AGATHA
 	call PokemonLeague_EventScript_OpenDoor
+	goto_if_ge VAR_ELITE_4_MODE, 2, PokemonLeague_AgathasRoom_EventScript_PostBattle2
 	msgbox PokemonLeague_AgathasRoom_Text_PostBattle
+	release
+	end
+
+PokemonLeague_AgathasRoom_EventScript_PostBattle::
+	goto_if_ge VAR_ELITE_4_MODE, 2, PokemonLeague_AgathasRoom_EventScript_PostBattle2
+	msgbox PokemonLeague_AgathasRoom_Text_PostBattle
+	release
+	end
+
+PokemonLeague_AgathasRoom_EventScript_PostBattle2::
+	msgbox PokemonLeague_AgathasRoom_Text_PostBattle2
 	release
 	end
 
@@ -82,9 +99,19 @@ PokemonLeague_AgathasRoom_Text_Intro::
     .string "{PLAYER}! I'll show you how a real\n"
     .string "trainer battles!$"
 
+PokemonLeague_AgathasRoom_Text_Intro2::
+    .string "So you've come!\p" 
+    .string "It's not in my character to\n"
+    .string "lose over and over.\p" 
+    .string "Give this battle everything you've\n" 
+    .string "got!$"
+
 PokemonLeague_AgathasRoom_Text_Defeat::
     .string "Oh, my!\n"
     .string "You're something special, child!$"
+
+PokemonLeague_AgathasRoom_Text_Defeat2::
+    .string "Not bad!$"
 
 PokemonLeague_AgathasRoom_Text_PostBattle::
     .string "You win!\p"
@@ -92,3 +119,11 @@ PokemonLeague_AgathasRoom_Text_PostBattle::
     .string "you now.\p"
     .string "I have nothing else to say.\n"
     .string "Run along now, child!$"
+
+PokemonLeague_AgathasRoom_Text_PostBattle2::
+    .string "Small wonder that old-timer's taken\n" 
+    .string "such an interest in you.\p" 
+    .string "Oak and I used to be good rivals, too,\n" 
+    .string "you know. Just like you and {RIVAL}.\p" 
+    .string "Well, what are you waiting for?\n" 
+    .string "Head on to the next room!$"

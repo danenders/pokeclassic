@@ -8136,6 +8136,30 @@
       "secondary_tileset": "gTileset_SilphCo",
       "border_filepath": "data/layouts/IndigoPlateau_BattleFactory_Lobby/border.bin",
       "blockdata_filepath": "data/layouts/IndigoPlateau_BattleFactory_Lobby/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMON_LEAGUE_CHALLENGER_ROOM",
+      "name": "PokemonLeague_ChallengerRoom_Layout",
+      "width": 13,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonLeague",
+      "border_filepath": "data/layouts/PokemonLeague_ChallengerRoom/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_ChallengerRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMON_LEAGUE_SECRET_BATTLE",
+      "name": "PokemonLeague_SecretBattle_Layout",
+      "width": 13,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonLeague",
+      "border_filepath": "data/layouts/PokemonLeague_SecretBattle/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_SecretBattle/map.bin"
     }
   ]
 }

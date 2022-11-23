@@ -126,7 +126,6 @@ PewterCity_Gym_Text_NoRoomForTM::
 PewterCity_Gym_EventScript_LeaderPostBattle::
 	lock
 	faceplayer
-	goto_if_set FLAG_DAILY_IS_CURRENTLY_CHAMPION, PewterCity_Gym_EventScript_LeaderPostBattleCurrentChampion
 	goto_if_set FLAG_SYS_GAME_CLEAR, PewterCity_Gym_EventScript_LeaderPostBattleGameClear
 	msgbox PewterCity_Gym_Text_LeaderPostBattle, MSGBOX_DEFAULT
 	release
@@ -140,16 +139,6 @@ PewterCity_Gym_Text_LeaderPostBattle::
     .string "So let me make a suggestion.\p"
     .string "Go to the Gym in Cerulean and test\n"
     .string "your abilities.$"
-
-PewterCity_Gym_EventScript_LeaderPostBattleCurrentChampion::
-	msgbox PewterCity_Gym_Text_PostBattleCurrentChampion, MSGBOX_DEFAULT
-	release
-	end
-
-PewterCity_Gym_Text_PostBattleCurrentChampion::
-	.string "You may be the current champion, {PLAYER},\n"
-	.string "but you should never stop training!\p"
-	.string "It's important to keep your skills sharp!$"
 
 PewterCity_Gym_EventScript_LeaderPostBattleGameClear::
 	msgbox PewterCity_Gym_Text_PostBattleGameClear, MSGBOX_DEFAULT

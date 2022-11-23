@@ -454,6 +454,7 @@
 #define TRAINER_CLASS_TAMER 		 0x57
 #define TRAINER_CLASS_ENGINEER 	     0x58
 #define TRAINER_CLASS_COOL_COUPLE 	 0x59
+#define TRAINER_CLASS_OAK 			 0x60
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music

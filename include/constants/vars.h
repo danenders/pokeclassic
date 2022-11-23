@@ -172,7 +172,7 @@
 #define VAR_VICTORY_ROAD_2F_BOULDER1     	0x4099
 #define VAR_VICTORY_ROAD_2F_BOULDER2        0x409A
 #define VAR_VICTORY_ROAD_3F_STATE           0x409B 
-#define UNUSED_VARIABLE_33                  0x409C
+#define VAR_ELITE_4_MODE                    0x409C //Controls battle types for Elite 4
 #define UNUSED_VARIABLE_34                  0x409D 
 #define UNUSED_VARIABLE_35    				0x409E
 #define UNUSED_VARIABLE_36      			0x409F

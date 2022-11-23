@@ -113,7 +113,6 @@ FuchsiaCity_Gym_Text_NoRoomForTM::
 FuchsiaCity_Gym_EventScript_LeaderPostBattle::
 	lock
 	faceplayer
-	goto_if_set FLAG_DAILY_IS_CURRENTLY_CHAMPION, FuchsiaCity_Gym_EventScript_LeaderPostBattleCurrentChampion
 	goto_if_set FLAG_SYS_GAME_CLEAR, FuchsiaCity_Gym_EventScript_LeaderPostBattleGameClear
 	msgbox FuchsiaCity_Gym_Text_LeaderPostBattle, MSGBOX_DEFAULT
 	release
@@ -126,29 +125,18 @@ FuchsiaCity_Gym_Text_LeaderPostBattle::
     .string "battle wears on!\p"
     .string "It will surely terrorize foes!$"
 
-FuchsiaCity_Gym_EventScript_LeaderPostBattleCurrentChampion::
-	msgbox FuchsiaCity_Gym_Text_PostBattleCurrentChampion, MSGBOX_DEFAULT
-	release
-	end
-
-FuchsiaCity_Gym_Text_PostBattleCurrentChampion::
-	.string "With Trainers like you and {RIVAL}\n" 
-	.string "the Pokémon League must be a place of\l"
-	.string "formidable strength!\p" 
-	.string "Truly, it is something to be proud of!\p"
-	.string "As it so happens, I have been thinking\n"
-	.string "of aiming to join the Elite Four myself...$"
-
 FuchsiaCity_Gym_EventScript_LeaderPostBattleGameClear::
 	msgbox FuchsiaCity_Gym_Text_PostBattleGameClear, MSGBOX_DEFAULT
 	release
 	end
 
 FuchsiaCity_Gym_Text_PostBattleGameClear::
-	.string "You have done well.\p" 
-	.string "If I cannot match you now, I \n"
-	.string "can only train further.\p" 
-	.string "Continue testing your skill!$"
+	.string "With Trainers like you and {RIVAL}\n" 
+	.string "the Pokémon League must be a place of\l"
+	.string "formidable strength!\p" 
+	.string "Truly, it is something to be proud of!\p"
+	.string "As it so happens, I have been thinking\n"
+	.string "of aiming to join the Elite Four myself...$"
 
 FuchsiaCity_Gym_EventScript_RematchLeader::
 	msgbox FuchsiaCity_Gym_Text_RematchLeader, MSGBOX_YESNO

@@ -788,6 +788,8 @@
 #define MAP_INDIGO_PLATEAU_BATTLE_TOWER_ELEVATOR (9 | (19 << 8))
 #define MAP_INDIGO_PLATEAU_BATTLE_TOWER_LOBBY    (10 | (19 << 8))
 #define MAP_INDIGO_PLATEAU_BATTLE_FACTORY_LOBBY  (11 | (19 << 8))
+#define MAP_POKEMON_LEAGUE_CHALLENGER_ROOM       (12 | (19 << 8))
+#define MAP_POKEMON_LEAGUE_SECRET_BATTLE         (13 | (19 << 8))
 
 // gMapGroup_IndoorRoute2
 #define MAP_VIRIDIAN_FOREST_NORTH_ENTRANCE (0 | (20 << 8))
@@ -846,6 +848,6 @@
 
 #define MAP_GROUPS_COUNT 34
 
-// static const u8 MAP_GROUP_COUNT[] = {57, 107, 103, 100, 38, 61, 37, 81, 58, 4, 6, 8, 10, 6, 8, 20, 10, 8, 10, 12, 4, 2, 2, 1, 1, 1, 2, 2, 3, 2, 3, 2, 1, 1, 0};
+// static const u8 MAP_GROUP_COUNT[] = {57, 107, 103, 100, 38, 61, 37, 81, 58, 4, 6, 8, 10, 6, 8, 20, 10, 8, 10, 14, 4, 2, 2, 1, 1, 1, 2, 2, 3, 2, 3, 2, 1, 1, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

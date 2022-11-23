@@ -1,4 +1,5 @@
 .set LOCALID_NURSE, 1
+.set LOCALID_GUARD, 5
 
 IndigoPlateau_PokemonCenter_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, IndigoPlateau_PokemonCenter_1F_OnTransition
@@ -13,6 +14,11 @@ IndigoPlateau_PokemonCenter_1F_EventScript_Nurse::
 	faceplayer
 	setvar VAR_0x800B, LOCALID_NURSE
 	goto Common_EventScript_PkmnCenterNurse
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_Debug::
+	playse SE_PIN
+	setflag FLAG_DAILY_TITLE_MATCH
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_GymGuy::
@@ -32,15 +38,153 @@ IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice::
 IndigoPlateau_PokemonCenter_1F_EventScript_DoorGuard::
     lock
     faceplayer
-    msgbox IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck
-    release
+    goto_if_unset FLAG_SYS_GAME_CLEAR, IndigoPlateau_PokemonCenter_1F_EventScript_EliteFourFirstChallenge
+    msgbox IndigoPlateau_PokemonCenter_1F_Text_GreetingsChampion, MSGBOX_NPC
+    goto_if_unset FLAG_DAILY_TITLE_MATCH, IndigoPlateau_PokemonCenter_1F_EventScript_TitleMatch
+    goto IndigoPlateau_PokemonCenter_1F_EventScript_EliteFourPostGame
     end
 
-IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck::
+IndigoPlateau_PokemonCenter_1F_Text_GreetingsChampion::
+	.string "Hello, Champion {PLAYER}!$"
+	
+IndigoPlateau_PokemonCenter_1F_EventScript_TitleMatch::
+	playse SE_PIN
+	applymovement LOCALID_GUARD, Common_Movement_ExclamationMark
+	waitmovement 5
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_Challenger, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, FALSE, IndigoPlateau_PokemonCenter_1F_EventScript_Decline
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_ExcellentGoodLuck, MSGBOX_DEFAULT
+    goto IndigoPlateau_PokemonCenter_1F_EventScript_EnterEliteFour
+    end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_EliteFourPostGame::
+    msgbox IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourPostGame, MSGBOX_YESNO
+    goto_if_eq VAR_RESULT, FALSE, IndigoPlateau_PokemonCenter_1F_EventScript_Decline
+    msgbox IndigoPlateau_PokemonCenter_1F_Text_ExcellentGoodLuck, MSGBOX_DEFAULT
+    setvar VAR_ELITE_4_MODE, 2
+    goto IndigoPlateau_PokemonCenter_1F_EventScript_EnterEliteFour
+    end
+
+IndigoPlateau_PokemonCenter_1F_Text_Challenger::
+	.string "Oh! It seems someone has defeated the\n"
+	.string "Elite Four today.\p"
+	.string "They are challenging you to a Title Match!\n"
+	.string "Are you here to accept their challenge?$"
+
+IndigoPlateau_PokemonCenter_1F_EventScript_EliteFourFirstChallenge::
+    msgbox IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFour, MSGBOX_YESNO
+    goto_if_eq VAR_RESULT, FALSE, IndigoPlateau_PokemonCenter_1F_EventScript_Decline
+    msgbox IndigoPlateau_PokemonCenter_1F_Text_ExcellentGoodLuck, MSGBOX_DEFAULT
+    setvar VAR_ELITE_4_MODE, 1
+    goto IndigoPlateau_PokemonCenter_1F_EventScript_EnterEliteFour
+    end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_EnterEliteFour::
+	call_if_eq VAR_FACING, DIR_NORTH, IndigoPlateau_PokemonCenter_1F_EventScript_EnterNorth
+	call_if_eq VAR_FACING, DIR_WEST, IndigoPlateau_PokemonCenter_1F_EventScript_EnterWest
+	call_if_eq VAR_FACING, DIR_EAST, IndigoPlateau_PokemonCenter_1F_EventScript_EnterEast
+	goto_if_eq VAR_ELITE_4_MODE, 0, IndigoPlateau_PokemonCenter_1F_EventScript_WarpTitleMatch
+	warp MAP_POKEMON_LEAGUE_LORELEIS_ROOM, 6, 12
+	waitstate
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_WarpTitleMatch::
+	warp MAP_POKEMON_LEAGUE_CHALLENGER_ROOM, 6, 7
+	waitstate
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_EnterNorth::
+	applymovement LOCALID_GUARD, Guard_Movement_StepRight
+	waitmovement 5
+	applymovement OBJ_EVENT_ID_PLAYER, Player_Movement_EnterNorth
+	waitmovement 0
+	return
+
+IndigoPlateau_PokemonCenter_1F_EventScript_EnterWest::
+	applymovement LOCALID_GUARD, Guard_Movement_StepLeft
+	waitmovement 5
+	applymovement OBJ_EVENT_ID_PLAYER, Player_Movement_EnterWest
+	waitmovement 0
+	return
+
+IndigoPlateau_PokemonCenter_1F_EventScript_EnterEast::
+	applymovement LOCALID_GUARD, Guard_Movement_StepRight
+	waitmovement 5
+	applymovement OBJ_EVENT_ID_PLAYER, Player_Movement_EnterEast
+	waitmovement 0
+	return
+
+Guard_Movement_StepRight:
+	walk_right
+	face_down
+	step_end
+
+Guard_Movement_StepLeft:
+	walk_left
+	face_down
+	step_end
+
+Player_Movement_EnterNorth:
+	walk_up
+	walk_up
+	set_invisible
+	step_end
+
+Player_Movement_EnterWest:
+	walk_left
+	walk_up
+	set_invisible
+	step_end
+
+Player_Movement_EnterEast:
+	walk_right
+	walk_up
+	set_invisible
+	step_end
+
+IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFour::
     .string "From here on, you face the\n"
     .string "Elite Four one by one.\p"
     .string "If you win, a door opens to the\n"
-    .string "next trainer. Good luck!$"
+    .string "next trainer.\p"
+    .string "You cannot return until you have\n"
+    .string "defeated them all, or have failed.\p"
+    .string "Are you prepared for the challenge?$"
+
+IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourPostGame::
+    .string "As the Champion, you can challenge\n"
+    .string "the Elite Four to exhibition battles.\p"
+    .string "Be warned, though.\p"
+    .string "Now that you have already proven your\n"
+    .string "skills, they will not be holding back.\p"
+    .string "Are you prepared for the challenge?$"
+
+IndigoPlateau_PokemonCenter_1F_EventScript_Decline::
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_GuardDecline, MSGBOX_DEFAULT
+	turnobject LOCALID_GUARD, DIR_SOUTH
+	release
+	end
+
+IndigoPlateau_PokemonCenter_1F_Text_GuardDecline::
+	.string "I understand.\n"
+	.string "Please see me if you change your mind.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_ExcellentGoodLuck::
+	.string "Excellent!\n"
+	.string "Good luck!$"
+
+
+IndigoPlateau_PokemonCenter_1F_EventScript_FrontierGuard::
+	lock
+	faceplayer
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_Frontier, MSGBOX_DEFAULT
+	release
+	end
+
+IndigoPlateau_PokemonCenter_1F_Text_Frontier::
+	.string "Only trainers that have proven themselves\n"
+	.string "by defeating the Elite Four are allowed\l"
+	.string "to enter this Facility.$"
 
 IndigoPlateau_PokemonCenter_1F_EventScript_BlackBelt::
     lock
@@ -61,7 +205,7 @@ IndigoPlateau_PokemonCenter_1F_Text_AgathaWhuppedUs::
     .string "It doesn't take anything to get\n"
     .string "that scary lady hollering.$"
 
-IndigoPlateau_PokemonCenter_1F_EventScript_CooltrainerM::
+IndigoPlateau_PokemonCenter_1F_EventScript_Dragontamer::
     lock
     faceplayer
     msgbox IndigoPlateau_PokemonCenter_1F_Text_LancesCousinGymLeaderFarAway

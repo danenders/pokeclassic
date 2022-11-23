@@ -177,6 +177,56 @@ const struct Trainer gTrainers[] = {
         .party = {.ItemCustomMoves = sParty_EliteFourLance}
     },
 
+//Elite Four Postgame
+    [POSTGAME_ELITE_FOUR_LORELEI] = {
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM,
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_LORELEI,
+        .trainerName = _("Lorelei"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_EliteFourLoreleiPostgame),
+        .party = {.ItemCustomMoves = sParty_EliteFourLoreleiPostgame}
+    },
+    [POSTGAME_ELITE_FOUR_BRUNO] = {
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM,
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_BRUNO,
+        .trainerName = _("Bruno"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_EliteFourBrunoPostgame),
+        .party = {.ItemCustomMoves = sParty_EliteFourBrunoPostgame}
+    },
+    [POSTGAME_ELITE_FOUR_AGATHA] = {
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM,
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_AGATHA,
+        .trainerName = _("Agatha"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_EliteFourAgathaPostgame),
+        .party = {.ItemCustomMoves = sParty_EliteFourAgathaPostgame}
+    },
+    [POSTGAME_ELITE_FOUR_LANCE] = {
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM,
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_LANCE,
+        .trainerName = _("Lance"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_EliteFourLancePostgame),
+        .party = {.ItemCustomMoves = sParty_EliteFourLancePostgame}
+    },
+
 //Rival Battles
     [TRAINER_RIVAL_FIRST_BATTLE] =
     {
@@ -5343,9 +5393,17 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemCustomMoves = sParty_LeaderBlainePostgame}
     },
 
-
-
-
-
-
+//Secret Battle
+    [SECRET_BATTLE_OAK] = {
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM,
+        .trainerClass = TRAINER_CLASS_OAK,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerPic = TRAINER_PIC_OAK,
+        .trainerName = _("Oak"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_SecretBattleOak),
+        .party = {.ItemCustomMoves = sParty_SecretBattleOak}
+    },
 };

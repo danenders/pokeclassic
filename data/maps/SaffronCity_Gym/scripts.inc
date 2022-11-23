@@ -238,7 +238,6 @@ SaffronCity_Gym_Text_NoRoomForTM::
 SaffronCity_Gym_EventScript_LeaderPostBattle::
 	lock
 	faceplayer
-	goto_if_set FLAG_DAILY_IS_CURRENTLY_CHAMPION, SaffronCity_Gym_EventScript_LeaderPostBattleCurrentChampion
 	goto_if_set FLAG_SYS_GAME_CLEAR, SaffronCity_Gym_EventScript_LeaderPostBattleGameClear
 	msgbox SaffronCity_Gym_Text_LeaderPostBattle, MSGBOX_DEFAULT
 	release
@@ -249,19 +248,6 @@ SaffronCity_Gym_Text_LeaderPostBattle::
     .string "only a few people have.\p"
     .string "Everyone has psychic power.\n"
     .string "People just don't realize it.$"
-
-SaffronCity_Gym_EventScript_LeaderPostBattleCurrentChampion::
-	msgbox SaffronCity_Gym_Text_PostBattleCurrentChampion, MSGBOX_DEFAULT
-	release
-	end
-
-SaffronCity_Gym_Text_PostBattleCurrentChampion::
-	.string "With Trainers like you and {RIVAL}\n" 
-	.string "the Pokémon League must be a place of\l"
-	.string "formidable strength!\p" 
-	.string "Truly, it is something to be proud of!\p"
-	.string "As it so happens, I have been thinking\n"
-	.string "of aiming to join the Elite Four myself...$"
 
 SaffronCity_Gym_EventScript_LeaderPostBattleGameClear::
 	msgbox SaffronCity_Gym_Text_PostBattleGameClear, MSGBOX_DEFAULT
