@@ -45,7 +45,6 @@ PokemonLeague_HallOfFame_EventScript_EnterRoom::
 
 PokemonLeague_HallOfFame_Movement_EnterRoom::
 	walk_up
-	walk_left
 	walk_up
 	walk_up
 	walk_up

@@ -257,41 +257,181 @@ static const struct TrainerMonItemCustomMoves sParty_EliteFourLance[] = {
 //Elite Four Postgame
 static const struct TrainerMonItemCustomMoves sParty_EliteFourLoreleiPostgame[] = {
     {
-        .iv = 250,
-        .lvl = 1,
+        .iv = 255,
+        .lvl = 65,
         .species = SPECIES_DEWGONG,
         .heldItem = ITEM_NONE,
-        .moves = {MOVE_ICE_BEAM, MOVE_SURF, MOVE_HAIL, MOVE_SAFEGUARD},
+        .moves = {MOVE_AQUA_JET, MOVE_ICE_SHARD, MOVE_WATERFALL, MOVE_IRON_TAIL},
+    },
+    {
+        .iv = 255,
+        .lvl = 65,
+        .species = SPECIES_CLOYSTER,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_ICE_BEAM, MOVE_SPIKE_CANNON, MOVE_HYDRO_PUMP, MOVE_POISON_JAB},
+    },
+    {
+        .iv = 255,
+        .lvl = 65,
+        .species = SPECIES_SLOWBRO,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_FLAMETHROWER, MOVE_SURF, MOVE_PSYCHIC, MOVE_YAWN},
+    },
+    {
+        .iv = 255,
+        .lvl = 65,
+        .species = SPECIES_JYNX,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_LOVELY_KISS, MOVE_PSYCHIC, MOVE_BLIZZARD, MOVE_SHADOW_BALL},
+    },
+    {
+        .iv = 255,
+        .lvl = 65,
+        .species = SPECIES_WIGGLYTUFF,
+        .heldItem = ITEM_SITRUS_BERRY,
+        .moves = {MOVE_TOXIC, MOVE_REST, MOVE_BLIZZARD, MOVE_DOUBLE_EDGE},
+    },
+    {
+        .iv = 255,
+        .lvl = 70,
+        .species = SPECIES_LAPRAS,
+        .heldItem = ITEM_SITRUS_BERRY,
+        .moves = {MOVE_BLIZZARD, MOVE_DRAGON_PULSE, MOVE_HYDRO_PUMP, MOVE_THUNDER},
     },
 };
 
 static const struct TrainerMonItemCustomMoves sParty_EliteFourBrunoPostgame[] = {
     {
-        .iv = 250,
-        .lvl = 1,
+        .iv = 255,
+        .lvl = 65,
         .species = SPECIES_ONIX,
         .heldItem = ITEM_NONE,
-        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_TOMB, MOVE_IRON_TAIL, MOVE_ROAR},
+        .moves = {MOVE_STEALTH_ROCK, MOVE_IRON_TAIL, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE},
+    },
+    {
+        .iv = 255,
+        .lvl = 65,
+        .species = SPECIES_HITMONCHAN,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_FIRE_PUNCH, MOVE_ICE_PUNCH, MOVE_THUNDER_PUNCH, MOVE_FEINT},
+    },
+    {
+        .iv = 255,
+        .lvl = 65,
+        .species = SPECIES_HITMONLEE,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_HIGH_JUMP_KICK, MOVE_FEINT, MOVE_ROCK_SLIDE, MOVE_POISON_JAB},
+    },
+    {
+        .iv = 255,
+        .lvl = 65,
+        .species = SPECIES_GOLEM,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_EXPLOSION, MOVE_SUPERPOWER},
+    },
+    {
+        .iv = 255,
+        .lvl = 65,
+        .species = SPECIES_POLIWRATH,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_WATERFALL, MOVE_BODY_SLAM, MOVE_SUPERPOWER, MOVE_EARTHQUAKE},
+    },
+    {
+        .iv = 255,
+        .lvl = 65,
+        .species = SPECIES_MACHAMP,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_SUPERPOWER, MOVE_ICE_PUNCH},
     },
 };
 
 static const struct TrainerMonItemCustomMoves sParty_EliteFourAgathaPostgame[] = {
     {
-        .iv = 250,
-        .lvl = 4,
+        .iv = 255,
+        .lvl = 65,
+        .species = SPECIES_ARBOK,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_GLARE, MOVE_CRUNCH, MOVE_POISON_JAB, MOVE_STONE_EDGE},
+    },
+    {
+        .iv = 255,
+        .lvl = 65,
         .species = SPECIES_GENGAR,
         .heldItem = ITEM_NONE,
-        .moves = {MOVE_SHADOW_PUNCH, MOVE_CONFUSE_RAY, MOVE_TOXIC, MOVE_DOUBLE_TEAM},
+        .moves = {MOVE_SHADOW_BALL, MOVE_WILL_O_WISP, MOVE_SLUDGE_BOMB, MOVE_TAUNT},
+    },
+    {
+        .iv = 255,
+        .lvl = 65,
+        .species = SPECIES_GOLBAT,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_AIR_SLASH, MOVE_CRUNCH, MOVE_QUICK_ATTACK, MOVE_CONFUSE_RAY},
+    },
+    {
+        .iv = 255,
+        .lvl = 65,
+        .species = SPECIES_WEEZING,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_EXPLOSION},
+    },
+    {
+        .iv = 255,
+        .lvl = 65,
+        .species = SPECIES_GENGAR,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_SHADOW_BALL, MOVE_SLUDGE_BOMB, MOVE_CONFUSE_RAY, MOVE_DAZZLING_GLEAM},
+    },
+    {
+        .iv = 255,
+        .lvl = 65,
+        .species = SPECIES_HAUNTER,
+        .heldItem = ITEM_EVIOLITE,
+        .moves = {MOVE_HYPNOSIS, MOVE_CONFUSE_RAY, MOVE_DREAM_EATER, MOVE_SHADOW_BALL},
     },
 };
 
 static const struct TrainerMonItemCustomMoves sParty_EliteFourLancePostgame[] = {
     {
-        .iv = 250,
-        .lvl = 6,
+        .iv = 255,
+        .lvl = 65,
         .species = SPECIES_GYARADOS,
         .heldItem = ITEM_NONE,
-        .moves = {MOVE_HYPER_BEAM, MOVE_DRAGON_RAGE, MOVE_TWISTER, MOVE_BITE},
+        .moves = {MOVE_WATERFALL, MOVE_IRON_TAIL, MOVE_HYPER_BEAM, MOVE_CRUNCH},
+    },
+    {
+        .iv = 255,
+        .lvl = 65,
+        .species = SPECIES_SEADRA,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_HYDRO_PUMP, MOVE_DRAGON_PULSE, MOVE_HYPER_BEAM, MOVE_BLIZZARD},
+    },
+    {
+        .iv = 255,
+        .lvl = 65,
+        .species = SPECIES_CHARIZARD,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_DRAGON_PULSE, MOVE_HYPER_BEAM, MOVE_THUNDER_PUNCH},
+    },
+    {
+        .iv = 255,
+        .lvl = 65,
+        .species = SPECIES_AERODACTYL,
+        .heldItem = ITEM_NONE,
+        .moves = {MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_HYPER_BEAM, MOVE_CRUNCH},
+    },
+    {
+        .iv = 265,
+        .lvl = 65,
+        .species = SPECIES_DRAGONITE,
+        .heldItem = ITEM_SITRUS_BERRY,
+        .moves = {MOVE_OUTRAGE, MOVE_FIRE_PUNCH, MOVE_HYPER_BEAM, MOVE_IRON_TAIL},
+    },
+    {
+        .iv = 265,
+        .lvl = 65,
+        .species = SPECIES_DRAGONITE,
+        .heldItem = ITEM_SITRUS_BERRY,
+        .moves = {MOVE_DRAGON_DANCE, MOVE_FLY, MOVE_EARTHQUAKE, MOVE_EXTREME_SPEED},
     },
 };
 

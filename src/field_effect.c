@@ -536,8 +536,8 @@ static void (*const sPokeballGlowEffectFuncs[])(struct Sprite *) =
 
 static const struct Coords16 sPokeballCoordOffsets[PARTY_SIZE] =
 {
+    {.x = 0, .y = 0},
     {.x = 6, .y = 0},
-    {.x = 12, .y = 0},
     {.x = 0, .y = 4},
     {.x = 6, .y = 4},
     {.x = 0, .y = 8},

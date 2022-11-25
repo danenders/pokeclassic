@@ -567,8 +567,8 @@ static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
     [MUGSHOT_BRUNO]     =   { -4,  4},
     [MUGSHOT_AGATHA]    =   { -4,  4},
     [MUGSHOT_LANCE]     =   { -4,  4},
-    [MUGSHOT_CHAMPION]  =   { 0,  0},
-    [MUGSHOT_OAK]       =   { 0,  0},
+    [MUGSHOT_CHAMPION]  =   { -4,  4},
+    [MUGSHOT_OAK]       =   { -4,  4},
 };
 
 static const TransitionSpriteCallback sMugshotTrainerPicFuncs[] =
