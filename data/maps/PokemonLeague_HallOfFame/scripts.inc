@@ -25,7 +25,8 @@ PokemonLeague_HallOfFame_EventScript_EnterRoom::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	delay 18
-	msgbox PokemonLeague_HallOfFame_Text_OakCongratulations
+	call_if_unset FLAG_IS_CHAMPION, PokemonLeague_HallOfFame_EventScript_OakCongratulations
+	call_if_set FLAG_IS_CHAMPION, PokemonLeague_HallOfFame_EventScript_OakCongratulations2
 	closemessage
 	applymovement LOCALID_PROF_OAK, Common_Movement_WalkInPlaceFasterUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
@@ -54,6 +55,13 @@ PokemonLeague_HallOfFame_Movement_EnterRoom::
 	walk_up
 	step_end
 
+PokemonLeague_HallOfFame_EventScript_OakCongratulations::
+	msgbox PokemonLeague_HallOfFame_Text_OakCongratulations
+	return
+
+PokemonLeague_HallOfFame_EventScript_OakCongratulations2::
+	msgbox PokemonLeague_HallOfFame_Text_OakCongratulations2
+	return
 
 PokemonLeague_HallOfFame_Text_OakCongratulations::
     .string "Oak: Er-hem!\n"
@@ -70,6 +78,15 @@ PokemonLeague_HallOfFame_Text_OakCongratulations::
     .string "Congratulations, {PLAYER}, you and\n"
     .string "your Pokémon are Hall of Famers!$"
 
+PokemonLeague_HallOfFame_Text_OakCongratulations2::
+    .string "Oak: Er-hem!\n"
+    .string "Congratulations, {PLAYER}!\p"
+    .string "You have worked hard to maintain\n"
+    .string "your status as League Champion.\p"
+    .string "We will record these Pokémon in\n"
+    .string "the Hall of Fame.\p"
+    .string "Congratulations, {PLAYER}, you and\n"
+    .string "your Pokémon are true Champions!$"
 
 PokemonLeague_HallOfFame_EventScript_SetGameClearFlags::
 	special SetChampionSaveWarp
