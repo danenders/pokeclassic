@@ -5615,4 +5615,8 @@ extern const u32 gItemIconPalette_AbilityCapsule[];
 extern const u32 gItemIcon_AbilityPatch[];
 extern const u32 gItemIconPalette_AbilityPatch[];
 
+//New Items
+extern const u32 gItemIcon_Eviolite[];
+extern const u32 gItemIconPalette_Eviolite[];
+
 #endif //GUARD_GRAPHICS_H

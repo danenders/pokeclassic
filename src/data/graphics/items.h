@@ -807,3 +807,7 @@ const u32 gItemIconPalette_AbilityCapsule[] = INCBIN_U32("graphics/items/icon_pa
 const u32 gItemIcon_AbilityPatch[] = INCBIN_U32("graphics/items/icons/ability_patch.4bpp.lz");
 const u32 gItemIconPalette_AbilityPatch[] = INCBIN_U32("graphics/items/icon_palettes/ability_patch.gbapal.lz");
 
+//New Battle Items
+const u32 gItemIcon_Eviolite[] = INCBIN_U32("graphics/items/icons/eviolite.4bpp.lz");
+const u32 gItemIconPalette_Eviolite[] = INCBIN_U32("graphics/items/icon_palettes/eviolite.gbapal.lz");
+

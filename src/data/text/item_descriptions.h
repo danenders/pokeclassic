@@ -1664,3 +1664,9 @@ static const u8 sAbilityPatchDesc[] = _(
     "Turns the ability\n"
     "of a Pokémon into\n"
     "a rare ability.");
+
+static const u8 sEvioliteDesc[] = _(
+    "Raises the Def and\n"
+    "Sp. Def of Pokémon\n"
+    "that can evolve.");
+
