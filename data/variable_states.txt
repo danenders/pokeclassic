@@ -8,6 +8,8 @@ Variable States:
 4: Got PokeNav from Mom, ready for Oak's Parcel scene
 5: Got Oak's Parcel
 6: Delivered Oak's Parcel
+7: Became Champ
+8: Mom explained following pokemon
 
 //Oak's Lab
 0: Player hasn't met Oak yet

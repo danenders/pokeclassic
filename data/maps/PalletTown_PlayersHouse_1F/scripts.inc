@@ -77,3 +77,103 @@ PalletTown_PlayersHouse_1F_Text_LookingGreatTakeCare::
     .string "Mom: Oh, good! You and your\n"
     .string "Pokémon are looking great.\l"
     .string "Take care now!$"
+
+PlayersHouse_1F_EventScript_GameclearTrigger1::
+	setvar VAR_TEMP_1, 1
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	goto PlayersHouse_1F_EventScript_Gameclear
+
+PlayersHouse_1F_EventScript_GameclearTrigger2::
+	setvar VAR_TEMP_1, 2
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	goto PlayersHouse_1F_EventScript_Gameclear
+
+PlayersHouse_1F_EventScript_Gameclear::
+	lockall
+	playse SE_PIN
+	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
+	waitmovement 1
+	waitse
+	call_if_eq VAR_TEMP_1, 1, PlayersHouse_1F_EventScript_MoveMomToStairs1
+	call_if_eq VAR_TEMP_1, 2, PlayersHouse_1F_EventScript_MoveMomToStairs2
+	waitmovement 1
+	msgbox PlayersHouse_1F_Text_Gameclear, MSGBOX_DEFAULT
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	msgbox PlayersHouse_1F_Text_FollowerOptions, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	msgbox PlayersHouse_1F_Text_Gameclear2, MSGBOX_DEFAULT
+	playse SE_PIN
+	applymovement LOCALID_MOM, Common_Movement_Heart
+	waitmovement 1
+	waitse
+	call_if_eq VAR_TEMP_1, 1, PlayersHouse_1F_EventScript_MoveMomToTable1
+	call_if_eq VAR_TEMP_1, 2, PlayersHouse_1F_EventScript_MoveMomToTable2
+	waitmovement 1
+	setvar VAR_ADVENTURE_BEGINS, 8
+	releaseall
+	end
+
+PlayersHouse_1F_Text_Gameclear::
+	.string "Mom: Oh, {PLAYER}!\n"
+	.string "You're already up?\p"
+	.string "After everything you've been doing\n"
+	.string "I thought you'd need more rest.\p"
+	.string "...\p"
+	.string "You've really grown up, {PLAYER}.\p"
+	.string "I think your Pokémon can see that, too.\p"
+	.string "They'll follow you anywhere!$"
+
+PlayersHouse_1F_Text_FollowerOptions::
+	.string "Your Follower settings in the Options\n"
+	.string "menu can now be set to Any mode!\p"
+	.string "When this is selected, your first\n"
+	.string "Pokémon will follow you around!$"
+
+PlayersHouse_1F_Text_Gameclear2::
+	.string "Mom: Just because you're the new\n"
+	.string "champion doesn't mean your story\l"
+	.string "is over!\p"
+	.string "There's a whole world out there\n"
+	.string "for you and your Pokémon to explore!\p"
+	.string "I'm so proud of you, {PLAYER}!\n"
+	.string "Go have fun with your Pokémon!$"
+
+PlayersHouse_1F_EventScript_MoveMomToStairs1::
+	applymovement LOCALID_MOM, Movement_MoveMomToStairs1
+	return
+
+PlayersHouse_1F_EventScript_MoveMomToStairs2::
+	applymovement LOCALID_MOM, Movement_MoveMomToStairs2
+	return
+
+PlayersHouse_1F_EventScript_MoveMomToTable1::
+	applymovement LOCALID_MOM, Movement_MoveMomToTable1
+	return
+
+PlayersHouse_1F_EventScript_MoveMomToTable2::
+	applymovement LOCALID_MOM, Movement_MoveMomToTable2
+	return
+
+Movement_MoveMomToStairs1::
+	walk_up
+	walk_up
+	face_right
+	step_end
+
+Movement_MoveMomToStairs2::
+	walk_right
+	walk_right
+	face_up
+	step_end
+
+Movement_MoveMomToTable1::
+	walk_down
+	walk_down
+	face_left
+	step_end
+
+Movement_MoveMomToTable2::
+	walk_left
+	walk_left
+	step_end

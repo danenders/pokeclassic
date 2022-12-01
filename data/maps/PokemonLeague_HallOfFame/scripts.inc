@@ -37,6 +37,7 @@ PokemonLeague_HallOfFame_EventScript_EnterRoom::
 	delay 40
 	setvar VAR_TEMP_1, 1
 	call PokemonLeague_HallOfFame_EventScript_SetGameClearFlags
+	call_if_le VAR_ADVENTURE_BEGINS, 6, PokemonLeague_HallOfFame_EventScript_UpdatePostgameVariables
 	setrespawn HEAL_LOCATION_PLAYERS_HOUSE
 	fadescreenspeed FADE_TO_BLACK, 24
 	special GameClear
@@ -126,4 +127,8 @@ PokemonLeague_HallOfFame_EventScript_ResetEliteFour::
 	cleartrainerflag SECRET_BATTLE_OAK
 	setvar VAR_ELITE_4_STATE, 0
 	setvar VAR_ELITE_4_MODE, 0
+	return
+
+PokemonLeague_HallOfFame_EventScript_UpdatePostgameVariables::
+	setvar VAR_ADVENTURE_BEGINS, 7
 	return

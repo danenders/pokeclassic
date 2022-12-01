@@ -46,7 +46,24 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_ADVENTURE_BEGINS",
+      "var_value": "7",
+      "script": "PlayersHouse_1F_EventScript_GameclearTrigger1"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_ADVENTURE_BEGINS",
+      "var_value": "7",
+      "script": "PlayersHouse_1F_EventScript_GameclearTrigger2"
+    }
   ],
   "bg_events": [
 
