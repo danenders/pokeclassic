@@ -1670,3 +1670,138 @@ static const u8 sEvioliteDesc[] = _(
     "Sp. Def of Pokémon\n"
     "that can evolve.");
 
+static const u8 sPowerWeightDesc[] = _(
+    "A hold item that\n"
+    "promotes HP gain,\n"
+    "but reduces Speed.");
+
+static const u8 sPowerBracerDesc[] = _(
+    "A hold item that\n"
+    "promotes Atk gain,\n"
+    "but reduces Speed.");
+
+static const u8 sPowerBeltDesc[] = _(
+    "A hold item that\n"
+    "promotes Def gain,\n"
+    "but reduces Speed.");
+
+static const u8 sPowerLensDesc[] = _(
+    "Hold item that pro-\n"
+    "motes Sp. Atk gain,\n"
+    "but reduces Speed.");
+
+static const u8 sPowerBandDesc[] = _(
+    "Hold item that pro-\n"
+    "motes Sp. Def gain,\n"
+    "but reduces Speed.");
+
+static const u8 sPowerAnkletDesc[] = _(
+    "A hold item that\n"
+    "promotes Spd gain,\n"
+    "but reduces Speed.");
+
+static const u8 sBlackSludgeDesc[] = _(
+    "Gradually restores\n"
+    "HP of Poison-types.\n"
+    "Damages others.");
+
+static const u8 sBigRootDesc[] = _(
+    "A held item that\n"
+    "boosts the power of\n"
+    "HP-stealing moves.");
+
+static const u8 sExpertBeltDesc[] = _(
+    "A belt that boosts\n"
+    "the power of super\n"
+    "effective moves.");
+
+static const u8 sLifeOrbDesc[] = _(
+    "Boosts the power of\n"
+    "moves at the cost\n"
+    "of some HP per turn.");
+
+static const u8 sWiseGlassesDesc[] = _(
+    "A pair of glasses\n"
+    "that ups the power\n"
+    "of special moves.");
+
+static const u8 sMuscleBandDesc[] = _(
+    "A headband that\n"
+    "boosts the power of\n"
+    "physical moves.");
+
+static const u8 sPowerHerbDesc[] = _(
+    "Allows immediate\n"
+    "use of a move that\n"
+    "charges first.");
+
+static const u8 sRedCardDesc[] = _(
+    "Switches out the\n"
+    "foe if they hit the\n"
+    "holder.");
+
+static const u8 sProtectivePadsDesc[] = _(
+    "Guard the holder\n"
+    "from contact move\n"
+    "effects.");
+
+static const u8 sRockyHelmetDesc[] = _(
+    "Hurts the foe if\n"
+    "they touch its\n"
+    "holder.");
+
+static const u8 sRazorClawDesc[] = _(
+    "A hooked claw that\n"
+    "ups the holder's\n"
+    "critical-hit ratio.");
+
+static const u8 sRazorFangDesc[] = _(
+    "A hold item that\n"
+    "may cause flinching\n"
+    "when the foe is hit.");
+
+static const u8 sChoiceSpecsDesc[] = _(
+    "Boosts Sp. Atk, but\n"
+    "allows the use of\n"
+    "only one move.");
+
+static const u8 sChoiceScarfDesc[] = _(
+    "Boosts Speed, but\n"
+    "allows the use of\n"
+    "only one move.");
+
+static const u8 sLightClayDesc[] = _(
+    "Extends the length\n"
+    "of barrier moves\n"
+    "used by the holder.");
+
+static const u8 sDestinyKnotDesc[] = _(
+    "If the holder falls\n"
+    "in love, the foe\n"
+    "does too.");
+
+static const u8 sDampRockDesc[] = _(
+    "Extends the length\n"
+    "of Rain Dance if\n"
+    "used by the holder.");
+
+static const u8 sHeatRockDesc[] = _(
+    "Extends the length\n"
+    "of Sunny Day if\n"
+    "used by the holder.");
+
+static const u8 sSmoothRockDesc[] = _(
+    "Extends the length\n"
+    "of Sandstorm if\n"
+    "used by the holder.");
+
+static const u8 sIcyRockDesc[] = _(
+    "Extends the length\n"
+    "of the move Hail\n"
+    "used by the holder.");
+
+static const u8 sPixieDustDesc[] = _(
+    "A hold item that\n"
+    "raises the power of\n"
+    "Fairy-type moves.");
+

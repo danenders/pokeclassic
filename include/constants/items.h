@@ -254,33 +254,41 @@
 #define ITEM_THICK_CLUB 224
 #define ITEM_STICK 225
 #define ITEM_EVIOLITE 226
-#define ITEM_0E3 227
-#define ITEM_0E4 228
-#define ITEM_0E5 229
-#define ITEM_0E6 230
-#define ITEM_0E7 231
-#define ITEM_0E8 232
-#define ITEM_0E9 233
-#define ITEM_0EA 234
-#define ITEM_0EB 235
-#define ITEM_0EC 236
-#define ITEM_0ED 237
-#define ITEM_0EE 238
-#define ITEM_0EF 239
-#define ITEM_0F0 240
-#define ITEM_0F1 241
-#define ITEM_0F2 242
-#define ITEM_0F3 243
-#define ITEM_0F4 244
-#define ITEM_0F5 245
-#define ITEM_0F6 246
-#define ITEM_0F7 247
-#define ITEM_0F8 248
-#define ITEM_0F9 249
-#define ITEM_0FA 250
-#define ITEM_0FB 251
-#define ITEM_0FC 252
-#define ITEM_0FD 253
+
+#define ITEM_POWER_ANKLET 227
+#define ITEM_POWER_BAND 228
+#define ITEM_POWER_BELT 229
+#define ITEM_POWER_BRACER 230
+#define ITEM_POWER_LENS 231
+#define ITEM_POWER_WEIGHT 232
+
+#define ITEM_BLACK_SLUDGE 233
+#define ITEM_BIG_ROOT 234
+
+#define ITEM_EXPERT_BELT  235 
+#define ITEM_LIFE_ORB	236
+#define ITEM_WISE_GLASSES 237
+#define ITEM_MUSCLE_BAND 238 
+
+#define ITEM_POWER_HERB 239 
+#define ITEM_RED_CARD 240 
+#define ITEM_PROTECTIVE_PADS 241 
+#define ITEM_ROCKY_HELMET 242 
+#define ITEM_RAZOR_FANG 243 
+#define ITEM_RAZOR_CLAW 244 
+
+#define ITEM_CHOICE_SPECS 245 
+#define ITEM_CHOICE_SCARF 246 
+
+#define ITEM_LIGHT_CLAY 247 
+#define ITEM_SMOOTH_ROCK 248 
+#define ITEM_HEAT_ROCK 249 
+#define ITEM_DAMP_ROCK 250 
+#define ITEM_ICY_ROCK 251 
+
+#define ITEM_DESTINY_KNOT 252
+
+#define ITEM_PIXIE_DUST 253 
 
 // Contest held items
 #define ITEM_RED_SCARF 254
@@ -507,7 +515,10 @@
 #define ITEM_SERIOUS_MINT        402
 #define ITEM_TIMID_MINT          403
 
-#define ITEMS_COUNT 404
+//Link Cord
+#define ITEM_LINKING_CORD          404
+
+#define ITEMS_COUNT 405
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // Range of berries given out by various NPCS
