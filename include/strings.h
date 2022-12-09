@@ -3083,4 +3083,6 @@ extern const u8 gText_SoldOut2[];
 extern const u8 gOtherText_ExpShareOn[];
 extern const u8 gOtherText_ExpShareOff[];
 
+extern const u8 gText_ThrowInPremierBalls[];
+
 #endif // GUARD_STRINGS_H
