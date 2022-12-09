@@ -1257,7 +1257,7 @@ static const struct LevelUpMove sMachokeLevelUpLearnset[] = {
 
 static const struct LevelUpMove sMachampLevelUpLearnset[] = {
     // LEVEL_UP_MOVE( 0, MOVE_STRENGTH),
-    LEVEL_UP_MOVE( 1, MOVE_STRENGTH),
+    // LEVEL_UP_MOVE( 1, MOVE_STRENGTH),
     LEVEL_UP_MOVE( 1, MOVE_WIDE_GUARD),
     LEVEL_UP_MOVE( 1, MOVE_LOW_KICK),
     LEVEL_UP_MOVE( 1, MOVE_LEER),

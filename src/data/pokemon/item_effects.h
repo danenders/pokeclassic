@@ -288,6 +288,10 @@ const u8 gItemEffect_ThunderStone[6] = {
     [4] = ITEM4_EVO_STONE,
 };
 
+const u8 gItemEffect_PowerStone[6] = {
+    [4] = ITEM4_EVO_STONE,
+};
+
 const u8 gItemEffect_WaterStone[6] = {
     [4] = ITEM4_EVO_STONE,
 };
@@ -435,6 +439,7 @@ const u8 *const gItemEffectTable[] =
     [ITEM_MOON_STONE - ITEM_POTION]    = gItemEffect_MoonStone,
     [ITEM_FIRE_STONE - ITEM_POTION]    = gItemEffect_FireStone,
     [ITEM_THUNDER_STONE - ITEM_POTION] = gItemEffect_ThunderStone,
+    [ITEM_POWER_STONE - ITEM_POTION]    = gItemEffect_PowerStone,
     [ITEM_WATER_STONE - ITEM_POTION]   = gItemEffect_WaterStone,
     [ITEM_LEAF_STONE - ITEM_POTION]    = gItemEffect_LeafStone,
     [ITEM_CHERI_BERRY - ITEM_POTION]   = gItemEffect_CheriBerry,
