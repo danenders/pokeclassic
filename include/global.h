@@ -536,7 +536,6 @@ struct SaveBlock2
     /*0xF2C*/ u8 rivalName[PLAYER_NAME_LENGTH + 1];
               u8 costumeId;
               u16 optionsFollowerType:3; //Follower Type: 0= Pikachu, 1=Any, 2=Off
-              u16 surfmon;
               u16 expShare:1;
 }; // sizeof=0xF2C
 

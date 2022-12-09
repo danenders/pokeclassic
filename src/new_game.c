@@ -210,7 +210,6 @@ void NewGameInitData(void)
     gSaveBlock1Ptr->dexNavChain = 0;
     gSaveBlock2Ptr->costumeId = 0;
     gSaveBlock2Ptr->optionsFollowerType = 0;
-    gSaveBlock2Ptr->surfmon = 0;
     gSaveBlock2Ptr->expShare = 0;
 }
 
