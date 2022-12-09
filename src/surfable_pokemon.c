@@ -37,15 +37,30 @@ static u16 GetSurfMonSpecies(void)
 {
     u8 i;
 
-    for (i = 0; i < 6; i++)
+    if (GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_SPECIES) != 0)
     {
-        if (MonKnowsMove(&gPlayerParty[i], MOVE_SURF))
-        {
-            u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
-            return species;
-        }
+        u16 species = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_SPECIES);
+        gSaveBlock2Ptr->surfmon = species;
+        return species;
     }
-    return 0xFFFF;
+    else if (gSaveBlock2Ptr->surfmon != 0)
+    {
+        u16 species = gSaveBlock2Ptr->surfmon;
+        return species;
+    }
+    else 
+    {
+        for (i = 0; i < 6; i++)
+        {
+            if (MonKnowsMove(&gPlayerParty[i], MOVE_SURF))
+            {
+                u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
+                gSaveBlock2Ptr->surfmon = species;
+                return species;
+            }
+        }
+        return 0xFFFF;
+    }
 }
 
 static u16 GetSurfablePokemonSprite(void)
