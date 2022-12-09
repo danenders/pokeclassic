@@ -1203,6 +1203,17 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
+    [ITEM_POWER_STONE] =
+    {
+        .name = _("Power Stone"),
+        .itemId = ITEM_POWER_STONE,
+        .price = 10000,
+        .description = sPowerStoneDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
+    },
+
     [ITEM_063] =
     {
         .name = _("????????"),
@@ -4901,8 +4912,251 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
+// Charms
 
+    [ITEM_OVAL_CHARM] =
+    {
+        .name = _("Oval Charm"),
+        .itemId = ITEM_OVAL_CHARM,
+        .price = 0,
+        .importance = 1,
+        .description = sOvalCharmDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
 
+    [ITEM_SHINY_CHARM] =
+    {
+        .name = _("Shiny Charm"),
+        .itemId = ITEM_SHINY_CHARM,
+        .price = 0,
+        .importance = 1,
+        .description = sShinyCharmDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_CATCHING_CHARM] =
+    {
+        .name = _("CatchngCharm"),
+        .itemId = ITEM_CATCHING_CHARM,
+        .price = 0,
+        .importance = 1,
+        .description = sCatchingCharmDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+// Mega Stones
+
+    [ITEM_VENUSAURITE] =
+    {
+        .name = _("Venusaurite"),
+        .itemId = ITEM_VENUSAURITE,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sVenusauriteDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+
+    [ITEM_CHARIZARDITE_X] =
+    {
+        .name = _("CharizarditeX"),
+        .itemId = ITEM_CHARIZARDITE_X,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sCharizarditeDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+
+    [ITEM_CHARIZARDITE_Y] =
+    {
+        .name = _("CharizarditeY"),
+        .itemId = ITEM_CHARIZARDITE_Y,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sCharizarditeDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+
+    [ITEM_BLASTOISINITE] =
+    {
+        .name = _("Blastoisinite"),
+        .itemId = ITEM_BLASTOISINITE,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sBlastoisiniteDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+
+    [ITEM_BEEDRILLITE] =
+    {
+        .name = _("Beedrillite"),
+        .itemId = ITEM_BEEDRILLITE,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sBeedrilliteDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+
+    [ITEM_PIDGEOTITE] =
+    {
+        .name = _("Pidgeotite"),
+        .itemId = ITEM_PIDGEOTITE,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sPidgeotiteDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+
+    [ITEM_ALAKAZITE] =
+    {
+        .name = _("Alakazite"),
+        .itemId = ITEM_ALAKAZITE,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sAlakaziteDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+
+    [ITEM_SLOWBRONITE] =
+    {
+        .name = _("Slowbronite"),
+        .itemId = ITEM_SLOWBRONITE,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sSlowbroniteDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+
+    [ITEM_GENGARITE] =
+    {
+        .name = _("Gengarite"),
+        .itemId = ITEM_GENGARITE,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sGengariteDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+
+    [ITEM_KANGASKHANITE] =
+    {
+        .name = _("Kangaskhanite"),
+        .itemId = ITEM_KANGASKHANITE,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sKangaskhaniteDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+
+    [ITEM_PINSIRITE] =
+    {
+        .name = _("Pinsirite"),
+        .itemId = ITEM_PINSIRITE,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sPinsiriteDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+
+    [ITEM_GYARADOSITE] =
+    {
+        .name = _("Gyaradosite"),
+        .itemId = ITEM_GYARADOSITE,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sGyaradositeDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+
+    [ITEM_AERODACTYLITE] =
+    {
+        .name = _("Aerodactylite"),
+        .itemId = ITEM_AERODACTYLITE,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sAerodactyliteDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+
+    [ITEM_MEWTWONITE_X] =
+    {
+        .name = _("Mewtwonite X"),
+        .itemId = ITEM_MEWTWONITE_X,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sMewtwoniteDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+
+    [ITEM_MEWTWONITE_Y] =
+    {
+        .name = _("Mewtwonite Y"),
+        .itemId = ITEM_MEWTWONITE_Y,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sMewtwoniteDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+
+    [ITEM_MEGA_RING] =
+    {
+        .name = _("Mega Ring"),
+        .itemId = ITEM_MEGA_RING,
+        .price = 0,
+        .importance = 1,
+        .description = sMegaRingDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
 
 
 

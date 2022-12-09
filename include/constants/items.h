@@ -515,10 +515,36 @@
 #define ITEM_SERIOUS_MINT        402
 #define ITEM_TIMID_MINT          403
 
-//Link Cord
-#define ITEM_LINKING_CORD          404
+//Charms
+#define ITEM_CATCHING_CHARM  	 404
+#define ITEM_OVAL_CHARM 		 405
+#define ITEM_SHINY_CHARM 		 406
 
-#define ITEMS_COUNT 405
+//Power Stone
+#define ITEM_POWER_STONE         407
+
+//Mega Ring
+#define	ITEM_MEGA_RING			 408
+
+//Mega Stones
+#define ITEM_VENUSAURITE 		 409
+#define ITEM_CHARIZARDITE_X 	 410
+#define ITEM_CHARIZARDITE_Y 	 411
+#define ITEM_BLASTOISINITE 		 412
+#define ITEM_BEEDRILLITE 		 413
+#define ITEM_PIDGEOTITE 		 414
+#define ITEM_ALAKAZITE 			 415
+#define ITEM_SLOWBRONITE 		 416
+#define ITEM_GENGARITE 			 417
+#define ITEM_KANGASKHANITE 		 418
+#define ITEM_PINSIRITE 			 419
+#define ITEM_GYARADOSITE 		 420
+#define ITEM_AERODACTYLITE 		 421
+#define ITEM_MEWTWONITE_X 		 422
+#define ITEM_MEWTWONITE_Y 		 423
+
+
+#define ITEMS_COUNT 424
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // Range of berries given out by various NPCS

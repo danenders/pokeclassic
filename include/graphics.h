@@ -3618,6 +3618,8 @@ extern const u32 gItemIcon_WaterStone[];
 extern const u32 gItemIconPalette_WaterStone[];
 extern const u32 gItemIcon_LeafStone[];
 extern const u32 gItemIconPalette_LeafStone[];
+extern const u32 gItemIcon_PowerStone[];
+extern const u32 gItemIconPalette_PowerStone[];
 // Valuables
 extern const u32 gItemIcon_TinyMushroom[];
 extern const u32 gItemIconPalette_Mushroom[];
@@ -5674,5 +5676,49 @@ extern const u32 gItemIcon_DestinyKnot[];
 extern const u32 gItemIconPalette_DestinyKnot[];
 extern const u32 gItemIcon_PixieDust[];
 extern const u32 gItemIconPalette_PixieDust[];
+
+// Mega Stones
+extern const u32 gItemIcon_Venusaurite[];
+extern const u32 gItemIconPalette_Venusaurite[];
+extern const u32 gItemIcon_CharizarditeX[];
+extern const u32 gItemIconPalette_CharizarditeX[];
+extern const u32 gItemIcon_CharizarditeY[];
+extern const u32 gItemIconPalette_CharizarditeY[];
+extern const u32 gItemIcon_Blastoisinite[];
+extern const u32 gItemIconPalette_Blastoisinite[];
+extern const u32 gItemIcon_Beedrillite[];
+extern const u32 gItemIconPalette_Beedrillite[];
+extern const u32 gItemIcon_Pidgeotite[];
+extern const u32 gItemIconPalette_Pidgeotite[];
+extern const u32 gItemIcon_Alakazite[];
+extern const u32 gItemIconPalette_Alakazite[];
+extern const u32 gItemIcon_Slowbronite[];
+extern const u32 gItemIconPalette_Slowbronite[];
+extern const u32 gItemIcon_Gengarite[];
+extern const u32 gItemIconPalette_Gengarite[];
+extern const u32 gItemIcon_Kangaskhanite[];
+extern const u32 gItemIconPalette_Kangaskhanite[];
+extern const u32 gItemIcon_Pinsirite[];
+extern const u32 gItemIconPalette_Pinsirite[];
+extern const u32 gItemIcon_Gyaradosite[];
+extern const u32 gItemIconPalette_Gyaradosite[];
+extern const u32 gItemIcon_Aerodactylite[];
+extern const u32 gItemIconPalette_Aerodactylite[];
+extern const u32 gItemIcon_MewtwoniteX[];
+extern const u32 gItemIconPalette_MewtwoniteX[];
+extern const u32 gItemIcon_MewtwoniteY[];
+extern const u32 gItemIconPalette_MewtwoniteY[];
+
+// Battle Mechanic Key Items
+extern const u32 gItemIcon_MegaRing[];
+extern const u32 gItemIconPalette_MegaRing[];
+
+// Charms
+extern const u32 gItemIcon_OvalCharm[];
+extern const u32 gItemIconPalette_OvalCharm[];
+extern const u32 gItemIcon_ShinyCharm[];
+extern const u32 gItemIconPalette_ShinyCharm[];
+extern const u32 gItemIcon_CatchingCharm[];
+extern const u32 gItemIconPalette_CatchingCharm[];
 
 #endif //GUARD_GRAPHICS_H

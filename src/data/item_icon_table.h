@@ -108,6 +108,7 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_THUNDER_STONE] = {gItemIcon_ThunderStone, gItemIconPalette_ThunderStone},
     [ITEM_WATER_STONE] = {gItemIcon_WaterStone, gItemIconPalette_WaterStone},
     [ITEM_LEAF_STONE] = {gItemIcon_LeafStone, gItemIconPalette_LeafStone},
+    [ITEM_POWER_STONE] = {gItemIcon_PowerStone, gItemIconPalette_PowerStone},
     // ????????
     [ITEM_063] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_064] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
@@ -426,6 +427,28 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_SMOOTH_ROCK] = {gItemIcon_SmoothRock, gItemIconPalette_SmoothRock},
     [ITEM_ICY_ROCK] = {gItemIcon_IcyRock, gItemIconPalette_IcyRock},
     [ITEM_PIXIE_DUST] = {gItemIcon_PixieDust, gItemIconPalette_PixieDust},
+    // Charms
+    [ITEM_OVAL_CHARM] = {gItemIcon_OvalCharm, gItemIconPalette_OvalCharm},
+    [ITEM_SHINY_CHARM] = {gItemIcon_ShinyCharm, gItemIconPalette_ShinyCharm},
+    [ITEM_CATCHING_CHARM] = {gItemIcon_CatchingCharm, gItemIconPalette_CatchingCharm},
+    // Battle Mechanic Key Items
+    [ITEM_MEGA_RING] = {gItemIcon_MegaRing, gItemIconPalette_MegaRing},
+    // Mega Stones
+    [ITEM_VENUSAURITE] = {gItemIcon_Venusaurite, gItemIconPalette_Venusaurite},
+    [ITEM_CHARIZARDITE_X] = {gItemIcon_CharizarditeX, gItemIconPalette_CharizarditeX},
+    [ITEM_CHARIZARDITE_Y] = {gItemIcon_CharizarditeY, gItemIconPalette_CharizarditeY},
+    [ITEM_BLASTOISINITE] = {gItemIcon_Blastoisinite, gItemIconPalette_Blastoisinite},
+    [ITEM_BEEDRILLITE] = {gItemIcon_Beedrillite, gItemIconPalette_Beedrillite},
+    [ITEM_PIDGEOTITE] = {gItemIcon_Pidgeotite, gItemIconPalette_Pidgeotite},
+    [ITEM_ALAKAZITE] = {gItemIcon_Alakazite, gItemIconPalette_Alakazite},
+    [ITEM_SLOWBRONITE] = {gItemIcon_Slowbronite, gItemIconPalette_Slowbronite},
+    [ITEM_GENGARITE] = {gItemIcon_Gengarite, gItemIconPalette_Gengarite},
+    [ITEM_KANGASKHANITE] = {gItemIcon_Kangaskhanite, gItemIconPalette_Kangaskhanite},
+    [ITEM_PINSIRITE] = {gItemIcon_Pinsirite, gItemIconPalette_Pinsirite},
+    [ITEM_GYARADOSITE] = {gItemIcon_Gyaradosite, gItemIconPalette_Gyaradosite},
+    [ITEM_AERODACTYLITE] = {gItemIcon_Aerodactylite, gItemIconPalette_Aerodactylite},
+    [ITEM_MEWTWONITE_X] = {gItemIcon_MewtwoniteX, gItemIconPalette_MewtwoniteX},
+    [ITEM_MEWTWONITE_Y] = {gItemIcon_MewtwoniteY, gItemIconPalette_MewtwoniteY},
 };
 
 #ifdef ITEM_EXPANSION

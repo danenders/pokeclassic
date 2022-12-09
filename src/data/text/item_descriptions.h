@@ -384,6 +384,11 @@ static const u8 sThunderStoneDesc[] = _(
     "species of Pokémon\n"
     "evolve.");
 
+static const u8 sPowerStoneDesc[] = _(
+    "Makes certain\n"
+    "species of Pokémon\n"
+    "evolve.");
+
 static const u8 sWaterStoneDesc[] = _(
     "Makes certain\n"
     "species of Pokémon\n"
@@ -1805,3 +1810,89 @@ static const u8 sPixieDustDesc[] = _(
     "raises the power of\n"
     "Fairy-type moves.");
 
+//Mega
+static const u8 sMegaRingDesc[] = _(
+    "Enables {PKMN} holding\n"
+    "their Mega Stone to\n"
+    "Mega Evolve.");
+
+static const u8 sVenusauriteDesc[] = _(
+    "This stone enables\n"
+    "Venusaur to Mega\n"
+    "Evolve in battle.");
+
+static const u8 sCharizarditeDesc[] = _(
+    "This stone enables\n"
+    "Charizard to Mega\n"
+    "Evolve in battle.");
+
+static const u8 sBlastoisiniteDesc[] = _(
+    "This stone enables\n"
+    "Blastoise to Mega\n"
+    "Evolve in battle.");
+
+static const u8 sBeedrilliteDesc[] = _(
+    "This stone enables\n"
+    "Beedrill to Mega\n"
+    "Evolve in battle.");
+
+static const u8 sPidgeotiteDesc[] = _(
+    "This stone enables\n"
+    "Pidgeot to Mega\n"
+    "Evolve in battle.");
+
+static const u8 sAlakaziteDesc[] = _(
+    "This stone enables\n"
+    "Alakazam to Mega\n"
+    "Evolve in battle.");
+
+static const u8 sSlowbroniteDesc[] = _(
+    "This stone enables\n"
+    "Slowbro to Mega\n"
+    "Evolve in battle.");
+
+static const u8 sGengariteDesc[] = _(
+    "This stone enables\n"
+    "Gengar to Mega\n"
+    "Evolve in battle.");
+
+static const u8 sKangaskhaniteDesc[] = _(
+    "This stone enables\n"
+    "Kangaskhan to Mega\n"
+    "Evolve in battle.");
+
+static const u8 sPinsiriteDesc[] = _(
+    "This stone enables\n"
+    "Pinsir to Mega\n"
+    "Evolve in battle.");
+
+static const u8 sGyaradositeDesc[] = _(
+    "This stone enables\n"
+    "Gyarados to Mega\n"
+    "Evolve in battle.");
+
+static const u8 sAerodactyliteDesc[] = _(
+    "This stone enables\n"
+    "Aerodactyl to Mega\n"
+    "Evolve in battle.");
+
+static const u8 sMewtwoniteDesc[] = _(
+    "This stone enables\n"
+    "Mewtwo to Mega\n"
+    "Evolve in battle.");
+
+// Charms
+static const u8 sOvalCharmDesc[] = _(
+    "Raises the chance\n"
+    "of finding eggs\n"
+    "at the daycare.");
+
+static const u8 sShinyCharmDesc[] = _(
+    "A charm that will\n"
+    "raise the chance\n"
+    "of Shiny Pokémon.");
+
+static const u8 sCatchingCharmDesc[] = _(
+    "A charm that raises\n"
+    "the chance of\n"
+    "Critical Captures.");
