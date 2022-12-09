@@ -466,6 +466,22 @@ const u8 *const gMonIconTable[] =
     [SPECIES_UNOWN_EMARK] = gMonIcon_UnownExclamationMark,
     [SPECIES_UNOWN_QMARK] = gMonIcon_UnownQuestionMark,
     [SPECIES_PIKACHU_PARTNER] = gMonIcon_Pikachu,
+    //Megas
+    [SPECIES_VENUSAUR_MEGA] = gMonIcon_VenusaurMega,
+    [SPECIES_CHARIZARD_MEGA_X] = gMonIcon_CharizardMegaX,
+    [SPECIES_CHARIZARD_MEGA_Y] = gMonIcon_CharizardMegaY,
+    [SPECIES_BLASTOISE_MEGA] = gMonIcon_BlastoiseMega,
+    [SPECIES_BEEDRILL_MEGA] = gMonIcon_BeedrillMega,
+    [SPECIES_PIDGEOT_MEGA] = gMonIcon_PidgeotMega,
+    [SPECIES_ALAKAZAM_MEGA] = gMonIcon_AlakazamMega,
+    [SPECIES_SLOWBRO_MEGA] = gMonIcon_SlowbroMega,
+    [SPECIES_GENGAR_MEGA] = gMonIcon_GengarMega,
+    [SPECIES_KANGASKHAN_MEGA] = gMonIcon_KangaskhanMega,
+    [SPECIES_PINSIR_MEGA] = gMonIcon_PinsirMega,
+    [SPECIES_GYARADOS_MEGA] = gMonIcon_GyaradosMega,
+    [SPECIES_AERODACTYL_MEGA] = gMonIcon_AerodactylMega,
+    [SPECIES_MEWTWO_MEGA_X] = gMonIcon_MewtwoMegaX,
+    [SPECIES_MEWTWO_MEGA_Y] = gMonIcon_MewtwoMegaY,
 };
 
 const u8 gMonIconPaletteIndices[] =
@@ -912,6 +928,22 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_UNOWN_Z] = 0,
     [SPECIES_UNOWN_EMARK] = 0,
     [SPECIES_UNOWN_QMARK] = 0,
+    //Megas
+    [SPECIES_VENUSAUR_MEGA] = 1,
+    [SPECIES_CHARIZARD_MEGA_X] = 0,
+    [SPECIES_CHARIZARD_MEGA_Y] = 0,
+    [SPECIES_BLASTOISE_MEGA] = 2,
+    [SPECIES_BEEDRILL_MEGA] = 2,
+    [SPECIES_PIDGEOT_MEGA] = 0,
+    [SPECIES_ALAKAZAM_MEGA] = 2,
+    [SPECIES_SLOWBRO_MEGA] = 0,
+    [SPECIES_GENGAR_MEGA] = 2,
+    [SPECIES_KANGASKHAN_MEGA] = 2,
+    [SPECIES_PINSIR_MEGA] = 2,
+    [SPECIES_GYARADOS_MEGA] = 0,
+    [SPECIES_AERODACTYL_MEGA] = 2,
+    [SPECIES_MEWTWO_MEGA_X] = 2,
+    [SPECIES_MEWTWO_MEGA_Y] = 2,
 };
 
 const struct SpritePalette gMonIconPaletteTable[] =

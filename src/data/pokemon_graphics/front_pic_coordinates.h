@@ -2214,4 +2214,80 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = MON_COORDS_SIZE(24, 40),
         .y_offset = 13,
     },
+// Megas
+    [SPECIES_VENUSAUR_MEGA] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 3,
+    },
+    [SPECIES_CHARIZARD_MEGA_X] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+    [SPECIES_CHARIZARD_MEGA_Y] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+    [SPECIES_BLASTOISE_MEGA] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+    [SPECIES_BEEDRILL_MEGA] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 2,
+    },
+    [SPECIES_PIDGEOT_MEGA] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+    [SPECIES_ALAKAZAM_MEGA] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+    [SPECIES_SLOWBRO_MEGA] =
+    {
+        .size = MON_COORDS_SIZE(56, 64),
+        .y_offset = 0,
+    },
+    [SPECIES_GENGAR_MEGA] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 7,
+    },
+    [SPECIES_KANGASKHAN_MEGA] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+    [SPECIES_PINSIR_MEGA] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 3,
+    },
+    [SPECIES_GYARADOS_MEGA] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 0,
+    },
+    [SPECIES_AERODACTYL_MEGA] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 2,
+    },
+    [SPECIES_MEWTWO_MEGA_X] =
+    {
+        .size = MON_COORDS_SIZE(48, 64),
+        .y_offset = 0,
+    },
+    [SPECIES_MEWTWO_MEGA_Y] =
+    {
+        .size = MON_COORDS_SIZE(40, 64),
+        .y_offset = 0,
+    },
 };

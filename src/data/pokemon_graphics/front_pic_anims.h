@@ -4812,6 +4812,96 @@ static const union AnimCmd sAnim_UNOWN_QMARK_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_VENUSAUR_MEGA_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_CHARIZARD_MEGA_X_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_CHARIZARD_MEGA_Y_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_BLASTOISE_MEGA_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_BEEDRILL_MEGA_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_PIDGEOT_MEGA_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_ALAKAZAM_MEGA_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_SLOWBRO_MEGA_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_GENGAR_MEGA_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_KANGASKHAN_MEGA_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_PINSIR_MEGA_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_GYARADOS_MEGA_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_AERODACTYL_MEGA_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_MEWTWO_MEGA_X_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_MEWTWO_MEGA_Y_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd *const sAnims_NONE[] ={
     sAnim_GeneralFrame0,
     sAnim_NONE_1,
@@ -6963,6 +7053,82 @@ static const union AnimCmd *const sAnims_UNOWN_QMARK[] ={
     sAnim_UNOWN_QMARK_1,
 };
 
+static const union AnimCmd *const sAnims_VENUSAUR_MEGA[] ={
+    sAnim_GeneralFrame0,
+    sAnim_VENUSAUR_MEGA_1,
+};
+
+static const union AnimCmd *const sAnims_CHARIZARD_MEGA_X[] ={
+    sAnim_GeneralFrame0,
+    sAnim_CHARIZARD_MEGA_X_1,
+};
+
+static const union AnimCmd *const sAnims_CHARIZARD_MEGA_Y[] ={
+    sAnim_GeneralFrame0,
+    sAnim_CHARIZARD_MEGA_Y_1,
+};
+
+static const union AnimCmd *const sAnims_BLASTOISE_MEGA[] ={
+    sAnim_GeneralFrame0,
+    sAnim_BLASTOISE_MEGA_1,
+};
+
+static const union AnimCmd *const sAnims_BEEDRILL_MEGA[] ={
+    sAnim_GeneralFrame0,
+    sAnim_BEEDRILL_MEGA_1,
+};
+
+static const union AnimCmd *const sAnims_PIDGEOT_MEGA[] ={
+    sAnim_GeneralFrame0,
+    sAnim_PIDGEOT_MEGA_1,
+};
+
+static const union AnimCmd *const sAnims_ALAKAZAM_MEGA[] ={
+    sAnim_GeneralFrame0,
+    sAnim_ALAKAZAM_MEGA_1,
+};
+
+static const union AnimCmd *const sAnims_SLOWBRO_MEGA[] ={
+    sAnim_GeneralFrame0,
+    sAnim_SLOWBRO_MEGA_1,
+};
+
+static const union AnimCmd *const sAnims_GENGAR_MEGA[] ={
+    sAnim_GeneralFrame0,
+    sAnim_GENGAR_MEGA_1,
+};
+
+static const union AnimCmd *const sAnims_KANGASKHAN_MEGA[] ={
+    sAnim_GeneralFrame0,
+    sAnim_KANGASKHAN_MEGA_1,
+};
+
+static const union AnimCmd *const sAnims_PINSIR_MEGA[] ={
+    sAnim_GeneralFrame0,
+    sAnim_PINSIR_MEGA_1,
+};
+
+static const union AnimCmd *const sAnims_GYARADOS_MEGA[] ={
+    sAnim_GeneralFrame0,
+    sAnim_GYARADOS_MEGA_1,
+};
+
+static const union AnimCmd *const sAnims_AERODACTYL_MEGA[] ={
+    sAnim_GeneralFrame0,
+    sAnim_AERODACTYL_MEGA_1,
+};
+
+static const union AnimCmd *const sAnims_MEWTWO_MEGA_X[] ={
+    sAnim_GeneralFrame0,
+    sAnim_MEWTWO_MEGA_X_1,
+};
+
+static const union AnimCmd *const sAnims_MEWTWO_MEGA_Y[] ={
+    sAnim_GeneralFrame0,
+    sAnim_MEWTWO_MEGA_Y_1,
+};
+
+
 #define ANIM_CMD(name)             [SPECIES_##name] = sAnims_##name
 #define ANIM_CMD_FULL(name, anims) [SPECIES_##name] = anims
 
@@ -7410,6 +7576,22 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(UNOWN_Z),
     ANIM_CMD(UNOWN_EMARK),
     ANIM_CMD(UNOWN_QMARK),
+    //Megas
+    ANIM_CMD(VENUSAUR_MEGA),
+    ANIM_CMD(CHARIZARD_MEGA_X),
+    ANIM_CMD(CHARIZARD_MEGA_Y),
+    ANIM_CMD(BLASTOISE_MEGA),
+    ANIM_CMD(BEEDRILL_MEGA),
+    ANIM_CMD(PIDGEOT_MEGA),
+    ANIM_CMD(ALAKAZAM_MEGA),
+    ANIM_CMD(SLOWBRO_MEGA),
+    ANIM_CMD(GENGAR_MEGA),
+    ANIM_CMD(KANGASKHAN_MEGA),
+    ANIM_CMD(PINSIR_MEGA),
+    ANIM_CMD(GYARADOS_MEGA),
+    ANIM_CMD(AERODACTYL_MEGA),
+    ANIM_CMD(MEWTWO_MEGA_X),
+    ANIM_CMD(MEWTWO_MEGA_Y),
 };
 
 #undef ANIM_CMD

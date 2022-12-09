@@ -1944,6 +1944,67 @@ Cry_PikachuPartner::
 	.incbin "sound/direct_sound_samples/cries/pikachu.bin"
 
 	.align 2
+Cry_VenusaurMega::
+	.incbin "sound/direct_sound_samples/cries/mega_venusaur.bin"
+
+	.align 2
+Cry_CharizardMegaX::
+	.incbin "sound/direct_sound_samples/cries/mega_charizard_x.bin"
+
+	.align 2
+Cry_CharizardMegaY::
+	.incbin "sound/direct_sound_samples/cries/mega_charizard_y.bin"
+
+	.align 2
+Cry_BlastoiseMega::
+	.incbin "sound/direct_sound_samples/cries/mega_blastoise.bin"
+
+	.align 2
+Cry_BeedrillMega::
+	.incbin "sound/direct_sound_samples/cries/mega_beedrill.bin"
+
+	.align 2
+Cry_PidgeotMega::
+	.incbin "sound/direct_sound_samples/cries/mega_pidgeot.bin"
+
+	.align 2
+Cry_AlakazamMega::
+	.incbin "sound/direct_sound_samples/cries/mega_alakazam.bin"
+
+	.align 2
+Cry_SlowbroMega::
+	.incbin "sound/direct_sound_samples/cries/mega_slowbro.bin"
+
+	.align 2
+Cry_GengarMega::
+	.incbin "sound/direct_sound_samples/cries/mega_gengar.bin"
+
+	.align 2
+Cry_KangaskhanMega::
+	.incbin "sound/direct_sound_samples/cries/mega_kangaskhan.bin"
+
+	.align 2
+Cry_PinsirMega::
+	.incbin "sound/direct_sound_samples/cries/mega_pinsir.bin"
+
+	.align 2
+Cry_GyaradosMega::
+	.incbin "sound/direct_sound_samples/cries/mega_gyarados.bin"
+
+	.align 2
+Cry_AerodactylMega::
+	.incbin "sound/direct_sound_samples/cries/mega_aerodactyl.bin"
+
+	.align 2
+Cry_MewtwoMegaX::
+	.incbin "sound/direct_sound_samples/cries/mega_mewtwo_x.bin"
+
+	.align 2
+Cry_MewtwoMegaY::
+	.incbin "sound/direct_sound_samples/cries/mega_mewtwo_y.bin"
+
+
+	.align 2
 DirectSoundWaveData_register_noise::
 	.incbin "sound/direct_sound_samples/register_noise.bin"
 

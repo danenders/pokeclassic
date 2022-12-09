@@ -2,26 +2,32 @@
 
 static const u16 sVenusaurFormSpeciesIdTable[] = {
     SPECIES_VENUSAUR,
+    SPECIES_VENUSAUR_MEGA,
     FORM_SPECIES_END,
 };
 
 static const u16 sCharizardFormSpeciesIdTable[] = {
     SPECIES_CHARIZARD,
+    SPECIES_CHARIZARD_MEGA_X,
+    SPECIES_CHARIZARD_MEGA_Y,
     FORM_SPECIES_END,
 };
 
 static const u16 sBlastoiseFormSpeciesIdTable[] = {
     SPECIES_BLASTOISE,
+    SPECIES_BLASTOISE_MEGA,
     FORM_SPECIES_END,
 };
 
 static const u16 sBeedrillFormSpeciesIdTable[] = {
     SPECIES_BEEDRILL,
+    SPECIES_BEEDRILL_MEGA,
     FORM_SPECIES_END,
 };
 
 static const u16 sPidgeotFormSpeciesIdTable[] = {
     SPECIES_PIDGEOT,
+    SPECIES_PIDGEOT_MEGA,
     FORM_SPECIES_END,
 };
 
@@ -87,6 +93,7 @@ static const u16 sPersianFormSpeciesIdTable[] = {
 
 static const u16 sAlakazamFormSpeciesIdTable[] = {
     SPECIES_ALAKAZAM,
+    SPECIES_ALAKAZAM_MEGA,
     FORM_SPECIES_END,
 };
 
@@ -122,6 +129,7 @@ static const u16 sSlowpokeFormSpeciesIdTable[] = {
 
 static const u16 sSlowbroFormSpeciesIdTable[] = {
     SPECIES_SLOWBRO,
+    SPECIES_SLOWBRO_MEGA,
     FORM_SPECIES_END,
 };
 
@@ -142,6 +150,7 @@ static const u16 sMukFormSpeciesIdTable[] = {
 
 static const u16 sGengarFormSpeciesIdTable[] = {
     SPECIES_GENGAR,
+    SPECIES_GENGAR_MEGA,
     FORM_SPECIES_END,
 };
 
@@ -162,6 +171,7 @@ static const u16 sWeezingFormSpeciesIdTable[] = {
 
 static const u16 sKangaskhanFormSpeciesIdTable[] = {
     SPECIES_KANGASKHAN,
+    SPECIES_KANGASKHAN_MEGA,
     FORM_SPECIES_END,
 };
 
@@ -172,16 +182,19 @@ static const u16 sMrMimeFormSpeciesIdTable[] = {
 
 static const u16 sPinsirFormSpeciesIdTable[] = {
     SPECIES_PINSIR,
+    SPECIES_PINSIR_MEGA,
     FORM_SPECIES_END,
 };
 
 static const u16 sGyaradosFormSpeciesIdTable[] = {
     SPECIES_GYARADOS,
+    SPECIES_GYARADOS_MEGA,
     FORM_SPECIES_END,
 };
 
 static const u16 sAerodactylFormSpeciesIdTable[] = {
     SPECIES_AERODACTYL,
+    SPECIES_AERODACTYL_MEGA,
     FORM_SPECIES_END,
 };
 
@@ -202,6 +215,8 @@ static const u16 sMoltresFormSpeciesIdTable[] = {
 
 static const u16 sMewtwoFormSpeciesIdTable[] = {
     SPECIES_MEWTWO,
+    SPECIES_MEWTWO_MEGA_X,
+    SPECIES_MEWTWO_MEGA_Y,
     FORM_SPECIES_END,
 };
 
