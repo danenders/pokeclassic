@@ -3080,4 +3080,7 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TimidMintDesc[];
 extern const u8 gText_SoldOut[];
 extern const u8 gText_SoldOut2[];
 
+extern const u8 gOtherText_ExpShareOn[];
+extern const u8 gOtherText_ExpShareOff[];
+
 #endif // GUARD_STRINGS_H

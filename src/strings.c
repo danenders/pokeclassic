@@ -1931,4 +1931,7 @@ const u8 gText_TimidMintBP[] = _("Timid Mint{CLEAR_TO 0x64}50BP");
 const u8 gText_SoldOut[] = _("I'm sorry, but that item is sold out.\p");
 const u8 gText_SoldOut2[] = _("SOLD OUT");
 
+//Exp
+const u8 gOtherText_ExpShareOn[] = _("Turned on the Exp. Share.\pParty will now gain a portion\nof the Experience Points.{PAUSE_UNTIL_PRESS}");
+const u8 gOtherText_ExpShareOff[] = _("Turned off the Exp. Share.\pParty will no longer gain a portion\nof any Experience Points.{PAUSE_UNTIL_PRESS}");
 

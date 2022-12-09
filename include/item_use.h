@@ -38,6 +38,7 @@ void ItemUseOutOfBattle_IncreaseIV(u8);
 void ItemUseOutOfBattle_Mints(u8 taskId);
 void ItemUseOutOfBattle_AbilityCapsule(u8);
 void ItemUseOutOfBattle_AbilityPatch(u8);
+void ItemUseOutOfBattle_ExpShare(u8);
 
 enum {
     BALL_THROW_UNABLE_TWO_MONS,

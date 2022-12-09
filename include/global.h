@@ -537,6 +537,7 @@ struct SaveBlock2
               u8 costumeId;
               u16 optionsFollowerType:3; //Follower Type: 0= Pikachu, 1=Any, 2=Off
               u16 surfmon;
+              u16 expShare:1;
 }; // sizeof=0xF2C
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;
