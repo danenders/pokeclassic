@@ -391,6 +391,7 @@ void Overworld_ResetStateAfterFly(void)
     FlagClear(FLAG_SYS_SAFARI_MODE);
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_USE_FLASH);
+    gSaveBlock2Ptr->surfMon = SPECIES_NONE;
     VarSet(VAR_SAFARI_ZONE_STATE,0);
 }
 
@@ -402,6 +403,7 @@ void Overworld_ResetStateAfterTeleport(void)
     FlagClear(FLAG_SYS_SAFARI_MODE);
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_USE_FLASH);
+    gSaveBlock2Ptr->surfMon = SPECIES_NONE;
     VarSet(VAR_SAFARI_ZONE_STATE,0);
 }
 
@@ -413,6 +415,7 @@ void Overworld_ResetStateAfterDigEscRope(void)
     FlagClear(FLAG_SYS_SAFARI_MODE);
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_USE_FLASH);
+    gSaveBlock2Ptr->surfMon = SPECIES_NONE;
     VarSet(VAR_SAFARI_ZONE_STATE,0);
 }
 
@@ -424,6 +427,7 @@ static void Overworld_ResetStateAfterWhiteOut(void)
     FlagClear(FLAG_SYS_SAFARI_MODE);
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_USE_FLASH);
+    gSaveBlock2Ptr->surfMon = SPECIES_NONE;
     VarSet(VAR_SAFARI_ZONE_STATE,0);
     #if VAR_TERRAIN != 0
         VarSet(VAR_TERRAIN, 0);

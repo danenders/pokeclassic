@@ -2054,6 +2054,7 @@ static void CreateStopSurfingTask(u8 direction)
     ScriptContext2_Enable();
     Overworld_ClearSavedMusic();
     Overworld_ChangeMusicToDefault();
+    gSaveBlock2Ptr->surfMon = SPECIES_NONE;
     gPlayerAvatar.flags &= ~PLAYER_AVATAR_FLAG_SURFING;
     gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_ON_FOOT;
     gPlayerAvatar.preventStep = TRUE;
