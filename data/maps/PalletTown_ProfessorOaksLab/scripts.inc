@@ -830,7 +830,8 @@ PalletTown_ProfessorOaksLab_Text_Jealous::
 PalletTown_ProfessorOaksLab_EventScript_Cedar::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_EXP_SHARE, PalletTown_ProfessorOaksLab_EventScript_CedarAllItems
+	goto_if_set FLAG_RECEIVED_ALL_CHARMS, PalletTown_ProfessorOaksLab_EventScript_CedarAllItems
+	goto_if_set FLAG_RECEIVED_EXP_SHARE, PalletTown_ProfessorOaksLab_EventScript_CedarPostgame
 	msgbox PalletTown_ProfessorOaksLab_Text_JustJoined
 	setflag FLAG_MET_CEDAR
 	release
@@ -842,10 +843,113 @@ PalletTown_ProfessorOaksLab_Text_JustJoined::
     .string "team.\p"
     .string "I'm excited to work with everyone.$"
 
+PalletTown_ProfessorOaksLab_EventScript_CedarPostgame::
+	msgbox PalletTown_ProfessorOaksLab_Text_CedarHiPlayer, MSGBOX_DEFAULT
+	goto_if_unset FLAG_RECEIVED_CATCHING_CHARM, PalletTown_ProfessorOaksLab_EventScript_GetCatchingCharm
+	goto_if_unset FLAG_RECEIVED_OVAL_CHARM, PalletTown_ProfessorOaksLab_EventScript_GetOvalCharm
+PalletTown_ProfessorOaksLab_EventScript_CedarCheckNext::
+	goto_if_unset FLAG_RECEIVED_SHINY_CHARM, PalletTown_ProfessorOaksLab_EventScript_GetShinyCharm
+PalletTown_ProfessorOaksLab_EventScript_CedarMaybeMoreItems::
+	msgbox PalletTown_ProfessorOaksLab_Text_MaybeMoreItems, MSGBOX_DEFAULT
+	release
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_GetCatchingCharm::
+	goto_if_unset FLAG_SYS_GAME_CLEAR, PalletTown_ProfessorOaksLab_EventScript_CedarMaybeMoreItems
+	msgbox PalletTown_ProfessorOaksLab_Text_CatchingCharmReward
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	message PalletTown_ProfessorOaksLab_Text_ReceivedCatchingCharm
+	waitmessage
+	waitfanfare
+	setflag FLAG_RECEIVED_CATCHING_CHARM
+	additem ITEM_CATCHING_CHARM, 1
+	call_if_unset FLAG_RECEIVED_ALL_CHARMS, Cedar_CheckCharms
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_CatchingCharmReward::
+	.string "Wow! You defeated the Elite Four?\n"
+	.string "That's quite an accomplishment!\p"
+	.string "You know, there's still more Pokémon\n"
+	.string "to see out there.\p"
+	.string "This should help you complete your Pokédex!$"
+
+PalletTown_ProfessorOaksLab_Text_ReceivedCatchingCharm::
+	.string "{PLAYER} earned the Catching Charm!"
+
+PalletTown_ProfessorOaksLab_EventScript_GetOvalCharm::
+	goto_if_unset FLAG_CLEARED_SECRET_BATTLE, PalletTown_ProfessorOaksLab_EventScript_CedarCheckNext
+	msgbox PalletTown_ProfessorOaksLab_Text_OvalCharmReward
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	message PalletTown_ProfessorOaksLab_Text_ReceivedOvalCharm
+	waitmessage
+	waitfanfare
+	setflag FLAG_RECEIVED_OVAL_CHARM
+	additem ITEM_OVAL_CHARM, 1
+	call_if_unset FLAG_RECEIVED_ALL_CHARMS, Cedar_CheckCharms
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_OvalCharmReward::
+	.string "Wow! You defeated Professor Oak?\n"
+	.string "That's quite an accomplishment!\p"
+	.string "Raising Pokémon is just as important\n"
+	.string "as battling, you know.\p"
+	.string "This should help you raise new Pokémon!$"
+
+PalletTown_ProfessorOaksLab_Text_ReceivedOvalCharm::
+	.string "{PLAYER} earned the Oval Charm!"
+
+PalletTown_ProfessorOaksLab_EventScript_GetShinyCharm::
+	specialvar VAR_RESULT, HasAllHoennMons
+	goto_if_eq VAR_RESULT, FALSE, PalletTown_ProfessorOaksLab_EventScript_CedarMaybeMoreItems
+	msgbox PalletTown_ProfessorOaksLab_Text_ShinyCharmReward
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	message PalletTown_ProfessorOaksLab_Text_ReceivedShinyCharm
+	waitmessage
+	waitfanfare
+	setflag FLAG_RECEIVED_SHINY_CHARM
+	additem ITEM_SHINY_CHARM, 1
+	call_if_unset FLAG_RECEIVED_ALL_CHARMS, Cedar_CheckCharms
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_ShinyCharmReward::
+	.string "Incredible! You caught them all?\n"
+	.string "That's an amazing accomplishment!\p"
+	.string "I've heard that Pokémon have rare\n"
+	.string "variations.\p"
+	.string "I've never seen one, though...\p"
+	.string "This might help you find them!$"
+
+PalletTown_ProfessorOaksLab_Text_ReceivedShinyCharm::
+	.string "{PLAYER} earned the Shiny Charm!"
+
+Cedar_CheckCharms::
+	goto_if_unset FLAG_RECEIVED_CATCHING_CHARM, Common_EventScript_Return
+	goto_if_unset FLAG_RECEIVED_OVAL_CHARM, Common_EventScript_Return
+	goto_if_unset FLAG_RECEIVED_SHINY_CHARM, Common_EventScript_Return
+	setflag FLAG_RECEIVED_ALL_CHARMS
+	return
+
 PalletTown_ProfessorOaksLab_EventScript_CedarAllItems::
 	msgbox PalletTown_ProfessorOaksLab_Text_WhatAJourney
 	release
 	end
+
+PalletTown_ProfessorOaksLab_Text_CedarHiPlayer:
+	.string "Cedar: Hi, {PLAYER}!\n"
+	.string "Stopping by to see the Prof?\p"
+	.string "Oh? You came to see me?$"
+
+PalletTown_ProfessorOaksLab_Text_MaybeMoreItems::
+	.string "Hmm, I don't have any new items\n"
+	.string "to give you right now.\p"
+	.string "I'd love to keep hearing about your\n"
+	.string "adventures, though!\p"
+	.string "If you have a good accomplishment\n"
+	.string "to tell me about, I could convince\l"
+	.string "Prof. Oak to give you something good!$"
 
 PalletTown_ProfessorOaksLab_Text_WhatAJourney::
 	.string "Cedar: Oh, {PLAYER}!\n"
@@ -862,7 +966,6 @@ PalletTown_ProfessorOaksLab_Text_WhatAJourney::
 	.string "I see now why Prof. Oak gave me that\n"
 	.string "assignment.\p"
 	.string "So, thanks for the adventure!$"
-
 
 PalletTown_ProfessorOaksLab_EventScript_Pokedex::
 	msgbox PalletTown_ProfessorOaksLab_Text_BlankEncyclopedia, MSGBOX_NPC

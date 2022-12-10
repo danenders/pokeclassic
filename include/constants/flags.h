@@ -149,11 +149,11 @@
 #define FLAG_DEFEATED_RIVAL_CHAMPION        0x83
 #define FLAG_DEFEATED_SECRET_BATTLE         0x84
 #define FLAG_RIVAL_REMATCHED          		0x85 //Found post-game rival for Rematch in Viridian Gym
-#define FLAG_UNUSED_0x086             		0x86
-#define FLAG_UNUSED_0x087  					0x87
-#define FLAG_UNUSED_0x088 					0x88 
-#define FLAG_UNUSED_0x089                   0x89
-#define FLAG_UNUSED_0x08A          			0x8A 
+#define FLAG_RECEIVED_CATCHING_CHARM        0x86
+#define FLAG_RECEIVED_OVAL_CHARM  			0x87
+#define FLAG_RECEIVED_SHINY_CHARM 			0x88 
+#define FLAG_RECEIVED_ALL_CHARMS            0x89
+#define FLAG_CLEARED_SECRET_BATTLE          0x8A 
 #define FLAG_UNUSED_0x08B   				0x8B
 #define FLAG_UNUSED_0x08C             		0x8C
 #define FLAG_UNUSED_0x08D         			0x8D

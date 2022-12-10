@@ -46,6 +46,7 @@ PokemonLeague_SecretBattle_EventScript_EnterRoom::
 	trainerbattle_no_intro SECRET_BATTLE_OAK, PokemonLeague_SecretBattle_Text_Defeat
 	setflag FLAG_TEMP_4
 	clearflag FLAG_TEMP_5
+	setflag FLAG_CLEARED_SECRET_BATTLE
 	setflag FLAG_DEFEATED_SECRET_BATTLE
 	setflag FLAG_TEMP_4
 	playbgm MUS_RG_SLOW_PALLET, 0
