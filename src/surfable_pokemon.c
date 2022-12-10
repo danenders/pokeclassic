@@ -35,19 +35,10 @@ static EWRAM_DATA u16 sCurrentSurfMon = {0};
 
 static u16 GetSurfMonSpecies(void)
 {
-    u8 i;
+    if (gSaveBlock2Ptr->surfMon == SPECIES_NONE)
+    {
+        u8 i;
 
-    if (gSaveBlock2Ptr->surfMon != SPECIES_NONE)
-    {
-        return gSaveBlock2Ptr->surfMon;
-    }
-    else if (GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_SPECIES) != SPECIES_NONE)
-    {
-        gSaveBlock2Ptr->surfMon = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_SPECIES);
-        return gSaveBlock2Ptr->surfMon;
-    }
-    else
-    {
         for (i = 0; i < 6; i++)
         {
             if (MonKnowsMove(&gPlayerParty[i], MOVE_SURF))
@@ -58,7 +49,10 @@ static u16 GetSurfMonSpecies(void)
         }
         return 0xFFFF;
     }
-
+    else
+    {
+        return gSaveBlock2Ptr->surfMon;
+    }
 }
 
 static u16 GetSurfablePokemonSprite(void)

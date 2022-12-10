@@ -3008,6 +3008,7 @@ static void SurfFieldEffect_End(struct Task *task)
         UnfreezeObjectEvents();
         ScriptContext2_Disable();
         FieldEffectActiveListRemove(FLDEFF_USE_SURF);
+        gSaveBlock2Ptr->surfMon = SPECIES_NONE;
         DestroyTask(FindTaskIdByFunc(Task_SurfFieldEffect));
     }
 }

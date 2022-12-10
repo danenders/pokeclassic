@@ -3780,6 +3780,7 @@ static void DisplayCantUseFlashMessage(void)
 static void FieldCallback_Surf(void)
 {
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    gSaveBlock2Ptr->surfMon = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_SPECIES);
     FieldEffectStart(FLDEFF_USE_SURF);
 }
 
