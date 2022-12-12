@@ -3,6 +3,7 @@ ViridianForest_NorthEntrance_MapScripts::
 
 Route2_ViridianForest_NorthEntrance_EventScript_Youngster::
 	msgbox Route2_ViridianForest_NorthEntrance_Text_ManyMonsOnlyInForests, MSGBOX_NPC
+    end
 	
 Route2_ViridianForest_NorthEntrance_Text_ManyMonsOnlyInForests::
     .string "Many Pokémon live only in forests \n"
