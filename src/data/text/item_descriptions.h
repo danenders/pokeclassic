@@ -1896,3 +1896,42 @@ static const u8 sCatchingCharmDesc[] = _(
     "A charm that raises\n"
     "the chance of\n"
     "Critical Captures.");
+
+static const u8 sHPCandyDesc[] = _(
+    "Raises a Pokémon's\n" 
+    "core HP stat.");
+
+static const u8 sAtkCandyDesc[] = _(
+    "Raises a Pokémon's\n" 
+    "core Attack\n"
+    "stat.");
+
+static const u8 sDefCandyDesc[] = _(
+    "Raises a Pokémon's\n" 
+    "core Defense\n"
+    "stat.");
+
+static const u8 sSpAtkCandyDesc[] = _(
+    "Raises a Pokémon's\n" 
+    "core Sp. Attack\n"
+    "stat.");
+
+static const u8 sSpDefCandyDesc[] = _(
+    "Raises a Pokémon's\n" 
+    "core Sp. Defense\n"
+    "stat.");
+
+static const u8 sSpeedCandyDesc[] = _(
+    "Raises a Pokémon's\n" 
+    "core Speed\n"
+    "stat.");
+
+static const u8 sMaxCandyDesc[] = _(
+    "Maximizes a \n"
+    "Pokémon's core\n" 
+    "stats.");
+
+static const u8 sResetCandyDesc[] = _(
+    "Neutralizes a \n"
+    "Pokémon's core\n" 
+    "stats.");

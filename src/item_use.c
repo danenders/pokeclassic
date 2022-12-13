@@ -1215,4 +1215,16 @@ void ItemUseOutOfBattle_ExpShare(u8 taskId)
     gSaveBlock2Ptr->expShare = !gSaveBlock2Ptr->expShare;
 }
 
+void ItemUseOutOfBattle_ReduceIV(u8 taskId)
+{
+    gItemUseCB = ItemUseCB_ReduceIV;
+    SetUpItemUseCallback(taskId);
+}
+
+void ItemUseOutOfBattle_IncreaseIV(u8 taskId)
+{
+    gItemUseCB = ItemUseCB_IncreaseIV;
+    SetUpItemUseCallback(taskId);
+}
+
 #undef tUsingRegisteredKeyItem

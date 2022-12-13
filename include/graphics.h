@@ -5798,4 +5798,17 @@ extern const u8 gMonIcon_AerodactylMega[];
 extern const u8 gMonIcon_MewtwoMegaX[];
 extern const u8 gMonIcon_MewtwoMegaY[];
 
+//IV Items
+extern const u32 gItemIcon_IVCandy[];
+extern const u32 gItemIconPalette_HPCandy[];
+extern const u32 gItemIconPalette_AtkCandy[];
+extern const u32 gItemIconPalette_DefCandy[];
+extern const u32 gItemIconPalette_SpAtkCandy[];
+extern const u32 gItemIconPalette_SpDefCandy[];
+extern const u32 gItemIconPalette_SpeedCandy[];
+
+extern const u32 gItemIcon_MaxCandy[];
+extern const u32 gItemIconPalette_MaxCandy[];
+extern const u32 gItemIconPalette_ResetCandy[];
+
 #endif //GUARD_GRAPHICS_H

@@ -265,7 +265,7 @@
 
 // Constants for AdjustFriendship
 #define FRIENDSHIP_EVENT_GROW_LEVEL       0
-#define FRIENDSHIP_EVENT_VITAMIN          1 // unused, handled by PokemonUseItemEffects
+#define FRIENDSHIP_EVENT_IV_CANDY         1 //Originally unused. Now used by the IV increasing candy
 #define FRIENDSHIP_EVENT_BATTLE_ITEM      2 // unused, handled by PokemonUseItemEffects
 #define FRIENDSHIP_EVENT_LEAGUE_BATTLE    3
 #define FRIENDSHIP_EVENT_LEARN_TMHM       4
@@ -274,6 +274,7 @@
 #define FRIENDSHIP_EVENT_FAINT_SMALL      7
 #define FRIENDSHIP_EVENT_FAINT_FIELD_PSN  8
 #define FRIENDSHIP_EVENT_FAINT_LARGE      9 // If opponent was >= 30 levels higher. See AdjustFriendshipOnBattleFaint
+#define FRIENDSHIP_EVENT_EFFORT_BERRIES   10
 
 #define MAX_FRIENDSHIP  255
 #define MAX_SHEEN       255

@@ -55,16 +55,6 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_BLUE_SHARD] = {gItemIcon_Shard, gItemIconPalette_BlueShard},
     [ITEM_YELLOW_SHARD] = {gItemIcon_Shard, gItemIconPalette_YellowShard},
     [ITEM_GREEN_SHARD] = {gItemIcon_Shard, gItemIconPalette_GreenShard},
-    // ????????
-    [ITEM_034] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_035] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_036] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_037] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_038] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_039] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_03A] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_03B] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_03C] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // Vitamins
     [ITEM_HP_UP] = {gItemIcon_HPUp, gItemIconPalette_HPUp},
     [ITEM_PROTEIN] = {gItemIcon_Vitamin, gItemIconPalette_Protein},
@@ -448,6 +438,16 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_AERODACTYLITE] = {gItemIcon_Aerodactylite, gItemIconPalette_Aerodactylite},
     [ITEM_MEWTWONITE_X] = {gItemIcon_MewtwoniteX, gItemIconPalette_MewtwoniteX},
     [ITEM_MEWTWONITE_Y] = {gItemIcon_MewtwoniteY, gItemIconPalette_MewtwoniteY},
+    //IV items
+    [ITEM_HP_CANDY]     = {gItemIcon_IVCandy, gItemIconPalette_HPCandy},
+    [ITEM_ATK_CANDY]    = {gItemIcon_IVCandy, gItemIconPalette_AtkCandy},
+    [ITEM_DEF_CANDY]    = {gItemIcon_IVCandy, gItemIconPalette_DefCandy},
+    [ITEM_SPATK_CANDY]  = {gItemIcon_IVCandy, gItemIconPalette_SpAtkCandy},
+    [ITEM_SPDEF_CANDY]  = {gItemIcon_IVCandy, gItemIconPalette_SpDefCandy},
+    [ITEM_SPEED_CANDY]  = {gItemIcon_IVCandy, gItemIconPalette_SpeedCandy},
+    [ITEM_MAX_CANDY]    = {gItemIcon_MaxCandy, gItemIconPalette_MaxCandy},
+    [ITEM_RESET_CANDY]  = {gItemIcon_MaxCandy, gItemIconPalette_ResetCandy},
+
 };
 
 #ifdef ITEM_EXPANSION

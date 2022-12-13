@@ -958,3 +958,16 @@ const u32 gItemIconPalette_ShinyCharm[] = INCBIN_U32("graphics/items/icon_palett
 const u32 gItemIcon_CatchingCharm[] = INCBIN_U32("graphics/items/icons/catching_charm.4bpp.lz");
 const u32 gItemIconPalette_CatchingCharm[] = INCBIN_U32("graphics/items/icon_palettes/catching_charm.gbapal.lz");
 
+//IV Items
+const u32 gItemIcon_IVCandy[] = INCBIN_U32("graphics/items/icons/hp_up.4bpp.lz");
+const u32 gItemIconPalette_HPCandy[] = INCBIN_U32("graphics/items/icon_palettes/hp_candy.gbapal.lz");
+const u32 gItemIconPalette_AtkCandy[] = INCBIN_U32("graphics/items/icon_palettes/atk_candy.gbapal.lz");
+const u32 gItemIconPalette_DefCandy[] = INCBIN_U32("graphics/items/icon_palettes/def_candy.gbapal.lz");
+const u32 gItemIconPalette_SpAtkCandy[] = INCBIN_U32("graphics/items/icon_palettes/spatk_candy.gbapal.lz");
+const u32 gItemIconPalette_SpDefCandy[] = INCBIN_U32("graphics/items/icon_palettes/spdef_candy.gbapal.lz");
+const u32 gItemIconPalette_SpeedCandy[] = INCBIN_U32("graphics/items/icon_palettes/speed_candy.gbapal.lz");
+
+const u32 gItemIcon_MaxCandy[] = INCBIN_U32("graphics/items/icons/max_candy.4bpp.lz");
+const u32 gItemIconPalette_MaxCandy[] = INCBIN_U32("graphics/items/icon_palettes/max_candy.gbapal.lz");
+const u32 gItemIconPalette_ResetCandy[] = INCBIN_U32("graphics/items/icon_palettes/reset_candy.gbapal.lz");
+
