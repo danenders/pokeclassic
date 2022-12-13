@@ -959,7 +959,7 @@ const u32 gItemIcon_CatchingCharm[] = INCBIN_U32("graphics/items/icons/catching_
 const u32 gItemIconPalette_CatchingCharm[] = INCBIN_U32("graphics/items/icon_palettes/catching_charm.gbapal.lz");
 
 //IV Items
-const u32 gItemIcon_IVCandy[] = INCBIN_U32("graphics/items/icons/hp_up.4bpp.lz");
+const u32 gItemIcon_IVCandy[] = INCBIN_U32("graphics/items/icons/iv_candy.4bpp.lz");
 const u32 gItemIconPalette_HPCandy[] = INCBIN_U32("graphics/items/icon_palettes/hp_candy.gbapal.lz");
 const u32 gItemIconPalette_AtkCandy[] = INCBIN_U32("graphics/items/icon_palettes/atk_candy.gbapal.lz");
 const u32 gItemIconPalette_DefCandy[] = INCBIN_U32("graphics/items/icon_palettes/def_candy.gbapal.lz");
