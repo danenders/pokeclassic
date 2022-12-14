@@ -2446,6 +2446,8 @@ extern const u8 MatchCall_Text_LookerRocketHideout[];
 extern const u8 MatchCall_Text_LookerSaffron[];
 extern const u8 MatchCall_Text_LookerSilphCo[];
 extern const u8 MatchCall_Text_LookerGiovanni[];
+extern const u8 MatchCall_Text_LookerPostgameWaiting[];
+extern const u8 MatchCall_Text_LookerPostgameCompleted[];
 
 extern const u8 gText_BillMatchCallDesc[];
 extern const u8 gText_BillMatchCallName[];

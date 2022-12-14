@@ -439,6 +439,44 @@ MatchCall_Text_LookerGiovanni::
 	.string "of Team Rocket.\p"
 	.string "My team is in your debt!$"
 
+MatchCall_EventScript_LookerPostgameReady::
+	lockall
+	pokenavcall MatchCall_Text_LookerPostgameReady
+	waitmessage
+	delay 30
+	closemessage
+	@clearflag to show the postgame rockets
+
+	clearflag FLAG_QUEUE_LOOKER_POSTGAME_CALL
+	setflag FLAG_LOOKER_POSTGAME_STARTED
+	releaseall
+	end
+
+MatchCall_Text_LookerPostgameReady::
+	.string "Looker: {PLAYER}!\p"
+	.string "It's an emergency!\p"
+	.string "Team Rocket has resurfaced in\n"
+	.string "Saffron City!\p"
+	.string "They've taken the Silph Co.\n"
+	.string "President hostage again...\p"
+	.string "...and theres something else...\p"
+	.string "I'll tell you when you get here.\p"
+	.string "You better come see me in\n"
+	.string "Saffron right away.$"
+
+MatchCall_Text_LookerPostgameWaiting::
+	.string "Looker: {PLAYER}!\p"
+	.string "Hurry to Saffron City!$"
+
+MatchCall_Text_LookerPostgameCompleted::
+	.string "Looker: Team Rocket!\p"
+	.string "They'll try anything to get\n"
+	.string "what they want.\p"
+	.string "That's why we have to always\n"
+	.string "stay vigilant!\p"
+	.string "I'm glad Kanto has trainers\n"
+	.string "like you helping out, {PLAYER}.$"
+
 MatchCall_Text_RegisteredBill:
 	.string "Bill registered their info in\n"
 	.string "your Cell Phone.$"

@@ -379,6 +379,31 @@ bool32 ShouldDoAideCall(void)
     return TRUE;
 }
 
+bool32 ShouldDoLookerPostgameCall(void)
+{
+    if (FlagGet(FLAG_QUEUE_LOOKER_POSTGAME_CALL))
+    {
+        switch (gMapHeader.mapType)
+        {
+        case MAP_TYPE_TOWN:
+        case MAP_TYPE_CITY:
+        case MAP_TYPE_ROUTE:
+        case MAP_TYPE_OCEAN_ROUTE:
+            if (++(*GetVarPointer(VAR_LOOKER_POSTGAME_CALL_STEPS)) < 1500)
+                return FALSE;
+            break;
+        default:
+            return FALSE;
+        }
+    }
+    else
+    {
+        return FALSE;
+    }
+
+    return TRUE;
+}
+
 bool32 ShouldDoScottFortreeCall(void)
 {
     return FALSE; //Removed in Pokeclassic
@@ -4416,6 +4441,13 @@ void RunFossilStepCounter(void)
     u16 count = VarGet(VAR_FOSSIL_STEP_COUNTER);
     if (count < 500)
         VarSet(VAR_FOSSIL_STEP_COUNTER, count + 1);
+}
+
+void RunLookerPostgameCallStepCounter(void)
+{
+    u16 count = VarGet(VAR_AIDE_CALL_STEP_COUNTER);
+    if (count < 1500)
+        VarSet(VAR_AIDE_CALL_STEP_COUNTER, count + 1);
 }
 
 void IsPartnerInParty(void)

@@ -293,7 +293,14 @@ static const struct MatchCallAide sScottMatchCallHeader =
 
 //LOOKER
 static const match_call_text_data_t sLookerTextScripts[] = {
-    { MatchCall_Text_LookerIntro,   0xFFFF,                         0xFFFF },
+    { MatchCall_Text_LookerIntro,               0xFFFF,                             0xFFFF },
+    { MatchCall_Text_LookerCeladon,             FLAG_GOT_SS_TICKET,                 0xFFFF },
+    { MatchCall_Text_LookerRocketHideout,       FLAG_HIDE_CELADON_ROCKETS,          0xFFFF },
+    { MatchCall_Text_LookerSaffron,             FLAG_DELIVERED_ROCKET_PLANS,        0xFFFF },
+    { MatchCall_Text_LookerSilphCo,             FLAG_HIDE_SAFFRON_ROCKETS,          0xFFFF },
+    { MatchCall_Text_LookerGiovanni,            FLAG_BADGE08_GET,                   0xFFFF },
+    { MatchCall_Text_LookerPostgameWaiting,     FLAG_LOOKER_POSTGAME_STARTED,       0xFFFF },
+    { MatchCall_Text_LookerPostgameCompleted,   FLAG_LOOKER_POSTGAME_COMPLETED,     0xFFFF },
     { NULL,                     0xFFFF,                         0xFFFF }
 };
 

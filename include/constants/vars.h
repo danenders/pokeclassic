@@ -174,7 +174,7 @@
 #define VAR_VICTORY_ROAD_3F_STATE           0x409B 
 #define VAR_ELITE_4_MODE                    0x409C //Controls battle types for Elite 4
 #define VAR_REPEL_LAST_USED                 0x409D //For repeated Repel use
-#define UNUSED_VARIABLE_35    				0x409E
+#define VAR_LOOKER_POSTGAME_CALL_STEPS    	0x409E //Countdown to start Looker Postgame call
 #define UNUSED_VARIABLE_36      			0x409F
 #define UNUSED_VARIABLE_37           		0x40A0
 #define UNUSED_VARIABLE_38                  0x40A1 

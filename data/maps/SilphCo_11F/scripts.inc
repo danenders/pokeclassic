@@ -20,6 +20,8 @@ SilphCo_11F_EventScript_ItemZinc::
 SilphCo_11F_EventScript_President::
 	lock
 	faceplayer
+	goto_if_set FLAG_LOOKER_POSTGAME_COMPLETED, SilphCo_11F_EventScript_PresidentPostgame
+	goto_if_set	FLAG_LOOKER_POSTGAME_STARTED, SilphCo_11F_EventScript_PresidentHostage
 	goto_if_set FLAG_GOT_MASTER_BALL_FROM_SILPH, SilphCo_11F_EventScript_AlreadyGotMasterBall
 	msgbox SilphCo_11F_Text_ThanksForSavingMe
 	checkitemspace ITEM_MASTER_BALL, 1
@@ -33,6 +35,70 @@ SilphCo_11F_EventScript_President::
 	release
 	end
 
+SilphCo_11F_EventScript_PresidentPostgame::
+	goto_if_set FLAG_DAILY_PREZ_BATTLE, SilphCo_11F_EventScript_PresidentPostgamePostBattle
+	msgbox SilphCo_11F_Text_PracticeBattling, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SilphCo_11F_EventScript_DeclinePrezBattle
+	trainerbattle_no_intro TRAINER_SILPH_PREZ, SilphCo_11F_Text_PrezDefeat
+	msgbox SilphCo_11F_Text_WhatAGreatBattle, MSGBOX_NPC
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	message SilphCo_11F_Text_ObtainedMasterBallFromPresident
+	additem ITEM_MASTER_BALL, 1
+	waitfanfare
+	setflag FLAG_DAILY_PREZ_BATTLE
+	release
+	end
+
+SilphCo_11F_Text_WhatAGreatBattle::
+	.string "President: I see I still have\n"
+	.string "room to improve!\p"
+	.string "But you won't have to worry about\n"
+	.string "rescuing me anymore!\p"
+	.string "Please, take this as a reward.$"
+
+SilphCo_11F_Text_PrezDefeat::
+	.string "It seems even a President is no\n"
+	.string "match for a Champion!$"	
+
+SilphCo_11F_Text_PracticeBattling::
+	.string "President: Ah, hello {PLAYER}!\p"
+	.string "Come to check up on me?\p"
+	.string "Hoho..well, don't worry. There's\n"
+	.string "been no sign of Team Rocket here.\p"
+	.string "One can never be too careful though,\n"
+	.string "so I've started to train my own\l"
+	.string "Pokémon for protection!\p"
+	.string "Say...since you came all this way,\n"
+	.string "how about a battle?$"
+
+SilphCo_11F_EventScript_DeclinePrezBattle::
+	msgbox SilphCo_11F_Text_IUnderstand, MSGBOX_NPC
+	release
+	end
+
+SilphCo_11F_Text_IUnderstand::
+	.string "I understand. Things must be busy\n"
+	.string "for a Champion.$"
+
+SilphCo_11F_EventScript_PresidentPostgamePostBattle::
+	msgbox SilphCo_11F_Text_TheseRocketsPunks, MSGBOX_NPC
+	end
+
+SilphCo_11F_Text_TheseRocketsPunks::
+	.string "President: Silph Co. is trying\n"
+	.string "to make the world a better place\l"
+	.string "for both people and Pokémon.\p"
+	.string "But punks like Team Rocket will\n"
+	.string "never understand.$"
+
+SilphCo_11F_EventScript_PresidentHostage::
+	msgbox SilphCo_11F_Text_TheseRockets, MSGBOX_NPC
+	end
+
+SilphCo_11F_Text_TheseRockets::
+	.string "President: I've had enough of\n" 
+	.string "these Rockets!$"
+
 SilphCo_11F_EventScript_NoRoomForMasterBall::
 	msgbox SilphCo_11F_Text_YouHaveNoRoomForThis
 	release
@@ -44,8 +110,42 @@ SilphCo_11F_EventScript_AlreadyGotMasterBall::
 	end
 
 SilphCo_11F_EventScript_Secretary::
+	goto_if_set FLAG_DAILY_PREZ_BATTLE, SilphCo_11F_EventScript_SecretaryPostbattle
+	goto_if_set FLAG_LOOKER_POSTGAME_COMPLETED, SilphCo_11F_EventScript_SecretaryPostgame
+	goto_if_set	FLAG_LOOKER_POSTGAME_STARTED, SilphCo_11F_EventScript_HappeningAgain
 	msgbox SilphCo_11F_Text_ThanksForRescuingUs, MSGBOX_NPC
 	end
+
+SilphCo_11F_EventScript_SecretaryPostbattle::
+	msgbox SilphCo_11F_Text_PrezTeam, MSGBOX_NPC
+	end
+
+SilphCo_11F_Text_PrezTeam::
+	.string "After seeing you battle Team Rocket\n"
+	.string "twice, the President has become\l"
+	.string "obsessed with Pokémon battles.\p"
+	.string "He spends all his time researching\n"
+	.string "new moves...\p"
+	.string "Which means I have to answer all his\n"
+	.string "emails!$"
+
+SilphCo_11F_EventScript_HappeningAgain::
+	msgbox SilphCo_11F_Text_HappeningAgain, MSGBOX_NPC
+	end
+
+SilphCo_11F_EventScript_SecretaryPostgame::
+	msgbox SilphCo_11F_Text_NotWhatIExpected, MSGBOX_NPC
+	end
+
+SilphCo_11F_Text_NotWhatIExpected::
+	.string "This job is not what I expected.\n"
+	.string "I'm a secretary, not a bodyguard.\p"
+	.string "I'm thinking about asking for\n"
+	.string "a raise!$"
+
+SilphCo_11F_Text_HappeningAgain::
+	.string "Aiiieee!! I can't believe it's\n"
+	.string "happening again! Help us!$"
 
 SilphCo_11F_EventScript_GiovanniTriggerLeft::
 	lockall

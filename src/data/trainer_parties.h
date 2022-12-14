@@ -7676,6 +7676,45 @@ static const struct TrainerMonNoItemCustomMoves sParty_CoolCoupleRayTyra[] = {
     },
 };
 
+//
+static const struct TrainerMonItemDefaultMoves sParty_SilphPrez[] = {
+    {
+    .iv = 252,
+    .lvl = 60,
+    .species = SPECIES_TAUROS,
+    .heldItem = ITEM_LIFE_ORB
+    },
+    {
+    .iv = 252,
+    .lvl = 60,
+    .species = SPECIES_SNORLAX,
+    .heldItem = ITEM_LEFTOVERS
+    },
+    {
+    .iv = 252,
+    .lvl = 60,
+    .species = SPECIES_CHANSEY,
+    .heldItem = ITEM_NUGGET
+    },
+    {
+    .iv = 252,
+    .lvl = 60,
+    .species = SPECIES_LAPRAS,
+    .heldItem = ITEM_CHOICE_SPECS
+    },
+    {
+    .iv = 252,
+    .lvl = 60,
+    .species = SPECIES_ALAKAZAM,
+    .heldItem = ITEM_TWISTED_SPOON
+    },
+    {
+    .iv = 252,
+    .lvl = 60,
+    .species = SPECIES_PERSIAN,
+    .heldItem = ITEM_RAZOR_FANG
+    }
+};
 
 
 

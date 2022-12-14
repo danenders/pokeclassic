@@ -38,6 +38,7 @@ PokemonLeague_HallOfFame_EventScript_EnterRoom::
 	setvar VAR_TEMP_1, 1
 	call PokemonLeague_HallOfFame_EventScript_SetGameClearFlags
 	call_if_le VAR_ADVENTURE_BEGINS, 6, PokemonLeague_HallOfFame_EventScript_UpdatePostgameVariables
+	call_if_unset FLAG_LOOKER_POSTGAME_STARTED, PokemonLeague_HallOfFame_EventScript_BeginPostgameRockets
 	setrespawn HEAL_LOCATION_PLAYERS_HOUSE
 	fadescreenspeed FADE_TO_BLACK, 24
 	special GameClear
@@ -132,3 +133,9 @@ PokemonLeague_HallOfFame_EventScript_ResetEliteFour::
 PokemonLeague_HallOfFame_EventScript_UpdatePostgameVariables::
 	setvar VAR_ADVENTURE_BEGINS, 7
 	return
+
+PokemonLeague_HallOfFame_EventScript_BeginPostgameRockets::
+	setflag FLAG_QUEUE_LOOKER_POSTGAME_CALL
+	setvar VAR_LOOKER_POSTGAME_CALL_STEPS, 0
+	return
+

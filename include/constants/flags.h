@@ -392,13 +392,13 @@
 #define FLAG_REMATCH_SPECIAL_TRAINER         0x171 //Special Rematches Start here. Unused aside from rematch enums
 #define FLAG_REMATCH_ELITE_FOUR              0x172 // Unused aside from rematch enums
 
-//Unused
-#define FLAG_UNUSED_173                      0x173
-#define FLAG_UNUSED_174                      0x174
-#define FLAG_UNUSED_175                      0x175
-#define FLAG_UNUSED_176                      0x176
-#define FLAG_UNUSED_177                      0x177
-#define FLAG_UNUSED_178                      0x178
+//Looker Postgame Storyline
+#define FLAG_QUEUE_LOOKER_POSTGAME_CALL      0x173
+#define FLAG_LOOKER_POSTGAME_STARTED         0x174
+#define FLAG_LOOKER_POSTGAME_COMPLETED       0x175
+#define FLAG_HIDE_SILPH_POSTGAME_ROCKET      0x176
+#define FLAG_HIDE_SILPH_POSTGAME_LOOKER      0x177
+#define FLAG_CHECKED_ON_PREZ                 0x178 
 #define FLAG_UNUSED_179                      0x179
 #define FLAG_UNUSED_17A                      0x17A
 #define FLAG_UNUSED_17B                      0x17B
@@ -1597,7 +1597,8 @@
 #define FLAG_DAILY_MIXING_BERRY                     (DAILY_FLAGS_START + 0x19)  // The slowpoke lady in Pewter will reward you with a mixing berry once per day.
 #define FLAG_DAILY_BATTLE_BERRY                     (DAILY_FLAGS_START + 0x1A)  // Battle girl in Indingo Plateau gives a battle berry (Sitrus, Lum, or Leppa) once per day.
 
-#define FLAG_UNUSED_0x93B                           (DAILY_FLAGS_START + 0x1B) // Unused Flag
+#define FLAG_DAILY_PREZ_BATTLE                      (DAILY_FLAGS_START + 0x1B) // Battle the SilphCo Prez once per day to earn a Master Ball.
+
 #define FLAG_UNUSED_0x93C                           (DAILY_FLAGS_START + 0x1C) // Unused Flag
 #define FLAG_UNUSED_0x93D                           (DAILY_FLAGS_START + 0x1D) // Unused Flag
 #define FLAG_UNUSED_0x93E                           (DAILY_FLAGS_START + 0x1E) // Unused Flag

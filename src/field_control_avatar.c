@@ -200,6 +200,8 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
             RunAideCallStepCounter();
         if (FlagGet(FLAG_QUEUE_FOSSIL_RESURRECTION) == TRUE)
             RunFossilStepCounter();
+        if (FlagGet(FLAG_QUEUE_LOOKER_POSTGAME_CALL) == TRUE)
+            RunLookerPostgameCallStepCounter();
         IncrementBirthIslandRockStepCount();
         if (TryStartStepBasedScript(&position, metatileBehavior, playerDirection) == TRUE)
             return TRUE;
@@ -640,6 +642,11 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
                 ScriptContext1_SetupScript(MatchCall_EventScript_AideAmuletCoinReady);
             if (FlagGet(FLAG_AIDE_LOCATION_5) == TRUE)
                 ScriptContext1_SetupScript(MatchCall_EventScript_AideExpShareReady);
+            return TRUE;
+        }
+        if (ShouldDoLookerPostgameCall() == TRUE)
+        {
+            ScriptContext1_SetupScript(MatchCall_EventScript_LookerPostgameReady);
             return TRUE;
         }
     }

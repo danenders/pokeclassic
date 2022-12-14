@@ -5406,4 +5406,19 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_SecretBattleOak),
         .party = {.ItemCustomMoves = sParty_SecretBattleOak}
     },
+
+//Silph Co Prez Battle
+    [TRAINER_SILPH_PREZ] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Iwata"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_SilphPrez),
+        .party = {.ItemDefaultMoves = sParty_SilphPrez},
+    },
 };

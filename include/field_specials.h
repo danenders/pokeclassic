@@ -35,5 +35,7 @@ void RunMassageCooldownStepCounter(void);
 void RunAideCallStepCounter(void);
 bool32 ShouldDoAideCall(void);
 void RunFossilStepCounter(void);
+void RunLookerPostgameCallStepCounter(void);
+bool32 ShouldDoLookerPostgameCall(void);
 
 #endif // GUARD_FIELD_SPECIALS_H

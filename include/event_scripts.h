@@ -652,4 +652,7 @@ extern const u8 MatchCall_EventScript_AideItemfinderReady[]; //Autocall after ge
 extern const u8 MatchCall_EventScript_AideAmuletCoinReady[]; //Autocall after getting Badge 5
 extern const u8 MatchCall_EventScript_AideExpShareReady[]; //Autocall after getting Badge 6
 
+//Looker Postgame
+extern const u8 MatchCall_EventScript_LookerPostgameReady[]; //Autocall after enough steps after game clear
+
 #endif // GUARD_EVENT_SCRIPTS_H
