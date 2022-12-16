@@ -27,6 +27,48 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SilphCo_1F_EventScript_Receptionist",
       "flag": "FLAG_HIDE_SAFFRON_CIVILIANS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_F",
+      "in_connection": false,
+      "x": 7,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SilphCo_1F_EventScript_PostgameGrunt1",
+      "flag": "FLAG_HIDE_SILPH_POSTGAME_ROCKET"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_F",
+      "in_connection": false,
+      "x": 32,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SilphCo_1F_EventScript_PostgameGrunt3",
+      "flag": "FLAG_HIDE_SILPH_POSTGAME_ROCKET"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_M",
+      "in_connection": false,
+      "x": 23,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_SEE_ALL_DIRECTIONS",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SilphCo_1F_EventScript_PostgameGrunt2",
+      "flag": "FLAG_HIDE_SILPH_POSTGAME_ROCKET"
     }
   ],
   "warp_events": [

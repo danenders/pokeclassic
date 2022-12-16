@@ -383,3 +383,38 @@ SilphCo_7F_Text_RivalPostBattle::
 SilphCo_7F_Text_FloorSign::
     .string "Silph Co. Head Office\n"
     .string "7F$"
+
+
+SilphCo_7F_EventScript_PostgameGrunt5::
+	trainerbattle_single TRAINER_POSTGAME_ROCKET_5, SilphCo_7F_Text_PostgameGrunt5Intro, SilphCo_7F_Text_PostgameGrunt5Defeat
+	msgbox SilphCo_7F_Text_PostgameGrunt5PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+SilphCo_7F_Text_PostgameGrunt5Intro::
+    .string "You won't embarass Team Rocket\n"
+    .string "again, kid!$"
+
+SilphCo_7F_Text_PostgameGrunt5Defeat::
+    .string "This can't be happening!$"
+
+SilphCo_7F_Text_PostgameGrunt5PostBattle::
+    .string "Our Boss is the strongest of all\n"
+    .string "the Grunts.$"
+
+SilphCo_7F_EventScript_PostgameGrunt6::
+	trainerbattle_single TRAINER_POSTGAME_ROCKET_6, SilphCo_7F_Text_PostgameGrunt6Intro, SilphCo_7F_Text_PostgameGrunt6Defeat
+	msgbox SilphCo_7F_Text_PostgameGrunt6PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+SilphCo_7F_Text_PostgameGrunt6Intro::
+    .string "Only the most loyal of\n"
+    .string "Grunts were picked for this\l"
+    .string "mission.$"
+
+SilphCo_7F_Text_PostgameGrunt6Defeat::
+    .string "Team Rocket to the end!$"
+
+SilphCo_7F_Text_PostgameGrunt6PostBattle::
+    .string "There are still more of us out\n"
+    .string "there.$"
+

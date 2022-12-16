@@ -72,3 +72,20 @@ SilphCo_3F_Text_JosePostBattle::
 SilphCo_3F_Text_FloorSign::
     .string "Silph Co. Head Office\n"
     .string "3F$"
+
+SilphCo_3F_EventScript_PostgameGrunt4::
+	trainerbattle_single TRAINER_POSTGAME_ROCKET_4, SilphCo_3F_Text_PostgameGrunt4Intro, SilphCo_3F_Text_PostgameGrunt4Defeat
+	msgbox SilphCo_3F_Text_PostgameGrunt4PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+SilphCo_3F_Text_PostgameGrunt4Intro::
+    .string "Rockets never say die!$"
+
+SilphCo_3F_Text_PostgameGrunt4Defeat::
+    .string "We're dead!$"
+
+SilphCo_3F_Text_PostgameGrunt4PostBattle::
+    .string "This was our last shot.\p"
+    .string "The Boss has taken the Silph\n"
+    .string "Co President hostage again.\p"
+    .string "There's no coming back from this!$"

@@ -398,7 +398,7 @@
 #define FLAG_LOOKER_POSTGAME_COMPLETED       0x175
 #define FLAG_HIDE_SILPH_POSTGAME_ROCKET      0x176
 #define FLAG_HIDE_SILPH_POSTGAME_LOOKER      0x177
-#define FLAG_CHECKED_ON_PREZ                 0x178 
+#define FLAG_UNUSED_178                      0x178 
 #define FLAG_UNUSED_179                      0x179
 #define FLAG_UNUSED_17A                      0x17A
 #define FLAG_UNUSED_17B                      0x17B

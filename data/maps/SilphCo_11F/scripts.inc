@@ -3,6 +3,8 @@
 .set LOCALID_GRUNT2,   5
 .set LOCALID_JESSIE,   6
 .set LOCALID_JAMES,    7
+.set LOCALID_ROCKET_LEADER, 9
+.set LOCALID_LOOKER, 10
 
 SilphCo_11F_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, SilphCo_11F_OnLoad
@@ -368,3 +370,189 @@ SilphCo_11F_Text_MonitorHasMonsOnIt::
 SilphCo_11F_Text_FloorSign::
     .string "Silph Co. Head Office\n"
     .string "11F$"
+
+
+@Postgame
+SilphCo_11F_EventScript_PostgameRocket::
+	lock
+	faceplayer
+	playse SE_PIN
+	applymovement LOCALID_ROCKET_LEADER, Common_Movement_ExclamationMark
+	waitse
+	msgbox SilphCo_11F_Text_GiovanniWasWeak, MSGBOX_NPC
+	trainerbattle_no_intro TRAINER_POSTGAME_ROCKET_LEADER, SilphCo_11F_Text_RocketLeaderDefeat
+	playse SE_PIN
+	applymovement LOCALID_ROCKET_LEADER, Common_Movement_ExclamationMark
+	waitse
+	msgbox SilphCo_11F_Text_HowCouldThisHappen, MSGBOX_NPC
+	clearflag FLAG_HIDE_SILPH_POSTGAME_LOOKER
+	addobject LOCALID_LOOKER
+	playbgm MUS_ENCOUNTER_CHAMPION, 0
+	call_if_eq VAR_FACING, DIR_EAST, SilphCo_11F_EventScript_LookerMovement1
+	call_if_eq VAR_FACING, DIR_WEST, SilphCo_11F_EventScript_LookerMovement2
+	msgbox SilphCo_11F_Text_ThatsEnoughFromYou, MSGBOX_NPC
+	waitmessage
+	closemessage
+	msgbox SilphCo_11F_Text_RocketWellNeverStop, MSGBOX_NPC
+	waitmessage
+	closemessage
+	msgbox SilphCo_11F_Text_TakingYouIn, MSGBOX_NPC
+	call_if_eq VAR_FACING, DIR_EAST, SilphCo_11F_EventScript_LookerMovement3
+	call_if_eq VAR_FACING, DIR_WEST, SilphCo_11F_EventScript_LookerMovement4
+	waitmovement 10
+	setflag	FLAG_HIDE_SILPH_POSTGAME_ROCKET
+	setflag	FLAG_HIDE_SILPH_POSTGAME_LOOKER
+	setflag FLAG_LOOKER_POSTGAME_COMPLETED
+	removeobject LOCALID_LOOKER
+	removeobject LOCALID_ROCKET_LEADER
+	fadedefaultbgm
+	release
+	end
+
+SilphCo_11F_Text_ThatsEnoughFromYou::
+	.string "Looker: That's enough!\p"
+	.string "We've heard it all before.\p"
+	.string "That's the thing about you\n"
+	.string "Rockets. It's all about one\l"
+	.string "thing...power!\p"
+	.string "That's why you'll always lose\n"
+	.string "to someone like {PLAYER}.\p"
+	.string "They know what it truly means\n"
+	.string "to live alongside Pokémon.\p"
+	.string "...\p"
+	.string "You called Giovanni weak, but I\n"
+	.string "even he knew that at the end.$"
+
+SilphCo_11F_Text_RocketWellNeverStop::
+	.string "Rocket: ...\p"
+	.string "Maybe so...\p"
+	.string "But we'll never stop!\p"
+	.string "Team Rocket will rise again!$"
+
+SilphCo_11F_Text_TakingYouIn::
+	.string "Looker: We'll see about that.\p"
+	.string "{PLAYER}! I'm taking this Rocket in.\p"
+	.string "Thanks for all your help here.\n"
+	.string "You should come see me the next\n"
+	.string "time you're in Celadon City.$"
+
+SilphCo_11F_EventScript_LookerMovement1::
+	applymovement LOCALID_LOOKER, SilphCo_11F_LookerMovement_Approach1
+	waitmovement 10
+	turnobject LOCALID_ROCKET_LEADER, DIR_EAST
+	return
+
+SilphCo_11F_EventScript_LookerMovement2::
+	applymovement LOCALID_LOOKER, SilphCo_11F_LookerMovement_Approach2
+	waitmovement 10
+	turnobject LOCALID_ROCKET_LEADER, DIR_WEST
+	return
+
+SilphCo_11F_LookerMovement_Approach1::
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	step_end
+
+SilphCo_11F_LookerMovement_Approach2::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+SilphCo_11F_EventScript_LookerMovement3::
+	applymovement LOCALID_LOOKER, SilphCo_11F_LookerMovement_Exit1
+	applymovement LOCALID_ROCKET_LEADER, SilphCo_11F_RocketMovement_Exit1
+	return
+
+SilphCo_11F_RocketMovement_Exit1::
+	walk_right
+SilphCo_11F_LookerMovement_Exit1::
+	walk_right	
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+SilphCo_11F_RocketMovement_Exit2::
+	walk_left
+SilphCo_11F_LookerMovement_Exit2::
+	walk_left	
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+SilphCo_11F_EventScript_LookerMovement4::
+	applymovement LOCALID_LOOKER, SilphCo_11F_RocketMovement_Exit2
+	applymovement LOCALID_ROCKET_LEADER, SilphCo_11F_RocketMovement_Exit2
+	return
+
+
+SilphCo_11F_Text_GiovanniWasWeak::
+	.string "Rocket: Ha! You actually\n"
+	.string "showed up?\p"
+	.string "What? The big bad champion\n"
+	.string "of Kanto thinks he's going to\l"
+	.string "take me down?\p"
+	.string "Well, listen up, kid.\p"
+	.string "Giovanni was weak!\p"
+	.string "He let some chump like you\n"
+	.string "push him around!\p"
+	.string "Under my leadership, Team\n"
+	.string "Rocket won't roll over just\l"
+	.string "because some kid stands in our\l"
+	.string "way!\p"
+	.string "Say hello to the new Team Rocket!$"
+
+SilphCo_11F_Text_RocketLeaderDefeat::
+	.string "What?! Am I weaker than Giovanni?\p"
+
+SilphCo_11F_Text_HowCouldThisHappen::
+	.string "I can't believe it...\p"
+	.string "This was supposed to be our big\n"
+	.string "comeback!\p"
+	.string "We thought Giovanni was weak...\n"
+	.string "but you're just too good!$"
+
+
+

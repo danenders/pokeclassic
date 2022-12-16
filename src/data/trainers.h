@@ -5421,4 +5421,91 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_SilphPrez),
         .party = {.ItemDefaultMoves = sParty_SilphPrez},
     },
+
+//Looker's Postgame Rocket Hunt
+    [TRAINER_POSTGAME_ROCKET_LEADER] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+        .trainerName = _("Leader"),
+        .items = {ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_PostgameRocketLeader),
+        .party = {.NoItemDefaultMoves = sParty_PostgameRocketLeader}
+    },
+
+    [TRAINER_POSTGAME_ROCKET_1] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_F,
+        .trainerName = _("Grunt"),
+        .items = {ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_PostgameSilphRocket1),
+        .party = {.NoItemDefaultMoves = sParty_PostgameSilphRocket1}
+    },
+    [TRAINER_POSTGAME_ROCKET_2] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+        .trainerName = _("Grunt"),
+        .items = {ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_PostgameSilphRocket2),
+        .party = {.NoItemDefaultMoves = sParty_PostgameSilphRocket2}
+    },
+    [TRAINER_POSTGAME_ROCKET_3] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_F,
+        .trainerName = _("Grunt"),
+        .items = {ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_PostgameSilphRocket3),
+        .party = {.NoItemDefaultMoves = sParty_PostgameSilphRocket3}
+    },
+    [TRAINER_POSTGAME_ROCKET_4] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+        .trainerName = _("Grunt"),
+        .items = {ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_PostgameSilphRocket4),
+        .party = {.NoItemDefaultMoves = sParty_PostgameSilphRocket4}
+    },
+    [TRAINER_POSTGAME_ROCKET_5] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+        .trainerName = _("Grunt"),
+        .items = {ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_PostgameSilphRocket5),
+        .party = {.NoItemDefaultMoves = sParty_PostgameSilphRocket5}
+    },
+    [TRAINER_POSTGAME_ROCKET_6] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_F,
+        .trainerName = _("Grunt"),
+        .items = {ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_PostgameSilphRocket6),
+        .party = {.NoItemDefaultMoves = sParty_PostgameSilphRocket6}
+    },
 };

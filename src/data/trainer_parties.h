@@ -7717,9 +7717,167 @@ static const struct TrainerMonItemDefaultMoves sParty_SilphPrez[] = {
 };
 
 
+//Postgame Rockets
+static const struct TrainerMonNoItemDefaultMoves sParty_PostgameRocketLeader[] = {
+    {
+        .iv = 250,
+        .lvl = 55,
+        .species = SPECIES_ARBOK,
+    },
+    {
+        .iv = 250,
+        .lvl = 55,
+        .species = SPECIES_RHYHORN,
+    },
+    {
+        .iv = 250,
+        .lvl = 55,
+        .species = SPECIES_SCYTHER,
+    },
+    {
+        .iv = 250,
+        .lvl = 55,
+        .species = SPECIES_RATICATE,
+    },
+    {
+        .iv = 250,
+        .lvl = 55,
+        .species = SPECIES_MUK,
+    },
+};
 
+static const struct TrainerMonNoItemDefaultMoves sParty_PostgameSilphRocket1[] = {
+    {
+        .iv = 250,
+        .lvl = 50,
+        .species = SPECIES_GOLBAT,
+    },
+    {
+        .iv = 250,
+        .lvl = 50,
+        .species = SPECIES_SANDSLASH,
+    },
+    {
+        .iv = 250,
+        .lvl = 50,
+        .species = SPECIES_KINGLER,
+    },
+    {
+        .iv = 250,
+        .lvl = 50,
+        .species = SPECIES_RATICATE,
+    },
+};
 
+static const struct TrainerMonNoItemDefaultMoves sParty_PostgameSilphRocket2[] = {
+    {
+        .iv = 250,
+        .lvl = 50,
+        .species = SPECIES_RATICATE,
+    },
+    {
+        .iv = 250,
+        .lvl = 50,
+        .species = SPECIES_ONIX,
+    },
+    {
+        .iv = 250,
+        .lvl = 50,
+        .species = SPECIES_VICTREEBEL,
+    },
+    {
+        .iv = 250,
+        .lvl = 50,
+        .species = SPECIES_TAUROS,
+    },
+};
 
+static const struct TrainerMonNoItemDefaultMoves sParty_PostgameSilphRocket3[] = {
+    {
+        .iv = 250,
+        .lvl = 50,
+        .species = SPECIES_GOLEM,
+    },
+    {
+        .iv = 250,
+        .lvl = 50,
+        .species = SPECIES_KANGASKHAN,
+    },
+    {
+        .iv = 250,
+        .lvl = 50,
+        .species = SPECIES_POLIWRATH,
+    },
+    {
+        .iv = 250,
+        .lvl = 50,
+        .species = SPECIES_FEAROW,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_PostgameSilphRocket4[] = {
+    {
+        .iv = 250,
+        .lvl = 50,
+        .species = SPECIES_GOLBAT,
+    },
+    {
+        .iv = 250,
+        .lvl = 50,
+        .species = SPECIES_SANDSLASH,
+    },
+    {
+        .iv = 250,
+        .lvl = 50,
+        .species = SPECIES_KINGLER,
+    },
+    {
+        .iv = 250,
+        .lvl = 50,
+        .species = SPECIES_RATICATE,
+    },
+    {
+        .iv = 250,
+        .lvl = 50,
+        .species = SPECIES_MAGMAR,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_PostgameSilphRocket5[] = {
+    {
+        .iv = 250,
+        .lvl = 53,
+        .species = SPECIES_NIDOKING,
+    },
+    {
+        .iv = 250,
+        .lvl = 53,
+        .species = SPECIES_MACHAMP,
+    },
+    {
+        .iv = 250,
+        .lvl = 53,
+        .species = SPECIES_MR_MIME,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_PostgameSilphRocket6[] = {
+    {
+        .iv = 250,
+        .lvl = 53,
+        .species = SPECIES_NIDOQUEEN,
+    },
+    {
+        .iv = 250,
+        .lvl = 53,
+        .species = SPECIES_GENGAR,
+    },
+    {
+        .iv = 250,
+        .lvl = 53,
+        .species = SPECIES_JYNX,
+    },
+};
 
 
 
