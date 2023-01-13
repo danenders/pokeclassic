@@ -154,7 +154,7 @@
 #define FLAG_RECEIVED_SHINY_CHARM 			0x88 
 #define FLAG_RECEIVED_ALL_CHARMS            0x89
 #define FLAG_CLEARED_SECRET_BATTLE          0x8A 
-#define FLAG_UNUSED_0x08B   				0x8B
+#define FLAG_GOT_SQUIRTLE   				0x8B //Got the gift squirtle in Vermilion
 #define FLAG_UNUSED_0x08C             		0x8C
 #define FLAG_UNUSED_0x08D         			0x8D
 #define FLAG_UNUSED_0x08E              		0x8E

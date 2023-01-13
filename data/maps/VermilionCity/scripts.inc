@@ -1,5 +1,7 @@
 .set LOCALID_OAK, 1
 .set LOCALID_SAILOR, 7
+.set LOCALID_JENNY, 9
+.set LOCALID_SQUIRTLE, 10
 
 VermilionCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, VermilionCity_OnTransition
@@ -8,8 +10,14 @@ VermilionCity_MapScripts::
 
 VermilionCity_OnTransition:
 	setflag FLAG_VISITED_VERMILION_CITY
+	call_if_set FLAG_GOT_SQUIRTLE,  VermillionCity_EventScript_RepositionJenny
 	call Common_EventScript_GetDayOrNight
 	end
+
+VermillionCity_EventScript_RepositionJenny::
+	setobjectxyperm LOCALID_JENNY, 22, 20
+	setobjectmovementtype LOCALID_JENNY, MOVEMENT_TYPE_LOOK_AROUND
+	return
 
 VermilionCity_OnResume:
 	call Common_EventScript_GetDayOrNight
@@ -411,3 +419,181 @@ VermilionCity_EventScript_ExitedTicketCheck::
 	setvar VAR_SS_TICKET_CHECK, 0
 	releaseall
 	end
+
+VermilionCity_EventScript_SquirtleEventAlternate::
+	setvar VAR_GOT_SQUIRTLE, 2
+VermilionCity_EventScript_SquirtleEvent::
+	lockall
+	turnobject LOCALID_JENNY, DIR_SOUTH
+	playse SE_PIN
+	applymovement LOCALID_JENNY, Common_Movement_ExclamationMark
+	waitse
+	msgbox VermilionCity_Text_SquirtleIsAMenace, MSGBOX_DEFAULT
+	goto_if_unset FLAG_BADGE03_GET, VermilionCity_EventScript_DontGiveSquirtle
+	call_if_eq VAR_GOT_SQUIRTLE, 2, VermilionCity_EventScript_Sidestep
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_StepForward
+	waitmovement 0
+	playse SE_PIN
+	message VermilionCity_Text_PlayerFlashedBadge
+	waitse
+	waitmessage
+	msgbox VermilionCity_Text_AStrongTrainer, MSGBOX_DEFAULT
+	waitmessage
+	turnobject LOCALID_JENNY, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	applymovement LOCALID_SQUIRTLE, Movement_MoveToPlayer
+	waitmovement 10
+	playse SE_PIN
+	applymovement LOCALID_SQUIRTLE, Common_Movement_Heart
+	setvar VAR_TEMP_1, SPECIES_SQUIRTLE
+	givemon SPECIES_SQUIRTLE, 10, ITEM_BLACK_GLASSES
+	goto_if_eq VAR_RESULT, 0, VermilionCity_EventScript_SquirtleParty
+	goto_if_eq VAR_RESULT, 1, VermilionCity_EventScript_SquirtlePC
+	goto_if_eq VAR_RESULT, 2, VermilionCity_EventScript_NoRoomForSquirtle
+	releaseall
+	end
+
+
+VermilionCity_EventScript_SquirtleParty::
+	call VermilionCity_EventScript_GetSquirtle
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, VermilionCity_EventScript_GotSquirtle
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto VermilionCity_EventScript_GotSquirtle
+	end
+
+VermilionCity_EventScript_GetSquirtle::
+	playfanfare MUS_LEVEL_UP
+	message VermilionCity_EventScript_Text_BailedOutSquirtle
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_SQUIRTLE
+	return
+
+VermilionCity_EventScript_Text_BailedOutSquirtle::
+	.string "{PLAYER} bailed out the Squirtle!$"
+
+VermilionCity_EventScript_GotSquirtle::
+	setflag FLAG_GOT_SQUIRTLE
+	setvar VAR_GOT_SQUIRTLE, 1
+	removeobject LOCALID_SQUIRTLE
+	release
+	end
+
+VermilionCity_EventScript_SquirtlePC::
+	call VermilionCity_EventScript_GetSquirtle
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, VermilionCity_EventScript_TransferSquirtle
+	call Common_EventScript_NameReceivedBoxMon
+	goto VermilionCity_EventScript_TransferSquirtle
+	end
+
+VermilionCity_EventScript_TransferSquirtle::
+	bufferspeciesname STR_VAR_1, SPECIES_BULBASAUR
+	call Common_EventScript_TransferredToPC
+	goto VermilionCity_EventScript_GotSquirtle
+	end
+
+VermilionCity_EventScript_NoRoomForSquirtle::
+	msgbox VermilionCity_Text_NoRoomForMorePokemon, MSGBOX_DEFAULT
+	applymovement LOCALID_SQUIRTLE, Movement_SquirtleReturn
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_StepBack
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_StepBack
+	waitmovement 0
+	release
+	end
+
+Movement_SquirtleReturn::
+	walk_right
+	walk_up
+	face_left
+	step_end
+
+VermilionCity_Text_NoRoomForMorePokemon::
+    .string "Officer: You don't have room?\n"
+    .string "Guess it's off to jail then!$"
+
+VermilionCity_EventScript_Sidestep::
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Sidestep
+	waitmovement 0
+	return
+
+Movement_Sidestep::
+	walk_left
+	step_end
+
+Movement_MoveToPlayer::
+	walk_down
+	walk_left
+	step_end
+
+VermilionCity_Text_PlayerFlashedBadge::
+	.string "{PLAYER} flashed their Thunder Badge.$"
+
+VermilionCity_Text_AStrongTrainer::
+	.string "Officer: Oh! You have a Thunder Badge?\p"
+	.string "You must be quite a strong trainer.\p"
+	.string "What's that?\p"
+	.string "You're saying you'll vouch for this\n"
+	.string "Pokémon?\p"
+	.string "...\p"
+	.string "I'm not sure what my boss will say\n"
+	.string "about this, but I have a good feeling\l"
+	.string "about you.\p"
+	.string "You've proven your skills as a Pokémon\n"
+	.string "trainer, after all.\p"
+	.string "Maybe a good role model is what this\n"
+	.string "Pokémon needs!$"
+
+
+VermilionCity_EventScript_DontGiveSquirtle::
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_StepBack
+	waitmovement 0
+	setvar VAR_GOT_SQUIRTLE, 0
+	release
+	end
+
+ Movement_StepForward::
+ 	walk_up
+ 	step_end
+
+VermilionCity_Text_SquirtleIsAMenace::
+	.string "Officer: Stand back, citizen!\p"
+	.string "This Squirtle is a menace!\p"
+	.string "It's been committing crimes all\n"
+	.string "over Vermilion City!\p"
+	.string "I've got it cornered, but I'm\n"
+	.string "waiting for backup to take it in!$"
+
+VermilionCity_EventScript_Jenny::
+	lock
+	faceplayer
+	goto_if_set FLAG_GOT_SQUIRTLE, VermilionCity_EventScript_JennyGaveSquirtle
+	msgbox VermilionCity_Text_SquirtleIsAMenace, MSGBOX_NPC
+	release
+	end
+
+VermilionCity_EventScript_JennyGaveSquirtle::
+	msgbox VermilionCity_Text_JennyGaveSquirtle, MSGBOX_NPC
+	release
+	end
+
+VermilionCity_Text_JennyGaveSquirtle::
+	.string "First it was Bikers and Burglars,\n"
+	.string "and then it was Team Rocket.\p"
+	.string "This job is hard enough without\n"
+	.string "Pokémon resorting to crime, too!$"
+
+VermilionCity_EventScript_Squirtle::
+	lock
+	faceplayer
+	playmoncry SPECIES_SQUIRTLE, CRY_MODE_NORMAL
+	msgbox VermilionCity_Text_SquirtleGlasses, MSGBOX_NPC
+	release
+	end
+
+VermilionCity_Text_SquirtleGlasses::
+	.string "Is that Squirtle wearing sunglasses?$"
+	

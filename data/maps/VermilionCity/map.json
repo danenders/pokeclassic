@@ -141,6 +141,34 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
       "flag": "FLAG_TEMP_12"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OFFICER_JENNY",
+      "in_connection": false,
+      "x": 8,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VermilionCity_EventScript_Jenny",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SQUIRTLE",
+      "in_connection": false,
+      "x": 10,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VermilionCity_EventScript_Squirtle",
+      "flag": "FLAG_GOT_SQUIRTLE"
     }
   ],
   "warp_events": [
@@ -271,6 +299,24 @@
       "var": "VAR_SS_TICKET_CHECK",
       "var_value": "1",
       "script": "VermilionCity_EventScript_ExitedTicketCheck"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_GOT_SQUIRTLE",
+      "var_value": "0",
+      "script": "VermilionCity_EventScript_SquirtleEvent"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_GOT_SQUIRTLE",
+      "var_value": "0",
+      "script": "VermilionCity_EventScript_SquirtleEventAlternate"
     }
   ],
   "bg_events": [

@@ -175,7 +175,7 @@
 #define VAR_ELITE_4_MODE                    0x409C //Controls battle types for Elite 4
 #define VAR_REPEL_LAST_USED                 0x409D //For repeated Repel use
 #define VAR_LOOKER_POSTGAME_CALL_STEPS    	0x409E //Countdown to start Looker Postgame call
-#define UNUSED_VARIABLE_36      			0x409F
+#define VAR_GOT_SQUIRTLE     				0x409F //Triggers for the Squirtle Event in Vermilion
 #define UNUSED_VARIABLE_37           		0x40A0
 #define UNUSED_VARIABLE_38                  0x40A1 
 #define UNUSED_VARIABLE_39            		0x40A2
