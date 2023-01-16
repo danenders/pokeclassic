@@ -155,7 +155,7 @@
 #define FLAG_RECEIVED_ALL_CHARMS            0x89
 #define FLAG_CLEARED_SECRET_BATTLE          0x8A 
 #define FLAG_GOT_SQUIRTLE   				0x8B //Got the gift squirtle in Vermilion
-#define FLAG_UNUSED_0x08C             		0x8C
+#define FLAG_GOT_HM06             		    0x8C //Got Rock Smash from the Hiker
 #define FLAG_UNUSED_0x08D         			0x8D
 #define FLAG_UNUSED_0x08E              		0x8E
 #define FLAG_UNUSED_0x08F           		0x8F

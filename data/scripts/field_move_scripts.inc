@@ -87,53 +87,105 @@ EventScript_SmashRock::
 	applymovement VAR_LAST_TALKED, Movement_SmashRock
 	waitmovement 0
 	removeobject VAR_LAST_TALKED
-	call EventScript_CheckRockHasItem
-EventScript_SmashRockContinue::
+	random 9
+	goto_if_ge VAR_RESULT, 7, EventScript_RockHasItem
+	goto EventScript_SmashRockEncounter
+	end
+
+EventScript_SmashRockEncounter::
 	special RockSmashWildEncounter
-	goto EventScript_EndSmash
 	waitstate
 	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	releaseall
 	end
 
-EventScript_CheckRockHasItem::
+EventScript_RockHasItem::
+	goto_if_set FLAG_SYS_GAME_CLEAR, EventScript_RockHasItemPostgame
 	random 3
-	goto_if_eq VAR_RESULT, 2, EventScript_RockGiveItem
-	return
+	addvar VAR_RESULT, 1
+	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_CommonTreasure
+	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_RareTreasure
+	goto_if_eq VAR_RESULT, 3, EventScript_RockItem_Stone
+	end
 
-EventScript_RockGiveItem::
-	random 5
-	goto_if_eq VAR_RESULT, 0, EventScript_RockItem_Pearl
-	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_Stardust
-	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_BigPearl
-	goto_if_eq VAR_RESULT, 3, EventScript_RockItem_StarPiece
-	goto_if_eq VAR_RESULT, 4, EventScript_RockItem_Nugget
+EventScript_RockHasItemPostgame::
+	random 4
+	addvar VAR_RESULT, 1
+	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_CommonTreasure
+	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_RareTreasure
+	goto_if_eq VAR_RESULT, 3, EventScript_RockItem_Stone
+	goto_if_eq VAR_RESULT, 4, EventScript_RockItem_Fossil
+	end
+
+EventScript_RockItem_CommonTreasure::
+	random 2
+	addvar VAR_RESULT, 1
+	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_Pearl
+	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_Stardust
 	end
 
 EventScript_RockItem_Pearl::
 	giveitem ITEM_PEARL, 1
-	goto EventScript_SmashRockContinue
+	goto EventScript_SmashRockEncounter
 
 EventScript_RockItem_Stardust::
 	giveitem ITEM_STARDUST, 1
-	goto EventScript_SmashRockContinue
+	goto EventScript_SmashRockEncounter
 
-EventScript_RockItem_BigPearl::
-	giveitem ITEM_BIG_PEARL, 1
-	goto EventScript_SmashRockContinue
-
-EventScript_RockItem_StarPiece::
-	giveitem ITEM_STAR_PIECE, 1
-	goto EventScript_SmashRockContinue
+EventScript_RockItem_RareTreasure::
+	random 3
+	addvar VAR_RESULT, 1
+	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_Nugget
+	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_BigPearl
+	goto_if_eq VAR_RESULT, 3, EventScript_RockItem_StarPiece
+	end
 
 EventScript_RockItem_Nugget::
 	giveitem ITEM_NUGGET, 1
-	goto EventScript_SmashRockContinue
+	goto EventScript_SmashRockEncounter
 
-EventScript_EndSmash::
-	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
-	releaseall
+EventScript_RockItem_BigPearl::
+	giveitem ITEM_BIG_PEARL, 1
+	goto EventScript_SmashRockEncounter
+
+EventScript_RockItem_StarPiece::
+	giveitem ITEM_STAR_PIECE, 1
+	goto EventScript_SmashRockEncounter
+
+EventScript_RockItem_Stone::
+	random 2
+	addvar VAR_RESULT, 1
+	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_MoonStone
+	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_PowerStone
 	end
+
+EventScript_RockItem_MoonStone::
+	giveitem ITEM_MOON_STONE, 1
+	goto EventScript_SmashRockEncounter
+
+EventScript_RockItem_PowerStone::
+	giveitem ITEM_POWER_STONE, 1
+	goto EventScript_SmashRockEncounter
+
+EventScript_RockItem_Fossil::
+	random 3
+	addvar VAR_RESULT, 1
+	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_HelixFossil
+	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_DomeFossil
+	goto_if_eq VAR_RESULT, 3, EventScript_RockItem_OldAmber
+	end
+
+EventScript_RockItem_HelixFossil::
+	giveitem ITEM_HELIX_FOSSIL, 1
+	goto EventScript_SmashRockEncounter
+
+EventScript_RockItem_DomeFossil::
+	giveitem ITEM_DOME_FOSSIL, 1
+	goto EventScript_SmashRockEncounter
+
+EventScript_RockItem_OldAmber::
+	giveitem ITEM_OLD_AMBER, 1
+	goto EventScript_SmashRockEncounter
 
 Movement_SmashRock:
 	rock_smash_break
@@ -146,6 +198,7 @@ EventScript_CantSmashRock::
 
 EventScript_CancelSmash::
 	closemessage
+	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	releaseall
 	end
 

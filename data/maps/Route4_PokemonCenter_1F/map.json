@@ -16,6 +16,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_NURSE",
+      "in_connection": false,
       "x": 7,
       "y": 2,
       "elevation": 0,
@@ -29,6 +30,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+      "in_connection": false,
       "x": 1,
       "y": 3,
       "elevation": 3,
@@ -42,6 +44,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
+      "in_connection": false,
       "x": 5,
       "y": 4,
       "elevation": 3,
@@ -55,6 +58,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+      "in_connection": false,
       "x": 12,
       "y": 5,
       "elevation": 3,
@@ -68,6 +72,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "in_connection": false,
       "x": 14,
       "y": 4,
       "elevation": 3,
@@ -81,6 +86,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CLIPBOARD",
+      "in_connection": false,
       "x": 12,
       "y": 6,
       "elevation": 0,

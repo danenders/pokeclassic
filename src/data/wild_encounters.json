@@ -8621,6 +8621,36 @@
               }
             ]
           },
+          "rock_smash_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 15,
+                "max_level": 25,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_SANDSHREW"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_SANDSHREW"
+              },
+              {
+                "min_level": 29,
+                "max_level": 31,
+                "species": "SPECIES_DUGTRIO"
+              }
+            ]
+          },
           "hidden_mons": {
             "encounter_rate": 0,
             "mons": [
@@ -9511,6 +9541,36 @@
               }
             ]
           },
+          "rock_smash_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_SANDSHREW"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_SANDSHREW"
+              }
+            ]
+          },
           "hidden_mons": {
             "encounter_rate": 0,
             "mons": [
@@ -9597,6 +9657,36 @@
                 "min_level": 11,
                 "max_level": 11,
                 "species": "SPECIES_CLEFAIRY"
+              }
+            ]
+          },
+          "rock_smash_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_SANDSHREW"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_SANDSHREW"
               }
             ]
           },
@@ -9689,6 +9779,36 @@
               }
             ]
           },
+          "rock_smash_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_SANDSHREW"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_SANDSHREW"
+              }
+            ]
+          },
           "hidden_mons": {
             "encounter_rate": 0,
             "mons": [
@@ -9775,6 +9895,36 @@
                 "min_level": 45,
                 "max_level": 47,
                 "species": "SPECIES_ONIX"
+              }
+            ]
+          },
+          "rock_smash_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 25,
+                "max_level": 40,
+                "species": "SPECIES_ONIX"
+              },
+              {
+                "min_level": 25,
+                "max_level": 40,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 25,
+                "max_level": 40,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 25,
+                "max_level": 40,
+                "species": "SPECIES_SANDSLASH"
+              },
+              {
+                "min_level": 25,
+                "max_level": 40,
+                "species": "SPECIES_SANDSLASH"
               }
             ]
           },
@@ -9867,6 +10017,36 @@
               }
             ]
           },
+          "rock_smash_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 25,
+                "max_level": 40,
+                "species": "SPECIES_ONIX"
+              },
+              {
+                "min_level": 25,
+                "max_level": 40,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 25,
+                "max_level": 40,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 25,
+                "max_level": 40,
+                "species": "SPECIES_SANDSLASH"
+              },
+              {
+                "min_level": 25,
+                "max_level": 40,
+                "species": "SPECIES_SANDSLASH"
+              }
+            ]
+          },
           "hidden_mons": {
             "encounter_rate": 0,
             "mons": [
@@ -9953,6 +10133,36 @@
                 "min_level": 45,
                 "max_level": 47,
                 "species": "SPECIES_ONIX"
+              }
+            ]
+          },
+          "rock_smash_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 25,
+                "max_level": 40,
+                "species": "SPECIES_ONIX"
+              },
+              {
+                "min_level": 25,
+                "max_level": 40,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 25,
+                "max_level": 40,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 25,
+                "max_level": 40,
+                "species": "SPECIES_SANDSLASH"
+              },
+              {
+                "min_level": 25,
+                "max_level": 40,
+                "species": "SPECIES_SANDSLASH"
               }
             ]
           },
