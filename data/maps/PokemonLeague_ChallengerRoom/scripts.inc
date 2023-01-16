@@ -189,9 +189,11 @@ ChallengeRoom_PlayerEnter::
 	walk_down
 	walk_down
 	walk_down
+	walk_down
 	step_end
 
 ChallengeRoom_OpponentEnter::
+	walk_up
 	walk_up
 	walk_up
 	walk_up
