@@ -14,6 +14,28 @@ PokemonTower_1F_EventScript_Woman1::
 	msgbox PokemonTower_1F_Text_GrowlitheWhyDidYouDie, MSGBOX_NPC
 	end
 
+PokemonTower_1F_EventScript_CueBall::
+	goto_if_set FLAG_GOT_TM42, PokemonTower_1F_EventScript_CueBall2
+	msgbox PokemonTower_1F_Text_IDontNeedThis, MSGBOX_NPC
+	giveitem ITEM_TM42, 1
+	end
+
+PokemonTower_1F_Text_IDontNeedThis::
+	.string "Oh...sniff...\n"
+	.string "Nuffle...I miss you!\p"
+	.string "Here...I don't need this...$"
+
+PokemonTower_1F_EventScript_CueBall2::
+	msgbox PokemonTower_1F_Text_BraveFace, MSGBOX_NPC
+	end
+
+PokemonTower_1F_Text_BraveFace::
+	.string "Whenever we battled, I was\n"
+	.string "always able to put on a brave\l"
+	.string "face for my Pokémon.\p"
+	.string "But now, I can't keep up the\n"
+	.string "the facade...$"
+
 PokemonTower_1F_Text_GrowlitheWhyDidYouDie::
     .string "My Growlithe…\n"
     .string "Why did you die?$"

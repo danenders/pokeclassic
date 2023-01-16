@@ -179,7 +179,7 @@
       "elevation": 3,
       "var": "VAR_VICTORY_ROAD_1F_STATE",
       "var_value": "99",
-      "script": ""
+      "script": "VictoryRoad_1F_EventScript_FloorSwitch"
     }
   ],
   "bg_events": [

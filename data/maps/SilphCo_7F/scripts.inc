@@ -418,3 +418,7 @@ SilphCo_7F_Text_PostgameGrunt6PostBattle::
     .string "There are still more of us out\n"
     .string "there.$"
 
+SilphCo_7F_EventScript_ItemTM08::
+	finditem ITEM_TM08, 1
+	release
+	end

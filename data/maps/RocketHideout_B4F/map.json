@@ -167,6 +167,34 @@
       "trainer_sight_or_berry_tree_id": "2",
       "script": "RocketHideout_B4F_EventScript_Grunt1",
       "flag": "FLAG_HIDE_CELADON_ROCKETS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BURGLAR",
+      "in_connection": false,
+      "x": 11,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 3,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_SEE_ALL_DIRECTIONS",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "RocketHideout_Burglars_TM35",
+      "flag": "FLAG_HIDE_ROCKET_BURGLARS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BURGLAR",
+      "in_connection": false,
+      "x": 4,
+      "y": 23,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 3,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "RocketHideout_Burglars_TM36",
+      "flag": "FLAG_HIDE_ROCKET_BURGLARS"
     }
   ],
   "warp_events": [

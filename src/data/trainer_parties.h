@@ -7120,6 +7120,122 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BurglarDusty[] = {
         .species = SPECIES_GROWLITHE,
     },
 };
+
+static const struct TrainerMonNoItemDefaultMoves sParty_BurglarTyler[] = {
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_MACHAMP,
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_ELECTRODE,
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_ELECTRODE,
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_WEEZING,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_BurglarGreg[] = {
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_HITMONLEE,
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_HITMONCHAN,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_BurglarKyle[] = {
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_NINETALES,
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_MAGNETON,
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_ARBOK,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_BurglarTony[] = {
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_JYNX,
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_KINGLER,
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_RHYDON,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_BurglarPete[] = {
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_SCYTHER,
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_PINSIR,
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_PARASECT,
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_VENOMOTH,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_BurglarJake[] = {
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_TENTACRUEL,
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_TANGELA,
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_VICTREEBEL,
+    },
+    {
+        .iv = 0,
+        .lvl = 45,
+        .species = SPECIES_ONIX,
+    },
+};
+
+
 static const struct TrainerMonNoItemCustomMoves sParty_LeaderBlaine[] = {
     {
         .iv = 0,

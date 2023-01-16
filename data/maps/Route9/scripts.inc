@@ -199,3 +199,8 @@ Route9_EventScript_ItemBurnHeal::
 	finditem ITEM_BURN_HEAL, 1
 	release
 	end
+
+Route9_EventScript_ItemTM40::
+    finditem ITEM_TM40, 1
+    release
+    end

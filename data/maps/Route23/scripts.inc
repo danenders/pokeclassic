@@ -24,3 +24,8 @@ Route23_EventScript_VictoryRoadGateSign::
 Route23_Text_VictoryRoadGateSign::
     .string "Victory Road Gate -\n"
     .string "Pokémon League$"
+
+Route23_EventScript_ItemTM10::
+	finditem ITEM_TM10, 1
+	release
+	end

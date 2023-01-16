@@ -2746,6 +2746,80 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_TeamRocketGrunt12),
         .party = {.NoItemCustomMoves = sParty_TeamRocketGrunt12}
     },
+//Rocket Hideout B1 - Burglars
+    [TRAINER_BURGLAR_TYLER] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_BURGLAR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_BURGLAR,
+        .trainerName = _("Tyler"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BurglarTyler),
+        .party = {.NoItemDefaultMoves = sParty_BurglarTyler}
+    },
+    [TRAINER_BURGLAR_GREG] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_BURGLAR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_BURGLAR,
+        .trainerName = _("Greg"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BurglarGreg),
+        .party = {.NoItemDefaultMoves = sParty_BurglarGreg}
+    },
+    [TRAINER_BURGLAR_KYLE] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_BURGLAR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_BURGLAR,
+        .trainerName = _("Kyle"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BurglarKyle),
+        .party = {.NoItemDefaultMoves = sParty_BurglarKyle}
+    },
+    [TRAINER_BURGLAR_TONY] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_BURGLAR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_BURGLAR,
+        .trainerName = _("Tony"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BurglarTony),
+        .party = {.NoItemDefaultMoves = sParty_BurglarTony}
+    },
+    [TRAINER_BURGLAR_PETE] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_BURGLAR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_BURGLAR,
+        .trainerName = _("Pete"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BurglarPete),
+        .party = {.NoItemDefaultMoves = sParty_BurglarPete}
+    },
+    [TRAINER_BURGLAR_JAKE] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_BURGLAR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_BURGLAR,
+        .trainerName = _("Jake"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_BurglarJake),
+        .party = {.NoItemDefaultMoves = sParty_BurglarJake}
+    },
+
 //Rocket Hideout B2
     [TRAINER_TEAM_ROCKET_GRUNT_13] = {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
@@ -4930,7 +5004,7 @@ const struct Trainer gTrainers[] = {
         .trainerClass = TRAINER_CLASS_BURGLAR,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
         .trainerPic = TRAINER_PIC_BURGLAR,
-        .trainerName = _("QUINN"),
+        .trainerName = _("Quinn"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
@@ -4942,7 +5016,7 @@ const struct Trainer gTrainers[] = {
         .trainerClass = TRAINER_CLASS_BURGLAR,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
         .trainerPic = TRAINER_PIC_BURGLAR,
-        .trainerName = _("RAMON"),
+        .trainerName = _("Ramon"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
@@ -4954,7 +5028,7 @@ const struct Trainer gTrainers[] = {
         .trainerClass = TRAINER_CLASS_BURGLAR,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
         .trainerPic = TRAINER_PIC_BURGLAR,
-        .trainerName = _("DUSTY"),
+        .trainerName = _("Dusty"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,

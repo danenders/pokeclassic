@@ -2,11 +2,16 @@ SafariZone_North_MapScripts::
 	.byte 0
 
 SafariZone_North_EventScript_ItemQuickClaw::
+	finditem ITEM_QUICK_CLAW, 1
+	end
 
 SafariZone_North_EventScript_ItemTM47::
+	finditem ITEM_TM47, 1
+	end
 
 SafariZone_North_EventScript_ItemProtein::
-
+	finditem ITEM_PROTEIN, 1
+	end
 
 SafariZone_North_EventScript_RestHouseSign::
 	msgbox SafariZone_North_Text_RestHouse, MSGBOX_SIGN

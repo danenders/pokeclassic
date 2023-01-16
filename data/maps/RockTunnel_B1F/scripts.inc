@@ -6,6 +6,11 @@ RockTunnel_B1F_EventScript_ItemRevive::
 	release
 	end
 
+RockTunnel_B1F_EventScript_ItemPowerStone::
+    finditem ITEM_POWER_STONE, 1
+    release
+    end
+
 RockTunnel_B1F_EventScript_ItemMaxEther::
 	finditem ITEM_MAX_ETHER, 1
 	release

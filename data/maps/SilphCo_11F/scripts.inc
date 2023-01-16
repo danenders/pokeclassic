@@ -182,6 +182,7 @@ SilphCo_11F_EventScript_BattleGiovanni::
 	fadescreen FADE_FROM_BLACK
 	setvar VAR_SILPH_STATE, 3
 	setflag FLAG_HIDE_SAFFRON_ROCKETS
+	clearflag FLAG_HIDE_ROCKET_BURGLARS
 	clearflag FLAG_HIDE_SAFFRON_CIVILIANS
 	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	releaseall
