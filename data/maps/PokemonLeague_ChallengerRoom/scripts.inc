@@ -215,6 +215,8 @@ TitleMatch_EventScript_Victory::
 TitleMatch_EventScript_Defeat::
 	msgbox TitleMatch_Text_TitleMatchVictory, MSGBOX_DEFAULT
 TitleMatch_EventScript_Exit::
+	waitmessage
+	closemessage
 	applymovement LOCALID_OPPONENT, ChallengeRoom_PlayerEnter
 	waitmovement 1
 	warp MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F, 11, 14
