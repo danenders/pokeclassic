@@ -53,9 +53,38 @@ IndigoPlateau_PokemonCenter_1F_EventScript_TitleMatch::
 	waitmovement 5
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_Challenger, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, IndigoPlateau_PokemonCenter_1F_EventScript_Decline
+	setflag FLAG_DAILY_TITLE_MATCH
+	setvar VAR_TITLE_MATCH_OPPONENT, 0
+	addvar VAR_TITLE_MATCHES, 1
+	call ClearTitleMatches
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_ExcellentGoodLuck, MSGBOX_DEFAULT
     goto IndigoPlateau_PokemonCenter_1F_EventScript_EnterEliteFour
     end
+
+ClearTitleMatches::
+	cleartrainerflag TITLE_MATCH_STEPH
+	cleartrainerflag TITLE_MATCH_LIZ
+	cleartrainerflag TITLE_MATCH_MIKE
+	cleartrainerflag TITLE_MATCH_CHRIS
+	cleartrainerflag TITLE_MATCH_KEV
+	cleartrainerflag TITLE_MATCH_MEGHAN
+	cleartrainerflag TITLE_MATCH_STEVE
+	cleartrainerflag TITLE_MATCH_M
+	cleartrainerflag TITLE_MATCH_BEAN
+	cleartrainerflag TITLE_MATCH_ANNIE
+	cleartrainerflag TITLE_MATCH_BROCK
+	cleartrainerflag TITLE_MATCH_MISTY
+	cleartrainerflag TITLE_MATCH_SURGE
+	cleartrainerflag TITLE_MATCH_ERIKA
+	cleartrainerflag TITLE_MATCH_SABRINA
+	cleartrainerflag TITLE_MATCH_KOGA
+	cleartrainerflag TITLE_MATCH_BLAINE
+	cleartrainerflag TITLE_MATCH_ROCKET
+	cleartrainerflag TITLE_MATCH_DAISY
+	cleartrainerflag TITLE_MATCH_RIVAL_VAPOREON
+	cleartrainerflag TITLE_MATCH_RIVAL_JOLTEON
+	cleartrainerflag TITLE_MATCH_RIVAL_FLAREON
+	return
 
 IndigoPlateau_PokemonCenter_1F_EventScript_EliteFourPostGame::
     msgbox IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourPostGame, MSGBOX_YESNO
@@ -89,7 +118,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_EnterEliteFour::
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_WarpTitleMatch::
-	warp MAP_POKEMON_LEAGUE_CHALLENGER_ROOM, 6, 7
+	warp MAP_POKEMON_LEAGUE_CHALLENGER_ROOM, 6, 3
 	waitstate
 	end
 

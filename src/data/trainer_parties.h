@@ -7880,10 +7880,470 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PostgameSilphRocket6[] =
 };
 
 
+static const struct TrainerMonNoItemCustomMoves sParty_TitleMatchDaisy[] = {
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_VILEPLUME,
+        .moves = {MOVE_SUNNY_DAY, MOVE_SLEEP_POWDER, MOVE_SYNTHESIS, MOVE_SOLAR_BEAM},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_VICTREEBEL,
+        .moves = {MOVE_SLEEP_POWDER, MOVE_SLUDGE_BOMB, MOVE_LEAF_STORM, MOVE_SUCKER_PUNCH},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_NIDOKING,
+        .moves = {MOVE_EARTHQUAKE, MOVE_THUNDERBOLT, MOVE_ICE_BEAM, MOVE_TAUNT},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_NIDOQUEEN,
+        .moves = {MOVE_TOXIC, MOVE_PROTECT, MOVE_EARTHQUAKE, MOVE_FLAMETHROWER},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_CHANSEY,
+        .moves = {MOVE_WISH, MOVE_PROTECT, MOVE_SEISMIC_TOSS, MOVE_TOXIC},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_CLEFABLE,
+        .moves = {MOVE_ENCORE, MOVE_SOFT_BOILED, MOVE_SEISMIC_TOSS, MOVE_THUNDER_WAVE},
+    },
+};
 
+static const struct TrainerMonNoItemCustomMoves sParty_TitleMatchRocket[] = {
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_GOLBAT,
+        .moves = {MOVE_TAUNT, MOVE_BRAVE_BIRD, MOVE_U_TURN, MOVE_ROOST},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_RATICATE,
+        .moves = {MOVE_CRUNCH, MOVE_SUCKER_PUNCH, MOVE_U_TURN, MOVE_SWORDS_DANCE},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_PERSIAN,
+        .moves = {MOVE_NASTY_PLOT, MOVE_HYPNOSIS, MOVE_SWIFT, MOVE_WATER_PULSE},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_FEAROW,
+        .moves = {MOVE_DRILL_PECK, MOVE_RETURN, MOVE_U_TURN, MOVE_PURSUIT},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_MAGNETON,
+        .moves = {MOVE_THUNDER, MOVE_FLASH_CANNON, MOVE_EXPLOSION, MOVE_SUPERSONIC},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_MAGMAR,
+        .moves = {MOVE_FLAMETHROWER, MOVE_FOCUS_PUNCH, MOVE_THUNDER_PUNCH, MOVE_CROSS_CHOP},
+    },
+};
 
+static const struct TrainerMonNoItemCustomMoves sParty_TitleMatchSteph[] = {
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_RATICATE,
+        .moves = {MOVE_CRUNCH, MOVE_SUCKER_PUNCH, MOVE_PROTECT, MOVE_SWORDS_DANCE},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_KANGASKHAN,
+        .moves = {MOVE_SUCKER_PUNCH, MOVE_EARTHQUAKE, MOVE_LOW_KICK, MOVE_FAKE_OUT},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_FEAROW,
+        .moves = {MOVE_DRILL_PECK, MOVE_U_TURN, MOVE_QUICK_ATTACK, MOVE_PURSUIT},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_TAUROS,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_STONE_EDGE, MOVE_PAYBACK},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_PERSIAN,
+        .moves = {MOVE_NASTY_PLOT, MOVE_HYPNOSIS, MOVE_SWIFT, MOVE_WATER_PULSE},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_SNORLAX,
+        .moves = {MOVE_CURSE, MOVE_BODY_SLAM, MOVE_EARTHQUAKE, MOVE_REST},
+    },
+};
 
+static const struct TrainerMonNoItemCustomMoves sParty_TitleMatchLiz[] = {
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_VAPOREON,
+        .moves = {MOVE_WISH, MOVE_PROTECT, MOVE_SURF, MOVE_TOXIC},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_CLOYSTER,
+        .moves = {MOVE_ICE_SHARD, MOVE_ROCK_BLAST, MOVE_RAPID_SPIN, MOVE_SPIKES},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_BLASTOISE,
+        .moves = {MOVE_SURF, MOVE_FORESIGHT, MOVE_ROAR, MOVE_ICE_BEAM},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_POLIWRATH,
+        .moves = {MOVE_SUBSTITUTE, MOVE_FOCUS_PUNCH, MOVE_ICE_PUNCH, MOVE_BULK_UP},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_TENTACRUEL,
+        .moves = {MOVE_TOXIC_SPIKES, MOVE_KNOCK_OFF, MOVE_SURF, MOVE_SLUDGE_BOMB},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_SLOWBRO,
+        .moves = {MOVE_SLACK_OFF, MOVE_SURF, MOVE_ICE_BEAM, MOVE_TOXIC},
+    },
+};
 
+static const struct TrainerMonNoItemCustomMoves sParty_TitleMatchSteve[] = {
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_CHARIZARD,
+        .moves = {MOVE_FIRE_BLAST, MOVE_AIR_SLASH, MOVE_ROOST, MOVE_SOLAR_BEAM},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_NIDOKING,
+        .moves = {MOVE_EARTHQUAKE, MOVE_ICE_BEAM, MOVE_THUNDERBOLT, MOVE_SUPERPOWER},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_AERODACTYL,
+        .moves = {MOVE_STEALTH_ROCK, MOVE_TAUNT, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_KANGASKHAN,
+        .moves = {MOVE_SUBSTITUTE, MOVE_FOCUS_PUNCH, MOVE_SUCKER_PUNCH, MOVE_FAKE_OUT},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_GYARADOS,
+        .moves = {MOVE_DRAGON_DANCE, MOVE_WATERFALL, MOVE_OUTRAGE, MOVE_EARTHQUAKE},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_DRAGONITE,
+        .moves = {MOVE_DRAGON_DANCE, MOVE_OUTRAGE, MOVE_FIRE_PUNCH, MOVE_EXTREME_SPEED},
+    },
+};
 
+static const struct TrainerMonNoItemCustomMoves sParty_TitleMatchM[] = {
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_BUTTERFREE,
+        .moves = {MOVE_SLEEP_POWDER, MOVE_STUN_SPORE, MOVE_U_TURN, MOVE_BUG_BUZZ},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_VENOMOTH,
+        .moves = {MOVE_BUG_BUZZ, MOVE_PSYCHIC, MOVE_SLEEP_POWDER, MOVE_ROOST},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_GOLBAT,
+        .moves = {MOVE_TAUNT, MOVE_BRAVE_BIRD, MOVE_ROOST, MOVE_U_TURN},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_FARFETCHD,
+        .moves = {MOVE_SLASH, MOVE_NIGHT_SLASH, MOVE_STEEL_WING, MOVE_SWORDS_DANCE},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_VENUSAUR,
+        .moves = {MOVE_LEECH_SEED, MOVE_SLEEP_POWDER, MOVE_LEAF_STORM, MOVE_SLUDGE_BOMB},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_POLIWRATH,
+        .moves = {MOVE_BULK_UP, MOVE_WATERFALL, MOVE_ICE_PUNCH, MOVE_HYPNOSIS},
+    },
+};
 
+static const struct TrainerMonNoItemCustomMoves sParty_TitleMatchMeghan[] = {
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_FARFETCHD,
+        .moves = {MOVE_SWORDS_DANCE, MOVE_SLASH, MOVE_STEEL_WING, MOVE_ROOST},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_VENUSAUR,
+        .moves = {MOVE_SWORDS_DANCE, MOVE_SLEEP_POWDER, MOVE_POWER_WHIP, MOVE_EARTHQUAKE},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_VILEPLUME,
+        .moves = {MOVE_AROMATHERAPY, MOVE_MOONLIGHT, MOVE_ENERGY_BALL, MOVE_SLUDGE_BOMB},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_ARCANINE,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_EXTREME_SPEED, MOVE_TOXIC, MOVE_MORNING_SUN},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_GENGAR,
+        .moves = {MOVE_SHADOW_BALL, MOVE_WILL_O_WISP, MOVE_FOCUS_BLAST, MOVE_TAUNT},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_KINGLER,
+        .moves = {MOVE_AGILITY, MOVE_SWORDS_DANCE, MOVE_CRABHAMMER, MOVE_X_SCISSOR},
+    },
+};
 
+static const struct TrainerMonNoItemCustomMoves sParty_TitleMatchBean[] = {
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_CHARIZARD,
+        .moves = {MOVE_DRAGON_DANCE, MOVE_FLARE_BLITZ, MOVE_EARTHQUAKE, MOVE_THUNDER_PUNCH},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_ARCANINE,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_EXTREME_SPEED, MOVE_MORNING_SUN, MOVE_WILL_O_WISP},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_ALAKAZAM,
+        .moves = {MOVE_PSYCHIC, MOVE_GRASS_KNOT, MOVE_SHADOW_BALL, MOVE_FOCUS_BLAST},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_HYPNO,
+        .moves = {MOVE_WISH, MOVE_PSYCHIC, MOVE_SEISMIC_TOSS, MOVE_PROTECT},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_RAICHU,
+        .moves = {MOVE_NASTY_PLOT, MOVE_THUNDERBOLT, MOVE_FOCUS_BLAST, MOVE_ENCORE},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_MAGNETON,
+        .moves = {MOVE_THUNDER, MOVE_SUPERSONIC, MOVE_FLASH_CANNON, MOVE_THUNDER_WAVE},
+    },
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_TitleMatchChris[] = {
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_PIDGEOT,
+        .moves = {MOVE_BRAVE_BIRD, MOVE_ROOST, MOVE_PURSUIT, MOVE_RETURN},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_NIDOKING,
+        .moves = {MOVE_SUPERPOWER, MOVE_SHADOW_BALL, MOVE_EARTHQUAKE, MOVE_ICE_BEAM},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_ALAKAZAM,
+        .moves = {MOVE_SUBSTITUTE, MOVE_PSYCHIC, MOVE_SIGNAL_BEAM, MOVE_FOCUS_BLAST},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_CHARIZARD,
+        .moves = {MOVE_ROOST, MOVE_AIR_SLASH, MOVE_FLAMETHROWER, MOVE_TWISTER},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_GENGAR,
+        .moves = {MOVE_TRICK, MOVE_SHADOW_BALL, MOVE_HYPNOSIS, MOVE_FOCUS_BLAST},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_DRAGONITE,
+        .moves = {MOVE_DRAGON_DANCE, MOVE_DRAGON_CLAW, MOVE_FIRE_PUNCH, MOVE_EARTHQUAKE},
+    },
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_TitleMatchAnnie[] = {
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_SNORLAX,
+        .moves = {MOVE_BODY_SLAM, MOVE_REFLECT, MOVE_REST, MOVE_EARTHQUAKE},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_STARMIE,
+        .moves = {MOVE_RECOVER, MOVE_THUNDER_WAVE, MOVE_THUNDERBOLT, MOVE_BLIZZARD},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_TAUROS,
+        .moves = {MOVE_BODY_SLAM, MOVE_BLIZZARD, MOVE_EARTHQUAKE, MOVE_HYPER_BEAM},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_LAPRAS,
+        .moves = {MOVE_BLIZZARD, MOVE_THUNDERBOLT, MOVE_BODY_SLAM, MOVE_REST},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_RHYDON,
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_BODY_SLAM, MOVE_SUBSTITUTE},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_EXEGGUTOR,
+        .moves = {MOVE_SLEEP_POWDER, MOVE_PSYCHIC, MOVE_EXPLOSION, MOVE_GIGA_DRAIN},
+    },
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_TitleMatchMike[] = {
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_CHARIZARD,
+        .moves = {MOVE_DRAGON_DANCE, MOVE_FIRE_BLAST, MOVE_ROCK_SLIDE, MOVE_DRAGON_CLAW},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_VENUSAUR,
+        .moves = {MOVE_LEAF_STORM, MOVE_SLUDGE_BOMB, MOVE_SLEEP_POWDER, MOVE_SYNTHESIS},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_BLASTOISE,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_ROAR, MOVE_REST},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_RAICHU,
+        .moves = {MOVE_NASTY_PLOT, MOVE_THUNDERBOLT, MOVE_FOCUS_BLAST, MOVE_THUNDER_WAVE},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_JYNX,
+        .moves = {MOVE_ICE_BEAM, MOVE_LOVELY_KISS, MOVE_NASTY_PLOT, MOVE_ICE_BEAM},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_WIGGLYTUFF,
+        .moves = {MOVE_WISH, MOVE_PROTECT, MOVE_SEISMIC_TOSS, MOVE_THUNDER_WAVE},
+    },
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_TitleMatchKev[] = {
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_NINETALES,
+        .moves = {MOVE_NASTY_PLOT, MOVE_FIRE_BLAST, MOVE_ENERGY_BALL, MOVE_EXTRASENSORY},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_OMASTAR,
+        .moves = {MOVE_EARTH_POWER, MOVE_ICE_BEAM, MOVE_STEALTH_ROCK, MOVE_SURF},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_EXEGGUTOR,
+        .moves = {MOVE_SLEEP_POWDER, MOVE_PSYCHIC, MOVE_LEAF_STORM, MOVE_SYNTHESIS},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_RHYDON,
+        .moves = {MOVE_EARTHQUAKE, MOVE_MEGAHORN, MOVE_ROCK_SLIDE, MOVE_FIRE_PUNCH},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_MACHAMP,
+        .moves = {MOVE_PAYBACK, MOVE_DYNAMIC_PUNCH, MOVE_BULLET_PUNCH, MOVE_ICE_PUNCH},
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_WEEZING,
+        .moves = {MOVE_REST, MOVE_SLEEP_TALK, MOVE_SLUDGE_BOMB, MOVE_WILL_O_WISP},
+    },
+};

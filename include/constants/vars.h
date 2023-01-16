@@ -176,9 +176,9 @@
 #define VAR_REPEL_LAST_USED                 0x409D //For repeated Repel use
 #define VAR_LOOKER_POSTGAME_CALL_STEPS    	0x409E //Countdown to start Looker Postgame call
 #define VAR_GOT_SQUIRTLE     				0x409F //Triggers for the Squirtle Event in Vermilion
-#define UNUSED_VARIABLE_37           		0x40A0
-#define UNUSED_VARIABLE_38                  0x40A1 
-#define UNUSED_VARIABLE_39            		0x40A2
+#define VAR_TITLE_MATCH_OPPONENT        	0x40A0 //Sets the opponent for the title match challenge
+#define VAR_TITLE_MATCHES                   0x40A1 //Tracks how many Title Matches you've completed. Every few will trigger a special battle instead of a regular trainer.
+#define UNUSED_VARIABLE_39         			0x40A2
 #define UNUSED_VARIABLE_40         			0x40A3
 #define UNUSED_VARIABLE_41                	0x40A4
 #define UNUSED_VARIABLE_42  				0x40A5
