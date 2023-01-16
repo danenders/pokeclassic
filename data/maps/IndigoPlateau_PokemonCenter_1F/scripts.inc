@@ -16,11 +16,6 @@ IndigoPlateau_PokemonCenter_1F_EventScript_Nurse::
 	goto Common_EventScript_PkmnCenterNurse
 	end
 
-IndigoPlateau_PokemonCenter_1F_EventScript_Debug::
-	playse SE_PIN
-	setflag FLAG_DAILY_TITLE_MATCH
-	end
-
 IndigoPlateau_PokemonCenter_1F_EventScript_GymGuy::
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice, MSGBOX_NPC
 	end
