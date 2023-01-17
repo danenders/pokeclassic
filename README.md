@@ -1,30 +1,14 @@
-# About this branch
-This is a decapitalized (all-caps text replaced with proper capitalization) version of the [**pokeemerald**](https://travis-ci.org/pret/pokeemerald) dissasembly, originally made by [**Wyrserth**](https://github.com/Wyrserth) and adapted to the current structure of the project.
+# PokeClassic
+## Status: In development
 
-It builds the following ROM:
+PokeClassic 
+
+# Getting PokeClassic
+This repository builds the following ROM:
 
 * pokeemerald.gba `sha1: 8C19F2555E10DFF32A9914CEAC360B018AF42E6C`
 
-To set up the repository, see [INSTALL.md](INSTALL.md).
+To compile this rom yourself, see [Pret's Installation Guide](https://github.com/pret/pokeemerald/blob/master/INSTALL.md) on how to get started with the decompilations. Then, clone this branch and build the rom.
 
+Otherwise, patch files will occasionaly be released here. These will be slower to release than pulling updates yourself. To patch this game, you will need to provide your own rom.
 
-## See also
-
-Other disassembly and/or decompilation projects:
-* [**Pokémon Red and Blue**](https://github.com/pret/pokered)
-* [**Pokémon Gold and Silver (Space World '97 demo)**](https://github.com/pret/pokegold-spaceworld)
-* [**Pokémon Yellow**](https://github.com/pret/pokeyellow)
-* [**Pokémon Trading Card Game**](https://github.com/pret/poketcg)
-* [**Pokémon Pinball**](https://github.com/pret/pokepinball)
-* [**Pokémon Stadium**](https://github.com/pret/pokestadium)
-* [**Pokémon Gold and Silver**](https://github.com/pret/pokegold)
-* [**Pokémon Crystal**](https://github.com/pret/pokecrystal)
-* [**Pokémon Ruby and Sapphire**](https://github.com/pret/pokeruby)
-* [**Pokémon Pinball: Ruby & Sapphire**](https://github.com/pret/pokepinballrs)
-* [**Pokémon FireRed and LeafGreen**](https://github.com/pret/pokefirered)
-* [**Pokémon Mystery Dungeon: Red Rescue Team**](https://github.com/pret/pmd-red)
-
-
-## Contacts
-
-You can find us on [Discord](https://discord.gg/d5dubZ3) and [IRC](https://web.libera.chat/?#pret).
