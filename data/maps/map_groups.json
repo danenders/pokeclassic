@@ -551,7 +551,8 @@
     "Route23",
     "Route24",
     "Route25",
-    "IndigoPlateau_Exterior"
+    "IndigoPlateau_Exterior",
+    "BattleTower_Exterior"
   ],
   "gMapGroup_Dungeons": [
     "VictoryRoad_1F",

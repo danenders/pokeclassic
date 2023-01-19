@@ -1348,3 +1348,5 @@ Text_VoiceRangOutDontRunAway::
 	.include "data/maps/PokemonLeague_ChallengerRoom/scripts.inc"
 
 	.include "data/maps/PokemonLeague_SecretBattle/scripts.inc"
+
+	.include "data/maps/BattleTower_Exterior/scripts.inc"

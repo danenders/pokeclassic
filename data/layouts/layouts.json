@@ -5692,7 +5692,7 @@
     {
       "id": "LAYOUT_ROUTE22",
       "name": "Route22_Layout",
-      "width": 48,
+      "width": 56,
       "height": 24,
       "border_width": 2,
       "border_height": 2,
@@ -8160,6 +8160,18 @@
       "secondary_tileset": "gTileset_PokemonLeague",
       "border_filepath": "data/layouts/PokemonLeague_SecretBattle/border.bin",
       "blockdata_filepath": "data/layouts/PokemonLeague_SecretBattle/map.bin"
+    },
+    {
+      "id": "LAYOUT_BATTLE_TOWER_EXTERIOR",
+      "name": "BattleTower_Exterior_Layout",
+      "width": 36,
+      "height": 24,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SaffronCity",
+      "border_filepath": "data/layouts/BattleTower_Exterior/border.bin",
+      "blockdata_filepath": "data/layouts/BattleTower_Exterior/map.bin"
     }
   ]
 }

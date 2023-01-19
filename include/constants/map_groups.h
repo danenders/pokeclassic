@@ -521,6 +521,7 @@
 #define MAP_ROUTE24                 (34 | (6 << 8))
 #define MAP_ROUTE25                 (35 | (6 << 8))
 #define MAP_INDIGO_PLATEAU_EXTERIOR (36 | (6 << 8))
+#define MAP_BATTLE_TOWER_EXTERIOR   (37 | (6 << 8))
 
 // gMapGroup_Dungeons
 #define MAP_VICTORY_ROAD_1F                     (0 | (7 << 8))
@@ -847,7 +848,5 @@
 #define MAP_ROUTE25_SEA_COTTAGE (0 | (33 << 8))
 
 #define MAP_GROUPS_COUNT 34
-
-// static const u8 MAP_GROUP_COUNT[] = {57, 107, 103, 100, 38, 61, 37, 81, 58, 4, 6, 8, 10, 6, 8, 20, 10, 8, 10, 14, 4, 2, 2, 1, 1, 1, 2, 2, 3, 2, 3, 2, 1, 1, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H
