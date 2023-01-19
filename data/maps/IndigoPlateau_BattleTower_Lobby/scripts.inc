@@ -188,13 +188,13 @@ BattleFrontier_BattleTowerLobby_EventScript_BattleTowerTrigger::
 	special SavePlayerParty
 	msgbox BattleFrontier_BattleTowerLobby_Text_TowerWelcome, MSGBOX_DEFAULT
 BattleFrontier_BattleTowerLobby_EventScript_ChooseBattleTowerMode::
-	multichoice 17, 0, MULTI_BATTLE_MODE, FALSE
+	multichoice 17, 0, MULTI_BATTLE_MODE_2, FALSE
 	switch VAR_RESULT
 	case 0, BattleFrontier_BattleTowerLobby_EventScript_TryEnterSinglesChallenge
 	case 1, BattleFrontier_BattleTowerLobby_EventScript_TryEnterDoublesChallenge
-	case 2, BattleFrontier_BattleTowerLobby_EventScript_TryEnterMultisChallenge
-	case 3, BattleFrontier_BattleTowerLobby_EventScript_ExplainChallenge
-	case 4, BattleFrontier_BattleTowerLobby_EventScript_CancelChallenge
+	@case 2, BattleFrontier_BattleTowerLobby_EventScript_TryEnterMultisChallenge
+	case 2, BattleFrontier_BattleTowerLobby_EventScript_ExplainChallenge
+	case 3, BattleFrontier_BattleTowerLobby_EventScript_CancelChallenge
 	case MULTI_B_PRESSED, BattleFrontier_BattleTowerLobby_EventScript_CancelChallenge
 	end
 
