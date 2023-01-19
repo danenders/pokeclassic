@@ -1562,7 +1562,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokemaniacReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerIntro::
 	.string "Yo, there!\n"
-	.string "I'm KIndler {STR_VAR_1}!$"
+	.string "I'm Kindler {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerMon1::
 	.string "You know what my training cooked up?\n"

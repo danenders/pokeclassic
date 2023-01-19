@@ -508,24 +508,24 @@ static const struct SpriteFrameImage sPicTable_CoolTrainerM[] = {
     overworld_frame(gObjectEventPic_CoolTrainerM, 4, 4, 0),
     overworld_frame(gObjectEventPic_CoolTrainerM, 4, 4, 1),
     overworld_frame(gObjectEventPic_CoolTrainerM, 4, 4, 2),
-    overworld_frame(gObjectEventPic_CoolTrainerM, 4, 4, 0),
-    overworld_frame(gObjectEventPic_CoolTrainerM, 4, 4, 0),
-    overworld_frame(gObjectEventPic_CoolTrainerM, 4, 4, 1),
-    overworld_frame(gObjectEventPic_CoolTrainerM, 4, 4, 1),
-    overworld_frame(gObjectEventPic_CoolTrainerM, 4, 4, 2),
-    overworld_frame(gObjectEventPic_CoolTrainerM, 4, 4, 2),
+    overworld_frame(gObjectEventPic_CoolTrainerM, 4, 4, 3),
+    overworld_frame(gObjectEventPic_CoolTrainerM, 4, 4, 4),
+    overworld_frame(gObjectEventPic_CoolTrainerM, 4, 4, 5),
+    overworld_frame(gObjectEventPic_CoolTrainerM, 4, 4, 6),
+    overworld_frame(gObjectEventPic_CoolTrainerM, 4, 4, 7),
+    overworld_frame(gObjectEventPic_CoolTrainerM, 4, 4, 8),
 };
 
 static const struct SpriteFrameImage sPicTable_CoolTrainerF[] = {
     overworld_frame(gObjectEventPic_CoolTrainerF, 4, 4, 0),
     overworld_frame(gObjectEventPic_CoolTrainerF, 4, 4, 1),
     overworld_frame(gObjectEventPic_CoolTrainerF, 4, 4, 2),
-    overworld_frame(gObjectEventPic_CoolTrainerF, 4, 4, 0),
-    overworld_frame(gObjectEventPic_CoolTrainerF, 4, 4, 0),
-    overworld_frame(gObjectEventPic_CoolTrainerF, 4, 4, 1),
-    overworld_frame(gObjectEventPic_CoolTrainerF, 4, 4, 1),
-    overworld_frame(gObjectEventPic_CoolTrainerF, 4, 4, 2),
-    overworld_frame(gObjectEventPic_CoolTrainerF, 4, 4, 2),
+    overworld_frame(gObjectEventPic_CoolTrainerF, 4, 4, 3),
+    overworld_frame(gObjectEventPic_CoolTrainerF, 4, 4, 4),
+    overworld_frame(gObjectEventPic_CoolTrainerF, 4, 4, 5),
+    overworld_frame(gObjectEventPic_CoolTrainerF, 4, 4, 6),
+    overworld_frame(gObjectEventPic_CoolTrainerF, 4, 4, 7),
+    overworld_frame(gObjectEventPic_CoolTrainerF, 4, 4, 8),
 };
 
 static const struct SpriteFrameImage sPicTable_LinkReceptionist[] = {
