@@ -197,19 +197,6 @@ IndigoPlateau_PokemonCenter_1F_Text_ExcellentGoodLuck::
 	.string "Excellent!\n"
 	.string "Good luck!$"
 
-
-IndigoPlateau_PokemonCenter_1F_EventScript_FrontierGuard::
-	lock
-	faceplayer
-	msgbox IndigoPlateau_PokemonCenter_1F_Text_Frontier, MSGBOX_DEFAULT
-	release
-	end
-
-IndigoPlateau_PokemonCenter_1F_Text_Frontier::
-	.string "Only trainers that have proven themselves\n"
-	.string "by defeating the Elite Four are allowed\l"
-	.string "to enter this Facility.$"
-
 IndigoPlateau_PokemonCenter_1F_EventScript_BlackBelt::
     lock
     faceplayer

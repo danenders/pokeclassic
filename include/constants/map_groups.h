@@ -777,76 +777,81 @@
 #define MAP_SAFFRON_CITY_HOUSE                    (9 | (18 << 8))
 
 // gMapGroup_IndoorIndigoPlateau
-#define MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F     (0 | (19 << 8))
-#define MAP_INDIGO_PLATEAU_POKEMON_CENTER_2F     (1 | (19 << 8))
-#define MAP_POKEMON_LEAGUE_LORELEIS_ROOM         (2 | (19 << 8))
-#define MAP_POKEMON_LEAGUE_BRUNOS_ROOM           (3 | (19 << 8))
-#define MAP_POKEMON_LEAGUE_AGATHAS_ROOM          (4 | (19 << 8))
-#define MAP_POKEMON_LEAGUE_LANCES_ROOM           (5 | (19 << 8))
-#define MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM        (6 | (19 << 8))
-#define MAP_POKEMON_LEAGUE_HALL_OF_FAME          (7 | (19 << 8))
-#define MAP_INDIGO_PLATEAU_BATTLE_TOWER_HALLWAY  (8 | (19 << 8))
-#define MAP_INDIGO_PLATEAU_BATTLE_TOWER_ELEVATOR (9 | (19 << 8))
-#define MAP_INDIGO_PLATEAU_BATTLE_TOWER_LOBBY    (10 | (19 << 8))
-#define MAP_INDIGO_PLATEAU_BATTLE_FACTORY_LOBBY  (11 | (19 << 8))
-#define MAP_POKEMON_LEAGUE_CHALLENGER_ROOM       (12 | (19 << 8))
-#define MAP_POKEMON_LEAGUE_SECRET_BATTLE         (13 | (19 << 8))
+#define MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F (0 | (19 << 8))
+#define MAP_INDIGO_PLATEAU_POKEMON_CENTER_2F (1 | (19 << 8))
+#define MAP_POKEMON_LEAGUE_LORELEIS_ROOM     (2 | (19 << 8))
+#define MAP_POKEMON_LEAGUE_BRUNOS_ROOM       (3 | (19 << 8))
+#define MAP_POKEMON_LEAGUE_AGATHAS_ROOM      (4 | (19 << 8))
+#define MAP_POKEMON_LEAGUE_LANCES_ROOM       (5 | (19 << 8))
+#define MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM    (6 | (19 << 8))
+#define MAP_POKEMON_LEAGUE_HALL_OF_FAME      (7 | (19 << 8))
+#define MAP_POKEMON_LEAGUE_CHALLENGER_ROOM   (8 | (19 << 8))
+#define MAP_POKEMON_LEAGUE_SECRET_BATTLE     (9 | (19 << 8))
+
+// gMapGroup_IndoorBattleTower
+#define MAP_BATTLE_TOWER_ENTRANCE  (0 | (20 << 8))
+#define MAP_BATTLE_TOWER_BASEMENT  (1 | (20 << 8))
+#define MAP_BATTLE_TOWER_2F_SHOP   (2 | (20 << 8))
+#define MAP_BATTLE_TOWER_3F_LOUNGE (3 | (20 << 8))
+#define MAP_BATTLE_TOWER_ELEVATOR  (4 | (20 << 8))
 
 // gMapGroup_IndoorRoute2
-#define MAP_VIRIDIAN_FOREST_NORTH_ENTRANCE (0 | (20 << 8))
-#define MAP_VIRIDIAN_FOREST_SOUTH_ENTRANCE (1 | (20 << 8))
-#define MAP_ROUTE2_HOUSE                   (2 | (20 << 8))
-#define MAP_ROUTE2_EAST_BUILDING           (3 | (20 << 8))
+#define MAP_VIRIDIAN_FOREST_NORTH_ENTRANCE (0 | (21 << 8))
+#define MAP_VIRIDIAN_FOREST_SOUTH_ENTRANCE (1 | (21 << 8))
+#define MAP_ROUTE2_HOUSE                   (2 | (21 << 8))
+#define MAP_ROUTE2_EAST_BUILDING           (3 | (21 << 8))
 
 // gMapGroup_IndoorRoute4
-#define MAP_ROUTE4_POKEMON_CENTER_1F (0 | (21 << 8))
-#define MAP_ROUTE4_POKEMON_CENTER_2F (1 | (21 << 8))
+#define MAP_ROUTE4_POKEMON_CENTER_1F (0 | (22 << 8))
+#define MAP_ROUTE4_POKEMON_CENTER_2F (1 | (22 << 8))
 
 // gMapGroup_IndoorRoute5
-#define MAP_ROUTE5_POKEMON_DAY_CARE (0 | (22 << 8))
-#define MAP_ROUTE5_SOUTH_ENTRANCE   (1 | (22 << 8))
+#define MAP_ROUTE5_POKEMON_DAY_CARE (0 | (23 << 8))
+#define MAP_ROUTE5_SOUTH_ENTRANCE   (1 | (23 << 8))
 
 // gMapGroup_IndoorRoute6
-#define MAP_ROUTE6_NORTH_ENTRANCE (0 | (23 << 8))
+#define MAP_ROUTE6_NORTH_ENTRANCE (0 | (24 << 8))
 
 // gMapGroup_IndoorRoute7
-#define MAP_ROUTE7_EAST_ENTRANCE (0 | (24 << 8))
+#define MAP_ROUTE7_EAST_ENTRANCE (0 | (25 << 8))
 
 // gMapGroup_IndoorRoute8
-#define MAP_ROUTE8_WEST_ENTRANCE (0 | (25 << 8))
+#define MAP_ROUTE8_WEST_ENTRANCE (0 | (26 << 8))
 
 // gMapGroup_IndoorRoute10
-#define MAP_ROUTE10_POKEMON_CENTER_1F (0 | (26 << 8))
-#define MAP_ROUTE10_POKEMON_CENTER_2F (1 | (26 << 8))
+#define MAP_ROUTE10_POKEMON_CENTER_1F (0 | (27 << 8))
+#define MAP_ROUTE10_POKEMON_CENTER_2F (1 | (27 << 8))
 
 // gMapGroup_IndoorRoute11
-#define MAP_ROUTE11_EAST_ENTRANCE_1F (0 | (27 << 8))
-#define MAP_ROUTE11_EAST_ENTRANCE_2F (1 | (27 << 8))
+#define MAP_ROUTE11_EAST_ENTRANCE_1F (0 | (28 << 8))
+#define MAP_ROUTE11_EAST_ENTRANCE_2F (1 | (28 << 8))
 
 // gMapGroup_IndoorRoute12
-#define MAP_ROUTE12_NORTH_ENTRANCE_1F (0 | (28 << 8))
-#define MAP_ROUTE12_NORTH_ENTRANCE_2F (1 | (28 << 8))
-#define MAP_ROUTE12_FISHING_HOUSE     (2 | (28 << 8))
+#define MAP_ROUTE12_NORTH_ENTRANCE_1F (0 | (29 << 8))
+#define MAP_ROUTE12_NORTH_ENTRANCE_2F (1 | (29 << 8))
+#define MAP_ROUTE12_FISHING_HOUSE     (2 | (29 << 8))
 
 // gMapGroup_IndoorRoute15
-#define MAP_ROUTE15_WEST_ENTRANCE_1F (0 | (29 << 8))
-#define MAP_ROUTE15_WEST_ENTRANCE_2F (1 | (29 << 8))
+#define MAP_ROUTE15_WEST_ENTRANCE_1F (0 | (30 << 8))
+#define MAP_ROUTE15_WEST_ENTRANCE_2F (1 | (30 << 8))
 
 // gMapGroup_IndoorRoute16
-#define MAP_ROUTE16_NORTH_ENTRANCE_1F (0 | (30 << 8))
-#define MAP_ROUTE16_NORTH_ENTRANCE_2F (1 | (30 << 8))
-#define MAP_ROUTE16_HOUSE             (2 | (30 << 8))
+#define MAP_ROUTE16_NORTH_ENTRANCE_1F (0 | (31 << 8))
+#define MAP_ROUTE16_NORTH_ENTRANCE_2F (1 | (31 << 8))
+#define MAP_ROUTE16_HOUSE             (2 | (31 << 8))
 
 // gMapGroup_IndoorRoute18
-#define MAP_ROUTE18_EAST_ENTRANCE_1F (0 | (31 << 8))
-#define MAP_ROUTE18_EAST_ENTRANCE_2F (1 | (31 << 8))
+#define MAP_ROUTE18_EAST_ENTRANCE_1F (0 | (32 << 8))
+#define MAP_ROUTE18_EAST_ENTRANCE_2F (1 | (32 << 8))
 
 // gMapGroup_IndoorRoute22
-#define MAP_ROUTE22_NORTH_ENTRANCE (0 | (32 << 8))
+#define MAP_ROUTE22_NORTH_ENTRANCE (0 | (33 << 8))
 
 // gMapGroup_IndoorRoute25
-#define MAP_ROUTE25_SEA_COTTAGE (0 | (33 << 8))
+#define MAP_ROUTE25_SEA_COTTAGE (0 | (34 << 8))
 
-#define MAP_GROUPS_COUNT 34
+#define MAP_GROUPS_COUNT 35
+
+// static const u8 MAP_GROUP_COUNT[] = {57, 107, 103, 100, 38, 61, 38, 81, 58, 4, 6, 8, 10, 6, 8, 20, 10, 8, 10, 10, 5, 4, 2, 2, 1, 1, 1, 2, 2, 3, 2, 3, 2, 1, 1, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

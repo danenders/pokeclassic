@@ -229,18 +229,10 @@ void ClearPlayerLinkBattleRecords(void)
 
 static void IncTrainerCardWins(s32 battlerId)
 {
-    u16 *wins = &gTrainerCards[battlerId].linkBattleWins;
-    (*wins)++;
-    if (*wins > 9999)
-        *wins = 9999;
 }
 
 static void IncTrainerCardLosses(s32 battlerId)
 {
-    u16 *losses = &gTrainerCards[battlerId].linkBattleLosses;
-    (*losses)++;
-    if (*losses > 9999)
-        *losses = 9999;
 }
 
 static void UpdateTrainerCardWinsLosses(s32 battlerId)

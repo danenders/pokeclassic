@@ -1,7 +1,7 @@
 {
-  "id": "MAP_INDIGO_PLATEAU_BATTLE_TOWER_ELEVATOR",
-  "name": "IndigoPlateau_BattleTowerElevator",
-  "layout": "LAYOUT_INDIGO_PLATEAU_BATTLE_TOWER_ELEVATOR",
+  "id": "MAP_BATTLE_TOWER_ELEVATOR",
+  "name": "BattleTower_Elevator",
+  "layout": "LAYOUT_BATTLE_TOWER_ELEVATOR",
   "music": "MUS_B_FRONTIER",
   "region_map_section": "MAPSEC_BATTLE_FRONTIER",
   "requires_flash": false,
@@ -35,7 +35,7 @@
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "IndigoPlateau_BattleTowerElevator_EventScript_FloorSelect"
+      "script": "BattleTower_Elevator_EventScript_FloorSelect"
     }
   ]
 }

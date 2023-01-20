@@ -20,6 +20,8 @@ BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize::
 	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_MINT_LADY_2, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMint2
 	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_ABILITY_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseAbilityItem
 	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_VITAMIN_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin
+	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_HOLD_ITEM_CLERK_2, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem2
+	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_POWER_ITEM_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChoosePowerItem
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
 	end
 
@@ -40,6 +42,8 @@ BattleFrontier_ExchangeServiceCorner_EventScript_TryGiveItem::
 	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_MINT_LADY_2, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseMint
 	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_ABILITY_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseAbilityItem
 	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_VITAMIN_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin
+	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_HOLD_ITEM_CLERK_2, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem2
+	goto_if_eq VAR_TEMP_2, EXCHANGE_CORNER_POWER_ITEM_CLERK, BattleFrontier_ExchangeServiceCorner_EventScript_ChoosePowerItem
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
 	end
 
@@ -446,7 +450,6 @@ BattleFrontier_ExchangeServiceCorner_Text_AbilityPatchDesc::
 	.string "Turns the ability of a Pokémon into\n"
 	.string "a rare ability.$"
 
-
 BattleFrontier_ExchangeServiceCorner_EventScript_MintLady::
 	lock
 	faceplayer
@@ -843,3 +846,298 @@ BattleFrontier_ExchangeServiceCorner_Text_SeriousMintDesc::
 BattleFrontier_ExchangeServiceCorner_Text_TimidMintDesc::
 	.string "Loved by Pokémon!\n"
     .string "This mint has a Timid flavor.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_RazorFang::
+    .string "A hold item that may cause\n"
+    .string "flinching when the foe is hit.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_RazorClaw::
+    .string "A hooked claw that ups the\n"
+    .string "holder's critical-hit ratio.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ChoiceSpecs::
+    .string "Boosts Sp. Atk, but allows\n"
+    .string "the use of only one move.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_ChoiceScarf::
+    .string "Boosts Speed, but allows\n"
+    .string "the use of only one move.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_MuscleBand::
+    .string "A headband that boosts\n"
+    .string "the power of physical moves.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_LifeOrb::
+    .string "Boosts the power of moves at\n"
+    .string "the cost of some HP per turn.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_PowerHerb::
+    .string "Allows immediate use of\n"
+    .string "a move that charges first.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_WiseGlasses::
+    .string "A pair of glasses that ups\n"
+    .string "the power of special moves.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_RedCard::
+    .string "Switches out the foe\n"
+    .string "if they hit the holder.$"
+
+
+BattleFrontier_ExchangeServiceCorner_Text_PowerAnklet::
+    .string "A hold item that promotes\n"
+    .string "Spd gain, but reduces Speed.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_PowerBracer::
+    .string "A hold item that promotes\n"
+    .string "Atk gain, but reduces Speed.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_PowerBelt::
+    .string "A hold item that promotes\n"
+    .string "Def gain, but reduces Speed.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_PowerBand::
+    .string "A hold item that promotes\n"
+    .string "Sp. Def gain, but reduces Speed.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_PowerWeight::
+    .string "A hold item that promotes\n"
+    .string "HP gain, but reduces Speed.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_PowerLens::
+    .string "A hold item that promotes\n"
+    .string "Sp. Atk gain, reduces Speed.$"
+
+BattleFrontier_ExchangeServiceCorner_EventScript_HoldItemClerk2::
+	lock
+	faceplayer
+	setvar VAR_TEMP_2, EXCHANGE_CORNER_HOLD_ITEM_CLERK
+	call BattleFrontier_ExchangeServiceCorner_EventScript_ClerkWelcome
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem2
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem2::
+	setvar VAR_0x8004, SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR_2
+	special ShowFrontierExchangeCornerItemIconWindow
+	special ShowScrollableMultichoice
+	waitstate
+	special CloseFrontierExchangeCornerItemIconWindow
+	switch VAR_RESULT
+	case 0, BattleFrontier_ExchangeServiceCorner_EventScript_RazorFang
+	case 1, BattleFrontier_ExchangeServiceCorner_EventScript_RazorClaw
+	case 2, BattleFrontier_ExchangeServiceCorner_EventScript_ChoiceSpecs
+	case 3, BattleFrontier_ExchangeServiceCorner_EventScript_ChoiceScarf
+	case 4, BattleFrontier_ExchangeServiceCorner_EventScript_MuscleBand
+	case 5, BattleFrontier_ExchangeServiceCorner_EventScript_LifeOrb
+	case 6, BattleFrontier_ExchangeServiceCorner_EventScript_PowerHerb
+	case 7, BattleFrontier_ExchangeServiceCorner_EventScript_WiseGlasses
+	case 8, BattleFrontier_ExchangeServiceCorner_EventScript_RedCard
+	case 9, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
+	case MULTI_B_PRESSED, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_RazorFang::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmRazorFang, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem2
+	setvar VAR_0x8008, 48
+	setvar VAR_0x8009, ITEM_RAZOR_FANG
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmRazorFang:
+	.string "You've chosen the Razor Fang.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_EventScript_RazorClaw::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmRazorClaw, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem2
+	setvar VAR_0x8008, 48
+	setvar VAR_0x8009, ITEM_RAZOR_CLAW
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmRazorClaw:
+	.string "You've chosen the Razor Claw.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_EventScript_ChoiceSpecs::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmChoiceSpecs, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem2
+	setvar VAR_0x8008, 48
+	setvar VAR_0x8009, ITEM_CHOICE_SPECS
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmChoiceSpecs:
+	.string "You've chosen the ChoiceSpecs.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_EventScript_ChoiceScarf::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmChoiceScarf, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem2
+	setvar VAR_0x8008, 48
+	setvar VAR_0x8009, ITEM_CHOICE_SCARF
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmChoiceScarf:
+	.string "You've chosen the Choice Scarf.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_EventScript_MuscleBand::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmMuscleBand, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem2
+	setvar VAR_0x8008, 64
+	setvar VAR_0x8009, ITEM_MUSCLE_BAND
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmMuscleBand:
+	.string "You've chosen the Muscle Band.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_EventScript_LifeOrb::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmLifeOrb, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem2
+	setvar VAR_0x8008, 48
+	setvar VAR_0x8009, ITEM_LIFE_ORB
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmLifeOrb:
+	.string "You've chosen the Life Orb.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_EventScript_PowerHerb::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmPowerHerb, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem2
+	setvar VAR_0x8008, 32
+	setvar VAR_0x8009, ITEM_POWER_HERB
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmPowerHerb:
+	.string "You've chosen the Power Herb.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_EventScript_WiseGlasses::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmWiseGlasses, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem2
+	setvar VAR_0x8008, 48
+	setvar VAR_0x8009, ITEM_WISE_GLASSES
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmWiseGlasses:
+	.string "You've chosen the Wise Glasses.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_EventScript_RedCard::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmRedCard, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem2
+	setvar VAR_0x8008, 16
+	setvar VAR_0x8009, ITEM_RED_CARD
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmRedCard:
+	.string "You've chosen the Red Card.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_EventScript_PowerItemClerk::
+	lock
+	faceplayer
+	setvar VAR_TEMP_2, EXCHANGE_CORNER_POWER_ITEM_CLERK
+	call BattleFrontier_ExchangeServiceCorner_EventScript_ClerkWelcome
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_ChoosePowerItem
+	end
+
+
+BattleFrontier_ExchangeServiceCorner_EventScript_ChoosePowerItem::
+	setvar VAR_0x8004, SCROLL_MULTI_BF_EXCHANGE_CORNER_POWER_ITEM_VENDOR
+	special ShowFrontierExchangeCornerItemIconWindow
+	special ShowScrollableMultichoice
+	waitstate
+	special CloseFrontierExchangeCornerItemIconWindow
+	switch VAR_RESULT
+	case 0, BattleFrontier_ExchangeServiceCorner_EventScript_PowerAnklet
+	case 1, BattleFrontier_ExchangeServiceCorner_EventScript_PowerBracer
+	case 2, BattleFrontier_ExchangeServiceCorner_EventScript_PowerBelt
+	case 3, BattleFrontier_ExchangeServiceCorner_EventScript_PowerBand
+	case 4, BattleFrontier_ExchangeServiceCorner_EventScript_PowerWeight
+	case 5, BattleFrontier_ExchangeServiceCorner_EventScript_PowerLens
+	case 6, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
+	case MULTI_B_PRESSED, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_PowerAnklet::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmPowerAnklet, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChoosePowerItem
+	setvar VAR_0x8008, 16
+	setvar VAR_0x8009, ITEM_POWER_ANKLET
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmPowerAnklet:
+	.string "You've chosen the Power Anklet.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_EventScript_PowerBracer::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmPowerBracer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChoosePowerItem
+	setvar VAR_0x8008, 16
+	setvar VAR_0x8009, ITEM_POWER_BRACER
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmPowerBracer:
+	.string "You've chosen the Power Bracer.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_EventScript_PowerBelt::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmPowerBelt, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChoosePowerItem
+	setvar VAR_0x8008, 16
+	setvar VAR_0x8009, ITEM_POWER_BELT
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmPowerBelt:
+	.string "You've chosen the Power Belt.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_EventScript_PowerBand::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmPowerBand, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChoosePowerItem
+	setvar VAR_0x8008, 16
+	setvar VAR_0x8009, ITEM_POWER_BAND
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmPowerBand:
+	.string "You've chosen the Power Band.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_EventScript_PowerWeight::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmPowerWeight, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChoosePowerItem
+	setvar VAR_0x8008, 16
+	setvar VAR_0x8009, ITEM_POWER_WEIGHT
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmPowerWeight:
+	.string "You've chosen the Power Weight.\n"
+	.string "Is that correct?$"
+
+BattleFrontier_ExchangeServiceCorner_EventScript_PowerLens::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmPowerLens, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChoosePowerItem
+	setvar VAR_0x8008, 16
+	setvar VAR_0x8009, ITEM_POWER_LENS
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmPowerLens:
+	.string "You've chosen the Power Lens.\n"
+	.string "Is that correct?$"

@@ -56,6 +56,31 @@ static const u16 sFrontierExchangeCorner_HoldItems[] =
     0xFFFF
 };
 
+static const u16 sFrontierExchangeCorner_HoldItems2[] =
+{
+    ITEM_RAZOR_FANG,
+    ITEM_RAZOR_CLAW,
+    ITEM_CHOICE_SPECS,
+    ITEM_CHOICE_SCARF,
+    ITEM_MUSCLE_BAND,
+    ITEM_LIFE_ORB,
+    ITEM_POWER_HERB,
+    ITEM_WISE_GLASSES,
+    ITEM_RED_CARD,
+    0xFFFF
+};
+
+static const u16 sFrontierExchangeCorner_PowerItems[] =
+{
+    ITEM_POWER_ANKLET,
+    ITEM_POWER_BRACER,
+    ITEM_POWER_BELT,
+    ITEM_POWER_BAND,
+    ITEM_POWER_WEIGHT,
+    ITEM_POWER_LENS,
+    0xFFFF
+};
+
 static const u8 *const sFrontierExchangeCorner_MintsDescriptions[] =
 {
     BattleFrontier_ExchangeServiceCorner_Text_AdamantMintDesc,
@@ -111,5 +136,30 @@ static const u8 *const sFrontierExchangeCorner_HoldItemsDescriptions[] =
     BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc,
     BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc,
     BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc,
+    gText_Exit
+};
+
+static const u8 *const sFrontierExchangeCorner_HoldItemsDescriptions2[] =
+{
+    BattleFrontier_ExchangeServiceCorner_Text_RazorFang,
+    BattleFrontier_ExchangeServiceCorner_Text_RazorClaw,
+    BattleFrontier_ExchangeServiceCorner_Text_ChoiceSpecs,
+    BattleFrontier_ExchangeServiceCorner_Text_ChoiceScarf,
+    BattleFrontier_ExchangeServiceCorner_Text_MuscleBand,
+    BattleFrontier_ExchangeServiceCorner_Text_LifeOrb,
+    BattleFrontier_ExchangeServiceCorner_Text_PowerHerb,
+    BattleFrontier_ExchangeServiceCorner_Text_WiseGlasses,
+    BattleFrontier_ExchangeServiceCorner_Text_RedCard,
+    gText_Exit
+};
+
+static const u8 *const sFrontierExchangeCorner_PowerItemsDescriptions[] =
+{
+    BattleFrontier_ExchangeServiceCorner_Text_PowerAnklet,
+    BattleFrontier_ExchangeServiceCorner_Text_PowerBracer,
+    BattleFrontier_ExchangeServiceCorner_Text_PowerBelt,
+    BattleFrontier_ExchangeServiceCorner_Text_PowerBand,
+    BattleFrontier_ExchangeServiceCorner_Text_PowerWeight,
+    BattleFrontier_ExchangeServiceCorner_Text_PowerLens,
     gText_Exit
 };

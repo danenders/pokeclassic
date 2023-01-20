@@ -740,6 +740,23 @@ extern const u8 gText_KingsRock64BP[];
 extern const u8 gText_FocusBand64BP[];
 extern const u8 gText_ScopeLens64BP[];
 
+extern const u8 gText_RazorFang48BP[];
+extern const u8 gText_RazorClaw48BP[];
+extern const u8 gText_ChoiceSpecs48BP[];
+extern const u8 gText_ChoiceScarf48BP[];
+extern const u8 gText_MuscleBand64BP[];
+extern const u8 gText_LifeOrb48BP[];
+extern const u8 gText_PowerHerb32BP[];
+extern const u8 gText_WiseGlasses48BP[];
+extern const u8 gText_RedCard16BP[];
+
+extern const u8 gText_PowerAnklet16BP[];
+extern const u8 gText_PowerBracer16BP[];
+extern const u8 gText_PowerBelt16BP[];
+extern const u8 gText_PowerBand16BP[];
+extern const u8 gText_PowerWeight16BP[];
+extern const u8 gText_PowerLens16BP[];
+
 extern const u8 gText_EnergyPowder50[];
 extern const u8 gText_EnergyRoot80[];
 extern const u8 gText_HealPowder50[];
@@ -905,6 +922,23 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc[];
+
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_RazorFang[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_RazorClaw[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChoiceSpecs[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChoiceScarf[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MuscleBand[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_LifeOrb[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_PowerHerb[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_WiseGlasses[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_RedCard[];
+
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_PowerAnklet[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_PowerBracer[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_PowerBelt[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_PowerBand[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_PowerWeight[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_PowerLens[];
 
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_AbilityCapsuleDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_AbilityPatchDesc[];
@@ -2536,6 +2570,11 @@ extern const u8 gText_WinsStraight[];
 extern const u8 gText_NumBP[];
 extern const u8 gText_BattleTower[];
 extern const u8 gText_BattlePtsWon[];
+
+extern const u8 gText_Tower50Singles[];
+extern const u8 gText_Tower50Doubles[];
+extern const u8 gText_TowerOpenSingles[];
+extern const u8 gText_TowerOpenDoubles[];
 
 // Frontier Pass
 extern const u8 gText_SymbolsEarned[];

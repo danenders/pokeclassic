@@ -1788,17 +1788,17 @@ void SetDeptStoreFloor(void)
             break;
         }
     }
-    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(INDIGO_PLATEAU_BATTLE_TOWER_HALLWAY))
+    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(BATTLE_TOWER_ENTRANCE))
     {
         switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
         {
-        case MAP_NUM(INDIGO_PLATEAU_BATTLE_TOWER_HALLWAY):
+        case MAP_NUM(BATTLE_TOWER_ENTRANCE):
             floor = 4;
             break;
-        case MAP_NUM(INDIGO_PLATEAU_BATTLE_TOWER_LOBBY):
+        case MAP_NUM(BATTLE_TOWER_2F_SHOP):
             floor = 5;
             break;
-        case MAP_NUM(INDIGO_PLATEAU_BATTLE_FACTORY_LOBBY):
+        case MAP_NUM(BATTLE_TOWER_3F_LOUNGE):
             floor = 6;
             break;
         }
@@ -1905,19 +1905,19 @@ u16 GetDeptStoreDefaultFloorChoice(void)
             break;
         }
     }
-    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(INDIGO_PLATEAU_BATTLE_TOWER_HALLWAY))
+    if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(BATTLE_TOWER_ENTRANCE))
     {
         switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
         {
-        case MAP_NUM(INDIGO_PLATEAU_BATTLE_FACTORY_LOBBY):
+        case MAP_NUM(BATTLE_TOWER_3F_LOUNGE):
             sElevatorScroll = 0;
             sElevatorCursorPos = 0;
             break;
-        case MAP_NUM(INDIGO_PLATEAU_BATTLE_TOWER_LOBBY):
+        case MAP_NUM(BATTLE_TOWER_2F_SHOP):
             sElevatorScroll = 0;
             sElevatorCursorPos = 1;
             break;
-        case MAP_NUM(INDIGO_PLATEAU_BATTLE_TOWER_HALLWAY):
+        case MAP_NUM(BATTLE_TOWER_ENTRANCE):
             sElevatorScroll = 0;
             sElevatorCursorPos = 2;
             break;
@@ -2420,6 +2420,26 @@ void ShowScrollableMultichoice(void)
         task->tKeepOpenAfterSelect = FALSE;
         task->tTaskId = taskId;
         break;
+    case SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR_2:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 10;
+        task->tLeft = 14;
+        task->tTop = 1;
+        task->tWidth = 15;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_BF_EXCHANGE_CORNER_POWER_ITEM_VENDOR:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 10;
+        task->tLeft = 14;
+        task->tTop = 1;
+        task->tWidth = 15;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
     case SCROLL_MULTI_BERRY_POWDER_VENDOR:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
         task->tNumItems = 12;
@@ -2566,6 +2586,29 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         gText_KingsRock64BP,
         gText_FocusBand64BP,
         gText_ScopeLens64BP,
+        gText_Exit
+    },
+    [SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR_2] =
+    {
+        gText_RazorFang48BP,
+        gText_RazorClaw48BP,
+        gText_ChoiceSpecs48BP,
+        gText_ChoiceScarf48BP,
+        gText_MuscleBand64BP,
+        gText_LifeOrb48BP,
+        gText_PowerHerb32BP,
+        gText_WiseGlasses48BP,
+        gText_RedCard16BP,
+        gText_Exit
+    },
+    [SCROLL_MULTI_BF_EXCHANGE_CORNER_POWER_ITEM_VENDOR] =
+    {
+        gText_PowerAnklet16BP,
+        gText_PowerBracer16BP,
+        gText_PowerBelt16BP,
+        gText_PowerBand16BP,
+        gText_PowerWeight16BP,
+        gText_PowerLens16BP,
         gText_Exit
     },
     [SCROLL_MULTI_BERRY_POWDER_VENDOR] =
@@ -3089,7 +3132,7 @@ static void FillFrontierExchangeCornerWindowAndItemIcon(u16 menu, u16 selection)
 {
     #include "data/battle_frontier/battle_frontier_exchange_corner.h"
 
-    if (menu >= SCROLL_MULTI_BF_EXCHANGE_CORNER_MINT_LADY && menu <= SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR)
+    if (menu >= SCROLL_MULTI_BF_EXCHANGE_CORNER_MINT_LADY && menu <= SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR_2)
     {
         FillWindowPixelRect(0, PIXEL_FILL(1), 0, 0, 216, 32);
         switch (menu)
@@ -3110,9 +3153,17 @@ static void FillFrontierExchangeCornerWindowAndItemIcon(u16 menu, u16 selection)
             AddTextPrinterParameterized2(0, FONT_NORMAL, sFrontierExchangeCorner_VitaminsDescriptions[selection], 0, NULL, 2, 1, 3);
             ShowFrontierExchangeCornerItemIcon(sFrontierExchangeCorner_Vitamins[selection]);
             break;
+        case SCROLL_MULTI_BF_EXCHANGE_CORNER_POWER_ITEM_VENDOR:
+            AddTextPrinterParameterized2(0, FONT_NORMAL, sFrontierExchangeCorner_PowerItemsDescriptions[selection], 0, NULL, 2, 1, 3);
+            ShowFrontierExchangeCornerItemIcon(sFrontierExchangeCorner_PowerItems[selection]);
+            break;
         case SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR:
             AddTextPrinterParameterized2(0, FONT_NORMAL, sFrontierExchangeCorner_HoldItemsDescriptions[selection], 0, NULL, 2, 1, 3);
             ShowFrontierExchangeCornerItemIcon(sFrontierExchangeCorner_HoldItems[selection]);
+            break;
+        case SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR_2:
+            AddTextPrinterParameterized2(0, FONT_NORMAL, sFrontierExchangeCorner_HoldItemsDescriptions2[selection], 0, NULL, 2, 1, 3);
+            ShowFrontierExchangeCornerItemIcon(sFrontierExchangeCorner_HoldItems2[selection]);
             break;
         }
     }
@@ -3142,7 +3193,9 @@ static void HideFrontierExchangeCornerItemIcon(u16 menu, u16 unused)
         case SCROLL_MULTI_BF_EXCHANGE_CORNER_MINT_LADY_2:
         case SCROLL_MULTI_BF_EXCHANGE_CORNER_ABILITY_VENDOR:
         case SCROLL_MULTI_BF_EXCHANGE_CORNER_VITAMIN_VENDOR:
+        case SCROLL_MULTI_BF_EXCHANGE_CORNER_POWER_ITEM_VENDOR:
         case SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR:
+        case SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR_2:
             DestroySpriteAndFreeResources(&gSprites[sScrollableMultichoice_ItemSpriteId]);
             break;
         }

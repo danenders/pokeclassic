@@ -62,7 +62,7 @@
       "x": 23,
       "y": 13,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -125,20 +125,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "IndigoPlateau_PokemonCenter_1F_EventScript_PokemonJournal",
       "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_COOL_TRAINER_M",
-      "in_connection": false,
-      "x": 21,
-      "y": 10,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "IndigoPlateau_PokemonCenter_1F_EventScript_FrontierGuard",
-      "flag": "FLAG_SYS_GAME_CLEAR"
     }
   ],
   "warp_events": [
@@ -161,13 +147,6 @@
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_POKEMON_LEAGUE_LORELEIS_ROOM",
-      "dest_warp_id": 0
-    },
-    {
-      "x": 21,
-      "y": 9,
-      "elevation": 0,
-      "dest_map": "MAP_INDIGO_PLATEAU_BATTLE_TOWER_HALLWAY",
       "dest_warp_id": 0
     }
   ],

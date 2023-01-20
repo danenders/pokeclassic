@@ -1,8 +1,8 @@
 {
-  "id": "MAP_INDIGO_PLATEAU_BATTLE_TOWER_HALLWAY",
-  "name": "IndigoPlateau_BattleTowerHallway",
-  "layout": "LAYOUT_INDIGO_PLATEAU_BATTLE_TOWER_HALLWAY",
-  "music": "MUS_B_FRONTIER",
+  "id": "MAP_BATTLE_TOWER_ENTRANCE",
+  "name": "BattleTower_Entrance",
+  "layout": "LAYOUT_BATTLE_TOWER_ENTRANCE",
+  "music": "MUS_B_TOWER",
   "region_map_section": "MAPSEC_BATTLE_FRONTIER",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -17,8 +17,8 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SCOTT",
       "in_connection": false,
-      "x": 4,
-      "y": 24,
+      "x": 13,
+      "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -29,9 +29,23 @@
       "flag": "FLAG_HIDE_SCOTT_HALLWAY"
     },
     {
+      "graphics_id": "OBJ_EVENT_GFX_TEALA",
+      "in_connection": false,
+      "x": 11,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BattleTower_Entrance_EventScript_BattleTowerAttendant",
+      "flag": "0"
+    },
+    {
       "graphics_id": "OBJ_EVENT_GFX_COOL_TRAINER_M",
       "in_connection": false,
-      "x": 6,
+      "x": 23,
       "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
@@ -39,72 +53,103 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "IndigoPlateau_BattleTowerHallway_CoolTrainerM",
+      "script": "BattleTower_Entrance_CoolTrainerM",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COOL_TRAINER_F",
       "in_connection": false,
-      "x": 2,
-      "y": 7,
+      "x": 17,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "IndigoPlateau_BattleTowerHallway_CoolTrainerF",
+      "script": "BattleTower_Entrance_CoolTrainerF",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_F",
       "in_connection": false,
-      "x": 1,
-      "y": 17,
+      "x": 6,
+      "y": 10,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "IndigoPlateau_BattleTowerHallway_BattleGirl",
+      "script": "BattleTower_Entrance_BattleGirl",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
       "in_connection": false,
-      "x": 1,
-      "y": 16,
+      "x": 7,
+      "y": 10,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "IndigoPlateau_BattleTowerHallway_BlackBelt",
+      "script": "BattleTower_Entrance_BlackBelt",
       "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 4,
-      "y": 29,
+      "x": 21,
+      "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F",
-      "dest_warp_id": 3
+      "dest_map": "MAP_BATTLE_TOWER_ELEVATOR",
+      "dest_warp_id": 0
     },
     {
-      "x": 4,
-      "y": 1,
+      "x": 13,
+      "y": 18,
       "elevation": 0,
-      "dest_map": "MAP_INDIGO_PLATEAU_BATTLE_TOWER_ELEVATOR",
+      "dest_map": "MAP_BATTLE_TOWER_EXTERIOR",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_BATTLE_TOWER_BASEMENT",
       "dest_warp_id": 0
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "BattleTower_Entrance_EventScript_BattleTowerTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "0",
+      "script": "BattleTower_Entrance_EventScript_BattleTowerBlocker"
+    }
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BattleTower_Entrance_EventScript_BattleTowerTrigger"
+    }
   ]
 }

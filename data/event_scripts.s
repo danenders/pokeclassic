@@ -1337,16 +1337,18 @@ Text_VoiceRangOutDontRunAway::
     .include "data/scripts/pokemon_league.inc"
     .include "data/scripts/pokemon_league_services.inc"
 
-	.include "data/maps/IndigoPlateau_BattleTowerHallway/scripts.inc"
-
-	.include "data/maps/IndigoPlateau_BattleTowerElevator/scripts.inc"
-
-	.include "data/maps/IndigoPlateau_BattleTower_Lobby/scripts.inc"
-
-	.include "data/maps/IndigoPlateau_BattleFactory_Lobby/scripts.inc"
-
 	.include "data/maps/PokemonLeague_ChallengerRoom/scripts.inc"
 
 	.include "data/maps/PokemonLeague_SecretBattle/scripts.inc"
 
 	.include "data/maps/BattleTower_Exterior/scripts.inc"
+
+	.include "data/maps/BattleTower_Entrance/scripts.inc"
+
+	.include "data/maps/BattleTower_Basement/scripts.inc"
+
+	.include "data/maps/BattleTower_2F_Shop/scripts.inc"
+
+	.include "data/maps/BattleTower_3F_Lounge/scripts.inc"
+
+	.include "data/maps/BattleTower_Elevator/scripts.inc"
