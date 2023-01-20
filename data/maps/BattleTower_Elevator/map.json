@@ -2,7 +2,7 @@
   "id": "MAP_BATTLE_TOWER_ELEVATOR",
   "name": "BattleTower_Elevator",
   "layout": "LAYOUT_BATTLE_TOWER_ELEVATOR",
-  "music": "MUS_B_FRONTIER",
+  "music": "MUS_B_TOWER",
   "region_map_section": "MAPSEC_BATTLE_FRONTIER",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

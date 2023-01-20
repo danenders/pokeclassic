@@ -42,6 +42,19 @@ static const u16 sFrontierExchangeCorner_Vitamins[] =
     0xFFFF
 };
 
+static const u16 sFrontierExchangeCorner_Candy[] =
+{
+    ITEM_HP_CANDY,
+    ITEM_ATK_CANDY,
+    ITEM_DEF_CANDY,
+    ITEM_SPATK_CANDY,
+    ITEM_SPDEF_CANDY,
+    ITEM_SPEED_CANDY,
+    ITEM_MAX_CANDY,
+    ITEM_RESET_CANDY,
+    0xFFFF
+};
+
 static const u16 sFrontierExchangeCorner_HoldItems[] =
 {
     ITEM_LEFTOVERS,
@@ -161,5 +174,18 @@ static const u8 *const sFrontierExchangeCorner_PowerItemsDescriptions[] =
     BattleFrontier_ExchangeServiceCorner_Text_PowerBand,
     BattleFrontier_ExchangeServiceCorner_Text_PowerWeight,
     BattleFrontier_ExchangeServiceCorner_Text_PowerLens,
+    gText_Exit
+};
+
+static const u8 *const sFrontierExchangeCorner_CandyDescriptions[] =
+{
+    BattleFrontier_ExchangeServiceCorner_Text_HPCandy,
+    BattleFrontier_ExchangeServiceCorner_Text_ATKCandy,
+    BattleFrontier_ExchangeServiceCorner_Text_DEFCandy,
+    BattleFrontier_ExchangeServiceCorner_Text_SPATKCandy,
+    BattleFrontier_ExchangeServiceCorner_Text_SPDEFCandy,
+    BattleFrontier_ExchangeServiceCorner_Text_SPEEDCandy,
+    BattleFrontier_ExchangeServiceCorner_Text_MAXCandy,
+    BattleFrontier_ExchangeServiceCorner_Text_RESETCandy,
     gText_Exit
 };

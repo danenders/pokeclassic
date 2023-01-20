@@ -302,6 +302,7 @@ static const struct MenuAction MultichoiceList_FrontierFloors[] =
     {gText_3F},
     {gText_2F},
     {gText_1F},
+    {gText_B1F},
     {gText_Exit},
 };
 

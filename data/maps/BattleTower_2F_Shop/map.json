@@ -2,7 +2,7 @@
   "id": "MAP_BATTLE_TOWER_2F_SHOP",
   "name": "BattleTower_2F_Shop",
   "layout": "LAYOUT_BATTLE_TOWER_2F_SHOP",
-  "music": "MUS_RG_TRAINER_TOWER",
+  "music": "MUS_B_TOWER",
   "region_map_section": "MAPSEC_BATTLE_FRONTIER",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

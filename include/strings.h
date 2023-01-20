@@ -757,6 +757,15 @@ extern const u8 gText_PowerBand16BP[];
 extern const u8 gText_PowerWeight16BP[];
 extern const u8 gText_PowerLens16BP[];
 
+extern const u8 gText_HPCandy24BP[];
+extern const u8 gText_ATKCandy24BP[];
+extern const u8 gText_DEFCandy24BP[];
+extern const u8 gText_SPATKCandy24BP[];
+extern const u8 gText_SPDEFCandy24BP[];
+extern const u8 gText_SPEEDCandy24BP[];
+extern const u8 gText_MAXCandy64BP[];
+extern const u8 gText_RESETCandy8BP[];
+
 extern const u8 gText_EnergyPowder50[];
 extern const u8 gText_EnergyRoot80[];
 extern const u8 gText_HealPowder50[];
@@ -939,6 +948,15 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_PowerBelt[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_PowerBand[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_PowerWeight[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_PowerLens[];
+
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_HPCandy[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ATKCandy[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_DEFCandy[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_SPATKCandy[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_SPDEFCandy[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_SPEEDCandy[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MAXCandy[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_RESETCandy[];
 
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_AbilityCapsuleDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_AbilityPatchDesc[];

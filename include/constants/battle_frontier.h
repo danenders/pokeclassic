@@ -119,6 +119,7 @@
 #define EXCHANGE_CORNER_POWER_ITEM_CLERK  	4
 #define EXCHANGE_CORNER_MINT_LADY    	 	5
 #define EXCHANGE_CORNER_MINT_LADY_2  	 	6
+#define EXCHANGE_CORNER_CANDY_CLERK  		7
 
 #define F_EV_SPREAD_HP         (1 << 0)
 #define F_EV_SPREAD_ATTACK     (1 << 1)

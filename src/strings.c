@@ -1208,6 +1208,15 @@ const u8 gText_PowerBand16BP[]= _("Power Band{CLEAR_TO 0x5E}16BP");
 const u8 gText_PowerWeight16BP[]= _("Power Weight{CLEAR_TO 0x5E}16BP");
 const u8 gText_PowerLens16BP[] = _("Power Lens{CLEAR_TO 0x5E}16BP");
 
+const u8 gText_HPCandy24BP[]= _("HP Candy{CLEAR_TO 0x5E}24BP");
+const u8 gText_ATKCandy24BP[]= _("Attack Candy{CLEAR_TO 0x5E}24BP");
+const u8 gText_DEFCandy24BP[]= _("Defense Candy{CLEAR_TO 0x5E}24BP");
+const u8 gText_SPATKCandy24BP[]= _("Sp. Atk Candy{CLEAR_TO 0x5E}24BP");
+const u8 gText_SPDEFCandy24BP[]= _("Sp. Def Candy{CLEAR_TO 0x5E}24BP");
+const u8 gText_SPEEDCandy24BP[] = _("Speed Candy{CLEAR_TO 0x5E}24BP");
+const u8 gText_MAXCandy64BP[] = _("Max Candy{CLEAR_TO 0x5E}64BP");
+const u8 gText_RESETCandy8BP[] = _("Reset Candy{CLEAR_TO 0x5E}8BP");
+
 const u8 gText_KissPoster16BP[] = _("Kiss Poster{CLEAR_TO 0x5E}16BP");
 const u8 gText_KissCushion32BP[] = _("Kiss Cushion{CLEAR_TO 0x5E}32BP");
 const u8 gText_SmoochumDoll32BP[] = _("Smoochum Doll{CLEAR_TO 0x5E}32BP");
