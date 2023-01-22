@@ -2334,6 +2334,14 @@ extern const u8 MatchCall_BattleFrontierRecordStreakText5[];
 extern const u8 gText_MomMatchCallDesc[];
 extern const u8 gText_MomMatchCallName[];
 extern const u8 MatchCall_Text_Mom1[];
+extern const u8 MatchCall_Text_Mom2[];
+extern const u8 MatchCall_Text_Mom3[];
+extern const u8 MatchCall_Text_Mom4[];
+extern const u8 MatchCall_Text_Mom5[];
+extern const u8 MatchCall_Text_Mom6[];
+extern const u8 MatchCall_Text_Mom7[];
+extern const u8 MatchCall_Text_Mom8[];
+extern const u8 MatchCall_Text_Mom9[];
 extern const u8 MatchCall_Text_MomGameClear[];
 
 extern const u8 gText_ProfOakMatchCallDesc[];
@@ -2392,7 +2400,8 @@ extern const u8 MatchCall_Text_ScottFinalBadge[];
 extern const u8 MatchCall_Text_ScottPkmnLeague[];
 extern const u8 MatchCall_Text_ScottThisIsIt[];
 extern const u8 MatchCall_Text_ScottGameClear[];
-extern const u8 MatchCall_Text_ScottNoService[];
+extern const u8 MatchCall_Text_ScottBattleTower[];
+extern const u8 MatchCall_Text_ScottBattleTower2[];
 
 extern const u8 gText_AideMatchCallDesc[];
 extern const u8 gText_AideMatchCallName[];
@@ -2410,6 +2419,14 @@ extern const u8 gText_MatchCallRival_Pokemon[];
 extern const u8 gText_MatchCallRival_Intro1[];
 extern const u8 gText_MatchCallRival_Intro2[];
 extern const u8 MatchCall_Text_Rival1[];
+extern const u8 MatchCall_Text_Rival2[];
+extern const u8 MatchCall_Text_Rival3[];
+extern const u8 MatchCall_Text_Rival4[];
+extern const u8 MatchCall_Text_Rival5[];
+extern const u8 MatchCall_Text_Rival6[];
+extern const u8 MatchCall_Text_Rival7[];
+extern const u8 MatchCall_Text_Rival8[];
+extern const u8 MatchCall_Text_Rival9[];
 extern const u8 MatchCall_Text_RivalGameClear[];
 
 // Contest Link

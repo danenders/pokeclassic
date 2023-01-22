@@ -129,11 +129,17 @@ MatchCall_Text_ScottThisIsIt::
 	.string "You've made it to Indigo Plateau.\p"
 	.string "Let's get this happening!$"
 
-MatchCall_Text_ScottNoService::
-	.string "… … … … … …\n"
-	.string "… … … … … …\p"
-	.string "Scott appears to be out of\n"
-	.string "the Cell Phone's service area…$"
+MatchCall_Text_ScottBattleTower::
+	.string "{PLAYER}!\n"
+	.string "You've done it.\p"
+	.string "Come meet me at the Battle Tower.\n"
+	.string "I have something for you…$"
+
+MatchCall_Text_ScottBattleTower2::
+	.string "{PLAYER}!\p"
+	.string "Have you been enjoying the Battle\n"
+	.string "Tower?\p"
+	.string "Great! Keep aiming for the top!$"
 
 MatchCall_Text_ScottGameClear::
 	.string "Scott: Hey, champ in -!\p"
@@ -167,6 +173,71 @@ MatchCall_Text_Mom1::
 	.string "Hehehehe.\n"
 	.string "See you soon, honey!$"
 
+MatchCall_Text_Mom2::
+	.string "Mom: I heard a very smart man lives\n"
+	.string "near Cerulean City.\p"
+	.string "I wonder how much money a Pokémaniac\n"
+	.string "makes...\p"
+	.string "Do you think it's more than a trainer?\p"
+	.string "Maybe you should get some career advice\n"
+	.string "from him.$"
+
+MatchCall_Text_Mom3::
+	.string "Mom: Your father and you…\n"
+	.string "Everyone is captivated by Pokémon.\p"
+	.string "What is the charm of Pokémon?\p"
+	.string "Me?\n"
+	.string "I adore Pokémon that help me with\l"
+	.string "my everyday chores.$"
+
+MatchCall_Text_Mom4::
+	.string "Mom: Lavendar Town…\n"
+	.string "What a sad place…\p"
+	.string "When I think about all those Pokémon…\p"
+	.string "…\p"
+	.string "I'm sorry, {PLAYER}.'\p"
+	.string "I don't want to make you sad, too.$"
+
+MatchCall_Text_Mom5::
+	.string "Mom: {PLAYER}!\n"
+	.string "I was just thinking about you.\p"
+	.string "I wish there was a way I could help\n"
+	.string "you more on your adventure.\p"
+	.string "Maybe I could save your money for you!\p"
+	.string "Oh? You're afraid I'd spend it all\n"
+	.string "at the Celadon Department Store?\p"
+	.string "How rude!$"
+
+MatchCall_Text_Mom6::
+	.string "Mom: Oh, you visited Fuchsia City?\p"
+	.string "I used to love to visit the Safari\n"
+	.string "Zone when I was your age!\p"
+	.string "I loved the Safari Game,\n"
+	.string "but I could never win.\p"
+	.string "I always got lost!$"
+
+MatchCall_Text_Mom7::
+	.string "Mom: Oh, {PLAYER}!\p"
+	.string "I was just watching the news.\n"
+	.string "Team Rocket attacked Saffron!\p"
+	.string "What is the world coming to.\n"
+	.string "Please stay safe!$"
+
+MatchCall_Text_Mom8::
+	.string "Mom: You visited Cinnabar Island?\p"
+	.string "When I was younger, my friends and\n"
+	.string "I would swim out there!\p"
+	.string "We were too scared to go into the\n"
+	.string "Pokémon Mansion, though.\p"
+	.string "The place gave me the creeps!$"
+
+MatchCall_Text_Mom8::
+	.string "Mom: Hi, {PLAYER}!\p"
+	.string "You've been out there so long.\n"
+	.string "I hope you're having fun!\p"
+	.string "But you can always come home\n"
+	.string "if things are getting too hard!$"
+
 MatchCall_Text_MomGameClear::
 	.string "Mom: {PLAYER}…\n"
 	.string "It feels like you just left\n"
@@ -186,6 +257,59 @@ MatchCall_Text_Rival1::
 	.string "{PLAYER}? Who gave you my number?\p"
 	.string "Ugh, my sister can be such a pain.\p"
 	.string "Don't call me again!$"
+
+MatchCall_Text_Rival2::
+	.string "{RIVAL}: Oh, it's {PLAYER}?\p"
+	.string "I couldn't hear you over the sound\n"
+	.string "of all these badges I'm earning.\p"
+	.string "What? You got one, too?\p"
+	.string "That's a surprise!$"
+
+MatchCall_Text_Rival3::
+	.string "{RIVAL}: Calling me again?\p"
+	.string "Don't think I'm going to give you\n"
+	.string "any tips, {PLAYER}.\p"
+	.string "I was born with this skill, it\p"
+	.string "can't be taught!$"
+
+MatchCall_Text_Rival4::
+	.string "{RIVAL}: Oh, {PLAYER}.\p"
+	.string "I heard a rumor you fell off\p"
+	.string "the S.S. Anne.\p"
+	.string "Guess that was too good to be true.$"
+
+MatchCall_Text_Rival5::
+	.string "{RIVAL}: Hey, {PLAYER}.\p"
+	.string "You made it to Celadon?\p"
+	.string "There's a great restaurant there,\n"
+	.string "but they don't let losers like you\l"
+	.string "eat there! Ha!$"
+
+MatchCall_Text_Rival6::
+	.string "{RIVAL}: Eww, {PLAYER}.\p"
+	.string "Why do you keep calling me?\p"
+	.string "You're like, obssessed or something.\p"
+	.string "Don't be a weirdo!$"
+
+MatchCall_Text_Rival7::
+	.string "{RIVAL}: Can't talk, {PLAYER}.\p"
+	.string "I'm facing down some Cool Trainers.'\p"
+	.string "Yeah, it's two on one.\p"
+	.string "I win those all the time.$"
+
+MatchCall_Text_Rival8::
+	.string "{RIVAL}: Hey, {PLAYER}.\p"
+	.string "This is getting pretty real, huh?\p"
+	.string "Remember when we used to play togeter\n"
+	.string "as kids?.\p"
+	.string "Who would have known I'd grown up to be\l"
+	.string "the future champion of Kanto!$"
+
+MatchCall_Text_Rival9::
+	.string "{RIVAL}: {PLAYER}.\p"
+	.string "I'm going to do it.\p"
+	.string "I'm going to be the champion.\p"
+	.string "Nobody can stop me.$"
 
 MatchCall_Text_RivalGameClear::
 	.string "{RIVAL}: Oh, it's you, {PLAYER}.\p"
@@ -529,17 +653,6 @@ MatchCall_Text_Bill4::
 	.string "I'll stick to the lab for now.\n"
 	.string "Maybe I'll think of something new!\p"
 	.string "Come visit sometime!$"
-
-@UNUSED
-MatchCall_Text_Mom2::
-	.string "Mom: Your father and you…\n"
-	.string "Everyone is captivated by Pokémon.\p"
-	.string "What is the charm of Pokémon?\p"
-	.string "Me?\n"
-	.string "I adore Pokémon that help me with\l"
-	.string "my everyday chores.$"
-
-
 
 @Match Call Trainers
 MatchCall_WildBattleText1::
