@@ -231,7 +231,7 @@ MatchCall_Text_Mom8::
 	.string "Pokémon Mansion, though.\p"
 	.string "The place gave me the creeps!$"
 
-MatchCall_Text_Mom8::
+MatchCall_Text_Mom9::
 	.string "Mom: Hi, {PLAYER}!\p"
 	.string "You've been out there so long.\n"
 	.string "I hope you're having fun!\p"
