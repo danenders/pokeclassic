@@ -1298,7 +1298,7 @@
 #define FLAG_UNUSED_0x4E6                                           0x4E6 // Unused Flag
 #define FLAG_UNUSED_0x4E7                                           0x4E7 // Unused Flag
 #define FLAG_UNUSED_0x4E8                                           0x4E8 // Unused Flag
-#define FLAG_UNUSED_0x4E9                                           0x4E9 // Unused Flag
+#define FLAG_GAVE_BILL_IDEA                                         0x4E9 // Called Bill after Badge 08 to give him the idea for the DetectorMode
 #define FLAG_REGISTERED_BILL                                        0x4EA
 #define FLAG_REGISTERED_LOOKER                                      0x4EB
 #define FLAG_REGISTERED_SCOTT                                       0x4EC

@@ -98,10 +98,16 @@ Movement_ReturnToPlayer::
 Route25_SeaCottage_EventScript_Bill::
 	lock
 	faceplayer
-	goto_if_set FLAG_SYS_DEXNAV_GET, Route25_SeaCottage_EventScript_BillGoLookAtPC
+	goto_if_set FLAG_SYS_DETECTOR_MODE, Route25_SeaCottage_EventScript_BillGoLookAtPC
+	goto_if_set FLAG_SYS_DEXNAV_GET, Route25_SeaCottage_EventScript_CheckDexNavEvent
 	goto_if_set FLAG_GOT_SS_TICKET, Route25_SeaCottage_EventScript_GetDexNavOrSmallTalk
 	goto_if_set FLAG_HELPED_BILL_IN_SEA_COTTAGE, Route25_SeaCottage_EventScript_BillGiveSSTicket
 	goto Route25_SeaCottage_EventScript_BillAskForHelp
+	end
+
+Route25_SeaCottage_EventScript_CheckDexNavEvent::
+	goto_if_unset FLAG_BADGE05_GET, Route25_SeaCottage_EventScript_BillGoLookAtPC
+	goto Route25_SeaCottage_EventScript_GetDexNavUpgrade
 	end
 
 Route25_SeaCottage_EventScript_BillAskForHelp::
@@ -526,3 +532,65 @@ Route25_SeaCottage_EventScript_ViewVaporeon::
 Route25_SeaCottage_EventScript_ExitBillsMonList::
 	releaseall
 	end
+
+Route25_SeaCottage_EventScript_GetDexNavUpgrade::
+	msgbox Route25_SeaCottage_Text_HeyPlayerBeatGiovanni, MSGBOX_DEFAULT
+	call_if_set FLAG_GAVE_BILL_IDEA, Route25_SeaCottage_EventScript_GaveBillIdea
+	call_if_unset FLAG_GAVE_BILL_IDEA, Route25_SeaCottage_EventScript_BillHadIdea
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	message Route25_SeaCottage_Text_GetDetectorMode
+	waitfanfare
+	waitmessage
+	closemessage
+	msgbox Route25_SeaCottage_Text_DetectorMode, MSGBOX_DEFAULT
+	setflag FLAG_SYS_DETECTOR_MODE
+	release
+	end
+
+Route25_SeaCottage_Text_HeyPlayerBeatGiovanni::
+	.string "Bill: Hey, {PLAYER}!\n"
+	.string "Thanks for coming by.\p"
+	.string "I've been seeing a lot of buzz about\n"
+	.string "you online!\p"
+	.string "So, are all the rumors I was reading\n"
+	.string "on the net true?\p"
+	.string "Did you really take down Team Rocket's\n"
+	.string "Boss?\p"
+	.string "Wow. That's incredible.$"
+
+Route25_SeaCottage_EventScript_GaveBillIdea::
+	msgbox Route25_SeaCottage_Text_YourIdea, MSGBOX_DEFAULT
+	return
+
+Route25_SeaCottage_Text_YourIdea::
+	.string "I'm glad you called earlier.\n"
+	.string "You gave me a great idea!\p"
+	.string "All this talk about Giovanni and his\n"
+	.string "hidden base... it got me thinking about\l"
+	.string "what else could be hiding all around us.\p"
+	.string "Maybe there's rare Pokémon right under\n"
+	.string "our noses!\p"
+	.string "I think this upgrade will help us find\n"
+	.string "out if I'm right!$"
+
+Route25_SeaCottage_EventScript_BillHadIdea::
+	msgbox Route25_SeaCottage_Text_MyIdea, MSGBOX_DEFAULT
+	return
+
+Route25_SeaCottage_Text_MyIdea::
+	.string "Anyway, I'm glad you came by.\n"
+	.string "I've been working on some upgrades for\l"
+	.string "the DexNav.\p"
+	.string "I think this upgrade will be realy useful!$"
+
+Route25_SeaCottage_Text_GetDetectorMode::
+	.string "Bill upgraded your DexNav!\n"
+	.string "Detector Mode has been enabled!$"
+
+Route25_SeaCottage_Text_DetectorMode::
+	.string "Bill: This upgrade enable Detector Mode.\p"
+	.string "It should let you find hidden Pokémon\n"
+	.string "on any route where they might be!\p"
+	.string "Hidden Pokémon may even have rare abilities.\p"
+	.string "It's truly amazing!\n"
+	.string "Go try it out!$"

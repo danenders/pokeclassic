@@ -627,22 +627,32 @@ MatchCall_Text_Bill2::
 	.string "them to you!$"
 
 MatchCall_Text_Bill3::
+	.string "Bill: Hey, {PLAYER}!\p"
+	.string "How's my DexNav app working?\p"
+	.string "I'm sure it's helping you fill\n"
+	.string "up your PokéDex pretty quick!$"
+
+MatchCall_Text_Bill4::
 	.string "Bill: Yo, {PLAYER}!\p"
 	.string "Whoa! Team Rocket's leader was\n"
 	.string "the Viridian Gym's leader, too?\p"
 	.string "The net was buzzing with theories,\n"
 	.string "but I don't think I saw anyone guess\l"
 	.string "that one!\p"
-	.string "Anyway, I guess you're heading to take\n"
-	.string "on the Elite Four next, huh?\p"
-	.string "Listen, I think I've finally got my \n"
-	.string "teleporter working.!\p"
-	.string "If my hunch is correct, you might be\n"
-	.string "interested in taking advantage of it\l"
-	.string "before you take on Kanto's top trainers!\p"
-	.string "I'll be at the lab if you're curious!$"
+	.string "Who knew he was hiding in plain sight!\p"
+	.string "...\p"
+	.string "That gives me an idea!\p"
+	.string "Why don't you come back to the Sea\n"
+	.string "Cottage.\p"
+	.string "I'll be done by the time you get here!$"
 
-MatchCall_Text_Bill4::
+MatchCall_Text_Bill5::
+	.string "Bill: Hey, {PLAYER}!\p"
+	.string "How's my DexNav app working?\p"
+	.string "With the Detector Mode, it's going\n"
+	.string "to be a breeze finding rare Pokémon!$"
+
+MatchCall_Text_Bill6::
 	.string "Bill: Wow, {PLAYER}!\p"
 	.string "The footage from your battles are\n"
 	.string "all over the net!\p"

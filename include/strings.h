@@ -2376,6 +2376,8 @@ extern const u8 MatchCall_Text_Bill1[];
 extern const u8 MatchCall_Text_Bill2[];
 extern const u8 MatchCall_Text_Bill3[];
 extern const u8 MatchCall_Text_Bill4[];
+extern const u8 MatchCall_Text_Bill5[];
+extern const u8 MatchCall_Text_Bill6[];
 
 extern const u8 gText_ScottMatchCallDesc[];
 extern const u8 gText_ScottMatchCallName[];
