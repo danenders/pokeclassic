@@ -64,3 +64,8 @@ PokemonMansion_3F_EventScript_ItemIron::
 	finditem ITEM_IRON, 1
 	release
 	end
+
+PokemonMansion_3F_EventScript_ItemCharcoal::
+	finditem ITEM_CHARCOAL, 1
+	release
+	end

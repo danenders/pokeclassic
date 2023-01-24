@@ -156,7 +156,7 @@
 #define FLAG_CLEARED_SECRET_BATTLE          0x8A 
 #define FLAG_GOT_SQUIRTLE   				0x8B //Got the gift squirtle in Vermilion
 #define FLAG_GOT_HM06             		    0x8C //Got Rock Smash from the Hiker
-#define FLAG_UNUSED_0x08D         			0x8D
+#define FLAG_GOT_ROCKY_HELMET         		0x8D
 #define FLAG_UNUSED_0x08E              		0x8E
 #define FLAG_UNUSED_0x08F           		0x8F
 #define FLAG_UNUSED_0x090           		0x90
@@ -637,9 +637,9 @@
 #define FLAG_HIDDEN_ITEM_POWER_PLANT_THUNDER_STONE           	                  (FLAG_HIDDEN_ITEMS_START + 0x65)
 #define FLAG_HIDDEN_ITEM_POWER_PLANT_MAX_ELIXIR                                   (FLAG_HIDDEN_ITEMS_START + 0x66)
 #define FLAG_HIDDEN_ITEM_CERULEAN_CAVE_1F_ULTRA_BALL           	                  (FLAG_HIDDEN_ITEMS_START + 0x67)
-#define FLAG_HIDDEN_ITEM_104            (FLAG_HIDDEN_ITEMS_START + 0x68)
-#define FLAG_HIDDEN_ITEM_105 			(FLAG_HIDDEN_ITEMS_START + 0x69)
-#define FLAG_HIDDEN_ITEM_106   			(FLAG_HIDDEN_ITEMS_START + 0x6A)
+#define FLAG_HIDDEN_ITEM_SEAFOAM_ISALNDS_NEVER_MELT_ICE                           (FLAG_HIDDEN_ITEMS_START + 0x68)
+#define FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_ICY_ROCK 			                      (FLAG_HIDDEN_ITEMS_START + 0x69)
+#define FLAG_HIDDEN_ITEM_SAFARI_ZONE_DAMP_ROCK   			                      (FLAG_HIDDEN_ITEMS_START + 0x6A)
 #define FLAG_HIDDEN_ITEM_107         	(FLAG_HIDDEN_ITEMS_START + 0x6B)
 #define FLAG_HIDDEN_ITEM_108        	(FLAG_HIDDEN_ITEMS_START + 0x6C)
 #define FLAG_HIDDEN_ITEM_109           	(FLAG_HIDDEN_ITEMS_START + 0x6D)
@@ -1174,9 +1174,9 @@
 #define FLAG_HIDE_VICTORY_ROAD_3F_POWER_STONE                 		0x46B
 #define FLAG_HIDE_ROCK_TUNNEL_B1F_POWER_STONE                       0x46C
 #define FLAG_HIDE_SEAFOAM_ISLANDS_B2F_POWER_STONE                   0x46D
-#define FLAG_UNUSED_ITEM_0x46E                                 		0x46E
-#define FLAG_UNUSED_ITEM_0x46F                                 		0x46F
-#define FLAG_UNUSED_ITEM_0x470                                      0x470
+#define FLAG_HIDE_POKEMON_MANSION_3F_CHARCOAL                       0x46E
+#define FLAG_HIDE_DIGLETTS_CAVE_SMOOTH_ROCK                         0x46F
+#define FLAG_HIDE_VICTORY_ROAD_HEAT_ROCK                            0x470
 #define FLAG_UNUSED_ITEM_0x471                                   	0x471
 #define FLAG_UNUSED_ITEM_0x472                                      0x472
 #define FLAG_UNUSED_ITEM_0x473                              		0x473

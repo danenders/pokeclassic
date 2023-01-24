@@ -135,6 +135,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "SafariZone_East_EventScript_TrainerTips"
+    },
+    {
+      "type": "hidden_item",
+      "x": 35,
+      "y": 22,
+      "elevation": 3,
+      "item": "ITEM_DAMP_ROCK",
+      "flag": "FLAG_HIDDEN_ITEM_SAFARI_ZONE_DAMP_ROCK"
     }
   ]
 }

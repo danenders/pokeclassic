@@ -150,3 +150,29 @@ RockTunnel_B1F_Text_WinstonDefeat::
 RockTunnel_B1F_Text_WinstonPostBattle::
     .string "I'm an artist, not a fighter.\n"
     .string "I'll go home to draw.$"
+
+RockTunnel_B1F_EventScript_HelmetGuy::
+    lock
+    goto_if_set FLAG_GOT_ROCKY_HELMET, RockTunnel_B1F_EventScript_HelmetGuy2
+    msgbox RockTunnel_B1F_Text_Helmet, MSGBOX_NPC
+    giveitem ITEM_ROCKY_HELMET, 1
+    setflag FLAG_GOT_ROCKY_HELMET
+    release
+    end
+
+RockTunnel_B1F_Text_Helmet::
+    .string "I was checking out the tunnel here\n"
+    .string "when a Geodude used Self Destruct!\p"
+    .string "It caused a small cave in.\n"
+    .string "Good thing I was wearing a helmet.\p"
+    .string "Here, you should take one too!$"
+
+RockTunnel_B1F_EventScript_HelmetGuy2::
+    lock
+    msgbox RockTunnel_B1F_Text_Helmet2, MSGBOX_NPC
+    release
+    end
+
+RockTunnel_B1F_Text_Helmet2::
+    .string "Sometimes, rocks will contain items.\n"
+    .string "But they could also contian Pokémon!$"

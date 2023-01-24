@@ -8196,6 +8196,18 @@
       "secondary_tileset": "gTileset_GenericBuilding1",
       "border_filepath": "data/layouts/BattleTower_House/border.bin",
       "blockdata_filepath": "data/layouts/BattleTower_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_MOLTRES_CAVE",
+      "name": "VictoryRoad_MoltresCave_Layout",
+      "width": 9,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/VictoryRoad_MoltresCave/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoad_MoltresCave/map.bin"
     }
   ]
 }
