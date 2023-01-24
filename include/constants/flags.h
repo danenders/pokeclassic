@@ -876,8 +876,8 @@
 #define FLAG_GOT_TM35                       					    0x343
 #define FLAG_GOT_TM36              							        0x344
 #define FLAG_HIDE_SCOTT_HALLWAY                                   	0x345
-#define FLAG_HIDE_UNUSED_112     									0x346
-#define FLAG_HIDE_UNUSED_113                           				0x347
+#define FLAG_GOT_RED_CARD     									    0x346
+#define FLAG_HIDE_SCOTT_AT_HOUSE                           		    0x347
 #define FLAG_HIDE_UNUSED_114                      					0x348
 #define FLAG_HIDE_UNUSED_115               							0x349
 #define FLAG_HIDE_UNUSED_116                       					0x34A

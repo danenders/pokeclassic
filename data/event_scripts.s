@@ -1352,3 +1352,5 @@ Text_VoiceRangOutDontRunAway::
 	.include "data/maps/BattleTower_3F_Lounge/scripts.inc"
 
 	.include "data/maps/BattleTower_Elevator/scripts.inc"
+
+	.include "data/maps/BattleTower_House/scripts.inc"

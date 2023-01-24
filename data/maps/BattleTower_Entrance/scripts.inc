@@ -20,8 +20,12 @@ BattleTower_Entrance_OnFrame::
 	.2byte 0
 
 BattleTower_Entrance_EventScript_TurnPlayer::
+	goto_if_unset FLAG_SYS_FRONTIER_PASS, BattleTower_Entrance_EventScript_SkipTurnPlayer
 	setvar VAR_TEMP_1, 1
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	end
+
+BattleTower_Entrance_EventScript_SkipTurnPlayer::
 	end
 
 BattleTower_Entrance_BattleTowerCutscene::
@@ -45,6 +49,7 @@ BattleTower_Entrance_BattleTowerCutscene::
 	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	msgbox BattleTower_Entrance_GotFrontierPass, MSGBOX_DEFAULT
 	setflag FLAG_SYS_FRONTIER_PASS
+	clearflag FLAG_HIDE_SCOTT_AT_HOUSE
 	waitfanfare
 	closemessage
 	msgbox BattleTower_Entrance_GreatToSeeYouHere, MSGBOX_DEFAULT

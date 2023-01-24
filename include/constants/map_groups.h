@@ -794,6 +794,7 @@
 #define MAP_BATTLE_TOWER_2F_SHOP   (2 | (20 << 8))
 #define MAP_BATTLE_TOWER_3F_LOUNGE (3 | (20 << 8))
 #define MAP_BATTLE_TOWER_ELEVATOR  (4 | (20 << 8))
+#define MAP_BATTLE_TOWER_HOUSE     (5 | (20 << 8))
 
 // gMapGroup_IndoorRoute2
 #define MAP_VIRIDIAN_FOREST_NORTH_ENTRANCE (0 | (21 << 8))
@@ -851,7 +852,5 @@
 #define MAP_ROUTE25_SEA_COTTAGE (0 | (34 << 8))
 
 #define MAP_GROUPS_COUNT 35
-
-// static const u8 MAP_GROUP_COUNT[] = {57, 107, 103, 100, 38, 61, 38, 81, 58, 4, 6, 8, 10, 6, 8, 20, 10, 8, 10, 10, 5, 4, 2, 2, 1, 1, 1, 2, 2, 3, 2, 3, 2, 1, 1, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

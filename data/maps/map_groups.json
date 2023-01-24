@@ -825,7 +825,8 @@
     "BattleTower_Basement",
     "BattleTower_2F_Shop",
     "BattleTower_3F_Lounge",
-    "BattleTower_Elevator"
+    "BattleTower_Elevator",
+    "BattleTower_House"
   ],
   "gMapGroup_IndoorRoute2": [
     "ViridianForest_NorthEntrance",

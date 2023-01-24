@@ -8184,6 +8184,18 @@
       "secondary_tileset": "gTileset_SilphCo",
       "border_filepath": "data/layouts/BattleTower_Elevator/border.bin",
       "blockdata_filepath": "data/layouts/BattleTower_Elevator/map.bin"
+    },
+    {
+      "id": "LAYOUT_BATTLE_TOWER_HOUSE",
+      "name": "BattleTower_House_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/BattleTower_House/border.bin",
+      "blockdata_filepath": "data/layouts/BattleTower_House/map.bin"
     }
   ]
 }

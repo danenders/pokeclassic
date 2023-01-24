@@ -117,6 +117,7 @@ ViridianCity_School_EventScript_ChooseBlackboardTopic::
 	case 3, ViridianCity_School_EventScript_ReadBurn
 	case 4, ViridianCity_School_EventScript_ReadFreeze
 	case 5, ViridianCity_School_EventScript_ExitBlackboard
+	case MULTI_B_PRESSED, ViridianCity_School_EventScript_ExitBlackboard
 	end
 
 ViridianCity_School_Text_ReadWhichTopic::
