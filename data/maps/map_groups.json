@@ -795,7 +795,8 @@
     "CinnabarIsland_Lab_Entrance",
     "CinnabarIsland_Lab_Lounge",
     "CinnabarIsland_Lab_ResearchRoom",
-    "CinnabarIsland_Lab_ExperimentRoom"
+    "CinnabarIsland_Lab_ExperimentRoom",
+    "CinnabarIsland_House"
   ],
   "gMapGroup_IndoorSaffron": [
     "SaffronCity_PokemonCenter_1F",

@@ -764,6 +764,7 @@
 #define MAP_CINNABAR_ISLAND_LAB_LOUNGE          (5 | (17 << 8))
 #define MAP_CINNABAR_ISLAND_LAB_RESEARCH_ROOM   (6 | (17 << 8))
 #define MAP_CINNABAR_ISLAND_LAB_EXPERIMENT_ROOM (7 | (17 << 8))
+#define MAP_CINNABAR_ISLAND_HOUSE               (8 | (17 << 8))
 
 // gMapGroup_IndoorSaffron
 #define MAP_SAFFRON_CITY_POKEMON_CENTER_1F        (0 | (18 << 8))
@@ -853,7 +854,5 @@
 #define MAP_ROUTE25_SEA_COTTAGE (0 | (34 << 8))
 
 #define MAP_GROUPS_COUNT 35
-
-// static const u8 MAP_GROUP_COUNT[] = {57, 107, 103, 100, 38, 61, 38, 82, 58, 4, 6, 8, 10, 6, 8, 20, 10, 8, 10, 10, 6, 4, 2, 2, 1, 1, 1, 2, 2, 3, 2, 3, 2, 1, 1, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

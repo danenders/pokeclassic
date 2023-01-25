@@ -1356,3 +1356,5 @@ Text_VoiceRangOutDontRunAway::
 	.include "data/maps/BattleTower_House/scripts.inc"
 
 	.include "data/maps/VictoryRoad_MoltresCave/scripts.inc"
+
+	.include "data/maps/CinnabarIsland_House/scripts.inc"
