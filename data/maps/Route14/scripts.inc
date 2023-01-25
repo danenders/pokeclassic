@@ -237,4 +237,8 @@ Route14_Text_JanNotEnoughMons::
     .string "Jan: You want to battle?\n"
     .string "You don't have enough Pokémon.$"
 
+Route14_EventScript_BigRoot::
+    finditem ITEM_BIG_ROOT, 1
+    release
+    end
 

@@ -157,9 +157,9 @@
 #define FLAG_GOT_SQUIRTLE   				0x8B //Got the gift squirtle in Vermilion
 #define FLAG_GOT_HM06             		    0x8C //Got Rock Smash from the Hiker
 #define FLAG_GOT_ROCKY_HELMET         		0x8D
-#define FLAG_UNUSED_0x08E              		0x8E
-#define FLAG_UNUSED_0x08F           		0x8F
-#define FLAG_UNUSED_0x090           		0x90
+#define FLAG_GOT_PROTECTIVE_PADS            0x8E
+#define FLAG_GOT_BIG_ROOT           		0x8F
+#define FLAG_GOT_BLACK_SLUDGE          		0x90
 #define FLAG_UNUSED_0x091                   0x91
 #define FLAG_UNUSED_0x092                   0x92
 #define FLAG_UNUSED_0x093         			0x93
