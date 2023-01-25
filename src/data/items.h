@@ -1120,7 +1120,7 @@ const struct Item gItems[] =
     {
         .name = _("Power Stone"),
         .itemId = ITEM_POWER_STONE,
-        .price = 10000,
+        .price = 15000,
         .description = sPowerStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
