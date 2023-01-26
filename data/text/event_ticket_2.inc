@@ -32,9 +32,11 @@ EventTicket_Text_OddTicketGetOnBoard:
 	.string "Get on board, youngster!$"
 
 FarawayIsland_Entrance_Text_SailorReturn:
-    .string "Capt. Briney can be so maddeningly\n"
-	.string "fickle…\p"
-	.string "Do you want to return to Lilycove?$"
+    .string "This was quite a journey!\p"
+	.string "It's been a long time since I've\n"
+	.string "had a chance to sail somewhere new.\n"
+	.string "Have you already explored the island?\p"
+	.string "Do you want to return to Cinnabar?$"
 
 BirthIsland_Harbor_Text_SailorReturn:
     .string "What an oddly shaped island, eh?\n"

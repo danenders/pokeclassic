@@ -445,35 +445,13 @@ static void PacifidlogBridgePerStepCallback(u8 taskId)
 
 static void TryLowerFortreeBridge(s16 x, s16 y)
 {
-    u8 elevation = PlayerGetElevation();
-    if (!(elevation & 1))
     {
-        switch (MapGridGetMetatileIdAt(x, y))
-        {
-        case METATILE_Fortree_BridgeOverGrass_Raised:
-            MapGridSetMetatileIdAt(x, y, METATILE_Fortree_BridgeOverGrass_Lowered);
-            break;
-        case METATILE_Fortree_BridgeOverTrees_Raised:
-            MapGridSetMetatileIdAt(x, y, METATILE_Fortree_BridgeOverTrees_Lowered);
-            break;
-        }
     }
 }
 
 static void TryRaiseFortreeBridge(s16 x, s16 y)
 {
-    u8 elevation = PlayerGetElevation();
-    if (!(elevation & 1))
     {
-        switch (MapGridGetMetatileIdAt(x, y))
-        {
-        case METATILE_Fortree_BridgeOverGrass_Lowered:
-            MapGridSetMetatileIdAt(x, y, METATILE_Fortree_BridgeOverGrass_Raised);
-            break;
-        case METATILE_Fortree_BridgeOverTrees_Lowered:
-            MapGridSetMetatileIdAt(x, y, METATILE_Fortree_BridgeOverTrees_Raised);
-            break;
-        }
     }
 }
 

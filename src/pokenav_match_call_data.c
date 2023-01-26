@@ -174,9 +174,17 @@ static const struct MatchCallOak sProfOakMatchCallHeader =
 
 //MOM
 static const match_call_text_data_t sMomTextScripts[] = {
-    { MatchCall_Text_Mom1,  0xFFFF,                      0xFFFF },
-    { MatchCall_Text_MomGameClear, FLAG_SYS_GAME_CLEAR,  0xFFFF },
-    { NULL,                 0xFFFF,                      0xFFFF }
+    { MatchCall_Text_Mom1,  0xFFFF,                         0xFFFF },
+    { MatchCall_Text_Mom2,  FLAG_VISITED_CERULEAN_CITY,     0xFFFF },
+    { MatchCall_Text_Mom3,  FLAG_VISITED_VERMILION_CITY,    0xFFFF },
+    { MatchCall_Text_Mom4,  FLAG_VISITED_LAVENDER_TOWN,     0xFFFF },
+    { MatchCall_Text_Mom5,  FLAG_VISITED_CELADON_CITY,      0xFFFF },
+    { MatchCall_Text_Mom6,  FLAG_VISITED_FUCHSIA_CITY,      0xFFFF },
+    { MatchCall_Text_Mom7,  FLAG_VISITED_SAFFRON_CITY,      0xFFFF },
+    { MatchCall_Text_Mom8,  FLAG_VISITED_CINNABAR_ISLAND,   0xFFFF },
+    { MatchCall_Text_Mom9,  FLAG_BADGE07_GET,   0xFFFF },    
+    { MatchCall_Text_MomGameClear, FLAG_SYS_GAME_CLEAR,     0xFFFF },
+    { NULL,                 0xFFFF,                         0xFFFF }
 };
 
 static const struct MatchCallStructNPC sMomMatchCallHeader =
@@ -192,13 +200,26 @@ static const struct MatchCallStructNPC sMomMatchCallHeader =
 //RIVAL
 static const match_call_text_data_t sRivalTextScripts[] = {
     { MatchCall_Text_Rival1,  0xFFFF,                      0xFFFF },
+    { MatchCall_Text_Rival2,  FLAG_BADGE01_GET,            0xFFFF },
+    { MatchCall_Text_Rival3,  FLAG_BADGE02_GET,            0xFFFF },
+    { MatchCall_Text_Rival4,  FLAG_BADGE03_GET,            0xFFFF },
+    { MatchCall_Text_Rival5,  FLAG_BADGE04_GET,            0xFFFF },
+    { MatchCall_Text_Rival6,  FLAG_BADGE05_GET,            0xFFFF },
+    { MatchCall_Text_Rival7,  FLAG_BADGE06_GET,            0xFFFF },
+    { MatchCall_Text_Rival8,  FLAG_BADGE07_GET,            0xFFFF },
+    { MatchCall_Text_Rival9,  FLAG_BADGE08_GET,            0xFFFF },
     { MatchCall_Text_RivalGameClear, FLAG_SYS_GAME_CLEAR,  0xFFFF },
     { NULL,                 0xFFFF,                        0xFFFF }
 };
 
 static const struct MatchCallLocationOverride sRivalLocationData[] = {
     { FLAG_REGISTERED_RIVAL, MAPSEC_ROUTE_22 },
-    { FLAG_SYS_GAME_CLEAR, MAPSEC_INDIGO_PLATEAU},
+    { FLAG_BADGE01_GET, MAPSEC_CERULEAN_CITY },
+    { FLAG_BADGE02_GET, MAPSEC_VERMILION_CITY },
+    { FLAG_BADGE03_GET, MAPSEC_LAVENDER_TOWN },
+    { FLAG_BADGE04_GET, MAPSEC_SAFFRON_CITY },
+    { FLAG_HIDE_SILPH_RIVAL, MAPSEC_INDIGO_PLATEAU },
+    { FLAG_SYS_GAME_CLEAR, MAPSEC_VIRIDIAN_CITY},
     { 0xFFFF, MAPSEC_NONE }
 };
 
@@ -262,7 +283,8 @@ static const match_call_text_data_t sScottTextScripts[] = {
     { MatchCall_Text_ScottFinalBadge,   FLAG_GOT_SEVEN_BADGES,          0xFFFF },
     { MatchCall_Text_ScottPkmnLeague,   FLAG_BADGE08_GET,               0xFFFF },
     { MatchCall_Text_ScottThisIsIt,     FLAG_VISITED_INDIGO_PLATEAU,    0xFFFF },
-    { MatchCall_Text_ScottNoService,    FLAG_SYS_GAME_CLEAR,            0xFFFF },
+    { MatchCall_Text_ScottBattleTower,  FLAG_SYS_GAME_CLEAR,            0xFFFF },
+    { MatchCall_Text_ScottBattleTower2, FLAG_SYS_FRONTIER_PASS,         0xFFFF },
     { NULL,                  0xFFFF,                                    0xFFFF }
 };
 
@@ -275,8 +297,7 @@ static const struct MatchCallLocationOverride sScottLocationData[] = {
     { FLAG_BADGE06_GET,             MAPSEC_CINNABAR_ISLAND },
     { FLAG_GOT_SEVEN_BADGES,        MAPSEC_VIRIDIAN_CITY },
     { FLAG_BADGE08_GET,             MAPSEC_INDIGO_PLATEAU },
-    { FLAG_SYS_GAME_CLEAR,          MAPSEC_NONE },
-    { FLAG_VISITED_BATTLE_FRONTIER, MAPSEC_BATTLE_FRONTIER },
+    { FLAG_SYS_GAME_CLEAR,          MAPSEC_BATTLE_FRONTIER },
     { 0xFFFF,                       MAPSEC_NONE }
 };
 
@@ -324,8 +345,10 @@ static const struct MatchCallAide sLookerMatchCallHeader =
 static const match_call_text_data_t sBillTextScripts[] = {
     { MatchCall_Text_Bill1,  0xFFFF,                      0xFFFF },
     { MatchCall_Text_Bill2,  FLAG_BADGE05_GET,            0xFFFF },
-    { MatchCall_Text_Bill3,  FLAG_BADGE08_GET,            0xFFFF },
-    { MatchCall_Text_Bill4,  FLAG_SYS_GAME_CLEAR,         0xFFFF },
+    { MatchCall_Text_Bill3,  FLAG_SYS_DEXNAV_GET,         0xFFFF },
+    { MatchCall_Text_Bill4,  FLAG_BADGE08_GET,            FLAG_GAVE_BILL_IDEA},
+    { MatchCall_Text_Bill5,  FLAG_SYS_DETECTOR_MODE,      0xFFFF },
+    { MatchCall_Text_Bill6,  FLAG_SYS_GAME_CLEAR,         0xFFFF },
     { NULL,                  0xFFFF,                      0xFFFF }
 };
 

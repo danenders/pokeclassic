@@ -108,6 +108,34 @@
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Route21_South_EventScript_Johan",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
+      "in_connection": true,
+      "x": 13,
+      "y": 53,
+      "elevation": 4,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "8",
+      "trainer_sight_or_berry_tree_id": "6",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SEA_CAPTAIN",
+      "in_connection": true,
+      "x": 12,
+      "y": 56,
+      "elevation": 5,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "8",
+      "trainer_sight_or_berry_tree_id": "6",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_CINNABAR_SEA_CAPTAIN"
     }
   ],
   "warp_events": [

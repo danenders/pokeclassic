@@ -20,7 +20,7 @@
     },
     {
       "direction": "left",
-      "offset": 0,
+      "offset": -20,
       "map": "MAP_CINNABAR_ISLAND"
     }
   ],

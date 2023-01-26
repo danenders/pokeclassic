@@ -33,13 +33,13 @@ struct TrainerCard
     /*0x0E*/ u16 trainerId;
     /*0x10*/ u16 playTimeHours;
     /*0x12*/ u16 playTimeMinutes;
-    /*0x14*/ u16 linkBattleWins;
-    /*0x16*/ u16 linkBattleLosses;
-    /*0x18*/ u16 battleTowerWins;
-    /*0x1A*/ u16 battleTowerStraightWins;
-    /*0x1C*/ u16 contestsWithFriends;
-    /*0x1E*/ u16 pokeblocksWithFriends;
-    /*0x20*/ u16 pokemonTrades;
+    /*0x14*/ u16 Tower50Singles;
+    /*0x16*/ u16 Tower50SinglesRecord;
+    /*0x18*/ u16 Tower50Doubles;
+    /*0x1A*/ u16 Tower50DoublesRecord;
+    /*0x1C*/ u16 TowerOpenSingles;
+    /*0x1E*/ u16 TowerOpenSinglesRecord;
+    /*0x20*/ u16 TowerOpenDoubles;
     /*0x24*/ u32 money;
     /*0x28*/ u16 easyChatProfile[TRAINER_CARD_PROFILE_LENGTH];
     /*0x30*/ u8 playerName[PLAYER_NAME_LENGTH + 1];
@@ -49,7 +49,7 @@ struct TrainerCard
                 u32 berryCrush;
                 u32 frontier;
              } linkPoints; // This field is used differently by FRLG vs Emerald
-    /*0x40*/ u32 unionRoomNum;
+    /*0x40*/ u16 TowerOpenDoublesRecord;
     /*0x44*/ u8 filler[8];
     /*0x4C*/ bool8 shouldDrawStickers; // FRLG only
     /*0x4D*/ u8 unused;

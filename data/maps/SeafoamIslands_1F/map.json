@@ -112,7 +112,14 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 28,
+      "y": 3,
+      "elevation": 3,
+      "item": "ITEM_NEVER_MELT_ICE",
+      "flag": "FLAG_HIDDEN_ITEM_SEAFOAM_ISALNDS_NEVER_MELT_ICE"
+    }
   ],
   "floor_number": ""
 }

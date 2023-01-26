@@ -73,7 +73,25 @@ PokemonMansion_B1F_EventScript_ItemTM14::
 	release
 	end
 
-@TODO: Add event around this
 PokemonMansion_B1F_EventScript_OldSeaMap::
+	lock
+	msgbox PokemonMansion_B1F_Text_OldMap, MSGBOX_SIGN
+	waitmessage
+	goto_if_set FLAG_RECEIVED_OLD_SEA_MAP, PokemonMansion_B1F_EventScript_SkipOldSeaMap
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
+	msgbox PokemonMansion_B1F_Text_SomethingHidden, MSGBOX_DEFAULT
+	finditem ITEM_OLD_SEA_MAP, 1
+	setflag FLAG_RECEIVED_OLD_SEA_MAP
+PokemonMansion_B1F_EventScript_SkipOldSeaMap::
 	release
 	end
+
+PokemonMansion_B1F_Text_OldMap::
+	.string "It's an old map...\p"
+	.string "There's an island you don't\n"
+	.string "recognize on it.$"
+
+PokemonMansion_B1F_Text_SomethingHidden::
+	.string "There's something hidden\n"
+	.string "behind the frame!$"

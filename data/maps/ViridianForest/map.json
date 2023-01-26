@@ -280,6 +280,14 @@
       "elevation": 3,
       "item": "ITEM_POTION",
       "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_POTION"
+    },
+    {
+      "type": "hidden_item",
+      "x": 5,
+      "y": 58,
+      "elevation": 3,
+      "item": "ITEM_MIRACLE_SEED",
+      "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_MIRACLE_SEED"
     }
   ]
 }

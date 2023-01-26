@@ -69,3 +69,7 @@ PokemonMansion_1F_EventScript_ItemCarbos::
 	release
 	end
 
+PokemonMansion_1F_EventScript_ItemBlackSludge::
+	finditem ITEM_BLACK_SLUDGE, 1
+	release
+	end

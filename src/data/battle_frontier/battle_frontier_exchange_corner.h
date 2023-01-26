@@ -42,6 +42,19 @@ static const u16 sFrontierExchangeCorner_Vitamins[] =
     0xFFFF
 };
 
+static const u16 sFrontierExchangeCorner_Candy[] =
+{
+    ITEM_HP_CANDY,
+    ITEM_ATK_CANDY,
+    ITEM_DEF_CANDY,
+    ITEM_SPATK_CANDY,
+    ITEM_SPDEF_CANDY,
+    ITEM_SPEED_CANDY,
+    ITEM_MAX_CANDY,
+    ITEM_RESET_CANDY,
+    0xFFFF
+};
+
 static const u16 sFrontierExchangeCorner_HoldItems[] =
 {
     ITEM_LEFTOVERS,
@@ -53,6 +66,31 @@ static const u16 sFrontierExchangeCorner_HoldItems[] =
     ITEM_KINGS_ROCK,
     ITEM_FOCUS_BAND,
     ITEM_SCOPE_LENS,
+    0xFFFF
+};
+
+static const u16 sFrontierExchangeCorner_HoldItems2[] =
+{
+    ITEM_RAZOR_FANG,
+    ITEM_RAZOR_CLAW,
+    ITEM_CHOICE_SPECS,
+    ITEM_CHOICE_SCARF,
+    ITEM_MUSCLE_BAND,
+    ITEM_LIFE_ORB,
+    ITEM_POWER_HERB,
+    ITEM_WISE_GLASSES,
+    ITEM_RED_CARD,
+    0xFFFF
+};
+
+static const u16 sFrontierExchangeCorner_PowerItems[] =
+{
+    ITEM_POWER_ANKLET,
+    ITEM_POWER_BRACER,
+    ITEM_POWER_BELT,
+    ITEM_POWER_BAND,
+    ITEM_POWER_WEIGHT,
+    ITEM_POWER_LENS,
     0xFFFF
 };
 
@@ -111,5 +149,43 @@ static const u8 *const sFrontierExchangeCorner_HoldItemsDescriptions[] =
     BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc,
     BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc,
     BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc,
+    gText_Exit
+};
+
+static const u8 *const sFrontierExchangeCorner_HoldItemsDescriptions2[] =
+{
+    BattleFrontier_ExchangeServiceCorner_Text_RazorFang,
+    BattleFrontier_ExchangeServiceCorner_Text_RazorClaw,
+    BattleFrontier_ExchangeServiceCorner_Text_ChoiceSpecs,
+    BattleFrontier_ExchangeServiceCorner_Text_ChoiceScarf,
+    BattleFrontier_ExchangeServiceCorner_Text_MuscleBand,
+    BattleFrontier_ExchangeServiceCorner_Text_LifeOrb,
+    BattleFrontier_ExchangeServiceCorner_Text_PowerHerb,
+    BattleFrontier_ExchangeServiceCorner_Text_WiseGlasses,
+    BattleFrontier_ExchangeServiceCorner_Text_RedCard,
+    gText_Exit
+};
+
+static const u8 *const sFrontierExchangeCorner_PowerItemsDescriptions[] =
+{
+    BattleFrontier_ExchangeServiceCorner_Text_PowerAnklet,
+    BattleFrontier_ExchangeServiceCorner_Text_PowerBracer,
+    BattleFrontier_ExchangeServiceCorner_Text_PowerBelt,
+    BattleFrontier_ExchangeServiceCorner_Text_PowerBand,
+    BattleFrontier_ExchangeServiceCorner_Text_PowerWeight,
+    BattleFrontier_ExchangeServiceCorner_Text_PowerLens,
+    gText_Exit
+};
+
+static const u8 *const sFrontierExchangeCorner_CandyDescriptions[] =
+{
+    BattleFrontier_ExchangeServiceCorner_Text_HPCandy,
+    BattleFrontier_ExchangeServiceCorner_Text_ATKCandy,
+    BattleFrontier_ExchangeServiceCorner_Text_DEFCandy,
+    BattleFrontier_ExchangeServiceCorner_Text_SPATKCandy,
+    BattleFrontier_ExchangeServiceCorner_Text_SPDEFCandy,
+    BattleFrontier_ExchangeServiceCorner_Text_SPEEDCandy,
+    BattleFrontier_ExchangeServiceCorner_Text_MAXCandy,
+    BattleFrontier_ExchangeServiceCorner_Text_RESETCandy,
     gText_Exit
 };

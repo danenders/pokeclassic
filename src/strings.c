@@ -1190,6 +1190,33 @@ const u8 gText_80Pts[] = _("80 pts");
 const u8 gText_90Pts[] = _("90 pts");
 const u8 gText_100Pts[] = _("100 pts");
 const u8 gText_QuestionMark[] = _("?");
+
+const u8 gText_RazorFang48BP[]= _("Razor Fang{CLEAR_TO 0x5E}48BP");
+const u8 gText_RazorClaw48BP[]= _("Razor Claw{CLEAR_TO 0x5E}48BP");
+const u8 gText_ChoiceSpecs48BP[]= _("Choice Specs{CLEAR_TO 0x5E}48BP");
+const u8 gText_ChoiceScarf48BP[]= _("Choice Scarf{CLEAR_TO 0x5E}48BP");
+const u8 gText_MuscleBand64BP[]= _("Muscle Band{CLEAR_TO 0x5E}48BP");
+const u8 gText_LifeOrb48BP[]= _("Life Orb{CLEAR_TO 0x5E}48BP");
+const u8 gText_PowerHerb32BP[]= _("Power Herb{CLEAR_TO 0x5E}32BP");
+const u8 gText_WiseGlasses48BP[]= _("Wise Glasses{CLEAR_TO 0x5E}48BP");
+const u8 gText_RedCard16BP[]= _("Red Card{CLEAR_TO 0x5E}16BP");
+
+const u8 gText_PowerAnklet16BP[]= _("Power Anklet{CLEAR_TO 0x5E}16BP");
+const u8 gText_PowerBracer16BP[]= _("Power Bracer{CLEAR_TO 0x5E}16BP");
+const u8 gText_PowerBelt16BP[]= _("Power Belt{CLEAR_TO 0x5E}16BP");
+const u8 gText_PowerBand16BP[]= _("Power Band{CLEAR_TO 0x5E}16BP");
+const u8 gText_PowerWeight16BP[]= _("Power Weight{CLEAR_TO 0x5E}16BP");
+const u8 gText_PowerLens16BP[] = _("Power Lens{CLEAR_TO 0x5E}16BP");
+
+const u8 gText_HPCandy24BP[]= _("HP Candy{CLEAR_TO 0x5E}24BP");
+const u8 gText_ATKCandy24BP[]= _("Attack Candy{CLEAR_TO 0x5E}24BP");
+const u8 gText_DEFCandy24BP[]= _("Defense Candy{CLEAR_TO 0x5E}24BP");
+const u8 gText_SPATKCandy24BP[]= _("Sp. Atk Candy{CLEAR_TO 0x5E}24BP");
+const u8 gText_SPDEFCandy24BP[]= _("Sp. Def Candy{CLEAR_TO 0x5E}24BP");
+const u8 gText_SPEEDCandy24BP[] = _("Speed Candy{CLEAR_TO 0x5E}24BP");
+const u8 gText_MAXCandy64BP[] = _("Max Candy{CLEAR_TO 0x5E}64BP");
+const u8 gText_RESETCandy8BP[] = _("Reset Candy{CLEAR_TO 0x5E}8BP");
+
 const u8 gText_KissPoster16BP[] = _("Kiss Poster{CLEAR_TO 0x5E}16BP");
 const u8 gText_KissCushion32BP[] = _("Kiss Cushion{CLEAR_TO 0x5E}32BP");
 const u8 gText_SmoochumDoll32BP[] = _("Smoochum Doll{CLEAR_TO 0x5E}32BP");
@@ -1244,7 +1271,7 @@ const u8 gText_Colon2[] = _(":");
 const u8 gText_Points[] = _(" points"); // Unused
 const u8 gText_TrainerCardTime[] = _("Time");
 const u8 gJPText_BattlePoints[] = _("ゲ-ムポイント"); // Unused. Name presumed, translation is Game Points
-const u8 gText_Var1sTrainerCard[] = _("{STR_VAR_1}'s Trainer Card");
+const u8 gText_Var1sTrainerCard[] = _("Battle Tower Records");
 const u8 gText_HallOfFameDebut[] = _("Hall of Fame debut  ");
 const u8 gText_LinkBattles[] = _("Link battles");
 const u8 gText_LinkCableBattles[] = _("Link Cable battles");
@@ -1259,7 +1286,6 @@ const u8 gText_WonContestsWFriends[] = _("Won Contests W/Friends");
 const u8 gText_BattlePtsWon[] = _("Battle Points won");
 const u8 gText_NumBP[] = _("{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BP");
 const u8 gText_BattleTower[] = _("Battle Tower");
-const u8 gText_WinsStraight[] = _("W/{COLOR RED}{SHADOW LIGHT_RED}{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}  STRAIGHT/{COLOR RED}{SHADOW LIGHT_RED}{STR_VAR_2}");
 const u8 gText_BattleTower2[] = _("Battle Tower");
 const u8 gText_BattleDome[] = _("Battle Dome");
 const u8 gText_BattlePalace[] = _("Battle Palace");
@@ -1267,6 +1293,12 @@ const u8 gText_BattleFactory[] = _("Battle Factory");
 const u8 gText_BattleArena[] = _("Battle Arena");
 const u8 gText_BattlePike[] = _("Battle Pike");
 const u8 gText_BattlePyramid[] = _("Battle Pyramid");
+
+const u8 gText_Tower50Singles[] = _("Lv.50 Singles");
+const u8 gText_Tower50Doubles[] = _("Lv.50 Doubles");
+const u8 gText_TowerOpenSingles[] = _("Open Singles");
+const u8 gText_TowerOpenDoubles[] = _("Open Doubles");
+const u8 gText_WinsStraight[] = _("W/{COLOR RED}{SHADOW LIGHT_RED}{STR_VAR_1}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}  Record/{COLOR RED}{SHADOW LIGHT_RED}{STR_VAR_2}");
 
 ALIGNED(4) const u8 gText_FacilitySingle[] = _("{STR_VAR_1} Single");
 ALIGNED(4) const u8 gText_FacilityDouble[] = _("{STR_VAR_1} Double");

@@ -4797,7 +4797,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
+      "secondary_tileset": "gTileset_VermilionCity",
       "border_filepath": "data/layouts/FarawayIsland_Entrance/border.bin",
       "blockdata_filepath": "data/layouts/FarawayIsland_Entrance/map.bin"
     },
@@ -5368,8 +5368,8 @@
     {
       "id": "LAYOUT_CINNABAR_ISLAND",
       "name": "CinnabarIsland_Layout",
-      "width": 24,
-      "height": 20,
+      "width": 64,
+      "height": 40,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -5692,7 +5692,7 @@
     {
       "id": "LAYOUT_ROUTE22",
       "name": "Route22_Layout",
-      "width": 48,
+      "width": 56,
       "height": 24,
       "border_width": 2,
       "border_height": 2,
@@ -8090,54 +8090,6 @@
       "blockdata_filepath": "data/layouts/SafariZone_RestHouse/map.bin"
     },
     {
-      "id": "LAYOUT_INDIGO_PLATEAU_BATTLE_TOWER_HALLWAY",
-      "name": "IndigoPlateau_BattleTowerHallway_Layout",
-      "width": 9,
-      "height": 31,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
-      "border_filepath": "data/layouts/IndigoPlateau_BattleTowerHallway/border.bin",
-      "blockdata_filepath": "data/layouts/IndigoPlateau_BattleTowerHallway/map.bin"
-    },
-    {
-      "id": "LAYOUT_INDIGO_PLATEAU_BATTLE_TOWER_ELEVATOR",
-      "name": "IndigoPlateau_BattleTowerElevator_Layout",
-      "width": 5,
-      "height": 7,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
-      "border_filepath": "data/layouts/IndigoPlateau_BattleTowerElevator/border.bin",
-      "blockdata_filepath": "data/layouts/IndigoPlateau_BattleTowerElevator/map.bin"
-    },
-    {
-      "id": "LAYOUT_INDIGO_PLATEAU_BATTLE_TOWER_LOBBY",
-      "name": "IndigoPlateau_BattleTower_Lobby_Layout",
-      "width": 23,
-      "height": 12,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
-      "border_filepath": "data/layouts/IndigoPlateau_BattleTower_Lobby/border.bin",
-      "blockdata_filepath": "data/layouts/IndigoPlateau_BattleTower_Lobby/map.bin"
-    },
-    {
-      "id": "LAYOUT_INDIGO_PLATEAU_BATTLE_FACTORY_LOBBY",
-      "name": "IndigoPlateau_BattleFactory_Lobby_Layout",
-      "width": 23,
-      "height": 12,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
-      "border_filepath": "data/layouts/IndigoPlateau_BattleFactory_Lobby/border.bin",
-      "blockdata_filepath": "data/layouts/IndigoPlateau_BattleFactory_Lobby/map.bin"
-    },
-    {
       "id": "LAYOUT_POKEMON_LEAGUE_CHALLENGER_ROOM",
       "name": "PokemonLeague_ChallengerRoom_Layout",
       "width": 13,
@@ -8160,6 +8112,114 @@
       "secondary_tileset": "gTileset_PokemonLeague",
       "border_filepath": "data/layouts/PokemonLeague_SecretBattle/border.bin",
       "blockdata_filepath": "data/layouts/PokemonLeague_SecretBattle/map.bin"
+    },
+    {
+      "id": "LAYOUT_BATTLE_TOWER_EXTERIOR",
+      "name": "BattleTower_Exterior_Layout",
+      "width": 38,
+      "height": 24,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SaffronCity",
+      "border_filepath": "data/layouts/BattleTower_Exterior/border.bin",
+      "blockdata_filepath": "data/layouts/BattleTower_Exterior/map.bin"
+    },
+    {
+      "id": "LAYOUT_BATTLE_TOWER_ENTRANCE",
+      "name": "BattleTower_Entrance_Layout",
+      "width": 27,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SilphCo",
+      "border_filepath": "data/layouts/BattleTower_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/BattleTower_Entrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_BATTLE_TOWER_BASEMENT",
+      "name": "BattleTower_Basement_Layout",
+      "width": 27,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SilphCo",
+      "border_filepath": "data/layouts/BattleTower_Basement/border.bin",
+      "blockdata_filepath": "data/layouts/BattleTower_Basement/map.bin"
+    },
+    {
+      "id": "LAYOUT_BATTLE_TOWER_2F_SHOP",
+      "name": "BattleTower_2F_Shop_Layout",
+      "width": 27,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SilphCo",
+      "border_filepath": "data/layouts/BattleTower_2F_Shop/border.bin",
+      "blockdata_filepath": "data/layouts/BattleTower_2F_Shop/map.bin"
+    },
+    {
+      "id": "LAYOUT_BATTLE_TOWER_3F_LOUNGE",
+      "name": "BattleTower_3F_Lounge_Layout",
+      "width": 27,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SilphCo",
+      "border_filepath": "data/layouts/BattleTower_3F_Lounge/border.bin",
+      "blockdata_filepath": "data/layouts/BattleTower_3F_Lounge/map.bin"
+    },
+    {
+      "id": "LAYOUT_BATTLE_TOWER_ELEVATOR",
+      "name": "BattleTower_Elevator_Layout",
+      "width": 5,
+      "height": 7,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SilphCo",
+      "border_filepath": "data/layouts/BattleTower_Elevator/border.bin",
+      "blockdata_filepath": "data/layouts/BattleTower_Elevator/map.bin"
+    },
+    {
+      "id": "LAYOUT_BATTLE_TOWER_HOUSE",
+      "name": "BattleTower_House_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/BattleTower_House/border.bin",
+      "blockdata_filepath": "data/layouts/BattleTower_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_MOLTRES_CAVE",
+      "name": "VictoryRoad_MoltresCave_Layout",
+      "width": 9,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/VictoryRoad_MoltresCave/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoad_MoltresCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_HOUSE",
+      "name": "CinnabarIsland_House_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/CinnabarIsland_House/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIsland_House/map.bin"
     }
   ]
 }

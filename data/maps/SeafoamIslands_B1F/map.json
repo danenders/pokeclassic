@@ -154,7 +154,14 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 11,
+      "y": 5,
+      "elevation": 3,
+      "item": "ITEM_ICY_ROCK",
+      "flag": "FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_ICY_ROCK"
+    }
   ],
   "floor_number": ""
 }

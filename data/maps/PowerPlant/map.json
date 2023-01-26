@@ -162,6 +162,14 @@
       "elevation": 3,
       "item": "ITEM_MAX_ELIXIR",
       "flag": "FLAG_HIDDEN_ITEM_POWER_PLANT_MAX_ELIXIR"
+    },
+    {
+      "type": "hidden_item",
+      "x": 24,
+      "y": 36,
+      "elevation": 3,
+      "item": "ITEM_METAL_COAT",
+      "flag": "FLAG_HIDDEN_ITEM_POWER_PLANT_METAL_COAT"
     }
   ],
   "floor_number": ""

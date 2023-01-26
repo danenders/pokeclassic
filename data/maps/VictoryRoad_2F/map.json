@@ -316,6 +316,13 @@
       "elevation": 3,
       "dest_map": "MAP_VICTORY_ROAD_3F",
       "dest_warp_id": 4
+    },
+    {
+      "x": 16,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_MOLTRES_CAVE",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [

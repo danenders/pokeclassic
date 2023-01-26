@@ -1,2 +1,125 @@
 Route18_EastEntrance_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route18_EastEntrance_1F_OnTransition
 	.byte 0
+
+Route18_EastEntrance_1F_OnTransition::
+	clearflag FLAG_SYS_CYCLING_ROAD
+	call_if_set FLAG_RECEIVED_BIKE, Route18_EastEntrance_1F_EventScript_DisableNeedBikeTrigger
+	end
+
+Route18_EastEntrance_1F_EventScript_DisableNeedBikeTrigger::
+	setvar VAR_TEMP_1, 1
+	return
+
+Route18_EastEntrance_1F_EventScript_Guard::
+	msgbox Route18_EastEntrance_1F_Text_CyclingRoadAllUphillFromHere, MSGBOX_NPC
+	end
+
+Route18_EastEntrance_1F_EventScript_NeedBikeTriggerTop::
+	lockall
+	setvar VAR_0x8008, 0
+	goto Route18_EastEntrance_1F_EventScript_NeedBikeTrigger
+	end
+
+Route18_EastEntrance_1F_EventScript_NeedBikeTriggerMidTop::
+	lockall
+	setvar VAR_0x8008, 1
+	goto Route18_EastEntrance_1F_EventScript_NeedBikeTrigger
+	end
+
+Route18_EastEntrance_1F_EventScript_NeedBikeTriggerMid::
+	lockall
+	setvar VAR_0x8008, 2
+	goto Route18_EastEntrance_1F_EventScript_NeedBikeTrigger
+	end
+
+Route18_EastEntrance_1F_EventScript_NeedBikeTriggerMidBottom::
+	lockall
+	setvar VAR_0x8008, 3
+	goto Route18_EastEntrance_1F_EventScript_NeedBikeTrigger
+	end
+
+Route18_EastEntrance_1F_EventScript_NeedBikeTriggerBottom::
+	lockall
+	setvar VAR_0x8008, 4
+	goto Route18_EastEntrance_1F_EventScript_NeedBikeTrigger
+	end
+
+Route18_EastEntrance_1F_EventScript_NeedBikeTrigger::
+	textcolor 0
+	msgbox Route18_EastEntrance_1F_Text_ExcuseMe
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	delay 20
+	compare VAR_0x8008, 1
+	call_if_eq Route18_EastEntrance_1F_EventScript_PlayerWalkToCounterMidTop
+	compare VAR_0x8008, 2
+	call_if_eq Route18_EastEntrance_1F_EventScript_PlayerWalkToCounterMid
+	compare VAR_0x8008, 3
+	call_if_eq Route18_EastEntrance_1F_EventScript_PlayerWalkToCounterMidBottom
+	compare VAR_0x8008, 4
+	call_if_eq Route18_EastEntrance_1F_EventScript_PlayerWalkToCounterBottom
+	msgbox Route18_EastEntrance_1F_Text_NeedBicycleForCyclingRoad
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Route18_EastEntrance_1F_Movement_WalkRight
+	waitmovement 0
+	releaseall
+	end
+
+Route18_EastEntrance_1F_EventScript_PlayerWalkToCounterMidTop::
+	applymovement OBJ_EVENT_ID_PLAYER, Route18_EastEntrance_1F_Movement_WalkUp
+	waitmovement 0
+	return
+
+Route18_EastEntrance_1F_EventScript_PlayerWalkToCounterMid::
+	applymovement OBJ_EVENT_ID_PLAYER, Route18_EastEntrance_1F_Movement_WalkUp2
+	waitmovement 0
+	return
+
+Route18_EastEntrance_1F_EventScript_PlayerWalkToCounterMidBottom::
+	applymovement OBJ_EVENT_ID_PLAYER, Route18_EastEntrance_1F_Movement_WalkUp3
+	waitmovement 0
+	return
+
+Route18_EastEntrance_1F_EventScript_PlayerWalkToCounterBottom::
+	applymovement OBJ_EVENT_ID_PLAYER, Route18_EastEntrance_1F_Movement_WalkUp4
+	waitmovement 0
+	return
+
+Route18_EastEntrance_1F_Movement_WalkUp::
+	walk_up
+	step_end
+
+Route18_EastEntrance_1F_Movement_WalkUp2::
+	walk_up
+	walk_up
+	step_end
+
+Route18_EastEntrance_1F_Movement_WalkUp3::
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Route18_EastEntrance_1F_Movement_WalkUp4::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Route18_EastEntrance_1F_Movement_WalkRight::
+	walk_right
+	step_end
+
+Route18_EastEntrance_1F_Text_NeedBicycleForCyclingRoad::
+    .string "You need a Bicycle to go out on\n"
+    .string "Cycling Road!$"
+
+Route18_EastEntrance_1F_Text_CyclingRoadAllUphillFromHere::
+    .string "Cycling Road is all uphill from\n"
+    .string "here.$"
+
+Route18_EastEntrance_1F_Text_ExcuseMe::
+    .string "Excuse me!$"

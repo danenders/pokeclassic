@@ -14,6 +14,11 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
+      "direction": "left",
+      "offset": 0,
+      "map": "MAP_BATTLE_TOWER_EXTERIOR"
+    },
+    {
       "direction": "right",
       "offset": -10,
       "map": "MAP_VIRIDIAN_CITY"
@@ -23,7 +28,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BLUE",
       "in_connection": false,
-      "x": 25,
+      "x": 33,
       "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -37,7 +42,7 @@
   ],
   "warp_events": [
     {
-      "x": 8,
+      "x": 16,
       "y": 5,
       "elevation": 0,
       "dest_map": "MAP_ROUTE22_NORTH_ENTRANCE",
@@ -47,7 +52,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 33,
+      "x": 41,
       "y": 4,
       "elevation": 0,
       "var": "VAR_ROUTE_22_RIVAL_STATE",
@@ -56,7 +61,7 @@
     },
     {
       "type": "trigger",
-      "x": 33,
+      "x": 41,
       "y": 5,
       "elevation": 0,
       "var": "VAR_ROUTE_22_RIVAL_STATE",
@@ -65,7 +70,7 @@
     },
     {
       "type": "trigger",
-      "x": 33,
+      "x": 41,
       "y": 6,
       "elevation": 0,
       "var": "VAR_ROUTE_22_RIVAL_STATE",
@@ -74,7 +79,7 @@
     },
     {
       "type": "trigger",
-      "x": 33,
+      "x": 41,
       "y": 4,
       "elevation": 0,
       "var": "VAR_ROUTE_22_RIVAL_STATE",
@@ -83,7 +88,7 @@
     },
     {
       "type": "trigger",
-      "x": 33,
+      "x": 41,
       "y": 5,
       "elevation": 0,
       "var": "VAR_ROUTE_22_RIVAL_STATE",
@@ -92,7 +97,7 @@
     },
     {
       "type": "trigger",
-      "x": 33,
+      "x": 41,
       "y": 6,
       "elevation": 0,
       "var": "VAR_ROUTE_22_RIVAL_STATE",
@@ -103,7 +108,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 7,
+      "x": 15,
       "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",

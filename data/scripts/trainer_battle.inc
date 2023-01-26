@@ -10,6 +10,7 @@ EventScript_TrainerApproach::
 EventScript_TryDoNormalTrainerBattle::
 	lock
 	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	faceplayer
 	applymovement VAR_LAST_TALKED, Movement_RevealTrainer
 	waitmovement 0
 	specialvar VAR_RESULT, GetTrainerFlag
