@@ -14,17 +14,17 @@ Route22_OnResume:
 	end
 
 Route22_EventScript_EarlyRivalTriggerTop::
-	setobjectxyperm LOCALID_RIVAL, 25, 4
+	setobjectxyperm LOCALID_RIVAL, 33, 4
 	goto Route22_EventScript_EarlyRival
 	end
 
 Route22_EventScript_EarlyRivalTriggerMiddle::
-	setobjectxyperm LOCALID_RIVAL, 25, 5
+	setobjectxyperm LOCALID_RIVAL, 33, 5
 	goto Route22_EventScript_EarlyRival
 	end
 
 Route22_EventScript_EarlyRivalTriggerBottom::
-	setobjectxyperm LOCALID_RIVAL, 25, 6
+	setobjectxyperm LOCALID_RIVAL, 33, 6
 	goto Route22_EventScript_EarlyRival
 	end
 
