@@ -99,6 +99,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeruleanCity_Gym_EventScript_GymStatue"
+    },
+    {
+      "type": "hidden_item",
+      "x": 8,
+      "y": 3,
+      "elevation": 3,
+      "item": "ITEM_MYSTIC_WATER",
+      "flag": "FLAG_HIDDEN_ITEM_CERULEAN_GYM_MYSTIC_WATER"
     }
   ]
 }

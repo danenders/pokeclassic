@@ -529,7 +529,7 @@ SaffronCity_Dojo_KarateMaster::
 	waitse
 	msgbox SaffronCity_Dojo_Text_WorthyChallenger, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SaffronCity_Dojo_RefuseChallenge
-	trainerbattle_single SAFFRON_DOJO_MASTER, SaffronCity_Dojo_Text_MasterIntro, SaffronCity_Dojo_Text_MasterDefeat, SaffronCity_Dojo_GetBlackBelt
+	trainerbattle_single SAFFRON_DOJO_MASTER, SaffronCity_Dojo_Text_MasterIntro, SaffronCity_Dojo_Text_MasterDefeat, SaffronCity_Dojo_GetExpertBelt
 	end
 
 SaffronCity_Dojo_Text_MasterIntro::
@@ -538,10 +538,10 @@ SaffronCity_Dojo_Text_MasterIntro::
 SaffronCity_Dojo_Text_MasterDefeat::
 	.string "What! I was defeated?$"
 
-SaffronCity_Dojo_GetBlackBelt::
+SaffronCity_Dojo_GetExpertBelt::
 	msgbox SaffronCity_Dojo_Text_MustContinueTraining
-	giveitem ITEM_BLACK_BELT
-	setflag FLAG_RECEIVED_BLACK_BELT
+	giveitem ITEM_EXPERT_BELT
+	setflag FLAG_GOT_EXPERT_BELT
 	msgbox SaffronCity_Dojo_Text_MustTrain
 	release
 	end
@@ -549,7 +549,7 @@ SaffronCity_Dojo_GetBlackBelt::
 SaffronCity_Dojo_Text_MustContinueTraining::
 	.string "To recognize your victory over\n"
 	.string "the members of this Dojo, please\l"
-	.string "accept this Black Belt.$"
+	.string "accept this Expert Belt.$"
 
 SaffronCity_Dojo_MustTrainMore::
 	msgbox SaffronCity_Dojo_Text_MustTrain

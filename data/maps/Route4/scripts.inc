@@ -208,4 +208,8 @@ Route4_Text_TeamRocketFossils::
 	.string "Here's my Cell Phone number - call me\n"
 	.string "if you learn anything about Team Rocket!$"
 
+Route4_EventScript_PixieDust::
+	finditem ITEM_PIXIE_DUST, 1
+	release
+	end
 

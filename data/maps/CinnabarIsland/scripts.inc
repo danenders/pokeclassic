@@ -70,3 +70,13 @@ CinnabarIsland_Text_GymSign::
     .string "Cinnabar Island Pokémon Gym\n"
     .string "Leader: Blaine\l"
     .string "The Hotheaded Quiz Master!$"
+
+CinnabarIsland_EventScript_ShellBell::
+	finditem ITEM_SHELL_BELL, 1
+	release
+	end
+
+CinnabarIsland_EventScript_LightClay::
+	finditem ITEM_LIGHT_CLAY, 1
+	release
+	end

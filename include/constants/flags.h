@@ -160,13 +160,13 @@
 #define FLAG_GOT_PROTECTIVE_PADS            0x8E
 #define FLAG_GOT_BIG_ROOT           		0x8F
 #define FLAG_GOT_BLACK_SLUDGE          		0x90
-#define FLAG_UNUSED_0x091                   0x91
-#define FLAG_UNUSED_0x092                   0x92
-#define FLAG_UNUSED_0x093         			0x93
-#define FLAG_UNUSED_0x094       			0x94
-#define FLAG_UNUSED_0x095           		0x95
-#define FLAG_UNUSED_0x096           		0x96 
-#define FLAG_UNUSED_0x097               	0x97
+#define FLAG_GOT_SHELL_BELL                 0x91
+#define FLAG_GOT_LIGHT_CLAY                 0x92
+#define FLAG_GOT_PIXIE_DUST         	    0x93
+#define FLAG_GOT_SILK_SCARF       			0x94
+#define FLAG_GOT_EXPERT_BELT           		0x95
+#define FLAG_GOT_EVIOLITE           		0x96 
+#define FLAG_GOT_DESTINY_KNOT               0x97
 #define FLAG_UNUSED_0x098             		0x98
 #define FLAG_UNUSED_0x099    				0x99
 #define FLAG_UNUSED_0x09A  					0x9A
@@ -398,8 +398,10 @@
 #define FLAG_LOOKER_POSTGAME_COMPLETED       0x175
 #define FLAG_HIDE_SILPH_POSTGAME_ROCKET      0x176
 #define FLAG_HIDE_SILPH_POSTGAME_LOOKER      0x177
-#define FLAG_UNUSED_178                      0x178 
-#define FLAG_UNUSED_179                      0x179
+
+//Mew Quest
+#define FLAG_HIDE_CINNABAR_SEA_CAPTAIN       0x178 
+#define FLAG_HIDE_CINNABAR_SEA_CAPTAIN_HOUSE 0x179
 #define FLAG_UNUSED_17A                      0x17A
 #define FLAG_UNUSED_17B                      0x17B
 #define FLAG_UNUSED_17C                      0x17C
@@ -640,10 +642,10 @@
 #define FLAG_HIDDEN_ITEM_SEAFOAM_ISALNDS_NEVER_MELT_ICE                           (FLAG_HIDDEN_ITEMS_START + 0x68)
 #define FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_ICY_ROCK 			                      (FLAG_HIDDEN_ITEMS_START + 0x69)
 #define FLAG_HIDDEN_ITEM_SAFARI_ZONE_DAMP_ROCK   			                      (FLAG_HIDDEN_ITEMS_START + 0x6A)
-#define FLAG_HIDDEN_ITEM_107         	(FLAG_HIDDEN_ITEMS_START + 0x6B)
-#define FLAG_HIDDEN_ITEM_108        	(FLAG_HIDDEN_ITEMS_START + 0x6C)
-#define FLAG_HIDDEN_ITEM_109           	(FLAG_HIDDEN_ITEMS_START + 0x6D)
-#define FLAG_HIDDEN_ITEM_110            (FLAG_HIDDEN_ITEMS_START + 0x6E)
+#define FLAG_HIDDEN_ITEM_CERULEAN_GYM_MYSTIC_WATER         	                      (FLAG_HIDDEN_ITEMS_START + 0x6B)
+#define FLAG_HIDDEN_ITEM_FUCHSIA_GYM_SMOKE_BALL        	                          (FLAG_HIDDEN_ITEMS_START + 0x6C)
+#define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_MIRACLE_SEED           	              (FLAG_HIDDEN_ITEMS_START + 0x6D)
+#define FLAG_HIDDEN_ITEM_POWER_PLANT_METAL_COAT                                   (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_111            (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
 #define FLAG_UNUSED_0x264  0x264 // Unused Flag
