@@ -7,7 +7,7 @@ CeruleanCity_House5_EventScript_BadgeGuy::
 	end
 
 CeruleanCity_House5_Text_BadgesHaveAmazingSecrets::
-	.string "Bades are more than just a cool pin!\p"
+	.string "Badges are more than just a cool pin!\p"
 	.string "A badge certifies a Trainer to use\n"
 	.string "certain Hidden Moves, like Flash or\l"
 	.string "Fly.\p"
