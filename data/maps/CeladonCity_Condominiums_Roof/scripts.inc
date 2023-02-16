@@ -52,6 +52,7 @@ CeladonCity_Condominiums_Roof_EventScript_RocketTrigger3::
 
 CeladonCity_Condominiums_Roof_EventScript_Rocket::
 	clearflag FLAG_HIDE_CELADON_ROOFTOP_ROCKET
+	addobject LOCALID_ROCKET
 	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	applymovement LOCALID_ROCKET, Movement_ApproachPlayerRooftop
 	waitmovement 5

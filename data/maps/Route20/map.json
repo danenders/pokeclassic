@@ -207,6 +207,22 @@
       "elevation": 3,
       "item": "ITEM_STARDUST",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE20_STARDUST"
+    },
+    {
+      "type": "sign",
+      "x": 68,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route20_EventScript_SeafoamIslandsSign"
+    },
+    {
+      "type": "sign",
+      "x": 64,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route20_EventScript_SeafoamIslandsSign"
     }
   ]
 }

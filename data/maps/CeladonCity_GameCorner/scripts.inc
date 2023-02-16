@@ -601,7 +601,7 @@ GameCorner_EventScript_Gentleman::
 	lock
 	faceplayer
 	goto_if_set FLAG_GOT_20_COINS_FROM_GAMBLER_2, GameCorner_EventScript_GentlemanAlreadyGotCoins
-	msgbox GameCorner_Text_HereAreSomeCoinsShoo
+	msgbox GameCorner_Text_HereAreSomeCoinsShoo, MSGBOX_DEFAULT
 	checkitem ITEM_COIN_CASE
 	goto_if_eq VAR_RESULT, FALSE, GameCorner_EventScript_GamblerNoCoinCase
 	checkcoins VAR_TEMP_1

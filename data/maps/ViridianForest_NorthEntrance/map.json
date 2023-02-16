@@ -16,6 +16,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "in_connection": false,
       "x": 5,
       "y": 4,
       "elevation": 3,
@@ -29,6 +30,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COOL_TRAINER_F",
+      "in_connection": false,
       "x": 10,
       "y": 5,
       "elevation": 3,
@@ -42,6 +44,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "in_connection": false,
       "x": 4,
       "y": 7,
       "elevation": 3,
