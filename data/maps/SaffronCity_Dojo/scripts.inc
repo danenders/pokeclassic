@@ -1,6 +1,7 @@
 .set LOCALID_MASTER, 3
 
 SaffronCity_Dojo_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SaffronCity_Dojo_OnTransition
 	.byte 0
 
 SaffronCity_Dojo_OnTransition::
@@ -221,14 +222,16 @@ SaffronCity_Dojo_EventScript_LeftScroll::
 	end
 
 SaffronCity_Dojo_Text_StrongOffense::
-    .string "A strong offense is the key to victory!$"
+    .string "A strong offense is\n"
+    .string "the key to victory!$"
 
 SaffronCity_Dojo_EventScript_RightScroll::
 	msgbox SaffronCity_Dojo_Text_StrongDefense, MSGBOX_SIGN
 	end
 
 SaffronCity_Dojo_Text_StrongDefense::
-    .string "A strong defense is the key to survival!$"
+    .string "A strong defense is\n"
+    .string "the key to survival!$"
 
 SaffronCity_Dojo_EventScript_AttackPupil::
 	goto_if_set FLAG_DOJO_ATTACK, SaffronCity_Dojo_EventScript_AttackPupilThirsty
