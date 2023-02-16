@@ -3762,7 +3762,7 @@
           "map": "MAP_ROUTE16",
           "base_label": "gRoute16_Day",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 22,
@@ -3851,7 +3851,7 @@
           "map": "MAP_ROUTE16",
           "base_label": "gRoute16_Night",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 22,
