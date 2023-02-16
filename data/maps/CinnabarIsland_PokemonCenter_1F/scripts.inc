@@ -29,8 +29,8 @@ CinnabarIsland_PokemonCenter_1F_EventScript_Youngster::
 
 CinnabarIsland_PokemonCenter_1F_Text_CinnabarGymLocked::
     .string "The Gym Leader's friend used to\n"
-    .string "live in that burned-out mansion\l,"
-    .string "they say.$"
+    .string "live in that burned-out mansion.\p"
+    .string "At least that's what they say.$"
 
 CinnabarIsland_PokemonCenter_1F_Text_VisitUnionRoom::
     .string "Do you have lots of friends?\p"

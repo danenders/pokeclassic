@@ -63,6 +63,14 @@ CinnabarIsland_EventScript_PokemonLabSign::
 CinnabarIsland_Text_PokemonLab::
     .string "Pokémon Lab$"
 
+CinnabarIsland_EventScript_PokemonMansionSign::
+	msgbox CinnabarIsland_Text_PokemonMansion, MSGBOX_SIGN
+	end
+
+CinnabarIsland_Text_PokemonMansion::
+    .string "Pokémon Mansion\n"
+    .string "NOTICE: CONDEMNED$"
+
 CinnabarIsland_EventScript_GymSign::
 	lockall
 	msgbox CinnabarIsland_Text_GymSign

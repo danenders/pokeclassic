@@ -1115,7 +1115,7 @@
 #define FLAG_HIDE_SAFARI_ZONE_WEST_MAX_REVIVE                       0x42E
 #define FLAG_HIDE_SAFARI_ZONE_WEST_GOLD_TEETH                       0x42F 
 #define FLAG_HIDE_ROUTE15_TM18                        				0x430
-#define FLAG_HIDE_SILPH_CO_CARD_KEY                           		0x431
+#define FLAG_UNUSED_431                           		            0x431
 #define FLAG_HIDE_SILPH_CO_3F_HYPER_POTION                         	0x432
 #define FLAG_HIDE_SILPH_CO_4F_FULL_HEAL    							0x433
 #define FLAG_HIDE_SILPH_CO_4F_ESCAPE_ROPE       					0x434

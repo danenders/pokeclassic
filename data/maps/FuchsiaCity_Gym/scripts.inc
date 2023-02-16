@@ -72,7 +72,7 @@ FuchsiaCity_Gym_Text_ReceivedBadge::
     .string "Badge from Koga!$"
 
 FuchsiaCity_Gym_Text_ExplainBadge::
-    .string "The Rainbow Badge will allow you\n"
+    .string "The Soul Badge will allow you\n"
    .string "to SURF outside of battle.$"
 
 FuchsiaCity_Gym_EventScript_GetTM::
