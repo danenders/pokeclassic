@@ -358,7 +358,7 @@ CeladonCity_DepartmentStore_Roof_Text_NotEnoughMoney::
     .string "Oops, not enough money!$"
 
 CeladonCity_DepartmentStore_Roof_Text_DrinkCanPoppedOut::
-    .string "A can of popped out!$"
+    .string "A can of {STR_VAR_1} popped out!$"
 
 CeladonCity_DepartmentStore_Roof_Text_NoMoreRoomForStuff::
     .string "There's no more room for stuff!$"
