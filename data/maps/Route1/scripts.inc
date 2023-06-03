@@ -1,5 +1,6 @@
 .set LOCALID_OAK, 1
 .set LOCALID_PIKACHU, 2
+.set LOCALID_FUGITIVE, 7
 
 Route1_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route1_OnTransition
@@ -180,3 +181,14 @@ Route1_EventScript_RouteSign::
 Route1_Text_RouteSign::
     .string "Route 1\n"
     .string "Pallet Town - Viridian City$"
+
+Route1_RocketFugitive::
+	trainerbattle_single TRAINER_FUGITIVE_F, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
+	msgbox RocketFugitive_Text_PostBattle, MSGBOX_AUTOCLOSE
+	setflag FLAG_ROCKET_FUGITIVE_CAPTURED
+	fadescreen FADE_TO_BLACK
+	playse SE_FLEE
+	removeobject LOCALID_FUGITIVE
+	waitse
+	fadescreen FADE_FROM_BLACK
+	end

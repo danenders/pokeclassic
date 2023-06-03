@@ -69,3 +69,9 @@ PokemonMansion_3F_EventScript_ItemCharcoal::
 	finditem ITEM_CHARCOAL, 1
 	release
 	end
+
+PokemonMansion_3F_EventScript_CharizarditeY::
+	finditem ITEM_CHARIZARDITE_Y, 1
+	release
+	end
+

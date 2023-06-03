@@ -2,6 +2,7 @@
 .set LOCALID_GYM_GUIDE, 5
 .set LOCALID_LADY, 14
 .set LOCALID_SLOWPOKE, 13
+.set LOCALID_FUGITIVE, 15
 
 @VAR_PEWTER_CITY_STATE
 @0 = Brock Undefeated
@@ -1425,4 +1426,15 @@ PewterCity_EventScript_Slowpoke::
 	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	release
 	end
+	end
+
+PewterCity_RocketFugitive::
+	trainerbattle_single TRAINER_FUGITIVE_M, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
+	msgbox RocketFugitive_Text_PostBattle, MSGBOX_AUTOCLOSE
+	setflag FLAG_ROCKET_FUGITIVE_CAPTURED
+	fadescreen FADE_TO_BLACK
+	playse SE_FLEE
+	removeobject LOCALID_FUGITIVE
+	waitse
+	fadescreen FADE_FROM_BLACK
 	end

@@ -1,3 +1,5 @@
+.set LOCALID_FUGITIVE, 12
+
 Route20_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route20_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, Route20_OnResume
@@ -87,6 +89,10 @@ Route20_Text_DarrinDefeat::
 Route20_Text_DarrinPostBattle::
     .string "Riding a Pokémon sure looks fun!$"
 
+Route20_EventScript_Slowbronite::
+	finditem ITEM_SLOWBRONITE, 1
+	release
+	end
 
 Route20_EventScript_Tiffany::
 	trainerbattle_single TRAINER_SWIMMER_FEMALE_TIFFANY, Route20_Text_TiffanyIntro, Route20_Text_TiffanyDefeat
@@ -245,3 +251,13 @@ Route20_Text_MistyTrainsHere::
     .string "They say that Misty of the\n"
     .string "Cerulean Gym trains here.$"
 
+Route20_RocketFugitive::
+    trainerbattle_single TRAINER_FUGITIVE_M, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
+    msgbox RocketFugitive_Text_PostBattle, MSGBOX_AUTOCLOSE
+    setflag FLAG_ROCKET_FUGITIVE_CAPTURED
+    fadescreen FADE_TO_BLACK
+    playse SE_FLEE
+    removeobject LOCALID_FUGITIVE
+    waitse
+    fadescreen FADE_FROM_BLACK
+    end

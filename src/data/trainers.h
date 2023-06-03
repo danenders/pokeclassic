@@ -5854,4 +5854,44 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_TitleMatchAnnie),
         .party = {.NoItemCustomMoves = sParty_TitleMatchAnnie}
     },
+
+    [TRAINER_FUGITIVE_F] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_F,
+        .trainerName = _("Fugitive"),
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_FugitiveF),
+        .party = {.NoItemDefaultMoves = sParty_FugitiveF}
+    },
+
+    [TRAINER_FUGITIVE_M] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+        .trainerName = _("Fugitive"),
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_FugitiveM),
+        .party = {.NoItemDefaultMoves = sParty_FugitiveM}
+    },
+
+    [TRAINER_FUGITIVE_JESSIE_JAMES] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_ROCKET_DUO,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_DUO,
+        .trainerName = _("Fugitives"),
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_FugitiveJessieJames),
+        .party = {.NoItemDefaultMoves = sParty_FugitiveJessieJames}
+    },
+
 };

@@ -14,6 +14,11 @@ PokemonTower_6F_EventScript_ItemRareCandy::
 	release
 	end
 
+PokemonTower_6F_EventScript_Gengarite::
+	finditem ITEM_GENGARITE, 1
+	release
+	end
+
 PokemonTower_6F_EventScript_Angelica::
 	trainerbattle_single TRAINER_CHANNELER_ANGELICA, PokemonTower_6F_Text_AngelicaIntro, PokemonTower_6F_Text_AngelicaDefeat
 	msgbox PokemonTower_6F_Text_AngelicaPostBattle, MSGBOX_AUTOCLOSE

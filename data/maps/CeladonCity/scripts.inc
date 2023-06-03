@@ -1,5 +1,6 @@
 .set LOCALID_FAT_MAN,   1
 .set LOCALID_POLIWRATH, 2
+.set LOCALID_FUGITIVE, 17
 
 CeladonCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, CeladonCity_OnTransition
@@ -221,3 +222,14 @@ CeladonCity_EventScript_GameCornerSign::
 CeladonCity_Text_GameCornerSign::
     .string "Rocket Game Corner\n"
     .string "Blast Off to a World of Riches!$"
+
+CeladonCity_RocketFugitive::
+    trainerbattle_single TRAINER_FUGITIVE_F, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
+    msgbox RocketFugitive_Text_PostBattle, MSGBOX_AUTOCLOSE
+    setflag FLAG_ROCKET_FUGITIVE_CAPTURED
+    fadescreen FADE_TO_BLACK
+    playse SE_FLEE
+    removeobject LOCALID_FUGITIVE
+    waitse
+    fadescreen FADE_FROM_BLACK
+    end

@@ -1,3 +1,5 @@
+.set LOCALID_FUGITIVE, 13
+
 Route19_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route19_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, Route19_OnResume
@@ -257,3 +259,15 @@ Route19_Text_LucNotEnoughMons::
     .string "Luc: I don't want to if I can't\n"
     .string "battle you with my big sis.\p"
     .string "Don't you have two Pokémon?$"
+
+Route19_RocketFugitive::
+    trainerbattle_single TRAINER_FUGITIVE_M, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
+    msgbox RocketFugitive_Text_PostBattle, MSGBOX_AUTOCLOSE
+    setflag FLAG_ROCKET_FUGITIVE_CAPTURED
+    fadescreen FADE_TO_BLACK
+    playse SE_FLEE
+    removeobject LOCALID_FUGITIVE
+    waitse
+    fadescreen FADE_FROM_BLACK
+    end
+

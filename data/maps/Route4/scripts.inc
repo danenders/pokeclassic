@@ -1,7 +1,8 @@
 .set LOCALID_JENNY_1, 7
 .set LOCALID_JENNY_2, 8
 .set LOCALID_LOOKER, 9
-
+.set LOCALID_FUGITIVE_F, 15
+.set LOCALID_FUGITIVE_M, 16
 
 Route4_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route4_OnTransition
@@ -213,3 +214,24 @@ Route4_EventScript_PixieDust::
 	release
 	end
 
+Route4_RocketFugitiveF::
+	trainerbattle_single TRAINER_FUGITIVE_F, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
+	msgbox RocketFugitive_Text_PostBattle, MSGBOX_AUTOCLOSE
+	setflag FLAG_ROCKET_FUGITIVE_CAPTURED
+	fadescreen FADE_TO_BLACK
+	playse SE_FLEE
+	removeobject LOCALID_FUGITIVE_F
+	waitse
+	fadescreen FADE_FROM_BLACK
+	end
+
+Route4_RocketFugitiveM::
+	trainerbattle_single TRAINER_FUGITIVE_M, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
+	msgbox RocketFugitive_Text_PostBattle, MSGBOX_AUTOCLOSE
+	setflag FLAG_ROCKET_FUGITIVE_CAPTURED
+	fadescreen FADE_TO_BLACK
+	playse SE_FLEE
+	removeobject LOCALID_FUGITIVE_M
+	waitse
+	fadescreen FADE_FROM_BLACK
+	end

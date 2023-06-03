@@ -29,3 +29,8 @@ SafariZone_Center_EventScript_ItemNugget::
 	finditem ITEM_NUGGET, 1
 	release
 	end
+
+SafariZone_Center_EventScript_Pinsirte::
+	finditem ITEM_PINSIRITE, 1
+	release
+	end

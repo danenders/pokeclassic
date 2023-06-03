@@ -1,3 +1,5 @@
+.set LOCALID_FUGITIVE, 6 
+
 Route18_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route18_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, Route18_OnResume
@@ -116,3 +118,14 @@ Route18_Text_WiltonRematchIntro::
 Route18_Text_WiltonRematchPostBattle::
 	.string "If I had a bike, I could go\n"
 	.string "search for Pokémon anywhere!$"
+
+Route18_RocketFugitive::
+    trainerbattle_single TRAINER_FUGITIVE_M, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
+    msgbox RocketFugitive_Text_PostBattle, MSGBOX_AUTOCLOSE
+    setflag FLAG_ROCKET_FUGITIVE_CAPTURED
+    fadescreen FADE_TO_BLACK
+    playse SE_FLEE
+    removeobject LOCALID_FUGITIVE
+    waitse
+    fadescreen FADE_FROM_BLACK
+    end

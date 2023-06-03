@@ -597,3 +597,7 @@ VermilionCity_EventScript_Squirtle::
 VermilionCity_Text_SquirtleGlasses::
 	.string "Is that Squirtle wearing sunglasses?$"
 	
+VermilionCity_EventScript_Blastoisinite::
+	finditem ITEM_BLASTOISINITE, 1
+	release
+	end

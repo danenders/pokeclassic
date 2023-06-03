@@ -33,8 +33,60 @@ Route8_WestEntrance_EventScript_GuardThirsty::
 	removeitem ITEM_TEA, 1
 	setflag FLAG_DAILY_GUARD_TEA
 	msgbox Route8_WestEntrance_Text_ThanksIllShareTeaWithGuards, MSGBOX_NPC
+	random 3
+	goto_if_eq VAR_RESULT, 0, GateGuard_GiveNugget
+	goto_if_eq VAR_RESULT, 1, GateGuard_GiveStone
+	goto_if_eq VAR_RESULT, 2, GateGuard_ResetSnorlax1
+	goto_if_eq VAR_RESULT, 3, GateGuard_ResetSnorlax2
+	end
+
+GateGuard_GiveNugget::
+	msgbox GateGuard_Text_FoundThis, MSGBOX_NPC
+	giveitem ITEM_NUGGET, 1
 	release
 	end
+
+GateGuard_GiveStone::
+	msgbox GateGuard_Text_FoundThis, MSGBOX_NPC
+	giveitem ITEM_POWER_STONE, 1
+	release
+	end
+
+GateGuard_Text_FoundThis::
+	.string "Hey, since you shared your\n"
+	.string "Tea with me, why don't you\l"
+	.string "take this?\p"
+	.string "It's been in the Lost & Found\n"
+	.string "forever, I don't think anyone\l"
+	.string "is going to claim it!$"
+
+GateGuard_ResetSnorlax1::
+	goto_if_unset FLAG_HIDE_ROUTE12_SNORLAX, GateGuard_GiveNugget
+	msgbox GateGuard_Text_SnorlaxLavender, MSGBOX_NPC
+	clearflag FLAG_HIDE_ROUTE12_SNORLAX
+	release
+	end
+
+GateGuard_Text_SnorlaxLavender:
+	.string "Oh, did you hear?\p"
+	.string "A huge Pokémon was seen\n"
+	.string "sleeping in the road near\l"
+	.string "Lavender Town!\p"
+	.string "I wish I could nap like that.$"
+
+GateGuard_ResetSnorlax2::
+	goto_if_unset FLAG_HIDE_ROUTE16_SNORLAX, GateGuard_GiveStone
+	msgbox GateGuard_Text_SnorlaxCyclingRoad, MSGBOX_NPC
+	clearflag FLAG_HIDE_ROUTE16_SNORLAX
+	release
+	end
+
+GateGuard_Text_SnorlaxCyclingRoad::
+	.string "Oh, did you hear?\p"
+	.string "A huge Pokémon was seen\n"
+	.string "sleeping in the road near\l"
+	.string "Celadon City!\p"
+	.string "I wish I could nap like that.$"
 
 Route8_WestEntrance_Text_ThirstyOnGuardDuty::
     .string "I'm on guard duty.\n"

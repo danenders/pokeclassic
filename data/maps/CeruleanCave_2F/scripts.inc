@@ -15,3 +15,13 @@ CeruleanCave_2F_EventScript_ItemPPUp::
 	finditem ITEM_PP_UP, 1
 	release
 	end
+
+CeruleanCave_2F_EventScript_MewtoniteY::
+	finditem ITEM_MEWTWONITE_Y, 1
+	release
+	end
+
+CeruleanCave_2F_EventScript_MewtoniteX::
+	finditem ITEM_MEWTWONITE_X, 1
+	release
+	end

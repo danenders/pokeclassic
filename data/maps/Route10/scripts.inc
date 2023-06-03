@@ -1,3 +1,5 @@
+.set LOCALID_FUGITIVE, 18
+
 Route10_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route10_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, Route10_OnResume
@@ -236,3 +238,14 @@ Route10_Text_BerryPrepared::
 	.string "You could say I'm berry prepared.\p"
 	.string "...\p"
 	.string "Get it?$"
+
+Route10_RocketFugitive::
+	trainerbattle_single TRAINER_FUGITIVE_F, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
+	msgbox RocketFugitive_Text_PostBattle, MSGBOX_AUTOCLOSE
+	setflag FLAG_ROCKET_FUGITIVE_CAPTURED
+	fadescreen FADE_TO_BLACK
+	playse SE_FLEE
+	removeobject LOCALID_FUGITIVE
+	waitse
+	fadescreen FADE_FROM_BLACK
+	end

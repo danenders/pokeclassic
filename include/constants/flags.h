@@ -167,9 +167,9 @@
 #define FLAG_GOT_EXPERT_BELT           		0x95
 #define FLAG_GOT_EVIOLITE           		0x96 
 #define FLAG_GOT_DESTINY_KNOT               0x97
-#define FLAG_UNUSED_0x098             		0x98
-#define FLAG_UNUSED_0x099    				0x99
-#define FLAG_UNUSED_0x09A  					0x9A
+#define FLAG_GOT_MEGA_RING                  0x98 //Got the Mega Ring from Oak
+#define FLAG_REVEALED_MEGA_STONES    		0x99 //Stones are revealed after beating Prof Oak for the first time
+#define FLAG_HIDE_PALLET_BILL 			    0x9A
 #define FLAG_UNUSED_0x09B     				0x9B
 #define FLAG_UNUSED_0x09C      				0x9C
 #define FLAG_UNUSED_0x09D      				0x9D
@@ -398,47 +398,50 @@
 #define FLAG_LOOKER_POSTGAME_COMPLETED       0x175
 #define FLAG_HIDE_SILPH_POSTGAME_ROCKET      0x176
 #define FLAG_HIDE_SILPH_POSTGAME_LOOKER      0x177
+#define FLAG_HIDE_LOOKER_CELADON             0x178
+#define FLAG_LOOKER_EXPLAINED_QUESTS         0x179
+#define FLAG_LOOKER_ASSIGNMENT_ACTIVE        0x17A
+#define FLAG_ROCKET_FUGITIVE_CAPTURED        0x17B
+
+//Fugitives
+#define FLAG_ROCKET_FUGITIVE_PALLET_1        0x17C
+#define FLAG_ROCKET_FUGITIVE_PALLET_2        0x17D
+#define FLAG_ROCKET_FUGITIVE_VIRIDIAN_1      0x17E
+#define FLAG_ROCKET_FUGITIVE_VIRIDIAN_2      0x17F
+#define FLAG_ROCKET_FUGITIVE_PEWTER_1        0x180
+#define FLAG_ROCKET_FUGITIVE_PEWTER_2        0x181
+#define FLAG_ROCKET_FUGITIVE_CERULEAN_1      0x182
+#define FLAG_ROCKET_FUGITIVE_CERULEAN_2      0x183
+#define FLAG_ROCKET_FUGITIVE_CERULEAN_3      0x184
+#define FLAG_ROCKET_FUGITIVE_LAVENDER_1      0x185
+#define FLAG_ROCKET_FUGITIVE_LAVENDER_2      0x186
+#define FLAG_ROCKET_FUGITIVE_VERMILION_1     0x187
+#define FLAG_ROCKET_FUGITIVE_VERMILION_2     0x188
+#define FLAG_ROCKET_FUGITIVE_VERMILION_3     0x189
+#define FLAG_ROCKET_FUGITIVE_CELADON_1       0x18A
+#define FLAG_ROCKET_FUGITIVE_CELADON_2       0x18B
+#define FLAG_ROCKET_FUGITIVE_FUCHSIA_1       0x18C
+#define FLAG_ROCKET_FUGITIVE_FUCHSIA_2       0x18D
+#define FLAG_ROCKET_FUGITIVE_FUCHSIA_3       0x18E
+#define FLAG_ROCKET_FUGITIVE_CINNABAR_1      0x18F
+#define FLAG_ROCKET_FUGITIVE_CINNABAR_2      0x190
+#define FLAG_ROCKET_FUGITIVE_SAFFRON_1       0x191
+#define FLAG_ROCKET_FUGITIVE_SAFFRON_2       0x192
+#define FLAG_ROCKET_FUGITIVE_SAFFRON_3       0x193
+#define FLAG_ROCKET_FUGITIVE_SAFFRON_4       0x194
+
+#define FLAG_UNUSED_197                      0x195
+#define FLAG_UNUSED_198                      0x196
+#define FLAG_UNUSED_199                      0x197
+#define FLAG_UNUSED_19A                      0x198
+#define FLAG_UNUSED_19B                      0x199
+#define FLAG_UNUSED_19C                      0x19A
+#define FLAG_UNUSED_19D                      0x19B 
+#define FLAG_UNUSED_19E                      0x19C 
 
 //Mew Quest
-#define FLAG_HIDE_CINNABAR_SEA_CAPTAIN       0x178 
-#define FLAG_HIDE_CINNABAR_SEA_CAPTAIN_HOUSE 0x179
-#define FLAG_UNUSED_17A                      0x17A
-#define FLAG_UNUSED_17B                      0x17B
-#define FLAG_UNUSED_17C                      0x17C
-#define FLAG_UNUSED_17D                      0x17D
-#define FLAG_UNUSED_17E                      0x17E
-#define FLAG_UNUSED_17F                      0x17F
-#define FLAG_UNUSED_180                      0x180
-#define FLAG_UNUSED_181                      0x181
-#define FLAG_UNUSED_182                      0x182
-#define FLAG_UNUSED_183                      0x183
-#define FLAG_UNUSED_184                      0x184
-#define FLAG_UNUSED_185                      0x185
-#define FLAG_UNUSED_186                      0x186
-#define FLAG_UNUSED_187                      0x187
-#define FLAG_UNUSED_188                      0x188
-#define FLAG_UNUSED_189                      0x189
-#define FLAG_UNUSED_18A                      0x18A
-#define FLAG_UNUSED_18B                      0x18B
-#define FLAG_UNUSED_18C                      0x18C
-#define FLAG_UNUSED_18D                      0x18D
-#define FLAG_UNUSED_18E                      0x18E
-#define FLAG_UNUSED_18F                      0x18F
-#define FLAG_UNUSED_190                      0x190
-#define FLAG_UNUSED_191                      0x191
-#define FLAG_UNUSED_192                      0x192
-#define FLAG_UNUSED_193                      0x193
-#define FLAG_UNUSED_194                      0x194
-#define FLAG_UNUSED_195                      0x195
-#define FLAG_UNUSED_196                      0x196
-#define FLAG_UNUSED_197                      0x197
-#define FLAG_UNUSED_198                      0x198
-#define FLAG_UNUSED_199                      0x199
-#define FLAG_UNUSED_19A                      0x19A
-#define FLAG_UNUSED_19B                      0x19B
-#define FLAG_UNUSED_19C                      0x19C
-#define FLAG_UNUSED_19D                      0x19D 
-#define FLAG_UNUSED_19E                      0x19E 
+#define FLAG_HIDE_CINNABAR_SEA_CAPTAIN       0x19D 
+#define FLAG_HIDE_CINNABAR_SEA_CAPTAIN_HOUSE 0x19E
 
 // Mew Flags
 #define FLAG_CAUGHT_MEW                  	 0x19F
@@ -1198,21 +1201,23 @@
 #define FLAG_UNUSED_ITEM_0x481                            			0x481
 #define FLAG_UNUSED_ITEM_0x482                             			0x482
 #define FLAG_UNUSED_ITEM_0x483                             			0x483
-#define FLAG_UNUSED_ITEM_0x484                                 		0x484
-#define FLAG_UNUSED_ITEM_0x485                              		0x485
-#define FLAG_UNUSED_ITEM_0x486                                 		0x486
-#define FLAG_UNUSED_ITEM_0x487                             			0x487
-#define FLAG_UNUSED_ITEM_0x488                           			0x488
-#define FLAG_UNUSED_ITEM_0x489                                  	0x489
-#define FLAG_UNUSED_ITEM_0x48A                            			0x48A
-#define FLAG_UNUSED_ITEM_0x48B                            			0x48B
-#define FLAG_UNUSED_ITEM_0x48C                  	 				0x48C
-#define FLAG_UNUSED_ITEM_0x48D                  					0x48D
-#define FLAG_UNUSED_ITEM_0x48E                       				0x48E
-#define FLAG_UNUSED_ITEM_0x48F                        				0x48F
-#define FLAG_UNUSED_ITEM_0x490                       				0x490
-#define FLAG_UNUSED_ITEM_0x491                     					0x491
-#define FLAG_UNUSED_ITEM_0x492                  					0x492
+
+//Mega Stones
+#define FLAG_HIDE_VENUSAURITE                                		0x484
+#define FLAG_HIDE_CHARIZARDITE_X                              		0x485
+#define FLAG_HIDE_CHARIZARDITE_Y                                 	0x486
+#define FLAG_HIDE_BLASTOISINTE                             			0x487
+#define FLAG_HIDE_BEEDRILLITE                          			    0x488
+#define FLAG_HIDE_PIDEGOTITE                                  	    0x489
+#define FLAG_HIDE_ALAKAZITE                            			    0x48A
+#define FLAG_HIDE_SLOWBRONITE                            			0x48B
+#define FLAG_HIDE_GENGARITE                 	 				    0x48C
+#define FLAG_HIDE_KANGASKHANITE                 					0x48D
+#define FLAG_HIDE_PINSIRITE                       				    0x48E
+#define FLAG_HIDE_GYARDOSITE                        				0x48F
+#define FLAG_HIDE_AERODACTYLITE                       				0x490
+#define FLAG_HIDE_MEWTONITE_Y                     					0x491
+#define FLAG_HIDE_MEWTONITE_X                  					    0x492
 
 #define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
 #define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
@@ -1601,7 +1606,8 @@
 
 #define FLAG_DAILY_PREZ_BATTLE                      (DAILY_FLAGS_START + 0x1B) // Battle the SilphCo Prez once per day to earn a Master Ball.
 
-#define FLAG_UNUSED_0x93C                           (DAILY_FLAGS_START + 0x1C) // Unused Flag
+#define FLAG_DAILY_ROCKET_FUGITIVE                  (DAILY_FLAGS_START + 0x1C) // Unused Flag
+
 #define FLAG_UNUSED_0x93D                           (DAILY_FLAGS_START + 0x1D) // Unused Flag
 #define FLAG_UNUSED_0x93E                           (DAILY_FLAGS_START + 0x1E) // Unused Flag
 #define FLAG_UNUSED_0x93F                           (DAILY_FLAGS_START + 0x1F) // Unused Flag

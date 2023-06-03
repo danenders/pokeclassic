@@ -206,6 +206,48 @@
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_2_BELUE_1",
       "script": "BerryTreeScript",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_M",
+      "in_connection": false,
+      "x": 17,
+      "y": 75,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "Route2_RocketFugitiveM",
+      "flag": "FLAG_ROCKET_FUGITIVE_VIRIDIAN_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_F",
+      "in_connection": false,
+      "x": 14,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "Route2_RocketFugitiveF",
+      "flag": "FLAG_ROCKET_FUGITIVE_PEWTER_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_AMBER",
+      "in_connection": false,
+      "x": 20,
+      "y": 76,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route2_FindItem_Pidgeotite",
+      "flag": "FLAG_HIDE_PIDEGOTITE"
     }
   ],
   "warp_events": [

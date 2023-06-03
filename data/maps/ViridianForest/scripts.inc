@@ -192,3 +192,6 @@ ViridianForest_EventScript_ItemPokeBall::
 	finditem ITEM_POKE_BALL, 1
 	end
 
+ViridianForest_EventScript_Beedrillite::
+    finditem ITEM_BEEDRILLITE, 1
+    end

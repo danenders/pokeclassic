@@ -404,6 +404,7 @@ SilphCo_11F_EventScript_PostgameRocket::
 	setflag	FLAG_HIDE_SILPH_POSTGAME_ROCKET
 	setflag	FLAG_HIDE_SILPH_POSTGAME_LOOKER
 	setflag FLAG_LOOKER_POSTGAME_COMPLETED
+	clearflag FLAG_HIDE_LOOKER_CELADON
 	removeobject LOCALID_LOOKER
 	removeobject LOCALID_ROCKET_LEADER
 	fadedefaultbgm

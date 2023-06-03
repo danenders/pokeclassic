@@ -1,4 +1,5 @@
 .set LOCALID_DAYCARE_WOMAN, 1
+.set LOCALID_FUGITIVE, 11
 
 Route5_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route5_OnFrame
@@ -164,3 +165,14 @@ Route5_EventScript_BerryGuy::
 Route5_Text_FriendshipBerries:
 	.string "I've heard there are berries that\n"
 	.string "make a Pokémon more friendly.$"
+
+Route5_RocketFugitive::
+	trainerbattle_single TRAINER_FUGITIVE_M, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
+	msgbox RocketFugitive_Text_PostBattle, MSGBOX_AUTOCLOSE
+	setflag FLAG_ROCKET_FUGITIVE_CAPTURED
+	fadescreen FADE_TO_BLACK
+	playse SE_FLEE
+	removeobject LOCALID_FUGITIVE
+	waitse
+	fadescreen FADE_FROM_BLACK
+	end
