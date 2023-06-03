@@ -37,6 +37,10 @@ Route2_FindItem_ParlyzHeal::
 	finditem ITEM_PARALYZE_HEAL, 1
 	end
 
+Route2_FindItem_Pidgeotite::
+	finditem ITEM_PIDGEOTITE, 1
+	end
+
 Route2_RocketFugitiveM::
 	trainerbattle_single TRAINER_FUGITIVE_M, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
 	msgbox RocketFugitive_Text_PostBattle, MSGBOX_AUTOCLOSE

@@ -167,9 +167,9 @@
 #define FLAG_GOT_EXPERT_BELT           		0x95
 #define FLAG_GOT_EVIOLITE           		0x96 
 #define FLAG_GOT_DESTINY_KNOT               0x97
-#define FLAG_UNUSED_0x098                   0x98
-#define FLAG_UNUSED_0x099    				0x99
-#define FLAG_UNUSED_0x09A  					0x9A
+#define FLAG_GOT_MEGA_RING                  0x98 //Got the Mega Ring from Oak
+#define FLAG_REVEALED_MEGA_STONES    		0x99 //Stones are revealed after beating Prof Oak for the first time
+#define FLAG_HIDE_PALLET_BILL 			    0x9A
 #define FLAG_UNUSED_0x09B     				0x9B
 #define FLAG_UNUSED_0x09C      				0x9C
 #define FLAG_UNUSED_0x09D      				0x9D
@@ -1201,21 +1201,23 @@
 #define FLAG_UNUSED_ITEM_0x481                            			0x481
 #define FLAG_UNUSED_ITEM_0x482                             			0x482
 #define FLAG_UNUSED_ITEM_0x483                             			0x483
-#define FLAG_UNUSED_ITEM_0x484                                 		0x484
-#define FLAG_UNUSED_ITEM_0x485                              		0x485
-#define FLAG_UNUSED_ITEM_0x486                                 		0x486
-#define FLAG_UNUSED_ITEM_0x487                             			0x487
-#define FLAG_UNUSED_ITEM_0x488                           			0x488
-#define FLAG_UNUSED_ITEM_0x489                                  	0x489
-#define FLAG_UNUSED_ITEM_0x48A                            			0x48A
-#define FLAG_UNUSED_ITEM_0x48B                            			0x48B
-#define FLAG_UNUSED_ITEM_0x48C                  	 				0x48C
-#define FLAG_UNUSED_ITEM_0x48D                  					0x48D
-#define FLAG_UNUSED_ITEM_0x48E                       				0x48E
-#define FLAG_UNUSED_ITEM_0x48F                        				0x48F
-#define FLAG_UNUSED_ITEM_0x490                       				0x490
-#define FLAG_UNUSED_ITEM_0x491                     					0x491
-#define FLAG_UNUSED_ITEM_0x492                  					0x492
+
+//Mega Stones
+#define FLAG_HIDE_VENUSAURITE                                		0x484
+#define FLAG_HIDE_CHARIZARDITE_X                              		0x485
+#define FLAG_HIDE_CHARIZARDITE_Y                                 	0x486
+#define FLAG_HIDE_BLASTOISINTE                             			0x487
+#define FLAG_HIDE_BEEDRILLITE                          			    0x488
+#define FLAG_HIDE_PIDEGOTITE                                  	    0x489
+#define FLAG_HIDE_ALAKAZITE                            			    0x48A
+#define FLAG_HIDE_SLOWBRONITE                            			0x48B
+#define FLAG_HIDE_GENGARITE                 	 				    0x48C
+#define FLAG_HIDE_KANGASKHANITE                 					0x48D
+#define FLAG_HIDE_PINSIRITE                       				    0x48E
+#define FLAG_HIDE_GYARDOSITE                        				0x48F
+#define FLAG_HIDE_AERODACTYLITE                       				0x490
+#define FLAG_HIDE_MEWTONITE_Y                     					0x491
+#define FLAG_HIDE_MEWTONITE_X                  					    0x492
 
 #define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
 #define FLAG_UNUSED_0x494                                           0x494 // Unused Flag

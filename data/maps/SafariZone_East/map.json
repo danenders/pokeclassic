@@ -69,6 +69,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SafariZone_East_EventScript_ItemMaxPotion",
       "flag": "FLAG_HIDE_SAFARI_ZONE_EAST_MAX_POTION"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_AMBER",
+      "in_connection": false,
+      "x": 17,
+      "y": 18,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SafariZone_East_EventScript_Kangaskhanite",
+      "flag": "FLAG_HIDE_KANGASKHANITE"
     }
   ],
   "warp_events": [

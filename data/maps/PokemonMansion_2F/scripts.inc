@@ -76,3 +76,9 @@ PokemonMansion_2F_EventScript_ItemCalcium::
 	finditem ITEM_CALCIUM, 1
 	release
 	end
+
+PokemonMansion_2F_EventScript_CharizarditeX::
+	finditem ITEM_CHARIZARDITE_X, 1
+	release
+	end
+

@@ -737,3 +737,8 @@ CeruleanCity_Text_DexNavCall::
 	.string "forgot to show you something!\p"
 	.string "Come back to the Sea Cottage\n"
 	.string "sometime and I'll show you!$"
+
+CeruleanCity_EventScript_Venusaurite::
+	finditem ITEM_VENUSAURITE, 1
+	release
+	end

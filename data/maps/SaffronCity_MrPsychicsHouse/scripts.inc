@@ -4,6 +4,11 @@ SaffronCity_MrPsychicsHouse_MapScripts::
 SaffronCity_MrPsychicsHouse_EventScript_MrPsychic::
 	lock
 	faceplayer
+	goto_if_set FLAG_REVEALED_MEGA_STONES, SaffronCity_MrPsychicsHouse_EventScript_GetAlakazite
+	goto SaffronCity_MrPsychicsHouse_EventScript_GetPsychic
+	end
+
+SaffronCity_MrPsychicsHouse_EventScript_GetPsychic::
 	goto_if_set FLAG_GOT_TM29_FROM_MR_PSYCHIC, SaffronCity_MrPsychicsHouse_EventScript_AlreadyGotTM29
 	msgbox SaffronCity_MrPsychicsHouse_Text_YouWantedThis
 	checkitemspace ITEM_TM29, 1
@@ -13,6 +18,23 @@ SaffronCity_MrPsychicsHouse_EventScript_MrPsychic::
 	setflag FLAG_GOT_TM29_FROM_MR_PSYCHIC
 	release
 	end
+
+SaffronCity_MrPsychicsHouse_EventScript_GetAlakazite::
+	goto_if_set FLAG_HIDE_ALAKAZITE, SaffronCity_MrPsychicsHouse_EventScript_GetPsychic
+	msgbox SaffronCity_MrPsychicsHouse_Text_YouWantedThis
+	checkitemspace ITEM_ALAKAZITE, 1
+	goto_if_eq VAR_RESULT, FALSE, SaffronCity_MrPsychicsHouse_EventScript_NoRoomForTM29
+	giveitem ITEM_ALAKAZITE, 1
+	msgbox SaffronCity_MrPsychicsHouse_Text_ExplainAlakazite
+	setflag FLAG_HIDE_ALAKAZITE
+	release
+	end
+
+SaffronCity_MrPsychicsHouse_Text_ExplainAlakazite::
+	.string "You already know, don't you?\n"
+    .string "That stone is an Alakazite.\p"
+    .string "It's unlocks the ultimate psychic\n"
+    .string "potential of an Alakazam!$"
 
 SaffronCity_MrPsychicsHouse_EventScript_NoRoomForTM29::
 	msgbox SaffronCity_MrPsychicsHouse_Text_YouveNoRoom

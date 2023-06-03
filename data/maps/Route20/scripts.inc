@@ -89,6 +89,10 @@ Route20_Text_DarrinDefeat::
 Route20_Text_DarrinPostBattle::
     .string "Riding a Pokémon sure looks fun!$"
 
+Route20_EventScript_Slowbronite::
+	finditem ITEM_SLOWBRONITE, 1
+	release
+	end
 
 Route20_EventScript_Tiffany::
 	trainerbattle_single TRAINER_SWIMMER_FEMALE_TIFFANY, Route20_Text_TiffanyIntro, Route20_Text_TiffanyDefeat

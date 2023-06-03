@@ -44,3 +44,8 @@ SafariZone_East_EventScript_ItemTM11::
 	finditem ITEM_TM11, 1
 	release
 	end
+
+SafariZone_East_EventScript_Kangaskhanite::
+	finditem ITEM_KANGASKHANITE, 1
+	release
+	end

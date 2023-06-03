@@ -27,6 +27,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SafariZone_Center_EventScript_ItemNugget",
       "flag": "FLAG_HIDE_SAFARI_ZONE_CENTER_NUGGET"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_AMBER",
+      "in_connection": false,
+      "x": 15,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SafariZone_Center_EventScript_Pinsirte",
+      "flag": "FLAG_HIDE_PINSIRITE"
     }
   ],
   "warp_events": [

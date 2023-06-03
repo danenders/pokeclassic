@@ -1,4 +1,5 @@
 .set LOCALID_MOM, 1
+.set LOCALID_BILL, 2
 
 PalletTown_PlayersHouse_1F_MapScripts::
 	.byte 0
@@ -8,8 +9,26 @@ PalletTown_PlayersHouse_1F_EvenScripts_Mom::
 	faceplayer
 	goto_if_le VAR_ADVENTURE_BEGINS, 2, PalletTown_PlayersHouse_1F_EventScript_BetterHurry
 	goto_if_eq VAR_ADVENTURE_BEGINS, 3, PlayersHouse_1F_EventScript_PokenavScene
+	goto_if_eq VAR_SECRET_BATTLE_CLEAR, 2, PlayersHouse_1F_EventScript_BillVisiting
+	goto_if_eq VAR_SECRET_BATTLE_CLEAR, 3, PlayersHouse_1F_EventScript_AnotherAdventure
 	goto PalletTown_PlayersHouse_1F_EventScript_MomHeal
 	end
+
+PlayersHouse_1F_EventScript_BillVisiting::
+	msgbox PalletTown_PlayersHouse_1F_Text_BillVisiting, MSGBOX_DEFAULT
+	turnobject LOCALID_MOM, DIR_WEST
+	release
+	end
+
+PalletTown_PlayersHouse_1F_Text_BillVisiting::
+	.string "Mom: I didn't know you knew\n"
+	.string "the famous PokéManiac, honey!\p"
+	.string "He's such a gentleman!$"
+
+PlayersHouse_1F_EventScript_AnotherAdventure::
+	.string "Strange stones? Hidden potential?\p"
+	.string "The adventures never stop for you\n" 
+	.string "Pokémon trainers!$"
 
 PalletTown_PlayersHouse_1F_EventScript_BetterHurry::
 	msgbox PalletTown_PlayersHouse_1F_Text_BetterHurry, MSGBOX_DEFAULT
@@ -87,6 +106,78 @@ PlayersHouse_1F_EventScript_GameclearTrigger2::
 	setvar VAR_TEMP_1, 2
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	goto PlayersHouse_1F_EventScript_Gameclear
+
+PlayersHouse_1F_EventScript_DontLeaveYet::
+	lockall
+	turnobject LOCALID_MOM, DIR_SOUTH
+	turnobject LOCALID_BILL, DIR_SOUTH
+	playse SE_PIN
+	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
+	waitmovement 1
+	waitse
+	msgbox PlayersHouse_1F_Text_Visitor, MSGBOX_DEFAULT
+	waitmessage
+	turnobject LOCALID_MOM, DIR_WEST
+	turnobject LOCALID_BILL, DIR_EAST
+	release
+	end
+
+PlayersHouse_1F_EventScript_Bill::
+	lock
+	goto_if_set FLAG_GOT_MEGA_RING, PlayersHouse_1F_EventScript_Bill2
+	msgbox PlayersHouse_1F_Text_SomethingAmazing, MSGBOX_NPC
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	msgbox PlayersHouse_1F_Text_GetMegaRing, MSGBOX_DEFAULT
+	additem ITEM_MEGA_RING, 1
+	setflag FLAG_GOT_MEGA_RING
+	msgbox PlayersHouse_1F_Text_FindMegaStones, MSGBOX_NPC
+	setvar VAR_SECRET_BATTLE_CLEAR, 3
+	release
+	end
+
+PlayersHouse_1F_Text_SomethingAmazing::
+	.string "Hey, {PLAYER}!\n"
+	.string "I've discovered something amazing!\p"
+	.string "I was doing some research for my\n"
+	.string "Pokémon collection, when one of my\l"
+	.string "scanners picked up a strange reading.\p"
+	.string "It seems that some Pokémon may have\n"
+	.string "some hidden potential that we haven't\l"
+	.string "seen yet.\p"
+	.string "And this reading seems to be the key!\p"
+	.string "See, I found the source of the reading\n"
+	.string "near the Sea Cottage\p"
+	.string "It was a strange stone I'd never seen\n"
+	.string "before!\p"
+	.string "I brought it back to my lab, and I built\n"
+	.string "a device to draw out its power!\p"
+	.string "I want you to have it!$"
+
+PlayersHouse_1F_Text_GetMegaRing::
+	.string "Bill gave you a Mega Ring!$"
+
+PlayersHouse_1F_Text_FindMegaStones::
+	.string "According to my readings, there\n"
+	.string "are more of those stones hidden\l"
+	.string "across Kanto.\p"
+	.string "Now that you have the Mega Ring,\n"
+	.string "you should be able to see them!\p"
+	.string "We'll need to find a Mega Stone\n"
+	.string "to test my theory!$"
+
+PlayersHouse_1F_EventScript_Bill2::
+	msgbox PlayersHouse_1F_Text_MegaStones, MSGBOX_NPC
+	release
+	end
+
+PlayersHouse_1F_Text_MegaStones::
+	.string "Bill: We'll need to find a\n"
+	.string "Mega Stone to test my theory!$"
+
+PlayersHouse_1F_Text_Visitor::
+	.string "Mom: Where are you going, {PLAYER}?\p"
+	.string "Aren't you going to say hello\n"
+	.string "to our visitor?$"
 
 PlayersHouse_1F_EventScript_Gameclear::
 	lockall
@@ -177,3 +268,4 @@ Movement_MoveMomToTable2::
 	walk_left
 	walk_left
 	step_end
+

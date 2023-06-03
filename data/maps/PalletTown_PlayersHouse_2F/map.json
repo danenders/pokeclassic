@@ -233,6 +233,33 @@
       "var": "VAR_ADVENTURE_BEGINS",
       "var_value": "0",
       "script": "PlayersHouse_2F_EventScript_NewGameStart2"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_SECRET_BATTLE_CLEAR",
+      "var_value": "1",
+      "script": "PlayersHouse_2F_EventScript_PostGame1"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_SECRET_BATTLE_CLEAR",
+      "var_value": "1",
+      "script": "PlayersHouse_2F_EventScript_PostGame2"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_SECRET_BATTLE_CLEAR",
+      "var_value": "1",
+      "script": "PlayersHouse_2F_EventScript_PostGame3"
     }
   ],
   "bg_events": [

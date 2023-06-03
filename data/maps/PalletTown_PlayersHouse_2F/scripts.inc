@@ -45,6 +45,32 @@ PlayersHouse_2F_EventScript_NewGameStart1::
 	releaseall
 	end
 
+PlayersHouse_2F_EventScript_PostGame1::
+	lockall
+	addobject LOCALID_MOM
+	playse SE_DOOR
+	applymovement LOCALID_MOM, MomWalksUpstairs
+	waitmovement 1
+	playse SE_PIN
+	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
+	waitmovement 1
+	applymovement LOCALID_MOM, Common_Movement_Delay48
+	waitmovement 1
+	applymovement LOCALID_MOM, WalkToPlayer1
+	waitmovement 1
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	msgbox PalletTown_PlayersHouse_2F_Text_WeHaveAVisitor, MSGBOX_DEFAULT
+	applymovement LOCALID_MOM, WalkToStairs1
+	waitmovement 1
+	applymovement LOCALID_MOM, MomGoesDownstairs
+	waitmovement 1
+	setflag FLAG_HIDE_MOM_PLAYERS_ROOM
+	playse SE_EXIT
+	removeobject LOCALID_MOM
+	setvar VAR_SECRET_BATTLE_CLEAR, 2
+	releaseall
+	end
+
 PlayersHouse_2F_EventScript_NewGameStart2::
 	lockall
 	addobject LOCALID_MOM
@@ -74,6 +100,31 @@ PlayersHouse_2F_EventScript_NewGameStart2::
 	releaseall
 	end
 
+PlayersHouse_2F_EventScript_PostGame2::
+	lockall
+	addobject LOCALID_MOM
+	applymovement LOCALID_MOM, MomWalksUpstairsAlt
+	waitmovement 1
+	playse SE_PIN
+	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
+	waitmovement 1
+	applymovement LOCALID_MOM, Common_Movement_Delay48
+	waitmovement 1
+	applymovement LOCALID_MOM, WalkToPlayer2
+	waitmovement 1
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	msgbox PalletTown_PlayersHouse_2F_Text_WeHaveAVisitor, MSGBOX_DEFAULT
+	applymovement LOCALID_MOM, WalkToStairs2
+	waitmovement 1
+	applymovement LOCALID_MOM, MomGoesDownstairs
+	waitmovement 1
+	setflag FLAG_HIDE_MOM_PLAYERS_ROOM
+	playse SE_EXIT
+	removeobject LOCALID_MOM
+	setvar VAR_SECRET_BATTLE_CLEAR, 2
+	releaseall
+	end
+
 PlayersHouse_2F_EventScript_NewGameStart3::
 	lockall
 	addobject LOCALID_MOM
@@ -100,6 +151,31 @@ PlayersHouse_2F_EventScript_NewGameStart3::
 	playse SE_EXIT
 	removeobject LOCALID_MOM
 	setvar VAR_ADVENTURE_BEGINS, 1
+	releaseall
+	end
+
+PlayersHouse_2F_EventScript_PostGame3::
+	lockall
+	addobject LOCALID_MOM
+	applymovement LOCALID_MOM, MomWalksUpstairs
+	waitmovement 1
+	playse SE_PIN
+	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
+	waitmovement 1
+	applymovement LOCALID_MOM, Common_Movement_Delay48
+	waitmovement 1
+	applymovement LOCALID_MOM, WalkToPlayer3
+	waitmovement 1
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	msgbox PalletTown_PlayersHouse_2F_Text_WeHaveAVisitor, MSGBOX_DEFAULT
+	applymovement LOCALID_MOM, WalkToStairs3
+	waitmovement 1
+	applymovement LOCALID_MOM, MomGoesDownstairs
+	waitmovement 1
+	setflag FLAG_HIDE_MOM_PLAYERS_ROOM
+	playse SE_EXIT
+	removeobject LOCALID_MOM
+	setvar VAR_SECRET_BATTLE_CLEAR, 2
 	releaseall
 	end
 
@@ -173,6 +249,13 @@ MomGoesDownstairs:
 	walk_up
 	walk_left
 	step_end
+
+PalletTown_PlayersHouse_2F_Text_WeHaveAVisitor:
+	.string "Mom: {PLAYER}! I should have\p"
+	.string "known I'd find you playing\n"
+	.string "games up here again.\p"
+	.string "You should head downstairs.\n"
+	.string "Someone is here to see you!$"
 
 PalletTown_PlayersHouse_2F_Text_LookAtTheTime:
 	.string "Mom: {PLAYER}! There you are!\p"
