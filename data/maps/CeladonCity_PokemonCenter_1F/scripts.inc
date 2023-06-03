@@ -49,7 +49,7 @@ CeladonCity_Looker::
 	goto_if_unset FLAG_LOOKER_EXPLAINED_QUESTS, CeladonCity_Looker_ExplainDaily
 	goto_if_set FLAG_LOOKER_ASSIGNMENT_ACTIVE, Looker_CheckStatus
 	goto_if_set FLAG_ROCKET_FUGITIVE_CAPTURED, Looker_DailyCompleted
-	playse SE_PHONE_CALL
+	playse SE_POKENAV_CALL
 	waitse
 	playse SE_PIN
 	applymovement LOCALID_LOOKER, Common_Movement_ExclamationMark
@@ -63,16 +63,16 @@ CeladonCity_Looker::
 	call_if_eq VAR_FACING, DIR_WEST, Looker_FaceRight
 	call_if_eq VAR_FACING, DIR_NORTH, Looker_FaceDown
 	random 9
-	goto_if_equal VAR_RESULT, 9, Looker_Fugitive_Saffron
-	goto_if_equal VAR_RESULT, 8, Looker_Fugitive_Cinnabar
-	goto_if_equal VAR_RESULT, 7, Looker_Fugitive_Fuchsia
-	goto_if_equal VAR_RESULT, 6, Looker_Fugitive_Celadon
-	goto_if_equal VAR_RESULT, 5, Looker_Fugitive_Vermilion
-	goto_if_equal VAR_RESULT, 4, Looker_Fugitive_Lavender
-	goto_if_equal VAR_RESULT, 3, Looker_Fugitive_Cerulean
-	goto_if_equal VAR_RESULT, 2, Looker_Fugitive_Pewter
-	goto_if_equal VAR_RESULT, 1, Looker_Fugitive_Viridian
-	goto_if_equal VAR_RESULT, 0, Looker_Fugitive_Pallet
+	goto_if_eq VAR_RESULT, 9, Looker_Fugitive_Saffron
+	goto_if_eq VAR_RESULT, 8, Looker_Fugitive_Cinnabar
+	goto_if_eq VAR_RESULT, 7, Looker_Fugitive_Fuchsia
+	goto_if_eq VAR_RESULT, 6, Looker_Fugitive_Celadon
+	goto_if_eq VAR_RESULT, 5, Looker_Fugitive_Vermilion
+	goto_if_eq VAR_RESULT, 4, Looker_Fugitive_Lavender
+	goto_if_eq VAR_RESULT, 3, Looker_Fugitive_Cerulean
+	goto_if_eq VAR_RESULT, 2, Looker_Fugitive_Pewter
+	goto_if_eq VAR_RESULT, 1, Looker_Fugitive_Viridian
+	goto_if_eq VAR_RESULT, 0, Looker_Fugitive_Pallet
 	end
 
 Looker_Fugitive_Saffron::

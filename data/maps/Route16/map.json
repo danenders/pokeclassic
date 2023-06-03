@@ -288,7 +288,7 @@
       "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": ""
+      "script": "Route16_EventScript_CyclingRoadSign"
     },
     {
       "type": "sign",
@@ -296,7 +296,7 @@
       "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Route16_EventScript_CyclingRoadSign"
+      "script": "Route16_EventScript_RouteSign"
     }
   ]
 }
