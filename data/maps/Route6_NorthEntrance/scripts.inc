@@ -33,7 +33,11 @@ Route6_NorthEntrance_EventScript_GuardThirsty::
 	removeitem ITEM_TEA, 1
 	setflag FLAG_DAILY_GUARD_TEA
 	msgbox Route6_NorthEntrance_Text_ThanksIllShareTeaWithGuards, MSGBOX_NPC
-	release
+	random 3
+	goto_if_eq VAR_RESULT, 0, GateGuard_GiveNugget
+	goto_if_eq VAR_RESULT, 1, GateGuard_GiveStone
+	goto_if_eq VAR_RESULT, 2, GateGuard_ResetSnorlax1
+	goto_if_eq VAR_RESULT, 3, GateGuard_ResetSnorlax2
 	end
 
 Route6_NorthEntrance_Text_ThirstyOnGuardDuty::
