@@ -248,6 +248,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route14_EventScript_BigRoot",
       "flag": "FLAG_GOT_BIG_ROOT"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_F",
+      "in_connection": false,
+      "x": 9,
+      "y": 21,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "Route14_RocketFugitive",
+      "flag": "FLAG_ROCKET_FUGITIVE_FUCHSIA_2"
     }
   ],
   "warp_events": [

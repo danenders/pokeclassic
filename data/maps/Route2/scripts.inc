@@ -1,3 +1,6 @@
+.set LOCALID_FUGITIVE_M, 14
+.set LOCALID_FUGITIVE_F, 15
+
 Route2_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route2_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, Route2_OnResume
@@ -32,4 +35,26 @@ Route2_FindItem_Ether::
 
 Route2_FindItem_ParlyzHeal::
 	finditem ITEM_PARALYZE_HEAL, 1
+	end
+
+Route2_RocketFugitiveM::
+	trainerbattle_single TRAINER_FUGITIVE_M, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
+	msgbox RocketFugitive_Text_PostBattle, MSGBOX_AUTOCLOSE
+	setflag FLAG_ROCKET_FUGITIVE_CAPTURED
+	fadescreen FADE_TO_BLACK
+	playse SE_FLEE
+	removeobject LOCALID_FUGITIVE_M
+	waitse
+	fadescreen FADE_FROM_BLACK
+	end
+
+Route2_RocketFugitiveF::
+	trainerbattle_single TRAINER_FUGITIVE_F, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
+	msgbox RocketFugitive_Text_PostBattle, MSGBOX_AUTOCLOSE
+	setflag FLAG_ROCKET_FUGITIVE_CAPTURED
+	fadescreen FADE_TO_BLACK
+	playse SE_FLEE
+	removeobject LOCALID_FUGITIVE_F
+	waitse
+	fadescreen FADE_FROM_BLACK
 	end

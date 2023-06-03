@@ -43,6 +43,20 @@
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_7_LEPPA",
       "script": "BerryTreeScript",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_M",
+      "in_connection": false,
+      "x": 16,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "Route7_RocketFugitive",
+      "flag": "FLAG_ROCKET_FUGITIVE_CELADON_2"
     }
   ],
   "warp_events": [

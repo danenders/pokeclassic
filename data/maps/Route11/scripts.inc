@@ -1,3 +1,5 @@
+.set LOCALID_FUGITIVE, 18
+
 Route11_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route11_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, Route11_OnResume
@@ -247,3 +249,14 @@ Route11_EventScript_ItemAwakening::
 	finditem ITEM_AWAKENING, 1
 	release
 	end
+
+Route11_RocketFugitive::
+    trainerbattle_single TRAINER_FUGITIVE_M, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
+    msgbox RocketFugitive_Text_PostBattle, MSGBOX_AUTOCLOSE
+    setflag FLAG_ROCKET_FUGITIVE_CAPTURED
+    fadescreen FADE_TO_BLACK
+    playse SE_FLEE
+    removeobject LOCALID_FUGITIVE
+    waitse
+    fadescreen FADE_FROM_BLACK
+    end

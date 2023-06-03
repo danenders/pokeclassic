@@ -8463,3 +8463,72 @@ static const struct TrainerMonNoItemCustomMoves sParty_TitleMatchKev[] = {
         .moves = {MOVE_REST, MOVE_SLEEP_TALK, MOVE_SLUDGE_BOMB, MOVE_WILL_O_WISP},
     },
 };
+
+static const struct TrainerMonNoItemDefaultMoves sParty_FugitiveJessieJames[] = {
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_WEEZING,
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_ARBOK,
+    },
+    {
+        .iv = 200,
+        .lvl = 70,
+        .species = SPECIES_MEOWTH,
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_LICKITUNG,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_FugitiveM[] = {
+    {
+        .iv = 175,
+        .lvl = 60,
+        .species = SPECIES_ELECTRODE,
+    },
+    {
+        .iv = 175,
+        .lvl = 60,
+        .species = SPECIES_MUK,
+    },
+    {
+        .iv = 175,
+        .lvl = 60,
+        .species = SPECIES_GOLEM,
+    },
+    {
+        .iv = 175,
+        .lvl = 60,
+        .species = SPECIES_SCYTHER,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_FugitiveF[] = {
+    {
+        .iv = 175,
+        .lvl = 60,
+        .species = SPECIES_GOLBAT,
+    },
+    {
+        .iv = 175,
+        .lvl = 60,
+        .species = SPECIES_RATICATE,
+    },
+    {
+        .iv = 175,
+        .lvl = 60,
+        .species = SPECIES_RHYDON,
+    },
+    {
+        .iv = 175,
+        .lvl = 60,
+        .species = SPECIES_GYARADOS,
+    },
+};

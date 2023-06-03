@@ -35,20 +35,6 @@
       "flag": "FLAG_HIDE_SS_ANNE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
-      "in_connection": false,
-      "x": 31,
-      "y": 31,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "FLAG_HIDE_SS_TIDAL"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_MEW",
       "in_connection": false,
       "x": 56,
@@ -63,20 +49,6 @@
       "flag": "FLAG_HIDE_MEW_UNDER_TRUCK"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SCOTT",
-      "in_connection": false,
-      "x": 32,
-      "y": 11,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "FLAG_HIDE_VERMILION_HARBOR_SCOTT"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
       "in_connection": false,
       "x": 31,
@@ -89,6 +61,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SSAnne_Exterior_EventScript_Sailor",
       "flag": "FLAG_HIDE_VERMILION_HARBOR_SAILOR"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_F",
+      "in_connection": false,
+      "x": 58,
+      "y": 28,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "SSAnneExterior_RocketFugitive",
+      "flag": "FLAG_ROCKET_FUGITIVE_VERMILION_1"
     }
   ],
   "warp_events": [

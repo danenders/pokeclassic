@@ -220,6 +220,34 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route4_EventScript_PixieDust",
       "flag": "FLAG_GOT_PIXIE_DUST"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_F",
+      "in_connection": false,
+      "x": 78,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "Route4_RocketFugitiveF",
+      "flag": "FLAG_ROCKET_FUGITIVE_CERULEAN_2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_M",
+      "in_connection": false,
+      "x": 96,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "Route4_RocketFugitiveM",
+      "flag": "FLAG_ROCKET_FUGITIVE_CERULEAN_1"
     }
   ],
   "warp_events": [

@@ -1,3 +1,5 @@
+.set LOCALID_FUGITIVE, 19
+
 Route8_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route8_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, Route8_OnResume
@@ -271,3 +273,14 @@ Route8_Text_JarenDefeat::
 Route8_Text_JarenPostBattle::
     .string "Don't think you're all special and\n"
     .string "all just because of this.$"
+
+Route8_RocketFugitive::
+    trainerbattle_single TRAINER_FUGITIVE_M, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
+    msgbox RocketFugitive_Text_PostBattle, MSGBOX_AUTOCLOSE
+    setflag FLAG_ROCKET_FUGITIVE_CAPTURED
+    fadescreen FADE_TO_BLACK
+    playse SE_FLEE
+    removeobject LOCALID_FUGITIVE
+    waitse
+    fadescreen FADE_FROM_BLACK
+    end

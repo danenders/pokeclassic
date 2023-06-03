@@ -1,3 +1,5 @@
+.set LOCALID_FUGITIVE, 17
+
 Route14_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route14_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, Route14_OnResume
@@ -240,5 +242,16 @@ Route14_Text_JanNotEnoughMons::
 Route14_EventScript_BigRoot::
     finditem ITEM_BIG_ROOT, 1
     release
+    end
+
+Route14_RocketFugitive::
+    trainerbattle_single TRAINER_FUGITIVE_F, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
+    msgbox RocketFugitive_Text_PostBattle, MSGBOX_AUTOCLOSE
+    setflag FLAG_ROCKET_FUGITIVE_CAPTURED
+    fadescreen FADE_TO_BLACK
+    playse SE_FLEE
+    removeobject LOCALID_FUGITIVE
+    waitse
+    fadescreen FADE_FROM_BLACK
     end
 

@@ -1,3 +1,5 @@
+.set LOCALID_FUGITIVE, 9
+
 Route21_South_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route21_South_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, Route21_South_OnResume
@@ -137,3 +139,14 @@ Route21_South_Text_RolandDefeat::
 
 Route21_South_Text_RolandPostBattle::
 	.string "I'm sunburnt to a crisp!$"
+
+Route21S_RocketFugitive::
+    trainerbattle_single TRAINER_FUGITIVE_F, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
+    msgbox RocketFugitive_Text_PostBattle, MSGBOX_AUTOCLOSE
+    setflag FLAG_ROCKET_FUGITIVE_CAPTURED
+    fadescreen FADE_TO_BLACK
+    playse SE_FLEE
+    removeobject LOCALID_FUGITIVE
+    waitse
+    fadescreen FADE_FROM_BLACK
+    end

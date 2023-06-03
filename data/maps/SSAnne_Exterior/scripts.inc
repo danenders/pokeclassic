@@ -1,8 +1,7 @@
 .set LOCALID_SS_ANNE, 1
-.set LOCALID_SS_TIDAL, 2
-.set LOCALID_MEW, 3
-.set LOCALID_SCOTT, 4
-.set LOCALID_SAILOR, 5
+.set LOCALID_MEW, 2
+.set LOCALID_SAILOR, 3
+.set LOCALID_FUGITIVE, 4
 
 SSAnne_Exterior_MapScripts::
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, SSAnne_Exterior_OnWarp
@@ -124,3 +123,13 @@ SSAnne_Exterior_EventScript_MewNotUnderTruck::
 SSAnne_Exterior_Text_MewNotUnderTruck::
 	.string "There's nothing there...$"
 
+SSAnneExterior_RocketFugitive::
+    trainerbattle_single TRAINER_FUGITIVE_F, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
+    msgbox RocketFugitive_Text_PostBattle, MSGBOX_AUTOCLOSE
+    setflag FLAG_ROCKET_FUGITIVE_CAPTURED
+    fadescreen FADE_TO_BLACK
+    playse SE_FLEE
+    removeobject LOCALID_FUGITIVE
+    waitse
+    fadescreen FADE_FROM_BLACK
+    end
