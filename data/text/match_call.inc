@@ -569,10 +569,9 @@ MatchCall_EventScript_LookerPostgameReady::
 	waitmessage
 	delay 30
 	closemessage
-	@clearflag to show the postgame rockets
-
 	clearflag FLAG_QUEUE_LOOKER_POSTGAME_CALL
 	setflag FLAG_LOOKER_POSTGAME_STARTED
+	clearflag FLAG_HIDE_SILPH_POSTGAME_ROCKET
 	releaseall
 	end
 
