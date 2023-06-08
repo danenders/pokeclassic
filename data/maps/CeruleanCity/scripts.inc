@@ -14,10 +14,15 @@ CeruleanCity_MapScripts::
 
 CeruleanCity_OnTransition:
 	setflag FLAG_VISITED_CERULEAN_CITY
+	call_if_set FLAG_SYS_GAME_CLEAR, CeruleanCity_EventScript_ClearCeruleanCaveGuard
 	call_if_unset FLAG_GOT_SS_TICKET, CeruleanCity_EventScript_BlockExits
 	call_if_set FLAG_GOT_BULBASAUR,  CeruleanCity_EventScript_MoveBreederInside
 	call Common_EventScript_GetDayOrNight
 	end
+
+CeruleanCity_EventScript_ClearCeruleanCaveGuard::
+	setflag FLAG_HIDE_CERULEAN_CAVE_GUARD
+	return
 
 CeruleanCity_OnResume:
 	call Common_EventScript_GetDayOrNight

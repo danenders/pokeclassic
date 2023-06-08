@@ -24,8 +24,8 @@ PewterCity_OnResume:
 	end
 
 PewterCity_Trigger_RegisterOakAide::
-	lockall
 	goto_if_set FLAG_REGISTERED_AIDE, Common_EventScript_End
+	lockall
 	goto_if_unset FLAG_MET_CEDAR, PewterCity_Trigger_RegisterOakAideAlternate
 	pokenavcall MatchCall_Text_AideIntro
 	waitmessage

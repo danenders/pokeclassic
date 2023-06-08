@@ -28,6 +28,7 @@ int GameClear(void)
     {
         gHasHallOfFameRecords = FALSE;
         FlagSet(FLAG_SYS_GAME_CLEAR);
+        FlagSet(FLAG_HIDE_CERULEAN_CAVE_GUARD);
         FlagClear(FLAG_HIDE_VIRIDIAN_GYM_RIVAL);
     }
 

@@ -829,7 +829,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Erika,                 OBJ_EVENT_PAL_TAG_ERIKA},
     {gObjectEventPal_Sabrina,               OBJ_EVENT_PAL_TAG_SABRINA},
     {gObjectEventPal_Koga,                  OBJ_EVENT_PAL_TAG_KOGA},
-    {gObjectEventPal_Lance,                 OBJ_EVENT_PAL_TAG_BLAINE},
+    {gObjectEventPal_Blaine,                OBJ_EVENT_PAL_TAG_BLAINE},
     {gObjectEventPal_Slow,                  OBJ_EVENT_PAL_TAG_SLOW},
     {gObjectEventPal_Bulbasaur,             OBJ_EVENT_PAL_TAG_BULBASAUR},
     {gObjectEventPal_Charmander,            OBJ_EVENT_PAL_TAG_CHARMANDER},
