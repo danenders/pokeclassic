@@ -295,7 +295,7 @@ CeruleanCity_EventScript_RivalTriggerRight::
 	end
 
 CeruleanCity_EventScript_Rival::
-	setvar VAR_ROUTE_22_RIVAL_STATE, 2
+	setvar VAR_ROUTE_22_RIVAL_STATE, 3
 	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
 	clearflag FLAG_HIDE_CERULEAN_RIVAL
 	addobject LOCALID_RIVAL

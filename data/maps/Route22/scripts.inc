@@ -2,9 +2,20 @@
 .set LOCALID_FUGITIVE, 2
 
 Route22_MapScripts::
+	map_script MAP_SCRIPT_ON_RETURN_TO_FIELD, Route22_OnReturnToField
 	map_script MAP_SCRIPT_ON_TRANSITION, Route22_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, Route22_OnResume
 	.byte 0
+
+Route22_OnReturnToField:
+	call_if_eq VAR_ROUTE_22_RIVAL_STATE, 2, Route22_EventScript_HealAfterRivalBattle
+	end
+
+Route22_EventScript_HealAfterRivalBattle::
+	special HealPlayerParty
+	callnative UpdateFollowingPokemon
+	setvar VAR_ROUTE_22_RIVAL_STATE, 3
+	end
 
 Route22_OnTransition:
 	call Common_EventScript_GetDayOrNight
@@ -30,6 +41,7 @@ Route22_EventScript_EarlyRivalTriggerBottom::
 	end
 
 Route22_EventScript_EarlyRival::
+	setvar VAR_ROUTE_22_RIVAL_STATE, 2
 	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
 	clearflag FLAG_HIDE_RIVAL_ROUTE_22
 	addobject LOCALID_RIVAL
@@ -80,7 +92,6 @@ Route22_EventScript_EarlyRivalPostBattle::
 	fadedefaultbgm
 	removeobject LOCALID_RIVAL
 	setflag FLAG_HIDE_RIVAL_ROUTE_22
-	setvar VAR_ROUTE_22_RIVAL_STATE, 2
 	releaseall
 	end
 
@@ -113,17 +124,17 @@ Movement_RivalExit:
 	step_end
 
 Route22_EventScript_LateRivalTriggerTop::
-	setobjectxyperm LOCALID_RIVAL, 25, 4
+	setobjectxyperm LOCALID_RIVAL, 33, 4
 	goto Route22_EventScript_LateRival
 	end
 
 Route22_EventScript_LateRivalTriggerMiddle::
-	setobjectxyperm LOCALID_RIVAL, 25, 5
+	setobjectxyperm LOCALID_RIVAL, 33, 5
 	goto Route22_EventScript_LateRival
 	end
 
 Route22_EventScript_LateRivalTriggerBottom::
-	setobjectxyperm LOCALID_RIVAL, 25, 6
+	setobjectxyperm LOCALID_RIVAL, 33, 6
 	goto Route22_EventScript_LateRival
 	end
 
@@ -163,7 +174,7 @@ Route22_EventScript_LateRivalPostBattle::
 	fadedefaultbgm
 	removeobject LOCALID_RIVAL
 	setflag FLAG_HIDE_RIVAL_ROUTE_22
-	setvar VAR_ROUTE_22_RIVAL_STATE, 4
+	setvar VAR_ROUTE_22_RIVAL_STATE, 5
 	releaseall
 	end
 
