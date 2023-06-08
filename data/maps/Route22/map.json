@@ -97,7 +97,7 @@
       "y": 4,
       "elevation": 0,
       "var": "VAR_ROUTE_22_RIVAL_STATE",
-      "var_value": "3",
+      "var_value": "4",
       "script": "Route22_EventScript_LateRivalTriggerTop"
     },
     {
@@ -106,7 +106,7 @@
       "y": 5,
       "elevation": 0,
       "var": "VAR_ROUTE_22_RIVAL_STATE",
-      "var_value": "3",
+      "var_value": "4",
       "script": "Route22_EventScript_LateRivalTriggerMiddle"
     },
     {
@@ -115,7 +115,7 @@
       "y": 6,
       "elevation": 0,
       "var": "VAR_ROUTE_22_RIVAL_STATE",
-      "var_value": "3",
+      "var_value": "4",
       "script": "Route22_EventScript_LateRivalTriggerBottom"
     }
   ],

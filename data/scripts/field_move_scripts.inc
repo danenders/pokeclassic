@@ -87,14 +87,20 @@ EventScript_SmashRock::
 	applymovement VAR_LAST_TALKED, Movement_SmashRock
 	waitmovement 0
 	removeobject VAR_LAST_TALKED
-	random 9
-	goto_if_ge VAR_RESULT, 7, EventScript_RockHasItem
+	random 4
+	goto_if_eq VAR_RESULT, 3, EventScript_RockHasItem
 	goto EventScript_SmashRockEncounter
 	end
 
 EventScript_SmashRockEncounter::
 	special RockSmashWildEncounter
+	goto_if_eq VAR_RESULT, FALSE, EventScript_EndSmash
 	waitstate
+	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	releaseall
+	end
+
+EventScript_EndSmash::
 	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	releaseall
 	end
@@ -102,26 +108,23 @@ EventScript_SmashRockEncounter::
 EventScript_RockHasItem::
 	goto_if_set FLAG_SYS_GAME_CLEAR, EventScript_RockHasItemPostgame
 	random 3
-	addvar VAR_RESULT, 1
-	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_CommonTreasure
-	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_RareTreasure
-	goto_if_eq VAR_RESULT, 3, EventScript_RockItem_Stone
+	goto_if_eq VAR_RESULT, 0, EventScript_RockItem_CommonTreasure
+	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_RareTreasure
+	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_Stone
 	end
 
 EventScript_RockHasItemPostgame::
 	random 4
-	addvar VAR_RESULT, 1
-	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_CommonTreasure
-	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_RareTreasure
-	goto_if_eq VAR_RESULT, 3, EventScript_RockItem_Stone
-	goto_if_eq VAR_RESULT, 4, EventScript_RockItem_Fossil
+	goto_if_eq VAR_RESULT, 0, EventScript_RockItem_CommonTreasure
+	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_RareTreasure
+	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_Stone
+	goto_if_eq VAR_RESULT, 3, EventScript_RockItem_Fossil
 	end
 
 EventScript_RockItem_CommonTreasure::
 	random 2
-	addvar VAR_RESULT, 1
-	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_Pearl
-	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_Stardust
+	goto_if_eq VAR_RESULT, 0, EventScript_RockItem_Pearl
+	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_Stardust
 	end
 
 EventScript_RockItem_Pearl::
@@ -134,10 +137,9 @@ EventScript_RockItem_Stardust::
 
 EventScript_RockItem_RareTreasure::
 	random 3
-	addvar VAR_RESULT, 1
-	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_Nugget
-	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_BigPearl
-	goto_if_eq VAR_RESULT, 3, EventScript_RockItem_StarPiece
+	goto_if_eq VAR_RESULT, 0, EventScript_RockItem_Nugget
+	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_BigPearl
+	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_StarPiece
 	end
 
 EventScript_RockItem_Nugget::
@@ -154,9 +156,8 @@ EventScript_RockItem_StarPiece::
 
 EventScript_RockItem_Stone::
 	random 2
-	addvar VAR_RESULT, 1
-	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_MoonStone
-	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_PowerStone
+	goto_if_eq VAR_RESULT, 0, EventScript_RockItem_MoonStone
+	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_PowerStone
 	end
 
 EventScript_RockItem_MoonStone::
@@ -169,10 +170,9 @@ EventScript_RockItem_PowerStone::
 
 EventScript_RockItem_Fossil::
 	random 3
-	addvar VAR_RESULT, 1
-	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_HelixFossil
-	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_DomeFossil
-	goto_if_eq VAR_RESULT, 3, EventScript_RockItem_OldAmber
+	goto_if_eq VAR_RESULT, 0, EventScript_RockItem_HelixFossil
+	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_DomeFossil
+	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_OldAmber
 	end
 
 EventScript_RockItem_HelixFossil::

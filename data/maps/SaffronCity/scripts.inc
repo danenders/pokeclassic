@@ -7,7 +7,16 @@ SaffronCity_MapScripts::
 
 SaffronCity_OnTransition::
 	call_if_unset FLAG_RESCUED_MR_FUJI, SaffronCity_EventScript_MoveDoorGuardGrunt
+	call_if_set FLAG_LOOKER_POSTGAME_STARTED, CheckLookerPostgame
 	end
+
+CheckLookerPostgame::
+	call_if_unset FLAG_LOOKER_POSTGAME_COMPLETED, ShowPostGameRockets
+	return
+
+ShowPostGameRockets::
+	clearflag FLAG_HIDE_SILPH_POSTGAME_ROCKET
+	return
 
 SaffronCity_EventScript_MoveDoorGuardGrunt::
 	setobjectxyperm LOCALID_DOOR_GUARD, 33, 31

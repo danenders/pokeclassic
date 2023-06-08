@@ -88,13 +88,14 @@ BattleTower_Exterior_Text_BattleTower::
 	.string "finding the strongest trainers!$"
 
 BattleTower_Exterior_Punk::
-	lock
+	lockall
 	faceplayer
 	goto_if_set FLAG_GOT_RED_CARD, BattleTower_Exterior_Punk2
-	msgbox BattleTower_Exterior_Text_GotCarded, MSGBOX_NPC
+	msgbox BattleTower_Exterior_Text_GotCarded, MSGBOX_DEFAULT
 	giveitem ITEM_RED_CARD, 1
+	msgbox BattleTower_Exterior_Text_KickedOut, MSGBOX_DEFAULT
 	setflag FLAG_GOT_RED_CARD
-	release
+	releaseall
 	end
 
 BattleTower_Exterior_Text_GotCarded::
@@ -103,10 +104,20 @@ BattleTower_Exterior_Text_GotCarded::
 	.string "me one of these!$"
 
 BattleTower_Exterior_Punk2::
-	msgbox BattleTower_Exterior_Text_KickedOut, MSGBOX_NPC
-	release
+	lockall
+	msgbox BattleTower_Exterior_Text_KickedOut, MSGBOX_DEFAULT
+	releaseall
 	end
 
 BattleTower_Exterior_Text_KickedOut::
 	.string "I can't believe they kicked me out\n"
 	.string "just because I cheated!$"
+
+BattleTower_Exterior_BattleTowerSign::
+	msgbox BattleTower_Exterior_Text_BattleTowerSign, MSGBOX_SIGN
+	end
+
+BattleTower_Exterior_Text_BattleTowerSign::
+    .string "The Kanto Battle Tower!\n"
+    .string "Rise to the top!$"
+
