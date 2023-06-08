@@ -118,6 +118,6 @@ BattleTower_Exterior_BattleTowerSign::
 	end
 
 BattleTower_Exterior_Text_BattleTowerSign::
-    .string "The Kanto Battle Tower!\p"
+    .string "The Kanto Battle Tower!\n"
     .string "Rise to the top!$"
 
