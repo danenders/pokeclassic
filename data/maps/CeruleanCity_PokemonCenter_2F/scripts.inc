@@ -14,7 +14,7 @@ CeruleanCity_PokemonCenter_2F_Girl::
 CeruleanCity_PokemonCenter_2F_Text_Eviolite::
 	.string "Have you heard about Evioltie?\p"
 	.string "It's an item that boosts\n"
-	.string "the stast of a Pokémon that\l"
+	.string "the stats of a Pokémon that\l"
 	.string "hasn't evolved yet!\p"
 	.string "Here, you should take one!$"
 

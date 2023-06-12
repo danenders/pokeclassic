@@ -44,8 +44,7 @@ CeruleanCity_EventScript_CitySign::
 
 CeruleanCity_Text_CitySign::
     .string "Cerulean City\n"
-    .string "A Mysterious, Blue Aura Surrounds\l"
-    .string "It$"
+    .string "A Mysterious, Blue Aura Surrounds It.$"
 
 CeruleanCity_EventScript_TrainerTips::
 	msgbox CeruleanCity_Text_TrainerTipsHeldItems, MSGBOX_SIGN

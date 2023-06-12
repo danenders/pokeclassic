@@ -202,7 +202,7 @@ Route4_Text_TeamRocketFossils::
 	.string "So you're saying you stopped them?\n"
 	.string "And they already fled Mt. Moon?\p"
 	.string "Blast! How did we miss them!\p"
-	.string "I'm sorry for the misundersanding.\p"
+	.string "I'm sorry for the misunderstanding.\p"
 	.string "My name is Looker - since you already\n"
 	.string "stopped Team Rocket once, maybe we can\l"
 	.string "help each other out.\p"
