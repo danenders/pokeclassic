@@ -904,7 +904,7 @@ gText_PlayerFoundOneTMHM::
 
 gText_Sudowoodo_Attacked::
 	.string "The weird tree doesn't like the\n"
-	.string "Wailmer Pail!\p"
+	.string "Watering Can!\p"
 	.string "The weird tree attacked!$"
 
 gText_LegendaryFlewAway::
