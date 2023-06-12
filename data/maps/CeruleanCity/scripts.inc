@@ -726,8 +726,9 @@ CeruleanCity_Text_ProudOfBulbasaur::
 CeruleanCity_EventScript_BillCallsPlayer::
 	lockall
 	pokenavcall CeruleanCity_Text_DexNavCall
+	waitmessage
 	setvar VAR_SEA_COTTAGE_STATE, 5
-	release
+	releaseall
 	end
 
 CeruleanCity_Text_DexNavCall::
