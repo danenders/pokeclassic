@@ -160,4 +160,3 @@ Route6_RocketFugitive::
     waitse
     fadescreen FADE_FROM_BLACK
     end
- 

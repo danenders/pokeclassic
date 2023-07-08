@@ -8,6 +8,7 @@ CeladonCity_MapScripts::
 	.byte 0
 
 CeladonCity_OnTransition:
+	setflag FLAG_VISITED_CELADON_CITY
 	call Common_EventScript_GetDayOrNight
 	end
 
