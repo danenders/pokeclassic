@@ -6,6 +6,7 @@ SaffronCity_MapScripts::
 	.byte 0
 
 SaffronCity_OnTransition::
+	setflag FLAG_VISITED_SAFFRON_CITY
 	call_if_unset FLAG_RESCUED_MR_FUJI, SaffronCity_EventScript_MoveDoorGuardGrunt
 	call_if_set FLAG_LOOKER_POSTGAME_STARTED, CheckLookerPostgame
 	end

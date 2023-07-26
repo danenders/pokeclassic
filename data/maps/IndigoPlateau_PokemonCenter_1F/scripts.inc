@@ -6,6 +6,7 @@ IndigoPlateau_PokemonCenter_1F_MapScripts::
 	.byte 0
 
 IndigoPlateau_PokemonCenter_1F_OnTransition::
+    setflag FLAG_VISITED_INDIGO_PLATEAU
 	setrespawn HEAL_LOCATION_INDIGO_PLATEAU
 	end
 
