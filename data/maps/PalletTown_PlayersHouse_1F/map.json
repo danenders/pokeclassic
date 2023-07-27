@@ -16,7 +16,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MOM",
-      "in_connection": false,
       "x": 8,
       "y": 4,
       "elevation": 3,
@@ -26,11 +25,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PalletTown_PlayersHouse_1F_EvenScripts_Mom",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BILL",
-      "in_connection": false,
       "x": 5,
       "y": 4,
       "elevation": 3,
@@ -39,8 +38,9 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "FLAG_HIDE_PALLET_BILL"
+      "script": "PlayersHouse_1F_EventScript_Bill",
+      "flag": "FLAG_HIDE_PALLET_BILL",
+      "in_connection": false
     }
   ],
   "warp_events": [
@@ -49,14 +49,14 @@
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_PALLET_TOWN",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 10,
       "y": 2,
       "elevation": 0,
       "dest_map": "MAP_PALLET_TOWN_PLAYERS_HOUSE_2F",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
