@@ -151,7 +151,7 @@
       "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LavenderTown_EventScript_SilphScopeNotice"
+      "script": "LavenderTown_EventScript_TrainerTips"
     }
   ]
 }
