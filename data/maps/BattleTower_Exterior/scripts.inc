@@ -121,3 +121,9 @@ BattleTower_Exterior_Text_BattleTowerSign::
     .string "The Kanto Battle Tower!\n"
     .string "Rise to the top!$"
 
+BattleTower_Exterior_BattleTowerHouse::
+	msgbox BattleTower_Exterior_Text_BattleTowerHouse, MSGBOX_SIGN
+	end
+
+BattleTower_Exterior_Text_BattleTowerHouse::
+    .string "Scott's House$"
