@@ -187,6 +187,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CinnabarIsland_EventScript_IslandSign"
+    },
+    {
+      "type": "sign",
+      "x": 33,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CinnabarIsland_EventScript_PokemonMansionSign"
     }
   ]
 }
