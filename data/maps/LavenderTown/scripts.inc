@@ -61,14 +61,14 @@ LavenderTown_EventScript_TownSign::
 	msgbox LavenderTown_Text_TownSign, MSGBOX_SIGN
 	end
 
-LavenderTown_EventScript_SilphScopeNotice::
-	msgbox LavenderTown_Text_SilphScopeNotice, MSGBOX_SIGN
+LavenderTown_EventScript_TrainerTips::
+	msgbox LavenderTown_Text_TrainerTips, MSGBOX_SIGN
 	end
 
-LavenderTown_Text_SilphScopeNotice::
-    .string "New Silph Scope!\n"
-    .string "Make the Invisible Plain to See!\p"
-    .string "Silph Co.$"
+LavenderTown_Text_TrainerTips::
+    .string "Trainer Tips!\n"
+    .string "Hold the A Button to walk quietly\n"
+    .string "when using your PokéNav!$"
 
 LavenderTown_EventScript_VolunteerHouseSign::
 	msgbox LavenderTown_Text_VolunteerPokemonHouse, MSGBOX_SIGN

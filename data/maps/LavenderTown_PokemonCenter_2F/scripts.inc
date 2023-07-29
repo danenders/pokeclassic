@@ -7,6 +7,7 @@ LavenderTown_PokemonCenter_2F_EventScript_OldWoman::
 	faceplayer
 	goto_if_set FLAG_GOT_SILK_SCARF, LavenderTown_PokemonCenter_2F_EventScript_OldWoman2
 	msgbox LavenderTown_PokemonCenter_2F_Text_SilkScarf, MSGBOX_DEFAULT
+	waitmessage
 	giveitem ITEM_SILK_SCARF, 1
 	setflag FLAG_GOT_SILK_SCARF
 	release

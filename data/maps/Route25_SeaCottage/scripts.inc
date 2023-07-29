@@ -588,9 +588,9 @@ Route25_SeaCottage_Text_GetDetectorMode::
 	.string "Detector Mode has been enabled!$"
 
 Route25_SeaCottage_Text_DetectorMode::
-	.string "Bill: This upgrade enable Detector Mode.\p"
-	.string "It should let you find hidden Pokémon\n"
-	.string "on any route where they might be!\p"
-	.string "Hidden Pokémon may even have rare abilities.\p"
+	.string "Bill: Detector Mode helps you find\n"
+	.string "hidden Pokémon all across Kanto!\p"
+	.string "Hidden Pokémon may know new moves\n"
+	.string "or even have rare abilities.\p"
 	.string "It's truly amazing!\n"
 	.string "Go try it out!$"
