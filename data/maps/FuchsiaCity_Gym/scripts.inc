@@ -146,12 +146,16 @@ FuchsiaCity_Gym_EventScript_RematchLeader::
 	end
 
 FuchsiaCity_Gym_Text_RematchLeader::
-	.string "Fwahahaha! If it isn't the child.\n" 
-	.string "It seems we are fated to meet once again.\p"
-	.string "You have come at a truly opportune time.\p"
-	.string "I was just thinking that I wanted to test\n"
-	.string "my newly refined sinister techniques...\l" 
-	.string "...in a battle that will end in your utter defeat!\p"
+	.string "Fwahahaha! If it isn't the child.\p" 
+	.string "It seems we are fated to meet once\n"
+	.string "again.\p"
+	.string "You have come at a truly opportune\n"
+	.string "time.\p"
+	.string "I was just thinking that I wanted to \n"
+	.string "test my newly refined sinister\l"
+	.string "techniques...\p" 
+	.string "...in a battle that will end in\n"
+	.string "your utter defeat!\n"
 	.string "Will you accept my challenge?$"
 
 FuchsiaCity_Gym_EventScript_DeclineRematch::
