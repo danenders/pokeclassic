@@ -18,7 +18,7 @@ Route11_EventScript_DiglettsCaveSign::
 	end
 
 Route11_Text_DiglettsCave::
-    .string "Diglett'S Cave$"
+    .string "Diglett's Cave$"
 
 Route11_EventScript_Hugo::
 	trainerbattle_single REMATCHABLE_TRAINER_GAMBLER_HUGO_1, Route11_Text_HugoIntro, Route11_Text_HugoDefeat, Route11_EventScript_RegisterHugoAfterBattle

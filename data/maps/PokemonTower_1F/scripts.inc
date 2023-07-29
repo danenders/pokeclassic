@@ -15,9 +15,12 @@ PokemonTower_1F_EventScript_Woman1::
 	end
 
 PokemonTower_1F_EventScript_CueBall::
+	lock
+	faceplayer
 	goto_if_set FLAG_GOT_TM42, PokemonTower_1F_EventScript_CueBall2
 	msgbox PokemonTower_1F_Text_IDontNeedThis, MSGBOX_NPC
 	giveitem ITEM_TM42, 1
+	release
 	end
 
 PokemonTower_1F_Text_IDontNeedThis::
@@ -27,6 +30,7 @@ PokemonTower_1F_Text_IDontNeedThis::
 
 PokemonTower_1F_EventScript_CueBall2::
 	msgbox PokemonTower_1F_Text_BraveFace, MSGBOX_NPC
+	release
 	end
 
 PokemonTower_1F_Text_BraveFace::

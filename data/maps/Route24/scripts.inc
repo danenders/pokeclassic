@@ -579,7 +579,8 @@ Route24_EventScript_Shane::
 	end
 
 Route24_Text_ShaneIntro::
-    .string "I saw your feat from the grass!$"
+    .string "I was watching your battles\n"
+    .string "on Nugget Bridge from over here!$"
 
 Route24_Text_ShaneDefeat::
     .string "I thought not!$"

@@ -7,6 +7,7 @@ CinnabarIsland_MapScripts::
 	.byte 0
 
 CinnabarIsland_OnTransition:
+	setflag FLAG_VISITED_CINNABAR_ISLAND
 	call Common_EventScript_GetDayOrNight
 	end
 

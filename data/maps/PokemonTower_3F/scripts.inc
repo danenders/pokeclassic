@@ -54,6 +54,6 @@ PokemonTower_3F_Text_HopeDefeat::
     .string "I'm saved!$"
 
 PokemonTower_3F_Text_HopePostBattle::
-    .string "The ghosts can be identified by\n"
-    .string "the Silph Scope.$"
+    .string "I will be forever changed\n"
+    .string "by this experience.$"
 

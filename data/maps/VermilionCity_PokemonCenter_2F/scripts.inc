@@ -3,7 +3,7 @@ VermilionCity_PokemonCenter_2F_MapScripts::
 
 VermilionCity_PokemonCenter_2F_Pokefan::
 	lock
-	release
+	faceplayer
 	goto_if_set FLAG_GOT_DESTINY_KNOT, VermilionCity_PokemonCenter_2F_Pokefan2
 	msgbox VermilionCity_PokemonCenter_2F_DestinyKnot, MSGBOX_DEFAULT
 	giveitem ITEM_DESTINY_KNOT

@@ -8,10 +8,8 @@ PokemonTower_2F_EventScript_Channeler::
 	end
 
 PokemonTower_2F_Text_SilphScopeCouldUnmaskGhosts::
-    .string "Even we could not identify the\n"
-    .string "wayward ghosts.\p"
-    .string "A Silph Scope might be able to\n"
-    .string "unmask them.$"
+    .string "Even we could not calm the\n"
+    .string "enraged spirit.$"
 
 PokemonTower_2F_EventScript_RivalTriggerRight::
 	lockall

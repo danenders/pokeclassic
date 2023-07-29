@@ -1,4 +1,4 @@
-.set LOCALID_MASTER, 3
+.set LOCALID_MASTER, 1
 
 SaffronCity_Dojo_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, SaffronCity_Dojo_OnTransition
@@ -530,6 +530,7 @@ SaffronCity_Dojo_KarateMaster::
 	playse SE_PIN
 	applymovement LOCALID_MASTER, Common_Movement_ExclamationMark
 	waitse
+	waitmovement 1
 	msgbox SaffronCity_Dojo_Text_WorthyChallenger, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SaffronCity_Dojo_RefuseChallenge
 	trainerbattle_single SAFFRON_DOJO_MASTER, SaffronCity_Dojo_Text_MasterIntro, SaffronCity_Dojo_Text_MasterDefeat, SaffronCity_Dojo_GetExpertBelt
