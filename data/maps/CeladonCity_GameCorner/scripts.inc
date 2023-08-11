@@ -608,7 +608,6 @@ GameCorner_EventScript_Gentleman::
 	compare VAR_TEMP_1, (MAX_COINS + 1) - 20
 	goto_if_ge GameCorner_EventScript_GamblerNoRoomForCoins
 	addcoins 20
-	textcolor 3
 	msgbox GameCorner_Text_Received20CoinsFromMan
 	playse SE_SHOP
 	waitse
