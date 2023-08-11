@@ -34,7 +34,7 @@ Debug_CheatStart::
 	@ giveitem ITEM_AURORA_TICKET
 	@ setflag FLAG_ENABLE_SHIP_BIRTH_ISLAND
 	@ setflag FLAG_RECEIVED_AURORA_TICKET
-	@ setflag FLAG_BADGE06_GET @ Badge for flying filed move
+	@ setflag FLAG_BADGE03_GET @ Badge for flying filed move
 	@ setweather WEATHER_VOLCANIC_ASH
 	@ doweather
 	closemessage
