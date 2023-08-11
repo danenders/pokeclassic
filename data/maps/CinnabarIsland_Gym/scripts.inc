@@ -848,7 +848,7 @@ CinnabarIsland_Gym_EventScript_GetTM::
 	msgbox CinnabarIsland_Gym_Text_ReceivedTM, MSGBOX_DEFAULT
 	waitfanfare
 	additem ITEM_TM38, 1
-	setflag FLAG_GOT_BROCK_REWARD
+	setflag FLAG_GOT_BLAINE_REWARD
 	msgbox CinnabarIsland_Gym_Text_ExplainTM, MSGBOX_DEFAULT
 	release
 	end
