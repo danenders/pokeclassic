@@ -1,7 +1,7 @@
 # PokeClassic
-## Status: In development
+## Status: Version 1 released!
 
-PokeClassic 
+PokeClassic is a recreation of Pokemon Yellow, recreated in the Pokemon Emerald engine. Revisit your classic adventures through Kanto with new features, questlines, and post game content!
 
 # Getting PokeClassic
 This repository builds the following ROM:
@@ -12,3 +12,5 @@ To compile this rom yourself, see [Pret's Installation Guide](https://github.com
 
 Otherwise, patch files will occasionaly be released here. These will be slower to release than pulling updates yourself. To patch this game, you will need to provide your own rom.
 
+# Credits
+Special thanks to  Hyo Oppa, Wolf, Solo993, Bushbugger, PokeMerp, Lunos, TheXaman, Ghoulslash, citrusbolt, asparaguseduardo, exposeed, surskitty, GriffinR, & the Pret Discord.
