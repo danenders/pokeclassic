@@ -146,8 +146,8 @@ CeruleanCity_Gym_Text_RematchLeader::
 	.string "taking on those Team Rocket guys.\p" 
 	.string "Is that true?\p" 
 	.string "Argh! I just can't take it anymore!\p" 
-	.string "You've gotten so strong that I just absolutely\n" 
-	.string "have to battle you again!\p" 
+	.string "You've gotten so strong that I just\n" 
+	.string "absolutely have to battle you again!\p" 
 	.string "You got that? No refusing!$"
 
 CeruleanCity_Gym_EventScript_DeclineRematch::
@@ -181,9 +181,10 @@ CeruleanCity_Gym_EventScript_LeaderRematch_PostGameTeam::
 	end
 
 CeruleanCity_Gym_Text_RematchPostgame::
-	.string "My adorable Pokémon are ready to take\n" 
-	.string "you on!\p" 
-	.string "The ultimate offense of Water-type Pokémon!\n" 
+	.string "My adorable Pokémon are ready\n" 
+	.string " to take you on!\p" 
+	.string "The ultimate offense of\n" 
+	.string "Water-type Pokémon!\p" 
 	.string "I hope you're ready!$"
 
 CeruleanCity_Gym_EventScript_DefeatedLeaderRematch::

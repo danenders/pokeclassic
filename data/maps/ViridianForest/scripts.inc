@@ -144,8 +144,9 @@ ViridianForest_EventScript_TrainerTips3::
 
 ViridianForest_Text_ContactOakViaPCToRatePokedex::
     .string "Trainer Tips:\p"
-    .string "Contact Prof. Oak via a PC to\n"
-    .string "get your Pokédex evaluated!$"
+    .string "You can call Prof. Oak with\n"
+    .string "your Cell Phone to get your\l"
+    .string "Pokédex evaluated!$"
 
 ViridianForest_EventScript_TrainerTips4::
 	msgbox ViridianForest_Text_CantCatchOwnedMons, MSGBOX_SIGN

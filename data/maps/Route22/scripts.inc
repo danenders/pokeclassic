@@ -46,6 +46,7 @@ Route22_EventScript_EarlyRival::
 	clearflag FLAG_HIDE_RIVAL_ROUTE_22
 	addobject LOCALID_RIVAL
 	applymovement LOCALID_RIVAL, Movement_RivalApproach
+	waitmovement 1
 	delay 6
 	trainerbattle_no_whiteout_continue_script TRAINER_RIVAL_OPTIONAL_BATTLE,Route22_Text_EarlyRivalIntro,Route22_Text_EarlyRivalDefeated,Route22_EventScript_RivalBattleOutcome
 	end
@@ -143,6 +144,7 @@ Route22_EventScript_LateRival::
 	clearflag FLAG_HIDE_RIVAL_ROUTE_22
 	addobject LOCALID_RIVAL
 	applymovement LOCALID_RIVAL, Movement_RivalApproach
+	waitmovement 1
 	delay 6
 	goto_if_eq VAR_RIVAL_WINRATE, 2, Route22_EventScript_LateRival_Jolteon
 	goto_if_eq VAR_RIVAL_WINRATE, 1, Route22_EventScript_LateRival_Flareon

@@ -414,7 +414,7 @@ SilphCo_11F_EventScript_PostgameRocket::
 SilphCo_11F_Text_ThatsEnoughFromYou::
 	.string "Looker: That's enough!\p"
 	.string "We've heard it all before.\p"
-	.string "That's the thing about you\n"
+	.string "That's the problem with you\n"
 	.string "Rockets. It's all about one\l"
 	.string "thing...power!\p"
 	.string "That's why you'll always lose\n"
@@ -423,7 +423,7 @@ SilphCo_11F_Text_ThatsEnoughFromYou::
 	.string "to live alongside Pokémon.\p"
 	.string "...\p"
 	.string "You called Giovanni weak, but I\n"
-	.string "even he knew that at the end.$"
+	.string "think even he knew that at the end.$"
 
 SilphCo_11F_Text_RocketWellNeverStop::
 	.string "Rocket: ...\p"

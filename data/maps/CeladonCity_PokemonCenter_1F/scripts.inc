@@ -451,7 +451,7 @@ Looker_Text_PhoneCall::
 	.string "...\n"
 	.string "Yes...\l"
 	.string "What?!....\l"
-	.string "Understood.\p"
+	.string "Understood.$"
 
 
 Looker_QuestBegin::

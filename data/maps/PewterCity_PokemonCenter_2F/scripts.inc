@@ -11,5 +11,5 @@ PewterCity_PokemonCenter_2F_Trainer::
 PewterCity_PokemonCenter_2F_Brock::
 	.string "Brock is really tough!\p"
 	.string "I need to find his weakness if\n"
-	.string "I want to take him downa nd earn\l"
+	.string "I want to take him down and earn\l"
 	.string "that badge!$"

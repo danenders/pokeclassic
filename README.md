@@ -14,5 +14,3 @@ Otherwise, patch files will occasionaly be released here. These will be slower t
 
 # Credits
 Special thanks to  Hyo Oppa, Wolf, Solo993, Bushbugger, PokeMerp, Lunos, TheXaman, Ghoulslash, citrusbolt, asparaguseduardo, exposeed, surskitty, GriffinR, & the Pret Discord.
-
-

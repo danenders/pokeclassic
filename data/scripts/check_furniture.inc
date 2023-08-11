@@ -25,3 +25,7 @@ EventScript_ShopShelf::
 EventScript_Blueprint::
 	msgbox Text_Blueprint, MSGBOX_SIGN
 	end
+
+EventScript_Painting::
+	msgbox Text_Painting, MSGBOX_SIGN
+	end
