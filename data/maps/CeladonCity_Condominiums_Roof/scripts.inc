@@ -89,6 +89,7 @@ CeladonCity_Condominiums_Roof_EventScript_RocketFlee::
 	setvar VAR_ROOFTOP_ROCKET_PLANS, 1
 	playse SE_FLEE
 	waitse
+	delay 8
 	fadescreen FADE_FROM_BLACK
 	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	release
