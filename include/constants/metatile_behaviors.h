@@ -166,7 +166,7 @@
 #define MB_INDIGO_PLATEAU_MARK_DPAD 0xA2 // TODO: implement this
 #define MB_INDIGO_PLATEAU_MARK_2_DPAD 0xA3 // TODO: implement this
 #define MB_BLUEPRINTS 0xA4 // TODO: implement this
-#define MB_PAINTING 0xA5 // TODO: implement this
+#define MB_PAINTING 0xA5
 #define MB_POWER_PLANT_MACHINE 0xA6 // TODO: implement this
 #define MB_TELEPHONE 0xA7 // TODO: implement this
 #define MB_COMPUTER 0xA8 // TODO: implement this

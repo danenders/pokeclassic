@@ -25,3 +25,7 @@ Text_ShopShelf:
 Text_Blueprint:
 	.string "A blueprint of some sort?\n"
 	.string "It's too complicated!$"
+
+Text_Painting:
+	.string "It's a painting of a\n"
+	.string "legendary Pokémon.$"

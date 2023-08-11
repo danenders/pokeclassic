@@ -165,7 +165,7 @@ Route16_EventScript_RegisterKojiAfterBattle::
 Route16_Text_KojiRegister:
 	.string "If you're not gonna give me\n"
 	.string "your bike, I'll just take your\l"
-	.string "Cell Phone number instead!"
+	.string "Cell Phone number instead!$"
 
 Route16_EventScript_KojiRematch::
 	trainerbattle_rematch REMATCHABLE_TRAINER_CUE_BALL_KOJI_1, Route16_Text_KojiRematchIntro, Route16_Text_KojiDefeat
