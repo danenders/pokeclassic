@@ -498,6 +498,8 @@ CeruleanCity_EventScript_GruntDefeated::
 	removeobject LOCALID_GRUNT
 	clearflag FLAG_HIDE_CERULEAN_TM28
 	addobject LOCALID_TMBALL
+	playse SE_FLEE
+	waitse
 	fadescreen FADE_FROM_BLACK
 	release
 	end
@@ -505,7 +507,7 @@ CeruleanCity_EventScript_GruntDefeated::
 CeruleanCity_Text_OkayIllReturnStolenTM::
     .string "…Fine! Here!\p"
     .string "I'm not going to prison\n"
-    .string "over a some TM!$"
+    .string "over some TM!$"
 
 CeruleanCity_EventScript_StolenTM::
 	lock
