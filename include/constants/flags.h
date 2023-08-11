@@ -170,7 +170,7 @@
 #define FLAG_GOT_MEGA_RING                  0x98 //Got the Mega Ring from Oak
 #define FLAG_REVEALED_MEGA_STONES    		0x99 //Stones are revealed after beating Prof Oak for the first time
 #define FLAG_HIDE_PALLET_BILL 			    0x9A
-#define FLAG_UNUSED_0x09B     				0x9B
+#define FLAG_HIDE_SILPH_ROCKETDUO     		0x9B //Hides Jessie & James
 #define FLAG_UNUSED_0x09C      				0x9C
 #define FLAG_UNUSED_0x09D      				0x9D
 #define FLAG_UNUSED_0x09E   				0x9E
