@@ -195,7 +195,9 @@ SaffronCity_Gym_Text_ReceivedBadge::
     .string "Badge from Sabrina!$"
 
 SaffronCity_Gym_Text_ExplainBadge::
-    .string "The Marsh Badge makes Pokémon up\n"
+    .string "The Marsh Badge allows your\n"
+    .string "Pokémon to use Rock Smash.\p"
+    .string "It will also make Pokémon up\n"
     .string "to Lv. 70 obey you.\p"
     .string "Stronger Pokémon will become wild,\n"
     .string "ignoring your orders in battle.\p"

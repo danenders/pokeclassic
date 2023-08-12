@@ -289,6 +289,7 @@ Route24_EventScript_DisguisedRocketDefeated::
 	waitmovement 11
 	removeobject LOCALID_JESSIE
 	removeobject LOCALID_JAMES
+	setvar VAR_CERULEAN_CITY_ROCKETS, 1
 	fadenewbgm MUS_ENCOUNTER_CHAMPION
 	goto Route24_EventScript_LookerConclusion
 	end
