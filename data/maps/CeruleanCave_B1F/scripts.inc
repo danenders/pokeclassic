@@ -1,14 +1,11 @@
 .set LOCALID_MEWTWO, 12
 
 CeruleanCave_B1F_MapScripts::
-	.byte 0
-
-CeruleanCave_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, CeruleanCave_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, CeruleanCave_OnResume
 	.byte 0
 
-CeruleanCave_OnTransition:
+CeruleanCave_OnTransition::
 	call_if_set FLAG_CAUGHT_MEWTWO, CeruleanCave_EventScript_HideMewtwo
 	call_if_unset FLAG_CAUGHT_MEWTWO, CeruleanCave_EventScript_TryShowMewtwo
 	end

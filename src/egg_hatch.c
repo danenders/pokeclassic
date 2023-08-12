@@ -918,7 +918,7 @@ static void EggHatchPrintMessage(u8 windowId, u8* string, u8 x, u8 y, u8 speed)
 {
     FillWindowPixelBuffer(windowId, PIXEL_FILL(15));
     sEggHatchData->textColor[0] = 0;
-    sEggHatchData->textColor[1] = 5;
+    sEggHatchData->textColor[1] = 1;
     sEggHatchData->textColor[2] = 6;
     AddTextPrinterParameterized4(windowId, FONT_NORMAL, x, y, 0, 0, sEggHatchData->textColor, speed, string);
 }
