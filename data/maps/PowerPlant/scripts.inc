@@ -1,7 +1,7 @@
 .set LOCALID_ZAPDOS, 1
 
 PowerPlant_MapScripts::
-	map_script MAP_SCRIPT_ON_RESUME, PowerPlant_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, PowerPlant_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, PowerPlant_OnResume
 	.byte 0
 
