@@ -94,6 +94,7 @@ BattleTower_Basement_EventScript_ResumeChallenge::
 
 BattleTower_Basement_EventScript_FactoryTrigger::
 	lock
+	goto_if_set FLAG_CANCEL_BATTLE_ROOM_CHALLENGE, BattleTower_Entrance_EventScript_Retired
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFactory_Movement_PlayerFaceTowerKiosk
 	turnobject LOCALID_FACTORY_ATTENDANT, DIR_WEST
 	msgbox BattleFactoryLobby_Text_Welcome, MSGBOX_DEFAULT
