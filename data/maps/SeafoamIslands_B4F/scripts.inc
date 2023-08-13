@@ -92,8 +92,7 @@ SeafoamIslands_B4F_EventScript_CheckStoppedCurrent::
 	setvar NUM_BOULDERS_PRESENT, 0
 	call_if_unset FLAG_HIDE_SEAFOAM_B4F_BOULDER_1, SeafoamIslands_B4F_EventScript_AddBoulderPresent
 	call_if_unset FLAG_HIDE_SEAFOAM_B4F_BOULDER_2, SeafoamIslands_B4F_EventScript_AddBoulderPresent
-	compare NUM_BOULDERS_PRESENT, 2
-	call_if_eq SeafoamIslands_B4F_EventScript_StoppedCurrent
+	call_if_eq NUM_BOULDERS_PRESENT, 2, SeafoamIslands_B4F_EventScript_StoppedCurrent
 	return
 
 SeafoamIslands_B4F_EventScript_StoppedCurrent::
@@ -108,8 +107,7 @@ SeafoamIslands_B4F_OnLoad::
 	setvar NUM_BOULDERS_PRESENT, 0
 	call_if_unset FLAG_HIDE_SEAFOAM_B4F_BOULDER_1, SeafoamIslands_B4F_EventScript_AddBoulderPresent
 	call_if_unset FLAG_HIDE_SEAFOAM_B4F_BOULDER_2, SeafoamIslands_B4F_EventScript_AddBoulderPresent
-	compare NUM_BOULDERS_PRESENT, 2
-	goto_if_eq SeafoamIslands_B4F_EventScript_SetCalmWaterNearStairs
+	goto_if_eq NUM_BOULDERS_PRESENT, 2, SeafoamIslands_B4F_EventScript_SetCalmWaterNearStairs
 	end
 
 SeafoamIslands_B4F_EventScript_SetCalmWaterNearStairs::
