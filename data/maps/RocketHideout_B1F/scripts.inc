@@ -8,6 +8,7 @@ RocketHideout_B1F_OnLoad::
 	end
 
 RocketHideout_B1F_OnTransition::
+    call_if_set FLAG_HIDE_CELADON_ROCKETS, RocketHideout_B1F_EventScript_RemoveBarrier
 	end
 
 RocketHideout_B1F_EventScript_Grunt1::
