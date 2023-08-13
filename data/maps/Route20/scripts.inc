@@ -40,7 +40,7 @@ Route20_EventScript_SeafoamIslandsSign::
 	end
 
 Route20_Text_SeafoamIslands::
-    .string "Seafoam ISLANDS$"
+    .string "Seafoam Islands$"
 
 Route20_EventScript_Barry::
 	trainerbattle_single TRAINER_SWIMMER_MALE_BARRY, Route20_Text_BarryIntro, Route20_Text_BarryDefeat
