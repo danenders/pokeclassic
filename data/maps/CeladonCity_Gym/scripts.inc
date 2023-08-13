@@ -64,9 +64,14 @@ CeladonCity_Gym_EventScript_DefeatedLeaderGetBadge::
 	settrainerflag TRAINER_BEAUTY_TAMIA					
 	settrainerflag TRAINER_BEAUTY_LORI		
 	settrainerflag TRAINER_COOLTRAINER_MARY
-	call CeladonCity_Gym_EventScript_QueueNextAideCall
+	call_if_set FLAG_RECEIVED_AIDE_EVERSTONE, CeladonCity_Gym_EventScript_NextAideCall
 	goto CeladonCity_Gym_EventScript_GetTM
 	end
+
+CeladonCity_Gym_EventScript_NextAideCall::
+	setflag FLAG_QUEUE_AIDE_CALL
+	setflag FLAG_AIDE_LOCATION_3
+	return
 
 CeladonCity_Gym_Text_GetBadge::
     .string "You are remarkably strong.\p"
@@ -352,11 +357,3 @@ CeladonCity_Gym_Text_GymStatuePlayerWon::
     .string "Leader: Erika\p"
     .string "Winning Trainers:\n"
     .string "{RIVAL}, {PLAYER}$"
-
-
-@Check if you've haven't collected the previous reward
-CeladonCity_Gym_EventScript_QueueNextAideCall::
-	goto_if_unset FLAG_RECEIVED_ITEMFINDER, Common_EventScript_Return
-	setflag FLAG_QUEUE_AIDE_CALL
-	setflag FLAG_AIDE_LOCATION_3
-	return

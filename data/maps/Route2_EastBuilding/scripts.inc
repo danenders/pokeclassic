@@ -1,27 +1,7 @@
 Route2_EastBuilding_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Route2_EastBuildingOnTransition
 	.byte 0
 
-Route2_EastBuildingOnTransition::
-	call_if_unset FLAG_RECEIVED_HM05, Route2_EastBuilding_EventScript_CheckAideAppearance
-	end
-
-@Check if you've completed the requirement and Cedar has called you
-Route2_EastBuilding_EventScript_CheckAideAppearance::
-	goto_if_unset FLAG_BADGE02_GET, Common_EventScript_Return
-	goto_if_unset FLAG_AIDE_LOCATION_1, Common_EventScript_Return
-	goto_if_lt VAR_AIDE_CALL_STEP_COUNTER, 200, Common_EventScript_Return
-	clearflag FLAG_HIDE_AIDE_ROUTE2
-	return
-
-Route2_EastBuilding_EventScript_Rocker::
-	msgbox Route2_EastBuilding_Text_CanGetThroughRockTunnel, MSGBOX_NPC
-	end
-
-Route2_EastBuilding_Text_CanGetThroughRockTunnel::
-    .string "Once a Pokémon learns Flash, you\n"
-    .string "can get through Rock Tunnel.$"
-
+@Aide Gift 1
 Route2_EastBuilding_EventScript_Aide::
 	lock
 	faceplayer
@@ -36,8 +16,8 @@ Route2_EastBuilding_EventScript_Aide::
 	clearflag FLAG_AIDE_LOCATION_1
 	clearflag FLAG_QUEUE_AIDE_CALL
 	setvar VAR_AIDE_CALL_STEP_COUNTER, 0
+	call_if_set FLAG_BADGE03_GET, Route2_EastBuilding_EventScript_AideNextLocation
 	msgbox Route2_EastBuilding_Text_ExplainHM05, MSGBOX_DEFAULT
-	call Route2_EastBuilding_EventScript_CheckAideNextLocation
 	release
 	end
 
@@ -60,9 +40,15 @@ Route2_EastBuilding_Text_ExplainHM05::
     .string "Flash lights up even the darkest\n"
     .string "of caves and dungeons.$"
 
-@Check if you've already completed the next requirement
-Route2_EastBuilding_EventScript_CheckAideNextLocation::
-	goto_if_unset FLAG_BADGE03_GET, Common_EventScript_Return
+Route2_EastBuilding_EventScript_AideNextLocation::
 	setflag FLAG_QUEUE_AIDE_CALL
 	setflag FLAG_AIDE_LOCATION_2
 	return
+
+Route2_EastBuilding_EventScript_Rocker::
+	msgbox Route2_EastBuilding_Text_CanGetThroughRockTunnel, MSGBOX_NPC
+	end
+
+Route2_EastBuilding_Text_CanGetThroughRockTunnel::
+    .string "Once a Pokémon learns Flash, you\n"
+    .string "can get through Rock Tunnel.$"

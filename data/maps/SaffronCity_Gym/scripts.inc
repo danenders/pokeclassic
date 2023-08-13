@@ -181,8 +181,14 @@ SaffronCity_Gym_EventScript_DefeatedLeaderGetBadge::
 	settrainerflag TRAINER_CHANNELER_STACY
 	settrainerflag TRAINER_PSYCHIC_JOHANNA
 	settrainerflag TRAINER_CHANNELER_AMANDA
+	call_if_set FLAG_RECEIVED_AIDE_AMULET_COIN, SaffronCity_Gym_EventScript_QueueNextAideCall
 	goto SaffronCity_Gym_EventScript_GetTM
 	end
+
+SaffronCity_Gym_EventScript_QueueNextAideCall::
+	setflag FLAG_QUEUE_AIDE_CALL
+    setflag FLAG_AIDE_LOCATION_5
+    return
 
 SaffronCity_Gym_Text_GetBadge::
     .string "I admit, I didn't work hard enough\n"

@@ -1,18 +1,6 @@
 Route16_NorthEntrance_2F_MapScripts::
 	.byte 0
 
-Route16_NorthEntrance_2F_OnTransition::
-	call_if_unset FLAG_RECEIVED_AIDE_AMULET_COIN, Route16_NorthEntrance_2F_EventScript_CheckAideAppearance
-	end
-
-@Check if you've completed the requirement and Cedar has called you
-Route16_NorthEntrance_2F_EventScript_CheckAideAppearance::
-	goto_if_unset FLAG_BADGE05_GET, Common_EventScript_Return
-	goto_if_unset FLAG_AIDE_LOCATION_4, Common_EventScript_Return
-	goto_if_lt VAR_AIDE_CALL_STEP_COUNTER, 200, Common_EventScript_Return
-	clearflag FLAG_HIDE_AIDE_ROUTE16
-	return
-
 Route16_NorthEntrance_2F_EventScript_LittleBoy::
 	msgbox Route16_NorthEntrance_2F_Text_OnBikeRideWithGirlfriend, MSGBOX_NPC
 	end
@@ -49,7 +37,7 @@ Route16_NorthEntrance_2F_Text_LongPathOverWater::
     .string "away.$"
 
 
-@Aide Gift 3
+@Aide Gift 4
 Route16_NorthEntrance_2F_EventScript_Aide::
     lock
     faceplayer
@@ -65,7 +53,7 @@ Route16_NorthEntrance_2F_EventScript_Aide::
     clearflag FLAG_QUEUE_AIDE_CALL
     setvar VAR_AIDE_CALL_STEP_COUNTER, 0
     msgbox Route16_NorthEntrance_2F_Text_ExplainReward, MSGBOX_DEFAULT
-    call Route16_NorthEntrance_2F_EventScript_CheckAideNextLocation
+    call_if_set FLAG_BADGE06_GET, Route16_NorthEntrance_2F_EventScript_AideNextLocation
     release
     end
 
@@ -92,9 +80,7 @@ Route16_NorthEntrance_2F_Text_ExplainReward::
     .string "If the Pokémon appears in a winning\n"
     .string "battle, you will earn more money.$"
 
-@Check if you've already completed the next requirement
-Route16_NorthEntrance_2F_EventScript_CheckAideNextLocation::
-    goto_if_unset FLAG_BADGE06_GET, Common_EventScript_Return
+Route16_NorthEntrance_2F_EventScript_AideNextLocation::
     setflag FLAG_QUEUE_AIDE_CALL
     setflag FLAG_AIDE_LOCATION_5
     return

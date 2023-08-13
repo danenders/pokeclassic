@@ -5,17 +5,8 @@ Route10_PokemonCenter_1F_MapScripts::
 	.byte 0
 
 Route10_PokemonCenter_1F_OnTransition::
-	call_if_unset FLAG_RECEIVED_AIDE_EVERSTONE, Route10_PokemonCenter_1F_EventScript_CheckAideAppearance
 	setrespawn HEAL_LOCATION_ROUTE_10
 	end
-
-@Check if you've completed the requirement and Cedar has called you
-Route10_PokemonCenter_1F_EventScript_CheckAideAppearance::
-	goto_if_unset FLAG_BADGE02_GET, Common_EventScript_Return
-	goto_if_unset FLAG_AIDE_LOCATION_2, Common_EventScript_Return
-	goto_if_lt VAR_AIDE_CALL_STEP_COUNTER, 200, Common_EventScript_Return
-	clearflag FLAG_HIDE_AIDE_ROUTE10
-	return
 
 Route10_PokemonCenter_1F_EventScript_Nurse::
 	lock
@@ -50,7 +41,7 @@ Route10_PokemonCenter_1F_Text_HeardGhostsHauntLavender::
     .string "I heard that ghosts haunt\n"
     .string "Lavender Town.$"
 
-@Aide Gift 3
+@Aide Gift 2
 Route10_PokemonCenter_1F_EventScript_Aide::
     lock
     faceplayer
@@ -66,7 +57,7 @@ Route10_PokemonCenter_1F_EventScript_Aide::
     clearflag FLAG_QUEUE_AIDE_CALL
     setvar VAR_AIDE_CALL_STEP_COUNTER, 0
     msgbox Route10_PokemonCenter_1F_Text_ExplainReward, MSGBOX_DEFAULT
-    call Route10_PokemonCenter_1F_EventScript_CheckAideNextLocation
+    call_if_set FLAG_BADGE04_GET, Route10_PokemonCenter_1F_EventScript_AideNextLocation
     release
     end
 
@@ -97,9 +88,7 @@ Route10_PokemonCenter_1F_Text_ExplainReward::
     .string "It will prevent evolution according\n"
     .string "to the Professor.$"
 
-@Check if you've already completed the next requirement
-Route10_PokemonCenter_1F_EventScript_CheckAideNextLocation::
-    goto_if_unset FLAG_BADGE04_GET, Common_EventScript_Return
+Route10_PokemonCenter_1F_EventScript_AideNextLocation::
     setflag FLAG_QUEUE_AIDE_CALL
     setflag FLAG_AIDE_LOCATION_3
     return

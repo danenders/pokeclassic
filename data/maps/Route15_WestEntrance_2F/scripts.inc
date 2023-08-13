@@ -30,18 +30,6 @@ Route15_WestEntrance_2F_Text_SmallIslandOnHorizon::
     .string "It looks like a small island on\n"
     .string "the horizon!$"
 
-Route15_WestEntrance_2F_OnTransition::
-	call_if_unset FLAG_RECEIVED_EXP_SHARE, Route15_WestEntrance_2F_EventScript_CheckAideAppearance
-	end
-
-@Check if you've completed the requirement and Cedar has called you
-Route15_WestEntrance_2F_EventScript_CheckAideAppearance::
-	goto_if_unset FLAG_BADGE06_GET, Common_EventScript_Return
-	goto_if_unset FLAG_AIDE_LOCATION_5, Common_EventScript_Return
-	goto_if_lt VAR_AIDE_CALL_STEP_COUNTER, 200, Common_EventScript_Return
-	clearflag FLAG_HIDE_AIDE_ROUTE15
-	return
-
 @Aide Gift 5
 Route15_WestEntrance_2F_EventScript_Aide::
     lock
