@@ -244,6 +244,13 @@ BattleTower_Entrance_EventScript_QuitWithoutSaving::
 	release
 	end
 
+BattleTower_Entrance_EventScript_Retired::
+	clearflag FLAG_CANCEL_BATTLE_ROOM_CHALLENGE
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_LeaveKiosk
+	waitmovement 0
+	release
+	end
+
 Movement_LeaveKiosk:
 	walk_down
 	step_end
@@ -345,6 +352,7 @@ BattleTower_Entrance_Text_ChallengeBattleTower::
 
 BattleTower_Entrance_EventScript_BattleTowerTrigger::
 	lock
+	goto_if_set FLAG_CANCEL_BATTLE_ROOM_CHALLENGE, BattleTower_Entrance_EventScript_Retired
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_Movement_PlayerFaceTowerKiosk
 	turnobject LOCALID_TOWER_ATTENDANT, DIR_EAST
 	setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER
