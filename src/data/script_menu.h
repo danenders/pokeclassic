@@ -316,16 +316,16 @@ static const struct MenuAction MultichoiceList_HideoutFloors[] =
 
 static const struct MenuAction MultichoiceList_SilphFloors[] =
 {
-    {gText_11F},
     {gText_10F},
-    {gText_9F},
+    {gText_11F},
     {gText_8F},
-    {gText_7F},
+    {gText_9F},
     {gText_6F},
-    {gText_5F},
+    {gText_7F},
     {gText_4F},
-    {gText_3F},
+    {gText_5F},
     {gText_2F},
+    {gText_3F},
     {gText_1F},
     {gText_Exit},
 };
