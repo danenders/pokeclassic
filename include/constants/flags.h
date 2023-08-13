@@ -171,12 +171,12 @@
 #define FLAG_REVEALED_MEGA_STONES    		0x99 //Stones are revealed after beating Prof Oak for the first time
 #define FLAG_HIDE_PALLET_BILL 			    0x9A
 #define FLAG_HIDE_SILPH_ROCKETDUO     		0x9B //Hides Jessie & James
-#define FLAG_UNUSED_0x09C      				0x9C
-#define FLAG_UNUSED_0x09D      				0x9D
-#define FLAG_UNUSED_0x09E   				0x9E
-#define FLAG_UNUSED_0x09F 					0x9F
-#define FLAG_UNUSED_0x0A0              		0xA0
-#define FLAG_UNUSED_0x0A1            		0xA1
+#define FLAG_DOJO_OFFENSE_1      			0x9C
+#define FLAG_DOJO_OFFENSE_2      			0x9D
+#define FLAG_DOJO_OFFENSE_3   				0x9E
+#define FLAG_DOJO_DEFENSE_1 				0x9F
+#define FLAG_DOJO_DEFENSE_2              	0xA0
+#define FLAG_DOJO_DEFENSE_3            		0xA1
 #define FLAG_UNUSED_0x0A2              		0xA2
 #define FLAG_UNUSED_0x0A3             		0xA3
 #define FLAG_UNUSED_0x0A4            		0xA4
