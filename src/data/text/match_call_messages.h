@@ -86,7 +86,7 @@ const u8 gText_MatchCallTuber_Richie_Intro2[] = _("doesn't feel like exercise!")
 const u8 gText_MatchCallDragonTamer_Roger_Strategy[] = _("I'll surpass Lance!");
 const u8 gText_MatchCallDragonTamer_Roger_Pokemon[] = _("Dragon Pokémon are my faves.");
 const u8 gText_MatchCallDragonTamer_Roger_Intro1[] = _("Dragon Pokémon are the most");
-const u8 gText_MatchCallDragonTamer_Roger_Intro2[] = _("powerful Pokémon in the world!");
+const u8 gText_MatchCallDragonTamer_Roger_Intro2[] = _("powerful Pokémon!");
 
 const u8 gText_MatchCallJuggler_Johan_Strategy[] = _("Keep on Jugglin'!");
 const u8 gText_MatchCallJuggler_Johan_Pokemon[] = _("Weird Pokémon are my faves.");
