@@ -272,9 +272,14 @@ VermilionCity_Gym_EventScript_DefeatedLeaderGetBadge::
 	settrainerflag TRAINER_SAILOR_DWAYNE
 	settrainerflag TRAINER_ENGINEER_BAILY
 	settrainerflag TRAINER_GENTLEMAN_TUCKER
-	call VermilionCity_Gym_EventScript_QueueNextAideCall
+	call_if_set FLAG_RECEIVED_HM05, VermilionCity_Gym_EventScript_QueueNextAideCall
 	goto VermilionCity_Gym_EventScript_GetTM
 	end
+
+VermilionCity_Gym_EventScript_QueueNextAideCall::
+	setflag FLAG_QUEUE_AIDE_CALL
+	setflag FLAG_AIDE_LOCATION_2
+	return
 
 VermilionCity_Gym_Text_GetBadge::
     .string "Fine, then, take the Thunder Badge!$"
@@ -407,15 +412,6 @@ VermilionCity_Gym_EventScript_DefeatedLeaderRematch::
 
 VermilionCity_Gym_Text_RematchDefeat::
 	.string "Absolutely shocking!$"
-
-
-
-@Check if you've haven't collected the previous reward
-VermilionCity_Gym_EventScript_QueueNextAideCall::
-	goto_if_unset FLAG_RECEIVED_HM05, Common_EventScript_Return
-	setflag FLAG_QUEUE_AIDE_CALL
-	setflag FLAG_AIDE_LOCATION_2
-	return
 
 VermilionCity_Gym_EventScript_Dwayne::
 	trainerbattle_single TRAINER_SAILOR_DWAYNE, VermilionCity_Gym_Text_DwayneIntro, VermilionCity_Gym_Text_DwayneDefeat

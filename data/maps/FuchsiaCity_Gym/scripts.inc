@@ -59,9 +59,14 @@ FuchsiaCity_Gym_EventScript_DefeatedLeaderGetBadge::
 	settrainerflag TRAINER_JUGGLER_SHAWN
 	settrainerflag TRAINER_JUGGLER_KAYDEN
 	settrainerflag TRAINER_JUGGLER_NATE
-	call FuchsiaCity_Gym_EventScript_QueueNextAideCall
+	call_if_set FLAG_RECEIVED_ITEMFINDER, FuchsiaCity_Gym_EventScript_QueueNextAideCall
 	goto FuchsiaCity_Gym_EventScript_GetTM
 	end
+
+FuchsiaCity_Gym_EventScript_QueueNextAideCall::
+	setflag FLAG_QUEUE_AIDE_CALL
+	setflag FLAG_AIDE_LOCATION_4
+	return
 
 FuchsiaCity_Gym_Text_GetBadge::
     .string "Here!\n"
@@ -204,14 +209,6 @@ FuchsiaCity_Gym_Text_RematchDefeat::
 	.string "you now, there is but one thing to do.\p" 
 	.string "I must hone my skills.$"
 
-
-@Check if you've haven't collected the previous reward
-FuchsiaCity_Gym_EventScript_QueueNextAideCall::
-	goto_if_unset FLAG_RECEIVED_AIDE_AMULET_COIN, Common_EventScript_Return
-	setflag FLAG_QUEUE_AIDE_CALL
-	setflag FLAG_AIDE_LOCATION_5
-	return
-
 FuchsiaCity_Gym_EventScript_Phil::
 	trainerbattle_single TRAINER_TAMER_PHIL, FuchsiaCity_Gym_Text_PhilIntro, FuchsiaCity_Gym_Text_PhilDefeat
 	msgbox FuchsiaCity_Gym_Text_PhilPostBattle, MSGBOX_AUTOCLOSE
@@ -286,7 +283,6 @@ FuchsiaCity_Gym_Text_ShawnPostBattle::
     .string "shadow!\p"
     .string "Light and shadow!\n"
     .string "Which do you choose?$"
-
 
 FuchsiaCity_Gym_EventScript_Kayden::
 	trainerbattle_single TRAINER_JUGGLER_KAYDEN, FuchsiaCity_Gym_Text_KaydenIntro, FuchsiaCity_Gym_Text_KaydenDefeat

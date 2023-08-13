@@ -1,18 +1,5 @@
 Route11_EastEntrance_2F_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Route11_EastEntrance_2F_EastBuildingOnTransition
 	.byte 0
-
-Route11_EastEntrance_2F_EastBuildingOnTransition::
-	call_if_unset FLAG_RECEIVED_ITEMFINDER, Route11_EastEntrance_2F_EventScript_CheckAideAppearance
-	end
-
-@Check if you've completed the requirement and Cedar has called you
-Route11_EastEntrance_2F_EventScript_CheckAideAppearance::
-	goto_if_unset FLAG_BADGE04_GET, Common_EventScript_Return
-	goto_if_unset FLAG_AIDE_LOCATION_3, Common_EventScript_Return
-	goto_if_lt VAR_AIDE_CALL_STEP_COUNTER, 200, Common_EventScript_Return
-	clearflag FLAG_HIDE_AIDE_ROUTE11
-	return
 
 Route11_EastEntrance_2F_EventScript_LeftBinoculars::
 	lockall
@@ -128,7 +115,7 @@ Route11_EastEntrance_2F_EventScript_Aide::
     clearflag FLAG_QUEUE_AIDE_CALL
     setvar VAR_AIDE_CALL_STEP_COUNTER, 0
     msgbox Route11_EastEntrance_2F_Text_ExplainReward, MSGBOX_DEFAULT
-    call Route11_EastEntrance_2F_EventScript_CheckAideNextLocation
+    call_if_set FLAG_BADGE05_GET, Route11_EastEntrance_2F_EventScript_AideNextLocation
     release
     end
 
@@ -155,9 +142,7 @@ Route11_EastEntrance_2F_Text_ExplainReward::
     .string "Use it to get your bearings, then\n"
     .string "search the suspect area by hand.$"
 
-@Check if you've already completed the next requirement
-Route11_EastEntrance_2F_EventScript_CheckAideNextLocation::
-    goto_if_unset FLAG_BADGE05_GET, Common_EventScript_Return
+Route11_EastEntrance_2F_EventScript_AideNextLocation::
     setflag FLAG_QUEUE_AIDE_CALL
     setflag FLAG_AIDE_LOCATION_4
     return
