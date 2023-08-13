@@ -1858,27 +1858,27 @@ u16 GetDeptStoreDefaultFloorChoice(void)
             break;
         case MAP_NUM(SILPH_CO_6F):
             sElevatorScroll = 1;
-            sElevatorCursorPos = 4;
+            sElevatorCursorPos = 5;
             break;
         case MAP_NUM(SILPH_CO_5F):
             sElevatorScroll = 2;
-            sElevatorCursorPos = 4;
+            sElevatorCursorPos = 6;
             break;
         case MAP_NUM(SILPH_CO_4F):
             sElevatorScroll = 3;
-            sElevatorCursorPos = 4;
+            sElevatorCursorPos = 7;
             break;
         case MAP_NUM(SILPH_CO_3F):
             sElevatorScroll = 4;
-            sElevatorCursorPos = 4;
+            sElevatorCursorPos = 8;
             break;
         case MAP_NUM(SILPH_CO_2F):
             sElevatorScroll = 5;
-            sElevatorCursorPos = 4;
+            sElevatorCursorPos = 9;
             break;
         case MAP_NUM(SILPH_CO_1F):
             sElevatorScroll = 5;
-            sElevatorCursorPos = 5;
+            sElevatorCursorPos = 10;
             break;
         }
     }

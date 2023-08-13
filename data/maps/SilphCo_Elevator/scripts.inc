@@ -10,92 +10,20 @@ SilphCo_Elevator_EventScript_FloorSelect::
 	special ShowDeptStoreElevatorFloorSelect
 	message Text_WhichFloorWillYouPick
 	waitmessage
-	setvar VAR_0x8004, 0
-	specialvar VAR_RESULT, GetDeptStoreDefaultFloorChoice
+	multichoicegrid 0, 0, MULTI_SILPH_FLOORS, 2, FALSE
 	switch VAR_RESULT
-	case 0, SilphCo_Elevator_EventScript_FloorSelectFrom11F
-	case 1, SilphCo_Elevator_EventScript_FloorSelectFrom10F
-	case 2, SilphCo_Elevator_EventScript_FloorSelectFrom9F
-	case 3, SilphCo_Elevator_EventScript_FloorSelectFrom8F
-	case 4, SilphCo_Elevator_EventScript_FloorSelectFrom7F
-	case 5, SilphCo_Elevator_EventScript_FloorSelectFrom6F
-	case 6, SilphCo_Elevator_EventScript_FloorSelectFrom5F
-	case 7, SilphCo_Elevator_EventScript_FloorSelectFrom4F
-	case 8, SilphCo_Elevator_EventScript_FloorSelectFrom3F
-	case 9, SilphCo_Elevator_EventScript_FloorSelectFrom2F
-	case 10, SilphCo_Elevator_EventScript_FloorSelectFrom1F
-	end
-
-@ Below scripts ensure the cursor for floor select always starts on the current floor
-SilphCo_Elevator_EventScript_FloorSelectFrom11F::
-	multichoicedefault 0, 0, MULTI_SILPH_FLOORS, 0, FALSE
-	goto SilphCo_Elevator_EventScript_ChooseFloor
-	end
-
-SilphCo_Elevator_EventScript_FloorSelectFrom10F::
-	multichoicedefault 0, 0, MULTI_SILPH_FLOORS, 1, FALSE
-	goto SilphCo_Elevator_EventScript_ChooseFloor
-	end
-
-SilphCo_Elevator_EventScript_FloorSelectFrom9F::
-	multichoicedefault 0, 0, MULTI_SILPH_FLOORS, 2, FALSE
-	goto SilphCo_Elevator_EventScript_ChooseFloor
-	end
-
-SilphCo_Elevator_EventScript_FloorSelectFrom8F::
-	multichoicedefault 0, 0, MULTI_SILPH_FLOORS, 3, FALSE
-	goto SilphCo_Elevator_EventScript_ChooseFloor
-	end
-
-SilphCo_Elevator_EventScript_FloorSelectFrom7F::
-	multichoicedefault 0, 0, MULTI_SILPH_FLOORS, 4, FALSE
-	goto SilphCo_Elevator_EventScript_ChooseFloor
-	end
-
-SilphCo_Elevator_EventScript_FloorSelectFrom6F::
-	multichoicedefault 0, 0, MULTI_SILPH_FLOORS, 5, FALSE
-	goto SilphCo_Elevator_EventScript_ChooseFloor
-	end
-
-SilphCo_Elevator_EventScript_FloorSelectFrom5F::
-	multichoicedefault 0, 0, MULTI_SILPH_FLOORS, 6, FALSE
-	goto SilphCo_Elevator_EventScript_ChooseFloor
-	end
-
-SilphCo_Elevator_EventScript_FloorSelectFrom4F::
-	multichoicedefault 0, 0, MULTI_SILPH_FLOORS, 7, FALSE
-	goto SilphCo_Elevator_EventScript_ChooseFloor
-	end
-
-SilphCo_Elevator_EventScript_FloorSelectFrom3F::
-	multichoicedefault 0, 0, MULTI_SILPH_FLOORS, 8, FALSE
-	goto SilphCo_Elevator_EventScript_ChooseFloor
-	end
-
-SilphCo_Elevator_EventScript_FloorSelectFrom2F::
-	multichoicedefault 0, 0, MULTI_SILPH_FLOORS, 9, FALSE
-	goto SilphCo_Elevator_EventScript_ChooseFloor
-	end
-
-SilphCo_Elevator_EventScript_FloorSelectFrom1F::
-	multichoicedefault 0, 0, MULTI_SILPH_FLOORS, 10, FALSE
-	goto SilphCo_Elevator_EventScript_ChooseFloor
-	end
-
-SilphCo_Elevator_EventScript_ChooseFloor::
-	switch VAR_RESULT
-	case 0, SilphCo_Elevator_EventScript_11F
-	case 1, SilphCo_Elevator_EventScript_10F
-	case 2, SilphCo_Elevator_EventScript_9F
+	case 0, SilphCo_Elevator_EventScript_10F
+	case 1, SilphCo_Elevator_EventScript_11F
 	case 2, SilphCo_Elevator_EventScript_8F
-	case 2, SilphCo_Elevator_EventScript_7F
-	case 2, SilphCo_Elevator_EventScript_6F
-	case 2, SilphCo_Elevator_EventScript_5F
-	case 2, SilphCo_Elevator_EventScript_4F
-	case 2, SilphCo_Elevator_EventScript_3F
-	case 2, SilphCo_Elevator_EventScript_2F
-	case 2, SilphCo_Elevator_EventScript_1F
-	case 3, SilphCo_Elevator_EventScript_ExitFloorSelect
+	case 3, SilphCo_Elevator_EventScript_9F
+	case 4, SilphCo_Elevator_EventScript_6F
+	case 5, SilphCo_Elevator_EventScript_7F
+	case 6, SilphCo_Elevator_EventScript_4F
+	case 7, SilphCo_Elevator_EventScript_5F
+	case 8, SilphCo_Elevator_EventScript_2F
+	case 9, SilphCo_Elevator_EventScript_3F
+	case 10, SilphCo_Elevator_EventScript_1F
+	case 11 SilphCo_Elevator_EventScript_ExitFloorSelect
 	case MULTI_B_PRESSED, SilphCo_Elevator_EventScript_ExitFloorSelect
 	end
 
